@@ -1,0 +1,1145 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Introduction &#8212; Jonny Workbook</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=550f00eb" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=1ae7504c"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="A-level-math" href="past/Alevel_math.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Jonny Workbook</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1 current active">
+                <a class="reference internal" href="#">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Math &amp; FP/Language</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="past/Alevel_math.html">A-level-math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="past/Alevel_math_further.html">A-level-further</a></li>
+<li class="toctree-l1"><a class="reference internal" href="past/Course_MCM.html">Math Computational Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Course_Lean.html">Lean</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Course_Puzzle.html">Permutation Puzzles</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="0mmgroup.html">mmgroup Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">CS &amp; Physics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="past/Course_MIT6001Python.html">MIT_CS6001-Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="past/Course_MIT6002thinking.html">MIT_CS6002-CS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PE100.html">Project Euler Q1-50</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="past/Course_MCM_QM.html">Quantum Mechanics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Notebook &amp; Tom</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="past/nb_past_courses.html">Past courses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="past/nb_Geo.html">Geography and Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="past/nb_lottery_simulator.html">Lottery Math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="past/How_Dad_organise_QM.html">How Dad learn QM</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="Course_MCM_QFT.html">QFT</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/tomctang/10pe" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/intro.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Introduction</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Introduction</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#timeline-qa">Timeline &amp; QA</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ubuntu-sce-scientific-computing-environment">Ubuntu &amp; SCE (Scientific Computing Environment)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oop-to-fp">OOP to FP</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#haskell">Haskell</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#experiment">Experiment</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gpt-llm">GPT, LLM</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h1>
+<p>I’m a Sydney boy from NSBHS. I’m currently working on <a class="reference internal" href="#../10pe/Course_Puzzle.ipynb"><span class="xref myst">Permutation Puzzles</span></a> and <a class="reference internal" href="#../10pe/PE_Informatics/PE100.ipynb"><span class="xref myst">Project Euler</span></a>.</p>
+<p>For completed courses, see my <a class="reference external" href="https://www.linkedin.com/in/jonny-jingzhe-tang-853a57274/details/certifications/">LinkedIn certificates</a>. Any questions, please email: <a class="reference external" href="mailto:jonny&#46;tang745&#37;&#52;&#48;education&#46;nsw&#46;gov&#46;au">jonny<span>&#46;</span>tang745<span>&#64;</span>education<span>&#46;</span>nsw<span>&#46;</span>gov<span>&#46;</span>au</a></p>
+<blockquote>
+<div><p><strong>Mathematics &amp; FP(Functional Programming)/Language</strong> (updating)</p>
+</div></blockquote>
+<p>I have completed 3U &amp; 4U Math, and A-level &amp; further Math as my transition btw secondary and tertiary education:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.edx.org/learn/math/imperial-college-london-a-level-mathematics-for-year-12-course-1-algebraic-methods-graphs-and-applied-mathematics-methods">A-level math</a>, including four courses</p></li>
+<li><p><a class="reference external" href="https://www.edx.org/learn/math/imperial-college-london-a-level-further-mathematics-for-year-12-course-2-3-x-3-matrices-mathematical-induction-calculus-methods-and-applications-maclaurin-series-complex-numbers-and-polar-coordinates">A-level further math</a>, including four courses</p></li>
+</ul>
+<p>I further studied undergraduate Math in both computation and proof dimensions:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.edx.org/learn/math/georgetown-university-mathematical-and-computational-methods">Math Computational Methods</a>: learning Math through Physics</p></li>
+<li><p><a class="reference internal" href="#../10pe/Course_Lean.ipynb"><span class="xref myst">Lean</span></a>: FP language, five Lean games for math proofs, First-order logic(FOL), revolutionary tool for both math and all science subjects</p></li>
+</ul>
+<p>Now I am working on a perfect course that integrates combinatorics, group theory, and SageMath:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=WLtiyLGAtKo&amp;amp;list=PLKXCdnugmHRm2ICudfhC9xco1p350mma2">Permutation Puzzles - Group Theory</a></p></li>
+</ul>
+<blockquote>
+<div><p><strong>CS &amp; Physics</strong> (updating)</p>
+</div></blockquote>
+<p>I already finished two MIT CS-courses in 2024, and two physics-courses in 2025. My notes are included in this workbook:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.edx.org/learn/quantum-physics-mechanics/georgetown-university-quantum-mechanics">Quantum Mechanics</a>, including a baby course for everyone, and uni-level QM course</p></li>
+<li><p><a class="reference external" href="https://learning.edx.org/course/course-v1:MITx+6.00.1x+1T2024/home">MITx-6.00.1x-Introduction to Computer Science and Programming Using Python</a></p></li>
+<li><p><a class="reference external" href="https://learning.edx.org/course/course-v1:MITx+6.00.2x+1T2024/home">MITx-6.00.2x-Introduction to Computational Thinking and Data Science</a></p></li>
+</ul>
+<p>After two MIT courses, I started <strong>Project Euler</strong> (PE) and this workbook with Tom (my Dad) in 2024. PE problems require two streams of knowledge:</p>
+<ul class="simple">
+<li><p>Sometimes, I face math problems while coding is easy, e.g. 99-Largest Exponential. See <a class="reference internal" href="#../10pe/PE_Informatics/PE_tags.ipynb"><span class="xref myst">PE-Tags&amp;Math</span></a> where I illustrated math tags from PE system;</p></li>
+<li><p>Sometimes, I face computational (or programming) problems while math is easy, e.g. 187-Semiprimes (very time-consuming). See <a class="reference external" href="https://github.com/leduckhai/Awesome-Competitive-Programming?tab=readme-ov-file">CS or Programming</a></p></li>
+</ul>
+<p>I love coding, number theory, and OEIS, especially the PE-style (VS. CS-style). Tom supervised and assisted me with his knowledge guidance and searching.</p>
+<blockquote>
+<div><p><strong>Notebooks</strong>: Geography, Maps, Lottery math</p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>Notes by Tom</strong></p>
+</div></blockquote>
+<p>Tom supervising Jonny’s learning by <a class="reference external" href="https://tomctang.github.io/oeis/mathmap_old00intro_math.html"><strong>integrating math language, coding language and natural languages</strong></a>.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Bad ideas</p></th>
+<th class="head"><p>Good ideas</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>distinguish math btw high-school(secondary edu) and uni(tertiary edu)</p></td>
+<td><p>Combo of 2nd and 3rd-level math topics</p></td>
+</tr>
+<tr class="row-odd"><td><p>distinguish math and science(especially physics)</p></td>
+<td><p>Combo of math and physics</p></td>
+</tr>
+<tr class="row-even"><td><p>distinguish math and CS(computer science)</p></td>
+<td><p>Combo of ‘conventional’ and computational math</p></td>
+</tr>
+<tr class="row-odd"><td><p>distinguish math and natural language</p></td>
+<td><p>Combo of natural language, math language and coding language</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>So:</p>
+<ul class="simple">
+<li><p>Thinking in Math</p></li>
+<li><p>Writing in coding</p></li>
+<li><p>Sharing in natural language</p></li>
+</ul>
+<section id="timeline-qa">
+<h2>Timeline &amp; QA<a class="headerlink" href="#timeline-qa" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p><strong>Timeline</strong></p>
+</div></blockquote>
+<p>2023-24, I went through 3U &amp; 4U Math (NSW-HSC) in paper-pen approach. I also used A-level &amp; further Math for reviewing 3U4U and adopting the computational/coding approach.</p>
+<p>2025: go through uni-level multi-variable calculus, linear algebra, differential equations in a course preparing for quantum mechanics</p>
+<blockquote>
+<div><p><strong>For help</strong></p>
+</div></blockquote>
+<ul class="simple">
+<li><p>For questions about phys, try <a class="reference external" href="https://physics.stackexchange.com/">Physics Stack Exchange</a>. For research-level questions, <a class="reference external" href="https://physicsoverflow.org/">Physics Overflow.</a></p></li>
+<li><p>For questions about math, try <a class="reference external" href="https://math.stackexchange.com/">Math Stack Exchange</a>. for research-level questions, <a class="reference external" href="https://mathoverflow.net/">Math Overflow.</a></p></li>
+<li><p>For more free-wheeling discussions of math and physics, try <a class="reference external" href="https://www.physicsforums.com/">Physics Forums.</a></p></li>
+</ul>
+<blockquote>
+<div><p><strong>Image-Hosting</strong></p>
+</div></blockquote>
+<p>All figures are synchronised in Tom’s GitHub folder <code class="docutils literal notranslate"><span class="pre">./NB_img/</span></code>. Using codes to insert pic:</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;img</span> <span class="pre">src=&quot;https://raw.githubusercontent.com/tomctang/NB_img/main/3bias.png&quot;</span> <span class="pre">alt=&quot;Causality-confounder&quot;</span> <span class="pre">width=&quot;500&quot;&gt;</span></code></p>
+<p>Markdown image <strong>center</strong>:</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;div</span> <span class="pre">align=center&gt;![Figure.</span> <span class="pre">Various</span> <span class="pre">treatments</span> <span class="pre">choice</span> <span class="pre">for</span> <span class="pre">OA](https://raw.githubusercontent.com/ctang83/NB_img/main/EPS_OAtreat.jpg){width=60%}</span></code></p>
+<blockquote>
+<div><p><strong>Cross-citations</strong></p>
+</div></blockquote>
+<p>Header automatically generate {#mathFP}, so<code class="docutils literal notranslate"><span class="pre">[anytext](#mathFP)</span></code> in citing</p>
+<p>Between pages: <code class="docutils literal notranslate"><span class="pre">[Discrete</span> <span class="pre">&amp;</span> <span class="pre">Continuous](../10pe/02discrete_continuous.ipynb#discrete-continuous)</span></code>(ipynb auto changed to html in website)</p>
+</section>
+<section id="ubuntu-sce-scientific-computing-environment">
+<h2>Ubuntu &amp; SCE (Scientific Computing Environment)<a class="headerlink" href="#ubuntu-sce-scientific-computing-environment" title="Link to this heading">#</a></h2>
+<p>Ubuntu is the key in SCE. To build a SCE is the first step to learn programming, two ways:</p>
+<ol class="arabic simple">
+<li><p>Cloud Computing - <strong>Google Colab, Cocalc(Rust, Julia, GNU Octave(vs.Matlab)), <a class="reference external" href="https://mybinder.org/v2/gh/tomctang/10pe/HEAD">Binder</a></strong> - are good, but Colab and Binder require further installation (originally Python)</p></li>
+<li><p>Self-built - <strong>Docker</strong>’s images and containers (self-maintained not self-installation) are the best</p>
+<ul class="simple">
+<li><p>I already build SageMath and IHaskell using Docker, both running <code class="docutils literal notranslate"><span class="pre">ipynb</span></code></p></li>
+</ul>
+</li>
+<li><p>Key to Science - reproducibility, so we need a managing Environment and Container</p>
+<ol class="arabic simple">
+<li><p>Use one environment(or Container) per project! Creating environments to accommodate specific workflows/projects — and to do so early on</p></li>
+<li><p>Containers is better, which package tools with underlying operating system, are larger and more complicated than environments, but are more portable</p></li>
+</ol>
+</li>
+</ol>
+<p>Steps:</p>
+<ol class="arabic simple">
+<li><p>install Ubuntu</p></li>
+<li><p>install Chrome</p>
+<ul class="simple">
+<li><p>sudo apt-get install libxss1 libappindicator1 libindicator7</p></li>
+<li><p>wget <a class="reference external" href="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb">https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb</a></p></li>
+<li><p>sudo apt install ./google-chrome*.deb</p></li>
+</ul>
+</li>
+<li><p>git:<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">git</span></code></p>
+<ul class="simple">
+<li><p>download github project</p>
+<ul>
+<li><p>git clone weblink</p></li>
+</ul>
+</li>
+<li><p>for github conflicted problem</p>
+<ul>
+<li><p>git stash</p></li>
+<li><p>git pull –rebase</p></li>
+<li><p>git stash pop</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Install Docker</p>
+<ul class="simple">
+<li><p>sudo apt  install curl</p></li>
+<li><p>curl -fsSL <a class="reference external" href="https://get.docker.com">https://get.docker.com</a> -o <a class="reference external" href="http://get-docker.sh">get-docker.sh</a></p></li>
+<li><p>sh <a class="reference external" href="http://get-docker.sh">get-docker.sh</a></p></li>
+<li><p><a class="reference external" href="http://dockerd-rootless-setuptool.sh">dockerd-rootless-setuptool.sh</a> install</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">ps</span> <span class="pre">;</span> <span class="pre">docker</span> <span class="pre">images</span> <span class="pre">;</span> </code></p></li>
+</ul>
+</li>
+<li><p><del>Google Drive - rclone</del>, now Dropbox &amp; Syncthing (super-fast&#64;home) <del></p>
+<ul class="simple">
+<li><p>sudo -v ; curl <a class="reference external" href="https://rclone.org/install.sh">https://rclone.org/install.sh</a> | sudo bash</p></li>
+<li><p>run “rclone config”, follow guide: <a class="reference external" href="https://rclone.org/drive/">https://rclone.org/drive/</a></p></li>
+<li><p>run “sudo nano /etc/fuse.conf” Uncomment this line: user_allow_other</p></li>
+<li><p>rclone mount gdrive: /home/tom/gdrive –allow-other –vfs-cache-mode full</p></li>
+<li><p>automatic boot: 2 issues - connection &amp; mount</p>
+<ul>
+<li><p>Test rclone connection: <code class="docutils literal notranslate"><span class="pre">rclone</span> <span class="pre">lsd</span> <span class="pre">remote:</span></code></p></li>
+<li><p>sudo nano /etc/systemd/system/rclone-gdrive.service # see T430’s file</p></li>
+<li><p>systemctl daemon-reload</p></li>
+<li><p>sudo systemctl enable rclone-gdrive.service</p></li>
+<li><p>sudo systemctl start rclone-gdrive.service</del></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><del>uni-direction synchronize two folders <code class="docutils literal notranslate"><span class="pre">rsync</span> <span class="pre">-avu</span> <span class="pre">--delete</span> <span class="pre">source_folder/</span> <span class="pre">destination_folder/</span></code></del></p></li>
+<li><p><a class="reference external" href="https://gitlab.winehq.org/wine/wine/-/wikis/Debian-Ubuntu">WineHQ for Foxit PDF</a></p></li>
+<li><p>My PC has two disks, I installed Ubuntu goes along original windows in the first disk (original sys). Now the second disk can’t seen as Ubuntu still hardly manage Microsoft Windows dynamic disk (LDM). Solutions:</p>
+<ul class="simple">
+<li><p>ldmtool to read data in Ubuntu, or wait Ubuntu updates in the future</p></li>
+<li><p>convert LDM to basic disk while lossing all data</p></li>
+</ul>
+</li>
+<li><p>Basic commands &amp; more:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-a</span> <span class="pre">;</span>&#160; <span class="pre">env</span>&#160; <span class="pre">;</span>&#160; <span class="pre">pwd</span>&#160; <span class="pre">;</span> <span class="pre">rm</span> <span class="pre">;</span> <span class="pre">echo</span> <span class="pre">&gt;</span> <span class="pre">aa.hs</span> <span class="pre">(create</span> <span class="pre">file);</span> <span class="pre">nano</span> <span class="pre">aa.hs</span> <span class="pre">(edit</span> <span class="pre">file,</span> <span class="pre">Ctrl+X</span> <span class="pre">for</span> <span class="pre">quit)</span></code></p></li>
+<li><p>run Ubuntu commands in GHCI, add <code class="docutils literal notranslate"><span class="pre">:!</span></code> ahead</p></li>
+<li><p>remove top bar: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">gnome-shell-extension-manager</span></code>, then search “hide top bar”</p></li>
+<li><p>PDF arranger (App Center): edit PDF</p></li>
+<li><p>printer <a class="reference external" href="https://support.brother.com/g/b/downloadend.aspx?c=au&amp;amp;lang=en&amp;amp;prod=hll2350dw_us_eu_as&amp;amp;os=128&amp;amp;dlid=dlf103566_000&amp;amp;flang=4&amp;amp;type3=10283">brother driver</a></p></li>
+</ul>
+</li>
+</ol>
+<p>More</p>
+<blockquote>
+<div><p><strong>PL</strong></p>
+</div></blockquote>
+<p>While a qualified coder mastering 6 programming languages (PL), how to choose PLs is really a hard decision.</p>
+<ol class="arabic">
+<li><p>We started this workbook using <strong>Python</strong> in VScode:</p>
+<ul class="simple">
+<li><p>Python: we began from Python, then we moved to Math Tools, like MMA and SageMath(the second best CAS - computer algebra system).</p></li>
+<li><p><a class="reference external" href="https://diagrams.mingrammer.com/">diagrams</a>: Coding diagrams</p></li>
+<li><p><a class="reference external" href="https://www.manim.community/">manim</a>: Math Animation</p></li>
+<li><p><a class="reference external" href="https://github.com/connorferster/handcalcs">handcalcs</a>: render calculation as if it were written with a pencil: write the symbolic formula, then numeric substitutions, and then show result automatically</p></li>
+</ul>
+</li>
+<li><p>Next, a PL with more FP? Ocaml? F#(Fsharp)? Scala? Haskell? Rust? Make a comparison:</p>
+<ol class="arabic simple">
+<li><p>PL’s Coding-look in defining a Fibonacci;</p></li>
+<li><p>Which FP is best for mathematics? Haskell is NO.1, but I really don’t like Haskell;</p></li>
+<li><p>Math-related supports for these four languages;</p></li>
+<li><p>Balance between FP and OOP;</p></li>
+<li><p>Number of users in Project Euler for each PL;</p></li>
+<li><p>libgen supports for each PL;</p></li>
+<li><p>When the PL first appeared.</p></li>
+</ol>
+<ul class="simple">
+<li><p>Decision: <strong>Rust &amp; Haskell</strong>.</p>
+<ul>
+<li><p>Google endorse <a class="reference external" href="https://code.world/">Codeworld - Educational Haskell programming platform</a> with <a class="reference external" href="https://github.com/google/codeworld/tree/master">Github Repository</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<div><p><strong>Math Tools</strong></p>
+</div></blockquote>
+<ol class="arabic simple">
+<li><p>Three large-scale mathematical software packages</p>
+<ol class="arabic simple">
+<li><p>Numerical computing systems: floating point, accurate estimation, numerical analysis. Matlab, Octave</p></li>
+<li><p>CAS(Computer algebra system): exact computation, view <span class="math notranslate nohighlight">\(\pi\)</span> as a symbol instead of a decimal number, symbolic computation/computer algebra/computational algebra</p></li>
+<li><p>Statistical packages: SAS, R</p></li>
+</ol>
+</li>
+<li><p>Mathematics and Self-Study Roadmaps</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=OmJ-4B-mS-Y">The Map of Mathematics</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=byNaO_zn2fI">How to self study pure math - a step-by-step guide</a></p></li>
+</ul>
+</li>
+<li><p>Instead of Python, then we started <strong>Mathematica (Wolfram languages, MMA or Wolfram</strong> after):</p>
+<ul class="simple">
+<li><p>We are running Wolfram in ipynb-file using VScode</p></li>
+<li><p>Mathematica (.nb): the best CAS. Shall we convert .nb -&gt; .ipynb ??</p></li>
+<li><p>installing</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/CraverBoyyy/CosCOM-Mathematica-Installation?tab=readme-ov-file">Process Github</a></p></li>
+<li><p><a class="reference external" href="https://wu-yijun.github.io/Mathematica-Keygen-Mechanism/">Key</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>SageMath isn’t a pip-installable package, instead it’s large and requires C/Fortran/Python… lots of pre-installed environments</p>
+<ul class="simple">
+<li><p>SageMath is the best open-source CAS</p></li>
+<li><p><a class="reference external" href="https://cocalc.com/projects">CoCalc (.ipynb)</a> online platform includes all open-source computing environments, so surprising!!</p></li>
+<li><p><a class="reference external" href="https://stackoverflow.com/questions/49685498/how-do-you-import-sagemath-in-google-colaboratory/77440661">Google Colab</a> can also install SageMath, but <a class="reference external" href="https://github.com/demining/Install-SageMath-in-Google-Colab">with problems</a></p></li>
+<li><p>or <strong>Docker + SageMath + JupyterLab</strong> to work with symbolic mathematics programmatically</p></li>
+<li><p>Sage installed by miniconda is the best option</p>
+<ul>
+<li><p>we can use self-built functions every time starting Sage, like s()</p></li>
+<li><p>go to folder <code class="docutils literal notranslate"><span class="pre">/home/tom/.sage</span></code>, open file <code class="docutils literal notranslate"><span class="pre">init.sage</span></code></p></li>
+</ul>
+</li>
+<li><p>Resources:</p>
+<ul>
+<li><p><a class="reference external" href="https://wiki.sagemath.org/interact">Sage Interactions</a></p></li>
+<li><p><a class="reference external" href="https://doc.sagemath.org/">All SageMath tutorials</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Julia is the best for DE, and is also <a class="reference external" href="https://github.com/jkrumbiegel/Chain.jl">more FP than python - reason 1</a>, <a class="reference external" href="https://github.com/thautwarm/MLStyle.jl">reason 2</a></p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="o">*</span><span class="n">Convert</span> <span class="n">nb</span> <span class="n">file</span> <span class="n">into</span> <span class="n">vsnb</span> <span class="n">using</span> <span class="n">the</span> <span class="n">wl</span> <span class="n">coding</span><span class="o">*</span><span class="p">)</span>
+<span class="n">Get</span><span class="p">[</span><span class="s2">&quot;_static/Mathematica2VSCode.wl&quot;</span><span class="p">]</span> 
+<span class="n">Needs</span><span class="p">[</span><span class="s2">&quot;Mathematica2VSCode`&quot;</span><span class="p">]</span>
+<span class="n">Mathematica2VSCode</span><span class="p">[</span><span class="s2">&quot;a/1_MOESM1.nb&quot;</span><span class="p">]</span>  <span class="p">(</span><span class="o">*</span><span class="n">path</span> <span class="ow">and</span> <span class="n">specific</span> <span class="n">MMA</span> <span class="n">notebook</span><span class="o">*</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<blockquote>
+<div><p><strong>Organization &amp; Management</strong></p>
+</div></blockquote>
+<ol class="arabic simple">
+<li><p>Website Management</p>
+<ul class="simple">
+<li><p>Git and GitHub</p></li>
+<li><p>automatic deploy from a branch <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code></p></li>
+</ul>
+</li>
+<li><p>Project Management</p>
+<ul class="simple">
+<li><p>Visual Studio Code</p></li>
+<li><p>Jupyter notebooks (.ipynb): interactive computational notebooks, easy to prototype, create visualizations, interactive presentations</p></li>
+<li><p>MarkDown and Latex: writing natural language and math formulus</p></li>
+</ul>
+</li>
+<li><p>Citations and Bibliographies</p>
+<ul class="simple">
+<li><p>Zotero: a free, easy-to-use tool to help you collect, organize, cite, and share research. I use Zotero to generate .bib files</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="oop-to-fp">
+<h2>OOP to FP<a class="headerlink" href="#oop-to-fp" title="Link to this heading">#</a></h2>
+<p>We started workbook using Python in OOP (Object-oriented Programming) way, then we move to FP (Functional Programming) way in both MMA and Python.</p>
+<ul class="simple">
+<li><p>From my view, OOP coding is more natural language, FP is more math lanuage.</p></li>
+<li><p>Even though both Python and Wolfram are not pure FP, they do help us understand the FP way.</p></li>
+</ul>
+<p>FP resources</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://old.reddit.com/r/functionalprogramming/wiki/books">FP books</a></p></li>
+<li><p><a class="reference external" href="https://adabeat.com/fp/ease-into-functional-programming/?_gl=1*1r4s1nz*_up*MQ..*_ga*NDgxNzc4NDQ0LjE3MzA4MTAwMTg.*_ga_6RQG15HSGT*MTczMDgxMDAxNy4xLjAuMTczMDgxMDAxNy4wLjAuMA..">Adabeat - Ease into</a></p></li>
+<li><p><a class="reference external" href="https://github.com/nayuki/Project-Euler-solutions">PE solutions in Java, Python, Mathematica, Haskell</a>: Nayuki use OOP in Python and FP in Haskell.</p></li>
+</ol>
+<p>FP - languages</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://expression.readthedocs.io/en/latest/intro.html">FP in Python</a>: a web-notebook for beginner.</p></li>
+<li><p><a class="reference external" href="https://doc.sagemath.org/html/en/thematic_tutorials/functional_programming.html#">SageMath - FP4Mathematicians</a></p></li>
+<li><p><a class="reference external" href="https://reference.wolfram.com/language/guide/FunctionalProgramming.html">FP in Wolfram</a>: official website.</p></li>
+</ol>
+<p>e.g. Why not Matlab to model and simulate dynamic systems? – still OOP .VS. FP</p>
+<ul class="simple">
+<li><p>Matlab(Simulink) uses a signal flow-based or causal approach(OOP),</p></li>
+<li><p>while Modelica uses an equation-based or acausal approach(FP).</p></li>
+</ul>
+<section id="haskell">
+<h3>Haskell<a class="headerlink" href="#haskell" title="Link to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">cabal</span> <span class="pre">init</span> <span class="pre">--interactive</span></code>(Haskell project)</p>
+<blockquote>
+<div><p>IHaskell in Ubuntu</p>
+</div></blockquote>
+<ol class="arabic simple">
+<li><p>A. step-by-step to avoid skipping; B.if using IHaskell packages, the ipynb must locate in IHaskell folder</p>
+<ul class="simple">
+<li><p>sudo apt-get install -y python3-pip git libtinfo-dev libzmq3-dev libcairo2-dev libpango1.0-dev libmagic-dev libblas-dev liblapack-dev</p></li>
+<li><p>curl -sSL <a class="reference external" href="https://get.haskellstack.org/">https://get.haskellstack.org/</a> | sh  # install stack</p></li>
+<li><p>export PATH=”/usr/local/bin:$PATH”</p></li>
+<li><p>export PATH=”/home/tom/.local/bin:$PATH”</p></li>
+<li><p>git clone <a class="github reference external" href="https://github.com/gibiansky/IHaskell">gibiansky/IHaskell</a></p></li>
+<li><p>cd IHaskell</p></li>
+<li><p>pip3 install -r requirements.txt -break-system-packages  # install Python requirements</p></li>
+<li><p>stack install –fast  # install ihaskell</p></li>
+<li><p>ihaskell install –stack   # install the Jupyter kernelspec with ihaskell</p></li>
+<li><p>Restart PC and make sure Jupyter access fully</p>
+<ul>
+<li><p>jupyter notebook –generate-config</p></li>
+<li><p>nano ~/.jupyter/jupyter_notebook_config.py</p></li>
+<li><p>add into:</p></li>
+<li><p>c.NotebookApp.token = ‘’</p></li>
+<li><p>c.NotebookApp.password = ‘’</p></li>
+<li><p>c.NotebookApp.allow_origin = ‘*’</p></li>
+<li><p>c.NotebookApp.allow_root = True</p></li>
+</ul>
+</li>
+<li><p>make sure lts = 22.10 (consist to Github version)</p>
+<ul>
+<li><p>nano /home/tom/.stack/global-project/stack.yaml</p></li>
+</ul>
+</li>
+<li><p>In IHaskell folder, run <code class="docutils literal notranslate"><span class="pre">stack</span> <span class="pre">exec</span> <span class="pre">jupyter</span> <span class="pre">--</span> <span class="pre">notebook</span></code></p>
+<ul>
+<li><p>or Click Jupyter icon at Dash</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<div><p>IHaskell in docker:</p>
+</div></blockquote>
+<ol class="arabic simple">
+<li><p>IHaskell computation = <strong>Docker + Haskell + Jupyter</strong> (Docker building: 1. download <a class="reference external" href="https://github.com/IHaskell/IHaskell">zip</a>, 2. go to Docker terminal, run <code class="docutils literal notranslate"><span class="pre">&quot;docker</span> <span class="pre">build</span> <span class="pre">-t</span> <span class="pre">ihaskell:latest</span> <span class="pre">.&quot;</span></code>)</p>
+<ul class="simple">
+<li><p>Haskell’s interpreter: IHaskell, <a class="reference external" href="https://github.com/HeinrichApfelmus/hyper-haskell">HyperHaskell</a>, ptGHCi</p></li>
+<li><p>I am using <a class="reference external" href="https://github.com/IHaskell/ihaskell-notebook">ihaskell-notebook Docker image</a>: JupyterLab version is low, unable to use AutoCompletion.</p></li>
+<li><p>can also use <a class="reference external" href="https://github.com/IHaskell/IHaskell">IHaskell docker</a> and <a class="reference external" href="https://gist.github.com/brandonchinn178/928d6137bfd17961b9584a8f96c18827">Docker build py</a></p></li>
+<li><p><a class="reference external" href="https://github.com/IHaskell/IHaskell/issues/715">IHaskell disscusion</a> for reference</p></li>
+</ul>
+</li>
+</ol>
+<del>
+<blockquote>
+<div><p>wsl2-Ubuntu-Haskell in windows:</p>
+</div></blockquote>
+<ol class="arabic simple">
+<li><p>Microsoft Store -&gt; search ‘Ubuntu’ and install (345 MB)</p></li>
+<li><p>Open Ubuntu in Windows, update by:</p>
+<ul class="simple">
+<li><p>sudo apt update</p></li>
+<li><p>sudo apt install build-essential -y</p></li>
+<li><p>sudo apt install make -y</p></li>
+<li><p>sudo apt install automake -y</p></li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<div><p>windows-msys2-Haskell in powershell:</p>
+</div></blockquote>
+<ol class="arabic simple">
+<li><p>Two lauch commands:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ghci</span></code> is the interactive environment of the GHC compiler itself</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stack</span> <span class="pre">ghci</span></code> is the interactive environment of the Stack build tool: 1) automatically handles dependency and installation (VS. GHC and Cabal), 2) config to install packages C:\Users\tangc\AppData\Roaming\stack\global-project\stack.yaml
+</del></p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="experiment">
+<h1>Experiment<a class="headerlink" href="#experiment" title="Link to this heading">#</a></h1>
+<section id="gpt-llm">
+<h2>GPT, LLM<a class="headerlink" href="#gpt-llm" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Complete algorithm to train and inference a GPT. Everything else is just efficiency.</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>       <span class="c1"># os.path.exists</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>     <span class="c1"># math.log, math.exp</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>   <span class="c1"># random.seed, random.choices, random.gauss, random.shuffle</span>
+<span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span> <span class="c1"># Let there be order among chaos</span>
+
+<span class="c1"># Let there be an input dataset `docs`: list[str] of documents (e.g. a dataset of names)</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;input.txt&#39;</span><span class="p">):</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">urllib.request</span>
+    <span class="n">names_url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/karpathy/makemore/refs/heads/master/names.txt&#39;</span>
+    <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">names_url</span><span class="p">,</span> <span class="s1">&#39;input.txt&#39;</span><span class="p">)</span>
+<span class="n">docs</span> <span class="o">=</span> <span class="p">[</span><span class="n">l</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;input.txt&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span> <span class="k">if</span> <span class="n">l</span><span class="o">.</span><span class="n">strip</span><span class="p">()]</span> <span class="c1"># list[str] of documents</span>
+<span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">docs</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;num docs: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">docs</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Let there be a Tokenizer to translate strings to discrete symbols and back</span>
+<span class="n">uchars</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">docs</span><span class="p">)))</span> <span class="c1"># unique characters in the dataset become token ids 0..n-1</span>
+<span class="n">BOS</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">uchars</span><span class="p">)</span> <span class="c1"># token id for the special Beginning of Sequence (BOS) token</span>
+<span class="n">vocab_size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">uchars</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span> <span class="c1"># total number of unique tokens, +1 is for BOS</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;vocab size: </span><span class="si">{</span><span class="n">vocab_size</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Let there be Autograd, to recursively apply the chain rule through a computation graph</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Value</span><span class="p">:</span>
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="s1">&#39;grad&#39;</span><span class="p">,</span> <span class="s1">&#39;_children&#39;</span><span class="p">,</span> <span class="s1">&#39;_local_grads&#39;</span><span class="p">)</span> <span class="c1"># Python optimization for memory usage</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">children</span><span class="o">=</span><span class="p">(),</span> <span class="n">local_grads</span><span class="o">=</span><span class="p">()):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>                <span class="c1"># scalar value of this node calculated during forward pass</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">grad</span> <span class="o">=</span> <span class="mi">0</span>                   <span class="c1"># derivative of the loss w.r.t. this node, calculated in backward pass</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_children</span> <span class="o">=</span> <span class="n">children</span>       <span class="c1"># children of this node in the computation graph</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_local_grads</span> <span class="o">=</span> <span class="n">local_grads</span> <span class="c1"># local derivative of this node w.r.t. its children</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="n">other</span> <span class="o">=</span> <span class="n">other</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Value</span><span class="p">)</span> <span class="k">else</span> <span class="n">Value</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">Value</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__mul__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="n">other</span> <span class="o">=</span> <span class="n">other</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Value</span><span class="p">)</span> <span class="k">else</span> <span class="n">Value</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">Value</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">*</span> <span class="n">other</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">),</span> <span class="p">(</span><span class="n">other</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">))</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__pow__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span> <span class="k">return</span> <span class="n">Value</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">**</span><span class="n">other</span><span class="p">,</span> <span class="p">(</span><span class="bp">self</span><span class="p">,),</span> <span class="p">(</span><span class="n">other</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">**</span><span class="p">(</span><span class="n">other</span><span class="o">-</span><span class="mi">1</span><span class="p">),))</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">log</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="n">Value</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">),</span> <span class="p">(</span><span class="bp">self</span><span class="p">,),</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">,))</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">exp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="n">Value</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">),</span> <span class="p">(</span><span class="bp">self</span><span class="p">,),</span> <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">),))</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">relu</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="n">Value</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">),</span> <span class="p">(</span><span class="bp">self</span><span class="p">,),</span> <span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">),))</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__neg__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span> <span class="o">*</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__radd__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span> <span class="o">+</span> <span class="n">other</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__sub__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span> <span class="o">+</span> <span class="p">(</span><span class="o">-</span><span class="n">other</span><span class="p">)</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__rsub__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span> <span class="k">return</span> <span class="n">other</span> <span class="o">+</span> <span class="p">(</span><span class="o">-</span><span class="bp">self</span><span class="p">)</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__rmul__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span> <span class="o">*</span> <span class="n">other</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__truediv__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span> <span class="o">*</span> <span class="n">other</span><span class="o">**-</span><span class="mi">1</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__rtruediv__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span> <span class="k">return</span> <span class="n">other</span> <span class="o">*</span> <span class="bp">self</span><span class="o">**-</span><span class="mi">1</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">backward</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">topo</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">visited</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">build_topo</span><span class="p">(</span><span class="n">v</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">v</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">visited</span><span class="p">:</span>
+                <span class="n">visited</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">v</span><span class="o">.</span><span class="n">_children</span><span class="p">:</span>
+                    <span class="n">build_topo</span><span class="p">(</span><span class="n">child</span><span class="p">)</span>
+                <span class="n">topo</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+        <span class="n">build_topo</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">grad</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="n">topo</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">child</span><span class="p">,</span> <span class="n">local_grad</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">_children</span><span class="p">,</span> <span class="n">v</span><span class="o">.</span><span class="n">_local_grads</span><span class="p">):</span>
+                <span class="n">child</span><span class="o">.</span><span class="n">grad</span> <span class="o">+=</span> <span class="n">local_grad</span> <span class="o">*</span> <span class="n">v</span><span class="o">.</span><span class="n">grad</span>
+
+<span class="c1"># Initialize the parameters, to store the knowledge of the model.</span>
+<span class="n">n_embd</span> <span class="o">=</span> <span class="mi">16</span>     <span class="c1"># embedding dimension</span>
+<span class="n">n_head</span> <span class="o">=</span> <span class="mi">4</span>      <span class="c1"># number of attention heads</span>
+<span class="n">n_layer</span> <span class="o">=</span> <span class="mi">1</span>     <span class="c1"># number of layers</span>
+<span class="n">block_size</span> <span class="o">=</span> <span class="mi">16</span> <span class="c1"># maximum sequence length</span>
+<span class="n">head_dim</span> <span class="o">=</span> <span class="n">n_embd</span> <span class="o">//</span> <span class="n">n_head</span> <span class="c1"># dimension of each head</span>
+<span class="n">matrix</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">nout</span><span class="p">,</span> <span class="n">nin</span><span class="p">,</span> <span class="n">std</span><span class="o">=</span><span class="mf">0.08</span><span class="p">:</span> <span class="p">[[</span><span class="n">Value</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">gauss</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">std</span><span class="p">))</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nin</span><span class="p">)]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nout</span><span class="p">)]</span>
+<span class="n">state_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;wte&#39;</span><span class="p">:</span> <span class="n">matrix</span><span class="p">(</span><span class="n">vocab_size</span><span class="p">,</span> <span class="n">n_embd</span><span class="p">),</span> <span class="s1">&#39;wpe&#39;</span><span class="p">:</span> <span class="n">matrix</span><span class="p">(</span><span class="n">block_size</span><span class="p">,</span> <span class="n">n_embd</span><span class="p">),</span> <span class="s1">&#39;lm_head&#39;</span><span class="p">:</span> <span class="n">matrix</span><span class="p">(</span><span class="n">vocab_size</span><span class="p">,</span> <span class="n">n_embd</span><span class="p">)}</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_layer</span><span class="p">):</span>
+    <span class="n">state_dict</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;layer</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">.attn_wq&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">(</span><span class="n">n_embd</span><span class="p">,</span> <span class="n">n_embd</span><span class="p">)</span>
+    <span class="n">state_dict</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;layer</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">.attn_wk&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">(</span><span class="n">n_embd</span><span class="p">,</span> <span class="n">n_embd</span><span class="p">)</span>
+    <span class="n">state_dict</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;layer</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">.attn_wv&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">(</span><span class="n">n_embd</span><span class="p">,</span> <span class="n">n_embd</span><span class="p">)</span>
+    <span class="n">state_dict</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;layer</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">.attn_wo&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">(</span><span class="n">n_embd</span><span class="p">,</span> <span class="n">n_embd</span><span class="p">)</span>
+    <span class="n">state_dict</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;layer</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">.mlp_fc1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">n_embd</span><span class="p">,</span> <span class="n">n_embd</span><span class="p">)</span>
+    <span class="n">state_dict</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;layer</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">.mlp_fc2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">(</span><span class="n">n_embd</span><span class="p">,</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">n_embd</span><span class="p">)</span>
+<span class="n">params</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span> <span class="k">for</span> <span class="n">mat</span> <span class="ow">in</span> <span class="n">state_dict</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">mat</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">row</span><span class="p">]</span> <span class="c1"># flatten params into a single list[Value]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;num params: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">params</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Define the model architecture: a stateless function mapping token sequence and parameters to logits over what comes next.</span>
+<span class="c1"># Follow GPT-2, blessed among the GPTs, with minor differences: layernorm -&gt; rmsnorm, no biases, GeLU -&gt; ReLU</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">linear</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">w</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="nb">sum</span><span class="p">(</span><span class="n">wi</span> <span class="o">*</span> <span class="n">xi</span> <span class="k">for</span> <span class="n">wi</span><span class="p">,</span> <span class="n">xi</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">wo</span><span class="p">,</span> <span class="n">x</span><span class="p">))</span> <span class="k">for</span> <span class="n">wo</span> <span class="ow">in</span> <span class="n">w</span><span class="p">]</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">softmax</span><span class="p">(</span><span class="n">logits</span><span class="p">):</span>
+    <span class="n">max_val</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">val</span><span class="o">.</span><span class="n">data</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">logits</span><span class="p">)</span>
+    <span class="n">exps</span> <span class="o">=</span> <span class="p">[(</span><span class="n">val</span> <span class="o">-</span> <span class="n">max_val</span><span class="p">)</span><span class="o">.</span><span class="n">exp</span><span class="p">()</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">logits</span><span class="p">]</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">exps</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">e</span> <span class="o">/</span> <span class="n">total</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">exps</span><span class="p">]</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">rmsnorm</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">ms</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">xi</span> <span class="o">*</span> <span class="n">xi</span> <span class="k">for</span> <span class="n">xi</span> <span class="ow">in</span> <span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">scale</span> <span class="o">=</span> <span class="p">(</span><span class="n">ms</span> <span class="o">+</span> <span class="mf">1e-5</span><span class="p">)</span> <span class="o">**</span> <span class="o">-</span><span class="mf">0.5</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">xi</span> <span class="o">*</span> <span class="n">scale</span> <span class="k">for</span> <span class="n">xi</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">gpt</span><span class="p">(</span><span class="n">token_id</span><span class="p">,</span> <span class="n">pos_id</span><span class="p">,</span> <span class="n">keys</span><span class="p">,</span> <span class="n">values</span><span class="p">):</span>
+    <span class="n">tok_emb</span> <span class="o">=</span> <span class="n">state_dict</span><span class="p">[</span><span class="s1">&#39;wte&#39;</span><span class="p">][</span><span class="n">token_id</span><span class="p">]</span> <span class="c1"># token embedding</span>
+    <span class="n">pos_emb</span> <span class="o">=</span> <span class="n">state_dict</span><span class="p">[</span><span class="s1">&#39;wpe&#39;</span><span class="p">][</span><span class="n">pos_id</span><span class="p">]</span> <span class="c1"># position embedding</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">t</span> <span class="o">+</span> <span class="n">p</span> <span class="k">for</span> <span class="n">t</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">tok_emb</span><span class="p">,</span> <span class="n">pos_emb</span><span class="p">)]</span> <span class="c1"># joint token and position embedding</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">rmsnorm</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">li</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_layer</span><span class="p">):</span>
+        <span class="c1"># 1) Multi-head attention block</span>
+        <span class="n">x_residual</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">rmsnorm</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">q</span> <span class="o">=</span> <span class="n">linear</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">state_dict</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;layer</span><span class="si">{</span><span class="n">li</span><span class="si">}</span><span class="s1">.attn_wq&#39;</span><span class="p">])</span>
+        <span class="n">k</span> <span class="o">=</span> <span class="n">linear</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">state_dict</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;layer</span><span class="si">{</span><span class="n">li</span><span class="si">}</span><span class="s1">.attn_wk&#39;</span><span class="p">])</span>
+        <span class="n">v</span> <span class="o">=</span> <span class="n">linear</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">state_dict</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;layer</span><span class="si">{</span><span class="n">li</span><span class="si">}</span><span class="s1">.attn_wv&#39;</span><span class="p">])</span>
+        <span class="n">keys</span><span class="p">[</span><span class="n">li</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+        <span class="n">values</span><span class="p">[</span><span class="n">li</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+        <span class="n">x_attn</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_head</span><span class="p">):</span>
+            <span class="n">hs</span> <span class="o">=</span> <span class="n">h</span> <span class="o">*</span> <span class="n">head_dim</span>
+            <span class="n">q_h</span> <span class="o">=</span> <span class="n">q</span><span class="p">[</span><span class="n">hs</span><span class="p">:</span><span class="n">hs</span><span class="o">+</span><span class="n">head_dim</span><span class="p">]</span>
+            <span class="n">k_h</span> <span class="o">=</span> <span class="p">[</span><span class="n">ki</span><span class="p">[</span><span class="n">hs</span><span class="p">:</span><span class="n">hs</span><span class="o">+</span><span class="n">head_dim</span><span class="p">]</span> <span class="k">for</span> <span class="n">ki</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">[</span><span class="n">li</span><span class="p">]]</span>
+            <span class="n">v_h</span> <span class="o">=</span> <span class="p">[</span><span class="n">vi</span><span class="p">[</span><span class="n">hs</span><span class="p">:</span><span class="n">hs</span><span class="o">+</span><span class="n">head_dim</span><span class="p">]</span> <span class="k">for</span> <span class="n">vi</span> <span class="ow">in</span> <span class="n">values</span><span class="p">[</span><span class="n">li</span><span class="p">]]</span>
+            <span class="n">attn_logits</span> <span class="o">=</span> <span class="p">[</span><span class="nb">sum</span><span class="p">(</span><span class="n">q_h</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">*</span> <span class="n">k_h</span><span class="p">[</span><span class="n">t</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">head_dim</span><span class="p">))</span> <span class="o">/</span> <span class="n">head_dim</span><span class="o">**</span><span class="mf">0.5</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">k_h</span><span class="p">))]</span>
+            <span class="n">attn_weights</span> <span class="o">=</span> <span class="n">softmax</span><span class="p">(</span><span class="n">attn_logits</span><span class="p">)</span>
+            <span class="n">head_out</span> <span class="o">=</span> <span class="p">[</span><span class="nb">sum</span><span class="p">(</span><span class="n">attn_weights</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">*</span> <span class="n">v_h</span><span class="p">[</span><span class="n">t</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">v_h</span><span class="p">)))</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">head_dim</span><span class="p">)]</span>
+            <span class="n">x_attn</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">head_out</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">linear</span><span class="p">(</span><span class="n">x_attn</span><span class="p">,</span> <span class="n">state_dict</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;layer</span><span class="si">{</span><span class="n">li</span><span class="si">}</span><span class="s1">.attn_wo&#39;</span><span class="p">])</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x_residual</span><span class="p">)]</span>
+        <span class="c1"># 2) MLP block</span>
+        <span class="n">x_residual</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">rmsnorm</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">linear</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">state_dict</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;layer</span><span class="si">{</span><span class="n">li</span><span class="si">}</span><span class="s1">.mlp_fc1&#39;</span><span class="p">])</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">xi</span><span class="o">.</span><span class="n">relu</span><span class="p">()</span> <span class="k">for</span> <span class="n">xi</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">linear</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">state_dict</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;layer</span><span class="si">{</span><span class="n">li</span><span class="si">}</span><span class="s1">.mlp_fc2&#39;</span><span class="p">])</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x_residual</span><span class="p">)]</span>
+
+    <span class="n">logits</span> <span class="o">=</span> <span class="n">linear</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">state_dict</span><span class="p">[</span><span class="s1">&#39;lm_head&#39;</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">logits</span>
+
+<span class="c1"># Let there be Adam, the blessed optimizer and its buffers</span>
+<span class="n">learning_rate</span><span class="p">,</span> <span class="n">beta1</span><span class="p">,</span> <span class="n">beta2</span><span class="p">,</span> <span class="n">eps_adam</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.85</span><span class="p">,</span> <span class="mf">0.99</span><span class="p">,</span> <span class="mf">1e-8</span>
+<span class="n">m</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">params</span><span class="p">)</span> <span class="c1"># first moment buffer</span>
+<span class="n">v</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">params</span><span class="p">)</span> <span class="c1"># second moment buffer</span>
+
+<span class="c1"># Repeat in sequence</span>
+<span class="n">num_steps</span> <span class="o">=</span> <span class="mi">1000</span> <span class="c1"># number of training steps</span>
+<span class="k">for</span> <span class="n">step</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_steps</span><span class="p">):</span>
+
+    <span class="c1"># Take single document, tokenize it, surround it with BOS special token on both sides</span>
+    <span class="n">doc</span> <span class="o">=</span> <span class="n">docs</span><span class="p">[</span><span class="n">step</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">docs</span><span class="p">)]</span>
+    <span class="n">tokens</span> <span class="o">=</span> <span class="p">[</span><span class="n">BOS</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">uchars</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span> <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">doc</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">BOS</span><span class="p">]</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">block_size</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="c1"># Forward the token sequence through the model, building up the computation graph all the way to the loss.</span>
+    <span class="n">keys</span><span class="p">,</span> <span class="n">values</span> <span class="o">=</span> <span class="p">[[]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_layer</span><span class="p">)],</span> <span class="p">[[]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_layer</span><span class="p">)]</span>
+    <span class="n">losses</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">pos_id</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">token_id</span><span class="p">,</span> <span class="n">target_id</span> <span class="o">=</span> <span class="n">tokens</span><span class="p">[</span><span class="n">pos_id</span><span class="p">],</span> <span class="n">tokens</span><span class="p">[</span><span class="n">pos_id</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="n">logits</span> <span class="o">=</span> <span class="n">gpt</span><span class="p">(</span><span class="n">token_id</span><span class="p">,</span> <span class="n">pos_id</span><span class="p">,</span> <span class="n">keys</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span>
+        <span class="n">probs</span> <span class="o">=</span> <span class="n">softmax</span><span class="p">(</span><span class="n">logits</span><span class="p">)</span>
+        <span class="n">loss_t</span> <span class="o">=</span> <span class="o">-</span><span class="n">probs</span><span class="p">[</span><span class="n">target_id</span><span class="p">]</span><span class="o">.</span><span class="n">log</span><span class="p">()</span>
+        <span class="n">losses</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">loss_t</span><span class="p">)</span>
+    <span class="n">loss</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="n">n</span><span class="p">)</span> <span class="o">*</span> <span class="nb">sum</span><span class="p">(</span><span class="n">losses</span><span class="p">)</span> <span class="c1"># final average loss over the document sequence. May yours be low.</span>
+
+    <span class="c1"># Backward the loss, calculating the gradients with respect to all model parameters.</span>
+    <span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+
+    <span class="c1"># Adam optimizer update: update the model parameters based on the corresponding gradients.</span>
+    <span class="n">lr_t</span> <span class="o">=</span> <span class="n">learning_rate</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">step</span> <span class="o">/</span> <span class="n">num_steps</span><span class="p">)</span> <span class="c1"># linear learning rate decay</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">params</span><span class="p">):</span>
+        <span class="n">m</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">beta1</span> <span class="o">*</span> <span class="n">m</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">beta1</span><span class="p">)</span> <span class="o">*</span> <span class="n">p</span><span class="o">.</span><span class="n">grad</span>
+        <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">beta2</span> <span class="o">*</span> <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">beta2</span><span class="p">)</span> <span class="o">*</span> <span class="n">p</span><span class="o">.</span><span class="n">grad</span> <span class="o">**</span> <span class="mi">2</span>
+        <span class="n">m_hat</span> <span class="o">=</span> <span class="n">m</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">beta1</span> <span class="o">**</span> <span class="p">(</span><span class="n">step</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+        <span class="n">v_hat</span> <span class="o">=</span> <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">beta2</span> <span class="o">**</span> <span class="p">(</span><span class="n">step</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">data</span> <span class="o">-=</span> <span class="n">lr_t</span> <span class="o">*</span> <span class="n">m_hat</span> <span class="o">/</span> <span class="p">(</span><span class="n">v_hat</span> <span class="o">**</span> <span class="mf">0.5</span> <span class="o">+</span> <span class="n">eps_adam</span><span class="p">)</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">grad</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;step </span><span class="si">{</span><span class="n">step</span><span class="o">+</span><span class="mi">1</span><span class="si">:</span><span class="s2">4d</span><span class="si">}</span><span class="s2"> / </span><span class="si">{</span><span class="n">num_steps</span><span class="si">:</span><span class="s2">4d</span><span class="si">}</span><span class="s2"> | loss </span><span class="si">{</span><span class="n">loss</span><span class="o">.</span><span class="n">data</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Inference: may the model babble back to us</span>
+<span class="n">temperature</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="c1"># in (0, 1], control the &quot;creativity&quot; of generated text, low to high</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- inference (new, hallucinated names) ---&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">sample_idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
+    <span class="n">keys</span><span class="p">,</span> <span class="n">values</span> <span class="o">=</span> <span class="p">[[]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_layer</span><span class="p">)],</span> <span class="p">[[]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_layer</span><span class="p">)]</span>
+    <span class="n">token_id</span> <span class="o">=</span> <span class="n">BOS</span>
+    <span class="n">sample</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">pos_id</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">block_size</span><span class="p">):</span>
+        <span class="n">logits</span> <span class="o">=</span> <span class="n">gpt</span><span class="p">(</span><span class="n">token_id</span><span class="p">,</span> <span class="n">pos_id</span><span class="p">,</span> <span class="n">keys</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span>
+        <span class="n">probs</span> <span class="o">=</span> <span class="n">softmax</span><span class="p">([</span><span class="n">l</span> <span class="o">/</span> <span class="n">temperature</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">logits</span><span class="p">])</span>
+        <span class="n">token_id</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">vocab_size</span><span class="p">),</span> <span class="n">weights</span><span class="o">=</span><span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">data</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">probs</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">token_id</span> <span class="o">==</span> <span class="n">BOS</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="n">sample</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">uchars</span><span class="p">[</span><span class="n">token_id</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;sample </span><span class="si">{</span><span class="n">sample_idx</span><span class="o">+</span><span class="mi">1</span><span class="si">:</span><span class="s2">2d</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">sample</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "sagemath"
+        },
+        kernelOptions: {
+            name: "sagemath",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'sagemath'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="right-next"
+       href="past/Alevel_math.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">A-level-math</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Introduction</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#timeline-qa">Timeline &amp; QA</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ubuntu-sce-scientific-computing-environment">Ubuntu &amp; SCE (Scientific Computing Environment)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oop-to-fp">OOP to FP</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#haskell">Haskell</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#experiment">Experiment</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gpt-llm">GPT, LLM</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jonny, assisted by Tom
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

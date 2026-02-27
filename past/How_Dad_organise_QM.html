@@ -1,0 +1,2302 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>How Dad learn QM &#8212; Jonny Workbook</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=550f00eb" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=1ae7504c"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'past/How_Dad_organise_QM';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="QFT" href="../Course_MCM_QFT.html" />
+    <link rel="prev" title="Lottery Math" href="nb_lottery_simulator.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Jonny Workbook</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Math &amp; FP/Language</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Alevel_math.html">A-level-math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Alevel_math_further.html">A-level-further</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Course_MCM.html">Math Computational Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Course_Lean.html">Lean</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Course_Puzzle.html">Permutation Puzzles</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../0mmgroup.html">mmgroup Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">CS &amp; Physics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Course_MIT6001Python.html">MIT_CS6001-Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Course_MIT6002thinking.html">MIT_CS6002-CS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PE100.html">Project Euler Q1-50</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="Course_MCM_QM.html">Quantum Mechanics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Notebook &amp; Tom</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="nb_past_courses.html">Past courses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nb_Geo.html">Geography and Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nb_lottery_simulator.html">Lottery Math</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">How Dad learn QM</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../Course_MCM_QFT.html">QFT</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/tomctang/10pe" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/past/How_Dad_organise_QM.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>How Dad learn QM</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">How Dad learn QM</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#m1-intro-qm-wk1">M1: Intro QM (Wk1)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#m2-advanced-qm-spins-wk2">M2: Advanced QM - spins (Wk2)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#m3-qm-of-light-wk3">M3: QM of light (Wk3)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#m4-advanced-qm-of-light-wk4">M4: Advanced QM of light (Wk4)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#m5-operators-identities-wk5-6">M5: Operators &amp; identities (Wk5-6)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#m6-simple-harmonic-oscillator-wk8-9">M6: Simple harmonic oscillator (Wk8-9)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#m7-angular-momentum-hydrogen-wk10-12">M7: Angular momentum &amp; hydrogen (Wk10-12)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#m8-approximation-methods-wk13-15">M8: Approximation methods (Wk13-15)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#m9-time-evolution-wk16">M9: Time evolution (Wk16)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#m10-photons-ligo-wk17">M10: Photons &amp; LIGO (Wk17)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix">Appendix</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cm-qm-unity">CM-QM unity</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-structure-unity-classical-vs-quantum-mechanics">Mathematical Structure Unity: Classical vs Quantum Mechanics</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-phase-space-poisson-bracket-hamilton-equations">1) Classical phase space: Poisson bracket + Hamilton equations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-operators-commutators-finite-dimensional-truncation">2) Quantum: operators + commutators (finite-dimensional truncation)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#canonical-commutation-dimensionless-quadratures">3) Canonical commutation: dimensionless quadratures</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deformation-quantization-view-moyal-bracket-series">4) Deformation quantization view: Moyal bracket (series)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="how-dad-learn-qm">
+<h1>How Dad learn QM<a class="headerlink" href="#how-dad-learn-qm" title="Link to this heading">#</a></h1>
+<p><strong>Learning strategies</strong> - two approaches of learning QM: operator/Algebraic way and calculus/DE way</p>
+<ul class="simple">
+<li><p>Operator way: Start from states ∣𝜓⟩ in Hilbert space and operators 𝐴^ acting on them; Use Dirac notation, commutators, and operator identities instead of solving DEs; algebra-heavy (linear algebra, group theory, operator identities); clean structure (symmetries, conservation laws)</p>
+<ul>
+<li><p>Our course is operator-centric, eg. spin systems, four operator identities, Schrödinger factorization and Dirac’s abstract methodology, angular momentum algebra (rotations, spherical harmonics)</p></li>
+</ul>
+</li>
+<li><p>Calculus way: Start from the Schrödinger equation, heavy use of integrals/DEs/special functions</p>
+<ul>
+<li><p>minor calculus elements in our course, eg. wavefunctions in position and momentum space, spherical harmonics, variational method</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Learning outcomes</strong> - upon successfully completing this course, you will:</p>
+<ul class="simple">
+<li><p>M1: Be able to describe how the principle of superposition underlies wave-particle duality and use the quantum superposition of states to analyze properties of spin (Stern-Gerlach experiments) and light (one-, two-, and multiple slits and the Mach-Zehnder interferometer).</p></li>
+<li><p>M2: Distinguish between events, alternative ways an event occurs, tagging, and measurement; be able to use the mathematical formalism of quantum mechanics to describe these different phenomena and how they allow for delayed choice experiments.</p></li>
+<li><p>M3: Describe how entanglement requires quantum mechanics to violate local realism and how experiments verify that this occurs.</p></li>
+<li><p>M4: Explain how an interaction-free experiment allows for quantum seeing in the dark and the details of how such an experiment is carried out.</p></li>
+<li><p>M5: Know the four fundamental operator identities of quantum mechanics (Leibniz rule, Hadamard lemma, exponential disentangling identity, and Baker-Campbell-Hausdorff formula), in all of their variants, and be able to use them in quantum calculations.</p></li>
+<li><p>M6: Use the Schrödinger factorization method to solve bound-state energy eigenvalue problems (determining the energies algebraically) and couple it with the translation operator (or the subsidiary condition) to find the wavefunctions; explain why the energy levels are discrete and describe how to use the node theorem to verify completeness.</p></li>
+<li><p>M7: Use quantum principles employed in the class to explain properties of hydrogen including how to use spectroscopy to measure its mass, the radius of the nucleus, how it is used in radio astronomy, and how the probability distribution of electrons are measured in momentum space.</p></li>
+<li><p>M8: Use approximation methods of perturbation theory and the variational method to learn about quantum systems that cannot be solved exactly.</p></li>
+<li><p>M9: Calculate how time evolution is employed to describe oscillatory motion of the simple harmonic oscillator and the rotational motion of a nuclear spin; be able to use the Trotter form of the time-ordered product.</p></li>
+<li><p>M10: Quantize light, describe what a photon is, how single photons are measured, how to verify you have a single-photon light source, how to squeeze light, and how quantum properties of light are used in gravitational wave detection.</p></li>
+</ul>
+<p><strong>Important Topics</strong></p>
+<ul class="simple">
+<li><p>Magnetic needles and current loops</p></li>
+<li><p>Calculating probabilities</p></li>
+<li><p>Using Dirac Notation/operators to analyze quantum systems</p></li>
+<li><p>Reflection and transmission of light</p></li>
+<li><p>Polarization of light</p></li>
+<li><p>Stern Gerlach experiment/ analyzer loops</p></li>
+<li><p>Bell’s Theorem experiment</p></li>
+<li><p>Wheeler’s delayed choice experiment</p></li>
+<li><p>Einstein, Podolsky, Rosen (EPR) Experiment</p></li>
+<li><p>Light and slit experiments / quantum mystery</p></li>
+<li><p>Mach Zender Interferometer / quantum seeing in the dark experiments</p></li>
+<li><p>Hong Ou Mandel Experiment</p></li>
+</ul>
+<section id="m1-intro-qm-wk1">
+<h2>M1: Intro QM (Wk1)<a class="headerlink" href="#m1-intro-qm-wk1" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>This week covers the classical and quantum Stern-Gerlach experiment and probability</p></li>
+<li><p>We use the phenomena of spin to introduce you to the strangeness of the quantum world, show why QM is stochastic (meaning results can occur randomly, but with predictable probabilities to occur), Dirac notation, and describe how to predict the probabilities that quantum events will occur.</p></li>
+<li><p>Problem Set 1</p>
+<ol class="arabic simple">
+<li><p>Eigenvalues and eigenvectors of a general Hermitian 2 x 2 matrix</p></li>
+<li><p>Completeness, or is the set of eigenvectors complete</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\hat{I}= \sum_{n=1}^N |e_n\rangle\langle e_n|\)</span></p></li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<p><strong>Notes/Math Definitions</strong></p>
+<ul class="simple">
+<li><p>Hermitian matrix <span class="math notranslate nohighlight">\(\hat{A}\)</span> satisfies <span class="math notranslate nohighlight">\(\hat{A}^{\dagger} = A\)</span>, where <span class="math notranslate nohighlight">\(\dagger\)</span> is hermitian conjugate (transpose and complex conjugate). <img src="https://raw.githubusercontent.com/tomctang/NB_img/main/herm_conjugate.png" alt="exp.1" width="350"></p></li>
+<li><p>The hermitian conjugate of a bra is a ket, and vice versa; don’t
+forget to switch the sign of complex numbers too!
+<img src="https://raw.githubusercontent.com/tomctang/NB_img/main/herm_conjugate.jpg" alt="exp.1" width="600"></p></li>
+<li><p>Hermitian operators are not necessarily self adjoint.</p>
+<ul>
+<li><p>An operator is hermitian if it is equal to its hermitian conjugate,  as written above.</p></li>
+<li><p>A hermitian operator can act on states to the left and to the right.</p></li>
+<li><p>If you are given an operator in matrix form, you can easily tell whether or not it is hermitian: If the matrix has real numbers along the diagonal and zeroes elsewhere, then it corresponds to a Hermitian operator whose eigenvalues are listed along the diagonal.</p></li>
+<li><p>On the other hand, if an operator is self-adjoint, then the operator has a complete set of real eigenvalues.</p></li>
+</ul>
+</li>
+<li><p>A bra can be represented by a row vector, whereas a ket can be
+represented by a column vector. Operators can be represented by
+matrices. A matrix is a representation of an operator in a particular basis.</p>
+<ul>
+<li><p>Eigenvectors of hermitian operators form an orthonormal basis.</p></li>
+</ul>
+</li>
+<li><p><span class="math notranslate nohighlight">\(|\uparrow\rangle_{z} = |\downarrow\rangle_{-z}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\langle \psi \mid \phi \rangle = \langle \phi \mid \psi \rangle^{*}\)</span></p></li>
+</ul>
+<img src="https://raw.githubusercontent.com/tomctang/NB_img/main/herm-time.png" alt="exp.1" width="500">
+<p><strong>Index</strong></p>
+<ul class="simple">
+<li><p>Change of basis, M1, p22</p></li>
+<li><p>Completeness, M1, p27</p></li>
+<li><p>Current loops, M1, p6</p></li>
+<li><p>Dirac notation, M1, p18, M1, p20, M1, p21, M1, p22</p></li>
+<li><p>Eigenvalue, M1, p19, M1, p26; Eigenvector, M1, p19, M1, p26</p></li>
+<li><p>Hermitian conjugate, M1, p19; Hermitian matrix, M1, p19</p></li>
+<li><p>Magnetic field, M1, p4, M1, p9; Magnetic needles, M1, p5</p></li>
+<li><p>Probability, M1, p14, M1, p15, M1, p16</p></li>
+<li><p>Stern-Gerlach, classical, M1, p7; Stern-Gerlach, rotating, M1, p23</p></li>
+<li><p>Tensor product, M1, p27</p></li>
+</ul>
+</section>
+<section id="m2-advanced-qm-spins-wk2">
+<h2>M2: Advanced QM - spins (Wk2)<a class="headerlink" href="#m2-advanced-qm-spins-wk2" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>This week covers complementarity, Wheeler’s delayed choice experiments, Einstein-Podolsky-Rosen experiments, Bell experiments, and magnetic resonance imaging</p>
+<ul>
+<li><p>Stern Gerlach experiment/ analyzer loops, Analog of the two-slit experiment,</p></li>
+</ul>
+</li>
+<li><p>We discover why quantum mechanics is a nonlocal theory, that it cannot be described by any hidden variables, and that the concept of complementarity governs when quantum interference occurs and when it does not.</p></li>
+<li><p>We also examine phenomena that seem to require faster than light messaging and quantum objects moving backwards in time; we find that neither is actually needed - one needs to think carefully to understand how this is so.</p></li>
+<li><p>Introduce first of four quantum operator identities (the Leibniz identity).</p></li>
+<li><p>Problem Set 2</p>
+<ol class="arabic simple">
+<li><p>Equivalent states - We say two states are the same if they are related by a complex phase</p></li>
+<li><p>More spin eigenstates - total spin operator, eigenvalues of total spin, eigenvalues of total spin</p></li>
+</ol>
+</li>
+</ul>
+<img src="https://raw.githubusercontent.com/tomctang/NB_img/main/SG-spin.jpg" alt="exp.1" width="500">
+<img src="https://raw.githubusercontent.com/tomctang/NB_img/main/spin.jpg" alt="exp.1" width="500">
+<p><strong>Notes/Math Definitions</strong></p>
+<ul class="simple">
+<li><p>Linear operators preserve scalar multiplication and vector addition, that is:</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\((\alpha \hat{A} + \beta \hat{B})|\psi\rangle = \alpha \hat{A}|\psi\rangle + \beta \hat{B}|\psi\rangle\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\hat{A}(\alpha|\psi\rangle + \beta|\phi\rangle) = \alpha \hat{A}|\psi\rangle + \beta \hat{A}|\phi\rangle\)</span></p></li>
+</ul>
+</li>
+<li><p><span class="math notranslate nohighlight">\(\hat{S}_{z}|\uparrow\rangle_{z} = \frac{\hbar}{2}|\uparrow\rangle_{z}\)</span>
+<span class="math notranslate nohighlight">\(\quad\)</span>
+<span class="math notranslate nohighlight">\(\hat{S}_{z}|\downarrow\rangle_{z} = -\frac{\hbar}{2}|\downarrow\rangle_{z}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\hat{S}_{+}|\downarrow\rangle_{z} = \hbar|\uparrow\rangle_{z}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\hat{S}_{+}|\uparrow\rangle_{z} = 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\hat{S}_{-}|\uparrow\rangle_{z} = \hbar|\downarrow\rangle_{z}\)</span> <span class="math notranslate nohighlight">\(\quad\)</span>
+<span class="math notranslate nohighlight">\(\hat{S}_{-}|\downarrow\rangle_{z} = 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\([\hat{A}, \hat{B}] = \hat{A} \hat{B} - \hat{B} \hat{A}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\([\hat{A}, \hat{B}] = -[\hat{B}, \hat{A}]\)</span></p>
+<ul>
+<li><p>If 2 operators commute, their commutator is equal to 0;</p></li>
+<li><p>if they do NOT commute, their commutator is nonzero, then we cannot find a complete set of eigenstates that are simultaneous eigenstates of both operators.</p></li>
+</ul>
+</li>
+<li><p><span class="math notranslate nohighlight">\(\left[\hat{S}_{z}, \hat{S}_{+}\right] = \hbar \hat{S}_{+}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\left[\hat{S}_{z}, \hat{S}_{-}\right] = -\hbar \hat{S}_{-}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\left[\hat{S}_{+}, \hat{S}_{-}\right] = 2 \hbar \hat{S}_{z}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\hat{S}_{x} = \frac{1}{2}\left(\hat{S}_{+} + \hat{S}_{-}\right)\)</span>
+<span class="math notranslate nohighlight">\(\quad\)</span>
+<span class="math notranslate nohighlight">\(\hat{S}_{y} = \frac{1}{2 i}\left(\hat{S}_{+} - \hat{S}_{-}\right)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\hat{S}_{+} = \hat{S}_{x} + i \hat{S}_{y}\)</span> <span class="math notranslate nohighlight">\(\quad\)</span>
+<span class="math notranslate nohighlight">\(\hat{S}_{-} = \hat{S}_{x} - i \hat{S}_{y}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\left[\hat{S}_{i}, \hat{S}_{j}\right] = i \hbar \sum_{k} \epsilon_{i j k} \hat{S}_{k}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\hat{S}^{2} = \hat{S}_{x}^{2} + \hat{S}_{y}^{2} + \hat{S}_{z}^{2}\)</span></p></li>
+<li><p>Leibnitz Identity:
+<span class="math notranslate nohighlight">\([\hat{A} \hat{B}, \hat{C}] = \hat{A}[\hat{B}, \hat{C}] + [\hat{A}, \hat{C}] \hat{B}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\hat{S}_{z} = \begin{pmatrix}
+    \frac{\hbar}{2} &amp; 0 \\
+    0 &amp; -\frac{\hbar}{2}
+    \end{pmatrix}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\hat{S}_{z}|\uparrow\rangle_{z} = \frac{\hbar}{2}|\uparrow\rangle_{z}\)</span>
+<span class="math notranslate nohighlight">\(\quad\)</span>
+<span class="math notranslate nohighlight">\(\hat{S}_{z}|\downarrow\rangle_{z} = -\frac{\hbar}{2}|\downarrow\rangle_{z}\)</span></p></li>
+<li><p>Spin operators in <span class="math notranslate nohighlight">\(x, y\)</span> and <span class="math notranslate nohighlight">\(z\)</span> are all hermitian, whereas spin
+raising and lowering operators are NOT hermitian.</p></li>
+<li><p>A projection operator <span class="math notranslate nohighlight">\(\hat{P}\)</span> satisfies <span class="math notranslate nohighlight">\(\hat{P}^{2} = \hat{P}\)</span>,
+which is called an idempotent operator. If we have a normalized
+quantum state <span class="math notranslate nohighlight">\(|\psi\rangle\)</span>, then the operator
+<span class="math notranslate nohighlight">\(|\psi\rangle \langle \psi|\)</span> is a projection operator. The sum (or
+integral) over all projection operators (also called ‘projectors’)
+is the identity matrix. We often use this to ‘multiply by 1.’</p></li>
+<li><p><span class="math notranslate nohighlight">\(|\uparrow\rangle_{z} = \frac{1}{\sqrt{2}}\left(|\uparrow\rangle_{x} + |\downarrow\rangle_{x}\right)\)</span></p></li>
+<li><p>The <span class="math notranslate nohighlight">\(\otimes\)</span> symbol is called the tensor product; we use this to
+describe quantum states that have different properties, which live
+in different vector spaces. (eg. position and spin, or spin
+and an atomic energy state, and so on…)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\langle a| \otimes \langle b| \cdot |c\rangle \otimes |d\rangle = \langle a|c\rangle \times \langle b|d\rangle = \langle a|c\rangle \langle b|d\rangle\)</span></p></li>
+<li><p>Superpositioner in Stern Gerlach experiments: transforms
+<span class="math notranslate nohighlight">\(|GS\rangle\)</span> to <span class="math notranslate nohighlight">\(\frac{1}{\sqrt{2}}(|GS\rangle + |ES\rangle)\)</span></p></li>
+<li><p>De-exciter in Stern Gerlach experiments: behaves as a ground state
+filter</p></li>
+<li><p>Exciter in Stern Gerlach experiments: transforms ground state into
+the excited state</p></li>
+</ul>
+<p><strong>Index</strong></p>
+<ul class="simple">
+<li><p>Bell’s experiment, M2, p22</p></li>
+<li><p>Collapse theory, M2, p34</p></li>
+<li><p>Commutator, M2, p6</p></li>
+<li><p>Complementarity, M2, p10</p></li>
+<li><p>Delayed choice, M2, p20, M2, p23, Mp25</p>
+<ul>
+<li><p>Wheeler’s delayed choice experiment, M2, p11</p></li>
+</ul>
+</li>
+<li><p>Entanglement, M2, p19, M2, p26</p></li>
+<li><p>EPR paradox, M2, p19, M2, p20</p></li>
+<li><p>Hidden variables, M2, p21, M2, p31</p></li>
+<li><p>Leibniz rule identity, M2, p9</p></li>
+<li><p>Local realism, M2, p32; Local realism, theory, M2, p22, M2, p30, M2, p31</p></li>
+<li><p>Many worlds interpretation , M2, p34</p></li>
+<li><p>MRI, M2, p29;  NMR, M2, p27, M2, p28</p></li>
+<li><p>Pilot wave theory, M2, p34</p></li>
+<li><p>Quantum seeing in the dark, M2, p17, M4, p7, M4, p10, M4, p20</p></li>
+<li><p>operator, eigenvalues and eigenvectors, M2, p13</p>
+<ul>
+<li><p>Projection operator, M2, p15</p></li>
+</ul>
+</li>
+<li><p>operator (total spin), M2, p9, M2, p36; operator (total spin), eigenvalues, M2, p36</p></li>
+<li><p>Separation fallacy, M2, p25</p></li>
+<li><p>Spooky action at a distance, M2, p19, M2, p32</p></li>
+<li><p>Stern-Gerlach analyzer loop, M2, p2, M2, p16</p></li>
+<li><p>Superposition, M2, p10</p></li>
+<li><p>Tensor product, Dirac notation, M2, p24</p></li>
+</ul>
+</section>
+<section id="m3-qm-of-light-wk3">
+<h2>M3: QM of light (Wk3)<a class="headerlink" href="#m3-qm-of-light-wk3" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>This week covers light—partial reflection, moving through one, two and multiple slits, the quantum mystery, mirrors, lenses, and normalization</p></li>
+<li><p>We start our coverage of the quantum mechanics of light, which will be revisited many times in the class. Here, we describe what a quantum particle is and how we can determine the behavior of quantum particles in a range of different situations and experiments, including what we call the quantum mystery. This approach is based on Feynman’s path integral methodology for quantum mechanics.</p></li>
+<li><p>Problem Set 3</p>
+<ol class="arabic simple">
+<li><p>Quantum Key Distribution in the BB84 protocol</p></li>
+<li><p>Eavesdropping</p></li>
+</ol>
+</li>
+</ul>
+<img src="https://raw.githubusercontent.com/tomctang/NB_img/main/M3.jpeg" alt="exp.1" width="600">
+<p><strong>Index</strong></p>
+<ul class="simple">
+<li><p>Complex numbers, M3, p26</p></li>
+<li><p>Diffraction, double slit, M3, p16, M3, p17; single slit, M3, p15, M3, p17</p></li>
+<li><p>Diffraction grating, M3, p22</p></li>
+<li><p>Double slit experiment, M3, p13, M3, p18, M3, p19</p></li>
+<li><p>Imperfect detectors, M3, p20</p></li>
+<li><p>Lenses, M3, p23</p></li>
+<li><p>Light, transmission through glass, M3, p6</p></li>
+<li><p>Multiple reflections, M3, p7</p></li>
+<li><p>Normalization, M3, p23, M3, p24</p></li>
+<li><p>Partial reflection, M3, p3, M3, p5</p></li>
+<li><p>Photon self-reflection, M3, p22</p></li>
+<li><p>Quantum key distribution, M3, p29, M3, p30</p></li>
+<li><p>Quantum mystery, M3, p19, M3, p21</p></li>
+<li><p>Quantum rules for light, M3, p2</p></li>
+<li><p>Single slit experiment, M3, p10, M3, p11, M3, p12, M3, p13</p></li>
+<li><p>Two slit experiment, Dirac approach, M3, p27, M3, p28; Three-slit experiment, M3, p21</p></li>
+<li><p>Wave motion, M3, p26; Waves, M3, p14</p></li>
+<li><p>Wave-particle duality, M3, p1, M3, p4</p></li>
+<li><p>Wavefunction, M3, p25</p></li>
+</ul>
+</section>
+<section id="m4-advanced-qm-of-light-wk4">
+<h2>M4: Advanced QM of light (Wk4)<a class="headerlink" href="#m4-advanced-qm-of-light-wk4" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>This week covers polarization of light, the Mach-Zehnder interferometer, quantum seeing in the dark, the Hong-Ou-Mandel experiment, and indistinguishability</p></li>
+<li><p>This material is plain out weird. We show you how you can see something without looking at it and we describe how photons enjoy themselves so much that if they have an opportunity to “pair up” they always will.</p></li>
+<li><p>Problem Set 4</p>
+<ol class="arabic simple">
+<li><p>Rabi Oscillations</p></li>
+<li><p>Probability and energy of bosons</p></li>
+</ol>
+</li>
+</ul>
+<p><strong>M4 Notes/Math Definitions</strong></p>
+<ul class="simple">
+<li><p>A 50-50 beam splitter in Mach Zehnder Interferometer apparatus
+transforms the incident light <span class="math notranslate nohighlight">\(|I\rangle\)</span> into a superposition of
+reflected and transmitted light, denoted by <span class="math notranslate nohighlight">\(\frac{1}{\sqrt{2}}(|R\rangle + |T\rangle)\)</span></p></li>
+<li><p>When we make measurements on an arbitrary state <span class="math notranslate nohighlight">\(|\psi\rangle\)</span> we
+apply the projection operator (projector) corresponding to our
+measurement onto the state <span class="math notranslate nohighlight">\(|\psi\rangle\)</span>. Then, to calculate the
+probability, we take the modulus squared of our new state, including
+the projector.</p></li>
+<li><p>When light is polarized in the <span class="math notranslate nohighlight">\(\theta\)</span> direction, we express this as:
+<span class="math notranslate nohighlight">\(|\theta\rangle = \cos \theta |V\rangle + \sin \theta |H\rangle.\)</span>
+Note that <span class="math notranslate nohighlight">\(|H\rangle\)</span> and <span class="math notranslate nohighlight">\(|V\rangle\)</span> form an orthonormal basis which means that
+<span class="math notranslate nohighlight">\(\langle H | H \rangle = \langle V | V \rangle =1\)</span> and <span class="math notranslate nohighlight">\(\langle V | H \rangle = \langle H | V \rangle =0\)</span></p></li>
+<li><p>We also define the following state for polarizer problems:
+<span class="math notranslate nohighlight">\(|-\theta\rangle = \cos \theta |V\rangle - \sin \theta |H\rangle\)</span></p></li>
+<li><p>If we wish to represent the polarization as a spinor (vector) we
+get: <span class="math notranslate nohighlight">\(\begin{pmatrix}
+    \cos \theta \\
+    \sin \theta
+    \end{pmatrix} = \cos \theta |V\rangle + \sin \theta |H\rangle\)</span></p></li>
+<li><p>When a photon goes through a polarizer, it always corresponds to
+being measured, which we accomplish by applying the appropriate
+projection operator onto the photon’s state.</p></li>
+<li><p>When a photon goes through a polarization rotator, on the other
+hand, it does not correspond to a measurement. It is just a way to
+manipulate the direction of the polarization of the photon.</p>
+<ul>
+<li><p>We write the action of the rotator as an operator that changes the angle of
+polarization of a polarization state vector as follows:
+<span class="math notranslate nohighlight">\(|\theta\rangle \rightarrow \left|\theta + \phi_{\text{rotator}}\right\rangle\)</span>
+if the physical rotator rotates the polarization by
+<span class="math notranslate nohighlight">\(\phi_{\text{rotator}}\)</span>.</p></li>
+</ul>
+</li>
+<li><p>The binomial coefficient tells us the general formula for <span class="math notranslate nohighlight">\(k\)</span>
+collections from <span class="math notranslate nohighlight">\(n\)</span> objects is:
+<span class="math notranslate nohighlight">\(\frac{n!}{k!(n-k)!} = \binom{n}{k}\)</span></p></li>
+<li><p>Binomial theorem:
+<span class="math notranslate nohighlight">\((a + b)^{n} = \sum_{k=0}^{n} \binom{n}{k} a^{k} b^{n-k}\)</span></p></li>
+</ul>
+<p><strong>Index</strong></p>
+<ul class="simple">
+<li><p>Beam splitter, M4, p8</p></li>
+<li><p>Binomial coefficient, M4, p31; Binomial theorem, M4, p31</p></li>
+<li><p>Bosons, M4, p25, M4, p29, M4, p33;  Boson states, counting, M4, p30, M4, p32</p>
+<ul>
+<li><p>Fermions, M4, p30</p></li>
+</ul>
+</li>
+<li><p>Compound probability amplitudes, M4, p26</p></li>
+<li><p>Dark count, M4, p3</p></li>
+<li><p>Hong-Ou-Mandel experiment, M4, p27</p></li>
+<li><p>Interaction free measurement, M4, p1, M4, p2, M4, p7; Interaction free measurement, efficiency, M4, p3</p></li>
+<li><p>Mach-Zehnder interferometer, M4, p4, M4, p5, M4, p7, M10, p10; applications, M4, p6; Dirac approach, M4, p9</p></li>
+<li><p>Many-body physics, M4, p28</p></li>
+<li><p>Michelson-Morley experiment, M4, p6</p></li>
+<li><p>Particle bunching, M4, p25</p></li>
+<li><p>Polarization, M4, p12, M4, p13;  Polarization rotator, M4, p17</p></li>
+<li><p>Polarization in Dirac notation, M4, p16, M4, p18</p></li>
+<li><p>Polarized beam splitter, M4, p19</p></li>
+<li><p>Polarized interferometer, M4, p19</p></li>
+<li><p>Experiments with polarizers, M4, p13, M4, p17, M4, p18</p>
+<ul>
+<li><p>Two slit experiment with polarizers, M4, p22, M4, p23, M4, p24</p></li>
+</ul>
+</li>
+<li><p>Quantum camera, M4, p21; Quantum eraser, M4, p12</p></li>
+<li><p>Quantum seeing in the dark, M2, p17, M4, p7, M4, p10, M4, p20</p></li>
+<li><p>Quantum Zeno effect, M4, p14</p>
+<ul>
+<li><p>Zeno’s paradox, M4, p11</p></li>
+</ul>
+</li>
+<li><p>Rabi oscillations, M4, p32</p></li>
+<li><p>Single photon source, M4, p 8</p></li>
+</ul>
+</section>
+<section id="m5-operators-identities-wk5-6">
+<h2>M5: Operators &amp; identities (Wk5-6)<a class="headerlink" href="#m5-operators-identities-wk5-6" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>These two weeks cover three of the four fundamental operator identities (Leibniz, Hadamard, and exponential disentangling) along with their variants. It also covers Pauli spin matrices, the canonical commutation relation and position and momentum eigenstates.</p></li>
+<li><p>In this module, we develop two more of the four fundamental operator identities that are the workhorses of quantum-mechanics calculation: the Hadamard lemma with the exponential re-ordering and braiding operator variants and the disentangling identity. In the process, we also learn about the canonical commutation relation, which underlies all of the subsequent quantum phenomena, and arises from the fact that atomic spectra have sharp lines.</p></li>
+<li><p>Problem Set 5</p>
+<ol class="arabic simple">
+<li><p>Stern Gerlach</p></li>
+<li><p>Exponentiation of Pauli Matrices</p></li>
+<li><p>Working with Pauli identities</p></li>
+<li><p>Exponential disentangling</p></li>
+<li><p>Exponential disentangling for symplectic matrices</p></li>
+</ol>
+</li>
+<li><p>Problem Set 6</p>
+<ol class="arabic simple">
+<li><p>Commutator of momentum with an exponential</p></li>
+<li><p>Braiding and exponential re-ordering</p></li>
+<li><p>Hadamard for Pauli matrices</p></li>
+<li><p>Gaussian wavepacket</p></li>
+<li><p>The free particle</p></li>
+</ol>
+</li>
+<li><p>Midterm I (Wk7)</p>
+<ul>
+<li><p>Focus on: the four operator identities and how to use them; the factorization method; angular momentum; rotations; position eigenstates and spherical harmonics. This exam will not include questions on the hydrogen atom or central force problems from Wk11.</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>M5-6: Notes/Math Definitions</strong></p>
+<p>Four Fundamental Operator Identities</p>
+<ul>
+<li><p>Leibnitz Rule:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\([\hat{A} \hat{B}, \hat{C}] = \hat{A}[\hat{B}, \hat{C}] + [\hat{A}, \hat{C}] \hat{B}\)</span></p></li>
+</ul>
+</li>
+<li><p>Hadamard:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(e^{\hat{A}} \hat{B} e^{-\hat{A}} = \sum_{n=0}^{\infty} \frac{1}{n!} \left[\hat{A}, \left[\hat{A}, \ldots \left[\hat{A}, [\hat{A}, \hat{B}]\right] \ldots \right] \right]_n\)</span></p></li>
+</ul>
+</li>
+<li><p>Weyl Form of BCH identity:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(e^{\hat{A}} e^{\hat{B}} = e^{\hat{A} + \hat{B}} e^{\frac{1}{2} [\hat{A}, \hat{B}]} = e^{\frac{1}{2} [\hat{A}, \hat{B}]} e^{\hat{A} + \hat{B}} = e^{\hat{A} + \hat{B} + \frac{1}{2} [\hat{A}, \hat{B}]}\)</span></p></li>
+<li><p>This holds when <span class="math notranslate nohighlight">\([\hat{A}, \hat{B}]\)</span> commutes with <span class="math notranslate nohighlight">\(\hat{A}\)</span> and  <span class="math notranslate nohighlight">\(\hat{B}\)</span>.</p></li>
+</ul>
+</li>
+<li><p>General Form of BCH identity:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(e^{\hat{A}} e^{\hat{B}} = e^{\left( (\hat{A} + \hat{B}) + \frac{1}{2} [\hat{A}, \hat{B}] + \frac{1}{12} [\hat{A}, [\hat{A}, \hat{B}]] + \frac{1}{12} [\hat{B}, [\hat{B}, \hat{A}]] + \ldots \right)}\)</span></p></li>
+<li><p>This formula comes from the lecture video on BCH.</p></li>
+</ul>
+</li>
+<li><p>Exponential Disentangling:</p>
+<p>The form of the identity varies depending on your problem and the
+section beginning on Module 6, page 6 provides two examples that are
+worth reviewing. The takeaway is that this procedure lets us rewrite
+an exponential of a matrix in terms of different exponentials of
+matrices that are often easier to calculate and work with.</p>
+<p>Using this identity usually requires remembering the power series expansion for <span class="math notranslate nohighlight">\(e^{x}\)</span>:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(e^{x} = \sum_{n=0}^{\infty} \frac{x^{n}}{n!} = 1 + \frac{x}{1!} + \frac{x^{2}}{2!} + \frac{x^{3}}{3!} + \ldots + \frac{x^{n}}{n!}\)</span></p></li>
+<li><p>You can use a power series to expand exponentials of operators
+(matrices) into a sum with terms that usually either truncate or
+repeat in a useful pattern.</p></li>
+</ul>
+</li>
+<li><p>Similarity Transformation of Powers (This isn’t one of the four
+identities, but it’s worth knowing; you proved this on Module 5,
+Page 28.)</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\hat{A}^{-1} (\hat{B})^{n} \hat{A} = \left( \hat{A}^{-1} \hat{B} \hat{A} \right)^{n}\)</span></p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Index</strong></p>
+<ul class="simple">
+<li><p>Abelian group, M5, p7</p>
+<ul>
+<li><p>Lie algebra, M5, p7;  Lie groups, M5, p7; SU(2) algebra, M5, p7</p></li>
+</ul>
+</li>
+<li><p>Braiding Identity, M5, p28</p></li>
+<li><p>Canonical commutation relation, M5, p17, M5, p18</p></li>
+<li><p>Commutator of powers of position and momentum, M5, p20, M5, p27</p></li>
+<li><p>DeBroglie wavelengths, M5, p25</p></li>
+<li><p>Exponential disentangling, M5, p8, M5, p9, M5, p14, M5, p15, M6, p30  Mod. 7, p6</p></li>
+<li><p>Fluctuations, M5, p19</p></li>
+<li><p>Free particle, M5, p26; 3D Free particle, M5, p31</p></li>
+<li><p>Gaussian integral, M5, p30; Gaussian wavepacket, M5, p30</p></li>
+<li><p>Hadamard lemma, M5, p22; Hadamard lemma, special case, M5, p21</p></li>
+<li><p>Hamiltonian of a free particle, M5, p26</p></li>
+<li><p>Momentum, eigenstate, M5, p23, M6, p15</p></li>
+<li><p>Pauli spin matrices, M5, p1, M5, p2</p>
+<ul>
+<li><p>Pauli matrix identities, M5, p5</p></li>
+<li><p>Arbitrary matrices in terms of Pauli spin matrices, M5, p4</p></li>
+<li><p>Pauli spin matrices, eigenvalues, M5, p2</p></li>
+<li><p>Pauli spin matrices, triple product, M5, p2</p></li>
+</ul>
+</li>
+<li><p>Position eigenstate, M5, p23</p></li>
+<li><p>Probability of measurement, M5, p19</p></li>
+<li><p>Spin operator matrix, theta-phi direction, M5, p3</p></li>
+<li><p>Similarity transform, M5, p21</p></li>
+<li><p>Symplectic matrix, M5, p9</p></li>
+<li><p>Wavefunction, momentum in position space, M5, p24</p></li>
+<li><p>Wavefunction, position in momentum space, M5, p24</p></li>
+<li><p>Zero fluctuation state, M5, p19</p></li>
+</ul>
+</section>
+<section id="m6-simple-harmonic-oscillator-wk8-9">
+<h2>M6: Simple harmonic oscillator (Wk8-9)<a class="headerlink" href="#m6-simple-harmonic-oscillator-wk8-9" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>These two weeks cover the free particle on a circle, introduction to the factorization method, Heisenberg’s uncertainty principle, Baker-Campbell-Hausdorff formula, simple harmonic oscillator wavefunction, coherent states, squeezed states, and applications</p></li>
+<li><p>We develop the description of another important quantum system: the harmonic oscillator. We see the fourth fundamental operator identity (Baker-Campbell-Hausdorff identity and its Weyl form). We also explore the Schrödinger factorization method and Dirac’s abstract methodology.</p></li>
+<li><p>Problem Set 7</p>
+<ol class="arabic simple">
+<li><p>Momentum states on a circle</p></li>
+<li><p>Position operator on a circle</p></li>
+<li><p>Lennard-Jones potential</p></li>
+<li><p>Operators and the simple harmonic oscillator</p></li>
+<li><p>Uncertainty</p></li>
+</ol>
+</li>
+<li><p>Problem Set 8</p>
+<ol class="arabic simple">
+<li><p>Application of Baker-Campbell Hausdorff formula to the simple harmonic oscillator</p></li>
+<li><p>Wavefunction in momentum space</p></li>
+<li><p>Coherent states</p></li>
+<li><p>Squeezed states</p></li>
+<li><p>Simple harmonic oscillator in 3D and the Deuteron</p></li>
+</ol>
+</li>
+</ul>
+<p><strong>Index</strong></p>
+<ul class="simple">
+<li><p>Baker Campbell Hausdorff identity, M6, p21</p></li>
+<li><p>BCH identity, Weyl form, M6, p22, M6, p36</p></li>
+<li><p>Coherent state, M6, p27, M6, p38, M9, p3</p></li>
+<li><p>Degeneracy, M6, p40</p></li>
+<li><p>Deuteron, M6, p34</p></li>
+<li><p>Exponential disentangling, M5, p8, M5, p9, M5, p14, M5, p15, M6, p30  Mod. 7, p6</p></li>
+<li><p>Factorization, M6, p1, M6, p4, M7, p53</p></li>
+<li><p>Hadamard identity, M6, p22</p></li>
+<li><p>Hamiltonian, M6, p8; Hamiltonian operator, M6, p22</p></li>
+<li><p>Lennard Jones Potential, M6, p17</p></li>
+<li><p>Lowering operator, M6, p14, M6, p18, M6, p22, M6, p29</p></li>
+<li><p>Momentum, eigenstate, M5, p23, M6, p15</p></li>
+<li><p>Momentum, operator, M6, p15, M6, p22</p></li>
+<li><p>Morse potential, M6, p7, M6, p35, M6, p40, M7, p37</p></li>
+<li><p>Node, M6, p12</p></li>
+<li><p>Normal ordering, M6, p18</p></li>
+<li><p>Position operator, M6, p3, M6, p16, M6, p22</p></li>
+<li><p>Raising operator, M6, p14, M6, p18, M6, p22, M6, p29</p></li>
+<li><p>Simple harmonic oscillator, M6, p7, M6, p 8, M6, p19, M6, p22, M6, p26, M6, p33, M6, p35, M7, p52, M9, p4</p></li>
+<li><p>Simple harmonic oscillator in 3 dimension, M6, p32, M6, p40</p></li>
+<li><p>Simple harmonic oscillator, factorization, M6, p10</p></li>
+<li><p>Squeezed state, M6, p28, M6, p39, M9, p5, M9, p10, M10, p13</p></li>
+<li><p>Squeezing operator, M6, p28, M6, p29, M6, p31, M6, p39</p></li>
+<li><p>Uncertainty principle, M6, p6, M6, p19, M8, p9</p></li>
+<li><p>Variational principle, M6, p34</p></li>
+<li><p>Virial theorem, M6, p6, , M7, p54</p></li>
+</ul>
+</section>
+<section id="m7-angular-momentum-hydrogen-wk10-12">
+<h2>M7: Angular momentum &amp; hydrogen (Wk10-12)<a class="headerlink" href="#m7-angular-momentum-hydrogen-wk10-12" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>These three weeks cover angular momentum operators, rotations, spherical harmonics, Schroedinger factorization method (general case), EPR, node theorem, time of flight, separation of variables, radial momentum, isotropic simple harmonic oscillator, hydrogen energy eigenvalues, wavefunctions (in position and momentum space), Pickering lines, discovery of deuterium, and e-2e spectroscopy.</p></li>
+<li><p>We develop the theory for describing rotations and angular momentum and the general Schrödinger factorization method. Then we apply this approach to three-dimensional central force problem, which allows us to describe hydrogen. You will learn how, by just measuring the color of light, we can determine the mass and the size of the proton! We also will show you how you can measure how electrons are distributed around the nucleus.</p></li>
+<li><p>Problem Set 9</p>
+<ol class="arabic simple">
+<li><p>Angular momentum uncertainty and hidden variables for Bell experiments</p></li>
+<li><p>Molecular rotation spectroscopy</p></li>
+<li><p>Orthogonality of spherical harmonics</p></li>
+<li><p>Normalization of eigenstates in the factorization method</p></li>
+<li><p>The subsidiary condition and wavefunctions</p></li>
+</ol>
+</li>
+<li><p>Problem Set 10</p>
+<ol class="arabic simple">
+<li><p>Factorization chain for a circle</p></li>
+<li><p>The subsidiary condition and wavefunctions</p></li>
+<li><p>The tanh^2 potential</p></li>
+<li><p>Separation of variables in 2D</p></li>
+<li><p>Morse potential</p></li>
+</ol>
+</li>
+<li><p>Problem Set 11</p>
+<ol class="arabic simple">
+<li><p>Normalization factor of the isotropic simple harmonic oscillator</p></li>
+<li><p>Using factorization to find the energies of the 2D simple harmonic oscillator and Coulomb problems</p></li>
+<li><p>Testing the validity of Coulomb’s law</p></li>
+<li><p>The virial theorem and the size of atoms</p></li>
+<li><p>Kramers-Pasternack relation for positive powers</p></li>
+</ol>
+</li>
+</ul>
+<p><strong>M7: Notes/Math Definitions</strong></p>
+<ul class="simple">
+<li><p>Angular momentum, <span class="math notranslate nohighlight">\(\hat{\vec{L}}=\hat{\overrightarrow{\vec{r}}} \times \hat{\vec{p}}\)</span></p></li>
+<li><p>Any quantity that obeys these cyclical commutator relations is an angular momentum:</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\left[\hat{L}_{x}, \hat{L}_{y}\right]= i \hbar \hat{L}_{z},\left[\hat{L}_{y}, \hat{L}_{z}\right]=i \hbar \hat{L}_{x}\)</span>, and <span class="math notranslate nohighlight">\(\left[\hat{L}_{z}, \hat{L}_{x}\right]=i \hbar \hat{L}_{y}\)</span>.</p></li>
+<li><p>For example, spin angular momentum also obeys these commutator relations, and therefore has analagous eigenvector-eigenvalue relationships to <span class="math notranslate nohighlight">\(\overrightarrow{\hat{L}}\)</span>.</p></li>
+</ul>
+</li>
+<li><p>Eigenvector-eigenvalue relationships for angular momentum:</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\overrightarrow{\hat{L}^{2}}|l, m\rangle=\hbar^{2} l(l+1)|l, m\rangle \text { and } \hat{L}_{z}|l, m\rangle=\hbar m|l, m\rangle\)</span></p></li>
+<li><p>Note that we showed that <span class="math notranslate nohighlight">\(\hbar^{2}\left[l(l+1)-m^{2}\right] \geq 0\)</span>, which implies that the maximum value of <span class="math notranslate nohighlight">\(m\)</span> is <span class="math notranslate nohighlight">\(l\)</span>, and the minimum value of <span class="math notranslate nohighlight">\(m\)</span> is <span class="math notranslate nohighlight">\(-l\)</span>.</p></li>
+</ul>
+</li>
+<li><p>Spin: spin is “spin angular momentum”, so we look at the quantum number <span class="math notranslate nohighlight">\(s\)</span> associated with <span class="math notranslate nohighlight">\(\overrightarrow{\hat{S}}^{2}\)</span> such that the eigenvalue of that operator is <span class="math notranslate nohighlight">\(\hbar^{2} s(s+1)\)</span>.</p></li>
+<li><p>Bound states are when a quantum particle is trapped in a potential. The opposite is a continuum state where energy varies continuously and particles can escape to infinity.</p></li>
+<li><p>For bound states the following holds:</p>
+<ul>
+<li><p>Factorization chains are formed by auxiliary hamiltonians given by <span class="math notranslate nohighlight">\(\hat{H}_{i}+1=\hat{A}_{i} \hat{A}_{i}{ }^{\dagger}+E_{i}= \hat{A}_{i+1}^{\dagger} \hat{A_{i+1}}+E_{i+1}\)</span>.</p></li>
+<li><p>Intertwining gives us <span class="math notranslate nohighlight">\(\hat{H}_{i} \hat{A}_{i}^{\dagger}=\hat{A}_{i}^{\dagger} \hat{H}_{i+1}\)</span>.</p></li>
+<li><p>Ground state of the ith auxiliary hamiltonian satisfies <span class="math notranslate nohighlight">\(\hat{A}_{i}\left|\phi_{1}\right\rangle=0\)</span>. This is our subsidiary condition.</p></li>
+<li><p>The ith excited state of <span class="math notranslate nohighlight">\(\hat{H}_{0}\)</span> with every energy <span class="math notranslate nohighlight">\(E_{i}\)</span> is <span class="math notranslate nohighlight">\(\left|\psi_{1}\right\rangle=\hat{A}_{1}^{\dagger} \hat{A}_{2} . . \hat{A}_{i-1}^{\dagger}\left|\phi_{i}\right\rangle\)</span>. Note that this is an unnormalized state. Also note that we cannot have <span class="math notranslate nohighlight">\(\hat{A}_{1}=\hat{A}_{0}^{\dagger}\)</span>.</p></li>
+<li><p>The superpotential is real and continuous.</p></li>
+<li><p>Factorization is not necessarily unique.</p></li>
+<li><p>Wavefunction nodes occur when <span class="math notranslate nohighlight">\(W\left(k^{\prime} \hat{x}\right)\)</span> diverges.</p></li>
+<li><p>Node theorem helps us verify that factorization gave us all the solutions.</p></li>
+</ul>
+</li>
+<li><p>We define radial momentum as <span class="math notranslate nohighlight">\(\hat{P}_{r}=\frac{1}{2} \frac{\hat{r}}{\hat{r}} \cdot \hat{\vec{P}}+\hat{\vec{P}} \cdot \frac{\vec{r}}{\hat{r}}\)</span>. We also have the following commutation relations, which yield <span class="math notranslate nohighlight">\(\hat{P}_{r}=\frac{\hat{\vec{r}}}{\hat{r}} \cdot \hat{\vec{p}}-\frac{i \hbar}{\hat{r}}\)</span>.
+<span class="math notranslate nohighlight">\(-\left[\hat{P}_{\alpha}, \hat{r}\right]=-i \hbar \frac{\hat{r}_{\alpha}}{\hat{r}}\)</span>
+<span class="math notranslate nohighlight">\(-\left[P_{\alpha}, \frac{1}{\hat{r}}\right]=i \hbar \frac{\hat{r}_{\alpha}}{\hat{r}^{3}}\)</span>
+<span class="math notranslate nohighlight">\(-\left[\hat{r}, \hat{P}_{r}\right]=i \hbar\)</span></p>
+<ul>
+<li><p>Note that <span class="math notranslate nohighlight">\(\hat{P}_{r}\)</span> is not an observable! It does not have a complete set of eigenstates, and it does not have all real eigenvalues.</p></li>
+</ul>
+</li>
+<li><p>Kinetic Energy separation of variables into radial and angular momentum: <span class="math notranslate nohighlight">\(K E=\frac{\hat{P}_{r}^{2}}{2 m}+\frac{\hat{\vec{L}^{2}}}{2 \hat{r}^{2}}\)</span></p></li>
+<li><p>Isotropic SHO: <span class="math notranslate nohighlight">\(\hat{H}=\frac{\hat{P}_{r}^{2}}{2 m}+\frac{\hat{\overrightarrow{L^{2}}}}{2 M \hat{r}^{2}}+\frac{1}{2} m \omega^{2} \hat{\overrightarrow{r^{2}}}\)</span>.</p>
+<ul>
+<li><p>We construct the states <span class="math notranslate nohighlight">\(|\psi\rangle=\left|\psi_{r}\right\rangle \otimes|l, m\rangle\)</span> and get <span class="math notranslate nohighlight">\(\hat{H}=|\psi\rangle-\hat{H}_{l}\left|\psi_{r}\right\rangle \otimes|l, m\rangle\)</span> where <span class="math notranslate nohighlight">\(\hat{H}_{l}= \frac{\hat{P}_{r}^{2}}{2 m}+\frac{\hbar^{2} l(l+1)}{2 m \hat{r}^{2}}+\frac{1}{2} m \omega^{2} \hat{\vec{r}}^{2}\)</span></p></li>
+<li><p>We have the eigenvector/value relationship: <span class="math notranslate nohighlight">\(\left.\hat{H}_{l}\left|\psi_{n l}=E_{n l}\right| \psi_{n l}\right\rangle\)</span> where <span class="math notranslate nohighlight">\(n\)</span> is the principal quantum number.</p></li>
+<li><p><span class="math notranslate nohighlight">\(n\)</span> allows us to distinguish different energy eigenstates with the same <span class="math notranslate nohighlight">\(l\)</span> value; the energies do not depend on <span class="math notranslate nohighlight">\(m\)</span>.</p></li>
+<li><p>Properties of superpotential: superpotential must be positive as <span class="math notranslate nohighlight">\(r\)</span> goes to <span class="math notranslate nohighlight">\(\infty\)</span>; as <span class="math notranslate nohighlight">\(r\)</span> goes to 0 , the superpotential diverges with negative coefficients.</p></li>
+</ul>
+</li>
+<li><p>Hydrogen</p>
+<ul>
+<li><p>Hamiltonian for Hydrogen: <span class="math notranslate nohighlight">\(\hat{H}=\frac{\hat{\vec{P}}^{2}}{2 \mu}-\frac{e^{2}}{\hat{r}}\)</span> where <span class="math notranslate nohighlight">\(\mu=\frac{m_{e} m_{p}}{m_{e}+m_{p}}\)</span></p></li>
+<li><p>We can use separation of variables to get: <span class="math notranslate nohighlight">\(\hat{H}=\frac{\hat{P}_{r}^{2}}{2 \mu}+\frac{\hat{\vec{L}}^{2}}{2 \mu \hat{r}^{2}}-\frac{e^{2}}{\hat{r}}\)</span></p></li>
+<li><p>In this problem we denote our ladder operators <span class="math notranslate nohighlight">\(B_{r}(l)\)</span> and we say that <span class="math notranslate nohighlight">\(\hat{H}_{l}=\hat{B}_{r}^{\dagger}(l) \hat{B}_{r}(l)+E_{l}^{a u x}\)</span></p></li>
+<li><p>For intertwining we find: <span class="math notranslate nohighlight">\(\hat{B}_{r}(l) \hat{B}_{r}^{\dagger}(l)+E_{l}=\hat{H}_{l+1}\)</span></p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Index</strong></p>
+<ul class="simple">
+<li><p>Angular momentum, M7, p1, M7, p12</p></li>
+<li><p>Angular momentum commutation relations, M7, p1</p></li>
+<li><p>Angular momentum eigenstates, M7, p1</p></li>
+<li><p>Angular momentum lowering operator, M7, p1</p></li>
+<li><p>Angular momentum raising operator, M7, p1</p></li>
+<li><p>Angular momentum, total squared, M7, p1</p></li>
+<li><p>Balmer series, M7, p44</p></li>
+<li><p>Bell’s inequality, M7, p14, M7, p15</p></li>
+<li><p>Copenhagen interpretation, M7, p26</p></li>
+<li><p>Coulomb problem Mod 7, p43</p></li>
+<li><p>Coulomb wavefunctions, M7, p47, M7, p48, M7, p49</p></li>
+<li><p>Deuterium, M7, p45, M7, p46</p></li>
+<li><p>Electron momentum spectroscopy, M7, p58, M7, p59, , M7, p60</p></li>
+<li><p>Einstein Podolsky Rosen experiment, M7, p26</p></li>
+<li><p>Factorization, M6, p1, M6, p4, M7, p53</p></li>
+<li><p>Factorization chain, circle, M7, p33</p></li>
+<li><p>Factorization chains, M7, p11</p></li>
+<li><p>Factorization, Cartesian hydrogen, M7, p57</p></li>
+<li><p>Hydrogen, M7, p43, M7, p44, M7, p47, M8, p3, M8, p4, M8, p6, M8, p9, M8, p10, M8, p11</p></li>
+<li><p>Hydrogen, degeneracy, M7, p43</p></li>
+<li><p>Hydrogen, energy eigenstates, M7, p43</p></li>
+<li><p>Hydrogen, factorization, M7, p43</p></li>
+<li><p>Intertwining, M7, p11</p></li>
+<li><p>Kramers Pasternack relation, M7, p56, M8, p7, M8, p8</p></li>
+<li><p>Laguerre polynomials, M7, p41, M7, p47</p></li>
+<li><p>Lie group, non-abelian, M7, p2</p></li>
+<li><p>Molecular rotation spectroscopy, M7, p16</p></li>
+<li><p>Moment of inertia, M7, p16</p></li>
+<li><p>Morse potential, M6, p7, M6, p35, M6, p40, M7, p37</p></li>
+<li><p>Node theorem, M7, p11, M7, p21, M7, p22, M7, p23, M7, p24</p></li>
+<li><p>Pickering lines, M7, p44</p></li>
+<li><p>Pickering-Fowler hypothesis, M7, p44</p></li>
+<li><p>Position states in the theta-phi direction, M7, p5</p></li>
+<li><p>Proton mass, M7, p45</p></li>
+<li><p>Quantum numbers, M7, p1, M7, p12, M7, p51</p></li>
+<li><p>Quantum rotations, general, M7, p4, M7, p5</p></li>
+<li><p>Radial momentum, M7, p30, M7, p31, M8, p9</p></li>
+<li><p>Radial translation, M7, p32</p></li>
+<li><p>Schrodinger factorization method, M7, p11, M7, p20</p></li>
+<li><p>Separation of variables, kinetic energy, M7, p31</p></li>
+<li><p>Separation of variables in 2 dimensions, M7, p36</p></li>
+<li><p>Simple harmonic oscillator, M6, p7, M6, p8, M6, p19, M6, p22, M6, p26, M6, p33, M6, p35, M7, p52, M9, p4</p></li>
+<li><p>Simple harmonic oscillator in 2 dimensions, M7, p53</p></li>
+<li><p>Simple harmonic oscillator, 3D isotropic, M7, p39</p></li>
+<li><p>Simple harmonic oscillator, 3D isotropic wavefunctions, M7, p 40, M7, p42</p></li>
+<li><p>Spherical harmonics, M7, p6, M7, p10, M7, p50; d-wave, M7, p9; p-wave, M7, p8; s-wave, M7, p7</p></li>
+<li><p>Spherical harmonics, orthogonality of, M7, p17</p></li>
+<li><p>Spin singlet state, M7, p12</p></li>
+<li><p>Spin singlet state, arbitrary direction, M7, p13</p></li>
+<li><p>Spin triplet state, M7, p12</p></li>
+<li><p>Subsidiary condition, M7, p11, M7, p19</p></li>
+<li><p>Superpotential, M7, p11</p></li>
+<li><p>Time of flight experiment, M7, p27, M7, p28, M7, p29</p></li>
+<li><p>Two-body problem, M7, p25</p></li>
+<li><p>Uncertainty, M7, p28, M7, p29</p></li>
+<li><p>Vector operators, M7, p1, M7, p2</p></li>
+<li><p>Vector operators, rotations of, M7, p2, M7, p3</p></li>
+<li><p>Virial theorem, M6, p6, , M7, p54</p></li>
+<li><p>Wavefunction nodes, M7, p11</p></li>
+</ul>
+</section>
+<section id="m8-approximation-methods-wk13-15">
+<h2>M8: Approximation methods (Wk13-15)<a class="headerlink" href="#m8-approximation-methods-wk13-15" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>These two weeks discuss nondegenerate first and second-order perturbation theory, Feynman-Hellmann theorem, hyperfine structure of hydrogen and radio astronomy, proton charge radius, particle in a box, variational principle, and the argument that attractive potentials in one and two dimensions always have bound states.</p></li>
+<li><p>Not every problem can be solved exactly; we show you some approximation methods that are used in quantum mechanics. This allows us to describe how radio astronomy works and how potentials can always trap particles in one and two dimensions, but not in  three.</p></li>
+<li><p>Problem Set 12</p>
+<ol class="arabic simple">
+<li><p>Kramers-Pasternack II</p></li>
+<li><p>Kramers-Pasternack for inverse moments 3,4,5</p></li>
+<li><p>Uncertainty and Hydrogen</p></li>
+<li><p>Hydrogen in momentum space</p></li>
+<li><p>Hydrogen in momentum space II</p></li>
+</ol>
+</li>
+<li><p>Midterm II (Wk14)</p></li>
+</ul>
+<p><strong>M8: Notes/Math Definitions</strong></p>
+<ul class="simple">
+<li><p>Virial theorem: <span class="math notranslate nohighlight">\(\hat{r} \hat{p}_{r}\)</span> is what we call the virial. This theorem tells us that the expectation value of the potential energy is equal to the expectation value of the kinetic energy for SHO . So we can write, <span class="math notranslate nohighlight">\(\langle P E\rangle=\langle K E\rangle=\frac{1}{2}\left\langle\mathrm{E}_{\text {total }}\right\rangle\)</span></p></li>
+<li><p>First order perterbation theory:</p>
+<ul>
+<li><p>The variational method: A method of approximation that we can also use to solve problems exactly. For example, we take the SHO Hamiltonian and perturb it to obtain <span class="math notranslate nohighlight">\(\hat{H(\delta)}=\frac{\hat{p}^{2}}{2 m}+\frac{1}{2} k(1+ \delta) \hat{x}^{2}\)</span>. We can expand the energy in a Taylor series, and we then say that <span class="math notranslate nohighlight">\(\left.E_{n}(\delta) \approx\left\langle\psi_{n}^{0}\right| \hat{H}(\delta)\right)\left|\psi_{n}^{0}\right\rangle\)</span>, where the <span class="math notranslate nohighlight">\(\left|\psi_{n}^{0}\right\rangle\)</span> is the unperturbed eigenstate. After solving for <span class="math notranslate nohighlight">\(E_{n}(\delta)\)</span>, this gives the correct first order approximation.</p></li>
+<li><p>Feynman - Hellman Theorem: <span class="math notranslate nohighlight">\(\frac{d E(\lambda)}{d \lambda}=\langle\psi(\lambda)| \frac{d \hat{H}(\lambda)}{d \lambda}|\psi(\lambda)\rangle\)</span>, where <span class="math notranslate nohighlight">\(\lambda\)</span> is some parameter.</p></li>
+</ul>
+</li>
+<li><p>Kramers-Pasternack relation:</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\frac{2 m}{n^{2} a_{0}^{2}}\langle n l| \hat{r}^{m-1}|n l\rangle=\frac{2(2 m-1)}{a_{0}}\langle n l| \hat{r}^{m-2}|n l\rangle-\frac{1}{2}(m-1)\left(\left(2 l^{2}+1\right)^{2}-(m-1)^{2}\right)\langle n l| \hat{r}^{m-3}|n l\rangle\)</span></p></li>
+</ul>
+</li>
+<li><p>Hyperfine structure of Hydrogen:</p>
+<ul>
+<li><p>We calculate the Hamiltonian of the magnetic interactions between the proton and the electron by determining the magnetic field due to the proton at the location of the electron and find it to be <span class="math notranslate nohighlight">\(\Delta \hat{H}=\frac{g g_{p} \mu_{B}^{2} m_{e} \mu_{0}}{4 \pi m_{p} \hbar^{2}}\left(\frac{3 \hat{\vec{S}}_{e} \cdot \hat{\vec{r}} \hat{\vec{S}}_{p} \cdot \hat{\vec{r}}}{\hat{r}^{5}}-\frac{\hat{\vec{S}}_{e} \cdot \hat{\vec{S}}_{p}}{\hat{r}^{3}}+\frac{8 \pi}{3} \hat{\vec{S}}_{e} \cdot \hat{\vec{S}}_{p} \delta(\hat{\vec{r}})\right)\)</span></p></li>
+<li><p>We then calculate the expectation value of <span class="math notranslate nohighlight">\(\Delta \hat{H}\)</span> with the state <span class="math notranslate nohighlight">\(|P s i\rangle=|n l\rangle \otimes|l m\rangle \otimes\left|s^{e}\right\rangle \otimes\left|s_{p}\right\rangle\)</span>, which works out to be <span class="math notranslate nohighlight">\(\Delta \hat{H}=\frac{2 g g_{p} \mu_{B}^{2} m_{e} \mu_{0}}{3 \pi m_{p} \hbar^{2} a_{0}^{3}}\left\langle s_{e}\right| \otimes\left\langle s_{p}\right| \hat{\vec{S}}_{e} \cdot \hat{\vec{S}}_{p}\left|s_{e}\right\rangle \otimes\left|s_{p}\right\rangle\)</span>.</p></li>
+<li><p>Using the eigenvalues of <span class="math notranslate nohighlight">\(\hat{\overrightarrow{S_{e}}} \cdot \hat{\overrightarrow{S_{p}}}\)</span> for the singlet and triplet states, we conclude that <span class="math notranslate nohighlight">\(\Delta E_{\text {singlet-triplet }}= \frac{2 g g_{p} \mu_{B}^{2} m_{e} \mu_{0}}{3 \pi m_{p} a_{0}^{3}}\)</span></p></li>
+<li><p>In astronomy, hyperfine hydrogen transitions can tell us how fast objects in space are moving using the red shift from the Doppler effect</p></li>
+<li><p>Energy splitting in hydrogen is one of the most accurately measured results with about 13 digits of accuracy. It is measured in a hydrogen maser, an atomic clock similar to a laser.</p></li>
+</ul>
+</li>
+<li><p>Second-order perturbation theory:</p>
+<ul>
+<li><p>Now, we write our perturbed Hamiltonian as <span class="math notranslate nohighlight">\(H \hat{( } \lambda)=\hat{H}_{0}+\lambda V(\hat{x})\)</span>, which has energy eigenvalues <span class="math notranslate nohighlight">\(E_{n}(\lambda)\)</span></p></li>
+<li><p>Then we expand the energy as
+$<span class="math notranslate nohighlight">\(E_{n}(\lambda)=E_{n}(0)+\left.\lambda \frac{d E_{n}(\lambda)}{d \lambda}\right|_{\lambda=0}+\left.\frac{\lambda^{2}}{2} \frac{d^{2} E_{n}(\lambda)}{d \lambda^{2}}\right|_{\lambda=0}+\ldots\)</span>$</p></li>
+<li><p>We then must calculate that second derivative and use it to find the second-order approximation of the energy, which is done in detail in lecture</p></li>
+</ul>
+</li>
+<li><p>Proton charge radius: In our Hydrogen calculations, we assumed the nucleus was a point charge, but this is not quite accurate. We are able to calculate how the size of the nucleus affects the energy levels of Hydrogen and how they shift, telling us how accurate our measurements must be to determine the size of the nucleus.</p></li>
+<li><p>Schrodinger equation: <span class="math notranslate nohighlight">\(\frac{-\hbar^{2}}{2 m} \psi^{\prime \prime}(\hat{x})+V(\hat{x}) \psi(\hat{x})=E \psi(\hat{x})\)</span></p></li>
+<li><p>Note that all one-dimensional potentials that approach 0 for large arguments, are nonpositive, and are piecewise continuous have a bound state</p></li>
+</ul>
+<p><strong>Index</strong></p>
+<ul class="simple">
+<li><p>Bound states, M8, p19, M8, p20, M8, p21, M8, p22, M8, p23</p></li>
+<li><p>Feynman-Hellmann theorem, M8, p1</p></li>
+<li><p>Hydrogen, M7, p43, M7, p44, M7, p47, M8, p3, M8, p4, M8, p6, M8, p9, M8, p10, M8, p11</p></li>
+<li><p>Hyperfine structure, M8, p2, M8, p3, M8, p4, M8, p5</p></li>
+<li><p>Kramers Pasternack relation, M7, p56, M8, p7, M8, p8</p></li>
+<li><p>Perturbation theory, M8, p14, M9, p6;  first order, M8, p1; second order, M8, p12</p></li>
+<li><p>Proton charge radius, M8, p13</p></li>
+<li><p>Radial momentum, M7, p30, M7, p31, M8, p9</p></li>
+<li><p>Radio astronomy, M8, p5</p></li>
+<li><p>Schrodinger equation, M8, p18</p></li>
+<li><p>Uncertainty principle, M6, p6, M6, p19, M8, p9</p></li>
+</ul>
+</section>
+<section id="m9-time-evolution-wk16">
+<h2>M9: Time evolution (Wk16)<a class="headerlink" href="#m9-time-evolution-wk16" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>This week examines the Trotter formula and the time-ordered product, the time-dependence of coherent states and cyclotron resonance, and discusses how we quantize light.</p></li>
+<li><p>We describe the science behind magnetic resonance imaging (MRI), used in hospitals.</p></li>
+<li><p>Problem Set 13</p>
+<ol class="arabic simple">
+<li><p>Perturbation theory of the anharmonic simple harmonic oscillator</p></li>
+<li><p>Muonic hydrogen</p></li>
+<li><p>Landau-Zener problem</p></li>
+<li><p>Particle in a 2D circular box</p></li>
+<li><p>Time dependence of squeezed states</p></li>
+</ol>
+</li>
+</ul>
+<p><strong>M9: Notes/Math Definitions</strong></p>
+<ul class="simple">
+<li><p>Time dependence of coherent states: We showed that the time evolution of of <span class="math notranslate nohighlight">\(|\alpha\rangle\)</span>, which we denote as <span class="math notranslate nohighlight">\(|\alpha(t)\rangle\)</span>, follows by simply time evolving the parameter <span class="math notranslate nohighlight">\(\alpha\)</span> via <span class="math notranslate nohighlight">\(\alpha \rightarrow \alpha e^{-i \omega t}\)</span> plus an additional timedependent complex phase, but that phase ends up not contributing to expectation values, so it is not very important).</p></li>
+<li><p>Maxwell’s Equations and Waves</p>
+<ul>
+<li><p>Recall that we can write standing waves in the form <span class="math notranslate nohighlight">\(A e^{i \vec{k} x-i \omega t}\)</span></p></li>
+<li><p>We denote the classical electric field as <span class="math notranslate nohighlight">\(\vec{E}(\vec{r}, t)=\sum_{l}\left(\vec{\varepsilon}_{l} E_{l}(t) e^{i \vec{k}_{l} \cdot \vec{r}}+\right.\)</span> c.c. <span class="math notranslate nohighlight">\()\)</span>, where index <span class="math notranslate nohighlight">\(l\)</span> denotes the mode for the wave, <span class="math notranslate nohighlight">\(\vec{k}_{l}\)</span> is its wavevector, <span class="math notranslate nohighlight">\(\vec{\varepsilon}_{l}\)</span> is its polarization and <span class="math notranslate nohighlight">\(E_{l}(t)\)</span> is its amplitude (which can be complex).</p></li>
+<li><p>We arrived at the final results for the electric and magnetic fields: <span class="math notranslate nohighlight">\(\vec{E}(\vec{r}, t)=\sum_{l} \vec{\varepsilon}_{l} E_{l}(0) e^{i \vec{k}_{l} \cdot \vec{r}-i \omega_{l} t}+ c c\)</span> and <span class="math notranslate nohighlight">\(\vec{B}(\vec{r}, t)=\sum_{l} \frac{\vec{k}_{l} \times \vec{\varepsilon}_{l}}{\omega_{l}} E_{l}(0) e^{i \vec{k}_{l} \cdot \vec{r}-i \omega_{l} t}+c c\)</span></p></li>
+<li><p>In class, you used these results to calculate the energy stored by quantized light in a very large box. Refer to Module 9, Page 13.</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Index</strong></p>
+<ul class="simple">
+<li><p>Anharmonic oscillator, M9, p6</p></li>
+<li><p>Coherent state, M6, p27, M6, p38, M9, p3</p></li>
+<li><p>Cyclotron, M9, p11</p></li>
+<li><p>Muonic hydrogen, M9, p7</p></li>
+<li><p>Landau-Zener problem , M9, p8</p></li>
+<li><p>Maxwell’s equations, M9, p12, M9, p13</p></li>
+<li><p>Perturbation theory, M8, p14, M9, p6</p></li>
+<li><p>Phase space, M9, p4</p></li>
+<li><p>Simple harmonic oscillator, M6, p7, M6, p 8, M6, p19, M6, p22, M6, p26, M6, p33, M6, p35, M7, p52, M9, p4</p></li>
+<li><p>Simple harmonic oscillator, classical, M9, p2</p></li>
+<li><p>Squeezed state, M6, p28, M6, p39, M9, p5, M9, p10, M10, p13</p></li>
+<li><p>Time dependence, M9, p3, M9, p5, M9, p 10</p></li>
+<li><p>Time evolution, M9, p1</p></li>
+<li><p>Transcendental equation, M9, p9</p></li>
+<li><p>Trotter formula, M9, p1</p></li>
+</ul>
+</section>
+<section id="m10-photons-ligo-wk17">
+<h2>M10: Photons &amp; LIGO (Wk17)<a class="headerlink" href="#m10-photons-ligo-wk17" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>This week explains what a photon is, how we measure them, and how we can tell we have a single-photon source of light. It also discusses how the laser interferometry gravitational-wave observatory works.</p></li>
+<li><p>No one should finish a quantum-mechanics class without knowing what a photon is. We describe how single photons are detected, what squeezed light is and how LIGO can measure distances small enough that it can detect gravitational waves.</p></li>
+</ul>
+<p><strong>M10: Notes/Math Definitions</strong></p>
+<ul class="simple">
+<li><p>General principles of the photon:</p>
+<ul>
+<li><p>The have definite particle number, but not definite energy/frequency.</p></li>
+<li><p>They have a finite extent in time.</p></li>
+<li><p>They can be detected only once.</p></li>
+<li><p>They are detected as a discrete package, always the same size.</p></li>
+<li><p>They show interference patterns after many are collected.</p></li>
+</ul>
+</li>
+<li><p>Heterodyne detection: used to amplify a weak signal and also to reduce the oscillation rate by using the phenomenon of beats</p>
+<ul>
+<li><p>Refer to page Module 10, page 7 for the experimental set up.</p></li>
+<li><p>Initial state: <span class="math notranslate nohighlight">\(\left|\psi_{i n}\right\rangle=\left|\alpha_{1}(t)\right\rangle \otimes\left|\alpha_{2}(t)\right\rangle\)</span></p></li>
+<li><p>Ultimately, we find the following final expression for the electrical current output: <span class="math notranslate nohighlight">\(i_{4}(t)= 2|t|^{2} e \eta \Phi_{1}^{\text {phot }}\left(1-\cos \left(\left(\omega_{1}-\omega_{2}\right) t-\phi_{1}+\phi_{2}\right)\right.\)</span></p></li>
+</ul>
+</li>
+<li><p>Homodyne detection: Here we pick <span class="math notranslate nohighlight">\(\omega_{1}=\omega_{2}, \epsilon_{1}=\epsilon_{2}\)</span>, and <span class="math notranslate nohighlight">\(r=t=\frac{1}{\sqrt{2}}\)</span>.</p>
+<ul>
+<li><p>Refer to Module 10, page 8 for the experimental set up.</p></li>
+<li><p>Using the experimental set up shown we can write the raising and lowering operators at each output port: <span class="math notranslate nohighlight">\(\hat{a}_{3}=r \hat{a_{1}}+t \hat{a_{2}}\)</span> and <span class="math notranslate nohighlight">\(\hat{a_{4}}=t \hat{a_{1}}-r \hat{a_{2}}\)</span>, where <span class="math notranslate nohighlight">\(r\)</span> and <span class="math notranslate nohighlight">\(t\)</span> are the reflection and transmission coefficients, respectively. Note that when light is reflected through glass, we accumulate a <span class="math notranslate nohighlight">\(180^{\circ}\)</span> phase difference, hence the negative sign.</p></li>
+<li><p>We then have that <span class="math notranslate nohighlight">\(\hat{N_{3}}=\hat{a_{3}}{ }^{\dagger} \hat{a_{3}}\)</span> and <span class="math notranslate nohighlight">\(\hat{N}_{4}=\hat{a_{4}}{ }^{\dagger} \hat{a_{4}}\)</span>, where these are the number operators at the output ports.</p></li>
+</ul>
+</li>
+<li><p>LIGO (laser interferometry gravitational-wave observatory) uses two Michelson-Morely type interferometers. LIGO uses squeezed light to yield high precision measurements: to get high accuracy, we want to time our measurements to precisely the points in time where the uncertainty is minimal.</p></li>
+<li><p>LIGO uses the <span class="math notranslate nohighlight">\(\hat{P}\)</span> quadrature operator which measures light near its zero (the <span class="math notranslate nohighlight">\(\hat{Q}\)</span> quadrature operator measures light near its maximum amplitude).</p></li>
+</ul>
+<p><strong>Index</strong></p>
+<ul class="simple">
+<li><p>Heterodyne, M10, p7, M10, p9</p></li>
+<li><p>Homodyne, M10, p8, M10, p9</p></li>
+<li><p>LIGO, M10, p11, M10, p12, M10, 13, M10, p14</p></li>
+<li><p>Mach-Zehnder interferometer, M4, p4, M4, p5, M4, p7, M10, p10</p></li>
+<li><p>Michelson-Morley interferometer, M10, p11</p></li>
+<li><p>Photomultiplier tube, M10, p2, M10, p3</p></li>
+<li><p>Photon, M10, p1, M10, p2, M10, p3, M10, p4, M10, p5, M10, p6, M10, p10</p></li>
+<li><p>Squeezed state, M6, p28, M6, p39, M9, p5, M9, p10, M10, p13</p></li>
+</ul>
+<p>Week 18 and 19: Final exam</p>
+</section>
+<section id="appendix">
+<h2>Appendix<a class="headerlink" href="#appendix" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="kn">import</span>                      <span class="n">I</span><span class="p">,</span> <span class="n">symbols</span><span class="p">,</span> <span class="n">Function</span><span class="p">,</span> <span class="n">Derivative</span><span class="p">,</span> <span class="n">sqrt</span><span class="p">,</span> <span class="n">pi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sympy.physics.quantum</span><span class="w"> </span><span class="kn">import</span>      <span class="n">Operator</span><span class="p">,</span> <span class="n">Dagger</span><span class="p">,</span> <span class="n">Commutator</span><span class="p">,</span> <span class="n">Ket</span><span class="p">,</span> <span class="n">Bra</span><span class="p">,</span> <span class="n">qapply</span><span class="p">,</span> <span class="n">Wavefunction</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sympy.physics.quantum.gate</span><span class="w"> </span><span class="kn">import</span> <span class="n">H</span><span class="p">,</span> <span class="n">X</span>  
+
+<span class="c1"># 1. Defining generic operators</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">Operator</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">)</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">Operator</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">)</span>
+
+<span class="c1"># 2. Operator algebra</span>
+<span class="n">expr</span> <span class="o">=</span> <span class="p">(</span><span class="n">A</span> <span class="o">+</span> <span class="n">B</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">s</span><span class="p">(</span><span class="s2">&quot;Expanded operator expression:&quot;</span><span class="p">,</span> <span class="n">expr</span><span class="o">.</span><span class="n">expand</span><span class="p">())</span>
+
+<span class="c1"># 3. Commutators</span>
+<span class="n">comm</span> <span class="o">=</span> <span class="n">Commutator</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
+<span class="n">s</span><span class="p">(</span><span class="s2">&quot;Commutator [A, B]:&quot;</span><span class="p">,</span> <span class="n">comm</span><span class="p">)</span>
+<span class="n">s</span><span class="p">(</span><span class="s2">&quot;Evaluated commutator:&quot;</span><span class="p">,</span> <span class="n">comm</span><span class="o">.</span><span class="n">doit</span><span class="p">())</span> <span class="c1"># Evaluates to A*B - B*A</span>
+
+<span class="c1"># 4. Operators acting on states (Kets and Bras)</span>
+<span class="n">k</span> <span class="o">=</span> <span class="n">Ket</span><span class="p">(</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">Bra</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">outer_product</span> <span class="o">=</span> <span class="n">k</span> <span class="o">*</span> <span class="n">b</span>
+<span class="n">s</span><span class="p">(</span><span class="s2">&quot;Outer product:&quot;</span><span class="p">,</span> <span class="n">outer_product</span><span class="p">)</span>
+
+<span class="c1"># Applying operators to states using qapply</span>
+<span class="c1"># Example: Applying a projection operator to a state</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">qapply</span><span class="p">(</span><span class="n">outer_product</span> <span class="o">*</span> <span class="n">b</span><span class="o">.</span><span class="n">dual</span> <span class="o">/</span> <span class="p">(</span><span class="n">b</span> <span class="o">*</span> <span class="n">b</span><span class="o">.</span><span class="n">dual</span><span class="p">))</span>
+<span class="n">s</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Applying projection: </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># 5. Differential Operators (e.g., Position and Momentum)</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">hbar</span><span class="p">,</span> <span class="n">L</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;x hbar L&quot;</span><span class="p">)</span>
+<span class="n">psi</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;psi&quot;</span><span class="p">,</span> <span class="bp">cls</span><span class="o">=</span><span class="n">Function</span><span class="p">)</span>
+
+<span class="c1"># Position operator (multiplication by x)</span>
+<span class="n">xhat</span> <span class="o">=</span> <span class="n">Operator</span><span class="p">(</span><span class="s1">&#39;xhat&#39;</span><span class="p">)</span> <span class="c1"># Represents the operator symbolically</span>
+<span class="c1"># More accurately, using DifferentialOperator for its action:</span>
+<span class="c1"># x_op_action = DifferentialOperator(x * psi(x), psi(x))</span>
+
+<span class="c1"># Momentum operator (-i*hbar*d/dx)</span>
+<span class="n">phat</span> <span class="o">=</span> <span class="n">Operator</span><span class="p">(</span><span class="s1">&#39;phat&#39;</span><span class="p">)</span> <span class="c1"># Represents the operator symbolically</span>
+<span class="c1"># More accurately, using DifferentialOperator for its action:</span>
+<span class="c1"># p_op_action = DifferentialOperator(-I * hbar * Derivative(psi(x), x), psi(x))</span>
+
+<span class="c1"># 6. Quantum Gates (from sympy.physics.quantum.gate)</span>
+<span class="n">q0</span> <span class="o">=</span> <span class="n">Ket</span><span class="p">(</span><span class="s1">&#39;0&#39;</span><span class="p">)</span> <span class="c1"># A basis state</span>
+<span class="n">h_gate</span> <span class="o">=</span> <span class="n">H</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># Hadamard gate on qubit 0</span>
+<span class="n">x_gate</span> <span class="o">=</span> <span class="n">X</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># Pauli X gate on qubit 0</span>
+
+<span class="c1"># Applying a gate to a qubit</span>
+<span class="n">applied_h</span> <span class="o">=</span> <span class="n">qapply</span><span class="p">(</span><span class="n">h_gate</span> <span class="o">*</span> <span class="n">q0</span><span class="p">)</span>
+<span class="n">s</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hadamard applied to |0&gt;: </span><span class="si">{</span><span class="n">applied_h</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># 7. Dagger (Hermitian Conjugate)</span>
+<span class="n">s</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Dagger of A: </span><span class="si">{</span><span class="n">Dagger</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">s</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Dagger of Ket k: </span><span class="si">{</span><span class="n">Dagger</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \text{\texttt{Expanded{ }operator{ }expression:}} \qquad   \text{\texttt{A*B{ }+{ }A**2{ }+{ }B*A{ }+{ }B**2}} \qquad   \]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \text{\texttt{Commutator{ }[A,{ }B]:}} \qquad   \text{\texttt{[A,B]}} \qquad   \]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \text{\texttt{Evaluated{ }commutator:}} \qquad   \text{\texttt{A*B{ }{-}{ }B*A}} \qquad   \]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \text{\texttt{Outer{ }product:}} \qquad   \text{\texttt{|k&gt;&lt;b|}} \qquad   \]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \text{\texttt{Applying{ }projection:{ }|k&gt;}} \qquad   \]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \text{\texttt{Hadamard{ }applied{ }to{ }|0&gt;:{ }H(0)*|0&gt;}} \qquad   \]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \text{\texttt{Dagger{ }of{ }A:{ }Dagger(A)}} \qquad   \]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \text{\texttt{Dagger{ }of{ }Ket{ }k:{ }&lt;k|}} \qquad   \]</div>
+</div>
+</div>
+<img src="https://raw.githubusercontent.com/tomctang/NB_img/main/qmschrodequ0.gif" alt="exp.1" width="600">
+<img src="https://raw.githubusercontent.com/tomctang/NB_img/main/qmschrodequ1.gif" alt="exp.1" width="660">
+<img src="https://raw.githubusercontent.com/tomctang/NB_img/main/qmschrodequ1.png" alt="exp.1" width="500">
+<img src="https://raw.githubusercontent.com/tomctang/NB_img/main/qmschrodequ2.png" alt="exp.1" width="500">
+<img src="https://raw.githubusercontent.com/tomctang/NB_img/main/qmschrodequ3.png" alt="exp.1" width="600">
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="cm-qm-unity">
+<h1>CM-QM unity<a class="headerlink" href="#cm-qm-unity" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; Mathematical Unity Between Classical and Quantum Mechanics</span>
+<span class="sd">1. Poisson brackets ↔ Commutators</span>
+<span class="sd">2. Symplectic geometry ↔ Hilbert space geometry</span>
+<span class="sd">3. Principle of least action ↔ Path integrals</span>
+<span class="sd">4. Symmetries ↔ Conservation laws (Noether&#39;s theorem)&quot;&quot;&quot;</span>
+<span class="c1"># ============================================================================</span>
+<span class="c1"># LEVEL 1: POISSON ALGEBRA == OPERATOR ALGEBRA</span>
+<span class="c1"># ============================================================================</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;LEVEL 1: POISSON BRACKETS ↔ COMMUTATORS&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Classical mechanics uses Poisson brackets: {f,g} = Σᵢ (∂f/∂qᵢ ∂g/∂pᵢ - ∂f/∂pᵢ ∂g/∂qᵢ)&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Quantum mechanics uses commutators: [Â,B̂] = ÂB̂ - B̂Â&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Unity: [Â,B̂] = iℏ{A,B}̂  (canonical quantization)&quot;</span><span class="p">)</span>
+
+<span class="c1"># Define symbolic variables</span>
+<span class="n">var</span><span class="p">(</span><span class="s1">&#39;q p m omega t hbar&#39;</span><span class="p">)</span>
+
+<span class="c1"># Classical Hamiltonian for harmonic oscillator</span>
+<span class="n">H_classical</span> <span class="o">=</span> <span class="n">p</span><span class="o">^</span><span class="mi">2</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">m</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">omega</span><span class="o">^</span><span class="mi">2</span><span class="o">*</span><span class="n">q</span><span class="o">^</span><span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Classical Hamiltonian: H = </span><span class="si">{</span><span class="n">H_classical</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Compute Poisson brackets</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">poisson_bracket</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">q_vars</span><span class="p">,</span> <span class="n">p_vars</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Compute Poisson bracket {f,g}&quot;&quot;&quot;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">q_i</span><span class="p">,</span> <span class="n">p_i</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">q_vars</span><span class="p">,</span> <span class="n">p_vars</span><span class="p">):</span>
+        <span class="n">result</span> <span class="o">+=</span> <span class="n">diff</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">q_i</span><span class="p">)</span><span class="o">*</span><span class="n">diff</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">p_i</span><span class="p">)</span> <span class="o">-</span> <span class="n">diff</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">p_i</span><span class="p">)</span><span class="o">*</span><span class="n">diff</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">q_i</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="c1"># Fundamental Poisson brackets</span>
+<span class="n">pb_qp</span> <span class="o">=</span> <span class="n">poisson_bracket</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="p">[</span><span class="n">q</span><span class="p">],</span> <span class="p">[</span><span class="n">p</span><span class="p">])</span>
+<span class="n">pb_qq</span> <span class="o">=</span> <span class="n">poisson_bracket</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">q</span><span class="p">,</span> <span class="p">[</span><span class="n">q</span><span class="p">],</span> <span class="p">[</span><span class="n">p</span><span class="p">])</span>
+<span class="n">pb_pp</span> <span class="o">=</span> <span class="n">poisson_bracket</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="p">[</span><span class="n">q</span><span class="p">],</span> <span class="p">[</span><span class="n">p</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Fundamental Poisson brackets:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="se">{{</span><span class="s2">q, p</span><span class="se">}}</span><span class="s2"> = </span><span class="si">{</span><span class="n">pb_qp</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="se">{{</span><span class="s2">q, q</span><span class="se">}}</span><span class="s2"> = </span><span class="si">{</span><span class="n">pb_qq</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="se">{{</span><span class="s2">p, p</span><span class="se">}}</span><span class="s2"> = </span><span class="si">{</span><span class="n">pb_pp</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Hamilton&#39;s equations from Poisson brackets</span>
+<span class="n">dq_dt</span> <span class="o">=</span> <span class="n">poisson_bracket</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">H_classical</span><span class="p">,</span> <span class="p">[</span><span class="n">q</span><span class="p">],</span> <span class="p">[</span><span class="n">p</span><span class="p">])</span>
+<span class="n">dp_dt</span> <span class="o">=</span> <span class="n">poisson_bracket</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">H_classical</span><span class="p">,</span> <span class="p">[</span><span class="n">q</span><span class="p">],</span> <span class="p">[</span><span class="n">p</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Hamilton&#39;s equations (via Poisson brackets):&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  dq/dt = </span><span class="se">{{</span><span class="s2">q, H</span><span class="se">}}</span><span class="s2"> = </span><span class="si">{</span><span class="n">dq_dt</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  dp/dt = </span><span class="se">{{</span><span class="s2">p, H</span><span class="se">}}</span><span class="s2"> = </span><span class="si">{</span><span class="n">dp_dt</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Quantum commutators (symbolic representation)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;QUANTUM CORRESPONDENCE:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Canonical commutation relations:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  [q̂, p̂] = iℏ  ⟺  {q, p} = 1&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  [q̂, q̂] = 0   ⟺  {q, q} = 0&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  [p̂, p̂] = 0   ⟺  {p, p} = 0&quot;</span><span class="p">)</span>
+
+<span class="c1"># Matrix representation of quantum operators (finite dimensional approximation)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Matrix representation (N=5 harmonic oscillator basis):&quot;</span><span class="p">)</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="c1"># Creation and annihilation operators in matrix form</span>
+<span class="n">a_dag</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">(</span><span class="n">SR</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">(</span><span class="n">SR</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">a_dag</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Position and momentum operators: q̂ = √(ℏ/2mω)(a + a†), p̂ = i√(ℏmω/2)(a† - a)</span>
+<span class="n">q_op</span> <span class="o">=</span> <span class="p">(</span><span class="n">a_dag</span> <span class="o">+</span> <span class="n">a</span><span class="p">)</span>
+<span class="n">p_op</span> <span class="o">=</span> <span class="n">I</span><span class="o">*</span><span class="p">(</span><span class="n">a_dag</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span>
+
+<span class="c1"># Compute commutator [q̂, p̂]</span>
+<span class="n">commutator_qp</span> <span class="o">=</span> <span class="n">q_op</span><span class="o">*</span><span class="n">p_op</span> <span class="o">-</span> <span class="n">p_op</span><span class="o">*</span><span class="n">q_op</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Commutator [q̂, p̂] (up to constants) has trace: </span><span class="si">{</span><span class="n">commutator_qp</span><span class="o">.</span><span class="n">trace</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Diagonal elements: </span><span class="si">{</span><span class="p">[</span><span class="n">commutator_qp</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)]</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
+
+<span class="c1"># Uncertainty relation from commutator</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;UNCERTAINTY PRINCIPLE:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;From [q̂, p̂] = iℏ, we derive: Δq·Δp ≥ ℏ/2&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is purely quantum and has no classical analog.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LEVEL 1: POISSON BRACKETS ↔ COMMUTATORS
+================================================================================
+
+Classical mechanics uses Poisson brackets: {f,g} = Σᵢ (∂f/∂qᵢ ∂g/∂pᵢ - ∂f/∂pᵢ ∂g/∂qᵢ)
+Quantum mechanics uses commutators: [Â,B̂] = ÂB̂ - B̂Â
+Unity: [Â,B̂] = iℏ{A,B}̂  (canonical quantization)
+
+Classical Hamiltonian: H = 1/2*m*omega^2*q^2 + 1/2*p^2/m
+
+Fundamental Poisson brackets:
+  {q, p} = 1
+  {q, q} = 0
+  {p, p} = 0
+
+Hamilton&#39;s equations (via Poisson brackets):
+  dq/dt = {q, H} = p/m
+  dp/dt = {p, H} = -m*omega^2*q
+
+--------------------------------------------------------------------------------
+QUANTUM CORRESPONDENCE:
+--------------------------------------------------------------------------------
+
+Canonical commutation relations:
+  [q̂, p̂] = iℏ  ⟺  {q, p} = 1
+  [q̂, q̂] = 0   ⟺  {q, q} = 0
+  [p̂, p̂] = 0   ⟺  {p, p} = 0
+
+Matrix representation (N=5 harmonic oscillator basis):
+
+Commutator [q̂, p̂] (up to constants) has trace: 0
+Diagonal elements: [-2*I, -2*I, -2*I]...
+
+--------------------------------------------------------------------------------
+UNCERTAINTY PRINCIPLE:
+--------------------------------------------------------------------------------
+From [q̂, p̂] = iℏ, we derive: Δq·Δp ≥ ℏ/2
+This is purely quantum and has no classical analog.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># LEVEL 2: SYMPLECTIC GEOMETRY AND HILBERT SPACE GEOMETRY</span>
+<span class="c1"># ============================================================================</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;LEVEL 2: SYMPLECTIC GEOMETRY ↔ HILBERT SPACE GEOMETRY&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Classical phase space: Symplectic manifold (M, ω)&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Quantum state space: Hilbert space ℋ with inner product ⟨·|·⟩&quot;</span><span class="p">)</span>
+
+<span class="c1"># Symplectic form for 1D system</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Symplectic 2-form: ω = dq ∧ dp&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is closed (dω = 0) and non-degenerate&quot;</span><span class="p">)</span>
+
+<span class="c1"># Phase space trajectory</span>
+<span class="n">var</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
+<span class="n">q_traj</span> <span class="o">=</span> <span class="n">cos</span><span class="p">(</span><span class="n">omega</span><span class="o">*</span><span class="n">t</span><span class="p">)</span>
+<span class="n">p_traj</span> <span class="o">=</span> <span class="o">-</span><span class="n">m</span><span class="o">*</span><span class="n">omega</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">omega</span><span class="o">*</span><span class="n">t</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Example classical trajectory (harmonic oscillator):&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  q(t) = </span><span class="si">{</span><span class="n">q_traj</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  p(t) = </span><span class="si">{</span><span class="n">p_traj</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Compute symplectic area</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Symplectic area enclosed by trajectory:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A = ∮ p dq = πE/ω  (where E is energy)&quot;</span><span class="p">)</span>
+
+<span class="c1"># Quantum geometric phase (Berry phase analog)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;QUANTUM CORRESPONDENCE:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hilbert space geometry gives rise to geometric phases&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Berry phase: γ = i∮⟨ψ|∇ᴿ|ψ⟩·dR&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is analogous to symplectic area in phase space&quot;</span><span class="p">)</span>
+
+<span class="c1"># Fubini-Study metric on projective Hilbert space</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Fubini-Study metric on quantum state space:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ds² = ⟨dψ|dψ⟩ - |⟨ψ|dψ⟩|²&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is the quantum analog of the symplectic structure&quot;</span><span class="p">)</span>
+
+<span class="c1"># Visualization of phase space</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;PHASE SPACE STRUCTURE:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+
+<span class="c1"># Create phase space portrait</span>
+<span class="n">t_vals</span> <span class="o">=</span> <span class="n">srange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="o">/</span><span class="nb">float</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="mf">0.1</span><span class="p">)</span>
+<span class="n">E_levels</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Phase space trajectories for different energy levels:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">E</span> <span class="ow">in</span> <span class="n">E_levels</span><span class="p">:</span>
+    <span class="c1"># For harmonic oscillator: E = p²/2m + mω²q²/2</span>
+    <span class="c1"># Trajectories are ellipses</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  E = </span><span class="si">{</span><span class="n">E</span><span class="si">}</span><span class="s2">: Ellipse in (q,p) space&quot;</span><span class="p">)</span>
+
+<span class="c1"># Liouville&#39;s theorem</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Liouville&#39;s theorem: Phase space volume is preserved&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;∂ρ/∂t + {ρ, H} = 0  (classical)&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;↓&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;∂ρ̂/∂t = (1/iℏ)[Ĥ, ρ̂]  (quantum von Neumann equation)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>================================================================================
+LEVEL 2: SYMPLECTIC GEOMETRY ↔ HILBERT SPACE GEOMETRY
+================================================================================
+
+Classical phase space: Symplectic manifold (M, ω)
+Quantum state space: Hilbert space ℋ with inner product ⟨·|·⟩
+
+Symplectic 2-form: ω = dq ∧ dp
+This is closed (dω = 0) and non-degenerate
+
+Example classical trajectory (harmonic oscillator):
+  q(t) = cos(omega*t)
+  p(t) = -m*omega*sin(omega*t)
+
+Symplectic area enclosed by trajectory:
+A = ∮ p dq = πE/ω  (where E is energy)
+
+--------------------------------------------------------------------------------
+QUANTUM CORRESPONDENCE:
+--------------------------------------------------------------------------------
+Hilbert space geometry gives rise to geometric phases
+Berry phase: γ = i∮⟨ψ|∇ᴿ|ψ⟩·dR
+This is analogous to symplectic area in phase space
+
+Fubini-Study metric on quantum state space:
+ds² = ⟨dψ|dψ⟩ - |⟨ψ|dψ⟩|²
+This is the quantum analog of the symplectic structure
+
+--------------------------------------------------------------------------------
+PHASE SPACE STRUCTURE:
+--------------------------------------------------------------------------------
+
+Phase space trajectories for different energy levels:
+  E = 0.500000000000000: Ellipse in (q,p) space
+  E = 1.00000000000000: Ellipse in (q,p) space
+  E = 1.50000000000000: Ellipse in (q,p) space
+  E = 2.00000000000000: Ellipse in (q,p) space
+
+Liouville&#39;s theorem: Phase space volume is preserved
+∂ρ/∂t + {ρ, H} = 0  (classical)
+↓
+∂ρ̂/∂t = (1/iℏ)[Ĥ, ρ̂]  (quantum von Neumann equation)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># LEVEL 3: PRINCIPLE OF LEAST ACTION AND PATH INTEGRALS</span>
+<span class="c1"># ============================================================================</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;LEVEL 3: LEAST ACTION ↔ PATH INTEGRALS&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Classical: Action S[q] = ∫L(q,q̇,t)dt&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Classical path minimizes action: δS = 0&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Quantum: All paths contribute with phase e^(iS/ℏ)&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Amplitude: K(qf,tf;qi,ti) = ∫𝒟q e^(iS[q]/ℏ)&quot;</span><span class="p">)</span>
+
+<span class="c1"># Classical action for harmonic oscillator</span>
+<span class="n">var</span><span class="p">(</span><span class="s1">&#39;qi qf ti tf&#39;</span><span class="p">)</span>
+<span class="n">L_classical</span> <span class="o">=</span> <span class="p">(</span><span class="n">m</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">diff</span><span class="p">(</span><span class="n">q</span><span class="p">,</span><span class="n">t</span><span class="p">))</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">omega</span><span class="o">^</span><span class="mi">2</span><span class="o">*</span><span class="n">q</span><span class="o">^</span><span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Lagrangian (harmonic oscillator): L = </span><span class="si">{</span><span class="n">L_classical</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Classical action (exact result for harmonic oscillator)</span>
+<span class="n">Delta_t</span> <span class="o">=</span> <span class="n">tf</span> <span class="o">-</span> <span class="n">ti</span>
+<span class="n">S_classical_formula</span> <span class="o">=</span> <span class="p">(</span><span class="n">m</span><span class="o">*</span><span class="n">omega</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">omega</span><span class="o">*</span><span class="n">Delta_t</span><span class="p">)))</span> <span class="o">*</span> \
+    <span class="p">((</span><span class="n">qi</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="n">qf</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="n">omega</span><span class="o">*</span><span class="n">Delta_t</span><span class="p">)</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">qi</span><span class="o">*</span><span class="n">qf</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Classical action (point to point):&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;S_cl = (mω/2sin(ωT))[(q²ᵢ + q²f)cos(ωT) - 2qᵢqf]&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;where T = tf - ti&quot;</span><span class="p">)</span>
+
+<span class="c1"># Quantum propagator (exact result)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;QUANTUM CORRESPONDENCE:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Feynman path integral:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;K(qf,tf;qi,ti) = √(mω/2πiℏsin(ωT)) exp(iS_cl/ℏ)&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Key insight: The classical action appears in the quantum amplitude!&quot;</span><span class="p">)</span>
+
+<span class="c1"># Stationary phase approximation</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SEMICLASSICAL LIMIT (ℏ → 0):&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;When ℏ is small, rapid oscillations of e^(iS/ℏ) cancel except near δS = 0&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;→ Path integral concentrates on classical path&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;→ Quantum mechanics reduces to classical mechanics&quot;</span><span class="p">)</span>
+
+<span class="c1"># WKB approximation</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">WKB approximation (semiclassical quantum mechanics):&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ψ(x) ≈ A(x)exp(iS(x)/ℏ)&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;where S(x) satisfies Hamilton-Jacobi equation (classical)&quot;</span><span class="p">)</span>
+
+<span class="c1"># Action and classical-quantum correspondence</span>
+<span class="n">var</span><span class="p">(</span><span class="s1">&#39;x k&#39;</span><span class="p">)</span>
+<span class="n">S_wkb</span> <span class="o">=</span> <span class="n">integrate</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">WKB phase: S = ∫k dx, where k = √(2m(E-V))/ℏ&quot;</span><span class="p">)</span>
+
+<span class="c1"># Bohr-Sommerfeld quantization</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;BOHR-SOMMERFELD QUANTIZATION:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Classical action around closed orbit:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;∮ p dq = 2πℏ(n + α)  where α depends on topology&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This connects classical periodic orbits to quantum energy levels!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LEVEL 3: LEAST ACTION ↔ PATH INTEGRALS
+================================================================================
+Classical: Action S[q] = ∫L(q,q̇,t)dt
+Classical path minimizes action: δS = 0
+
+Quantum: All paths contribute with phase e^(iS/ℏ)
+Amplitude: K(qf,tf;qi,ti) = ∫𝒟q e^(iS[q]/ℏ)
+
+Lagrangian (harmonic oscillator): L = -1/2*m*omega^2*q^2
+
+Classical action (point to point):
+S_cl = (mω/2sin(ωT))[(q²ᵢ + q²f)cos(ωT) - 2qᵢqf]
+where T = tf - ti
+
+--------------------------------------------------------------------------------
+QUANTUM CORRESPONDENCE:
+--------------------------------------------------------------------------------
+
+Feynman path integral:
+K(qf,tf;qi,ti) = √(mω/2πiℏsin(ωT)) exp(iS_cl/ℏ)
+
+Key insight: The classical action appears in the quantum amplitude!
+
+--------------------------------------------------------------------------------
+SEMICLASSICAL LIMIT (ℏ → 0):
+--------------------------------------------------------------------------------
+When ℏ is small, rapid oscillations of e^(iS/ℏ) cancel except near δS = 0
+→ Path integral concentrates on classical path
+→ Quantum mechanics reduces to classical mechanics
+
+WKB approximation (semiclassical quantum mechanics):
+ψ(x) ≈ A(x)exp(iS(x)/ℏ)
+where S(x) satisfies Hamilton-Jacobi equation (classical)
+
+WKB phase: S = ∫k dx, where k = √(2m(E-V))/ℏ
+
+--------------------------------------------------------------------------------
+BOHR-SOMMERFELD QUANTIZATION:
+--------------------------------------------------------------------------------
+Classical action around closed orbit:
+∮ p dq = 2πℏ(n + α)  where α depends on topology
+This connects classical periodic orbits to quantum energy levels!
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># LEVEL 4: SYMMETRIES AND CONSERVATION LAWS (NOETHER&#39;S THEOREM)</span>
+<span class="c1"># ============================================================================</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;LEVEL 4: SYMMETRIES ↔ CONSERVATION LAWS&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Noether&#39;s theorem: Every continuous symmetry → conserved quantity&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This applies to BOTH classical and quantum mechanics!&quot;</span><span class="p">)</span>
+
+<span class="c1"># Time translation symmetry</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1. TIME TRANSLATION SYMMETRY:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Classical: If ∂L/∂t = 0, then energy E is conserved&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;           dE/dt = {E, H} = 0&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Quantum:   If [Ĥ, Ĥ] = 0, then energy is conserved&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;           d⟨Ê⟩/dt = (1/iℏ)⟨[Ê, Ĥ]⟩ = 0&quot;</span><span class="p">)</span>
+
+<span class="c1"># Spatial translation symmetry</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2. SPATIAL TRANSLATION SYMMETRY:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Classical: If ∂L/∂q = 0, then momentum p is conserved&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;           dp/dt = {p, H} = 0&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Quantum:   If [p̂, Ĥ] = 0, then momentum is conserved&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;           d⟨p̂⟩/dt = (1/iℏ)⟨[p̂, Ĥ]⟩ = 0&quot;</span><span class="p">)</span>
+
+<span class="c1"># Rotational symmetry</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3. ROTATIONAL SYMMETRY:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Classical: If L is rotationally invariant, angular momentum L⃗ conserved&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;           dL⃗/dt = {L⃗, H} = 0&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Quantum:   If [L̂, Ĥ] = 0, then angular momentum is conserved&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;           d⟨L̂⟩/dt = (1/iℏ)⟨[L̂, Ĥ]⟩ = 0&quot;</span><span class="p">)</span>
+
+<span class="c1"># Angular momentum example</span>
+<span class="n">var</span><span class="p">(</span><span class="s1">&#39;x y z px py pz&#39;</span><span class="p">)</span>
+<span class="n">Lx_classical</span> <span class="o">=</span> <span class="n">y</span><span class="o">*</span><span class="n">pz</span> <span class="o">-</span> <span class="n">z</span><span class="o">*</span><span class="n">py</span>
+<span class="n">Ly_classical</span> <span class="o">=</span> <span class="n">z</span><span class="o">*</span><span class="n">px</span> <span class="o">-</span> <span class="n">x</span><span class="o">*</span><span class="n">pz</span>
+<span class="n">Lz_classical</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="n">py</span> <span class="o">-</span> <span class="n">y</span><span class="o">*</span><span class="n">px</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Classical angular momentum components:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Lx = </span><span class="si">{</span><span class="n">Lx_classical</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Ly = </span><span class="si">{</span><span class="n">Ly_classical</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Lz = </span><span class="si">{</span><span class="n">Lz_classical</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Poisson brackets of angular momentum</span>
+<span class="n">pb_LxLy</span> <span class="o">=</span> <span class="n">poisson_bracket</span><span class="p">(</span><span class="n">Lx_classical</span><span class="p">,</span> <span class="n">Ly_classical</span><span class="p">,</span> <span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">],</span> <span class="p">[</span><span class="n">px</span><span class="p">,</span><span class="n">py</span><span class="p">,</span><span class="n">pz</span><span class="p">])</span>
+<span class="n">pb_LyLz</span> <span class="o">=</span> <span class="n">poisson_bracket</span><span class="p">(</span><span class="n">Ly_classical</span><span class="p">,</span> <span class="n">Lz_classical</span><span class="p">,</span> <span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">],</span> <span class="p">[</span><span class="n">px</span><span class="p">,</span><span class="n">py</span><span class="p">,</span><span class="n">pz</span><span class="p">])</span>
+<span class="n">pb_LzLx</span> <span class="o">=</span> <span class="n">poisson_bracket</span><span class="p">(</span><span class="n">Lz_classical</span><span class="p">,</span> <span class="n">Lx_classical</span><span class="p">,</span> <span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">],</span> <span class="p">[</span><span class="n">px</span><span class="p">,</span><span class="n">py</span><span class="p">,</span><span class="n">pz</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Poisson brackets (Lie algebra of SO(3)):&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="se">{{</span><span class="s2">Lx, Ly</span><span class="se">}}</span><span class="s2"> = </span><span class="si">{</span><span class="n">pb_LxLy</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="se">{{</span><span class="s2">Ly, Lz</span><span class="se">}}</span><span class="s2"> = </span><span class="si">{</span><span class="n">pb_LyLz</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="se">{{</span><span class="s2">Lz, Lx</span><span class="se">}}</span><span class="s2"> = </span><span class="si">{</span><span class="n">pb_LzLx</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;QUANTUM CORRESPONDENCE:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Commutation relations:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  [L̂x, L̂y] = iℏL̂z&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  [L̂y, L̂z] = iℏL̂x&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  [L̂z, L̂x] = iℏL̂y&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Same Lie algebra structure! Canonical quantization: [·,·] = iℏ{·,·}&quot;</span><span class="p">)</span>
+
+<span class="c1"># Continuous symmetries and Lie groups</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;LIE GROUPS AND SYMMETRIES:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Symmetry group → Lie algebra → Conserved quantities&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Examples:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  Time translations (ℝ)        → Energy&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  Space translations (ℝ³)      → Momentum&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  Rotations (SO(3))            → Angular momentum&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  Gauge transformations (U(1)) → Charge&quot;</span><span class="p">)</span>
+
+<span class="c1"># Ehrenfest theorem</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;EHRENFEST THEOREM:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Quantum expectation values obey classical-like equations:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  d⟨q̂⟩/dt = ⟨p̂⟩/m&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  d⟨p̂⟩/dt = -⟨∂V/∂q⟩&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">For macroscopic systems, quantum → classical behavior&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LEVEL 4: SYMMETRIES ↔ CONSERVATION LAWS
+================================================================================
+Noether&#39;s theorem: Every continuous symmetry → conserved quantity
+This applies to BOTH classical and quantum mechanics!
+
+--------------------------------------------------------------------------------
+1. TIME TRANSLATION SYMMETRY:
+--------------------------------------------------------------------------------
+Classical: If ∂L/∂t = 0, then energy E is conserved
+           dE/dt = {E, H} = 0
+
+Quantum:   If [Ĥ, Ĥ] = 0, then energy is conserved
+           d⟨Ê⟩/dt = (1/iℏ)⟨[Ê, Ĥ]⟩ = 0
+
+--------------------------------------------------------------------------------
+2. SPATIAL TRANSLATION SYMMETRY:
+--------------------------------------------------------------------------------
+Classical: If ∂L/∂q = 0, then momentum p is conserved
+           dp/dt = {p, H} = 0
+
+Quantum:   If [p̂, Ĥ] = 0, then momentum is conserved
+           d⟨p̂⟩/dt = (1/iℏ)⟨[p̂, Ĥ]⟩ = 0
+
+--------------------------------------------------------------------------------
+3. ROTATIONAL SYMMETRY:
+--------------------------------------------------------------------------------
+Classical: If L is rotationally invariant, angular momentum L⃗ conserved
+           dL⃗/dt = {L⃗, H} = 0
+
+Quantum:   If [L̂, Ĥ] = 0, then angular momentum is conserved
+           d⟨L̂⟩/dt = (1/iℏ)⟨[L̂, Ĥ]⟩ = 0
+
+Classical angular momentum components:
+  Lx = pz*y - py*z
+  Ly = -pz*x + px*z
+  Lz = py*x - px*y
+
+Poisson brackets (Lie algebra of SO(3)):
+  {Lx, Ly} = py*x - px*y
+  {Ly, Lz} = pz*y - py*z
+  {Lz, Lx} = -pz*x + px*z
+
+--------------------------------------------------------------------------------
+QUANTUM CORRESPONDENCE:
+--------------------------------------------------------------------------------
+Commutation relations:
+  [L̂x, L̂y] = iℏL̂z
+  [L̂y, L̂z] = iℏL̂x
+  [L̂z, L̂x] = iℏL̂y
+
+Same Lie algebra structure! Canonical quantization: [·,·] = iℏ{·,·}
+
+--------------------------------------------------------------------------------
+LIE GROUPS AND SYMMETRIES:
+--------------------------------------------------------------------------------
+Symmetry group → Lie algebra → Conserved quantities
+
+Examples:
+  Time translations (ℝ)        → Energy
+  Space translations (ℝ³)      → Momentum
+  Rotations (SO(3))            → Angular momentum
+  Gauge transformations (U(1)) → Charge
+
+--------------------------------------------------------------------------------
+EHRENFEST THEOREM:
+--------------------------------------------------------------------------------
+Quantum expectation values obey classical-like equations:
+  d⟨q̂⟩/dt = ⟨p̂⟩/m
+  d⟨p̂⟩/dt = -⟨∂V/∂q⟩
+
+For macroscopic systems, quantum → classical behavior
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># SUMMARY: THE DEEP UNITY</span>
+<span class="c1"># ============================================================================</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SUMMARY: THE MATHEMATICAL UNITY&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">The four levels of unity reveal that classical and quantum mechanics</span>
+<span class="s2">are not separate theories, but different aspects of the same mathematical</span>
+<span class="s2">structure:</span>
+
+<span class="s2">1. ALGEBRAIC LEVEL:</span>
+<span class="s2">   Poisson brackets {·,·} ←→ Commutators [·,·]/iℏ</span>
+<span class="s2">   Same algebraic structure (Lie algebra)</span>
+
+<span class="s2">2. GEOMETRIC LEVEL:</span>
+<span class="s2">   Symplectic manifolds ←→ Projective Hilbert space</span>
+<span class="s2">   Both carry natural geometric structures</span>
+
+<span class="s2">3. VARIATIONAL LEVEL:</span>
+<span class="s2">   Principle of least action ←→ Path integral with stationary phase</span>
+<span class="s2">   Classical path = dominant contribution in semiclassical limit</span>
+
+<span class="s2">4. SYMMETRY LEVEL:</span>
+<span class="s2">   Noether&#39;s theorem applies to BOTH!</span>
+<span class="s2">   Symmetries ←→ Conservation laws (via Lie groups)</span>
+
+<span class="s2">KEY INSIGHT: Canonical quantization is a functorial map:</span>
+<span class="s2">   {Classical observables, {·,·}} → {Quantum operators, [·,·]/iℏ}</span>
+<span class="s2">   </span>
+<span class="s2">This map preserves the Lie algebra structure, making classical mechanics</span>
+<span class="s2">a &quot;shadow&quot; of quantum mechanics in the limit ℏ → 0.</span>
+
+<span class="s2">The unity is not just mathematical elegance—it reflects the deep truth</span>
+<span class="s2">that nature is fundamentally quantum, with classical mechanics emerging</span>
+<span class="s2">as an approximation when quantum effects (ℏ) are negligible.</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;FURTHER CONNECTIONS:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">• Geometric quantization: Systematic way to build quantum theory from</span>
+<span class="s2">  symplectic geometry</span>
+<span class="s2">  </span>
+<span class="s2">• Deformation quantization: Treats ℏ as deformation parameter of classical</span>
+<span class="s2">  Poisson algebra</span>
+<span class="s2">  </span>
+<span class="s2">• Wigner functions: Quasi-probability distributions on phase space that</span>
+<span class="s2">  evolve via &quot;quantum&quot; corrections to classical Liouville equation</span>
+<span class="s2">  </span>
+<span class="s2">• Coherent states: Quantum states that most closely resemble classical</span>
+<span class="s2">  states and saturate uncertainty principle</span>
+<span class="s2">  </span>
+<span class="s2">• WKB approximation: Asymptotic series in ℏ connecting quantum to classical</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;END OF DEMONSTRATION&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SUMMARY: THE MATHEMATICAL UNITY
+================================================================================
+
+The four levels of unity reveal that classical and quantum mechanics
+are not separate theories, but different aspects of the same mathematical
+structure:
+
+1. ALGEBRAIC LEVEL:
+   Poisson brackets {·,·} ←→ Commutators [·,·]/iℏ
+   Same algebraic structure (Lie algebra)
+
+2. GEOMETRIC LEVEL:
+   Symplectic manifolds ←→ Projective Hilbert space
+   Both carry natural geometric structures
+
+3. VARIATIONAL LEVEL:
+   Principle of least action ←→ Path integral with stationary phase
+   Classical path = dominant contribution in semiclassical limit
+
+4. SYMMETRY LEVEL:
+   Noether&#39;s theorem applies to BOTH!
+   Symmetries ←→ Conservation laws (via Lie groups)
+
+KEY INSIGHT: Canonical quantization is a functorial map:
+   {Classical observables, {·,·}} → {Quantum operators, [·,·]/iℏ}
+   
+This map preserves the Lie algebra structure, making classical mechanics
+a &quot;shadow&quot; of quantum mechanics in the limit ℏ → 0.
+
+The unity is not just mathematical elegance—it reflects the deep truth
+that nature is fundamentally quantum, with classical mechanics emerging
+as an approximation when quantum effects (ℏ) are negligible.
+
+
+================================================================================
+FURTHER CONNECTIONS:
+================================================================================
+
+• Geometric quantization: Systematic way to build quantum theory from
+  symplectic geometry
+  
+• Deformation quantization: Treats ℏ as deformation parameter of classical
+  Poisson algebra
+  
+• Wigner functions: Quasi-probability distributions on phase space that
+  evolve via &quot;quantum&quot; corrections to classical Liouville equation
+  
+• Coherent states: Quantum states that most closely resemble classical
+  states and saturate uncertainty principle
+  
+• WKB approximation: Asymptotic series in ℏ connecting quantum to classical
+
+
+================================================================================
+END OF DEMONSTRATION
+================================================================================
+</pre></div>
+</div>
+</div>
+</div>
+<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>mindmap
+  root((mindmap))
+    Origins
+      Long history
+      ::icon(fa fa-book)
+      Popularisation
+        British popular psychology author Tony Buzan
+    Research
+      On effectiveness&lt;br/&gt;and features
+      On Automatic creation
+        Uses
+            Creative techniques
+            Strategic planning
+            Argument mapping
+    Tools
+      Pen and paper
+      Mermaid
+
+</pre></div>
+</div>
+<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>flowchart LR
+    subgraph C[经典力学框架]
+        direction LR
+        C1[拉格朗日表述&lt;br&gt;最小作用量原理&lt;br&gt;变分思想] --&gt;|勒让德变换| C2[哈密顿表述&lt;br&gt;正则方程&lt;br&gt;泊松代数]
+    end
+
+    subgraph Q[量子力学方法]
+        direction LR
+        Q1[路径积分表述&lt;br&gt;（费曼）] --&gt;|深刻对应| C1
+        Q2[正则量子化/算符表述&lt;br&gt;（薛定谔/海森堡/狄拉克）] --&gt;|直接量子化| C2
+        Q3[变分法&lt;br&gt;（瑞利-里茨）] --&gt;|哲学同源&lt;br&gt;（求极值）| C1
+        Q4[微扰法&lt;br&gt;（一阶、二阶...）] --&gt;|框架同源&lt;br&gt;（以H操作为核心）| C2
+    end
+</pre></div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="mathematical-structure-unity-classical-vs-quantum-mechanics">
+<h1>Mathematical Structure Unity: Classical vs Quantum Mechanics<a class="headerlink" href="#mathematical-structure-unity-classical-vs-quantum-mechanics" title="Link to this heading">#</a></h1>
+<p>This notebook demonstrates, computationally, the shared mathematical backbone:</p>
+<ul class="simple">
+<li><p><strong>Classical mechanics:</strong> observables are functions on phase space with a <strong>Poisson bracket</strong>.</p></li>
+<li><p><strong>Quantum mechanics:</strong> observables are operators with a <strong>commutator</strong>.</p></li>
+<li><p><strong>Unity:</strong> both are Lie-algebra dynamics<br />
+<span class="math notranslate nohighlight">\(\dot f = \{f,H\},\qquad \dot{\hat A} = \frac{1}{i\hbar}[\hat A,\hat H].\)</span></p></li>
+</ul>
+<section id="classical-phase-space-poisson-bracket-hamilton-equations">
+<h2>1) Classical phase space: Poisson bracket + Hamilton equations<a class="headerlink" href="#classical-phase-space-poisson-bracket-hamilton-equations" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s1">&#39;q p m omega&#39;</span><span class="p">)</span>
+<span class="n">R</span><span class="o">.&lt;</span><span class="n">q</span><span class="p">,</span><span class="n">p</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">PolynomialRing</span><span class="p">(</span><span class="n">SR</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">poisson</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">g</span><span class="p">):</span>  <span class="c1"># {f,g} = df/dq dg/dp - df/dp dg/dq</span>
+    <span class="k">return</span> <span class="n">diff</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">q</span><span class="p">)</span><span class="o">*</span><span class="n">diff</span><span class="p">(</span><span class="n">g</span><span class="p">,</span><span class="n">p</span><span class="p">)</span> <span class="o">-</span> <span class="n">diff</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">p</span><span class="p">)</span><span class="o">*</span><span class="n">diff</span><span class="p">(</span><span class="n">g</span><span class="p">,</span><span class="n">q</span><span class="p">)</span>
+
+<span class="c1"># Hamilton equations: qdot = {q,H}, pdot = {p,H}</span>
+<span class="n">H</span> <span class="o">=</span> <span class="n">p</span><span class="o">^</span><span class="mi">2</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">m</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">m</span><span class="o">*</span><span class="n">omega</span><span class="o">^</span><span class="mi">2</span><span class="o">*</span><span class="n">q</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">qdot</span> <span class="o">=</span> <span class="n">poisson</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">H</span><span class="p">)</span> <span class="p">;</span> <span class="n">s</span><span class="p">(</span><span class="n">qdot</span><span class="p">)</span> 
+<span class="n">pdot</span> <span class="o">=</span> <span class="n">poisson</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">H</span><span class="p">)</span> <span class="p">;</span> <span class="n">s</span><span class="p">(</span><span class="n">pdot</span><span class="p">)</span>
+
+<span class="c1"># Jacobi identity check (Poisson bracket is a Lie bracket)</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">q</span><span class="o">^</span><span class="mi">2</span><span class="o">*</span><span class="n">p</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">q</span><span class="o">*</span><span class="n">p</span><span class="o">^</span><span class="mi">2</span>
+<span class="n">h</span> <span class="o">=</span> <span class="n">q</span> <span class="o">+</span> <span class="n">p</span>
+
+<span class="n">J</span> <span class="o">=</span> <span class="n">poisson</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">poisson</span><span class="p">(</span><span class="n">g</span><span class="p">,</span><span class="n">h</span><span class="p">))</span> <span class="o">+</span> <span class="n">poisson</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">poisson</span><span class="p">(</span><span class="n">h</span><span class="p">,</span><span class="n">f</span><span class="p">))</span> <span class="o">+</span> <span class="n">poisson</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">poisson</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">g</span><span class="p">))</span>
+<span class="n">s</span><span class="p">(</span><span class="n">J</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{1}{m} p \qquad   \]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left(-m \omega^{2}\right) q \qquad   \]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 0 \qquad   \]</div>
+</div>
+</div>
+</section>
+<section id="quantum-operators-commutators-finite-dimensional-truncation">
+<h2>2) Quantum: operators + commutators (finite-dimensional truncation)<a class="headerlink" href="#quantum-operators-commutators-finite-dimensional-truncation" title="Link to this heading">#</a></h2>
+<p>We model the harmonic oscillator in a truncated Fock space of dimension <code class="docutils literal notranslate"><span class="pre">N</span></code>.
+Truncation introduces boundary artifacts near the top state; increasing <code class="docutils literal notranslate"><span class="pre">N</span></code> reduces them.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">annihilation</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>        <span class="c1"># a_{n-1,n} = sqrt(n)</span>
+    <span class="n">A</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">(</span><span class="n">SR</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="p">):</span>
+        <span class="n">A</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">A</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">creation</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">annihilation</span><span class="p">(</span><span class="n">N</span><span class="p">)</span><span class="o">.</span><span class="n">conjugate_transpose</span><span class="p">()</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">comm</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">A</span><span class="o">*</span><span class="n">B</span> <span class="o">-</span> <span class="n">B</span><span class="o">*</span><span class="n">A</span>
+
+<span class="c1"># Parameters</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">var</span><span class="p">(</span><span class="s1">&#39;hbar m omega&#39;</span><span class="p">)</span>
+<span class="n">a</span>  <span class="o">=</span> <span class="n">annihilation</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+<span class="n">ad</span> <span class="o">=</span> <span class="n">creation</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+
+<span class="c1"># x and p in terms of a, a^\dagger</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">hbar</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">omega</span><span class="p">))</span><span class="o">*</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">ad</span><span class="p">)</span>
+<span class="n">p_op</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">m</span><span class="o">*</span><span class="n">omega</span><span class="o">*</span><span class="n">hbar</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">I</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">ad</span><span class="p">)</span>
+
+<span class="c1"># Hamiltonian H = p^2/(2m) + (m omega^2 x^2)/2</span>
+<span class="n">H</span> <span class="o">=</span> <span class="p">(</span><span class="n">p_op</span><span class="o">*</span><span class="n">p_op</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">m</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">m</span><span class="o">*</span><span class="n">omega</span><span class="o">^</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+
+<span class="c1"># Heisenberg equations: xdot = (1/iħ)[x,H], pdot = (1/iħ)[p,H]</span>
+<span class="n">xdot</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">I</span><span class="o">*</span><span class="n">hbar</span><span class="p">))</span><span class="o">*</span><span class="n">comm</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">H</span><span class="p">)</span>
+<span class="n">pdot</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">I</span><span class="o">*</span><span class="n">hbar</span><span class="p">))</span><span class="o">*</span><span class="n">comm</span><span class="p">(</span><span class="n">p_op</span><span class="p">,</span> <span class="n">H</span><span class="p">)</span>
+
+<span class="c1"># Compare with expected: xdot ≈ p/m, pdot ≈ -m ω^2 x (up to truncation effects)</span>
+<span class="n">test1</span> <span class="o">=</span> <span class="p">(</span><span class="n">xdot</span> <span class="o">-</span> <span class="n">p_op</span><span class="o">/</span><span class="n">m</span><span class="p">)</span>
+<span class="n">test2</span> <span class="o">=</span> <span class="p">(</span><span class="n">pdot</span> <span class="o">+</span> <span class="n">m</span><span class="o">*</span><span class="n">omega</span><span class="o">^</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>
+
+<span class="n">subs_dict</span> <span class="o">=</span> <span class="p">{</span><span class="n">hbar</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="n">m</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="n">omega</span><span class="p">:</span><span class="mi">1</span><span class="p">}</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">frob_norm</span><span class="p">(</span><span class="n">M</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">sqrt</span><span class="p">(</span><span class="nb">sum</span><span class="p">((</span><span class="n">M</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">subs_dict</span><span class="p">))</span><span class="o">^</span><span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">)</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">)))</span>
+
+<span class="n">s</span><span class="p">(</span><span class="n">frob_norm</span><span class="p">(</span><span class="n">test1</span><span class="p">))</span>
+<span class="n">s</span><span class="p">(</span><span class="n">frob_norm</span><span class="p">(</span><span class="n">test2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \sqrt{-225} \qquad   \]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \sqrt{225} \qquad   \]</div>
+</div>
+</div>
+</section>
+<section id="canonical-commutation-dimensionless-quadratures">
+<h2>3) Canonical commutation: dimensionless quadratures<a class="headerlink" href="#canonical-commutation-dimensionless-quadratures" title="Link to this heading">#</a></h2>
+<p>Define
+<span class="math notranslate nohighlight">\( Q=\sqrt{\frac{m\omega}{\hbar}}x,\qquad P=\frac{1}{\sqrt{m\omega\hbar}}p.\)</span>
+In the infinite-dimensional limit, <span class="math notranslate nohighlight">\([Q,P]=i\mathbf{1}\)</span>. In truncation it is close to identity except near the boundary.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Q</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">m</span><span class="o">*</span><span class="n">omega</span><span class="o">/</span><span class="n">hbar</span><span class="p">)</span><span class="o">*</span><span class="n">x</span>
+<span class="n">P</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">sqrt</span><span class="p">(</span><span class="n">m</span><span class="o">*</span><span class="n">omega</span><span class="o">*</span><span class="n">hbar</span><span class="p">))</span><span class="o">*</span><span class="n">p_op</span>
+
+<span class="n">C</span> <span class="o">=</span> <span class="n">comm</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="n">P</span><span class="p">)</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">subs_dict</span><span class="p">)</span>
+<span class="n">C</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[   I    0    0    0    0    0    0    0    0    0]
+[   0    I    0    0    0    0    0    0    0    0]
+[   0    0    I    0    0    0    0    0    0    0]
+[   0    0    0    I    0    0    0    0    0    0]
+[   0    0    0    0    I    0    0    0    0    0]
+[   0    0    0    0    0    I    0    0    0    0]
+[   0    0    0    0    0    0    I    0    0    0]
+[   0    0    0    0    0    0    0    I    0    0]
+[   0    0    0    0    0    0    0    0    I    0]
+[   0    0    0    0    0    0    0    0    0 -9*I]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="deformation-quantization-view-moyal-bracket-series">
+<h2>4) Deformation quantization view: Moyal bracket (series)<a class="headerlink" href="#deformation-quantization-view-moyal-bracket-series" title="Link to this heading">#</a></h2>
+<p>The Moyal bracket is a deformation of the Poisson bracket:
+<span class="math notranslate nohighlight">\(\{f,g\}_M = \{f,g\} + O(\hbar^2).\)</span>
+Below we compute the first correction term via a series expansion.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">moyal_bracket_series</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">g</span><span class="p">):</span>  <span class="c1"># {f,g}_M ≈ {f,g} - (hbar^2/24) D^3(f,g) + O(hbar^4)</span>
+    <span class="n">D1</span> <span class="o">=</span> <span class="n">poisson</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">g</span><span class="p">)</span>
+    <span class="n">D3</span> <span class="o">=</span> <span class="p">(</span><span class="n">diff</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">q</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">diff</span><span class="p">(</span><span class="n">g</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+          <span class="o">-</span> <span class="mi">3</span><span class="o">*</span><span class="n">diff</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">q</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">diff</span><span class="p">(</span><span class="n">g</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">q</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+          <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="n">diff</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">q</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">diff</span><span class="p">(</span><span class="n">g</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">q</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+          <span class="o">-</span> <span class="n">diff</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">diff</span><span class="p">(</span><span class="n">g</span><span class="p">,</span><span class="n">q</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">D1</span> <span class="o">-</span> <span class="p">(</span><span class="n">hbar</span><span class="o">^</span><span class="mi">2</span><span class="o">/</span><span class="mi">24</span><span class="p">)</span><span class="o">*</span><span class="n">D3</span><span class="p">)</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="n">q</span><span class="o">^</span><span class="mi">3</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">p</span><span class="o">^</span><span class="mi">3</span>
+
+<span class="n">s</span><span class="p">(</span><span class="n">poisson</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">g</span><span class="p">))</span>
+<span class="n">s</span><span class="p">(</span><span class="n">moyal_bracket_series</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">g</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 9 q^{2} p^{2} \qquad   \]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 9 q^{2} p^{2} - \frac{3}{2} \, \mathit{hbar}^{2} \qquad   \]</div>
+</div>
+</div>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
+<p>You have now verified in code:</p>
+<ol class="arabic simple">
+<li><p><strong>Classical:</strong> <span class="math notranslate nohighlight">\(\{\cdot,\cdot\}\)</span> is a Lie bracket; Hamiltonian dynamics is <span class="math notranslate nohighlight">\(\dot f=\{f,H\}\)</span>.</p></li>
+<li><p><strong>Quantum:</strong> <span class="math notranslate nohighlight">\([\cdot,\cdot]\)</span> is a Lie bracket; Heisenberg dynamics is <span class="math notranslate nohighlight">\(\dot{\hat A}=\frac{1}{i\hbar}[\hat A,\hat H]\)</span>.</p></li>
+<li><p><strong>Bridge:</strong> dimensionless CCR <span class="math notranslate nohighlight">\([Q,P]\approx i\mathbf{1}\)</span> (exact in the infinite-dimensional limit).</p></li>
+<li><p><strong>Deformation:</strong> Moyal bracket reproduces Poisson bracket at leading order with <span class="math notranslate nohighlight">\(\hbar^2\)</span> corrections.</p></li>
+</ol>
+<p>This is the structural unity: <strong>same dynamical template, different bracket</strong>.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "sagemath"
+        },
+        kernelOptions: {
+            name: "sagemath",
+            path: "./past"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'sagemath'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="nb_lottery_simulator.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lottery Math</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../Course_MCM_QFT.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">QFT</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">How Dad learn QM</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#m1-intro-qm-wk1">M1: Intro QM (Wk1)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#m2-advanced-qm-spins-wk2">M2: Advanced QM - spins (Wk2)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#m3-qm-of-light-wk3">M3: QM of light (Wk3)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#m4-advanced-qm-of-light-wk4">M4: Advanced QM of light (Wk4)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#m5-operators-identities-wk5-6">M5: Operators &amp; identities (Wk5-6)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#m6-simple-harmonic-oscillator-wk8-9">M6: Simple harmonic oscillator (Wk8-9)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#m7-angular-momentum-hydrogen-wk10-12">M7: Angular momentum &amp; hydrogen (Wk10-12)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#m8-approximation-methods-wk13-15">M8: Approximation methods (Wk13-15)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#m9-time-evolution-wk16">M9: Time evolution (Wk16)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#m10-photons-ligo-wk17">M10: Photons &amp; LIGO (Wk17)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix">Appendix</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cm-qm-unity">CM-QM unity</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-structure-unity-classical-vs-quantum-mechanics">Mathematical Structure Unity: Classical vs Quantum Mechanics</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-phase-space-poisson-bracket-hamilton-equations">1) Classical phase space: Poisson bracket + Hamilton equations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-operators-commutators-finite-dimensional-truncation">2) Quantum: operators + commutators (finite-dimensional truncation)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#canonical-commutation-dimensionless-quadratures">3) Canonical commutation: dimensionless quadratures</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deformation-quantization-view-moyal-bracket-series">4) Deformation quantization view: Moyal bracket (series)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jonny, assisted by Tom
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
