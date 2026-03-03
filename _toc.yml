@@ -11,8 +11,7 @@ parts:
   - file: past/Course_MCM
   - file: Course_Lean  
   - file: Course_Puzzle
-  - file: Course_Ext_III
-  - file: 0mmgroup
+  - file: Course_5U
 
 - caption: CS & Physics
   numbered: false

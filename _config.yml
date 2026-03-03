@@ -3,8 +3,8 @@ author: "Jonny, assisted by Tom"
 # logo: logo.png  # Optional
 # Repository URL (for GitHub Pages)
 repository:
-  url: "https://github.com/tomctang/10pe"
-  path_to_docs: "https://github.com/tomctang/10pe"
+  url: "https://github.com/tomctang/jonny"
+  path_to_docs: "https://github.com/tomctang/jonny"
   branch: "gh-pages"  # Deployment branch for GitHub Pages
 
 # HTML and theme configuration
@@ -28,7 +28,7 @@ html:
 # Sitemap (optional)
 sitemap:
   filename: "sitemap.xml"
-  base_url: "https://tomctang.github.io/10pe/"
+  base_url: "https://tomctang.github.io/jonny/"
 # Execution options
 execute:
   execute_notebooks: "off"  # Change to "auto" to execute notebooks during build
