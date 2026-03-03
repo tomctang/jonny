@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/custom.css?v=550f00eb" />
@@ -63,7 +63,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Course_Puzzle';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="mmgroup Guide" href="0mmgroup.html" />
+    <link rel="next" title="Ext III" href="Course_5U.html" />
     <link rel="prev" title="Lean" href="Course_Lean.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -185,7 +185,7 @@
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Permutation Puzzles</a></li>
 
 
-<li class="toctree-l1"><a class="reference internal" href="0mmgroup.html">mmgroup Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Course_5U.html">Ext III</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">CS &amp; Physics</span></p>
 <ul class="nav bd-sidenav">
@@ -248,7 +248,7 @@
 <div class="article-header-buttons">
 
 
-<a href="https://github.com/tomctang/10pe" target="_blank"
+<a href="https://github.com/tomctang/jonny" target="_blank"
    class="btn btn-sm btn-source-repository-button"
    title="Source repository"
    data-bs-placement="bottom" data-bs-toggle="tooltip"
@@ -401,7 +401,10 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-18-subgroups">Lecture 18 - Subgroups</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-19-puzzle-groups">Lecture 19 - Puzzle Groups</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-20-commutators">Lecture 20 - Commutators</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-20-commutators">Lecture 20 - Commutators</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-21-conjugates">Lecture 21 - Conjugates</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#puzzles-jamie-coding">Puzzles - Jamie Coding</a><ul class="visible nav section-nav flex-column">
@@ -485,6 +488,18 @@ document.write(`
     <span class="k">return</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="o">.</span><span class="n">inverse</span><span class="p">()</span><span class="o">*</span><span class="n">b</span><span class="o">.</span><span class="n">inverse</span><span class="p">()</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">cg</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">CubeGroup</span><span class="p">()(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="p">(</span><span class="n">pi</span><span class="o">^</span><span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="n">factorial</span><span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.18879020478639
 </pre></div>
 </div>
 </div>
@@ -2653,9 +2668,17 @@ $<span class="math notranslate nohighlight">\(mov([\alpha,\beta])=(mov(\beta)\cu
 </ul>
 <blockquote>
 <div><blockquote>
-<div><p>Note: Most cube moves developed by commutators in this lecture is hidden for now.</p>
+<div><p>Note: Most cube moves developed by commutators in this lecture is hidden for now. Add more later.</p>
 </div></blockquote>
 </div></blockquote>
+<p>Oval Track puzzle</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\([R^{-3},T]=(1\enspace4\enspace7)(2\enspace3)(5\enspace6)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\([R^{-3},T]^2=[R^{-3}TR^3,T]=(1\enspace4\enspace7)\)</span></p></li>
+</ul>
+<section id="lecture-21-conjugates">
+<h3>Lecture 21 - Conjugates<a class="headerlink" href="#lecture-21-conjugates" title="Link to this heading">#</a></h3>
+</section>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="puzzles-jamie-coding">
@@ -3397,11 +3420,11 @@ From linear algebra we know</p>
       </div>
     </a>
     <a class="right-next"
-       href="0mmgroup.html"
+       href="Course_5U.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">mmgroup Guide</p>
+        <p class="prev-next-title">Ext III</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -3454,7 +3477,10 @@ From linear algebra we know</p>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-18-subgroups">Lecture 18 - Subgroups</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-19-puzzle-groups">Lecture 19 - Puzzle Groups</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-20-commutators">Lecture 20 - Commutators</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-20-commutators">Lecture 20 - Commutators</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-21-conjugates">Lecture 21 - Conjugates</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#puzzles-jamie-coding">Puzzles - Jamie Coding</a><ul class="visible nav section-nav flex-column">
