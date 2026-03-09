@@ -1,0 +1,802 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Discrete Calculus &#8212; Jonny Workbook</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=550f00eb" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=1ae7504c"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Course_5U_DC';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Jonny Workbook</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Math &amp; FP/Language</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="past/Alevel_math.html">A-level-math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="past/Alevel_math_further.html">A-level-further</a></li>
+<li class="toctree-l1"><a class="reference internal" href="past/Course_MCM.html">Math Computational Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Course_Lean.html">Lean</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Course_Puzzle.html">Permutation Puzzles</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="Course_5U.html">5U - Ext III</a></li>
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">CS &amp; Physics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="past/Course_MIT6001Python.html">MIT_CS6001-Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="past/Course_MIT6002thinking.html">MIT_CS6002-CS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PE100.html">Project Euler Q1-100</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="past/Course_MCM_QM.html">Quantum Mechanics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Notebook &amp; Tom</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="past/nb_past_courses.html">Past courses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="past/nb_Geo.html">Geography and Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="past/nb_lottery_simulator.html">Lottery Math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="past/How_Dad_organise_QM.html">How Dad learn QM</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="Course_MCM_QFT.html">QFT</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/tomctang/jonny" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Course_5U_DC.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Discrete Calculus</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intro">1. Intro</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sigma-notation">Sigma Notation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#riemann-sums">Riemann Sums</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#product-notation">Product Notation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#taylor-series">Taylor Series</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finite-differences">Finite Differences</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#number-theory">2. Number Theory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#primes">3. Primes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-things">Basic Things</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applications">Applications</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fibonacci">4. Fibonacci</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="discrete-calculus">
+<h1>Discrete Calculus<a class="headerlink" href="#discrete-calculus" title="Link to this heading">#</a></h1>
+<section id="intro">
+<h2>1. Intro<a class="headerlink" href="#intro" title="Link to this heading">#</a></h2>
+<p>keywords : sequences/series, finite differences, sums/products, gfun
+e . g . Finite Sums / Infinite Sums,    Riemann Sums</p>
+<p><img alt="1uds3aefy8e99" src="_images/1uds3aefy8e99.png" /></p>
+<p>15</p>
+<p>1</p>
+<p><img alt="0po4hoj78l7u8" src="_images/0po4hoj78l7u8.png" /></p>
+<p><img alt="0wlr9vur12fd1" src="_images/0wlr9vur12fd1.png" /></p>
+<p><img alt="02ncvum6lagx4" src="_images/02ncvum6lagx4.png" /></p>
+<section id="sigma-notation">
+<h3>Sigma Notation<a class="headerlink" href="#sigma-notation" title="Link to this heading">#</a></h3>
+<p>Basic Examples</p>
+<p><img alt="0e3cqxphajv5t" src="_images/0e3cqxphajv5t.png" /></p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 15
+</pre></div>
+</div>
+<p>Infinite Sums</p>
+<p><img alt="01a84yj3vm2kd" src="_images/01a84yj3vm2kd.png" /></p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 1
+</pre></div>
+</div>
+<p><img alt="1czc70ewehiiz" src="_images/1czc70ewehiiz.png" /></p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= E
+</pre></div>
+</div>
+</section>
+<section id="riemann-sums">
+<h3>Riemann Sums<a class="headerlink" href="#riemann-sums" title="Link to this heading">#</a></h3>
+<p><img alt="1rjtes7ys10c7" src="_images/1rjtes7ys10c7.png" /></p>
+<p><img alt="1hl1oag7i1ruq" src="_images/1hl1oag7i1ruq.png" /></p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= Show[DiscretePlot[f[x], {x, 1, 3, 1/3}, ExtentSize -&gt; Full], plot]
+</pre></div>
+</div>
+<p><img alt="0pws6oyi83n6q" src="_images/0pws6oyi83n6q.png" /></p>
+<p><img alt="0zr4cz571m7gc" src="_images/0zr4cz571m7gc.png" /></p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 2.03771
+</pre></div>
+</div>
+</section>
+<section id="product-notation">
+<h3>Product Notation<a class="headerlink" href="#product-notation" title="Link to this heading">#</a></h3>
+<p><img alt="0eu63zh0wm646" src="_images/0eu63zh0wm646.png" /></p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= 120
+</pre></div>
+</div>
+<p><img alt="1xatl7h9grd1i" src="_images/1xatl7h9grd1i.png" /></p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= 3.0899225749115415`
+</pre></div>
+</div>
+</section>
+<section id="taylor-series">
+<h3>Taylor Series<a class="headerlink" href="#taylor-series" title="Link to this heading">#</a></h3>
+<p><img alt="06fyb5cvncpfj" src="_images/06fyb5cvncpfj.png" /></p>
+<p><img alt="0hummh59v43ce" src="_images/0hummh59v43ce.png" /></p>
+<p><img alt="0sa2ftpgpdtr2" src="_images/0sa2ftpgpdtr2.png" /></p>
+<p><img alt="1flk6cxwxxhrl" src="_images/1flk6cxwxxhrl.png" /></p>
+</section>
+<section id="finite-differences">
+<h3>Finite Differences<a class="headerlink" href="#finite-differences" title="Link to this heading">#</a></h3>
+<p><img alt="0dt899w2ggx54" src="_images/0dt899w2ggx54.png" /></p>
+<p><img alt="0k8qhhqoy6coa" src="_images/0k8qhhqoy6coa.png" /></p>
+<p><img alt="1nay0swzov7f2" src="_images/1nay0swzov7f2.png" /></p>
+<p><img alt="0lbyp8r7s6kau" src="_images/0lbyp8r7s6kau.png" /></p>
+<p><img alt="1np512945d1gq" src="_images/1np512945d1gq.png" /></p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= (*coding form*)
+   f&#39;[x] 
+    Limit[difForward[x, h], h -&gt; 0] 
+    Limit[difBackward[x, h], h -&gt; 0] 
+    Simplify[Limit[difCentral[x, h], h -&gt; 0]]
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 4 - 10 x + 3 x^2
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 4 - 10 x + 3 x^2
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 4 - 10 x + 3 x^2
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 4 - 10 x + 3 x^2
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\text{(*math form*)}f'(x)\underset{h\to 0}{\text{lim}}\text{difForward}(x,h)\underset{h\to 0}{\text{lim}}\text{difBackward}(x,h)\text{Simplify}[\underset{h\to 0}{\text{lim}}\text{difCentral}(x,h)]\]</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 4 - 10 x + 3 x^2
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 4 - 10 x + 3 x^2
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 4 - 10 x + 3 x^2
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 4 - 10 x + 3 x^2
+</pre></div>
+</div>
+</section>
+</section>
+<section id="number-theory">
+<h2>2. Number Theory<a class="headerlink" href="#number-theory" title="Link to this heading">#</a></h2>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= Divisible[10, 5]
+ Mod[12, 10](*cannot use %*)
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= True
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 2
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= a = 420;   (*separate input cell*)
+ b = 860;
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= (*repeat until output appears*)
+   r = Mod[a, b]; 
+    a = b; 
+    If[r &gt; 0, b = r, Print[a]];
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 20
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= (*only need to run once*)
+   r = Mod[a, b]; 
+    a = b; 
+    While[r &gt; 0, b = r; r = Mod[a, b]; a = b] 
+    Print[a]
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 20
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= GCD[a, b]
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 20
+</pre></div>
+</div>
+</section>
+<section id="primes">
+<h2>3. Primes<a class="headerlink" href="#primes" title="Link to this heading">#</a></h2>
+<section id="basic-things">
+<h3>Basic Things<a class="headerlink" href="#basic-things" title="Link to this heading">#</a></h3>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= Table[Prime[i], {i, 10}]
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= {2, 3, 5, 7, 11, 13, 17, 19, 23, 29}
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= PrimeQ[67]
+ PrimeQ[267]
+ CompositeQ[6767]
+ CompositeQ[673]
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= True
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= False
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= True
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= False
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= gap[n_] = Prime[n + 1] - Prime[n];
+ DiscretePlot[gap[n], {n, 150}]
+</pre></div>
+</div>
+<p><img alt="1gosh1w5b7zis" src="_images/1gosh1w5b7zis.png" /></p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= RandomPrime[100]
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 73
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= Plot[PrimePi[x], {x, 0, 50}]
+</pre></div>
+</div>
+<p><img alt="0826y0d0squzl" src="_images/0826y0d0squzl.png" /></p>
+</section>
+<section id="applications">
+<h3>Applications<a class="headerlink" href="#applications" title="Link to this heading">#</a></h3>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= (*RSA Encryption*)
+   p = Prime[18]; 
+    q = Prime[16]; 
+    n = p*q
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 3233
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= EulerPhi[n]
+ u = 17;
+ k = 15;
+ CoprimeQ[u, EulerPhi[n]]
+ PrivKey = (k*EulerPhi[n] + 1)/u
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 3120
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= True
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 2753
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= data = ToCharacterCode[&quot;Secret&quot;]
+ encrypted = Mod[data^u, n]
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= {83, 101, 99, 114, 101, 116}
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= {2680, 1313, 281, 2412, 1313, 884}
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= decrypted = Mod[encrypted^PrivKey, n]
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= {83, 101, 99, 114, 101, 116}
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= EulerPhi[n] == (p - 1) (q - 1)
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= True
+</pre></div>
+</div>
+</section>
+</section>
+<section id="fibonacci">
+<h2>4. Fibonacci<a class="headerlink" href="#fibonacci" title="Link to this heading">#</a></h2>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= DiscreteAsymptotic[Fibonacci[n]/Fibonacci[n - 1], n -&gt; \[Infinity]]
+ DiscreteAsymptotic[Fibonacci[n], n -&gt; \[Infinity]]
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= GoldenRatio
+</pre></div>
+</div>
+<p><img alt="0xals3geu330v" src="_images/0xals3geu330v.png" /></p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= Table[Fibonacci[i], {i, -20, 20}]      (*including 0 is optional*)
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= {-6765, 4181, -2584, 1597, -987, 610, -377, 233, -144, 89, -55, 34, -21, 13, -8, 5, -3, 2, -1, 1, 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765}
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= Table[Fibonacci[i, x], {i, -5, 5}]
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= {1 + 3 x^2 + x^4, -2 x - x^3, 1 + x^2, -x, 1, 0, 1, x, 1 + x^2, 2 x + x^3, 1 + 3 x^2 + x^4}
+</pre></div>
+</div>
+<p><img alt="0d2m7ums0grsd" src="_images/0d2m7ums0grsd.png" /></p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 0.568864
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 0.568864 - 0.351578 I
+</pre></div>
+</div>
+<p>When Fib inputs expand from integers to continuous, use Euler’s formula to calculate powers.
+Sage coding: def a(n): return BinaryRecurrenceSequence(1, 1).period(n)           Lucas sequence is BinaryRecurrenceSequence and Fib is special Lucas</p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= test[{0, 1, _}] := False; test[_] := True;
+ nest[k_][{a_, b_, c_}] := {Mod[b, k], Mod[a + b, k], c + 1};
+ A001175[1] := 1;
+ A001175[k_] := NestWhile[nest[k], {1, 1, 1}, test][[3]];
+ Table[A001175[n], {n, 100}] (* Leo C. Stein, Nov 08 2019 *)
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= {1, 3, 8, 6, 20, 24, 16, 12, 24, 60, 10, 24, 28, 48, 40, 24, 36, 24, 18, 60, 16, 30, 48, 24, 100, 84, 72, 48, 14, 120, 30, 48, 40, 36, 80, 24, 76, 18, 56, 60, 40, 48, 88, 30, 120, 48, 32, 24, 112, 300, 72, 84, 108, 72, 20, 48, 72, 42, 58, 120, 60, 30, 48, 96, 140, 120, 136, 36, 48, 240, 70, 24, 148, 228, 200, 18, 80, 168, 78, 120, 216, 120, 168, 48, 180, 264, 56, 60, 44, 120, 112, 48, 120, 96, 180, 48, 196, 336, 120, 300}
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= PolarPlot[GoldenRatio^(2 \[Theta]/\[Pi]), {\[Theta], 0, 9 \[Pi]}]
+</pre></div>
+</div>
+<p><img alt="196ct6p3esczf" src="_images/196ct6p3esczf.png" /></p>
+<p><img alt="0kuv506nm5cxi" src="_images/0kuv506nm5cxi.png" /></p>
+<p><img alt="10dzecppm5pmw" src="_images/10dzecppm5pmw.png" /></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intro">1. Intro</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sigma-notation">Sigma Notation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#riemann-sums">Riemann Sums</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#product-notation">Product Notation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#taylor-series">Taylor Series</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finite-differences">Finite Differences</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#number-theory">2. Number Theory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#primes">3. Primes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-things">Basic Things</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applications">Applications</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fibonacci">4. Fibonacci</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jonny, assisted by Tom
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
