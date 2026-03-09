@@ -184,15 +184,14 @@
 <li class="toctree-l1"><a class="reference internal" href="Course_Lean.html">Lean</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Course_Puzzle.html">Permutation Puzzles</a></li>
 
-
 <li class="toctree-l1"><a class="reference internal" href="Course_5U.html">Ext III</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Course_DiscreteCalculus.html">Discrete Calculus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Course_5U_DC.html">Discrete Calculus</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">CS &amp; Physics</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="past/Course_MIT6001Python.html">MIT_CS6001-Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="past/Course_MIT6002thinking.html">MIT_CS6002-CS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="PE100.html">Project Euler Q1-50</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PE100.html">Project Euler Q1-100</a></li>
 
 
 <li class="toctree-l1"><a class="reference internal" href="past/Course_MCM_QM.html">Quantum Mechanics</a></li>
@@ -397,7 +396,8 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-134">PE 134</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-135-136">PE 135&amp;136</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-138">PE 138</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-139">PE 139</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-139-unfinished">PE 139(unfinished)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-144">PE 144</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-151">PE 151</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-162">PE 162</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-164">PE 164</a></li>
@@ -419,6 +419,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-203">PE 203</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-204">PE 204</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-205">PE 205</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-207">PE 207</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-211">PE 211</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-214">PE 214</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-216">PE 216</a></li>
@@ -1718,11 +1719,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>67641
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 <section id="pe-138">
@@ -1796,8 +1792,8 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="pe-139">
-<h3>PE 139<a class="headerlink" href="#pe-139" title="Link to this heading">#</a></h3>
+<section id="pe-139-unfinished">
+<h3>PE 139(unfinished)<a class="headerlink" href="#pe-139-unfinished" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">memo</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">1</span><span class="p">}</span>
@@ -1833,6 +1829,78 @@ document.write(`
         <span class="n">m</span><span class="o">+=</span><span class="mi">1</span>
     <span class="k">return</span> <span class="n">triplets</span>
 <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="ow">not</span> <span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">%</span><span class="k">abs</span>(x[0]-x[1]),pythagoreanTriplets(10^3)))
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="pe-144">
+<h3>PE 144<a class="headerlink" href="#pe-144" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Used substitution to find intersection instead of solve function</p></li>
+<li><p>Floating point errors accumulation: solved by using absolute value</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 144 Laser Beam Reflections</span>
+<span class="n">var</span><span class="p">(</span><span class="s1">&#39;x y&#39;</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">degree</span><span class="p">(</span><span class="n">grad</span><span class="p">):</span>                    <span class="c1"># angle based on gradient</span>
+    <span class="k">return</span> <span class="n">arctan</span><span class="p">(</span><span class="n">grad</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">find_gradient</span><span class="p">(</span><span class="n">deg</span><span class="p">):</span>              <span class="c1"># gradient based on angle</span>
+    <span class="k">return</span> <span class="n">tan</span><span class="p">(</span><span class="n">deg</span><span class="p">)</span> 
+<span class="k">def</span><span class="w"> </span><span class="nf">gradient</span><span class="p">(</span><span class="n">point</span><span class="p">):</span>                 <span class="c1"># gradient of a point on the ellipse</span>
+    <span class="k">return</span> <span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="n">point</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">point</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">exited</span><span class="p">(</span><span class="n">point</span><span class="p">):</span>                   <span class="c1"># whether the laser exited</span>
+    <span class="k">if</span> <span class="o">-</span><span class="mf">0.01</span><span class="o">&lt;=</span><span class="n">point</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">&lt;=</span><span class="mf">0.01</span> <span class="ow">and</span> <span class="n">point</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="kc">False</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">find_line</span><span class="p">(</span><span class="n">point1</span><span class="p">,</span><span class="n">point2</span><span class="p">):</span>        <span class="c1"># line based on two points</span>
+    <span class="n">gradient</span><span class="o">=</span><span class="p">(</span><span class="n">point2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">point1</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="n">point2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">point1</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">yint</span><span class="o">=</span><span class="n">point1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">gradient</span><span class="o">*</span><span class="n">point1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">gradient</span><span class="p">,</span><span class="n">gradient</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="n">yint</span><span class="p">]</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">grad_line</span><span class="p">(</span><span class="n">gradient</span><span class="p">,</span><span class="n">point</span><span class="p">):</span>       <span class="c1"># line based on gradient and point</span>
+    <span class="n">yint</span><span class="o">=</span><span class="n">point</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">gradient</span><span class="o">*</span><span class="n">point</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">gradient</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="n">yint</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">new_intersection</span><span class="p">(</span><span class="n">line</span><span class="p">,</span><span class="n">point</span><span class="p">):</span>    <span class="c1"># new intersection of a line and the ellipse</span>
+    <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">=</span><span class="n">line</span>
+    <span class="n">c</span><span class="o">=</span><span class="n">f</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">m</span><span class="o">=</span><span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">-</span><span class="n">c</span>
+    <span class="n">a</span><span class="o">=</span><span class="mi">4</span><span class="o">+</span><span class="n">m</span><span class="o">^</span><span class="mi">2</span>
+    <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">c</span>
+    <span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="o">^</span><span class="mi">2</span><span class="o">-</span><span class="mi">100</span>
+    <span class="n">x0</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="n">b</span><span class="o">-</span><span class="n">sqrt</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">x1</span><span class="o">=-</span><span class="n">b</span><span class="o">/</span><span class="n">a</span><span class="o">-</span><span class="n">x0</span>
+    <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">x0</span><span class="o">-</span><span class="n">point</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">&lt;</span><span class="mf">1e-6</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">x1</span><span class="p">,</span><span class="n">f</span><span class="p">(</span><span class="n">x1</span><span class="p">)]</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">x0</span><span class="p">,</span><span class="n">f</span><span class="p">(</span><span class="n">x0</span><span class="p">)]</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">new_line</span><span class="p">(</span><span class="n">old_line</span><span class="p">,</span><span class="n">point</span><span class="p">):</span>        <span class="c1"># new line based on old line and incident point</span>
+    <span class="n">grad</span><span class="o">=</span><span class="n">gradient</span><span class="p">(</span><span class="n">point</span><span class="p">)</span>
+    <span class="n">de1</span><span class="o">=</span><span class="n">degree</span><span class="p">(</span><span class="n">grad</span><span class="p">)</span>
+    <span class="n">de2</span><span class="o">=</span><span class="n">degree</span><span class="p">(</span><span class="n">old_line</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">de1</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span>
+        <span class="n">de1</span><span class="o">+=</span><span class="n">pi</span>
+    <span class="k">if</span> <span class="n">de2</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span>
+        <span class="n">de2</span><span class="o">+=</span><span class="n">pi</span>
+    <span class="n">incidence</span><span class="o">=</span><span class="n">de2</span><span class="o">-</span><span class="n">de1</span>
+    <span class="n">output</span><span class="o">=</span><span class="n">pi</span><span class="o">-</span><span class="n">incidence</span>
+    <span class="n">grad</span><span class="o">=</span><span class="n">find_gradient</span><span class="p">(</span><span class="n">output</span><span class="o">+</span><span class="n">de1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">grad_line</span><span class="p">(</span><span class="n">grad</span><span class="p">,</span><span class="n">point</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">new_point</span><span class="p">(</span><span class="n">line</span><span class="p">,</span><span class="n">old_point</span><span class="p">):</span>       <span class="c1"># new point based on line and older point</span>
+    <span class="n">line</span><span class="o">=</span><span class="n">new_line</span><span class="p">(</span><span class="n">line</span><span class="p">,</span><span class="n">old_point</span><span class="p">)</span>
+    <span class="n">point</span><span class="o">=</span><span class="n">new_intersection</span><span class="p">(</span><span class="n">line</span><span class="p">,</span><span class="n">old_point</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">point</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">point</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">points</span><span class="p">(</span><span class="n">num</span><span class="p">,</span><span class="n">point1</span><span class="o">=</span><span class="p">[</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">10.1</span><span class="p">],</span><span class="n">point2</span><span class="o">=</span><span class="p">[</span><span class="mf">1.4</span><span class="p">,</span><span class="o">-</span><span class="mf">9.6</span><span class="p">]):</span>       <span class="c1"># simulates for a number of iterations</span>
+    <span class="n">count</span><span class="o">=</span><span class="mi">0</span>
+    <span class="n">old_point</span><span class="p">,</span><span class="n">point</span><span class="o">=</span><span class="nb">tuple</span><span class="p">(</span><span class="n">point1</span><span class="p">),</span><span class="nb">tuple</span><span class="p">(</span><span class="n">point2</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+        <span class="n">count</span><span class="o">+=</span><span class="mi">1</span>
+        <span class="n">med</span><span class="o">=</span><span class="nb">tuple</span><span class="p">(</span><span class="n">new_point</span><span class="p">(</span><span class="n">find_line</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">old_point</span><span class="p">),</span><span class="nb">list</span><span class="p">(</span><span class="n">point</span><span class="p">)),</span><span class="nb">list</span><span class="p">(</span><span class="n">point</span><span class="p">)))</span>
+        <span class="n">old_point</span><span class="p">,</span><span class="n">point</span><span class="o">=</span><span class="n">point</span><span class="p">,</span><span class="n">med</span>
+        <span class="k">if</span> <span class="n">exited</span><span class="p">(</span><span class="n">point</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">point</span><span class="p">)</span>
+            <span class="k">break</span>
+    <span class="k">return</span> <span class="n">count</span>
+<span class="n">points</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2413,6 +2481,25 @@ document.write(`
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">peter_lst</span><span class="p">)):</span>
     <span class="n">prob</span><span class="o">+=</span><span class="n">peter_lst</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="nb">sum</span><span class="p">(</span><span class="n">colin_lst</span><span class="p">[:</span><span class="n">i</span><span class="p">])</span>
 <span class="c1"># print probability</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="pe-207">
+<h3>PE 207<a class="headerlink" href="#pe-207" title="Link to this heading">#</a></h3>
+<p>Ans: 44043947822</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">inp</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>            <span class="c1"># use 209866</span>
+<span class="n">num</span><span class="o">=</span><span class="n">inp</span><span class="o">-</span><span class="mi">1</span>
+<span class="n">perfect</span><span class="o">=</span><span class="n">floor</span><span class="p">(</span><span class="n">log</span><span class="p">(</span><span class="n">inp</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">perfect</span><span class="o">/</span><span class="n">num</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1/12345
 </pre></div>
 </div>
 </div>
@@ -3817,7 +3904,8 @@ Optimize solution</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-134">PE 134</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-135-136">PE 135&amp;136</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-138">PE 138</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-139">PE 139</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-139-unfinished">PE 139(unfinished)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-144">PE 144</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-151">PE 151</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-162">PE 162</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-164">PE 164</a></li>
@@ -3839,6 +3927,7 @@ Optimize solution</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-203">PE 203</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-204">PE 204</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-205">PE 205</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-207">PE 207</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-211">PE 211</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-214">PE 214</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-216">PE 216</a></li>

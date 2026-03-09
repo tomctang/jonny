@@ -63,7 +63,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Course_5U';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Discrete Calculus" href="Course_DiscreteCalculus.html" />
+    <link rel="next" title="Discrete Calculus" href="Course_5U_DC.html" />
     <link rel="prev" title="Permutation Puzzles" href="Course_Puzzle.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -184,15 +184,14 @@
 <li class="toctree-l1"><a class="reference internal" href="Course_Lean.html">Lean</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Course_Puzzle.html">Permutation Puzzles</a></li>
 
-
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Ext III</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Course_DiscreteCalculus.html">Discrete Calculus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Course_5U_DC.html">Discrete Calculus</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">CS &amp; Physics</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="past/Course_MIT6001Python.html">MIT_CS6001-Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="past/Course_MIT6002thinking.html">MIT_CS6002-CS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="PE100.html">Project Euler Q1-50</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PE100.html">Project Euler Q1-100</a></li>
 
 
 <li class="toctree-l1"><a class="reference internal" href="past/Course_MCM_QM.html">Quantum Mechanics</a></li>
@@ -554,6 +553,127 @@ document.write(`
 <li><p>Show that <span class="math notranslate nohighlight">\(\sigma_n=1+\frac13+\cdots+\frac1{3^n}\rightarrow\frac32\)</span> as <span class="math notranslate nohighlight">\(n\rightarrow\infty\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(\large\sigma_n=\frac{1-\frac1{3^{n+1}}}{1-\frac13}\)</span></p></li>
 </ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Newton-Raphson Method (extremely fast)</span>
+<span class="c1"># we are finding sqrt 7</span>
+<span class="c1"># use graph of x^2-7</span>
+<span class="c1"># derivative is 2x</span>
+<span class="n">val</span><span class="o">=</span><span class="mi">3</span>
+<span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">=</span><span class="n">x</span><span class="o">^</span><span class="mi">3</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">2</span>
+<span class="n">g</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">=</span><span class="n">diff</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="n">x</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+    <span class="n">val</span><span class="o">-=</span><span class="n">f</span><span class="p">(</span><span class="n">val</span><span class="p">)</span><span class="o">/</span><span class="n">g</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+    <span class="n">val</span><span class="o">=</span><span class="nb">round</span><span class="p">(</span><span class="n">val</span><span class="p">,</span><span class="mi">500</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">(</span><span class="n">val</span><span class="p">,</span><span class="n">digits</span><span class="o">=</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.080000000
+1.457102885
+0.9583119011
+-0.3176411607
+1.216097598
+0.6553824374
+2.019888431
+1.414287100
+0.9142915562
+-0.9284091918
+-6.145925184
+-4.188864702
+-2.942362971
+-2.208656375
+-1.863816703
+-1.775124401
+-1.769316630
+-1.769292355
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+-1.769292354
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 
@@ -597,7 +717,7 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="Course_DiscreteCalculus.html"
+       href="Course_5U_DC.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
