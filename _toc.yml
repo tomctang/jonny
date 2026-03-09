@@ -12,7 +12,6 @@ parts:
   - file: Course_Lean  
   - file: Course_Puzzle
   - file: Course_5U
-  - file: Course_5U_DC
 
 - caption: CS & Physics
   numbered: false
