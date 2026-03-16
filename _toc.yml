@@ -10,7 +10,7 @@ parts:
   - file: past/Alevel_math_further
   - file: past/Course_MCM
   - file: Course_Lean  
-  - file: Course_Puzzle
+  - file: Course_Puzzle_Group
   - file: Course_5U
 
 - caption: CS & Physics
