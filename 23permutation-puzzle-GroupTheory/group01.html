@@ -1,0 +1,1895 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>&lt;no title&gt; &#8212; Jonny Workbook</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=550f00eb" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=1ae7504c"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '23permutation-puzzle-GroupTheory/group01';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Jonny Workbook</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Math &amp; FP/Language</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../past/Alevel_math.html">A-level-math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../past/Alevel_math_further.html">A-level-further</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../past/Course_MCM.html">Math Computational Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Course_Lean.html">Lean</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Course_Puzzle_Group.html">Permutation Puzzles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Course_5U.html">5U - Ext III</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">CS &amp; Physics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../past/Course_MIT6001Python.html">MIT_CS6001-Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../past/Course_MIT6002thinking.html">MIT_CS6002-CS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PE100.html">Project Euler Q1-100</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../past/Course_MCM_QM.html">Quantum Mechanics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Notebook &amp; Tom</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../past/nb_past_courses.html">Past courses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../past/nb_Geo.html">Geography and Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../past/nb_lottery_simulator.html">Lottery Math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../past/How_Dad_organise_QM.html">How Dad learn QM</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../Course_MCM_QFT.html">QFT</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/tomctang/jonny" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/23permutation-puzzle-GroupTheory/group01.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <!-- Group01 -->
+<html>
+<body>
+<!-- To make the size of the font bigger for presentations, change the following command from +1 to +2 -->
+<font size="+1">
+<p style='font-size: 32px;font-family: Arial;font-style: italic;font-weight: bold;color: #FF00FF;background-color: #80FFFF;text-align: center;'>
+Abstract Algebra: An Interactive Approach, 3e
+</p>
+<p style='font-family: Geneva;font-style: italic;color: #0000FF;background-color: #FFFFFF;'>
+&copy;2025 This notebook is provided with the textbook, &quot;Abstract Algebra: An Interactive Approach, 3rd Ed.&quot; by William Paulsen.  Users of this notebook are encouraged to buy the textbook.
+</p>
+<p style='font-size: 36px;font-family: New York;font-weight: bold;color: #000000;background-color: #FFFFFF;text-align: center;border: 1px;border-style: 
+solid;border-color: #000000;'>
+Chapter 1: Preliminaries
+</p>
+<p style='text-align: center;'>Initialization:  This cell MUST be evaluated first:</p><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;absalgtext2.sage&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+The above command must be evaluated as the worksheet is loaded.  As long as the message "Initialization Done" appears after the command, we are ready to proceed.<br><br><p><br><br>
+<a href="#sec11">Integer Factorization</a><br>
+<a href="#sec12">Functions</a><br>
+<a href="#sec13">Binary Operators</a><br>
+<a href="#sec14">Modular Arithmetic</a><br>
+<a href="#sec15">Rational and Real Numbers</a><br>
+<a href="#sec1p"><em>SageMath</em> Interactive Problems</a><br></p>
+<p><a name="sec11" id="sec11"></a></p>
+<h1>Integer Factorization</h1>
+<br>
+In this section, we will explore the basic properties of integers stemming from the prime factorizations.
+We will denote the set of all integers,
+<p style='text-align: center;'>{ &hellip;, &minus;3, &minus;2, &minus;1, 0, 1, 2, 3, &hellip; }</p>
+by the stylized letter &#8484;, which stands for the German &quot;Zahl&quot; meaning &quot;number.&quot; Rather than saying &quot;<em>n</em> is an integer,&quot; we 
+can succinctly say &quot;<em>n</em> is in &#8484;.&quot; Many of the properties of factorizations refer only to positive integers, which are denoted 
+&#8484;<sup>+</sup>.   Thus, we can write <em>n</em> &isin; &#8484;<sup>+</sup> to say that <em>n</em> is a positive integer.<br><br>
+<p>We begin by defining a divisor of a number.<br><br></p>
+<p>DEFINITION 1.1<br>
+We say that an integer <em>a</em> is a <em>divisor</em> of an integer <em>b</em>, denoted by <em>a</em> | <em>b</em>, if there is some integer <em>c</em> such that <em>b</em> = <em>a c</em>.<br />
+Other ways of saying this is that <em>a</em> <em>divides</em> <em>b</em>, or <em>a</em> is a <em>factor</em> of <em>b</em>, or <em>b</em> is a <em>multiple</em> of <em>a</em>.<br><br></p>
+<p>EXPERIMENT:<br>
+Find the divisors of 30.  Don’t forget that, according to the definition, we can have negative divisors.<br></p>
+<br>
+<p>We can extend the idea of integer divisors to that of finding the quotient <em>q</em> and remainder <em>r</em> of integer division.</p>
+<p />
+<a name="theor11ret" id="theor11ret"></a>  
+THEOREM 1.1: The Division Algorithm<br>
+Given any <em>x</em> &isin; &#8484;, and any <em>y</em> &isin; &#8484;<sup>+</sup>, there are unique integers <em>q</em> and <em>r</em> such that
+<p style='text-align: center;'><em>x</em> = <em>q y</em> + <em>r</em>&emsp;&emsp;and&emsp;&emsp;0 &le; <em>r</em> &lt; <em>y</em>.</p> 
+<a href="#theor11">Click here for the proof.</a>
+<p />
+<p>All of the proofs in these notebooks are in a separate subsection that can be accessed by clicking on the hyperlink.  This allows one to hide the proof until after it has been attempted.
+There will be a hyperlink at the end of the proof to bring you back.</p>
+<p>This is a constructive proof since it gives an algorithm for finding <em>q</em> and <em>r</em>.  This proof also demonstrates how to prove that a solution is <em>unique</em>.<br />
+We assume there is another solution and prove that the two solutions are in fact the same.<br><br></p>
+<p>EXAMPLE:<br>
+Find integers <em>q</em> and <em>r</em> such that 849 = 31 <em>q</em> + <em>r</em>, with 0 ≤ <em>r</em> &lt; 31.<br><br></p>
+<p>We can use <em>SageMath</em> as a calculator.  To find the numerical approximation of 849/31, enter<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N</span><span class="p">(</span><span class="mi">849</span><span class="o">/</span><span class="mi">31</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+To evaluate this <em>SageMath</em> expression, click on it, and press Shift + Enter.  That is, hold down the shift key as you hit the Enter key.<br><br>
+<p>Note that the function <strong>N( )</strong> gives the numerical approximation.  The largest integer less than this value is <em>q</em> = 27.  Then we can compute <em>r</em> to be<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">849</span> <span class="o">-</span> <span class="mi">27</span><span class="o">*</span><span class="mi">31</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+The notation for finding the greatest integer function used in this algorithm is
+<p style='text-align: center;'>&lfloor;<em>x</em>&rfloor; = the greatest integer less than or equal to <em>x</em>.</p> 
+<p>Using this notation, we have</p>
+<p style='text-align: center;'><em>q</em> = &lfloor;<em>x</em>/<em>y</em>&rfloor;,&emsp;&emsp;<em>r</em> = (<em>x</em>/<em>y</em> &minus; &lfloor;<em>x</em>/<em>y</em>&rfloor;)&middot;<em>y</em>.</p>
+<br>
+EXPERIMENT:<br>
+Find integers <em>q</em> and <em>r</em> such that &minus;925 = 28 <em>q</em> + <em>r</em>, with 0 &le; <em>r</em> &lt; 28.  Note that for negative numbers, 
+rounding <em>down</em> will cause the number to increase in magnitude.<br><br>
+We define a <em>prime</em> as an integer that has exactly two positive factors. This definition actually allows negative numbers, 
+such as &minus;5, to be prime.  Although this may seem to be a non-standard definition, it agrees with the generalized definition of primes defined in chapter 10.
+The numbers 1 and &minus;1 are <em>not</em> considered to be prime, for they only have one positive factor.  The goal of this section is to prove that any 
+integer greater than 1 can be uniquely factored into a product of positive primes.<br><br>
+<p>We will begin by proving that every large number has at least one prime factor.  This requires an
+assumption about the set of positive numbers, known as the <em>Well-Ordering Axiom</em>.<br><br></p>
+<p>The Well-Ordering Axiom:<br>
+Every non-empty subset of ℤ<sup>+</sup> contains a smallest element.<br><br></p>
+<p>The reason why this is considered to be an axiom is that it cannot be proven using only arithmetic operations.<br />
+(Note that this statement is <em>not</em> true for rational numbers, which have the same arithmetic operations.)<br />
+So this self-evident statement is assumed to be true and is used to prove other properties of the integers.</p>
+<p><a name="lem11ret" id="lem11ret"></a><br />
+LEMMA 1.1<br>
+Every number greater than 1 has a prime factor.<br><br></p>
+<p><a href="#lem11">Click here for the proof.</a></p>
+<p />
+Not only does the proof of Lemma 1.1 demonstrate how the well ordering axiom is used, it also introduces an important strategy in proofs.  Notice that to prove that every number 
+greater than 1 had a prime factor, we assumed just the opposite.  It was as if we admitted defeat from the very beginning!  Yet from this we were able to reach a conclusion 
+that was absurd&#8213;a number without a prime factor that did have a prime factor. This strategy is known as <em>reductio ad absurdum</em>, which is Latin 
+for &quot;reduce to the absurd.&quot; We assume what we are trying to prove is actually false, and proceed logically until we reach a contradiction. The only explanation 
+would be that the assumption was wrong, which proves the original statement.<br><br>
+<p>This proof also combined <em>reductio ad absurdum</em> with the well-ordering principle.  Since we are assuming there is some positive integer that makes our statement false, there must be a smallest such integer.  This combination is known as the
+<em>least criminal method</em> where the least criminal refers to the smallest integer that would make the statement false.  In fact, the first paragraph of Lemma 1.1 can be abbreviated to “Let <em>n</em> be the least criminal.”  Here is another example of the least criminal method.</p>
+<p><a name="lem12ret" id="lem12ret"></a><br />
+LEMMA 1.2<br><br></p>
+<p>Every integer <em>n</em> ≥ 2 can be written as a product of one or more positive primes.<br><br></p>
+<p><a href="#lem12">Click here for the proof.</a></p>
+<p />
+<p>This lemma illustrates another technique of proofs, known as <em>divide and conquer.</em>  We considered two different cases, either <em>n</em> was prime, or <em>n</em> was not prime.  Each case then became much easier to handle.  As long as both possibilities lead to the same conclusion, we can proceed with the proof.</p>
+<p />
+In order to prove that the prime factorization is <em>unique</em> we will first have to 
+develop the concept of the greatest common divisor.<br><br>
+<p>DEFINITION 1.2<br>
+We define the <em>greatest common divisor</em> (GCD) of two numbers to be the largest
+integer that divides both of the numbers.  If the greatest common divisor is 1,
+this means that there are no prime factors in common.  We say the numbers are
+<em>coprime</em> in this case.  We denote the greatest common divisor of <em>x</em> and <em>y</em> by gcd(<em>x</em>, <em>y</em>).<br><br></p>
+<p>We can use <em>SageMath</em>’s <strong>gcd</strong> function to quickly test whether two numbers are
+coprime without having to factor them.<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gcd</span><span class="p">(</span><span class="mi">153809229555633320199029</span><span class="p">,</span> <span class="mi">573040781012789119612213</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+So <em>SageMath</em> can quickly see that these two numbers are coprime, even though the numbers are too large to find the prime factorization.<br><br>
+<p>The greatest common divisor can be found in another way, as seen in the following lemma.  The proof of this lemma is more difficult than
+the previous proofs, since it illustrates a new technique.  Go ahead and read the proof of this theorem without trying to prove it on your own.  It is still important that you understand
+the techniques involved.</p>
+<p><a name="lem13ret" id="lem13ret"></a><br />
+LEMMA 1.3:  Bézout’s Lemma<br>
+Given two non-zero integers <em>x</em> and <em>y</em>, the greatest common divisor of <em>x</em> and <em>y</em> is the smallest positive integer which can be
+expressed in the form</p>
+<p style='text-align: center;'><em>u x</em> + <em>v y</em></p>
+with <em>u</em> and <em>v</em> being integers.<br><br>
+<p><a href="#lem13">Click here for the proof.</a></p>
+<p />
+<p>Unfortunately, this is a <em>non-constructive proof</em>.  Although this theorem proves the
+existence of the integers <em>u</em> and <em>v</em>, it does not explain how to compute them.  Fortunately, there is an algorithm, known as
+the <em>Euclidean Algorithm</em> which does compute <em>u</em> and <em>v</em>.<br><br></p>
+<p>We start by assuming that <em>x</em> &gt; <em>y</em> &gt; 0, since we can consider absolute values if <em>x</em> or <em>y</em> are negative.  We then repeatedly use the division
+algorithm to find <em>q<sub>i</sub></em> and <em>r<sub>i</sub></em> such that</p>
+<p style='text-align: center;'><em>x</em> = <em>q</em><sub>1</sub> <em>y</em> + <em>r</em><sub>1</sub>, &emsp;&emsp; 0 &le; <em>r</em><sub>1</sub> &lt; <em>y</em>,</p>
+<p style='text-align: center;'><em>y</em> = <em>q</em><sub>2</sub> <em>r</em><sub>1</sub> + <em>r</em><sub>2</sub>, &emsp;&emsp; 
+0 &le; <em>r</em><sub>2</sub> &lt; <em>r</em><sub>1</sub>,</p>
+<p style='text-align: center;'><em>r</em><sub>1</sub> = <em>q</em><sub>3</sub> <em>r</em><sub>2</sub> + <em>r</em><sub>3</sub>, &emsp;&emsp; 
+0 &le; <em>r</em><sub>3</sub> &lt; <em>r</em><sub>2</sub>,</p>
+<p style='text-align: center;'>&emsp;<em>r</em><sub>2</sub> = <em>q</em><sub>4</sub> <em>r</em><sub>3</sub> + <em>r</em><sub>4</sub>, &emsp;&emsp; 
+0 &le; <em>r</em><sub>4</sub> &lt; <em>r</em><sub>3</sub>, &hellip;</p>
+<p>Because the integer sequence {<em>r</em><sub>1</sub>, <em>r</em><sub>2</sub>, <em>r</em><sub>3</sub>, …} is decreasing, this will reach 0 in a finite number of steps,
+say <em>r<sub>m</sub></em> = 0.  Then <em>r</em><sub><em>m</em>−1</sub> will be gcd(<em>x</em>, <em>y</em>).  We can find the
+values for <em>u</em> and <em>v</em> by solving the second
+to the last equation for <em>r</em><sub><em>m</em>−1</sub> in terms of the previous two remainders <em>r</em><sub><em>m</em>−2</sub> and
+<em>r</em><sub><em>m</em>−3</sub>, and then using the previous equations recursively to express <em>r</em><sub><em>m</em>−1</sub> in terms of the previous remainders.  This will eventually lead to <em>r</em><sub><em>m</em>−1</sub> expressed in terms of <em>x</em> and <em>y</em>, which is what we want.  It helps to put the remainders <em>r<sub>i</sub></em> in parenthesis, as well as <em>x</em> and <em>y</em>, since these numbers are treated as variables.<br><br></p>
+<p>EXAMPLE:<br>
+Find integers <em>u</em> and <em>v</em> such that 144 <em>u</em> + 100 <em>v</em> = gcd(144, 100).<br><br></p>
+<p>Using the division algorithm repeatedly, we have<br><br></p>
+<p>(144) = 1·(100) + (44)<br>
+(100) = 2·(44) + (12)<br>
+(44) = 3·(12) + (8)<br>
+(12) = 1·(8) + (4)<br>
+(8) = 2·(4) + (0).<br><br></p>
+<p>Thus, we see that gcd(144, 100) = 4.
+Starting from the second to the last equation, we have<br><br></p>
+<p>(4) = (12) − (8)<br>
+  = (12) − [(44) − 3·(12)] = 4·(12) − (44)<br>
+  = 4·[(100) − 2·(44)] − (44) = 4·(100) − 9·(44)<br>
+  = 4·(100) − 9·[(144) − (100)] = 13·(100) − 9·(144).<br><br></p>
+<p>Thus, we have <em>u</em> = −9 and <em>v</em> = 13.<br><br></p>
+<p>There is also a tabular way of computing <em>u</em> and <em>v</em>, called the <em>extended Euclidean algorithm.</em>  The following table shows the computations of <em>u</em> and <em>v</em> from the previous example.  At the top of the table, we always put the two rows (1, 0) and (0, 1).  Then, to the left, we write the negatives of the divisors <em>q</em> from the standard Euclidean algorithm.  However, we do not include the last quotient that leads to a remainder of 0.</p>
+<table cellspacing="0" cellpadding="0">
+<caption><b>Extended Euclidean algorithm</b></caption>
+    <tr>
+        <td align = "right" width = "100"></td>
+        <td align = "center" width = "20"></td>
+        <td align = "center" width="1">|</td>
+        <td align = "right" width="30">1</td>
+        <td align = "right" width="30">0</td>
+        <td align = "left" width="150">always</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td align = "center">|</td>
+        <td align = "right">0</td>
+        <td align = "right">1</td>
+        <td align = "left">the same</td>      
+    </tr>
+    <tr>
+        <td align = "right">_________________</td>
+        <td align = "center">__</td>
+        <td align = "center">|</td>
+        <td align = "center">___</td>
+        <td align = "center">___</td>
+        <td align = "left">_________________________</td>
+    </tr>
+    <tr>
+        <td align = "right">Negative of the <em>q</em></td>
+        <td align = "center">&minus;1</td>
+        <td align = "center">|</td>
+        <td align = "right"> 1</td>
+        <td align = "right">&minus;1</td>
+        <td align = "left">Take the number at the far</td>
+    </tr>
+    <tr>
+        <td align = "right">values, except for</td>
+        <td align = "center">&minus;2</td>
+        <td align = "center">|</td>
+        <td align = "right">&minus;2</td>
+        <td align = "right"> 3</td>
+        <td align = "left">left, times the number above,</td>
+    </tr>
+        <tr>
+        <td align = "right">the one leading to</td>
+        <td align = "center">&minus;3</td>
+        <td align = "center">|</td>
+        <td align = "right"> 7</td>
+        <td align = "right">&minus;10</td>
+        <td align = "left">and then add the number</td>
+    </tr>
+    <tr>
+        <td align = "right">a remainder of 0.</td>
+        <td align = "center">&minus;1</td>
+        <td align = "center">|</td>
+        <td align = "right">&minus;9</td>
+        <td align = "right">13</td>
+        <td align = "left">which is above that one.</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td align = "center">|</td>
+        <td align = "right">&uarr;</td>
+        <td align = "right">&uarr;</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td align = "center">|</td>
+        <td align = "right"><em>u</em></td>
+        <td align = "right"><em>v</em></td>
+        <td></td>
+    </tr>
+</table>
+<p>Now we fill in the main part of the table.  For each space in the table, starting with the top and working our way down, we multiply the negative number on the far left with the number immediately above the space, and then add the number which is above that one.  For example, the −9 in the table was computed by taking −1 on the left times the 7 above it, and adding the −2 which is above the 7.  When we complete the table, the bottom row gives us the values of <em>u</em> and <em>v</em>.  Note that this algorithm assumes that <em>x</em> &gt; <em>y</em>, so if <em>x</em> &lt; <em>y</em>, we have to switch the <em>u</em> and <em>v</em> values.<br></p>
+<p>We can use <em>SageMath</em> to find the numbers <em>u</em> and <em>v</em> from Bézout’s lemma (1.3) as follows:<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xgcd</span><span class="p">(</span><span class="mi">144</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+This returns a ordered triple.  The first number is gcd(<em>x</em>, <em>y</em>), and the other two numbers give one possible set of values for <em>u</em> and <em>v</em>
+for which <em>u x</em> + <em>v y</em> = gcd(<em>x</em>, <em>y</em>).  (There are in fact other posible solutions.)  Note that <em>SageMath</em> produced the same solution as was obtained via the Euclidean algorithm.  This command works for even larger numbers.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xgcd</span><span class="p">(</span><span class="mi">153809229555633320199029</span><span class="p">,</span> <span class="mi">573040781012789119612213</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+We can now start to prove some familiar properties of prime numbers.<p><a name="lem14ret" id="lem14ret"></a><br />
+LEMMA 1.4: Euclid’s Lemma<br><br></p>
+<p>If a prime <em>p</em> divides a product <em>a b</em>, then either <em>p</em> | <em>a</em> or <em>p</em> | <em>b</em>.<br><br></p>
+<p><a href="#lem14">Click here for the proof.</a></p>
+<p />
+<p>This lemma quickly generalizes using the least criminal method.</p>
+<p><a name="lem15ret" id="lem15ret"></a><br />
+LEMMA 1.5<br><br></p>
+<p>If a prime <em>p</em> divides a product <em>a</em><sub>1</sub> <em>a</em><sub>2</sub> <em>a</em><sub>3</sub> ⋯ <em>a<sub>n</sub></em>, then <em>p</em> divides <em>a<sub>i</sub></em> for some <em>i</em>.<br><br></p>
+<p><a href="#lem15">Click here for the proof.</a></p>
+<p />
+<p>Note that in this application of the least criminal method, we only used fact that the <em>previous case</em> had to be true.  When this happens, the method is known as <em>mathematical induction</em>.  We will discuss more on mathematical induction in the next section.  For now, we can finally prove that integer factorization is unique.</p>
+<p><a name="theor12ret" id="theor12ret"></a><br />
+THEOREM 1.2: The Fundamental Theorem of Arithmetic<br><br></p>
+<p>Every integer greater than 1 can be factored into a product of one or more positive primes.<br />
+Furthermore, this factorization is unique up to the rearrangement of the factors.<br><br></p>
+<p><a href="#theor12">Click here for the proof.</a></p>
+<p />
+<p>We can have <em>SageMath</em> compute to prime factorization for us, using the command <strong>factor</strong>: <br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">factor</span><span class="p">(</span><span class="mi">420</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br> 
+If we explore how this factorization is stored,<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="n">_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+the result is rather cryptic, so it takes a bit of interpretation to understand the answer.  <em>SageMath</em> returns a sequence of ordered pairs, like (2,2).  The 
+first number in the pair is the prime, and the second number represents the number of times that prime occurred.<br><br>
+<p>Integer factorization is a fundamentally difficult problem even with modern technology.  As a result, one can easily type in a number that neither <em>SageMath</em>, nor any
+other computer program, will be able to factor in anything short of an astronomical length of time.   The amount of time required is proportional to the square root
+of the second largest prime in the factorization.  As long as the integers are less than about 40 digits long,
+<em>SageMath</em> should not have any trouble factoring them.  Ironically, the difficulty in factorization will later turn to our advantage!<br><br></p>
+<p>On the other hand, determining whether or not a number is prime can be done quickly in <em>SageMath</em>, even if the number has over 200 digits!  The <em>SageMath</em> command
+for testing a prime number is <strong>is_prime</strong>.<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">is_prime</span><span class="p">(</span><span class="mi">10</span><span class="o">^</span><span class="mi">200</span> <span class="o">+</span> <span class="mi">357</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+How can <em>SageMath</em> know for certain that this number is prime when it cannot begin to test for all possible factors?  The answer lies in abstract algebra.  
+Using the properties we will discover in this book, it is possible to prove whether or not a number is prime without knowing the factorization.  This in turn will have many 
+applications in internet security and cryptology.
+<p>Even though you were not asked to try to prove the theorems in this section, you should open the subsection and study the proofs. Soon you will be writing proofs like these yourself!
+<br><br></p>
+<p><a name="sec12" id="sec12"></a></p>
+<h1>Functions</h1>
+<br>
+The concept of a function is central to virtually every branch of mathematics.  There are in fact various ways to define a function, but the concept remains the same.  
+Standard functions in calculus map real numbers to real numbers, but we want to consider a more abstract definition for which the input and output can come from any set.<br><br>
+<p>DEFINITION 1.3<br>
+Let <em>A</em> and <em>B</em> be two non-empty sets.  A <em>function</em>, or <em>mapping</em>, from <em>A</em> to <em>B</em> is a rule that assigns to every element
+of <em>A</em> exactly one element of <em>B</em>.  The set <em>A</em> is called the <em>domain</em> of the function, and the set <em>B</em> is called the <em>target</em>.  If a
+function <em>f</em> assigns to <em>a</em> the element <em>b</em>, we write <em>f</em>(<em>a</em>) = <em>b</em>, and say that <em>b</em>
+is the image of <em>a</em> under <em>f</em>.<br><br></p>
+<p>We will use the notation <em>f</em> : <em>A</em> → <em>B</em> to indicate that <em>f</em> is a function from the set <em>A</em> to the set <em>B</em>.  The <em>range</em>
+of <em>f</em>, or the <em>image</em> of <em>f</em>, is the set</p>
+<p style='text-align: center;'>{<em>y</em> | <em>y</em> = <em>f</em>(<em>x</em>)&emsp;for some <em>x</em> &isin; <em>A</em>}.</p>
+<p>This set is denoted by either <em>f</em>(<em>A</em>) or Im(<em>f</em>) and is a subset of <em>B</em>.<br><br></p>
+<p>EXAMPLE:<br>
+Let <em>A</em> be the set of integers from 0 to 99, and let <em>B</em> be the set of English letters from <em>a</em> to <em>z</em>.  Let <em>ϕ</em> map each integer to the first
+letter of the English word for that number.  For example, <em>ϕ</em>(4) = <em>f</em>.  Then the range of <em>ϕ</em> is the set</p>
+<p style='text-align: center;'>{<em>e</em>, <em>f</em>, <em>n</em>, <em>o</em>, <em>s</em>, <em>t</em>, <em>z</em>}.</p>
+<br>
+There is often different ways to denote the same element of the set <em>A</em>, so we must be careful that the rule for the function does not depend on the way the element is 
+expressed.  Had we extended the last example to include 100, this could be called either &quot;a hundred&quot; or &quot;one hundred&quot;.  Another example of an ambiguous 
+definition is if we assign to each rational number <em>a</em>/<em>b</em> the value 1/<em>b</em>.  But by this rule, <em>f</em>(1/2) &ne; <em>f</em>(2/4), even though 1/2 = 2/4.  
+In order to show that a function is <em>well-defined</em>, we must show that if <em>x</em><sub>1</sub> = <em>x</em><sub>2</sub>, 
+then <em>f</em>(<em>x</em><sub>1</sub>) = <em>f</em>(<em>x</em><sub>2</sub>).<br><br>
+<p>EXPERIMENT:<br>
+Consider the function from the set of rational functions (denoted by ℚ) to itself, given by</p>
+<p style='text-align: center;'><em>f</em>(<em>a</em>/<em>b</em>) = gcd(<em>a</em>, <em>b</em>)/|<em>b</em>|.</p>
+Show that this function is well-defined.<br><br>
+Many functions possess special properties that we want to explore.<br><br>
+<p>DEFINITION 1.4<br>
+We say that a function <em>f</em> : <em>A</em> → <em>B</em> is <em>injective</em>, or <em>one-to-one</em>, if the only way in
+which <em>f</em>(<em>x</em>) = <em>f</em>(<em>y</em>) is if <em>x</em> = <em>y</em>.<br><br></p>
+<p>For example, the function in the experiment is not one-to-one, since <em>f</em>(1/3) = <em>f</em>(2/3).  In order to prove that a function is one-to-one,
+we assume that <em>f</em>(<em>x</em>) = <em>f</em>(<em>y</em>), and try to prove that <em>x</em> = <em>y</em>.<br><br></p>
+<p>EXAMPLE:
+Consider the function <em>f</em> :  defined by ℤ → ℤ defined by<br><br></p>
+<table align="center" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td></td>
+    <td align="right" valign="bottom">&#9127;</td>
+    <td align="left">&ensp;<em>x</em> + 3</td>
+    <td align="left">&ensp; if <em>x</em> is even,</td>
+  </tr>
+  <tr>
+    <td align="left"><em>f</em>(<em>x</em>) =&ensp;</td>
+    <td align="right">&#9128;</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td align="right" valign="top">&#9129;</td>
+    <td align="left" valign="top">&ensp;2 <em>x</em></td>
+    <td align="left">&ensp; if <em>x</em> is odd.</td>
+  </tr>
+</table>
+Show that <em>f</em>(<em>x</em>) is one-to-one.<br><br>
+<p>We assume that <em>f</em>(<em>x</em>) = <em>f</em>(<em>y</em>), and work to show that <em>x</em> = <em>y</em>.  Because of the way that <em>f</em>(<em>x</em>) is defined,
+there are several cases to consider, so we will use the divide and conquer strategy.<br><br></p>
+<p>Case 1) Both <em>x</em> and <em>y</em> are even.  Then since <em>f</em>(<em>x</em>) = <em>f</em>(<em>y</em>), <em>x</em> + 3 = <em>y</em> + 3, which
+implies that <em>x</em> = <em>y</em>.<br></p>
+<p>Case 2) Both <em>x</em> and <em>y</em> are odd.  Then since <em>f</em>(<em>x</em>) = <em>f</em>(<em>y</em>), 2 <em>x</em> = 2 <em>y</em>, so again <em>x</em> = <em>y</em>.<br></p>
+<p>Case 3) <em>x</em> is even, and <em>y</em> is odd.  Then <em>f</em>(<em>x</em>) = <em>f</em>(<em>y</em>) implies that <em>x</em> + 3 = 2 <em>y</em>,
+or <em>x</em> = 2 <em>y</em> − 3.<br />
+But this implies that <em>x</em> is odd, and we started out assuming that <em>x</em> is even.  Thus, this case can never happen.<br></p>
+<p>Case 4) <em>x</em> is odd, and <em>y</em> is even.  This is a mirror image of case 3, so we find that this case also can never happen.<br><br>
+In all cases, we either showed <em>x</em> = <em>y</em>, or reached a contradition.  Thus, we have shown in all cases for which <em>f</em>(<em>x</em>) <em>could</em> equal <em>f</em>(<em>y</em>), then <em>x</em> = <em>y</em>.  Hence <em>f</em> is one-to-one.<br><br></p>
+<p>We can also ask whether the range and the target of a given function are the same set.<br><br></p>
+<p>DEFINITION 1.5<br>
+We say that a function <em>f</em> : <em>A</em> → <em>B</em> is <em>surjective</em>, or <em>onto</em>, if for every <em>b</em> ∈ <em>B</em> there is at least
+one <em>a</em> ∈ <em>A</em> such that <em>f</em>(<em>a</em>) = <em>b</em>.  If a function is both one-to-one and onto, it is called a <em>bijection</em>. <br><br></p>
+<p>EXAMPLE:<br>
+Determine whether the function in the last example is onto.<br><br></p>
+<p>Since <em>f</em>(0) = 3,  <em>f</em>(1) = 2, <em>f</em>(2) = 5, <em>f</em>(3)=6, <em>f</em>(4) = 7, <em>f</em>(5) = 10, …, it seems that <em>f</em>(<em>x</em>) is never 4.<br />
+Let us suppose that <em>f</em>(<em>x</em>) = 4 and reach a contradiction.<br><br></p>
+<p>Case 1) <em>x</em> is even.  Then <em>x</em> + 3 = 4, so <em>x</em> = 1.  But this contradicts that <em>x</em> is even.<br>
+Case 2) <em>x</em> is odd.  Then 2 <em>x</em> = 4, so <em>x</em> = 2.  But this contradicts that <em>x</em> is odd.<br><br>
+Since all cases reach a contradiction, we see that <em>f</em>(<em>x</em>) ≠ 4, and so the function is not onto.<br><br></p>
+<p>Note that one counterexample is sufficient to prove that the function is not onto.  The
+standard strategy for proving that a function <em>f</em> : <em>A</em> → <em>B is</em> onto is to show that for an arbitrary <em>y</em> ∈ <em>B</em>, there is some kind of formula for an element <em>x</em> ∈ <em>A</em> such that <em>f</em>(<em>x</em>) = <em>y</em>.<br><br></p>
+<p>EXAMPLE:<br>
+Let <em>f</em> : ℚ → ℚ be defined by <em>f</em>(<em>x</em>) = 3<em>x</em> + 5.  Show that <em>f</em> is onto.<br><br></p>
+<p>If <em>f</em>(<em>x</em>) = <em>y</em>, we can solve for <em>x</em> to get <em>x</em> = (<em>y</em> − 5)/3.  Note that this is defined for all rational numbers <em>y</em>, and produces a rational number.  Then
+<em>f</em>((<em>y</em>−5)/3) = <em>y</em> for any <em>y</em> ∈ ℚ, so <em>f</em> is onto.<br><br><br></p>
+<p>Often our functions will be defined on finite sets.  In these cases, it is easy to determine whether or not a function is onto if we have already proven that it is one-to-one.<br><br></p>
+<p>DEFINIITION 1.6<br>
+For a finite set <em>A</em>, we denote the number of elements in the set by |<em>A</em>|.  If <em>A</em> is infinite, we write |<em>A</em>| = ∞.<br><br></p>
+<p>In the last section, we introduced the least criminal method, where we assumed that <em>n</em> was the smallest integer that caused a statement to be false.  In which case, we can assume that the statement is true for all previous <em>n</em>.  Often, we only need to utilize the fact that the statement is true for the case <em>n</em> − 1.  In which case, there is a shortcut to the least criminal method called the <em>method of mathematical induction.</em></p>
+<p><a name="theor13ret" id="theor13ret"></a><br />
+THEOREM 1.3:  Principle of Mathematical Induction<br><br></p>
+<p>Let <em>S</em>(<em>n</em>) be any statement about an integer <em>n</em>.  Suppose that <em>S</em>(<em>a</em>) is true for a starting value of <em>a</em>, and if by assuming that <em>S</em>(<em>n</em> − 1) is true, we can prove that
+<em>S</em>(<em>n</em>) is true.  Then <em>S</em>(<em>n</em>) is true for all integers greater than or equal to <em>a</em>.<br><br></p>
+<p><a href="#theor13">Click here for the proof.</a></p>
+<p />
+<p>Here are the steps for proving a statement using mathematical induction:</p>
+<ol>
+    <li>The base case:  Prove the statement for the starting value <em>a</em>, usually <em>a</em> = 1.</li>
+    <li>Assume the statement is true for the previous case, by replacing every <em>n</em> with <em>n</em> &minus; 1.</li>
+    <li>Use this assumption to prove the statement for the case <em>n</em>.
+</ol>
+<p>We can see an example of mathematical induction in the following lemma.</p>
+<p><a name="lem16ret" id="lem16ret"></a><br />
+LEMMA 1.6<br><br></p>
+<p>Let <em>f</em> : <em>A</em> → <em>B</em> be a function that is both one-to-one and onto, and suppose that <em>A</em> is a finite set.<br />
+Then |<em>A</em>| = |<em>B</em>|.<br><br></p>
+<p><a href="#lem16">Click here for the proof.</a></p>
+<p />
+<p>We can now prove an important principle that will help us to show whether a function is onto.</p>
+<p><a name="theor14ret" id="theor14ret"></a><br />
+THEOREM 1.4: The Pigeonhole Principle<br><br></p>
+<p>Let <em>f</em> : <em>A</em> → <em>B</em> be a function from a finite set <em>A</em> to a finite set <em>B</em>.<br />
+If |<em>A</em>| = |<em>B</em>| and <em>f</em> is one-to-one, then it is also onto.<br><br></p>
+<p><a href="#theor14">Click here for the proof.</a></p>
+<p />
+<p>We will often need to apply two functions in succession, creating a new function.<br><br></p>
+<p>DEFINITION 1.7<br>
+Let <em>f</em> : <em>B</em> → <em>C</em> and <em>g</em> : <em>A</em> → <em>B</em> be two functions.  Then the
+mapping (<em>f</em> ∘ <em>g</em>): <em>A</em> → <em>C</em> is defined by</p>
+<p style='text-align: center;'>(<em>f</em> &#8728; <em>g</em>)(<em>x</em>) = <em>f</em>(<em>g</em>(<em>x</em>))&emsp; for all <em>x</em> &isin; <em>A</em>.</p>
+<p>Note that in <em>f</em> ∘ <em>g</em>, we apply the <em>g</em> function first, and then <em>f</em>.  Some textbooks
+have <em>f</em> ∘ <em>g</em> = <em>g</em>(<em>f</em>(<em>x</em>)), so care must be taken when referring to other texts.<br><br></p>
+<p>EXAMPLE:<br>
+Let</p>
+<table align="center" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td></td>
+    <td align="right" valign="bottom">&#9127;</td>
+    <td align="left">&ensp;<em>x</em> + 3</td>
+    <td align="left">&ensp; if <em>x</em> is even,</td>
+    <td></td>
+    <td align="right" valign="bottom">&#9127;</td>
+    <td align="left">&ensp;3 <em>x</em></td>
+    <td align="left">&ensp; if <em>x</em> is even,</td>
+  </tr>
+  <tr>
+    <td align="left"><em>f</em>(<em>x</em>) =&ensp;</td>
+    <td align="right">&#9128;</td>
+    <td></td>
+    <td></td>
+    <td align="left">&ensp; and&ensp; <em>g</em>(<em>x</em>) =&ensp;</td>
+    <td align="right">&#9128;</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td> 
+    <td align="right" valign="top">&#9129;</td>
+    <td align="left" valign="top">&ensp;2 <em>x</em></td>
+    <td align="left">&ensp; if <em>x</em> is odd,</td>
+    <td></td>
+    <td align="right" valign="top">&#9129;</td>
+    <td align="left" valign="top">&ensp;<em>x</em> &minus; 1</td>
+    <td align="left">&ensp; if <em>x</em> is odd.</td>
+  </tr>
+</table>
+Compute <em>f</em> &#8728; <em>g</em> and <em>g</em> &#8728; <em>f</em>.<br><br>
+<p>For each computation, we need to consider the case <em>x</em> even and <em>x</em> odd separately.  To
+find (<em>f</em> ∘ <em>g</em>)(<em>x</em>) = <em>f</em>(<em>g</em>(<em>x</em>)):<br><br>
+Case 1) <em>x</em> is even. Then <em>g</em>(<em>x</em>) = 3<em>x</em>, which will also be even.  Thus, <em>f</em>(<em>g</em>(<em>x</em>)) = 3<em>x</em> + 3.<br>
+Case 2) <em>x</em> is odd. Then <em>g</em>(<em>x</em>) = <em>x</em> − 1, which will be even, so <em>f</em>(<em>g</em>(<em>x</em>)) = <em>x</em> + 2. Thus,<br><br></p>
+<table align="center" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td></td>
+    <td align="right" valign="bottom">&#9127;</td>
+    <td align="left">&ensp;3<em>x</em> + 3</td>
+    <td align="left">&ensp; if <em>x</em> is even,</td>
+  </tr>
+  <tr>
+    <td align="left"><em>f</em> &#8728; <em>g</em> =&ensp;</td>
+    <td align="right">&#9128;</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td align="right" valign="top">&#9129;</td>
+    <td align="left" valign="top">&ensp;<em>x</em> + 2</td>
+    <td align="left">&ensp; if <em>x</em> is odd.</td>
+  </tr>
+</table>
+To find (<em>g</em> &#8728; <em>f</em>)(<em>x</em>), we also have to consider two cases.<br><br>
+Case 1) <em>x</em> is even.  Then <em>f</em>(<em>x</em>) = <em>x</em> + 3, which will be odd.  So <em>g</em>(<em>f</em>(<em>x</em>)) = <em>x</em> + 2.<br>
+Case 2) <em>x</em> is odd.  Then f(<em>x</em>) = 2<em>x</em>, which will be even.  So <em>g</em>(<em>f</em>(<em>x</em>)) = 6<em>x</em>.  Thus,<br><br>
+<table align="center" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td></td>
+    <td align="right" valign="bottom">&#9127;</td>
+    <td align="left">&ensp;<em>x</em> + 2</td>
+    <td align="left">&ensp; if <em>x</em> is even,</td>
+  </tr>
+  <tr>
+    <td align="left"><em>g</em> &#8728; <em>f</em> =&ensp;</td>
+    <td align="right">&#9128;</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td align="right" valign="top">&#9129;</td>
+    <td align="left" valign="top">&ensp;6 <em>x</em></td>
+    <td align="left">&ensp; if <em>x</em> is odd.</td>
+  </tr>
+</table>
+<br>
+Note that in this case, <em>f</em> &#8728; <em>g</em> &ne; <em>g</em> &#8728; <em>f</em>.  However, if we have three functions, 
+with <em>f</em> : <em>C</em> &rarr; <em>D</em>, <em>g</em> : <em>B</em> &rarr; <em>C</em>, and <em>h</em> : <em>A</em> &rarr; <em>B</em>, 
+then (<em>f</em> &#8728; <em>g</em>) &#8728; <em>h</em> = <em>f</em> &#8728; (<em>g</em> &#8728; <em>h</em>), since both of these expressions 
+represent <em>f</em>(<em>g</em>(<em>h</em>(<em>x</em>))).<br><br>
+<p>If <em>f</em>(<em>x</em>) is both one-to-one and onto, then we will be able to define the <em>inverse function</em> of <em>f</em>.</p>
+<p><a name="prop11ret" id="prop11ret"></a><br />
+PROPOSITION 1.1<br></p>
+<p>Let <em>f</em> : <em>A</em> → <em>B</em> be both one-to-one and onto.  Then
+there exists a unique function <em>g</em> : <em>B</em> → <em>A</em> such that <em>g</em>(<em>f</em>(<em>x</em>)) = <em>x</em> for all <em>x</em> in <em>A</em>,
+and <em>f</em>(<em>g</em>(<em>y</em>)) = <em>y</em> for all <em>y</em> ∈ <em>B</em>.<br><br></p>
+<p><a href="#prop11">Click here for the proof.</a></p>
+<p />
+<p>DEFINITION 1.8<br>
+The unique function in Proposition 1.1 is called the inverse function of <em>f</em>(<em>x</em>) and is denoted by <em>f</em><sup> -1</sup>(<em>y</em>).<br><br></p>
+<p>EXAMPLE:<br>
+Consider the function <em>f</em> : ℤ → ℤ given by</p>
+<table align="center" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td></td>
+    <td align="right" valign="bottom">&#9127;</td>
+    <td align="left">&ensp;<em>x</em> + 3</td>
+    <td align="left">&ensp; if <em>x</em> is even,</td>
+  </tr>
+  <tr>
+    <td align="left"><em>f</em>(<em>x</em>) =&ensp;</td>
+    <td align="right">&#9128;</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td align="right" valign="top">&#9129;</td>
+    <td align="left" valign="top">&ensp;<em>x</em> &minus; 1</td>
+    <td align="left">&ensp; if <em>x</em> is odd.</td>
+  </tr>
+</table>
+Show that this is both one-to-one and onto, and find <em>f</em><sup>&thinsp;-1</sup>(<em>y</em>).<br><br>
+<p>If <em>f</em>(<em>x</em>) = <em>f</em>(<em>y</em>), the only interesting case is if <em>x</em> is even, and <em>y</em> is odd.  Then <em>x</em> + 3 = <em>y</em> − 1,
+or <em>y</em> = <em>x</em> + 4, which would be even, not odd.  Likewise, case where <em>x</em> is odd and <em>y</em> is even leads to a contradiction.  Thus, <em>x</em> = <em>y</em>, and <em>f</em> is one-to-one.<br><br></p>
+<p>To show that <em>f</em> is onto, we must show that for every <em>y</em>, there is an <em>x</em> so that <em>f</em>(<em>x</em>) = <em>y</em>.<br />
+We break this into two cases.<br><br>
+Case 1) <em>y</em> is even.  Then <em>y</em> + 1 will be odd, so <em>f</em>(<em>y</em> + 1) = (<em>y</em> + 1) − 1 = <em>y</em>.<br>
+Case 2) <em>y</em> is odd.  Then <em>y</em> − 3 is even, so <em>f</em>(<em>y</em> − 3) = (<em>y</em> − 3) + 3 = <em>y</em>.<br><br>
+In both cases, we found an <em>x</em> so that <em>f</em>(<em>x</em>) = <em>y</em>.  In the process of determining that <em>f</em> is onto, we computed the inverse.<br><br></p>
+<table align="center" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td></td>
+    <td align="right" valign="bottom">&#9127;</td>
+    <td align="left">&ensp;<em>y</em> + 1</td>
+    <td align="left">&ensp; if <em>y</em> is even,</td>
+  </tr>
+  <tr>
+    <td align="left"><em>f</em><sup>&thinsp;-1</sup>(<em>y</em>) =&ensp;</td>
+    <td align="right">&#9128;</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td align="right" valign="top">&#9129;</td>
+    <td align="left" valign="top">&ensp;<em>y</em> &minus; 3</td>
+    <td align="left">&ensp; if <em>y</em> is odd.</td>
+  </tr>
+</table>
+<br><p><a name="sec13" id="sec13"></a></p>
+<h1>Binary Operators</h1> 
+<p>So far we have only considered functions with one input variable.  But we could also consider functions with two input variables, <em>f</em>(<em>x</em>, <em>y</em>).<br />
+For simplicity we will only consider the cases where <em>x</em> and <em>y</em> come from the same set, which is also the target set.<br><br></p>
+<p>DEFINITION 1.9<br>
+Let <em>A</em> be a non-empty set.  A <em>binary operation</em> is a function that assigns to every <em>x</em> and <em>y</em> in <em>A</em> an element <em>z</em> in <em>A</em>.<br><br></p>
+<p>Although we could denote a binary operation as <em>z</em> = <em>f</em>(<em>x</em>, <em>y</em>), we will typically denote the operation by the infix
+notation <em>z</em> = <em>x</em> ∗ <em>y</em>.  The binary operators that we are familiar with are addition, subtraction, and multiplication, but the ∗ could represent <em>any</em> function with two input values.  Often we will use a dot (·) instead of the asterisk, depending on the context.<br><br></p>
+<p>EXAMPLE:<br>
+Suppose we define the binary operation <em>x</em> ∗ <em>y</em> on the set ℤ by</p>
+<p style='text-align: center;'><em>x</em> &lowast; <em>y</em> = <em>x</em> + <em>y</em> + <em>x y</em>.</p>
+Show that <em>a</em> &lowast; <em>b</em> = <em>b</em> &lowast; <em>a</em>.<br><br>
+<p>To find <em>a</em> ∗ <em>b</em>, we replace every <em>x</em> with <em>a</em> and every <em>y</em> with
+<em>b</em> in the definition, to get <em>a</em> ∗ <em>b</em> = <em>a</em> + <em>b</em> + <em>a b</em>.
+Likewise, to find <em>b</em> ∗ <em>a</em>, we replace every <em>x</em> with <em>b</em> and every <em>y</em> with
+<em>a</em> to get <em>b</em> ∗ <em>a</em> = <em>b</em> + <em>a</em> + <em>b a</em>.  But
+<em>a</em> + <em>b</em> + <em>a b</em> = <em>b</em> + <em>a</em> + <em>b a</em>, so <em>a</em> ∗ <em>b</em> = <em>b</em> ∗ <em>a</em>.<br><br></p>
+<p>DEFINITION 1.10<br>
+If a binary operation ∗ has the property that <em>a</em> ∗ <em>b</em> = <em>b</em> ∗ <em>a</em> for all
+<em>a</em> and <em>b</em> in the set, we say that the binary operation is <em>commutative.</em>  If a binary operation has the property that (<em>a</em> ∗ <em>b</em>) ∗ <em>c</em> = <em>a</em> ∗ (<em>b</em> ∗ <em>c</em>) for all <em>a</em>, <em>b</em>, and <em>c</em> in the set, we say the binary operation is <em>associative.</em><br><br></p>
+<p>We saw in the last example that the binary operation <em>x</em> ∗ <em>y</em> = <em>x</em> + <em>y</em> + <em>x y</em> is commutative.  But because the binary operation is a <em>function</em>, to test if a binary operation is associative, we have to plug a function into <em>itself.</em><br><br></p>
+<p>EXAMPLE:<br>
+Determine whether the binary operation of the last example is associative.  That is, determine if (<em>a</em> ∗ <em>b</em>) ∗ <em>c</em> = <em>a</em> ∗ (<em>b</em> ∗ <em>c</em>).<br><br></p>
+<p>To compute (<em>a</em> ∗ <em>b</em>) ∗ <em>c</em>, we replace every <em>x</em> with (<em>a</em> ∗ <em>b</em>) and every <em>y</em> with <em>c</em> in the definition.</p>
+<p style='text-align: center;'>(<em>a</em> &lowast; <em>b</em>) &lowast; <em>c</em> = 
+(<em>a</em> &lowast; <em>b</em>) + <em>c</em> +  (<em>a</em> &lowast; <em>b</em>) <em>c</em>.</p><br>
+Now we can replace <em>a</em> &lowast; <em>b</em> with <em>a</em> + <em>b</em> + <em>a b</em>, again using the definition of &lowast;.
+<p style='text-align: center;'>(<em>a</em> &lowast; <em>b</em>) &lowast; <em>c</em> = 
+(<em>a</em> + <em>b</em> + <em>a b</em>) + <em>c</em> +  (<em>a</em> + <em>b</em> + <em>a b</em>) <em>c</em></p>
+<p style='text-align: center;'>= <em>a</em> + <em>b</em> + <em>c</em> + <em>a b</em> + <em>a c</em> + <em>b c</em> + <em>a b c</em>.</p><br>
+To compute <em>a</em> &lowast; (<em>b</em> &lowast; <em>c</em>), we replace every <em>x</em> with <em>a</em> and every <em>y</em> with (<em>b</em> &lowast; <em>c</em>) in the definition.
+<p style='text-align: center;'>
+<em>a</em> &lowast; (<em>b</em> &lowast; <em>c</em>) = <em>a</em> + (<em>b</em> &lowast; <em>c</em>) + <em>a</em>(<em>b</em> &lowast; <em>c</em>).</p><br>
+Now we can replace <em>b</em> &lowast; <em>c</em> with <em>b</em> + <em>c</em> + <em>b c</em> according to the definition of &lowast;.
+<p style='text-align: center;'>
+<em>a</em> &lowast; (<em>b</em> &lowast; <em>c</em>) = <em>a</em> + (<em>b</em> + <em>c</em> + <em>b c</em>) + <em>a</em>(<em>b</em> + <em>c</em> + <em>b c</em>)</p>
+<p style='text-align: center;'>= <em>a</em> + <em>b</em> + <em>c</em> + <em>a b</em> + <em>a c</em> + <em>b c</em> + <em>a b c</em>.</p><br>    
+<p>Thus, we see that (<em>a</em> ∗ <em>b</em>) ∗ <em>c</em> = <em>a</em> ∗ (<em>b</em> ∗ <em>c</em>) for all <em>a</em>, <em>b</em>, and <em>c</em>, so the binary operation is associative. <br><br></p>
+<p>EXAMPLE:<br>
+Define the binary operation on the set of real numbers by<br></p>
+<p style='text-align: center;'><em>x</em> &lowast; <em>y</em> = min(<em>x</em>, <em>y</em>),</p>
+where min(<em>x</em>, <em>y</em>) denotes the smaller of <em>x</em> or <em>y</em>.  Show that this binary operation is both commutative and associative.<br><br>
+<p>We have <em>a</em> ∗ <em>b</em> = min(<em>a</em>, <em>b</em>) and <em>b</em> ∗ <em>a</em> = min(<em>b</em>, <em>a</em>).  But finding the smaller of two numbers does not depend on the order of the numbers, as we can see from <em>SageMath</em>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">min</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">min</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>so <em>a</em> ∗ <em>b</em> = <em>b</em> ∗ <em>a</em>, and the binary operator is commutative.<br><br>
+To show that the binary operator is associative, we need to compute
+(<em>a</em> ∗ <em>b</em>) ∗ <em>c</em>.  Using the definition of ∗ twice, this becomes min(min(<em>a</em>, <em>b</em>), <em>c</em>).  But if we take the smaller of two numbers, and then in turn take the smaller of this with a third number, we will get the smallest of the three numbers.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">min</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">min</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Thus, (<em>a</em> ∗ <em>b</em>) ∗ <em>c</em> = min(<em>a</em>, <em>b</em>, <em>c</em>).  Likewise,
+<em>a</em> ∗ (<em>b</em> ∗ <em>c</em>) = min(<em>a</em>, min(<em>b</em>, <em>c</em>)) = min(<em>a</em>, <em>b</em>, <em>c</em>), so the binary operation is associative.<br><br></p>
+<p>Although a binary operation is usually defined by a formula, if the set <em>A</em> on which the binary operation is defined is finite, we can also define the binary operation by making a table of all combinations of <em>x</em> ∗ <em>y</em>.  Such a table is called a <em>Cayley table</em>.  To find <em>x</em> ∗ <em>y</em> using a Cayley table, the first value <em>x</em> is always on the <em>left</em>, and the second value <em>y</em> is always on the <em>top</em>.<br><br></p>
+<p>EXAMPLE:<br>
+Let the set <em>A</em> consist of the four letters {<em>a</em>, <em>b</em>, <em>c</em>, <em>d</em>}.  Define a binary operation by the following Cayley table:</p>
+<table>
+    <tr>
+        <td width="30" align="center">&lowast;</td>
+        <td width="1" align="center">|</td>
+        <td width="30" align="center"><em>a</em></td>
+        <td width="30" align="center"><em>b</em></td>
+        <td width="30" align="center"><em>c</em></td> 
+        <td width="30" align="center"><em>d</em></td>
+    </tr>
+    <tr>
+        <td align="center">___</td>
+        <td align="center">|</td>
+        <td align="center">___</td>
+        <td align="center">___</td>
+        <td align="center">___</td>
+        <td align="center">___</td>
+    </tr>
+    <tr>
+        <td align="center"><em>a</em></td>
+        <td align="center">|</td>
+        <td align="center"><em>a</em></td>
+        <td align="center"><em>a</em></td>
+        <td align="center"><em>a</em></td> 
+        <td align="center"><em>a</em></td>
+    </tr>
+    <tr>
+        <td align="center"><em>b</em></td>
+        <td align="center">|</td>
+        <td align="center"><em>a</em></td>
+        <td align="center"><em>b</em></td>
+        <td align="center"><em>b</em></td> 
+        <td align="center"><em>a</em></td>
+    </tr>    
+    <tr>
+        <td align="center"><em>c</em></td>
+        <td align="center">|</td>
+        <td align="center"><em>a</em></td>
+        <td align="center"><em>c</em></td>
+        <td align="center"><em>c</em></td> 
+        <td align="center"><em>a</em></td>
+    </tr>
+    <tr>
+        <td align="center"><em>d</em></td>
+        <td align="center">|</td>
+        <td align="center"><em>a</em></td>
+        <td align="center"><em>d</em></td>
+        <td align="center"><em>d</em></td> 
+        <td align="center"><em>a</em></td>
+    </tr>    
+</table>
+<p>Show that this binary operator is associative, even though it is not commutative.<br><br></p>
+<p>It is easy to tell from the Cayley table whether or not the binary operator is commutative.  If the binary operator is commutative, the table will be symmetric about the line going from the top left to the bottom right.  However, this table is not symmetric, since <em>b</em> ∗ <em>c</em> = <em>b</em>, but <em>c</em> ∗ <em>b</em> = <em>c</em>.  Thus, this binary operator is not commutative.</p>
+<p>Determining whether a binary operator is associative or not from the Cayley table is harder.  We must determine whether (<em>x</em> ∗ <em>y</em>) ∗ <em>z</em> = <em>x</em> ∗ (<em>y</em> ∗ <em>z</em>) for every combination of <em>x</em>, <em>y</em>, and <em>z</em>.<br />
+In this case, it would mean testing 4<sup>3</sup> = 64 combinations.  However, we can shorten this list by observing patterns in the Cayley table.  By looking at the columns of the table, we find that</p>
+<p style='text-align: center;'><em>x</em> &lowast; <em>a</em> = <em>a</em>, &emsp;&emsp; <em>x</em> &lowast; <em>b</em> = <em>x</em>, &emsp;&emsp; <em>x</em> &lowast; <em>c</em> = <em>x</em>, &emsp;&emsp; <em>x</em> &lowast; <em>d</em> = <em>a</em>, &emsp; for all <em>x</em>.</p>
+<p>Thus, for any <em>x</em> and <em>y</em>,</p>
+<p style='text-align: center;'>(<em>x</em> &lowast; <em>y</em>) &lowast; <em>a</em> = <em>a</em>, &emsp; and &emsp; <em>x</em> &lowast; (<em>y</em> &lowast; <em>a</em>) = <em>x</em> &lowast; <em>a</em> = <em>a</em>,</p>
+<p style='text-align: center;'>(<em>x</em> &lowast; <em>y</em>) &lowast; <em>b</em> = <em>x</em> &lowast; <em>y</em>, &emsp; and &emsp; <em>x</em> &lowast; (<em>y</em> &lowast; <em>b</em>) = <em>x</em> &lowast; <em>y</em>,</p>
+<p style='text-align: center;'>(<em>x</em> &lowast; <em>y</em>) &lowast; <em>c</em> = <em>x</em> &lowast; <em>y</em>, &emsp; and &emsp; <em>x</em> &lowast; (<em>y</em> &lowast; <em>c</em>) = <em>x</em> &lowast; <em>y</em>,</p>
+<p style='text-align: center;'>(<em>x</em> &lowast; <em>y</em>) &lowast; <em>d</em> = <em>a</em>, &emsp; and &emsp; <em>x</em> &lowast; (<em>y</em> &lowast; <em>d</em>) = <em>x</em> &lowast; <em>a</em> = <em>a</em>.</p>
+<p>Thus we have shown that (<em>x</em> ∗ <em>y</em>) ∗ <em>z</em> = <em>x</em> ∗ (<em>y</em> ∗ <em>z</em>) for every combination of <em>x</em>, <em>y</em>, and <em>z</em>, so the binary operation is associative.</p>
+<p>DEFINITION 1.11<br>
+Let ∗ be a binary operation defined on a set <em>A</em>.  We say that a subset <em>B</em> of <em>A</em> is <em>closed</em> with respect to ∗ if whenever
+both <em>x</em> and <em>y</em> are in <em>B</em>, then <em>x</em> ∗ <em>y</em> is in <em>B</em>.<br><br></p>
+<p>EXAMPLE:<br>
+Let ∗ be the binary operation of the first example, <em>x</em> ∗ <em>y</em> = <em>x</em> + <em>y</em> + <em>x y</em>. Show that the subset of odd integers is closed with respect to ∗.<br><br></p>
+<p>Let <em>x</em> and <em>y</em> be odd integers.   Then we can express <em>x</em> = 2<em>m</em> + 1 and <em>y</em> = 2<em>n</em> + 1 for some integers <em>m</em> and <em>n</em>.  Then</p>
+<p style='text-align: center;'><em>x</em> &lowast; <em>y</em> = 
+(2<em>m</em> + 1) &lowast; (2<em>n</em> + 1)</p>
+<p style='text-align: center;'> = (2<em>m</em> + 1) + (2<em>n</em> + 1) + (2<em>m</em> + 1)(2<em>n</em> + 1)</p> 
+<p style='text-align: center;'> = 2<em>m</em> + 1 + 2<em>n</em> + 1 + 4<em>m n</em> + 2<em>m</em> + 2<em>n</em> + 1</p>
+<p style='text-align: center;'> = 4<em>m</em> + 4<em>n</em> + 4<em>m n</em> + 3</p>
+<p style='text-align: center;'> = 2(2<em>m</em> + 2<em>n</em> + 2<em>m n</em> + 1) + 1.</p>
+Thus, we see that <em>x</em> &lowast; <em>y</em> is an odd integer, so the set is closed.<br><p><a name="sec14" id="sec14"></a></p>
+<h1>Modular Arithmetic</h1> 
+<br>
+<p>There is an important operation on the set of integers ℤ that we will use throughout the book, based on the division algorithm.  It is an abstraction of a counting method
+often used in everyday life.  For example, using standard 12 hour time, if it is 7:00 now, what time will it be 8 hours from now?  The answer is not 15:00, since clock
+time “wraps around” every 12 hours, so the correct answer is 3:00.  This type of arithmetic that “wraps around” is called modular arithmetic.  We formally define
+modular arithmetic as follows.<br><br></p>
+<p>DEFINITION 1.12<br>
+Let <em>x</em>, <em>y</em> ∈ ℤ, with <em>y</em> &gt; 0.  We define the operator</p>
+<p style='text-align: center;'><em>x</em> <strong>mod</strong> <em>y</em>,</p>
+pronounced &quot;<em>x</em> modulo <em>y</em>,&quot; to be the unique value <em>r</em> from the division algorithm, which selects <em>q</em> and 
+0 &le; <em>r</em> &lt; <em>y</em> such that <em>x</em> = <em>q y</em> + <em>r</em>.  The number <em>y</em> is called the <em>modulus</em>.<br><br>
+<p>The <strong>mod</strong> operation is almost, but not quite, a binary operation on ℤ, since it is not defined if <em>y</em> = 0.  Since there is a difference of opinion
+as to how the operator should be defined for <em>y</em> &lt; 0, we will only use the operator for <em>y</em> &gt; 0.<br><br></p>
+<p>EXAMPLE:<br>
+Compute 8342 <strong>mod</strong> 43.<br><br></p>
+<p>Since 8342 = 194·43 + 6, we see that 8342 <strong>mod</strong> 43 = 6.<br><br></p>
+<p>EXAMPLE:<br>
+Compute 743532645703453453463 <strong>mod</strong> 257275073624623.<br><br></p>
+<p>For numbers this large, we will use <em>SageMath</em> to help.  We use the <strong>%</strong> symbol for the <strong>mod</strong> operator.<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">743532645703453453463</span> <span class="o">%</span> <span class="mi">257275073624623</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Sometimes the modulo operation is very easy to compute.  For any positive <em>x</em>, <em>x</em> <strong>mod</strong> 10 will be the last digit in the decimal 
+representation of the number.  There are other tricks for small values of <em>y</em>.<br><br>
+<p>A familiar property of standard arithmetic is that the last digit of the sum and product of two positive numbers <em>x</em> and <em>y</em> can be computed using only the
+last digits of <em>x</em> and <em>y</em>.  This can be generalized in the following proposition.</p>
+<p><a name="prop12ret" id="prop12ret"></a>
+PROPOSITION 1.2<br></p>
+<p>If <em>x</em>, <em>y</em>, and <em>n</em> are integers with <em>n</em> &gt; 0, then</p>
+<p style='text-align: center;'>(<em>x</em> + <em>y</em>) <strong>mod</strong> <em>n</em> = 
+((<em>x</em> <strong>mod</strong> <em>n</em>) + (<em>y</em> <strong>mod</strong> <em>n</em>)) <strong>mod</strong> <em>n</em>,</p>
+and         
+<p style='text-align: center;'>(<em>x y</em>) <strong>mod</strong> <em>n</em> = 
+((<em>x</em> <strong>mod</strong> <em>n</em>)&middot;(<em>y</em> <strong>mod</strong> <em>n</em>)) <strong>mod</strong> <em>n</em>.</p>
+<p><a href="#prop12">Click here for the proof.</a></p>
+<p />
+<p>We can use Proposition 1.2 to compute powers modulo <em>n</em>.  Since raising a number to an integer power is equivalent to repeated multiplication, we see that</p>
+<p style='text-align: center;'>(<em>x<sup>y</sup></em>) <strong>mod</strong> <em>n</em> = 
+(<em>x</em> <strong>mod</strong> <em>n</em>)<sup><em>y</em></sup> <strong>mod</strong> <em>n</em>.</p>
+<p>EXAMPLE:<br>
+Compute 234<sup>5</sup> <strong>mod</strong> 29.<br><br></p>
+<p>Since 234 <strong>mod</strong> 29 = 2, the answer is the same as 2<sup>5</sup> <strong>mod</strong> 29, and 32 <strong>mod</strong> 29 = 3.<br><br></p>
+<p>WARNING:  It is not true that</p>
+<p style='text-align: center;'>(<em>x<sup>y</sup></em>) <strong>mod</strong> <em>n</em> = 
+(<em>x</em> <strong>mod</strong> <em>n</em>)<sup>(<em>y</em> <strong>mod</strong> <em>n</em>)</sup> <strong>mod</strong> <em>n</em>.</p>
+<p>That is, we cannot apply the modulus to an exponent.  However, there is a trick for simplifying a power in the case that the exponent is large—using the binary
+representation of the exponent <em>y</em>.  The procedure is known as the <em>repeated squaring algorithm</em> and is best explained by an example.<br><br></p>
+<p>EXAMPLE:<br>
+Compute 25<sup>35</sup> <strong>mod</strong> 29.<br><br></p>
+<p>The number 25<sup>35</sup> is 49 digits long, and the base is already smaller than the modulus, so there is no obvious way of simplifying the expression.  By looking at the
+binary representation of 35, we find that 35 = 32 + 2 + 1.  Thus,</p>
+<p style='text-align: center;'>25<sup>35</sup> = 25<sup>32</sup>&middot;25<sup>2</sup>&middot;25<sup>1</sup>.</p>
+<p>In order to compute 25<sup>32</sup> <strong>mod</strong> 29, we can <em>square</em> the number 5 times.</p>
+<p style='text-align: center;'>25<sup>2</sup> <strong>mod</strong> 29 = 625 <strong>mod</strong> 29 = 16,&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<br>
+                     25<sup>4</sup> <strong>mod</strong> 29 = 16<sup>2</sup> <strong>mod</strong> 29 = 256 <strong>mod</strong> 29 = 24,<br>
+                     25<sup>8</sup> <strong>mod</strong> 29 = 24<sup>2</sup> <strong>mod</strong> 29 = 576 <strong>mod</strong> 29 = 25,<br>
+                     25<sup>16</sup> <strong>mod</strong> 29 = 25<sup>2</sup> <strong>mod</strong> 29 = 625 <strong>mod</strong> 29 = 16,<br>
+                     25<sup>32</sup> <strong>mod</strong> 29 = 16<sup>2</sup> <strong>mod</strong> 29 = 256 <strong>mod</strong> 29 = 24.</p>
+<p>Finally, we see that</p>
+<p style='text-align: center;'>25<sup>35</sup> <strong>mod</strong> 29 = 25<sup>32</sup>&middot;25<sup>2</sup>&middot;25<sup>1</sup> <strong>mod</strong> 29 = 24&middot;16&middot;25 <strong>mod</strong> 29 = 9600 <strong>mod</strong> 29 = 1.</p>
+Note that we never had to deal with numbers more than 4 digits long.<br><br>
+<p>The <em>SageMath</em> command <strong>PowerMod(x, y, n)</strong> uses this algorithm to compute <em>x<sup>y</sup></em> <strong>mod</strong> <em>n</em>.<br><br></p>
+<p>EXAMPLE:<br>
+Use <em>SageMath</em> to find 743532645703453453463<sup>42364872163462467234</sup> <strong>mod</strong> 2572750736246233264872.<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">PowerMod</span><span class="p">(</span><span class="mi">743532645703453453463</span><span class="p">,</span> <span class="mi">42364872163462467234</span><span class="p">,</span> <span class="mi">2572750736246233264872</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note that <em>SageMath</em> was able to do this computation fast.  We will see that the ability for computers to quickly compute large powers modulo <em>n</em> has applications
+in internet security.<br><br></p>
+<p>There is another property of modular arithmetic involving coprime numbers
+that will be used often
+throughout the book, known to the ancient Chinese since before 240 C.E.</p>
+<p><a name="theor15ret" id="theor15ret"></a>
+THEOREM 1.5:  The Chinese Remainder Theorem<br></p>
+<p>If <em>x</em> and <em>y</em> in ℤ<sup>+</sup> are coprime, then given any <em>a</em> and <em>b</em> in ℤ, there is a unique <em>k</em> in ℤ
+such that</p>
+<p style='text-align: center;'>0 &le; <em>k</em> < <em>x y</em>,</p>
+<p style='text-align: center;'><em>k</em> <strong>mod</strong> <em>x</em> = <em>a</em> <strong>mod</strong> <em>x</em>, and</p>
+<p style='text-align: center;'><em>k</em> <strong>mod</strong> <em>y</em> = <em>b</em> <strong>mod</strong> <em>y</em>.</p>
+<p><a href="#theor15">Click here for the proof.</a></p>
+<p />
+<p>This is a constructive proof, since it gives us a formula for finding the value of <em>k</em>, namely <em>k</em> = (<em>a v y + b u x</em>) <strong>mod</strong> (<em>x y</em>).<br><br></p>
+<p>EXAMPLE:<br>
+Find a non-negative number <em>k</em> less than 210 such that</p>
+<p style='text-align: center;'><em>k</em> <strong>mod</strong> 14 = 3, and<br>
+                  <em>k</em> <strong>mod</strong> 15 = 7.</p>
+Since 14 and 15 are coprime, we begin by finding <em>u</em> and <em>v</em> such that 14 <em>u</em> + 15 <em>v</em> = 1.  But there is the obvious solution
+<p style='text-align: center;'>14 (&minus;1) + 15 (1) = 1.</p>
+Then we compute <em>k</em> to be <em>a v y</em> + <em>b u x</em> = 3&middot;15 + 7&middot;(&minus;14) = &minus;53.  But since this is negative, we can add 14&middot;15 to get another 
+solution, 157.<br><br>                  
+<p>There is a <em>SageMath</em> command <strong>crt(a, b, x, y)</strong> that finds <em>k</em> given the 2 sets {<em>a</em>, <em>b</em>} and {<em>x</em>, <em>y</em>}.<br><br></p>
+<p>EXAMPLE:<br>
+Use <em>SageMath</em> to find a number <em>k</em> such that</p>
+<p style='text-align: center;'><em>k</em> <strong>mod</strong> 77123471239874233 = 57345720357234529&emsp; and<br>
+<em>k</em> <strong>mod</strong> 64237468234862362 = 56813465823592454.&emsp;&emsp;&ensp;</p><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">crt</span><span class="p">(</span><span class="mi">57345720357234529</span><span class="p">,</span> <span class="mi">56813465823592454</span><span class="p">,</span> <span class="mi">77123471239874233</span><span class="p">,</span> <span class="mi">64237468234862362</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+We can verify that this solution is correct.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1959998626378684249237399917749988</span> <span class="o">%</span> <span class="mi">77123471239874233</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1959998626378684249237399917749988</span> <span class="o">%</span> <span class="mi">64237468234862362</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+The Chinese remainder theorem has many applications.  One of these is in the distribution of classified information among two or more people in such a way so that no one 
+person can see the information.  Each would receive one of the two (or more) modulus conditions, which is not enough information to determine the number <em>k</em>.  Only when 
+all of the pieces of the problem are assembled can <em>k</em> be determined, which can be decoded.<br><br>
+<p>Another application is in solving linear congruence equations of the form</p>
+<p style='text-align: center;'>(<em>m x</em>) <strong>mod</strong> <em>n</em> = <em>a</em>.</p>                            
+This can be solved by letting <em>k</em> = <em>m x</em>.  Then
+<p style='text-align: center;'><em>k</em> <strong>mod</strong> <em>n</em> = a,&emsp; and<br>
+<em>k</em> <strong>mod</strong> <em>m</em> = <em>0</em>.&emsp;&emsp;</p>    
+Since <em>k</em> is known, we can find <em>x</em>.<br><br>
+<p>EXAMPLE:<br>
+Solve the linear congruence equation</p>
+<p style='text-align: center;'>12 <em>x</em> <strong>mod</strong> 19 = 3.</p>
+<p>We need to solve <em>k</em> <strong>mod</strong> 19 = 3 and <em>k</em> <strong>mod</strong> 12 = 0.  Thus, we must first find a <em>u</em> and <em>v</em> such
+that 19 <em>u</em> + 12 <em>v</em> = 1.  Using the Euclidean algorithm, we find that</p>
+<p style='text-align: center;'>(&minus;5)&middot;19 + 8&middot;12 = 1.</p>
+Using these values of <em>u</em> and <em>v</em>, we have that 
+<p style='text-align: center;'><em>k</em> = <em>a v y</em> + <em>b u x</em> = 3&middot;8&middot;12 + 0&middot;(&minus;5)&middot;19 = 288.</p>
+Finally, <em>x</em> = 12 <em>k</em>, so <em>x</em> = 24.  Note that we can add or subtract multiples of 19 to get other solutions, so <em>x</em> = 5 also 
+works.<br> <p><a name="sec15" id="sec15"></a></p>
+<h1>Rational and Real Numbers</h1>
+<p>Having studied the properties of integers, let us turn our attention to rational numbers and real numbers.  The set of rational numbers ℚ can be described as the numbers of the form  <em>p</em>/<em>q</em>, where <em>p</em> is an integer and <em>q</em> is a positive integer. <br><br></p>
+<p>Although the set of rationals ℚ is easy to define, it is often hard to visualize. One way to illustrate the rationals graphically can be seen by executing the following <em>SageMath</em>
+command:<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ShowRationals</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+This plot helps to visualize the rational numbers from &minus;5 to 5 using a sequence of rows. The <em>n</em><sup>th</sup> row represents the rational numbers in simplest form 
+whose denominator is equal to <em>n</em>. Thus, the first row represents the integers, the second row the half integers, and so on. Each row is drawn three-fourths closer 
+to the <em>x</em>-axis than the previous row. In principle there would be an infinite number of rows, getting closer and closer to each other as they get close to 
+the <em>x</em>-axis. <br><br>
+<p>Even though this plot does not show all of the rational numbers (since there are an infinite number of them), we can zoom in on this graph to see more detail.  Simply
+use different upper and lower bounds. For example, we can zoom in on the apparent “gap” close to the origin:<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ShowRationals</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+This picture seems to indicate that there are not any rationals between 0 and about 0.04. Is this true?<br><br>
+<p>EXPERIMENT:<br>
+Change the 0 and 0.1 in the above command to zoom in even closer on this gap. Try to find an interval in which there are no points plotted in the graph.  Can you find
+an interval without any rational numbers?<br></p>
+<p><br><br>
+In doing this experiment you not only might make a discovery about rational numbers, but you might even be able to see <em>why</em> this property is true.</p>
+<p><a name="prop13ret" id="prop13ret"></a>
+PROPOSITION 1.3<br>
+If <em>a</em> and <em>b</em> are any two different real numbers, then there is a rational number between <em>a</em> and <em>b</em>.<br><br></p>
+<p><a href="#prop13">Click here for the proof.</a></p>
+<p />
+It is not hard to extend this proposition to show that between any two numbers, there are in fact an infinite number of rational numbers. <br><br>
+<p>There are some other properties of the rational numbers that are suggested by the <em>SageMath</em> plot. Here is the plot again, from −5 to 5:<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ShowRationals</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Having all of these dots on a page may tempt one to play &quot;dot to dot&quot; to see if a picture forms. In this case there may not be a picture, but perhaps some 
+pattern can be formed by connecting these dots. Go ahead and try it!<br><br>
+<p>EXPERIMENT:<br>
+Make a printout of the above plot and try to find a way to start at one point, then connect all of the dots using a sequence of straight lines. Try to keep the path
+from crossing itself. The aim is not just to connect the dots which are printed, but to created a pattern which, when continued indefinitely, will eventually hit
+every rational number no matter how close to the <em>x</em>-axis it appears, or how far to the left or right of the origin it is. There are, in fact, many ways this can
+be done.<br></p>
+<p><br><br>
+What does this experiment show?  When we are connecting the dots together, we are, in fact, forming a <em>sequence</em> of rational numbers. By finding a way to connect
+the dots so that every rational number is eventually hit, we have found an infinite sequence that includes every rational number once and only once. In other words, there
+are just as many rational numbers as there are integers!  This is at first surprising since we just saw that there are many more rationals, in fact an infinite number of
+them between any two. <br><br></p>
+<p>DEFINITION 1.13<br>
+A set <em>S</em> is called <em>countable</em> if there is an infinite sequence of elements from the set that includes every member of the set.<br><br></p>
+<p>What do sequences have to do with comparing the sizes of two sets?  A sequence can be considered as a function between the set of positive integers and the set <em>S</em>.<br />
+If a sequence manages to include every member of the set <em>S</em>, then it stands to reason that there are at least as “many” positive integers as there are
+elements of <em>S</em>.  The shocking fact is that even though it would first appear that there must be infinitely many more rational numbers than integers, in fact the two
+sets have the same size.</p>
+<p><a name="prop14ret" id="prop14ret"></a>
+PROPOSITION 1.4<br>The set of rationals forms a countable set.<br><br></p>
+<p><a href="#prop14">Click here for the proof.</a></p>
+<p />
+Even though we have shown that there are an infinite number of rational numbers between any two numbers, the natural question to ask is whether there are numbers that are 
+not rational. The first discovery of a number that was not rational was the square root of two, proven by the Greeks.<p><a name="prop15ret" id="prop15ret"></a>
+PROPOSITION 1.5<br>
+There is no rational number <em>p</em>/<em>q</em> such that (<em>p</em>/<em>q</em>)<sup>2</sup> = 2.<br><br></p>
+<p><a href="#prop15">Click here for the proof.</a></p>
+<p />
+<p>This proof is another example of a <em>reductio ad absurdum</em> proof. That is, we assume that the statement we were trying to prove was false, and proceeded until we reach
+a contradiction.<br><br></p>
+<p>If real numbers which are not rational are called <em>irrational numbers</em>. Irrational numbers are characterized by the fact that their decimal representation never repeats.
+With <em>SageMath</em>, we can look at as many digits of √<font style="text-decoration: overline;">2</font> as we want, and see that there is no pattern.  Here are
+the first 1000 digits.<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">digits</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+We will denote the set of real numbers, both rational and irrational, by &#8477;.<br><br>
+<p>We have already proven that there is, in essence, the same number of rational numbers as integers.  This may not come as too much of a shock, since both sets are infinite,
+so logically two infinite sets ought to be the same size.  But the set of real numbers is also infinite, so one might be tempted to think that there is the same number of
+real numbers as integers.  However, the number of reals is “more infinite” than the number of integers.  In other words, we cannot construct a sequence of real numbers
+that contains every real number, as we did for rational numbers.  This surprising fact was proved by Georg Cantor using a classic argument.</p>
+<p><a name="theor16ret" id="theor16ret"></a>
+THEOREM 1.6: Cantor’s Diagonalization Theorem<br>
+The set of all real numbers between 0 and 1 is <em>uncountable</em>. That is, there cannot be a sequence of numbers that contains every real number between 0 and 1.<br><br></p>
+<p><a href="#theor16">Click here for the proof.</a></p>
+<p />
+We will use the sets &#8474; and &#8477; throughout this book, so knowing the properties of these two sets will be important in many of the examples.<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<h1>Proofs:</h1><p><a name="theor11" id="theor11"></a>
+Proof of Theorem 1.1:<br><br></p>
+<p>Since <em>y</em> &gt; 0, we can consider the rational number <em>x</em>/<em>y</em>.  Let <em>q</em> be the largest integer that is less than or equal to <em>x</em>/<em>y</em>.<br />
+That is, we will pick the integer <em>q</em> so that</p>
+<p style='text-align: center;'><em>q</em> &le; <em>x</em>/<em>y</em> &lt; <em>q</em> + 1.</p>                                    
+Multiplying by <em>y</em>, we have 
+<p style='text-align: center;'><em>y q</em> &le; <em>x</em> &lt; <em>y q</em> + <em>y</em>.</p>                                   
+If we let <em>r</em> = <em>x</em> &minus; <em>y q</em>, we have 0 &le; <em>r</em> &lt; <em>y</em>, and also <em>x</em> = <em>y q</em> + <em>r</em>, so we have found 
+integers <em>q</em> and <em>r</em> that satisfy the required properties.<br><br>  
+<p>In order to show that <em>q</em> and <em>r</em> are unique, let us suppose that <em>q</em><sub>2</sub> and
+<em>r</em><sub>2</sub> are two other integers that satisfy the required conditions.<br />
+Then <em>q y</em> + <em>r</em> = <em>q</em><sub>2</sub> <em>y</em> + <em>r</em><sub>2</sub>, so</p>
+<p style='text-align: center;'>(<em>q</em> &minus; <em>q</em><sub>2</sub>)<em>y</em> = <em>r</em><sub>2</sub> &minus; <em>r</em>.</p>                                   
+Since both <em>r</em> and <em>r</em><sub>2</sub> are between 0 and <em>y</em> &minus; 1, the right-hand side is less than <em>y</em> in absolute 
+value.  But the left-hand side is at least <em>y</em> in absolute value unless <em>q</em> = <em>q</em><sub>2</sub>.  This in turn will 
+force <em>r</em> = <em>r</em><sub>2</sub>, so we see that the solution is unique.<br><br> 
+<p><a href="#theor11ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="lem11" id="lem11"></a>
+Proof of Lemma 1.1:<br><br></p>
+<p>Suppose that some number greater than 1 does not have a prime factor.  Then we consider the set of all integers greater than 1 which do not have a prime factor, and using the
+well-ordering axiom, we find the smallest such number, called <em>n</em>.<br></p>
+<p>Then <em>n</em> is not prime, otherwise <em>n</em> would have a prime factor.  Then by
+definition, <em>n</em> must have a positive divisor besides 1 and <em>n</em>, say <em>m</em>.  Since <nobr>1 &lt; <em>m</em> &lt; <em>n</em>,</nobr> and <em>n</em> was the smallest number
+greater than 1 without a prime factor, <em>m</em> must have a prime factor, say <em>p</em>.  Then <em>p</em> is also a prime factor of <em>n</em>, so we have a contradiction. Therefore, every number greater than 1 has a prime factor.<br><br></p>
+<p><a href="#lem11ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="lem12" id="lem12"></a>
+Proof of Lemma 1.2:<br><br></p>
+<p>Let <em>n</em> be the least criminal.  This allows us to assume the statement is true for all integers
+2 ≤ <em>k</em> &lt; <em>n</em>, and that <em>n</em> is not the product of one or more primes.  If <em>n</em> is prime, we have <em>n</em> as the product of one prime, which gives us a contradiction.  If <em>n</em> is not prime, then we can express
+<em>n</em> = <em>a b</em>, where both <em>a</em> and <em>b</em> are between 1 and <em>n</em>.  By our assumption, <em>a</em> and <em>b</em> can both be expressed as a product of positive primes, and so <em>n</em> can also be expressed as a product of primes, again giving us a contradiction.  In either case we have a contradiction, so we have proven the lemma.</p>
+<p><a href="#lem12ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="lem13" id="lem13"></a>
+Proof of Lemma 1.3:<br><br></p>
+<p>Let <em>A</em> denote the set of all positive numbers that can be expressed in the form  <em>u</em> <em>x</em> + <em>v</em> <em>y</em>.  Note that both
+|<em>x</em>| and |<em>y</em>| can be written in the form <em>u</em> <em>x</em> + <em>v</em> <em>y</em>, so by the well-ordering axoim, we can consider the <em>smallest</em> positive number
+<em>n</em> in <em>A</em>. Note that gcd(<em>x</em>, <em>y</em>) is a factor of both
+<em>x</em> and <em>y</em>, so gcd(<em>x</em>, <em>y</em>) must be a factor of <em>n</em>.<br><br></p>
+<p>By the division algorithm (Theorem 1.1), we can find <em>q</em> and <em>r</em>, with 0 ≤ <em>r</em> &lt; <em>n</em>, such that <em>x</em> = <em>q n</em> + <em>r</em>.  Then</p>
+<p style='text-align: center;'><em>r</em> = <em>x</em> &minus; <em>q n</em> = <em>x</em> &minus; <em>q</em> (<em>u x</em> + <em>v y</em>) = (1 &minus; <em>q u</em>)<em>x</em> 
++ (&minus;<em>v</em>)<em>y</em>.</p>
+If <em>r</em> &ne; 0, then <em>r</em> would be a smaller positive number in <em>A</em> than <em>n</em>, which contradicts the way we 
+chose <em>n</em>.  Thus, <nobr></nobr><em>r</em> = 0,</nobr> and <em>n</em> | <em>x</em>.  By similar reasoning, <em>n</em> is also a divisor of <em>y</em>. 
+Thus, <em>n</em> is a common divisor of <em>x</em> 
+and <em>y</em>, and since the gcd(<em>x</em>, <em>y</em>) is in turn a divisor of <em>n</em>, <em>n</em> must be equal to gcd(<em>x</em>, <em>y</em>).<br><br>  
+<p><a href="#lem13ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="lem14" id="lem14"></a>
+Proof of Lemma 1.4:<br><br></p>
+<p>Suppose that  <em>p</em> does not divide <em>a</em> so that <em>p</em> and <em>a</em> are coprime.  By Bézout’s lemma (1.3), there exist
+integers <em>u</em> and <em>v</em> such that <em>u a</em> + <em>v p</em> = 1.  Then</p>
+<p style='text-align: center;'><em>u a b</em> + <em>v p b</em> = <em>b</em>.</p> 
+<p>Since <em>p</em> divides both terms on the left-hand side, we see that <em>p</em> | <em>b</em>.  Thus, <em>p</em> must divide either <em>a</em> or <em>b</em>.<br><br></p>
+<p><a href="#lem14ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="lem15" id="lem15"></a>
+Proof of Lemma 1.5:<br><br></p>
+<p>We will use the least criminal method on <em>n</em>.  That is, we will assume that <em>n</em> is the smallest number for which the statement is false, and reach a contradiction.  Because of Euclid’s Lemma (1.4), we know that <em>n</em> is not 2.  Since <em>n</em> is the smallest number for which the statement is false, we know that the statement is true for the case <em>n</em>−1.  That is, if
+<em>p</em> divides  <em>a</em><sub>1</sub> <em>a</em><sub>2</sub> <em>a</em><sub>3</sub> ⋯ <em>a</em><sub><em>n</em>−1</sub>, then <em>p</em> divides
+<em>a<sub>i</sub></em> for some <em>i</em>.  If we let <em>b</em> =
+<em>a</em><sub>1</sub> <em>a</em><sub>2</sub> <em>a</em><sub>3</sub> ⋯ <em>a</em><sub><em>n</em>−1</sub>,
+then <em>a</em><sub>1</sub> <em>a</em><sub>2</sub> <em>a</em><sub>3</sub>  ⋯ <em>a<sub>n</sub></em> = <em>b</em> <em>a<sub>n</sub></em>.  By Euclid’s Lemma (1.4),
+if <em>p</em> divides <em>b</em> <em>a<sub>n</sub></em>, then <em>p</em> divides either <em>b</em> or <em>a<sub>n</sub></em>.  But if <em>p</em> divides <em>b</em>, then <em>p</em> divides <em>a<sub>i</sub></em> for some 1 ≤ <em>i</em> ≤ <em>n</em> − 1.  So it either case, <em>p</em> divides <em>a<sub>i</sub></em> for
+some 1 ≤ <em>i</em> ≤ <em>n</em>.  This means that <em>n</em> is not the smallest number for which the statement is false, so we have reached the contradiction.<br><br></p>
+<p><a href="#lem15ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="theor12" id="theor12"></a>
+Proof of Theorem 1.2:<br><br></p>
+<p>Lemma 1.2 shows that all integers greater than 1 can be expressed as a product of positive primes.  So we only have to show uniqueness.  We will use the least criminal method.  That is, we will let <em>s</em> be the smallest positive integer that has two factorizations</p>
+<p style='text-align: center;'><em>s</em> = <em>p</em><sub>1</sub> <em>p</em><sub>2</sub> <em>p</em><sub>3</sub> &#8943; <em>p<sub>n</sub></em> = 
+<em>q</em><sub>1</sub> <em>q</em><sub>2</sub> <em>q</em><sub>3</sub> &#8943; <em>q<sub>m</sub></em>,</p>
+<p>where <em>p</em><sub>1</sub>, <em>p</em><sub>2</sub>, … <em>p<sub>n</sub></em>, <em>q</em><sub>1</sub>, <em>q</em><sub>2</sub>, … <em>q<sub>m</sub></em> are all
+positive primes.  Note that if <em>s</em> were prime, then <em>s</em> would clearly have only one prime factorization, <em>s</em>.  So we can assume <em>s</em> is composite.<br><br></p>
+<p>By Lemma 1.5, since <em>p<sub>n</sub></em> | <em>q</em><sub>1</sub> <em>q</em><sub>2</sub> <em>q</em><sub>3</sub> ⋯ <em>q<sub>m</sub></em>, <em>p<sub>n</sub></em> must
+divide one of the <em>q<sub>i</sub></em>’s.  Since <em>p<sub>n</sub></em> and <em>q<sub>i</sub></em> are both positive primes, we find that <em>p<sub>n</sub></em> =
+<em>q<sub>i</sub></em>.  By rearranging the remaining <em>q</em>’s, we can write</p>
+<p style='text-align: center;'><em>p</em><sub>1</sub> <em>p</em><sub>2</sub> <em>p</em><sub>3</sub> &#8943; <em>p<sub>n</sub></em> = 
+<em>q</em><sub>1</sub> <em>q</em><sub>2</sub> <em>q</em><sub>3</sub> &#8943; <em>q</em><sub><em>m</em>&minus;1</sub> <em>p<sub>n</sub></em>.</p>
+<p>Thus,</p>
+<p style='text-align: center;'><em>s</em>/<em>p<sub>n</sub></em> = <em>p</em><sub>1</sub> <em>p</em><sub>2</sub> <em>p</em><sub>3</sub> &#8943; <em>p</em><sub><em>n</em>&minus;1</sub> = 
+<em>q</em><sub>1</sub> <em>q</em><sub>2</sub> <em>q</em><sub>3</sub> &#8943; <em>q</em><sub><em>m</em>&minus;1</sub>.</p>
+<p>Since <em>s</em> is the least criminal, <em>s</em>/<em>p<sub>n</sub></em> has a unique prime factorization, up to rearrangement of the prime factors.  So <em>n</em> = <em>m</em>, and
+the <em>p</em>’s are a rearrangement of the <em>q</em>’s.  Thus, <em>s</em> also has a unique prime factorization, contradicting the least criminal statement.<br><br></p>
+<p><a href="#theor12ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="theor13" id="theor13"></a>
+Proof of Theorem 1.3:<br><br></p>
+<p>Suppose that there was some <em>n</em> greater than or equal to <em>a</em> for which the statement <em>S</em>(<em>n</em>) was false.  Let <em>n</em> be the least criminal, that is, the smallest <em>n</em> for which <em>S</em>(<em>n</em>) is false.  Since we know <em>S</em>(<em>a</em>) is true, <em>n</em> ≠ <em>a</em>.  Then <em>S</em>(<em>n</em> − 1) would be true, since <em>n</em> − 1 is smaller than <em>n</em>, and still greater to or equal to <em>a</em>.  But by assuming that <em>S</em>(<em>n</em> − 1) is true, we can prove that <em>S</em>(<em>n</em>) is also true.  Thus, we have a contradiction, and <em>S</em>(<em>n</em>) is true for all integers greater than or equal to <em>a</em>.<br><br></p>
+<p><a href="#theor13ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="lem16" id="lem16"></a>
+Proof of Lemma 1.6:<br><br></p>
+<p>We will use induction on the size <em>n</em> = |<em>A</em>|.  If A has only one element, <em>a</em><sub>1</sub>, then <em>f</em>(<em>a</em><sub>1</sub>) = <em>b</em><sub>1</sub>,
+and <em>B</em> = {<em>b</em><sub>1</sub>}.  Let us suppose that the statement is true for <em>n</em> − 1.<br></p>
+<p>If <em>A</em> = {<em>a</em><sub>1</sub>, <em>a</em><sub>2</sub>, <em>a</em><sub>1</sub>, … <em>a<sub>n</sub></em>}, then <em>f</em>(<em>a<sub>n</sub></em>) = <em>b</em> for
+some <em>b</em> ∈ <em>B</em>.  First we let <em>C</em> = {<em>a</em><sub>1</sub>, <em>a</em><sub>2</sub>, <em>a</em><sub>1</sub>, … <em>a</em><sub><em>n</em>−1</sub>} = <em>A</em> − {<em>a<sub>n</sub></em>}, that is, we remove the
+element <em>a<sub>n</sub></em> from the set <em>A</em>, and let <em>D</em> = <em>B</em> − {<em>b</em>}. Then we can define the
+function <em>g</em> : <em>C</em> → <em>D</em> by <em>g</em>(<em>x</em>) =
+<em>f</em>(<em>x</em>) for <em>x</em> ∈ <em>C</em>.  Since <em>f</em> is a bijection, so
+is <em>g</em>, since no other element of <em>A</em> could map to <em>b</em>.  By induction, we see
+that |<em>C</em>| = |<em>D</em>|, and since |<em>A</em>| = |<em>C</em>| + 1 and |<em>B</em>| = |<em>D</em>| + 1, then |<em>A</em>| = |<em>B</em>|. <br><br></p>
+<p><a href="#lem16ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="theor14" id="theor14"></a>
+Proof of Theorem 1.4:<br><br></p>
+<p>Let <em>R</em> be the range of <em>f</em>, which would be a subset of <em>B</em>.  Then the function <em>f</em> : <em>A</em> → <em>R</em> would be both one-to-one and onto, so by Lemma 1.6 we
+have |<em>A</em>| = |<em>R</em>|.  Since we also have
+that |<em>A</em>| = |<em>B</em>|, then <em>B</em> = <em>R</em>, so the function is onto.<br><br></p>
+<p><a href="#theor14ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="prop11" id="prop11"></a>
+Proof of Proposition 1.1:<br><br></p>
+<p>Because <em>f</em> is both one-to-one and onto, for every <em>y</em> ∈ <em>B</em> there is a
+unique <em>x</em> ∈ <em>A</em> such that <em>f</em>(<em>x</em>) = <em>y</em>.<br />
+Thus, we can define <em>g</em>(<em>y</em>) to be that value <em>x</em> such that <em>f</em>(<em>x</em>) = <em>y</em>.<br />
+By the way <em>g</em>(<em>y</em>) is defined, we see that <em>f</em>(<em>g</em>(<em>y</em>)) = <em>y</em> for all <em>y</em> ∈ <em>B</em>.  If we apply the
+function <em>g</em> to both sides of this equation, we have <em>g</em>(<em>f</em>(<em>g</em>(<em>y</em>))) = <em>g</em>(<em>y</em>).<br />
+Since every element <em>x</em> ∈ <em>A</em> can be written as <em>g</em>(<em>y</em>) for some <em>y</em> ∈ <em>B</em>, we can
+replace <em>g</em>(<em>y</em>) with <em>x</em> to get <em>g</em>(<em>f</em>(<em>x</em>)) = <em>x</em> for all <em>x</em> ∈ <em>A</em>.<br><br></p>
+<p>To show that the function is unique, suppose there is another such function <em>h</em>(<em>x</em>) : <em>B</em> → <em>A</em>.  Then</p>
+<p style='text-align: center;'><em>h</em>(<em>y</em>) = <em>h</em>(<em>f</em>(<em>g</em>(<em>y</em>))) = 
+(<em>h</em> &#8728; <em>f</em>)(<em>g</em>(<em>y</em>)) = <em>g</em>(<em>y</em>)&emsp; for all <em>y</em> &isin; <em>B</em>.</p> 
+<p>Thus, <em>h</em> = <em>g</em>, showing that the function is unique.<br><br></p>
+<p><a href="#prop11ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="prop12" id="prop12"></a>
+Proof of Proposition 1.2:<br><br></p>
+<p>In both equations, the two sides are between 0 and <em>n</em> − 1, so it is sufficient to show that the difference of the two sides is a multiple of <em>n</em>.<br />
+Let <em>a</em> = <em>x</em> <strong>mod</strong> <em>n</em>, <em>b</em> = <em>y</em> <strong>mod</strong> <em>n</em>,
+<em>c</em> = (<em>x</em> + <em>y</em>) <strong>mod</strong> <em>n</em>, and <em>d</em> = (<em>x y</em>) <strong>mod</strong> <em>n</em>.  Then there are
+integers <em>q</em><sub>1</sub>, <em>q</em><sub>2</sub>, <em>q</em><sub>3</sub>, and <em>q</em><sub>4</sub> such that</p>
+<p style='text-align: center;'><em>x</em> = <em>q</em><sub>1</sub> <em>n</em> + <em>a</em>,&emsp; <em>y</em> = <em>q</em><sub>2</sub> <em>n</em> + 
+<em>b</em>,&emsp; <em>x</em> + <em>y</em> = <em>q</em><sub>3</sub> <em>n</em> + <em>c</em>,&emsp; <em>x y</em> = <em>q</em><sub>4</sub> <em>n</em> + <em>d</em>.</p> 
+For the first equation, we note that 
+<p style='text-align: center;'><em>c</em> &minus; (<em>a</em> + <em>b</em>) = (<em>x</em> + <em>y</em> &minus; <em>q</em><sub>3</sub> <em>n</em>) &minus; 
+((<em>x</em> &minus; <em>q</em><sub>1</sub> <em>n</em>) + (<em>y</em> &minus; <em>q</em><sub>2</sub> <em>n</em>))<br> 
+&emsp;&emsp;&emsp; = <em>q</em><sub>1</sub> <em>n</em> + <em>q</em><sub>2</sub> <em>n</em> &minus; <em>q</em><sub>3</sub> <em>n</em> = (<em>q</em><sub>1</sub> + 
+<em>q</em><sub>2</sub> &minus; <em>q</em><sub>3</sub>) <em>n</em>.</p>                     
+Thus, the two sides of the first equation differ by a multiple of <em>n</em>.  Likewise, for the second equation, we see
+<p style='text-align: center;'><em>d</em> &minus; <em>a b</em> = (<em>x y</em> &minus; <em>q</em><sub>4</sub> <em>n</em>) &minus; 
+(<em>x</em> &minus; <em>q</em><sub>1</sub> <em>n</em>)&middot;(<em>y</em> &minus; <em>q</em><sub>2</sub> <em>n</em>)<br>
+= <em>y</em> <em>q</em><sub>1</sub> <em>n</em> + 
+<em>x</em> <em>q</em><sub>2</sub> <em>n</em> &minus; <em>q</em><sub>4</sub> <em>n</em> &minus; <em>q</em><sub>1</sub> <em>q</em><sub>2</sub> <em>n</em><sup>2</sup> = (<em>y</em> <em>q</em><sub>1</sub> + <em>x</em> <em>q</em><sub>2</sub> &minus; <em>q</em><sub>4</sub> &minus; <em>q</em><sub>1</sub> <em>q</em><sub>2</sub> <em>n</em>) <em>n</em>.</p>
+<p>So again, the two sides of the second equation differ by a multiple of <em>n</em>.<br><br></p>
+<p><a href="#prop12ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="theor15" id="theor15"></a>
+Proof of Theorem 1.5:<br><br></p>
+<p>We will begin by showing that there cannot be more than one such number.<br><br></p>
+<p>Suppose we have two different numbers, <em>k</em> and <em>m</em>, which satisfy the above conditions.  Then</p>
+<p style='text-align: center;'>(<em>k</em> &minus; <em>m</em>) <strong>mod</strong> <em>x</em> = 0 &emsp;and &emsp;
+(<em>k</em> &minus; <em>m</em>) <strong>mod</strong> <em>y</em> = 0.</p>
+Thus, <em>k</em> &minus; <em>m</em> must be a multiple of both <em>x</em> and <em>y</em>.  But since <em>x</em> and <em>y</em> are coprime, the 
+least common multiple of <em>x</em> and <em>y</em> is <em>x y</em>.  Thus, <em>k</em> &minus; <em>m</em> is a multiple 
+of <em>x y</em>.<br><br>
+<p>However, both <em>k</em> and <em>m</em> are less than <em>x y</em>.  So the only way this is possible is for <em>k</em> − <em>m</em> = 0,
+which contradicts our assumption that <em>k</em> and <em>m</em> were distinct solutions.<br><br></p>
+<p>To show that there is a solution, we first note that since <em>x</em> and <em>y</em> are coprime, by Bézout’s lemma (1.3), there are
+integers <em>u</em> and <em>v</em> such that <em>u x</em> + <em>v y</em> = 1.  Then we can consider the number</p>
+<p style='text-align: center;'><em>k</em> = (<em>a v y</em> + <em>b u x</em>) <strong>mod</strong> (<em>x y</em>).</p>
+<p>Clearly 0 ≤ <em>k</em> &lt; <em>x y</em>, so we only have to show that <em>k</em> <strong>mod</strong> <em>x</em> = <em>a</em> <strong>mod</strong> <em>x</em>
+and <em>k</em> <strong>mod</strong> <em>y</em> = <em>b</em> <strong>mod</strong> <em>y</em>.  Since <em>v y</em> = 1 − <em>u x</em>,</p>
+<p style='text-align: center;'><em>k</em> <strong>mod</strong> <em>x</em> = (<em>a v y</em> + <em>b u x</em>) <strong>mod</strong> <em>x</em><br>
+&emsp;&emsp;&emsp;&emsp;&emsp; = (<em>a</em>(1 &minus; <em>u x</em>) + <em>b u x</em>) <strong>mod</strong> <em>x</em><br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; = (<em>a</em> + <em>u x</em>(<em>b</em> &minus; <em>a</em>)) <strong>mod</strong> <em>x</em> = <em>a</em> <strong>mod</strong> <em>x</em>.</p>
+Likewise, since <em>u x</em> = 1 &minus; <em>v y</em>,
+<p style='text-align: center;'><em>k</em> <strong>mod</strong> <em>y</em> = (<em>a v y</em> + <em>b u x</em>) <strong>mod</strong> <em>y</em><br>
+&emsp;&emsp;&emsp;&emsp;&emsp; = (<em>a v y</em> + <em>b</em>(1 &minus; <em>v y</em>)) <strong>mod</strong> <em>y</em><br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; = ((<em>b</em> + <em>v y</em>(<em>a</em> &minus; <em>b</em>)) <strong>mod</strong> <em>y</em> = <em>b</em> <strong>mod</strong> <em>y</em>.</p>
+<br>
+<p><a href="#theor15ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="prop13" id="prop13"></a>
+Proof of Proposition 1.3:<br><br></p>
+<p>Let <em>x</em> = |<em>a</em> − <em>b</em>|. Since <em>x</em> is not zero, we let <em>q</em> be any integer that is greater than 1/<em>x</em>. Then
+|<em>a</em>·<em>q</em> − <em>b</em>·<em>q</em>| = <em>q</em>·<em>x</em> &gt; 1, so there must be an integer between <em>a</em>·<em>q</em> and
+<em>b</em>·<em>q</em>, which we will call <em>p</em>. But then  <em>p</em>/<em>q</em> will be between <em>a</em> and <em>b</em>, and the proposition is proved.<br><br></p>
+<p><a href="#prop13ret">Return to text</a><br><br></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="prop14" id="prop14"></a>
+Proof of Proposition 1.4:<br><br></p>
+<p>In order to show that the rationals are countable, we need a sequence that will eventually contain every rational somewhere in the sequence.<br />
+Equivalently, we can connect the dots of the figure formed from <br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ShowRationals</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+using a pattern that would, in principle, reach every dot of this figure extended to infinity. There are of course many ways to do this, but one way is given by the patten 
+in<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CountableQ</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Here is a picture which shows more of this pattern:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CountableQ</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+This path starts at 0, and swings back and forth, each time hitting the rationals on the next row.  Since there are an infinite number of rows, we can extend this 
+pattern indefinitely, and every rational number will eventually be hit by this path.This path gives rise the the sequence <br><br>
+<p style='text-align: center;'>{0, 1, 1/2, -1/2, -1, -2, -3/2, -2/3, -1/3, 1/3, 2/3, 3/2, 2, 3, &hellip;}</p>
+which contains every rational number, so we have shown that the rationals form a countable set.<br><p><a href="#prop14ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="prop15" id="prop15"></a>
+Proof of Proposition 1.5:<br><br></p>
+<p>Suppose that there was such a rational number, <em>p</em>/<em>q</em>. Let us further suppose that <em>p</em>/<em>q</em> is in simplest form, so that <em>p</em>
+and <em>q</em> are integers with no common factors.  We could rewrite the equation (<em>p</em>/<em>q</em>)<sup>2</sup> = 2 as</p>
+<p style='text-align: center;'><em>p</em><sup>2</sup> = 2 <em>q</em><sup>2</sup>.</p>
+This would indicate that <em>p</em><sup>2</sup> is a multiple of 2, which by Euclid's Lemma (1.4) implies that <em>p</em> is a multiple of 2.<br><br>
+<p>Next, we make the substitution <em>p</em> = 2<em>r</em>, where <em>r</em> is an integer.  This produces the equation</p>
+<p style='text-align: center;'>(2 <em>r</em>)<sup>2</sup> = 2 <em>q</em><sup>2</sup>, or</p>
+<p style='text-align: center;'>2 <em>r</em><sup>2</sup> = <em>q</em><sup>2</sup>.</p>
+This would indicate that <em>q</em><sup>2</sup>, and hence <em>q</em>, is even. But this contradicts the fact that <em>p</em>/<em>q</em> was written in simplest 
+form.  Thus, there is no rational number whose square is 2.<br><br>
+<p><a href="#prop15ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="theor16" id="theor16"></a>
+Proof of Theorem 1.6:<br><br></p>
+<p>We begin by assuming that we can form such a sequence</p>
+<p style='text-align: center;'>{<em>a</em><sub>1</sub>, <em>a</em><sub>2</sub>, <em>a</em><sub>3</sub>,&hellip;}</p>    
+and work to find a contradiction.  The plan is to find a number <em>b</em> that cannot be in this list. We can do this by forcing <em>b</em> to have a different first 
+digit than <em>a</em><sub>1</sub>, a different second digit than <em>a</em><sub>2</sub>, a different third digit than <em>a</em><sub>3</sub>, and so on. The only 
+technical problem with this is that some numbers have two decimal representations, such as<br>
+<p style='text-align: center;'>0.348600000000000000&hellip;= 0.3485999999999999999&hellip;.</p>
+<br>
+For these numbers, all we need to do is require that <em>both</em> representations are in the list. (That is, some rational numbers will appear twice on the list 
+with different decimal representations.)<br><br>
+<p>We now can find a number <em>b</em> using any number of procedures, such as letting the <em>n</em><sup>th</sup> digit of <em>b</em> be one more than the <em>n</em><sup>th</sup> digit of
+<em>a<sub>n</sub></em>, <strong>mod</strong> 10.  For example, if the list of numbers is<br><br></p>
+<p style='text-align: center;'><em>a</em><sub>1</sub> = 0.94837490123798570&hellip;</p>
+<p style='text-align: center;'><em>a</em><sub>2</sub> = 0.83840000000000000&hellip;</p>
+<p style='text-align: center;'><em>a</em><sub>3</sub> = 0.83839999999999999&hellip;</p>
+<p style='text-align: center;'><em>a</em><sub>4</sub> = 0.34281655343424444&hellip;</p>
+<br>
+then <em>b</em> = 0.0499&hellip; . Certainly <em>b</em> is missing from the list, since it differs from each member of the list by at least one digit. This contradiction proves 
+the theorem.<br><br>
+<p><a href="#theor16ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="sec1p" id="sec1p"></a></p>
+<h1><em>SageMath</em> Interactive Problems</h1>
+<br>
+&sect;1.1 #38)<br>
+Use <em>SageMath</em> to find integers <em>u</em> and <em>v</em> such that
+<p style='text-align: center;'> 876543212345678 <em>u</em> + 123456787654321 <em>v</em> = 1.</p><br>
+&sect;1.1 #39)<br>
+Use <em>SageMath</em> to find integers <em>u</em> and <em>v</em> such that
+<p style='text-align: center;'>98765432123456789 <em>u</em> + 12345678987654321 <em>v</em> = 1.</p><br>
+&sect;1.1 #40)<br>
+Use <em>SageMath</em> to find the factorization of 987654321.<br><br>
+&sect;1.1 #41)<br>
+Use <em>SageMath</em> to find the factorization of 12345678987654321.<br><br>
+&sect;1.1 #42)<br>
+Use <em>SageMath</em> to find the factorization of 98765432123456789.<br><br>
+&sect;1.2 #45)<br>
+Consider the function
+<p style='text-align: center;'><em>f</em>(<em>x</em>) = 2 &lfloor;<em>x</em>&rfloor; &minus; <em>x</em>.</p>
+<em>SageMath</em> uses the function <strong>floor</strong> to denote &lfloor;<em>x</em>&rfloor;.  Thus, we can have <em>SageMath</em> plot this function with the commands<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">floor</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="n">x</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Judging by the graph, is this function one-to-one?  Is it onto?  (Ignore the vertical lines in the graph.)<br><br>
+&sect;1.2 #46)<br>
+Define a function <em>g</em>(<em>x</em>) in <em>SageMath</em> such that <em>f</em>(<em>g</em>(<em>x</em>)) = <em>x</em> for all <em>x</em>, using the function from Problem 45.  Note 
+that the formula must work for both integers and non-integers. Is <em>g</em>(<em>f</em>(<em>x</em>)) always equal to <em>x</em>?<br>
+&sect;1.3 #33)<br>
+Consider the binary operator on the set of integers:
+<table align="center" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td></td>
+    <td align="right" valign="bottom">&#9127;</td>
+    <td align="left">&ensp;<em>x</em></td>
+    <td align="left">&ensp; if <em>x</em> is even,</td>
+  </tr>
+  <tr>
+    <td align="left"><em>x</em> &lowast; <em>y</em> =&ensp;</td>
+    <td align="right">&#9128;</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td align="right" valign="top">&#9129;</td>
+    <td align="left" valign="top">&ensp;<em>y</em></td>
+    <td align="left">&ensp; if <em>x</em> is odd.</td>
+  </tr>
+</table>
+Defining a piecewise defined binary operator is a little tricky in <em>SageMath</em>, but we can 
+define it as a function <em>f</em>(<em>x</em>, <em>y</em>) as follows:<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>  <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="p">(</span><span class="n">y</span><span class="o">-</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Since the operator is defined as a function, (<em>x</em> ∗ <em>y</em>) ∗ <em>z</em> must be entered as <strong>f(f(x,y),z)</strong>, and <em>x</em> ∗ (<em>y</em> ∗ <em>z</em>) must be entered as <strong>f(x,f(y,z))</strong>.  Try computing these for different integers <em>x</em>, <em>y</em>, and <em>z</em>.  Show this binary operator is not  commutative.  Does this binary operator seem to be associative?</p>
+<br>
+&sect;1.3 #34)<br>
+Consider the binary operator on the set of integers:
+<table align="center" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td></td>
+    <td align="right" valign="bottom">&#9127;</td>
+    <td align="left">&ensp;<em>x</em></td>
+    <td align="left">&ensp; if <em>x</em> + <em>y</em> is even,</td>
+  </tr>
+  <tr>
+    <td align="left"><em>x</em> &lowast; <em>y</em> =&ensp;</td>
+    <td align="right">&#9128;</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td align="right" valign="top">&#9129;</td>
+    <td align="left" valign="top">&ensp;<em>y</em></td>
+    <td align="left">&ensp; if <em>x</em> + <em>y</em> is odd.</td>
+  </tr>
+</table>
+This can be defined in <em>SageMath</em> as<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>  <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="p">(</span><span class="n">y</span><span class="o">-</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="p">((</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Try computing
+(<em>x</em> ∗ <em>y</em>) ∗ <em>z</em> and <em>x</em> ∗ (<em>y</em> ∗
+<em>z</em>) for different integers <em>x</em>, <em>y</em>, and <em>z</em>.  Show this binary operator is not commutative.  Does this binary operator seem to be associative?  See Problem 33.</p>
+<br>
+&sect;1.3 #35)<br>
+<em>SageMath</em> can work with tables of numbers, called <em>matrices</em>.  For example, a 2 &times; 2 matrix can be entered by<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s2">&quot;a11 a12 a21 a22&quot;</span><span class="p">)</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">([[</span><span class="n">a11</span><span class="p">,</span> <span class="n">a12</span><span class="p">],</span> <span class="p">[</span><span class="n">a21</span><span class="p">,</span> <span class="n">a22</span><span class="p">]]);</span> <span class="n">A</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The first command defines a set of variables for us to use.  If we define two such matrices, we can use ∗ to multiply them together.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s2">&quot;b11 b12 b21 b22&quot;</span><span class="p">)</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">([[</span><span class="n">b11</span><span class="p">,</span> <span class="n">b12</span><span class="p">],</span> <span class="p">[</span><span class="n">b21</span><span class="p">,</span> <span class="n">b22</span><span class="p">]])</span>
+<span class="n">A</span><span class="o">*</span><span class="n">B</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The result is another 2 × 2 matrix, showing that ∗ is a binary operator on 2 ∗ 2 matrices.  Is this operator commutative?</p>
+<br>
+&sect;1.3 #36)<br>
+Extend Problem 35 by defining a third 2 &times; 2 matrix.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s2">&quot;c11 c12 c21 c22&quot;</span><span class="p">)</span>
+<span class="n">C</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">([[</span><span class="n">c11</span><span class="p">,</span> <span class="n">c12</span><span class="p">],</span> <span class="p">[</span><span class="n">c21</span><span class="p">,</span> <span class="n">c22</span><span class="p">]]);</span> <span class="n">C</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Is the binary operator ∗ associative?</p>
+<br>
+&sect;1.4 #39)<br>
+Use <em>SageMath</em>'s <strong>PowerMod</strong> function to compute
+<p style='text-align: center;'>123456789<sup>123454321</sup> <strong>mod</strong> 987654321.</p><br>
+&sect;1.4 #40)<br>
+Use <em>SageMath</em>'s <strong>PowerMod</strong> function to compute
+<p style='text-align: center;'>12345678987654321<sup>56789876543212345</sup> <strong>mod</strong> 98765432123456789.</p><br>
+&sect;1.4 #41)<br>
+Use <em>SageMath</em>'s <strong>crt</strong> function to find the solution to the system
+<p style='text-align: center;'><em>k</em> <strong>mod</strong> 953703810582341 = 638523792756361,</p>
+and 
+<p style='text-align: center;'><em>k</em> <strong>mod</strong> 2526928697126346 = 1638525978351423.</p><br>
+&sect;1.4 #42)<br>
+Use <em>SageMath</em>'s <strong>crt</strong> function to find the solution to the system
+<p style='text-align: center;'><em>k</em> <strong>mod</strong> 8675612376265160933543 = 152352352346254753545,</p>
+and 
+<p style='text-align: center;'><em>k</em> <strong>mod</strong> 6226345262345235236201 = 526352346234573523462.</p><br>
+&sect;1.4 #43)<br>
+Use <em>SageMath</em> to solve the linear congruence equation
+<p style='text-align: center;'><p style='text-align: center;'>289475362034522153 <em>x</em> <strong>mod</strong> 915156238625161124 = 2109825245909824.</p><br>
+&sect;1.4 #44)<br>
+Use <em>SageMath</em> to solve the linear congruence equation
+<p style='text-align: center;'><p style='text-align: center;'>935729851868621502 <em>x</em> <strong>mod</strong> 1965156273498612517 = 187155163352362.</p><br>
+&sect;1.5 #28)<br>
+If we begin the sequence in Problem 1 of the textbook with an irrational number, all terms of the sequence will be irrational.  Explore what happens if we consider the same 
+formula, but start with <em>a</em><sub>0</sub> = &radic;<font style="text-decoration: overline;">2</font>.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span> <span class="n">a</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">Together</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">floor</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">-</span> <span class="n">a</span><span class="p">));</span> <span class="n">a</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Here, <strong>floor(a)</strong> calculates &lfloor;<em>a</em>&rfloor;, and <strong>Together</strong> rationalizes the denominator.  By repeatedly evaluating the last statement, 
+we can compute the sequence {<em>a</em><sub>0</sub>, <em>a</em><sub>1</sub>, <em>a</em><sub>2</sub>, <em>a</em><sub>3</sub>, &hellip;}.  Note 
+that <em>a</em><sub>6</sub> is &radic;<font style="text-decoration: overline;">2</font> plus an integer.  When is the next time in the sequence that <em>a<sub>n</sub></em> is an 
+integer plus &radic;<font style="text-decoration: overline;">2</font>?<br></font>
+</body>
+</html><br>
+&sect;1.5 #29)<br>
+Repeat problem 28, only start with <em>a</em><sub>0</sub> = &radic;<font style="text-decoration: overline;">3</font>.  When is the first time <em>a<sub>n</sub></em> is an integer plus &radic;<font style="text-decoration: overline;">3</font>?  When is the next time in the sequence that <em>a<sub>n</sub></em> is an integer plus &radic;<font style="text-decoration: overline;">3</font>?
+Can you find a third instance?  For an explanation, see [17].
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "sagemath"
+        },
+        kernelOptions: {
+            name: "sagemath",
+            path: "./23permutation-puzzle-GroupTheory"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'sagemath'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jonny, assisted by Tom
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

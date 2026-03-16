@@ -1,0 +1,1581 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>&lt;no title&gt; &#8212; Jonny Workbook</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=550f00eb" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=1ae7504c"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '23permutation-puzzle-GroupTheory/group02';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Jonny Workbook</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Math &amp; FP/Language</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../past/Alevel_math.html">A-level-math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../past/Alevel_math_further.html">A-level-further</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../past/Course_MCM.html">Math Computational Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Course_Lean.html">Lean</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Course_Puzzle_Group.html">Permutation Puzzles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Course_5U.html">5U - Ext III</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">CS &amp; Physics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../past/Course_MIT6001Python.html">MIT_CS6001-Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../past/Course_MIT6002thinking.html">MIT_CS6002-CS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PE100.html">Project Euler Q1-100</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../past/Course_MCM_QM.html">Quantum Mechanics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Notebook &amp; Tom</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../past/nb_past_courses.html">Past courses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../past/nb_Geo.html">Geography and Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../past/nb_lottery_simulator.html">Lottery Math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../past/How_Dad_organise_QM.html">How Dad learn QM</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../Course_MCM_QFT.html">QFT</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/tomctang/jonny" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/23permutation-puzzle-GroupTheory/group02.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <!-- Group02 -->
+<html>
+<body>
+<!-- To make the size of the font bigger for presentations, change the following command from +1 to +2 -->
+<font size="+1">
+<p style='font-size: 36px;font-family: Arial;font-style: italic;font-weight: bold;color: #FF00FF;background-color: #80FFFF;text-align: center;'>
+Abstract Algebra: An Interactive Approach, 3e
+</p>
+<p style='font-family: Geneva;font-style: italic;color: #0000FF;background-color: #FFFFFF;'>
+&copy;2025 This notebook is provided with the textbook, &quot;Abstract Algebra: An Interactive Approach, 3rd Ed.&quot; by William Paulsen. Users of this notebook are encouraged to buy the textbook.
+</p>
+<p style='font-size: 36px;font-family: New York;font-weight: bold;color: #000000;background-color: #FFFFFF;text-align: center;border: 1px;border-style: 
+solid;border-color: #000000;'>
+Chapter 2: Understanding the Group Concept
+</p>
+<p style='text-align: center;'>Initialization:  This cell MUST be evaluated first:</p><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;absalgtext2.sage&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+The above command must be evaluated as the worksheet is loaded.  As long as the message "Initialization Done" appears after the command, we are ready to proceed.<br><br><p><br><br>
+<a href="#sec21">Introduction to Groups</a><br>
+<a href="#sec22">Modular Congruence</a><br>
+<a href="#sec23">The Definition of a Group</a><br>
+<a href="#sec2p"><em>SageMath</em> Interactive Problems</a><br></p>
+<p><a name="sec21" id="sec21"></a></p>
+<h1>Introduction to Groups</h1>
+<p><br><br>
+To help introduce us to the concept of groups, let us meet a triangle which, through <em>SageMath</em>, will dance before your eyes! To see Terry the Triangle, execute
+the following <em>SageMath</em> command. This is done by clicking the mouse inside the rectangle in which the command appears, and press Shift + Enter.  If you are not using CoCalc, you could
+also click on the expression, then click on the “Evaluate” button that appears.  Try it!<br><br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ShowTerry</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Terry may not look very impressive, but with <em>SageMath</em> animation, Terry can do some tricks. For example, Terry can rotate with the following command:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Terry</span><span class="p">(</span><span class="n">RotRt</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+This command takes a little longer to execute.  Notice that a light green bar appears becide the area where the answer will appear in order to assure you that the command 
+is being executed.  As you can see, <strong>RotRt</strong> is the abbreviation for rotation right, or clockwise.  Terry can rotate counterclockwise with the command:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Terry</span><span class="p">(</span><span class="n">RotLft</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Terry can do more than just rotate. For example, Terry can spin in three dimensions.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Terry</span><span class="p">(</span><span class="n">Spin</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Terry can also do some gymnastic tricks, such as flipping over the right and left shoulder.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Terry</span><span class="p">(</span><span class="n">FlipRt</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Terry</span><span class="p">(</span><span class="n">FlipLft</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+This makes 5 different moves that Terry can do. There is one more trick that Terry can perform:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Terry</span><span class="p">(</span><span class="n">Stay</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Good triangle!<br><br>
+<p>These six commands are the six dance steps that Terry can do. Terry can combine these dance steps to form a dance routine. We separate the dance steps by asterisks.
+Here is a simple routine that Terry can do:<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Terry</span><span class="p">(</span><span class="n">FlipRt</span> <span class="o">*</span> <span class="n">Spin</span> <span class="o">*</span> <span class="n">RotRt</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+EXPERIMENT:<br>
+You may have noticed in the previous animation that Terry ends the dance routine in the original orientation.  What if the <em>order</em> of the dance steps were 
+changed?  Edit the last command to change the order of Terry's steps, and see what happens. <br><br>
+Here is a shorter dance sequence for Terry.  Pay special attention to how Terry is oriented after the dance routine. <br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Terry</span><span class="p">(</span><span class="n">FlipRt</span> <span class="o">*</span> <span class="n">Spin</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Sometimes Terry gets tired of doing all of these long routines.  When this happens, Terry takes a short cut to get to the final orientation.  For example, the above 
+routine leaves Terry in the same orientation as <strong>RotLft</strong>, and so Terry would simply rotate instead of doing the extra gymnastics.  Executing the follow 
+command allows Terry to take short cuts in all dance routines.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitTerry</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Now let's ask Terry to do the same dance routine.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Terry</span><span class="p">(</span><span class="n">FlipRt</span> <span class="o">*</span> <span class="n">Spin</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Notice that Terry simply rotates to get to the correct orientation.  Rather than calling Terry a bad triangle for being lazy, we must commend Terry for being smart enough 
+to know that a flip to the right followed by a spin is equivalent to a counter-clockwise rotation.  In essence Terry has learned how to &quot;multiply&quot; two dance 
+steps together.<br><br>
+<p>We can use <em>SageMath</em> to multiply dance steps together, using the star to indicate Terry’s multiplication.  Thus, <em>SageMath</em> simplifies
+<strong>FlipRt</strong> · <strong>Spin</strong> as follows: <br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">FlipRt</span> <span class="o">*</span> <span class="n">Spin</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+We can display a "multiplication table" of all of Terry's dance steps by the following command<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CayleyTable</span><span class="p">([</span><span class="n">Stay</span><span class="p">,</span> <span class="n">FlipRt</span><span class="p">,</span> <span class="n">RotRt</span><span class="p">,</span> <span class="n">FlipLft</span><span class="p">,</span> <span class="n">RotLft</span><span class="p">,</span> <span class="n">Spin</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+To read this table, we look for the first of the dance steps on the left hand side of the table, and the second of the dance steps on the top.  This table is often referred to 
+as a <em>Cayley table</em>.  Thus, to determine
+<strong>FlipRt</strong> &lowast; <strong>Spin</strong>, we look at the right hand entry of the second row to find <strong>RotLft</strong>. 
+<p><br><br>
+This table illuminates some properties of the dance steps.  Each of the six dance steps is in a different color, to highlight these properties.  One property this
+table demonstrates that the combination of any two dance steps is equivalent to one of the six dance steps.<br><br></p>
+<p>Another of the easiest properties to observe is in the <strong>Stay</strong> row and column. Notice that whenever the command <strong>Stay</strong> is combined with any
+other dance step, it leaves that dance step unchanged. Try this for yourself:<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Stay</span> <span class="o">*</span> <span class="n">RotRt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">RotRt</span> <span class="o">*</span> <span class="n">Stay</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+EXPERIMENT:<br>
+Replace <strong>RotRt</strong> in the above two <em>SageMath</em> commands with a different dance step and re-evaluate them. Notice what happens.<br><br>
+You may observe that the Stay command acts like the number 1 in our standard multiplication.  In mathematical notation, we say that 
+<p style='text-align: center;'><strong>Stay</strong> &lowast; <em>x</em> = <em>x</em>  and   <em>x</em> &lowast; <strong>Stay</strong> = <em>x</em></p>
+for all dance steps <em>x</em>.  We call <strong>Stay</strong> the <em>identity</em> of the dance steps.<br><br>  
+<p>But there is a property of these dance steps that is unlike our standard multiplication.  In a previous experiment, you were asked to change the order of the dance
+steps in a routine to see if that would affect the final orientation.  In fact, it did! Check out the following two products:<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Spin</span> <span class="o">*</span> <span class="n">FlipRt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">FlipRt</span> <span class="o">*</span> <span class="n">Spin</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+As we see, the product depends on the order in which the dance steps are multiplied. In other words,
+<p style='text-align: center;'><em>x</em>&lowast;<em>y</em>   is sometimes not equal to   <em>y</em>&lowast;<em>x</em>.</p>
+This is perhaps the biggest difference between Terry's algebra and the algebra that we are familiar with.  We are familar with the 
+<em>commutative property</em> of numbers:
+<p style='text-align: center;'><em>x y</em> = <em>y x</em>   for all real numbers <em>x</em> and <em>y</em>.</p>
+Since Terry's dance steps do not obey this law, we say that the dance steps are <em>non-commutative</em>.<br><br>
+<p>There is another property that we are familiar with in standard algebra:</p>
+<p style='text-align: center;'><em>x</em> (<em>y z</em>) = (<em>x y</em>) <em>z</em>   for all numbers <em>x</em>, <em>y</em>, and <em>z</em>.</p>
+This is called the <em>associative law of multiplication</em>.  Do Terry's dance steps obey this law?<br><br>
+<p>EXPERIMENT:<br>
+Compare the two products:<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">Spin</span> <span class="o">*</span> <span class="n">RotRt</span><span class="p">)</span> <span class="o">*</span> <span class="n">FlipLft</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Spin</span> <span class="o">*</span> <span class="p">(</span><span class="n">RotRt</span> <span class="o">*</span> <span class="n">FlipLft</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Try changing the dance steps to see if we always get the same product, regardless of where the parenthesis are.<br><br>
+There is another property that we can observe from Terry's multiplication table.  Here it is again.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CayleyTable</span><span class="p">([</span><span class="n">Stay</span><span class="p">,</span> <span class="n">FlipRt</span><span class="p">,</span> <span class="n">RotRt</span><span class="p">,</span> <span class="n">FlipLft</span><span class="p">,</span> <span class="n">RotLft</span><span class="p">,</span> <span class="n">Spin</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Notice that the identity dance step, <strong>Stay</strong> is in every row and every column in the table.  (Notice the yellow squares.)  This indicates that every dance 
+step has some dance step which &quot;undoes&quot; it.  For example, <strong>RotLft</strong> will undo a <strong>RotRt</strong> command, since<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">RotLft</span> <span class="o">*</span> <span class="n">RotRt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+gives us the identity element. Likewise, the <strong>Spin</strong> command undoes itself, for two spins in secession<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Spin</span> <span class="o">*</span> <span class="n">Spin</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+returns to the original position.<br><br>
+<p>Using mathematical notation again, we say that for every dance step <em>x</em>, there is some dance step <em>y</em> such that</p>
+<p style='text-align: center;'><em>x</em>&lowast;<em>y</em> = <strong>Stay</strong>.</p>
+The dance step <em>y</em> is called an <em>inverse</em> of <em>x</em>. For example, <strong>RotLft</strong> is the inverse of <strong>RotRt</strong>, and 
+<strong>Spin</strong> is the inverse of <strong>Spin</strong>. 
+<p><br><br>
+Terry claims that if <em>x</em>∗<em>y</em> = <strong>Stay</strong>, then <em>y</em>∗<em>x</em> will also equal <strong>Stay</strong>.
+Although this can be seen to be true by looking at the multiplication table, can you prove that this is so using only the properties of Terry’s dance steps that we
+have discovered?  Here is a summary of what we have found so far:<br>
+<br></p>
+<p>1) The combination of any two dance steps is equivalent to one of the six dance steps.  <br>
+  In other words, there are no “holes” in the Cayley table.<br><br></p>
+<p>2) The <em>order</em> in which the dance steps are performed are important.  <br>
+  For example, <strong>Spin</strong> ∗ <strong>FlipRt</strong> ≠ <strong>FlipRt</strong> ∗ <strong>Spin</strong>.<br><br></p>
+<p>3) The order in which a dance routine is simplified does not matter.<br>
+  That is,  (<em>x</em>∗<em>y</em>)∗<em>z</em>  =  <em>x</em>∗(<em>y</em>∗<em>z</em>) where <em>x</em>, <em>y</em>, and
+<em>z</em> represent three dance steps.<br><br></p>
+<p>4) Any dance step combined with Stay yields the same dance step.<br>
+  That is,  <em>x</em>∗<strong>Stay</strong> = <em>x</em>  and  <strong>Stay</strong>∗<em>x</em> = <em>x</em>  for any dance step <em>x</em>.<br><br></p>
+<p>5) Every dance step has another dance step that “undoes” it.  That is,<br />
+  for any dance step <em>x</em>, there is a dance step <em>y</em> such that <em>x</em>·<em>y</em> = <strong>Stay</strong>.<br>  For example, a step that undoes <strong>RotRt</strong> is <strong>RotLft</strong>.<br><br></p>
+<p>We will introduce the following mathematical terminology to express each of these properties.<br><br></p>
+<p>1) The dance steps are <em>closed</em> under under the operation ∗.<br>
+  Another way of saying this is that ∗ is a <em>binary operator</em>.<br><br>
+2) The dance steps are not <em>commutative</em>.<br><br><br />
+3) The dance steps are <em>associative</em>.<br><br><br />
+4) There is an <em>identity</em> dance step.<br><br><br />
+5) Every dance step has an <em>inverse</em>.<br><br></p>
+<p>With just these properties, can you prove the following proposition on your own without looking at the proof?</p>
+<p><a name="prop21ret" id="prop21ret"></a>
+PROPOSITION 2.1<br></p>
+<p>If <em>y</em> is an inverse of <em>x</em>, then <em>x</em> is an inverse of <em>y</em>.  Furthermore, <em>x</em> will be the <em>only</em> inverse of <em>y</em>.<br><br></p>
+<p>Hint: Because we don’t have the commutative property, we must use some other strategy. Recall that <em>y</em> must also have an inverse!<br><br></p>
+<p><a href="#prop21">Click here for the proof.</a></p>
+<p />
+<p>All of the proofs in these notebooks appear near the end, before the <em>SageMath</em> problems, with links allowing us to go directly to them.  This gives the user a
+chance to work the proof out on him own before peeking at the books version.   Notice that we did not yet assume that there is only one identity element.  However,
+this fact immediately follows from Proposition 2.1.  (See Problems 3 and 4.) <br></p>
+<br>
+DEFINITION 2.1   We use the notation <em>x</em><sup>-1</sup> for the unique inverse of the element <em>x</em>.<br><br>
+<p>This is entered into <em>SageMath</em> as<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Spin</span><span class="o">^-</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Proposition 2.1 can now be expressed simply as (<em>x</em><sup>-1</sup>)<sup>-1</sup> = <em>x</em>.  Is it true that (<em>x</em>&lowast;<em>y</em>)<sup>-1</sup> = 
+<em>x</em><sup>-1</sup>&lowast;<em>y</em><sup>-1</sup>, as we are accustomed too?<br><br>
+<p>EXPERIMENT:<br>
+Try the following commands to see if they give the same result.<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">Spin</span> <span class="o">*</span> <span class="n">RotRt</span><span class="p">)</span><span class="o">^-</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Spin</span><span class="o">^-</span><span class="mi">1</span> <span class="o">*</span> <span class="n">RotRt</span><span class="o">^-</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Try using different dance steps in place of <strong>Spin</strong> amd <strong>RotRt</strong>. What do you observe?<br><br>
+Apparently, (<em>x</em>&lowast;<em>y</em>)<sup>-1</sup> is not always equal to <em>x</em><sup>-1</sup>&lowast;<em>y</em><sup>-1</sup>. 
+But Terry would tell you that in order to undo a sequence of dance steps, one must begin by undoing the last dance step. 
+Thus, the way to undo the routine (<strong>Spin</strong> &lowast; <strong>RotRt</strong>) is by first rotating left, and spinning back to the original position.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">Spin</span> <span class="o">*</span> <span class="n">RotRt</span><span class="p">)</span><span class="o">^-</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">RotRt</span><span class="o">^-</span><span class="mi">1</span> <span class="o">*</span> <span class="n">Spin</span><span class="o">^-</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br> 
+This suggests that 
+<p style='text-align: center;'>(<em>x</em>&lowast;<em>y</em>)<sup>-1</sup> = <em>y</em><sup>-1</sup>&lowast;<em>x</em><sup>-1</sup>.</p>
+Can you prove this? <p><a name="prop22ret" id="prop22ret"></a><br />
+PROPOSITION 2.2<br></p>
+<p style='text-align: center;'>(<em>x</em>&lowast;<em>y</em>)<sup>-1</sup> = <em>y</em><sup>-1</sup>&lowast;<em>x</em><sup>-1</sup>.</p>
+<p><a href="#prop22">Click here for the proof.</a></p>
+<p />
+Let us see if we can find any more patterns in Terry's multiplication table. Here is the table again:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CayleyTable</span><span class="p">([</span><span class="n">Stay</span><span class="p">,</span> <span class="n">FlipRt</span><span class="p">,</span> <span class="n">RotRt</span><span class="p">,</span> <span class="n">FlipLft</span><span class="p">,</span> <span class="n">RotLft</span><span class="p">,</span> <span class="n">Spin</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Before we noticed that every row and every column contained the identity element, <strong>Stay</strong>.  Which other elements have this property?<br><br>
+<p>In answering this, you probably discovered that every row and every column in this table contains all six elements.  If we disregard the heading row and column in
+the table, each element appears exactly once in each row, and once in each column.  This formation is referred to as a <em>Latin square</em>.  How could we show that
+this would happen using only the four properties we have been using?<br><br></p>
+<p>First we must translate this pattern into a mathematical statement before it can be proven.  To say that the element <strong>RotRt</strong> appears only once in
+the row beginning with <strong>Spin</strong> is to say that there is only one dance step <em>x</em> such that</p>
+<p style='text-align: center;'><strong>Spin</strong> &lowast; <em>x</em> = <strong>RotRt</strong>.</p>
+So we can say that each row contains exactly one of every element by the following statement:<p><a name="prop23ret" id="prop23ret"></a><br />
+PROPOSITION 2.3<br></p>
+<p>If <em>a</em> and <em>b</em> are given, then there exists a unique <em>x</em> such that</p>
+<p style='text-align: center;'><em>a</em>&lowast;<em>x</em> = <em>b</em>.</p>
+<p><a href="#prop23">Click here for the proof.</a></p>
+<p />
+Can you use this proposition to show that any <em>column</em> of the table contains only one of each element?   This is essentially Problem 6.<br><br>
+<p>Terry’s dance steps provides us with a new and rather different type of binary operator.  Even though there are very few of Terry’s dance steps, we already can see
+some of the patterns that can appear when we consider the “multiplication” of these
+dance steps.  In the next section we will consider another operation that has many of the
+same patterns. <br><br></p>
+<p><a name="sec22" id="sec22"></a></p>
+<h1>Modular Congruence</h1>
+<br>
+We have seen that one operation, namely the combination of Terry's dance steps, produces some interesting
+properties such as the Latin square property.  In this section, we will explore different ways of combining two integers 
+that has many of the same properties, using ordinary integers and modulo arithmetic.  These new operators will end up having some important applications.  These operations stem from a property of adding 
+and multiplying standard integers.<br><br>
+<p>We have already introduced modular arithmetic in §1.4.  We defined <em>x</em> <strong>mod</strong> <em>n</em> as the remainder <em>r</em> when <em>x</em> is divided by <em>n</em>,
+using the division algorithm.  But we can also say that two integers <em>x</em> and <em>y</em> are <em>equivalent</em> if <em>x</em> <strong>mod</strong> <em>n</em> =
+<em>y</em> <strong>mod</strong> <em>n</em>.  We will introduce another notation for this relation.<br><br></p>
+<p>DEFINITION 2.2<br>
+Let <em>x</em>, <em>y</em>, and <em>n</em> be integers.  We say <em>x</em> and <em>y</em> are <em>equivalent modulo</em> <em>n</em>, written</p>
+<p style='text-align: center;'><em>x</em> &equiv; <em>y</em>   (mod <em>n</em>) </p>
+if, and only if, there is an integer <em>k</em> such that 
+<p style='text-align: center;'>(<em>x</em> &minus; <em>y</em>) = <em>k n</em>.</p>
+<p>Note the slight difference in notation between the operator <strong>mod</strong> (expressed in boldface) and the above notation (where mod is not in boldface).  The two notations are clearly related, since  <em>x</em> ≡ <em>y</em> (mod <em>n</em>) means that <em>x</em> <strong>mod</strong> <em>n</em> = <em>y</em> <strong>mod</strong> <em>n</em>.<br><br></p>
+<p>The new notation also satisfies three very important properties for equivalence (mod <em>n</em>).<br><br></p>
+<ol class="arabic simple">
+<li><p>(Reflexive) Every integer <em>x</em> is equivalent to itself.<br></p></li>
+<li><p>(Symmetric) If <em>x</em> is equivalent to <em>y</em>, then <em>y</em> is equivalent to <em>x</em>.<br></p></li>
+<li><p>(Transitive) If <em>x</em> is equivalent to <em>y</em>, and <em>y</em> in turn is equivalent to <em>z</em>, then <em>x</em> is equivalent to <em>z</em>.<br><br></p></li>
+</ol>
+<p>DEFINITION 2.3<br>
+Any relation that satisfies these three properties is called an <em>equivalence relation</em>.  We will use the notation <em>x</em> ∼ <em>y</em> to say
+that <em>x</em> is equivalent to <em>y</em> for a generic equivalence relation.<br><br></p>
+<p>Let us prove that equivalence (mod <em>n</em>) forms an equivalence relation.</p>
+<p><a name="prop24ret" id="prop24ret"></a><br />
+PROPOSITION 2.4<br></p>
+<p>Let <em>n</em> be a positive integer.  Then the definition of</p>
+<p style='text-align: center;'><em>x</em> &equiv; <em>y</em> (mod <em>n</em>)</p>
+forms an equivalence relation on the set of integers.<br><br>
+<p><a href="#prop24">Click here for the proof.</a></p>
+<p />
+<p>Whenever an equivalence relation is defined on a set, the set can be broken up into disjoint <em>equivalence classes</em>, where each equivalence class is the set of elements related to one element in the class.<br><br></p>
+<p>DEFINITION 2.4<br>
+Let <em>x</em> ∼ <em>y</em> be an equivalence relation defined on a set <em>S</em>.  Then the equivalence class [<em>a</em>] is the set of elements of <em>S</em>
+related to <em>a</em>.  That is,</p>
+<p style='text-align: center;'>[<em>a</em>] = { <em>s</em> &isin; <em>S</em> | <em>s</em> &sim; <em>a</em> }.</p>
+<p>EXAMPLE:<br>
+In the relation <em>x</em> ≡ <em>y</em> (mod 10), the set [3] will be the set of integers equivalent to 3 (mod 10), giving the set</p>
+<p style='text-align: center;'>[3] = {&hellip; -37, -27, -17, -7, 3, 13, 23, 33, 43, &hellip;}.</p>                                                  
+Other equivalence classes in this relation are similar.<br><br>
+<p>It is not hard to show that the set of integers can be broken up into disjoint sets using the equivalence classes.<br><br></p>
+<p />
+<a name="prop25ret" id="prop25ret"></a>  
+PROPOSITION 2.5<br>
+If <em>x</em> &sim; <em>y</em> is an equivalence relation on a set <em>S</em>, then <em>S</em> is the disjoint union of equivalence classes.<br><br>
+<p><a href="#prop25">Click here for the proof.</a></p>
+<p />
+<p>Many of the properties of modular arithmetic found in §1.4 can be translated in terms of equivalence relations.  For example, Proposition 1.2 can be restated
+by saying that if</p>
+<p style='text-align: center;'><em>x</em> &equiv; <em>a</em> (mod <em>n</em>)&emsp; and  &emsp; <em>y</em> &equiv; <em>b</em> (mod <em>n</em>),</p>                      
+then <em>x</em> + <em>y</em> &equiv; <em>a</em> + <em>b</em> (mod <em>n</em>) and <em>x y</em> &equiv; <em>a b</em> (mod <em>n</em>).<br><br>
+<p>These statements make it clear that to add or multiply two numbers modulo <em>n</em>, we can choose any representative element from the equivalence class.<br><br></p>
+<p>One common exercise with modulo arithmetic is solving the linear congruence equation (<em>m x</em>) <strong>mod</strong> <em>n</em> = <em>a</em>, where <em>m</em> is coprime to <em>n</em>.  In the new notation this becomes</p>
+<p style='text-align: center;'><em>m x</em> &equiv; <em>a</em> (mod <em>n</em>).</p> 
+<p>Although this can be converted to a Chinese remainder problem, there is another way to solve this if <em>m</em> happens to have only small prime factors.  The method relies on the following proposition.</p>
+<p><a name="prop26ret" id="prop26ret"></a><br />
+PROPOSITION 2.6<br></p>
+<p>If <em>a b</em> ≡ <em>a c</em> (mod <em>n</em>), and if <em>a</em> is coprime to <em>n</em>, then
+<em>b</em> ≡ <em>c</em> (mod <em>n</em>).<br><br></p>
+<p><a href="#prop26">Click here for the proof.</a></p>
+<p />
+<p>This proposition essentially says we can cancel any factors coprime to <em>n</em> from both sides of the equation
+<em>m x</em> ≡ <em>a</em> (mod <em>n</em>).  If there are no common factors, we can keep adding (or subtracting)
+<em>n</em> to the right-hand side until we get a common factor.<br><br></p>
+<p>EXAMPLE:<br>
+Solve the linear congruence equation 12<em>x</em> ≡ 7 (mod 19).<br><br></p>
+<p>SOLUTION:<br>
+We keep adding 19 to the right-hand side, canceling out any common factors we find.</p>
+<p style='text-align: center;'>12<em>x</em> &equiv; 7&ensp;&ensp;(mod 19)</p>
+<p style='text-align: center;'>12<em>x</em> &equiv; 26&ensp;(mod 19)</p>
+<p style='text-align: center;'>&ensp;6<em>x</em> &equiv; 13&ensp;(mod 19)</p>
+<p style='text-align: center;'>&ensp;6<em>x</em> &equiv; 32&ensp;(mod 19)</p>
+<p style='text-align: center;'>&ensp;3<em>x</em> &equiv; 16&ensp;(mod 19)</p>
+<p style='text-align: center;'>&ensp;3<em>x</em> &equiv; 35&ensp;(mod 19)</p>
+<p style='text-align: center;'>&ensp;3<em>x</em> &equiv; 54&ensp;(mod 19)</p>
+<p style='text-align: center;'>&ensp;&ensp;<em>x</em> &equiv; 18&ensp;(mod 19)</p>
+<br>
+It should be noted that if <em>m</em> is large, converting to a Chinese remainder problem is much more efficient, since this method does not rely on the prime factorization of <em>m</em>.<br><br>
+<p>EXAMPLE:<br>
+Consider the set of numbers from {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, with the binary operation being <em>x</em> ∗ <em>y</em> = (<em>x</em> + <em>y</em>) mod 10.
+We can have <em>SageMath</em> define this binary operation with the command<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z</span> <span class="o">=</span> <span class="n">AddMod</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span> <span class="n">Z</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+This produces a set of 10 elements, 
+which <em>SageMath</em> displays using curly brackets.  Although the elements of <em>Z</em> are displayed
+as integers, we will soon see that they have differnt properties than ordinary integers.  
+We will continue 
+to use the star as the way to combine two members of the list.  So even though the operation is 
+<em>addition modulo 10</em>, we would write 4 &lowast; 7 = 1.  Although it seems strange to use the 
+star instead of the plus sign, for consistency we will always use the star for the operator, whatever that operator is.  So the one thing we must 
+remember is that <em>the star or dot does not always mean multiplication</em>.  Rather, the dot represents the operation in the current context.  For Terry's group, 
+the dot represented combining two dance steps.  Here, it represents addition modulo 10.<br><br>
+<p>In <em>SageMath</em>, we will use the star to indicate the operation, as we did for Terry’s dance
+steps.  In order to access the elements in the set <strong>Z</strong>, we will put
+a number in brackets to indicate the location number in the set.  So here is how we can combine the fourth and seventh elements in <em>Z</em>.<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">*</span> <span class="n">Z</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+We will still use the command <strong>CayleyTable</strong> to give the Cayley table of the set.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CayleyTable</span><span class="p">(</span><span class="n">Z</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Can we find any patterns in this table, as we did in Terry's multiplication table?  Yes, and even more.  We can see that this table is a Latin square&mdash;every row 
+and every column contains one of each number.  Notice the diagonal streaks of color in the table.  This Caylay table has symmetry&mdash;imagine a mirror placed 
+along the northwest to southeast corners.  What is causing this symmetry?<br><br>
+<p>EXPERIMENT:<br>
+We saw that Terry’s multiplication was not commutative.  That is, <em>x</em>∗<em>y</em> did not always equal <em>y</em>∗<em>x</em>.  What about adding
+modulo 10? Try the following commands <br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">*</span> <span class="n">Z</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="o">*</span> <span class="n">Z</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Are these the same? Try this with different numbers.<br><br>
+The symmetry in the table comes from the fact that <em>x</em>&lowast;<em>y</em> is always equal to <em>y</em>&lowast;<em>x</em>.  We say that addition modulo 10 
+is <em>commutative</em>.  Thus, we can see 5 properties from the table:<br><br>    
+<p>1) For any two numbers <em>x</em> and <em>y</em> in {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, <em>x</em>∗<em>y</em> is in that set. <br><br />
+(Recall that we are using the star to indication the operation, regardless of what that operation is.  In this example, the operation is addition modulo 10.)<br><br></p>
+<p>2) (<em>x</em>∗<em>y</em>)∗<em>z</em>  =  <em>x</em>∗(<em>y</em>∗<em>z</em>)  for any  <em>x</em>, <em>y</em>,  and <em>z</em>.
+<br><br></p>
+<p>3) <em>x</em>∗0 = <em>x</em>  and  0∗<em>x</em> = <em>x</em>  for all <em>x</em>.<br><br></p>
+<p>4) For any <em>x</em>, there is a <em>y</em> such that  <em>x</em>∗<em>y</em> = 0.<br><br></p>
+<p>5) For any <em>x</em> and <em>y</em>, <em>x</em>∗<em>y</em> = <em>y</em>∗<em>x</em>.<br><br></p>
+<p>Notice that 0 now acts like Terry’s command <strong>Stay</strong>. This is the <em>identity</em>.<br><br></p>
+<p>Besides the table, <em>SageMath</em> has another way of picturing the operation by means of circular graphs.  Enter in the following <em>SageMath</em> command:<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">(</span><span class="n">Z</span><span class="p">,</span> <span class="n">Add</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+As you can see, <em>SageMath</em> labels 10 equi-distant points on the circle with the digits 0 through 9, like a clock. It then draws an arrow from each point to the 
+point produces by &quot;adding 1 modulo 10.&quot;<br><br>
+<p>EXPERIMENT:<br>
+Create eight more circle graphs by changing the <strong>Add(1)</strong> in the last command to <strong>Add(2)</strong>, <strong>Add(3)</strong>,
+<strong>Add(4)</strong>, ⋯ <strong>Add(9)</strong>. Which circular graph is the prettiest?<br><br></p>
+<p>If none of those graphs were pretty enough, <em>SageMath</em> can graph several of them at the same time. For example, the command<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">(</span><span class="n">Z</span><span class="p">,</span> <span class="n">Add</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">Add</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">Add</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">Add</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span> <span class="n">Add</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+draws a circular graph with five different colored arrows.  The red arrows represent adding 1 modulo 10, the green arrows represent adding 2, the purple arrows 
+adding 3, the orange arrows adding 4, and the grey arrows represent adding 5 modulo 10.<br><br>
+<p>We can also draw a circular graph of the inverses of the elements. The command<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">(</span><span class="n">Z</span><span class="p">,</span> <span class="n">Inv</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+draws an arrow from each point to its additive inverse.  Notice that every arrow has a corresponding arrow in the opposite direction, which indicates that
+(<em>x</em><sup>-1</sup>)<sup>-1</sup> = <em>x</em>, as we found in Proposition 2.1.  Also notice that 0 and 5 are there own inverses, as indicated by the two 
+loops.<br><br>
+<p>We are more familiar with base 10 arithmetic since most of us have ten fingers.  However, this modular arithmetic can be done in other bases as well.  The beings on
+the planet Xantz have seven fingers (three on each hand, and one coming out of the nose) so they only use the digits 0, 1, 2, 3, 4, 5, and 6. Their modular
+arithmetic would look like this:</p>
+<p style='text-align: center;'>4 + 5 &equiv; 2  (mod 7), &emsp; 4 &times; 5 &equiv; 6  (mod 7). </p>
+<br>
+(Actually, the symbols used on Xantz don't look anything like the symbols we use, so this is really a translation of what they would write.)<br><br>
+<p>We can have <em>SageMath</em> switch to base 7 with one easy command:<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z</span> <span class="o">=</span> <span class="n">AddMod</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span> <span class="n">Z</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+We now can look at the Cayley tables and circle graphs of the set {0,1,2,3,4,5,6}:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CayleyTable</span><span class="p">(</span><span class="n">Z</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">(</span><span class="n">Z</span><span class="p">,</span> <span class="n">Add</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">Add</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">Add</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Notice that the patterns that we observed in modular 10 arithmetic are showing up hear as well. <br><br>
+<p>EXPERIMENT:<br>
+Try creating tables and circle graphs for modulus other than 7 and 10. Do they all form the same basic pattern?<br></p>
+<br>
+We can have <em>SageMath</em> define the period to be <em>multiplication</em> modulo 7 instead of addition. This is done by the command:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z</span> <span class="o">=</span> <span class="n">MultMod</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span> <span class="n">Z</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CayleyTable</span><span class="p">(</span><span class="n">Z</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Does this Cayley table have the same features that we have been seeing? No it doesn't!  But if we remove the 0 row and column,<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CayleyTable</span><span class="p">([</span><span class="n">Z</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">Z</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">Z</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="n">Z</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span><span class="n">Z</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span><span class="n">Z</span><span class="p">[</span><span class="mi">6</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>we see that the remainder of the
+table would satisfy the same properties that we observed in Terry’s multiplication table, such as the Latin square property. The identity is now the number 1. This
+table is in fact symmetrical, indicating that multiplication modulo 7 is commutative.<br><br></p>
+<p>Here is a circular graph of multiplication modulo 7: <br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">(</span><span class="n">Z</span><span class="p">,</span> <span class="n">Mult</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">Mult</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Here, the red arrow indicates multiplication by 2, and the green arrow represents multiplication by 3 modulo 7.<br><br>
+<p>Here is a circular graph of the inverse elements: <br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">(</span><span class="n">Z</span><span class="p">,</span> <span class="n">Inv</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+What happens to 0? Recall that the inverse of <em>x</em> is defined to be the number <em>y</em> such that <em>x</em>&lowast;<em>y</em> = 1.  But the equation 
+0&lowast;<em>y</em> &equiv; 1 (mod 7) has no solution, so 0 does not have an inverse (as we saw in the Cayley table.)  Thus, when <em>SageMath</em> graphs the 
+inverse function, 0 is sent to a question mark to indicate that there is no inverse of 0. 
+<br>
+<br>
+EXPERIMENT:<br>
+Try having <em>SageMath</em> work with multiplication with a modulo other than 7, and form a circle graph of the inverse function.  Is 0 the only number that does not have 
+an inverse? If not, can you find a pattern to the numbers which do not have an inverse? <br><br>
+In the last experiment, you probably discovered that there may be many numbers without a multiplicative inverse. For example, by looking at the multiplication 
+table modulo 10, <br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z</span> <span class="o">=</span> <span class="n">MultMod</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">CayleyTable</span><span class="p">(</span><span class="n">Z</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+we find several rows that do not contain any 1's. These rows indicate the numbers without inverses modulo 10.  We can see these more clearly by looking at the 
+circle graph of the inverse function. <br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">(</span><span class="n">Z</span><span class="p">,</span> <span class="n">Inv</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+So 0, 2, 4, 5, 6, and 8 do not have inverses. Do you see a pattern in these numbers? <br>
+Hint: 2 does not have an inverse because there is no integer <em>x</em> such that                
+<p style='text-align: center;'>2 <em>x</em> = 1 + 10 <em>n</em></p>
+for some <em>n</em>.<br><br>
+<p>To help see the pattern, look at multiplication modulo 15:<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z</span> <span class="o">=</span> <span class="n">MultMod</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">CircleGraph</span><span class="p">(</span><span class="n">Z</span><span class="p">,</span> <span class="n">Inv</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+We see that 0, 3, 5, 6, 9, 10, and 12 do not have inverses.  There are eight numbers which do have inverses modulo 15.  What if we just considered those 
+eight elements?<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="n">Z</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">Z</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">Z</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">Z</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">Z</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">Z</span><span class="p">[</span><span class="mi">11</span><span class="p">],</span> <span class="n">Z</span><span class="p">[</span><span class="mi">13</span><span class="p">],</span> <span class="n">Z</span><span class="p">[</span><span class="mi">14</span><span class="p">]]</span>
+<span class="n">CircleGraph</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">Inv</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+By using this smaller set of numbers, every element now has an inverse. What if we looked at the Cayley table of this smaller set?<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CayleyTable</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+One again, we can see some of the patterns in this table that we have seen before. Notice that this is a Latin square&mdash;every row and column contains each of 
+the eight numbers. In fact, we can see the symmetry in this table which indicates that the multiplication is commutative. Thus, we see that<br><br>
+<p>1) For any two numbers <em>x</em> and <em>y</em> in {1, 2, 4, 7, 8, 11, 13, 14}, <em>x</em>∗<em>y</em> is in that set. <br><br><br />
+2) (<em>x</em>∗<em>y</em>)∗<em>z</em> = <em>x</em>∗(<em>y</em>∗<em>z</em>) for any <em>x</em>, <em>y</em>, and <em>z</em>.<br><br><br />
+3) <em>x</em> ∗ 1 = <em>x</em>  and  1 ∗ <em>x</em> = <em>x</em>  for all <em>x</em>.<br><br><br />
+4) For any <em>x</em>, there is a <em>y</em> such that <em>x</em> ∗ <em>y</em> = 1.<br><br><br />
+5) For any <em>x</em> and <em>y</em>, <em>x</em> ∗ <em>y</em> = <em>y</em> ∗ <em>x</em>.<br><br></p>
+<br>
+EXPERIMENT:<br>
+Try this procedure working with different bases, such as <em>n</em> = 8 or <em>n</em> = 9: First type in <strong>Z = MultMod(</strong><em>n</em><strong>)</strong> which 
+defines the multiplication modulo <em>n</em>.  Then use make a circle graph of the <strong>Inv</strong> function to see which numbers have inverses 
+modulo <em>n</em>.  Finally, make a Cayley table of those numbers. Will this table always form a Latin square?<br><br>
+If the Latin square pattern always seems to appear for the invertible numbers, can we prove that this pattern will always appear?<p><a name="prop27ret" id="prop27ret"></a>
+PROPOSITION 2.7<br></p>
+<p>For <em>n</em> a positive integer greater than 1, let <em>G</em> be the set of all positive numbers
+less than <em>n</em> that have inverses modulo <em>n</em>. Let the operation (∗) denote multiplication modulo <em>n</em>. Then the set <em>G</em> has the following properties:<br><br></p>
+<p>1) For any two numbers <em>x</em> and <em>y</em> in <em>G</em>, <em>x</em>∗<em>y</em> is in <em>G</em>.<br></p>
+<p>2) (<em>x</em>∗<em>y</em>)∗<em>z</em> = <em>x</em>∗(<em>y</em>∗<em>z</em>) for any <em>x</em>, <em>y</em>, and
+<em>z</em>.<br></p>
+<p>3) <em>x</em>∗1 = 1∗<em>x</em> = <em>x</em> for all <em>x</em>.<br></p>
+<p>4) For any <em>x</em> that is in <em>G</em>, there is a <em>y</em> in <em>G</em> such that <em>x</em>∗<em>y</em> = 1.<br></p>
+<p>5) For any <em>x</em> and <em>y</em>, <em>x</em>∗<em>y</em> = <em>y</em>∗<em>x</em>.<br><br></p>
+<p><a href="#prop27">Click here for the proof.</a></p>
+<p />
+Although we have found that the invertible elements modulo <em>n</em> will always have a multiplication table which forms a Latin square, we have only hinted at which 
+numbers are invertible modulo <em>n</em>.<br><br>
+<p>We saw that the numbers 0, 2, 4, 5, 6, and 8 are not invertible modulo 10.  Note that these numbers all have a prime factor in common with 10:  0, 2, 4, 6, 8, and 10
+are multiples of 2, whereas 0, 5, and 10 are multiples of 5. The remaining numbers, 1 ,3 ,7, and 9, are coprime to 10.  Let us demonstrate why this is true in general.</p>
+<p><a name="prop28ret" id="prop28ret"></a>
+PROPOSITION 2.8<br>
+Let <em>n</em> be in ℤ<sup>+</sup>. Then for <em>x</em> between 0 and <em>n</em> − 1, <em>x</em> has a multiplicative inverse modulo <em>n</em>
+if, and only if, <em>x</em> is coprime to <em>n</em>.<br><br></p>
+<p><a href="#prop28">Click here for the proof.</a></p>
+<p />
+<p>We now have seen several binary operations, such as Terry’s dance steps, addition modulo <em>n</em>, and multiplication modulo <em>n</em>, which have many properties in common.  In the next section we will generalize these examples to produce many more
+interesting examples, but in such a way that they will all have the important properties that we have seen.</p>
+<p><a name="sec23" id="sec23"></a></p>
+<h1>The Definition of a Group</h1>
+<br>
+In this notebook, we have seen several different ways of combining numbers or dance steps. Yet, all of the different &quot;products&quot; 
+had many properties in common. We are now ready to try to generalize these examples. Our strategy is to define a <em>group</em> abstractly by requiring the same 
+patterns we observed to continue. Thus, we make the following definition based upon the first four properties we saw in all of our examples.<br><br>
+<p>DEFINITION 2.5<br>
+A <em>group</em> is a set <em>G</em> together with a binary operation (represented by a star ∗, or more commonly, a dot ·) such that the following four properties hold:<br><br><br />
+1) (closure)  For any <em>x</em> and <em>y</em> in <em>G</em>,  <em>x</em>·<em>y</em> is in <em>G</em>.<br></p>
+<p>2) (identity) There exists a member <em>e</em> in <em>G</em> which has the property that, for all <em>x</em> in <em>G</em>,</p>
+<p style='text-align: center;'><em>e</em>&middot;<em>x</em>  =  <em>x</em>&middot;<em>e</em>  =  <em>x</em>.</p>   
+3)&emsp;(inverse)  For every <em>x</em> in <em>G</em>, there exists a <em>y</em> in <em>G</em>, called the <em>inverse</em> of <em>x</em>, such that 
+<em>x</em>&middot;<em>y</em>  =  <em>e</em>.<br><br>
+4)&emsp;(associative law)  For any <em>x</em>, <em>y</em>, and <em>z</em> in <em>G</em>, 
+<p style='text-align: center;'>(<em>x</em> &middot;<em>y</em>)&middot;<em>z</em>  = <em>x</em>&middot;(<em>y</em>&middot;<em>z</em>). </p>
+<br><br>
+<p>These are the same four properties that we observed from Terry’s dance steps, so Terry’s dance steps give us the first example of a group.  This group is more
+commonly referred to as the group of symmetries of a triangle, abbreviated by <em>D</em><sub>3</sub>.<br><br></p>
+<p>The members of the group, whether they are numbers, dance steps, or even ordered pairs, are called the <em>elements</em> of the group.  The element <em>e</em> that
+satisfies property 2 is commonly called the <em>identity element</em> of the group.<br><br></p>
+<p>The mathematical notation for an element <em>x</em> to be in a group <em>G</em> is</p>
+<p style='text-align: center;'><em>x</em> &isin; <em>G</em>.</p>
+<p>Thus, the symbol ∈ means “is an element of.”<br><br></p>
+<p>Since Propositions 2.1, 2.2, and 2.3 only used these four properties, the proofs are valid for all groups, using the identity element <em>e</em> in place of the
+dance step <strong>Stay</strong>.<br><br></p>
+<p>Other examples of groups come from modular arithmetic.  For <em>n</em> in ℤ, we considered the elements</p>
+<p style='text-align: center;'>{0, 1, 2, &hellip;, <em>n</em> &minus; 1},</p>
+with the operator (&middot;) being the sum modulo <em>n</em>.  This group will be denoted <em>Z<sub>n</sub></em>.  For example, 
+the group <em>Z</em><sub>10</sub> is given by:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">ZGroup</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span> <span class="n">G</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CayleyTable</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+We also considered having the operator (&middot;) denoted the product modulo <em>n</em>, and considered only the set of numbers less than <em>n</em> that are 
+coprime to <em>n</em>.  Proposition 2.7 shows that this set also has the four properties of groups.  We will refer to this group 
+by <em>Z<sub>n</sub></em><sup>&ast;</sup>.   This group can be loaded in <em>SageMath</em> by the command <strong>ZStar</strong>.  For example, the group <em>Z</em><sub>15</sub><sup>&ast;</sup> has 8 elements, with the following Cayley table.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">ZStar</span><span class="p">(</span><span class="mi">15</span><span class="p">);</span> <span class="n">G</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CayleyTable</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+The groups <em>Z<sub>n</sub></em> and <em>Z<sub>n</sub></em><sup>&ast;</sup> had an additional property&mdash;the multiplication tables were symmetric about the 
+northwest to southeast diagonal.  Not all groups have this property, but those that do are important enough to give such groups a special name.<br><br>
+<p>DEFINITION 2.6<br>
+A group <em>G</em> is <em>abelian</em> (or <em>commutative</em>) if  <em>x</em>·<em>y</em> =
+<em>y</em>·<em>x</em> for all <em>x</em>, <em>y</em>  ∈ <em>G</em>.<br><br></p>
+<p>Although these definitions appear ad hoc, the four properties of groups appear in many different aspects of mathematics. Here are some examples of groups that appear
+on other contexts besides group theory:<br><br></p>
+<p>EXAMPLE:<br>
+Consider the group consisting of all of the integers, ℤ. Our binary operation would be the sum of the two numbers. It is trivial to see that this satisfies
+all 4 properties, with 0 as the identity, and −<em>x</em> as the inverse of <em>x</em>. This is obviously an abelian group, since</p>
+<p style='text-align: center;'><em>a</em> + <em>b</em> = <em>b</em> + <em>a</em> for all <em>a</em> and <em>b</em> in &#8484;.</p>
+<p>EXAMPLE:<br>
+Next, we could consider the group of all rational numbers, which is denoted by ℚ. (This is easy to remember, since ℚ stands for Quotient.)
+Our binary operation would still be addition, so the identity element would still be 0, and this would also be an abelian group. <br><br></p>
+<p>EXAMPLE:<br>
+Consider the group of all rational numbers except for 0. We will refer to this group as ℚ<sup>*</sup>. Our group operation would be multiplication instead
+of addition. The identity element is now 1, and the inverse of an element is the reciprocal. Again, this is an abelian group.<br><br></p>
+<p>EXAMPLE:  <br>
+Consider the set of all <em>linear functions</em> of the form</p>
+<p style='text-align: center;'><em>f</em>(<em>x</em>) = <em>m x</em> + <em>b</em>, with <em>m</em>, <em>b</em> &isin; &#8477;,  <em>m</em> &ne; 0.</p>
+(The fancy &#8477; here represents the real numbers.) We combine two linear functions together by function composition.  That is, if 
+<em>f</em>(<em>x</em>) = <em>m x</em> + <em>b</em>, and <em>g</em>(<em>x</em>) = <em>n x</em> + <em>c</em>, then
+<p style='text-align: center;'><em>f</em>&middot;<em>g</em> = <em>f</em>(<em>g</em>(<em>x</em>)) = <em>m</em>(<em>n x</em> + <em>c</em>) + <em>b</em> = 
+(<em>m n</em>) <em>x</em> + (<em>m c</em> + <em>b</em>).</p><br>
+which is again a linear function. Note that in <em>f</em>&middot;<em>g</em>, we do <em>g</em> first, then <em>f</em>, so we apply the functions from right to left. We 
+can find the inverse of <em>f</em>(<em>x</em>) as well:
+<p style='text-align: center;'><em>f</em>&thinsp;<sup>-1</sup>(<em>x</em>) = <sup>1</sup>&frasl;<sub><em>m</em></sub> <em>x</em> &minus; 
+<sup><em>b</em></sup>&frasl;<sub><em>m</em></sub>,</p>
+which is also a linear function. The identity function is just <em>e</em>(<em>x</em>) = <em>x</em>. The associativity property of function composition completes 
+the requirements for the set of all linear functions to constitute a group.<br><br>
+<p>Is this group abelian?  Let <em>f</em>(<em>x</em>) = 2<em>x</em> + 3, and <em>g</em>(<em>x</em>) = 3<em>x</em> + 2. Then <em>f</em>(<em>g</em>(<em>x</em>)) is
+2(3<em>x</em> + 2) + 3 = 6<em>x</em> + 7, whereas <em>g</em>(<em>f</em>(<em>x</em>)) = 3(2<em>x</em> + 3) + 2 = 6<em>x</em> + 11.
+So this is not an abelian group.<br><br></p>
+<p>These last four groups have an infinite number of elements, so we unfortunately cannot construct Cayley tables for them.  To distinguish the groups which
+have Cayley tables, we make the following definition:<br><br></p>
+<p>DEFINITION 2.7<br>
+The number of elements in a group <em>G</em> is called the <em>order</em> of the group and is denoted |<em>G</em>|.  If <em>G</em> has an infinite number of
+elements, we say that |<em>G</em>| = ∞.<br><br></p>
+<p>The last four examples had infinite order, and hence we cannot form Cayley tables for these groups.  On the opposite end of the spectrum, what is the
+<em>smallest</em> possible group? The third group property states that there must be an identity element in the group.  So the smallest group is the following:<br><br></p>
+<p>EXAMPLE:  <br>
+Consider the group containing just the identity element, {<em>e</em>}.  Why is this a group?<br><br></p>
+<p>We know that since <em>e</em> is an identity, <em>e</em>·<em>e</em> = <em>e</em>.  It does contain an identity element, and <em>e</em> has an inverse,
+namely <em>e</em>. We can check associativity by noting that</p>
+<p style='text-align: center;'>(<em>e</em>&middot;<em>e</em>)&middot;<em>e</em> = <em>e</em>&middot;(<em>e</em>&middot;<em>e</em>) = <em>e</em>.</p>
+We can give a Cayley table of this group by executing the following: <br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
+<span class="n">CayleyTable</span><span class="p">([</span><span class="n">e</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+This group seems too simple to be of practical value, so we call this the <em>trivial</em> group. Most of our groups will be much more interesting!<br><br>
+<p>The first of these <em>SageMath</em> commands introduces a new command—<strong>InitGroup</strong>. This command designates the new identity element, and sets the
+stage for entering a new group. <br><br></p>
+<p>As we see from these examples, sometimes the operator (·) means addition, sometimes it means multiplication, and sometimes it means
+neither.  Nonetheless, we can consider the operation of an element by itself a number of times.  This produces combinations like</p>
+<table align="center" width="150" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="left"><em>x</em>,</td>
+  </tr>
+  <tr>
+    <td align="left"><em>x</em>&middot;<em>x</em>,</td>
+  </tr>
+  <tr>
+    <td align="left"><em>x</em>&middot;<em>x</em>&middot;<em>x</em>,</td>
+  </tr>
+  <tr>
+    <td align="left"><em>x</em>&middot;<em>x</em>&middot;<em>x</em>&middot;<em>x</em>,</td>
+      <td align="right">and</td>
+  </tr>  
+  <tr>
+    <td align="left"><em>x</em>&middot;<em>x</em>&middot;<em>x</em>&middot;<em>x</em>&middot;<em>x</em>.</td>
+  </tr>
+</table>
+<br>
+Even though the (&middot;) does not always mean multiplication, we can define <em>x<sup>n</sup></em> to mean <em>x</em> operated on itself <em>n</em> times. 
+Thus,
+<table align="center" width="150" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><em>x</em> =</td>
+    <td align="left">&ensp;<em>x</em><sup>1</sup>,</td>
+  </tr>
+  <tr>
+    <td align="right"><em>x</em>&middot;<em>x</em> =</td>
+    <td align="left">&ensp;<em>x</em><sup>2</sup>,</td>
+  </tr>
+  <tr>
+    <td align="right"><em>x</em>&middot;<em>x</em>&middot;<em>x</em> =</td>
+    <td align="left">&ensp;<em>x</em><sup>3</sup>,</td>
+  </tr>
+  <tr>
+    <td align="right">etc.</td>
+  </tr>    
+</table>
+<br>
+We want to formally define <em>x<sup>n</sup></em> for any integer <em>n</em>. We let <em>x</em><sup>0</sup> = <em>e</em>, the identity element, then we define, for 
+<em>n</em> > 0,
+<p style='text-align: center;'><em>x<sup>n</sup></em> = <em>x</em><sup><em>n</em>&minus;1</sup>&middot;<em>x</em>.</p> 
+By defining the <em>n</em><sup>th</sup> power in terms of the previous power, we <em>inductively</em> have defined <em>x<sup>n</sup></em> 
+whenever <em>n</em> is a positive integer.  <br><br>
+<p>Finally, we can define negative powers by letting</p>
+<p style='text-align: center;'><em>x</em><sup>&minus;<em>n</em></sup> = (<em>x<sup>n</sup></em>)<sup>-1</sup> if <em>n</em> > 0.</p>
+Note that if the operator <em>&middot;</em> represents addition, the raising <em>x</em> to a power is repeated addition, which is multiplication.<br><br>
+<p>We can now prove some theorems which involve this exponential notation.</p>
+<p><a name="prop29ret" id="prop29ret"></a>
+PROPOSITION 2.9<br></p>
+<p>If <em>x</em> is an element in a group <em>G</em>, and <em>m</em> and <em>n</em> are integers, then</p>
+<p style='text-align: center;'><em>x</em><sup><em>m</em>+<em>n</em></sup> = <em>x<sup>n</sup></em>&middot;<em>x<sup>m</sup></em>.</p>
+<p><a href="#prop29">Click here for the proof.</a></p>
+<p />
+This last proof utilizes an important method of proving theorems called <em>induction</em>, which was introduced in &sect;1.2. Induction is based on the well-ordering axiom, which states that any non-empty subset of positive integers contains a smallest element.<br><br>
+<p>It is not hard to see why this must be true.  If there were some positive integer not in the set, then there must be a <em>smallest</em> positive integer <em>k</em> that
+is not in the set.  Since <em>1</em> is in the set, we see that <em>k</em> &gt; 1, and since <em>k</em> is the smallest number not in the set, <em>k</em> − 1 must be
+in the set.  But the property of the set is that if <em>k</em> − 1 is in the set, then <em>k</em> also is.  So we have a contradiction, so there is no
+such <em>k</em>, meaning the the set is indeed all positive integers.<br><br></p>
+<p><a name="prop210ret" id="prop210ret"></a>
+PROPOSITION 2.10 <br></p>
+<p>If <em>x</em> is an element in a group <em>G</em>, and <em>m</em> and <em>n</em> are in ℤ, then</p>
+<p style='text-align: center;'>(<em>x<sup>m</sup></em>)<sup><em>n</em></sup> = <em>x</em><sup>(<em>m n</em>)</sup></p>
+<p><a href="#prop210">Click here for the proof.</a></p>
+<p />
+Propositions 2.9 and 2.10 show that the common laws of exponents hold for elements of a group.  In the next chapter, we will use the powers of elements to explore the properties of a group.<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<h1>Proofs:</h1><p><a name="prop21" id="prop21"></a>
+Proof of Proposition 2.1:<br><br></p>
+<p>Let <em>z</em> be <em>any</em> inverse of <em>y</em>.  Our job is to show that <em>z</em> is in fact equal to <em>x</em>.  Consider the
+product <em>x</em>∗<em>y</em>∗<em>z</em>.  According to the associative property,</p>
+<p style='text-align: center;'><em>x</em>&lowast;(<em>y</em>&lowast;<em>z</em>) = (<em>x</em>&lowast;<em>y</em>)&lowast;<em>z</em>.</p>
+On the left side, we see that <em>y</em>&lowast;<em>z</em> is an identity element, so <em>x</em>&lowast;(<em>y</em>&lowast;<em>z</em>) = <em>x</em>.  
+But on the right side, we find that <em>x</em>&lowast;<em>y</em> is an identity element, so (<em>x</em>&lowast;<em>y</em>)&lowast;<em>z</em> = <em>z</em>.  Thus, 
+<em>x</em> = <em>z</em>, and so <em>x</em> is an inverse of <em>y</em>.  Therefore, the inverse of an inverse gives us back the original element.<br><br>
+<p>But as a bonus, we see that inverses are unique!  We let <em>z</em> be any inverse of <em>y</em>, and found that it had to equal <em>x</em>.  Thus, <em>y</em> has only
+one inverse, namely <em>x</em>.  But if we apply the argument again, reversing the roles of <em>x</em> and <em>y</em>, we see that <em>x</em> has only one inverse, namely
+<em>y</em>.  Thus, all inverses are unique.<br><br></p>
+<p><a href="#prop21ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="prop22" id="prop22"></a>
+Proof of Proposition 2.2:<br><br></p>
+<p>Since the inverse (<em>x</em>∗<em>y</em>)<sup>-1</sup> is the dance step <em>z</em> such that
+(<em>x</em>∗<em>y</em>)∗<em>z</em> = <strong>Stay</strong>, it suffices to show that <em>y</em><sup>-1</sup>∗<em>x</em><sup>-1</sup> has this
+property. We see that</p>
+<p style='text-align: center;'>(<em>x</em>&lowast;<em>y</em>)&lowast;(<em>y</em><sup>-1</sup>&lowast;<em>x</em><sup>-1</sup>) = 
+<em>x</em>&lowast;(<em>y</em>&lowast;<em>y</em><sup>-1</sup>)&lowast;<em>x</em><sup>-1</sup> = <em>x</em>&lowast;<strong>Stay</strong>&lowast;<em>x</em><sup>-1</sup> = 
+<em>x</em>&lowast;<em>x</em><sup>-1</sup> = <strong>Stay</strong>.</p>
+So  (<em>x</em>&lowast;<em>y</em>)<sup>-1</sup> =  <em>y</em><sup>-1</sup>&lowast;<em>x</em><sup>-1</sup>.<br><br>
+<p><a href="#prop22ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="prop23" id="prop23"></a>
+Proof of Proposition 2.3:<br><br></p>
+<p>Suppose that there is an <em>x</em> such that <em>a</em>∗<em>x</em> = <em>b</em>.  We can multiply both sides of the equation on the <em>left</em> by
+<em>a</em><sup>-1</sup> to give us</p>
+<p style='text-align: center;'><em>a</em><sup>-1</sup>&lowast;(<em>a</em>&lowast;<em>x</em>) = <em>a</em><sup>-1</sup>&lowast;<em>b</em>.</p>
+Then     
+<p style='text-align: center;'>(<em>a</em><sup>-1</sup>&lowast;<em>a</em>)&lowast;<em>x</em> = <em>a</em><sup>-1</sup>&lowast;<em>b</em>.</p> 
+<p style='text-align: center;'><strong>Stay</strong>&lowast;<em>x</em> = <em>a</em><sup>-1</sup>&lowast;<em>b</em>.</p> 
+So <em>x</em> = <em>a</em><sup>-1</sup>&lowast;<em>b</em>.  Thus, if there is a solution, this must be the unique solution <em>a</em><sup>-1</sup>&lowast;<em>b</em>.  Let 
+us check that this is indeed a solution.
+<p style='text-align: center;'><em>a</em>&lowast;<em>x</em> = <em>a</em>&lowast;(<em>a</em><sup>-1</sup>&lowast;<em>b</em>) = (<em>a</em>&lowast;<em>a</em><sup>-1</sup>)&lowast;<em>b</em> = <strong>Stay</strong>&lowast;<em>b</em> = 
+<em>b</em>.</p>
+Thus, there is only one solution to the equation, namely <em>a</em><sup>-1</sup>&lowast;<em>b</em>.<br><br>
+<p><a href="#prop23ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="prop24" id="prop24"></a>
+Proof of Proposition 2.4:<br><br></p>
+<p>To show that this definition is reflexive, we need to show that <em>x</em> ≡ <em>x</em> (mod <em>n</em>), which is
+clear since <em>x</em> − <em>x</em> = 0·<em>n</em>.<br><br></p>
+<p>To show that this definition is symmetric, suppose that
+<em>x</em> ≡ <em>y</em>  (mod <em>n</em>).  Then <em>x</em> − <em>y</em> = <em>k n</em> for some integer <em>k</em>, hence <em>y</em> − <em>x</em> = −<em>k</em> <em>n</em> for the integer −<em>k</em>.
+Thus, <em>y</em> ≡ <em>x</em> (mod <em>n</em>).<br><br></p>
+<p>Finally, to show that this definition is transitive, suppose both <em>x</em> ≡ <em>y</em> (mod <em>n</em>)
+and <em>y</em> ≡ <em>z</em> (mod <em>n</em>).  Then <em>x</em> − <em>y</em> = <em>k</em><sub>1</sub> <em>n</em> and
+<em>y</em> − <em>z</em> = <em>k</em><sub>2</sub> <em>n</em>, so</p>
+<p style='text-align: center;'><em>x</em> &minus; <em>z</em> = (<em>x</em> &minus; <em>y</em>) + (<em>y</em> &minus; <em>z</em>) = 
+<em>k</em><sub>1</sub> <em>n</em> + <em>k</em><sub>2</sub> <em>n</em> = (<em>k</em><sub>1</sub> + <em>k</em><sub>2</sub>)<em>n</em>.</p>
+<p>Hence, we find that <em>x</em> ≡ <em>z</em> (mod <em>n</em>).<br><br></p>
+<p><a href="#prop24ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="prop25" id="prop25"></a>
+Proof of Proposition 2.5:<br><br></p>
+<p>For any <em>a</em> ∈ <em>S</em>, we have by the reflexive property that <em>a</em> ∈ [<em>a</em>], so [<em>a</em>] is non-empty, and the union of all equivalence classes
+will be all of <em>S</em>.  Next, let us show that if there is an element <em>c</em> in common with two equivalence classes [<em>a</em>] and [<em>b</em>], then these classes are
+the same. Since <em>c</em> ∼ <em>a</em> and <em>c</em> ∼ <em>b</em>, we have by the symmetric and transitive properties that <em>a</em> ∼ <em>b</em>.  Hence, for
+every <em>x</em> ∈ [<em>a</em>], <em>x</em> ∼ <em>a</em>, so <em>x</em> ∈ [<em>b</em>] as well, indicating [<em>a</em>] ⊆ [<em>b</em>].  By similar logic, [<em>b</em>] ⊆ [<em>a</em>], so [<em>a</em>] = [<em>b</em>].<br><br></p>
+<p><a href="#prop25ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="prop26" id="prop26"></a>
+Proof of Proposition 2.6:<br><br></p>
+<p>We are essentially given that <em>a b</em> − <em>a c</em> = <em>k n</em> for some integer <em>k</em>.  Since <em>a</em>  and <em>n</em> are coprime, by Bézout’s lemma (1.3), there exist integers <em>u</em> and <em>v</em> such that</p>
+<p style='text-align: center;'><em>u a</em> + <em>v n</em> = 1.</p>
+<p>Multiplying the original equation by <em>u</em>, we have <em>u a</em>(<em>b</em> − <em>c</em>) = <em>k u n</em>.  Replacing <em>u a</em> with 1 − <em>v n</em>, we get that <em>b</em> − <em>c</em> = <em>k u n</em> + <em>v n</em>(<em>b</em> − <em>c</em>), which is a multiple of <em>n</em>.  So</p>
+<p style='text-align: center;'><em>b</em> &equiv; <em>c</em> (mod <em>n</em>).</p><br>
+<p><a href="#prop26ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="prop27" id="prop27"></a>
+Proof of Proposition 2.7:<br><br></p>
+<p>Properties 2, 3, and 5 come from the properties of standard multiplication.<br><br></p>
+<p>Property 1 comes from Proposition 2.2. If <em>x</em> and <em>y</em> are both invertible, then <em>y</em><sup>-1</sup>∗<em>x</em><sup>-1</sup> is an inverse of
+<em>x</em>∗<em>y</em>, and so <em>x</em>∗<em>y</em> is invertible modulo <em>n</em>.<br><br></p>
+<p>Property 4 seems obvious, since if <em>x</em> is invertible modulo <em>n</em>, we let <em>y</em> = <em>x</em><sup>-1</sup> making <em>x</em>∗<em>y</em> = 1.  But
+we must check
+that <em>y</em> is also invertible, which it is since <em>y</em><sup>-1</sup> = x.<br><br></p>
+<p><a href="#prop27ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="prop28" id="prop28"></a>
+Proof of Proposition 2.8:<br><br></p>
+<p>If <em>x</em> and <em>n</em> are not coprime, then there is a common prime factor <em>p</em>. In order for <em>x</em> to have a multiplicative inverse,
+there must be a <em>y</em> such that</p>
+<p style='text-align: center;'><em>x y</em> &equiv; 1  (mod <em>n</em>).</p>
+But this means that <em>x y</em> = 1 + <em>w n</em> for some <em>w</em>. This is impossible, since <em>x y</em> is a multiple of <em>p</em>, but 1 + <em>w n</em> is one 
+more than a multiple of <em>p</em>.<br><br>
+<p>Now suppose that <em>n</em> and <em>x</em> are coprime. By Bézout’s lemma (1.3), there are <em>u</em> and <em>v</em> in ℤ such that</p>
+<p style='text-align: center;'><em>u n</em> + <em>v x</em> = gcd(<em>n</em>, <em>x</em>) = 1.</p>
+But then 
+<p style='text-align: center;'><em>v x</em> = 1 + (&minus;<em>u</em>) <em>n</em>,</p>
+and so <em>v x</em> &equiv; 1  (mod n). Hence, <em>v</em> is a multiplicative inverse of <em>x</em>.<br><br>  
+<p><a href="#prop28ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="prop29" id="prop29"></a>
+Proof of Proposition 2.9:<br><br></p>
+<p>If <em>m</em> or <em>n</em> are 0, this proposition is very easy to verify:</p>
+<p style='text-align: center;'><em>x</em><sup><em>m</em>+0</sup> = <em>x<sup>m</sup></em> = <em>x<sup>m</sup></em>&middot;<em>e</em> = 
+<em>x<sup>m</sup></em>&middot;<em>x</em><sup>0</sup>,&emsp;<em>x</em><sup>0+<em>n</em></sup> = <em>x<sup>n</sup></em> = 
+e&middot;<em>x<sup>n</sup></em> = <em>x</em><sup>0</sup>&middot;<em>x<sup>n</sup></em>.</p>
+We will now prove the statement when <em>m</em> and <em>n</em> are positive integers.  If <em>n</em> is 1, then we have
+<p style='text-align: center;'><em>x</em><sup><em>m</em>+1</sup> = <em>x</em><sup><em>(m</em>+1)&minus;1</sup>&middot;<em>x</em> = 
+<em>x<sup>m</sup></em>&middot;<em>x</em><sup>1</sup>,</p>
+using the inductive definition of the power of <em>x</em>.<br><br>
+<p>We will now proceed by means of <em>induction</em>.  That is, we will assume that the statement is true for the case <em>n</em> − 1, and then prove that it is
+then true for the case <em>n</em>.<br><br></p>
+<p>Thus, we will assume that</p>
+<p style='text-align: center;'><em>x</em><sup><em>m</em>+(<em>n</em>&minus;1)</sup> = <em>x<sup>m</sup></em>&middot;<em>x</em><sup><em>n</em>&minus;1</sup>.</p>
+But then
+<p style='text-align: center;'><em>x</em><sup><em>m</em>+<em>n</em></sup> = <em>x</em><sup><em>m</em>+<em>n</em>&minus;1</sup>&middot;<em>x</em> = 
+<em>x<sup>m</sup></em>&middot;<em>x</em><sup><em>n</em>&minus;1</sup>&middot;<em>x</em> = <em>x<sup>m</sup></em>&middot;<em>x<sup>n</sup></em>.</p>
+By induction, 
+this proves that <em>x</em><sup><em>m</em>+<em>n</em></sup> = <em>x<sup>m</sup></em>&middot;<em>x<sup>n</sup></em> for all positive <em>n</em>.<br><br>
+<p>Once we have the statement true for positive <em>m</em> and <em>n</em>, we can take the inverse of both sides to give us</p>
+<p style='text-align: center;'>(<em>x</em><sup><em>m</em>+<em>n</em></sup>)<sup>-1</sup> = 
+(<em>x<sup>n</sup></em>)<sup>-1</sup>&middot;(<em>x<sup>m</sup></em>)<sup>-1</sup>.</p>
+But by the definition of negative exponents, this is
+<p style='text-align: center;'><em>x</em><sup>(&minus;<em>n</em>)+(&minus;<em>m</em>)</sup> = 
+<em>x</em><sup>&minus;<em>n</em></sup>&middot;<em>x</em><sup>&minus;<em>m</em></sup></p>
+which, by letting <em>M</em> = &minus;<em>n</em> and <em>N</em> = &minus;<em>m</em>, proves the proposition for the case of both exponents being negative.<br><br>
+<p>Finally, if <em>m</em> and <em>n</em> have different signs, then (<em>m</em> + <em>n</em>) will either have the same sign as −<em>n</em>, or the same sign as
+−<em>m</em>.  If (<em>m</em> + <em>n</em>) has the same sign as −<em>n</em>, then we have already shown that</p>
+<p style='text-align: center;'><em>x<sup>m</sup></em> = <em>x</em><sup>(<em>m</em>+<em>n</em>)+(&minus;<em>n</em>)</sup> = 
+<em>x</em><sup><em>m</em>+<em>n</em></sup>&middot;<em>x</em><sup>&minus;<em>n</em></sup>.</p>
+So we have <em>x<sup>m</sup></em>&middot;(<em>x</em><sup>&minus;<em>n</em></sup>)<sup>-1</sup> = 
+<em>x</em><sup><em>m</em>+<em>n</em></sup>&middot;<em>x</em><sup>&minus;<em>n</em></sup>&middot;(<em>x</em><sup>&minus;<em>n</em></sup>)<sup>-1</sup>, and hence
+<em>x</em><sup><em>m</em>+<em>n</em></sup> = <em>x<sup>m</sup></em>&middot;<em>x<sup>n</sup></em>.<br> <br>
+<p>If <em>m</em> + <em>n</em> has the same sign as −<em>m</em>, then we have already shown that</p>
+<p style='text-align: center;'><em>x<sup>n</sup></em> = <em>x</em><sup>(&minus;<em>m</em>)+(<em>m</em>+<em>n</em>)</sup> = 
+<em>x</em><sup>&minus;<em>m</em></sup>&middot;<em>x</em><sup><em>m</em>+<em>n</em></sup>.</p>
+So we have (<em>x</em><sup>&minus;<em>m</em></sup>)<sup>-1</sup>&middot;<em>x<sup>n</sup></em> = 
+(<em>x</em><sup>&minus;<em>m</em></sup>)<sup>-1</sup>&middot;<em>x</em><sup>&minus;<em>m</em></sup>&middot;<em>x</em><sup><em>m</em>+<em>n</em></sup>, and 
+hence <em>x</em><sup><em>m</em>+<em>n</em></sup> = <em>x<sup>m</sup></em>&middot;<em>x<sup>n</sup></em>.<br><br>
+<p>Thus, we have proven the proposition for all integers <em>m</em> and <em>n</em>.<br><br></p>
+<p><a href="#prop29ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="prop210" id="prop210"></a>
+Proof of Proposition 2.10:<br><br></p>
+<p>Notice that this statement is trivial if <em>n</em> = 0 or <em>n</em> = 1:</p>
+<p style='text-align: center;'>(<em>x<sup>m</sup></em>)<sup>0</sup> = <em>e</em> = <em>x</em><sup><em>m</em>&middot;0</sup>, &emsp; 
+(<em>x<sup>m</sup></em>)<sup>1</sup> = <em>x<sup>m</sup></em> = <em>x</em><sup><em>m</em>&middot;1</sup></p>
+We will again proceed by means of induction, which means we can assume that the statement is true for the previous case, with <em>n</em> replaced by <em>n</em> &minus; 1.
+That is, we can assume that
+<p style='text-align: center;'>(<em>x<sup>m</sup></em>)<sup><em>n</em>&minus;1</sup> = <em>x</em><sup><em>m</em>(<em>n</em>&minus;1)</sup>.</p>
+Note that
+<p style='text-align: center;'>(<em>x<sup>m</sup></em>)<sup><em>n</em></sup> = 
+(<em>x<sup>m</sup></em>)<sup><em>n</em>&minus;1</sup>&middot;<em>x<sup>m</sup></em> = 
+<em>x</em><sup><em>m</em>(<em>n</em>&minus;1)</sup>&middot;<em>x<sup>m</sup></em>.</p>
+By Proposition 2.9, this is equal to <em>x</em><sup>(<em>m</em>(<em>n</em>&minus;1)+<em>m</em>)</sup> = <em>x<sup>m n</sup></em>.<br><br>
+<p>So by induction, the proposition holds for positive <em>n</em>.  To see that it holds for negative <em>n</em> as well, simply note that</p>
+<p style='text-align: center;'>(<em>x<sup>m</sup></em>)<sup><em>n</em></sup> = ((<em>x<sup>m</sup></em>)<sup>&minus;<em>n</em></sup>)<sup>-1</sup> = 
+(<em>x</em><sup>&minus;<em>m n</em></sup>)<sup>-1</sup> = <em>x<sup>m n</sup></em>.</p>
+If <em>n</em> is negative, then &minus;<em>n</em> is positive, so the second step is valid.<br><br>     
+<p><a href="#prop210ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="sec2p" id="sec1p"></a></p>
+<h1><em>SageMath</em> Interactive Problems</h1>
+<br>
+&sect;2.1 #13)<br>
+If Terry was only allowed to do the steps <strong>FlipRt</strong> or <strong>FlipLft</strong>, could it get itself into all six possible positions? If 
+possible, expressthe other four dance steps in terms of these two. The following <em>SageMath</em> command reloads Terry's group. <br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitTerry</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+&sect;2.1 #14)<br>
+Repeat Problem 13, only allow Terry to do only the steps <strong>RotRt</strong> or <strong>RotLft</strong>.<br><br>
+&sect;2.1 #15)<br>
+Can you find a dance routine which includes each of Terry's 6 dance steps once, and only once, that puts Terry back into the initial position?<br><br>
+&sect;2.2 #29)<br>
+Proposition 1.7 explains how to use <strong>xgcd</strong> to find the multiplicative inverse modulo <em>n</em>.
+Use <em>SageMath</em> to find the multiplicative inverse of <em>a</em> modulo <em>n</em>, where <em>a</em> = 3, <em>n</em> = 1000.<br><br>
+&sect;2.2 #30)<br>
+Repeat Problem 29, with <em>a</em> = 5, <em>n</em> = 1221.<br><br>
+&sect;2.2 #31)<br>
+Repeat Problem 29, with <em>a</em> = 7, <em>n</em> = 3600.<br><br>
+&sect;2.2 #32)<br>
+Repeat Problem 29, with <em>a</em> = 11, <em>n</em> = 9000.<br><br>
+&sect;2.2 #33)<br>
+Repeat Problem 29, with <em>a</em> = 13, <em>n</em> = 12000.<br><br>
+&sect;2.2 #34)<br>
+Repeat Problem 29, with <em>a</em> = 17, <em>n</em> = 15000.<br><br>
+&sect;2.2 #35)<br>
+We saw that there were exactly four numbers less than 10 which were invertible modulo 10.  For what other values of <em>n</em> are there exactly four numbers less 
+than <em>n</em> which are invertible modulo <em>n</em>?  Use <em>SageMath</em>'s circle graph to graph the inverse functions.<br><br>
+&sect;2.3 #32)<br>
+Use <em>SageMath</em>'s <strong>ZStar</strong> command to find the size of <em>Z<sub>n</sub></em><sup>&ast;</sup> for <em>n</em> = 9, 27, 81, 243, 5, 25, 125.  Make a conjecture 
+about the size of <em>Z<sub>n</sub></em><sup>&ast;</sup> when <em>n</em> is a power of an odd prime.  Note use can use the <strong>len(_)</strong> command to have <em>SageMath</em> count the elements for you.<br><br>
+&sect;2.3 #33)<br>
+Use <em>SageMath</em>'s <strong>ZStar</strong> command to find the size of <em>Z<sub>n</sub></em><sup>&ast;</sup> for <em>n</em> = 18, 54, 162, 486, 50, 250, 98, 686.  Make a conjecture 
+about the size of <em>Z<sub>n</sub></em><sup>&ast;</sup> when <em>n</em> is twice the power of an odd prime.<br><br>
+&sect;2.3 #34)<br>
+Use <em>SageMath</em>'s <strong>ZStar</strong> command to find the size of <em>Z<sub>mn</sub></em><sup>&ast;</sup>, where <em>m</em> and <em>n</em> are coprime, in terms of the sizes 
+of <em>Z<sub>m</sub></em><sup>&ast;</sup> and <em>Z<sub>n</sub></em><sup>&ast;</sup>.<br></font>
+</body>
+</html>
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "sagemath"
+        },
+        kernelOptions: {
+            name: "sagemath",
+            path: "./23permutation-puzzle-GroupTheory"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'sagemath'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jonny, assisted by Tom
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,1948 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>&lt;no title&gt; &#8212; Jonny Workbook</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=550f00eb" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=1ae7504c"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '23permutation-puzzle-GroupTheory/group04';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Jonny Workbook</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Math &amp; FP/Language</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../past/Alevel_math.html">A-level-math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../past/Alevel_math_further.html">A-level-further</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../past/Course_MCM.html">Math Computational Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Course_Lean.html">Lean</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Course_Puzzle_Group.html">Permutation Puzzles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Course_5U.html">5U - Ext III</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">CS &amp; Physics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../past/Course_MIT6001Python.html">MIT_CS6001-Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../past/Course_MIT6002thinking.html">MIT_CS6002-CS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PE100.html">Project Euler Q1-100</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../past/Course_MCM_QM.html">Quantum Mechanics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Notebook &amp; Tom</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../past/nb_past_courses.html">Past courses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../past/nb_Geo.html">Geography and Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../past/nb_lottery_simulator.html">Lottery Math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../past/How_Dad_organise_QM.html">How Dad learn QM</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../Course_MCM_QFT.html">QFT</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/tomctang/jonny" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/23permutation-puzzle-GroupTheory/group04.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <!-- Group04 -->
+<html>
+<body>
+<!-- To make the size of the font bigger for presentations, change the following command from +1 to +2 -->
+<font size="+1">
+<p style='font-size: 36px;font-family: Arial;font-style: italic;font-weight: bold;color: #FF00FF;background-color: #80FFFF;text-align: center;'>
+Abstract Algebra: An Interactive Approach, 3e
+</p>
+<p style='font-family: Geneva;font-style: italic;color: #0000FF;background-color: #FFFFFF;'>
+&copy;2025 This notebook is provided with the textbook, &quot;Abstract Algebra: An Interactive Approach, 3rd Ed.&quot; by William Paulsen. Users of this notebook are encouraged to buy the textbook.
+</p>
+<p style='font-size: 36px;font-family: New York;font-weight: bold;color: #000000;background-color: #FFFFFF;text-align: center;border: 1px;border-style: 
+solid;border-color: #000000;'>
+Chapter 4: Patterns Within the Cosets of Groups
+</p>
+<p style='text-align: center;'>Initialization:  This cell MUST be evaluated first:</p><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;absalgtext2.sage&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+<a href="#sec41">Left and Right Cosets</a><br>
+<a href="#sec42">Writing Secret Messages</a><br>
+<a href="#sec43">Normal Subgroups</a><br>
+<a href="#sec44">Quotient Groups</a><br>
+<a href="#sec4p"><em>SageMath</em> Interactive Problems</a><br><p><a name="sec41" id="sec41"></a></p>
+<h1>Left and Right Cosets</h1>
+<br>
+We introduced subgroups in the last chapter, but left many questions unanswered. For example, is there any relationship between the size of the group and the size of one of its 
+subgroups?<br><br>
+<p>In this chapter, we will introduce the tool of <em>cosets</em> to determine many of the properties of subgroups, including what possible sizes the subgroups could be.<br />
+To understand cosets, let us begin by looking at some cases where an element does <em>not</em>
+generate the group, in hopes of finding some patterns in the circle graphs.<br><br></p>
+<p>Let us look at the example <em>Z</em><sub>10</sub>. The generators were 1, 3, 7, and 9, so let us pick an elements besides these, such as 4.
+Here is the circle graph of <strong>Add(4)</strong>:<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z</span> <span class="o">=</span> <span class="n">ZGroup</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">CircleGraph</span><span class="p">(</span><span class="n">Z</span><span class="p">,</span> <span class="n">Add</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+We see that 4 is not a generator, for there are arrows of two colors. The red arrows connect the points {0, 2, 4, 6, 8}, while the green arrows connect the points 
+{1, 3, 5, 7, 9}. Thus, the group is partitioned into two sets, and no arrow connects these two. <br><br>
+<p>We can immediately see some patterns in the way that <em>Z</em><sub>10</sub> is partitioned. One of the two sets, {0, 2, 4, 6, 8} is actually a subgroup of
+<em>Z</em><sub>10</sub>, and is the subgroup generated by the element 4. We can check this with the command:<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Group</span><span class="p">(</span><span class="n">Z</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+The other set is obtained by adding 1 to each element of this subgroup. Let us look at another example to see if this pattern continues. 
+Here is the circle graph of Add(5):<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">(</span><span class="n">Z</span><span class="p">,</span> <span class="n">Add</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Here we have five different colored arrows, so the group is partitioned into five sets: {0, 5}, {1, 6}, {2, 7}, {3, 8}, and {4, 9}. One of these sets is the 
+subgroup generated by the element 5:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Group</span><span class="p">(</span><span class="n">Z</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+The others are obtained by adding some constant to every element in this subgroup.<br><br>
+<p>EXPERIMENT:<br>
+Replace the <strong>Add(5)</strong> in the above circle graph with either <strong>Add(0)</strong>, <strong>Add(2)</strong>, <strong>Add(6)</strong>, or
+<strong>Add(8)</strong>. (These are the other elements of the group which are not generators.) Do we obtain any new partitions of the group?<br><br></p>
+<br>
+By doing this experiment, you probable noticed that the partition of the group depends only on the subgroup generated by the element. 
+Of course this is an abelian group, so it is natural to ask if these patterns we have noticed carry over to non-abelian groups. Let us look at Terry's group.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">InitTerry</span><span class="p">();</span> <span class="n">G</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+This group does not have any generators, so any element of the group will produce a partition of the group. Consider the circle graph that sends every 
+element to that element multiplied by <strong>Spin</strong>. <br><br>
+<p>Because this group is non-abelian, we have a choice as to how to do this. Do we multiply the element <em>x</em> to the <em>left</em> of <strong>Spin</strong>,
+giving <em>x</em>·<strong>Spin</strong>, or do we multiply on the <em>right</em>, giving <strong>Spin</strong>·<em>x</em>? These two options yield
+different circle graphs. The former is obtained by the command<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">LeftMult</span><span class="p">(</span><span class="n">Spin</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+The latter is given by the command<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">RightMult</span><span class="p">(</span><span class="n">Spin</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+<p>Notice that these two circle graphs produce different partitions of the group! The first gives the partition {<strong>Stay</strong>, <strong>Spin</strong>},
+{<strong>RotRt</strong>, <strong>FlipLft</strong>}, and {<strong>RotLft</strong>, <strong>FlipRt</strong>}. The second circle graph gives us the partition
+{<strong>Stay</strong>, <strong>Spin</strong>}, {<strong>RotRt</strong>, <strong>FlipRt</strong>}, and {<strong>RotLft</strong>, <strong>FlipLft</strong>}.
+In both cases, one of the sets in the partition is the subgroup generated by <strong>Spin</strong>:<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">H</span> <span class="o">=</span> <span class="n">Group</span><span class="p">(</span><span class="n">Spin</span><span class="p">);</span> <span class="n">H</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+We still see some patterns the two partitions. In the first case every set in the partition is obtained by multiplying an element such as RotRt or RotLft by each element 
+of the subgroup <em>H</em>. In the second partition, every set is obtained by multiplying each element of the subgroup <em>H</em> by an element such as RotRt or RotLft.
+<p><br><br>
+EXPERIMENT:<br>
+Change the element <strong>Spin</strong> in the last two circle graphs to the other elements of Terry’s group. Do all partitions follow the pattern mentioned above?</p>
+<br>
+To define these partitions mathematically, we will use the pattern that we have been observing: that every set in the partition is obtained by multiplying every 
+element of a subgroup <em>H</em> by an element <em>x</em>, either on the right or on the left.<br><br>
+<br>
+DEFINITION 4.1<br>
+Let <em>G</em> be a group, and let <em>H</em> be a subgroup of <em>G</em>. If <em>x</em> is an element of <em>G</em>, we define the set
+<p style='text-align: center;'><em>x H</em> = { <em>x</em>&middot;<em>y</em> | <em>y</em> &isin; <em>H</em> }.</p>
+The set <em>x H</em> is called a <em>left coset</em> of <em>H</em>.  Likewise,<br><br>
+<p style='text-align: center;'><em>H x</em> = { <em>y</em>&middot;<em>x</em> | <em>y</em> &isin; <em>H</em> }</p>
+is called a <em>right coset</em> of <em>H</em>.<br>
+<br>
+These definitions are very easy to work with mathematically, but it is not apparent that the right cosets and the left cosets form the partitions of the group that 
+we have been observing. This has to be proved!<br><br>
+<p><em>SageMath</em> has been programed to mimic this notation.  Thus, we can form right cosets by multiplying each
+element in <em>H</em> by an element in the group, say RotRt.<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">H</span> <span class="o">=</span> <span class="n">Group</span><span class="p">(</span><span class="n">Spin</span><span class="p">);</span> <span class="n">H</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">H</span> <span class="o">*</span> <span class="n">RotRt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Notice that <em>SageMath</em> multiplies every element in the set <em>H</em> by RotRt.  In a sense, it distributes RotRt throughout the set.<br><br>
+<p>We can find a left coset with respect to <em>H</em> in the same way:<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">RotRt</span> <span class="o">*</span> <span class="n">H</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+The left and right cosets are different, as we observed in the circle graphs.<br><br>
+<p>We will denote the set of all <em>left cosets</em> of <em>H</em> by <em>G</em>/<em>H</em>, and will denote the set of all <em>right cosets</em> of
+<em>H</em> by <em>H</em>\<em>G</em>.  Albeit the notation is strange, but it reminds us which side the element of <em>G</em> is multiplied on.<br><br><em>SageMath</em> can
+help us to find all left and right cosets of <em>G</em> with respect to <em>H</em>. The commands are<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">LftCoset</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">H</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">RtCoset</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">H</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Note that in both commands, the first argument is the group or list of elements in the group, and the second argument is the subgroup.  
+These give us a list of cosets. (Since each coset is displayed as a list of elements we find ourselves with a &quot;list of lists.&quot;) These are exactly the 
+partitions we observed in the circle graphs of <strong>LeftMult(Spin)</strong> and <strong>RightMult(Spin)</strong>. 
+In fact, we begin to see some patterns in the cosets.  First of all, 
+all of the cosets are the same size.  Also, every element of the group appears once, 
+and only once, in each of the two coset lists.  However, we have yet to <em>prove</em> these patterns persist.  The 
+next two lemmas do this for us.  We begin by showing that all cosets of <em>H</em> are of the 
+same length.<br><p><a name="lem41ret" id="lem41ret"></a>
+LEMMA 4.1<br></p>
+<p>Let <em>G</em> be a group and <em>H</em> be a finite subgroup of <em>G</em>.  Then all left and right cosets of <em>H</em> contain |<em>H</em>| elements.<br><br></p>
+<p><a href="#lem41">Click here for the proof.</a></p>
+<p />
+Next we must show that every element of <em>G</em> is in exactly one left coset and one right coset. This can be worded as follows:<p><a name="lem42ret" id="lem42ret"></a>
+LEMMA 4.2<br></p>
+<p>If two left or two right cosets have any elements in common, they are in fact the same coset. That is,</p>
+<p style='text-align: center;'><em>H x</em> &cap; <em>H y</em> &ne; { } implies that  <em>H x</em> = <em>H y</em>,</p>
+and
+<p style='text-align: center;'><em>x H</em> &cap; <em>y H</em> &ne; { }  implies that  <em>x H</em> = <em>y H</em>.</p>
+<p><a href="#lem42">Click here for the proof.</a></p>
+<p />
+<p>EXAMPLE:<br>
+Find all of the left and right cosets of the subgroup {1, 11} of the group <em>Z</em><sub>15</sub><sup>*</sup>.<br><br></p>
+<p>Since <em>Z</em><sub>15</sub><sup>*</sup> is abelian, the left and right cosets are the same.  By Lemmas 4.1 and 4.2, the cosets will be disjoint, and all have 2 elements.  One of the cosets will be the subgroup {1, 11}.  We pick an element not in the subgroup, say 2, and multiply each element of the subgroup by 2, producing the coset {2, 7}.  We pick another element not yet in a coset, and repeat the process.  To find the coset containing 4, we multiply the subgroup by 4, to product the coset {4, 14}.  At this point, only 2 elements are unaccounted for, so they must be in their own coset, {8, 13}.  So the list of cosets are .<br><br></p>
+<p>These last two proofs were called Lemmas instead of propositions, since they lead to an important theorem.</p>
+<p><a name="theor41ret" id="theor41ret"></a>
+THEOREM 4.1: Lagrange’s Theorem<br></p>
+<p>Let <em>G</em> be a finite group, and <em>H</em> a subgroup of <em>G</em>. Then the order of <em>H</em> divides the order of <em>G</em>. That
+is, |<em>G</em>| = <em>k</em>·|<em>H</em>| for some positive integer <em>k</em>.<br><br></p>
+<p><a href="#theor41">Click here for the proof.</a></p>
+<p />
+Lagrange's theorem has many important consequences. We call the applications of an important theorem <em>Corollaries</em>.<p><a name="cor41ret" id="cor41ret"></a>
+COROLLARY 4.1<br></p>
+<p>Let <em>G</em> be a finite group, and let <em>x</em> be an element of <em>G</em>.  Then the order of <em>x</em> divides |<em>G</em>|.<br><br></p>
+<p><a href="#cor41">Click here for the proof.</a></p>
+<p><a name="cor42ret" id="cor42ret"></a>
+COROLLARY 4.2<br></p>
+<p>Let <em>G</em> be a finite group of order <em>n</em> and let <em>x</em> be an element of <em>G</em>. Then <em>x<sup>n</sup></em> = <em>e</em>.<br><br></p>
+<p><a href="#cor42">Click here for the proof.</a><br><br></p>
+<p><a name="cor43ret" id="cor43ret"></a>
+COROLLARY 4.3<br></p>
+<p>A group of prime order is cyclic.<br><br></p>
+<p><a href="#cor43">Click here for the proof.</a></p>
+<p><a name="cor44ret" id="cor44ret"></a>
+COROLLARY 4.4<br></p>
+<p>Let <em>n</em> be a positive integer, and <em>x</em> a number coprime to <em>n</em>.  Then</p>
+<p style='text-align: center;'><em>x</em><sup><em>&#981;</em>(<em>n</em>)</sup> &equiv; 1&emsp;(mod <em>n</em>)</p>
+where <em>&#981;</em>(<em>n</em>) is Euler's totient function.<br><br>
+<p><a href="#cor44">Click here for the proof.</a></p>
+<p />
+When <em>n</em> = <em>p</em> is prime then <em>&#981;</em>(<em>p</em>) = <em>p</em> &minus; 1, and Corollary 4.4 says that
+<p style='text-align: center;'><em>x</em><sup><em>p</em>&minus;1</sup> &equiv; 1&emsp;(mod <em>p</em>).</p>
+This result is known as Fermat's little theorem. Fermat had proved this without the help of group theory, which was a real challenge! Yet this result becomes a 
+trivial consequence of a larger theorem when we look at the supporting group structure.
+<p><br><br>
+DEFINITION 4.2<br>
+If <em>H</em> is a subgroup of <em>G</em>,we can define the <em>index</em> of <em>H</em> in <em>G</em>, denoted [<em>G</em>:<em>H</em>], to be the number of right cosets
+in <em>H</em>\<em>G</em>.  Of course this is the same as the number of left cosets in <em>G</em>/<em>H</em>.<br></p>
+<br>
+Notice that when <em>G</em> is a finite group we have by the argument in Lagrange's theorem (4.1) that |<em>G</em>| = |<em>H</em>|&middot;[<em>G</em>:<em>H</em>].<br><br><p><a name="sec42" id="sec42"></a></p>
+<h1>Writing Secret Messages</h1>
+<br>
+In this section, we will learn of one important application of Lagrange's Theorem. We will learn how to write a message that no one can read except for the person to 
+whom the message is sent, <em>even if everyone in the world knows the code</em>! This sounds like an impossibility, but we will see that it can be done with group 
+theory.  This code has applications in internet security and secure data transmissions.<br><br>
+<p>EXAMPLE<br>
+To introduce this code, we begin by considering the group <em>Z</em><sub>33</sub><sup>*</sup>, formed by all of the generators of <em>Z</em><sub>33</sub>.
+The order of this group is <em>ϕ</em>(33). We can either look at the table in the previous notebook, or use <em>SageMath</em>’s built
+in <strong>EulerPhi</strong> function<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">EulerPhi</span><span class="p">(</span><span class="mi">33</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+to see that there are 20 elements. It isn't hard to determine the generators of <em>Z</em><sub>33</sub>:
+<p style='text-align: center;'>{1, 2, 4, 5, 7, 8, 10, 13, 14, 16, 17, 19, 20, 23, 25, 26, 28, 29, 31, 32}.</p>
+This is the set of elements in <em>Z</em><sub>33</sub><sup>&ast;</sup>.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">ZStar</span><span class="p">(</span><span class="mi">33</span><span class="p">);</span> <span class="n">G</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let us consider making a circle graph that maps each element to that element raised to a certain power.
+For example, we can map each element to its square by the command<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">Pow</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+This yields a rather perplexing graph, since some elements have many arrows point to them, for example 4 is obtained by squaring either 2, 13, 20, or 31 in this group. 
+Those elements that have &quot;square roots&quot; seem to have four of them, while the majority of the elements do not have &quot;square roots&quot; at all. Of course 
+a &quot;square root of <em>x</em>&quot; is defined as any element whose square is <em>x</em>. Although there are some other interesting patterns to explore here, 
+let us look at the circle graphs of different powers. This graph maps every element to its cube:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">Pow</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+This graph has a very different behavior. No two arrows heads are at the same element, indicating that no two elements have the same cube.  Also, every element 
+has some arrow that points to it.  Thus, we see from the figure that the cube function is both one-to-one and onto. Hence, every element has a unique cube root.<br><br>
+<p>EXPERIMENT:<br>
+Form different circle graphs by replacing the 3 in the last graph with higher numbers. Look at all of the circle graphs from <strong>Pow(4)</strong>
+to <strong>Pow(21)</strong>.
+In these 18 circle graphs, which ones form one-to-one and onto functions? Why does <strong>Pow(20)</strong> behave the way it does? (Hint: see Corollary 4.4.)  Why
+does <strong>Pow(21)</strong> behave like <strong>Pow(1)</strong>? <br></p>
+<br>
+Here is one explanation as to why <em>x</em> &rarr; <em>x</em><sup>3</sup> is one-to-one and onto. Let us plot both <strong>Pow(3)</strong> and <strong>Pow(7)</strong> 
+on the same graph:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">Pow</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">Pow</span><span class="p">(</span><span class="mi">7</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+The green arrows representing <strong>Pow(7)</strong> go in the opposite direction as the red arrows representing <strong>Pow(3)</strong>. 
+This indicates that to take a cube root of a number modulo 33, we take its seventh power! This is because <em>&#981;</em>(33) = 20, so using Corollary 4.4,
+<p style='text-align: center;'> (<em>x</em><sup>3</sup>)<sup>7</sup> = <em>x</em><sup>21</sup> = 
+<em>x</em><sup>20</sup>&middot;<em>x</em> = <em>e</em>&middot;<em>x</em> = <em>x</em>.</p>
+Here we used the observation that <strong>Pow(21)</strong> behaved like <strong>Pow(1)</strong> because of Corollary 4.4. We say that the function <strong>Pow(7)</strong> 
+is the <em>inverse</em> of the function <strong>Pow(3)</strong>. The difference between this examples and the first example <strong>Pow(2)</strong> is that 3 is coprime 
+to <em>&#981;</em>(33) = 20, whereas 2 is not.  See if you can use this idea to prove the following generalization:<p><a name="prop41ret" id="prop41ret"></a>
+PROPOSITION 4.1<br></p>
+<p>Suppose <em>G</em> is a finite group of order <em>m</em>, and that <em>r</em> is some integer which is coprime to <em>m</em>. Then the function <em>f</em>(<em>x</em>) =
+<em>x<sup>r</sup></em> is one-to-one and onto.  In other words, we can always find the unique <nobr><em>r</em><sup>th</sup></nobr> root of any element of <em>G</em>.<br><br></p>
+<p><a href="#prop41">Click here for the proof.</a></p>
+<p />
+<p>EXAMPLE:<br>
+Let us try another experiment. Rather than using the elements in <em>Z</em><sub>33</sub><sup>*</sup>, suppose we considered all of the numbers from 0 to 32. This will
+no longer by a group, since we have included some non-invertible elements. But we can still take the cube of any number, and can still plot the circle graph.  Here it
+is:<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">R</span> <span class="o">=</span> <span class="n">MultMod</span><span class="p">(</span><span class="mi">33</span><span class="p">);</span> <span class="n">R</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">(</span><span class="n">R</span><span class="p">,</span> <span class="n">Pow</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+This function is still one-to-one and onto, even with the extra elements.  What about Pow(7)? Is this still the inverse of Pow(3) for this new set? 
+Let's check by graphing both Pow(3) and Pow(7) on the same graph again:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">(</span><span class="n">R</span><span class="p">,</span> <span class="n">Pow</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">Pow</span><span class="p">(</span><span class="mi">7</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+We can see that Pow(7) is still the inverse of Pow(3), even with the extra elements. This will happen in general whenever <em>n</em> is a product of two distinct primes, 
+as seen by the following proposition.<p><a name="prop42ret" id="prop42ret"></a>
+PROPOSITION 4.2<br></p>
+<p>Suppose <em>n</em> is a product of two distinct primes and <em>r</em>·<em>s</em> ≡ 1 (mod <em>ϕ</em>(n)).  Then for all values of <em>x</em> less
+then <em>n</em>,</p>
+<p style='text-align: center;'>(<em>x<sup>r</sup></em>)<sup><em>s</em></sup> &equiv; <em>x</em> (mod <em>n</em>).</p>
+<p><a href="#prop42">Click here for the proof.</a></p>
+<p />
+<p>EXAMPLE:<br></p>
+<p>The function <em>x</em> → <em>x</em><sup>3</sup> is not only one-to-one and onto but also mixes up most of the numbers 0 through 32 fairly well. This suggests
+an encryption scheme. For example, we could let<br><br></p>
+<table align="center" width="400" border="1">
+  <tr>
+    <td width="100">A = 1</td>
+    <td width="100">J = 10</td>
+    <td width="100">S = 19</td>
+  </tr>
+  <tr>
+    <td>B = 2</td>
+    <td>K = 11</td>
+    <td>T = 20</td>
+  </tr>
+  <tr>
+    <td>C = 3</td>
+    <td>L = 12</td>
+    <td>U = 21</td>
+  </tr>
+  <tr>
+    <td>D = 4</td>
+    <td>M = 13</td>
+    <td>V = 22</td>
+  </tr>
+  <tr>
+    <td>E = 5</td>
+    <td>N = 14</td>
+    <td>W = 23</td>
+  </tr>
+  <tr>
+    <td>F = 6</td>
+    <td>O = 15</td>
+    <td>X = 24</td>
+  </tr>
+  <tr>
+    <td>G = 7</td>
+    <td>P = 16</td>
+    <td>Y = 25</td>
+  </tr>
+  <tr>
+    <td>H = 8</td>
+    <td>Q = 17</td>
+    <td>Z = 26</td>
+  </tr>
+  <tr>
+    <td>I = 9</td>
+    <td>R = 18</td>
+    <td>Space = 0</td>
+  </tr>
+</table>
+<br>
+Now any message can be converted to a sequence of numbers:
+<p style='text-align: center;'>CAN YOU READ THIS</p>
+becomes
+<p style='text-align: center;'>3, 1, 14, 0, 25, 15, 21, 0, 18, 5, 1, 4, 0, 20, 8, 9, 19</p>
+<p>We replace each number with its cube, modulo 33. Using the above circle graph, we get</p>
+<p style='text-align: center;'>27, 1, 5, 0, 16, 9, 21, 0, 24, 26, 1, 31, 0, 14, 17, 3, 28</p>
+<p>To decipher this, one would take the seventh power of each number in the sequence modulo 33, and convert back to letters in the alphabet. Voilà!<br><br></p>
+<p>There are two main drawbacks with this “modulo 33” code.  The first is that, for longer messages, the letter E which encodes to 26 would appear most
+frequently in the encoded string. Even someone who didn’t know the code might deduce that 26 stands for E even if they didn’t know anything about algebra.</p>
+<p><br><br>
+The second problem is that anyone who knew how to encrypt the message could use Proposition 4.2 and the fact that <em>Z</em><sub>33</sub><sup>*</sup> is of order 20 to
+come up with the inverse of 3 in <em>Z</em><sub>20</sub><sup>*</sup> being 7, and thereby could decode the message. What we would like is a code in which anyone could
+encrypt a message, but only the person who originated the code could decipher.<br><br></p>
+<p>We can solve both of these problems just by picking <em>n</em> to be a larger value! Rather than picking <em>n</em> = 33, suppose that n was the product of two very
+large prime numbers <em>p</em> and <em>q</em>, say 80 digits each. Then <em>n</em> would have about 160 digits! (We will not be able to draw circle graphs on this large
+of a group.) By the totient function theorem, <em>ϕ</em>(<em>n</em>) would
+be (<em>p</em> − 1)·(<em>q</em> − 1). Rather than picking <em>r</em> = 3,
+we would pick some large value of <em>r</em> which is coprime to (<em>p</em> − 1)·(<em>q</em> − 1). A four digit number would be sufficient. Our code will
+be</p>
+<p style='text-align: center;'><em>x</em> &rarr; <em>y</em> = <em>x<sup>r</sup></em> <strong>mod</strong> <em>n</em>.</p>
+Even though <em>r</em> and <em>n</em> are large, this computation is a piece of cake for <em>SageMath</em>.<br><br>
+<p>We decode this by finding the inverse of <em>r</em> in the group <em>Z</em><sub><em>ϕ</em>(<em>n</em>)</sub><sup>*</sup>, and call this <em>s</em>.
+In our modulo 33 code <em>s</em> = <em>7</em>, but here <em>s</em> could be almost as large as <em>n</em>. By Proposition 4.2, we can decode the message by the
+operation</p>
+<p style='text-align: center;'><em>y</em> &rarr; <em>x</em> = <em>y<sup>s</sup></em> <strong>mod</strong> <em>n</em>.</p>
+This operation &quot;undoes&quot; the encryption, since we know that
+<p style='text-align: center;'>(<em>x<sup>r</sup></em>)<sup>s</sup> &equiv; <em>x</em> (mod <em>n</em>)&emsp;if&emsp;<em>r</em>&middot;<em>s</em> &equiv; 1 
+(mod <em>&#981;</em>(<em>n</em>)).</p>
+<br>
+How does this solve both of the problems of the modulo 33 code? First of all, instead of encrypting a letter at a time, <em>n</em> is large enough for us to encrypt an 
+entire line at a time. For example, the message<br><br>
+<p>CAN YOU READ THIS <br><br>can be encrypted by the single number<br><br></p>
+<p>0301140025152100180501040020080919.<br><br></p>
+<p>Notice that every two digits of this number represent one letter, according to the same code we had before. This eliminates the problem of one number having a
+higher occurrence frequency, as in the modulo 33 code.<br><br></p>
+<p>The other problem with the modulo 33 code is that everyone who knew how to encrypt the message could also decode a message. Is the the case when <em>n</em> is large?
+In order to decode a message, one must know the value of <em>s</em>, which is given by the inverse of <em>r</em> (mod <em>ϕ</em>(<em>n</em>)). This is easy to do
+with <em>SageMath</em> once
+<em>ϕ</em>(<em>n</em>) is known, but how difficult it is to find <em>ϕ</em>(<em>n</em>)! One needs to know the prime factorization of <em>n</em>, which would
+be about 160 digits long. In fact, adding two digits to <em>p</em> and <em>q</em> makes the factorization 10 times harder.  So by making the prime numbers even larger, we
+can be assured that the factorization cannot be done within one’s lifetime. Thus, only the person who originated the prime numbers <em>p</em> and <em>q</em> could come
+up with the value of <em>s</em>. <br><br></p>
+<p>This encryption scheme is called the RSA encryption, which is an abbreviation of Rivest-Shamir-Adleman, the three mathematicians who came up with this code.
+There are <em>SageMath</em> routines set up in this notebook that allow us to experiment with RSA encryption.<br><br></p>
+<p>EXAMPLE:<br>
+Suppose that a friend wishes to send a completely confidential message, but that all correspondence between you and your friend were being monitored.<br><br></p>
+<p>The first step is for you to come up with 2 very large primes of 80 digits or more. Even though <em>SageMath</em> cannot factor large numbers, it does have a secret way
+of testing whether a number is prime. The function<br><br></p>
+<p><strong>NextPrime</strong>(<em>n</em>)<br><br></p>
+<p>uses this feature to find the next prime number after <em>n</em>. So by entering two large random numbers, <em>SageMath</em> can find two large random primes. Say you pick
+<em>p</em> to be<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">NextPrime</span><span class="p">(</span><span class="mi">12345678901234567890123456789012345678901234567890123456789012345678901234567890</span><span class="p">);</span> <span class="n">p</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+and pick <em>q</em> to be<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">q</span> <span class="o">=</span> <span class="n">NextPrime</span><span class="p">(</span><span class="mi">98765432109876543210987654321098765432109876543210987654321098765432109876543210</span><span class="p">);</span> <span class="n">q</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+These numbers aren't too random, but they will do.  The backslash in the output shows that the line is continued, so we have one 
+large number.  However, the backslash will not work on the input line.  Note that clicking on the left side of the output 
+toggles the format from a line that is broken to a single line with a scrollbar.<br><br>
+<p><em>SageMath</em> uses a variation of the Agrawal, Kayal, and Saxena primality test to find the next prime number.
+This test can definitely determine whether a number is prime, in a time that is a polynomial function of the number
+of digits in <em>p</em> and <em>q</em>.   Hence, we can quickly know for certain that the numbers <em>p</em> and <em>q</em>
+will be prime.</p>
+<p>Next, multiply the two numbers together, and tell your friend the product <em>n</em>.<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="n">p</span><span class="o">*</span><span class="n">q</span><span class="p">;</span> <span class="n">n</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Also give your friend a 4 digit number <em>r</em> which happens to be coprime to both (<em>p</em>&minus;1) and (<em>q</em>&minus;1). Simply find a 4 digit prime which 
+does not happen to be a factor of (<em>p</em>&minus;1) and (<em>q</em>&minus;1). <br><br>
+<p>Here is a random (or maybe not so random) four digit prime number:<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="n">NextPrime</span><span class="p">(</span><span class="mi">1234</span><span class="p">);</span> <span class="n">r</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Now check to make sure this is not a factor of (<em>p</em>&minus;1) and (<em>q</em>&minus;1):<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gcd</span><span class="p">((</span><span class="n">p</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">q</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">r</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Since the gcd is 1, <em>r</em> is coprime to (<em>p</em>&minus;1) and (<em>q</em>&minus;1). Even if this communication is monitored, only the value of <em>n</em>, 
+not the <em>p</em> and <em>q</em> which generated it, would be known to any spies. <br><br>
+<p>Next tell your friend to convert the message to a number. There are routines in this notebook for converting messages numbers quickly. They are <br><br></p>
+<p><strong>MessageToNumber</strong>(“Message”)<br><br></p>
+<p>and<br><br></p>
+<p><strong>NumberToMessage</strong>(Number)<br><br></p>
+<p>Note we put the message in quotation marks. Therefore, we can find the number corresponding to “HERE IS A MESSAGE” by typing<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">MessageToNumber</span><span class="p">(</span><span class="s2">&quot;HERE IS A MESSAGE&quot;</span><span class="p">);</span> <span class="n">x</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+We can then convert this back to a message with the command<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">NumberToMessage</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Encrypting this message is accomplished by raising <em>x</em> to the <em>r</em><sup>th</sup> power modulo <em>n</em>.  This is done by the <em>SageMath</em> command 
+<strong>PowerMod</strong>. The format for this command is<br><br>
+<p>PowerMod(a, b, n) = <em>a<sup>b</sup></em> <strong>mod</strong> <em>n</em><br><br></p>
+<p>It can compute such powers very quickly.<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">PowerMod</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Suppose your friend has done this operation with a different message, giving you the answer<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="mi">695574051470244068706114266574256043827756065440747032387700788446830783525388331288538827113160595765080505966693143199918635215093570816224139063616551830794</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+How do you decode this message?<br><br>
+<p>First, find the number <em>s</em> which is the inverse of <em>r</em> modulo (<em>p</em>−1)·(<em>q</em>−1). This is given by<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">PowerMod</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="n">p</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">q</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">);</span> <span class="n">s</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+This is the <em>secret key</em> to the code. Because the spies only know the values of <em>n</em> and <em>r</em>, there is no way for them to factor <em>n</em> to come 
+up with <em>p</em> and <em>q</em>.  So this value <em>s</em> will still be a secret.<br><br>
+<p>Next, compute <em>y<sup>s</sup></em> <strong>mod</strong> <em>n</em> using the command<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">PowerMod</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span> <span class="n">x</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Finally, the command<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">NumberToMessage</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+puts the message into readable form. With <em>SageMath</em>, this code becomes easy to use!<br><br>
+<p />
+<p>EXAMPLE:<br>
+There are many other applications to this code besides sending secret messages. For example, suppose to get an account at the Electronic Bank, you are asked to pick two
+large random prime numbers, <em>p</em> and <em>q</em>. The bank then gives you the account number <nobr><em>n</em> = <em>p</em>·<em>q</em>,</nobr> and a number <em>r</em>,
+and publishes these. The bank then gives you the number <em>s</em> which will be the inverse of <em>r</em> in <em>Z</em><sub><em>ϕ</em>(<em>n</em>)</sub><sup>*</sup>.
+Now you can use the number <em>s</em> to <em>decode</em> a message such as<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">MessageToNumber</span><span class="p">(</span><span class="s2">&quot;Check 1034: Pay to the order of John Brown $43.50&quot;</span><span class="p">);</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">PowerMod</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span> <span class="n">x</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+You can send this number to John Brown, along with your account number. Then he, his bank, and anyone else who needs to know, can verify what this says as follows:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">PowerMod</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">NumberToMessage</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+What does this prove? The only person knowing the number <em>s</em> sent this message, which would be the owner of the account. The fact that the message was so 
+encoded becomes a <em>signature</em> to the check. Using this method, one can send an &quot;electronic check&quot; (even through the e-mail) that is impossible to 
+forge.<br><br><p><a name="sec43" id="sec43"></a></p>
+<h1>Normal Subgroups</h1>
+<br>
+When we defined left cosets and right cosets, we were in essence defining how we could take an element of a group <em>G</em> and multiply it with a subgroup of 
+<em>G</em>. But this definition can apply to any sub<em>set</em> of <em>G</em>. That is, if <em>X</em> is any subset of <em>G</em>, we can define
+<p style='text-align: center;'><em>X u</em> = { <em>x</em>&middot;<em>u</em> | <em>x</em> &isin; <em>X</em> },<br>
+                               <em>u X</em> = { <em>u</em>&middot;<em>x</em> | <em>x</em> &isin; <em>X</em> }.</p>
+We can also, using the same idea, multiply two subsets of <em>G</em> together.<br><br>
+<p>DEFINITION 4.3<br>
+If <em>X</em> and <em>Y</em> are two subsets of a group <em>G</em>, we can define</p>
+<p style='text-align: center;'><em>X</em>&middot;<em>Y</em> = { <em>x</em>&middot;<em>y</em> | <em>x</em> &isin; <em>X</em> and <em>y</em> &isin; <em>Y</em> }.</p>
+We find that {<em>u</em>}&middot;<em>X</em> is the same thing as <em>u</em> <em>X</em>, so this definition is consistent with the previous definitions.<br><br>
+<p>Since multiplication is associative, we also have</p>
+<p style='text-align: center;'><em>X</em>&middot;(<em>Y</em>&middot;<em>Z</em>) = (<em>X</em>&middot;<em>Y</em>)&middot;<em>Z</em>.</p>
+This raises some interesting questions. If <em>X</em> and <em>Y</em> are subgroups of <em>G</em>, will <em>X</em>&middot;<em>Y</em> be a subgroup? Suppose <em>X</em> and 
+<em>Y</em> are cosets of <em>G</em> with respect to a subgroup <em>H</em>. Will <em>X</em>&middot;<em>Y</em> be a coset of <em>G</em>?<br><br>
+<p>EXAMPLE:<br>
+One way to answer these questions is to experiment! If we have two subsets of <em>G</em>, (which <em>SageMath</em> represents as a list of elements in brackets),
+we can multiply the sets together.<br><br></p>
+<p>Let’s pick a group large enough to see some patterns. Execute the following command to load the octahedral group.<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
+<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="s2">&quot;c&quot;</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">c</span><span class="o">^</span><span class="mi">4</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">c</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">*</span><span class="n">c</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">c</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="o">*</span><span class="n">c</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">Group</span><span class="p">();</span> <span class="n">G</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Recall that this group has order 24. There are many subgroups in this group. Let us find a few.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">H</span> <span class="o">=</span> <span class="n">Group</span><span class="p">(</span><span class="n">c</span><span class="p">);</span> <span class="n">H</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">K</span> <span class="o">=</span> <span class="n">Group</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">c</span><span class="p">);</span> <span class="n">K</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="n">Group</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">*</span><span class="n">c</span><span class="o">*</span><span class="n">c</span><span class="p">);</span> <span class="n">L</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+We can now explore what happens when we multiply two subgroups together.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">H</span> <span class="o">*</span> <span class="n">K</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Looks like a lot of elements! Let's count them.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+So <em>H</em>&middot;<em>K</em> has 16 elements. Apparently, each element of <em>H</em>, when multiplied by an element 
+in <em>K</em>, produces a unique element.<br><br>
+<p>Is <em>H</em>·<em>K</em> a subgroup of <em>G</em>? Lagrange’s theorem (4.1) quickly tells us <em>no</em>!  Since 16 does not divide 24, <em>H</em>·<em>K</em>
+is not a subgroup of <em>G</em>, in spite of the fact that <em>H</em> and <em>K</em> are.<br><br></p>
+<p>EXPERIMENT:<br>
+Try working multiplying two other subgroups of <em>G</em>. Consider for example <em>K</em>·<em>H</em>, <em>H</em>·<em>L</em>, <em>L</em>·<em>H</em>,
+<em>K</em>·<em>L</em>, or <em>L</em>·<em>K</em>. Do any of these form subgroups of <em>G</em>?<br></p>
+<br>
+EXAMPLE:<br>
+Suppose instead that <em>X</em> and <em>Y</em> are both cosets of <em>G</em> with respect to a subgroup <em>H</em>. We can let again let <em>H</em> be the group 
+generated by the element <em>c</em>.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">H</span> <span class="o">=</span> <span class="n">Group</span><span class="p">(</span><span class="n">c</span><span class="p">);</span> <span class="n">H</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Here are the right and left cosets:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">RtCoset</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">H</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">LftCoset</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">H</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+As expected, the left and right cosets are different, since the group is not commutative. Let's pick two right cosets:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">H</span><span class="o">*</span><span class="n">b</span><span class="p">;</span> <span class="n">X</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Y</span> <span class="o">=</span> <span class="n">H</span><span class="o">*</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">;</span> <span class="n">Y</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Now, let's see if the product gives us anything useful.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">*</span> <span class="n">Y</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Let's find the length of this mess.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Not only can this fail to be a subgroup, but this cannot be a coset of a subgroup. Do we have any better luck with left cosets? Let's try it.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z</span> <span class="o">=</span> <span class="n">a</span><span class="o">*</span><span class="n">H</span><span class="p">;</span> <span class="n">Z</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">W</span> <span class="o">=</span> <span class="n">b</span><span class="o">*</span><span class="n">H</span><span class="p">;</span> <span class="n">W</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Well, here goes nothing!<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z</span> <span class="o">*</span> <span class="n">W</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+That didn't seem to produce anything useful either. But before we give up completely, suppose we multiply a left coset by a right coset.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">W</span> <span class="o">*</span> <span class="n">Y</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+That looks more promising.  In fact, this is a subgroup!  Compare this with<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Group</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+to see that they are the same. <br><br>
+<p>EXPERIMENT:<br>
+Try other combinations of a left coset times a right coset, such as <em>Z</em>·<em>X</em>, <em>Z</em>·<em>Y</em>, and <em>W</em>·<em>X</em>.
+How many elements do these have?  Are any of them subgroups?  Are any or them cosets of some subgroup?</p>
+<br>
+This experiment indicates that there might be some promise in exploring the products of <em>left</em> cosets times <em>right</em> cosets. 
+Let's try another example to see if we can determine a pattern. <br><br>
+<p>EXAMPLE:<br>
+Enter in the subgroup<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="n">Group</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="o">*</span><span class="n">c</span><span class="p">,</span> <span class="n">c</span><span class="o">^</span><span class="mi">2</span><span class="p">);</span> <span class="n">M</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+This is also a group of order 4. Let's find the right and left cosets of <em>G</em> with respect to this group.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">RtCoset</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">M</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">LftCoset</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">M</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+There is more of a pattern in the cosets with <em>this</em> subgroup. Look carefully. The right and left cosets are the same!<br><br>
+<p>This particular subgroup allows us to explore more patterns. Because any left coset is also a right coset, they are interchangeable. We saw before that a left coset
+times a right coset produced something that looked like a coset. But in this case, left and right cosets are the same so let’s try multiplying two of these together.
+Here are three of the cosets:<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">H</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">M</span><span class="p">;</span> <span class="n">H</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">K</span> <span class="o">=</span> <span class="n">b</span> <span class="o">*</span> <span class="n">M</span><span class="p">;</span> <span class="n">K</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span>  <span class="n">c</span> <span class="o">*</span> <span class="n">M</span><span class="p">;</span> <span class="n">L</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Here is the product of the first two:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">H</span> <span class="o">*</span> <span class="n">K</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Look carefully.  This is one of the cosets of <em>M</em>.  Will this always happen?<br><br>
+<p>EXPERIMENT:<br>
+Try other multiplications of <em>H</em>, <em>K</em>, and <em>L</em>, such as <em>K</em>·<em>H</em>, <em>H</em>·<em>L</em>,
+<em>L</em>·<em>H</em>, <em>K</em>·<em>L</em>, and <em>L</em>·<em>K</em>. Do all of these products form cosets?<br></p>
+<br>
+Because the subgroup <em>M</em> has such special properties, we will give a special name for this type of group.<br><br>
+<p>DEFINITION 4.4<br>
+A subgroup <em>H</em> of the group <em>G</em> is said to be <em>normal</em> if all left cosets are also right cosets, and conversely, all right cosets are also left cosets.
+That is, <em>H</em> is normal if <em>G</em>/<em>H</em> = <em>H</em>\<em>G</em>.<br><br></p>
+<p>We need a quick way to check whether a subgroup is normal, and the following propositions provides us with one.</p>
+<p><a name="prop43ret" id="prop43ret"></a>
+PROPOSITION 4.3<br></p>
+<p>A subgroup <em>H</em> is a normal subgroup of <em>G</em> if, and only if, <em>g H g</em><sup>-1</sup> = <em>H</em> for all elements <em>g</em> in <em>G</em>.<br><br></p>
+<p><a href="#prop43">Click here for the proof.</a></p>
+<p />
+This gives us a way to determine if a subgroup is normal, but we can improve on this test. <p><a name="prop44ret" id="prop44ret"></a>
+PROPOSITION 4.4<br></p>
+<p>Let <em>H</em> be a subgroup of <em>G</em>. Then <em>H</em> is normal if, and only if,</p>
+<p style='text-align: center;'><em>g</em>&middot;<em>h</em>&middot;<em>g</em><sup>-1</sup> &isin; <em>H</em></p>
+for all elements <em>g</em> &isin; <em>G</em> and <em>h</em> &isin; <em>H</em>.<br><br>
+<p><a href="#prop44">Click here for the proof.</a><br></p>
+<p />
+We have already seen one example of a normal subgroup, but there are many others. For example, if <em>G</em> is any group, then the subgroups {<em>e</em>} and <em>G</em> 
+are normal. These normal subgroups are said to be <em>trivial</em>.<br><br>
+<p>If, on the other hand, <em>G</em> is commutative, then any subgroup will be a normal subgroup.<br><br></p>
+<p>We conclude this section with a simple observation.</p>
+<p><a name="prop45ret" id="prop45ret"></a>
+PROPOSITION 4.5<br>
+If <em>H</em> is a subgroup of <em>G</em> with index 2, then <em>H</em> is a normal subgroup.<br><br></p>
+<p><a href="#prop45">Click here for the proof.</a></p>
+<p />
+When we have a normal subgroup, the set of cosets will possess more properties than for 
+standard subgroups.  We will explore these in the next section.<p><a name="sec44" id="sec44"></a></p>
+<h1>Quotient Groups</h1>
+<br>
+When we were experimenting with multiplying cosets together, it seemed that if the subgroup <em>N</em> was a normal subgroup of <em>G</em>, then the products of two 
+cosets gave us another coset. We will now examine why this is true.<p><a name="lem43ret" id="lem43ret"></a>
+LEMMA 4.3<br></p>
+<p>If <em>N</em> is a normal subgroup of <em>G</em>, then the product of two cosets of <em>N</em> produces a coset of <em>N</em>. In fact,</p>
+<p style='text-align: center;'><em>a N</em>&middot;<em>b N</em> = (<em>a</em>&middot;<em>b</em>)<em>N</em>.</p>
+<p><a href="#lem43">Click here for the proof.</a></p>
+<p />
+This proposition is very suggestive. Since we can multiply two cosets together, can the set of all cosets form another group? This is, in fact, exactly what 
+happens.<p><a name="theor42ret" id="theor42ret"></a><br />
+THEOREM 4.2: The Quotient Group Theorem<br></p>
+<p>Let <em>N</em> be a normal subgroup of <em>G</em>. Then the set of all cosets is a group, which is denoted by <em>G</em>/<em>N</em>, called the <em>quotient group</em>
+of <em>G</em> with respect to <em>N</em>.<br><br></p>
+<p><a href="#theor42">Click here for the proof.</a><br></p>
+<p />
+EXAMPLE:<br>
+One of the easiest groups to consider is the group of integers &#8484;, under addition. A subgroup of &#8484; would consist of all 
+multiples of <em>k</em>, for some non-negative <em>k</em>. (<em>k</em> = 0 and <em>k</em> = 1 give us the two trivial subgroups.) Since &#8484; is commutative, 
+these subgroups are normal. What would the cosets look like? Each coset would consist of all numbers equivalent modulo <em>k</em>. So there would be <em>k</em> cosets of 
+<em>k</em> &#8484; (except when <em>k</em> = 0). Thus, &#8484;/<em>k</em> &#8484; is essentially the same group as <em>Z<sub>k</sub></em>.<br><br>
+<p>In the case of <em>Z<sub>k</sub></em>, we used modulo arithmetic as the group operator. In essence, the notation</p>
+<p style='text-align: center;'><em>x</em> &equiv; <em>y</em> (mod <em>k</em>)</p>
+means that <em>x</em> and <em>y</em> belong in the same coset of &#8484;/<em>k</em> &#8484;.<br><br>
+<p>We can extend this notation to any normal subgroup. We say that “<em>x</em> is equivalent mod <em>N</em> to <em>y</em>,” or</p>
+<p style='text-align: center;'><em>x</em> &equiv; <em>y</em> (mod <em>N</em>)</p>
+to mean that <em>x</em> and <em>y</em> belong in the same coset of <em>N</em>. It is easy to see that
+<p style='text-align: center;'><em>x</em> &equiv; <em>y</em> (mod <em>N</em>) if, and only if, <em>x</em>&middot;<em>y</em><sup>-1</sup> &isin; <em>N</em></p>
+In &sect;2.2, we defined a equivalence relation as a relation satisfying the three properties<br><br>
+<p>1) (Reflexive) Every element <em>x</em> is equivalent to itself.<br>
+2) (Symmetric) If <em>x</em> is equivalent to <em>y</em>, then <em>y</em> is equivalent to <em>x</em>.<br>
+3) (Transitive) If <em>x</em> is equivalent to <em>y</em>, and <em>y</em> in turn is equivalent to <em>z</em>, then <em>x</em> is equivalent to <em>z</em>.</p>
+<p><br><br>
+Because of the fact the two elements are equivalent if they are in the same coset, it is clear that <em>x</em> ≡ <em>y</em> (mod <em>N</em>) is an equivalence relation.  The equivalence classes would be the cosets of <em>N</em> for which the relation is defined.<br><br></p>
+<p>EXAMPLE:<br>
+Consider the octahedral group:<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
+<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">c</span><span class="o">^</span><span class="mi">4</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">c</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">*</span><span class="n">c</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">c</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">Group</span><span class="p">();</span> <span class="n">G</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+We found one normal subgroup to this group, namely<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="n">Group</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="o">*</span><span class="n">c</span><span class="p">,</span> <span class="n">c</span><span class="o">^</span><span class="mi">2</span><span class="p">);</span> <span class="n">M</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+The cosets, or equivalence classes, with respect to this subgroup are:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Q</span> <span class="o">=</span> <span class="n">LftCoset</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">M</span><span class="p">);</span> <span class="n">Q</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+We can use the <b>CayleyTable</b> command on the quotient group:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CayleyTable</span><span class="p">(</span><span class="n">Q</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Notice that since the names of the elements are too long to enter them into each square, Mathematica uses a color code for the elements. Nonetheless, we can determine 
+much information from this table.<br><br>
+<p>The first thing we can observe from this table is that this group is not commutative. For example,<br><br></p>
+<p style='text-align: center;'>
+{<em>a</em>, <em>a</em>&middot;<em>c</em><sup>2</sup>, <em>b</em><sup>2</sup>&middot;<em>c</em>, <em>b</em><sup>2</sup>&middot;<em>c</em><sup>3</sup>} &middot; 
+{<em>b</em>, <em>a</em>&middot;<em>b</em>&middot;<em>c</em>, <em>b</em>&middot;<em>c</em><sup>2</sup>, <em>a</em>&middot;<em>b</em>&middot;<em>c</em><sup>3</sup>}</p>
+does not give the same thing as 
+<p style='text-align: center;'>
+{<em>b</em>, <em>a</em>&middot;<em>b</em>&middot;<em>c</em>, <em>b</em>&middot;<em>c</em><sup>2</sup>, <em>a</em>&middot;<em>b</em>&middot;<em>c</em><sup>3</sup>} &middot; 
+{<em>a</em>, <em>a</em>&middot;<em>c</em><sup>2</sup>, <em>b</em><sup>2</sup>&middot;<em>c</em>, <em>b</em><sup>2</sup>&middot;<em>c</em><sup>3</sup>}</p>
+We have already seen a non-commutative group of order 6, namely <em>S</em><sub>3</sub>. In fact, there is a copy of <em>S</em><sub>3</sub> sitting inside of the 
+group <em>G</em>, which could be seen by the command<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">H</span> <span class="o">=</span> <span class="p">[</span><span class="n">e</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">];</span> <span class="n">H</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+We can compare the multiplication table of this subgroup with that of the quotient group <em>Q</em>:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CayleyTable</span><span class="p">(</span><span class="n">Q</span><span class="p">)</span>
+<span class="n">CayleyTable</span><span class="p">([</span><span class="n">e</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+The color patterns are not the same, but this doesn't mean that these two groups are not equivalent. There might be some way to rearrange the elements in the last 
+command so that the color patterns in the two tables match.<br><br>
+<p>EXPERIMENT:<br>
+Can you rearrange the elements {<em>e</em>, <em>b</em>, <em>b</em><sup>2</sup>, <em>a</em>, <em>a</em>·<em>b</em>, <em>a</em>·<em>b</em><sup>2</sup>} in
+the last command so that the color patterns in the two tables match?  Those who enjoy logic puzzles should find this an easy exercise.  (There is more than one
+solution.)<br></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<h1>Proofs:</h1><p><a name="lem41" id="lem41"></a></p>
+<p>Proof of Lemma 4.1:<br><br></p>
+<p>It is clear from the definitions that <em>H u</em> and <em>u H</em> each contains at most |<em>H</em>| elements.  In order to prove that the number is exactly |<em>H</em>| we need to show
+that two distinct elements of <em>H</em> produce two different elements in the cosets.  Suppose that this were not the case in a right coset.  We would have two
+different elements <em>x</em> and <em>y</em> for which<br><br></p>
+<p style='text-align: center;'><em>x</em>&middot;<em>u</em> = <em>y</em>&middot;<em>u</em>,</p>
+which multiplying on the right by <em>u</em><sup>-1</sup> gives <em>x</em> = <em>y</em>, a contradiction. Similar reasoning works for left cosets.  If
+<p style='text-align: center;'><em>u</em>&middot;<em>x</em> = <em>u</em>&middot;<em>y</em>,</p>
+multiplying on the left by <em>u</em><sup>-1</sup> shows that <em>x</em> = <em>y</em>.<br><br>
+<p><a href="#lem41ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="lem42" id="lem42"></a>
+Proof of Lemma 4.2:<br><br></p>
+<p>We begin with right cosets.  Suppose there is an element <em>g</em> ∈ <em>H x</em> ∩ <em>H y</em>. Then there are elements <em>h</em> and <em>k</em> in <em>H</em>
+such that</p>
+<p style='text-align: center;'><em>g</em> = <em>h</em>&middot;<em>x</em> = <em>k</em>&middot;<em>y</em>.</p>
+Therefore, 
+<p style='text-align: center;'><em>x</em> = <em>h</em><sup>-1</sup>&middot;<em>k</em>&middot;<em>y</em>,</p>
+and so<br><br>
+<table border=0 cellspacing=0 cellpadding=0 width="100%" align=center class="equation">
+  <tr>
+    <td nowrap >(*)</td>
+    <td></td>
+    <td nowrap><em>H</em> <em>x</em> = <em>H</em> <em>h</em><sup>-1</sup>&middot;<em>k</em>&middot;<em>y</em>.</td>
+    <td width="51%"></td>
+  </tr>
+</table>
+<br>
+Since <em>H</em> is a subgroup, <em>h</em><sup>-1</sup>&middot;<em>k</em> &isin; <em>H</em>, so that 
+<em>H</em> <em>h</em><sup>-1</sup>&middot;<em>k</em> &sube; <em>H</em>.  Moreover, if <em>u</em> is in <em>H</em>, then 
+<p style='text-align: center;'><em>u</em> = (<em>u</em>&middot;<em>k</em><sup>-1</sup>&middot;<em>h</em>)&middot;(<em>h</em><sup>-1</sup>&middot;<em>k</em>) &isin; 
+<em>H</em> <em>h</em><sup>-1</sup>&middot;<em>k</em>.</p>
+Therefore,
+<p style='text-align: center;'><em>H</em> &sube; <em>H</em> <em>h</em><sup>-1</sup>&middot;<em>k</em>,</p>
+and we have shown that <em>H</em> = <em>H</em> <em>h</em><sup>-1</sup>&middot;<em>k</em>.  Combining this with (*) gives us <em>H x</em> = <em>H y</em>.<br><br>
+<p>We can do left cosets in the same way.  Suppose we have <em>g</em> ∈ <em>x H</em> ∩ <em>y H</em>. Then we have elements <em>h</em> and <em>k</em> in <em>H</em>
+such that</p>
+<p style='text-align: center;'><em>g</em> = <em>x</em>&middot;<em>h</em> = <em>y</em>&middot;<em>k</em>.</p>
+Therefore, 
+<p style='text-align: center;'><em>x</em> = <em>y</em>&middot;<em>k</em>&middot;<em>h</em><sup>-1</sup>,</p>
+and so 
+<p style='text-align: center;'><em>x</em> <em>H</em> =  <em>y</em>&middot;<em>k</em>&middot;<em>h</em><sup>-1</sup> <em>H</em> = 
+<em>y</em> <em>H</em>.</p>
+<p><a href="#lem42ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="theor41" id="theor41"></a></p>
+<p>Proof of Theorem 4.1:<br><br></p>
+<p>We can use either left cosets or right cosets to prove this, so let us use right cosets.  Every element of <em>x</em> in <em>G</em> is contained in at least one right
+coset.  For example, <em>x</em> is contained in <em>H x</em>.  Let <em>k</em> be the number of distinct right cosets.  Then, if the right cosets are</p>
+<p style='text-align: center;'><em>H x</em><sub>1</sub>, <em>H x</em><sub>2</sub>, <em>H x</em><sub>3</sub>, &hellip;, <em>H x<sub>k</sub></em>,</p>
+we can write
+<p style='text-align: center;'><em>G</em> = <em>H x</em><sub>1</sub> &cup; <em>H x</em><sub>2</sub> &cup; <em>H x</em><sub>3</sub> &cup; &middot;&middot;&middot; 
+&cup; <em>H x<sub>k</sub></em>.</p>
+The &cup;'s represent the union of the cosets.  But by Lemma 4.2, there are no elements in common among these sets, and so this union defines a partition of <em>G</em>.  
+By Lemma 4.1, each cosets contains |<em>H</em>| elements.  So |<em>G</em>| = <em>k</em>&middot;|<em>H</em>|.<br><br>
+<p><a href="#theor41ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="cor41" id="cor41"></a>
+Proof of Corollary 4.1:<br><br></p>
+<p>The order of <em>x</em> equals the order of the subgroup [<em>x</em>] of <em>G</em>.  Therefore, by Lagrange’s theorem (4.1), the assertion follows.<br><br></p>
+<p><a href="#cor41ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="cor42" id="cor42"></a>
+Proof of Corollary 4.2:<br><br></p>
+<p>Let <em>m</em> denote the order of <em>x</em>. By Corollary 4.1, <em>n</em> = <em>m k</em> for some integer <em>k</em>.  Then we have <em>x<sup>n</sup></em> =
+<em>x</em><sup><em>m k</em></sup> = (<em>x<sup>m</sup></em>)<sup><em>k</em></sup> = <em>e<sup>k</sup></em> = <em>e</em>.<br><br></p>
+<p><a href="#cor42ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="cor43" id="cor43"></a>
+Proof of Corollary 4.3:<br><br></p>
+<p>Suppose <em>G</em> is of order <em>p</em>, which is prime.  Then the only positive divisors of <em>p</em> are 1 and <em>p</em>, so by Lagrange’s theorem (4.1) any
+subgroup must be of order 1 or <em>p</em>. If <em>x</em> is any element of <em>G</em> besides the identity, then [<em>x</em>] contains <em>x</em> as well as the
+identity.  Thus, <em>G</em> = [<em>x</em>] so <em>G</em> is cyclic.<br><br></p>
+<p><a href="#cor43ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="cor44" id="cor44"></a>
+Proof of Corollary 4.4:<br><br></p>
+<p>We simply apply Corollary 4.2 to the group <em>Z<sub>n</sub></em><sup>*</sup>.  This group has <em>ϕ</em>(<em>n</em>) elements, and if <em>x</em> is coprime to
+<em>p</em>, then <em>x</em> is a generator of <em>Z<sub>n</sub></em>, so <em>x</em> is in <em>Z<sub>n</sub></em><sup>*</sup>.<br><br></p>
+<p><a href="#cor44ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="prop41" id="prop41"></a>
+Proof of Proposition 4.1:<br><br></p>
+<p>Since <em>G</em> is of order <em>m</em>, we have by Corollary 4.2 that <em>x<sup>m</sup></em> = <em>e</em> for all <em>x</em> in <em>G</em>.  If <em>r</em> and
+<em>m</em> are coprime, then <em>r</em> is a generator in the additive group <em>Z<sub>m</sub></em>.  But this means that <em>r</em> is an element of the group
+<em>Z<sub>m</sub></em><sup>*</sup>, and so there is an inverse element <em>s</em> = <em>r</em><sup>-1</sup>.  Thus, <em>s</em>·<em>r</em> = 1 in
+<em>Z<sub>m</sub></em><sup>*</sup>.  Another way we could say this is</p>
+<p style='text-align: center;'><em>s</em> <em>r</em> = <em>k</em> <em>m</em> + 1</p>
+for some integer <em>k</em>.<br>
+<p>Now we are ready to take the <em>r</em><sup>th</sup> root of an element.  If <em>y</em> is an element of <em>G</em>, then the <em>r</em><sup>th</sup> root of <em>y</em> in <em>G</em> is
+merely <em>y<sup>s</sup></em>.  To see this, note that</p>
+<p style='text-align: center;'>(<em>y<sup>s</sup></em>)<sup><em>r</em></sup> = <em>y</em><sup><em>s</em>&middot;<em>r</em></sup> = <em>y</em><sup>(<em>k m</em>+1)</sup> = 
+(<em>y<sup>m</sup></em>)<sup><em>k</em></sup>&middot;<em>y</em> = <em>e<sup>k</sup></em>&middot;<em>y</em> = <em>y</em>.</p>
+So <em>y<sup>s</sup></em> is one <em>r</em><sup>th</sup> root of <em>y</em>.  But <em>y<sup>s</sup></em> must be a different element for every <em>y</em> in <em>G</em>, 
+since the <em>r</em><sup>th</sup> power of <em>y<sup>s</sup></em> is different.  Since the <em>r</em><sup>th</sup> root of every element of <em>G</em> is accounted for, by the 
+pigeonhole principle there cannot be <em>two</em> <em>r</em><sup>th</sup> roots to any element. Thus, <em>y<sup>s</sup></em> gives the unique <em>r</em><sup>th</sup> root of <em>y</em> in 
+<em>G</em>.<br><br>
+<p><a href="#prop41ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="prop42" id="prop42"></a>
+Proof of Proposition 4.2:<br><br></p>
+<p>The proposition is trivial if <em>x</em> = 0, so we will assume that <em>x</em> &gt; 0.<br><br></p>
+<p>If <em>x</em> is coprime to <em>n</em>, then proposition is true by Proposition 4.1. Suppose <em>x</em> is not coprime to <em>n</em> = <em>p</em>·<em>q</em>, where
+<em>p</em> and <em>q</em> are the two distinct primes.  By the totient function theorem (3.1),
+<em>ϕ</em>(<em>n</em>) = (<em>p</em> − 1)·(<em>q</em> − 1). The number <em>x</em> would be a multiple of either <em>p</em> or <em>q</em>, say <em>p</em>.
+Then <em>x</em> = <em>p</em>·<em>a</em> for some integer <em>a</em>, and so</p>
+<p style='text-align: center;'><em>x</em><sup><em>r</em>&middot;<em>s</em></sup> = (<em>p</em>&middot;<em>a</em>)<sup><em>r</em>&middot;<em>s</em></sup> = 
+<em>p</em><sup><em>r</em>&middot;<em>s</em></sup>&middot;<em>a</em><sup><em>r</em>&middot;<em>s</em></sup></p>
+will be a multiple of <em>p</em>.<br><br>
+<p>Also, <em>x</em> is <em>not</em> a multiple of <em>q</em> since <em>x</em> is less than <em>n</em>. Since
+<em>r</em>·<em>s</em> ≡ 1 (mod (<em>p</em> − 1)(<em>q</em> − 1)),
+<em>r</em>·<em>s</em> ≡ 1 (mod (<em>q</em> − 1)).  Thus, by Proposition 4.1 again, we have</p>
+<p style='text-align: center;'><em>x</em><sup><em>r</em>&middot;<em>s</em></sup> &equiv; <em>x</em>&ensp;(mod <em>q</em>).</p>
+Since we also have <em>x</em><sup><em>r</em>&middot;<em>s</em></sup> &equiv; <em>x</em>&ensp;(mod <em>p</em>), by the Chinese remainder theorem (1.5), we have, 
+since <em>p</em> and <em>q</em> are coprime,
+<p style='text-align: center;'><em>x</em><sup><em>r</em>&middot;<em>s</em></sup> &equiv; <em>x</em>&ensp;(mod <em>p</em>&middot;<em>q</em> = <em>n</em>).</p>
+<p><a href="#prop42ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="prop43" id="prop43"></a>
+Proof of Proposition 4.3:<br><br></p>
+<p>First of all, suppose <em>H</em> is normal, and let <em>g</em> be an element of <em>G</em>.  Then <em>g H</em> and <em>H g</em> both contain the element <em>g</em>.
+Since the left and right cosets are the same, we have</p>
+<p style='text-align: center;'><em>g H</em> = <em>H g</em></p>
+Multiplying both sides on the right by <em>g</em><sup>-1</sup> gives
+<p style='text-align: center;'><em>g H g</em><sup>-1</sup> = <em>H g</em>&middot;<em>g</em><sup>-1</sup> = <em>H</em></p>
+<br>
+Now, suppose that <em>g H g</em><sup>-1</sup> = <em>H</em> for all elements <em>g</em> in <em>G</em>.  Then
+<p style='text-align: center;'><em>H g</em> = <em>g H g</em><sup>-1</sup>&middot;<em>g</em> = <em>g H e</em> = 
+<em>g H</em>.</p>
+Thus, every left coset is also a right coset, and vice versa.<br><br>
+<p><a href="#prop43ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="prop44" id="prop44"></a>
+Proof of Proposition 4.4:<br><br></p>
+<p>If <em>H</em> is a normal subgroup of <em>G</em>, then
+<em>g</em>·<em>h</em>·<em>g</em><sup>-1</sup> ∈ <em>g H g</em><sup>-1</sup>, which
+is <em>H</em> by Proposition 4.3.<br><br>
+Let us suppose that for all <em>g</em> in <em>G</em> and <em>h</em> in <em>H</em>,
+<em>g</em>·<em>h</em>·<em>g</em><sup>-1</sup> ∈ <em>H</em>.  Then</p>
+<p style='text-align: center;'><em>g H g</em><sup>-1</sup> &sube; <em>H</em>.</p>
+In particular, if we replace every <em>g</em> with <em>g</em><sup>-1</sup>, we get
+<p style='text-align: center;'><em>g</em><sup>-1</sup><em>H</em>(<em>g</em><sup>-1</sup>)<sup>-1</sup> &sube; <em>H</em></p> 
+Multiplying both sides of the equation by <em>g</em> on the left gives us <em>H g</em> &sube; <em>g H</em>, and multiplying on the right by <em>g</em><sup>-1</sup>
+gives us <em>H</em> &sube; <em>g H g</em><sup>-1</sup>.  Since we also have that <nobr><em>g H g</em><sup>-1</sup> &sube; <em>H</em></nobr>, we can conclude that 
+<em>g H g</em><sup>-1</sup> = <em>H</em>. Then from Proposition 4.3, <em>H</em> is normal.<br><br>
+<p><a href="#prop44ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="prop45" id="prop45"></a>
+Proof of Proposition 4.5:<br><br></p>
+<p>Since <em>H</em> is a subgroup of <em>G</em> with index 2, there are two left cosets and two right cosets.  One of the left cosets is <em>e H</em>, which is the set
+of elements in <em>H</em>.  The other left coset must then be the set of elements not in <em>H</em>.  But the same thing is true for the right cosets, so the left and
+right cosets are the same.  Thus, <em>H</em> is normal.<br><br></p>
+<p><a href="#prop45ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="lem43" id="lem43"></a>
+Proof of Lemma 4.3:<br><br></p>
+<p>We simply observe that</p>
+<p style='text-align: center;'><em>a N</em>&middot;<em>b N</em> = <em>a</em>&middot;(<em>N b</em>)&middot;<em>N</em> = 
+<em>a</em>&middot;(<em>b N</em>)&middot;<em>N</em> = (<em>a</em>&middot;<em>b</em>)&middot;(<em>N</em>&middot;<em>N</em>) = (<em>a</em>&middot;<em>b</em>)<em>N</em>.</p>
+Note that <em>N b</em> = <em>b N</em> because <em>N</em> is a normal subgroup.<br><br>
+<p><a href="#lem43ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="theor42" id="theor42"></a>
+Proof of Theorem 4.2:<br><br></p>
+<p>We simply have to check that <em>G</em>/<em>N</em> satisfies the four requirements in Definition 2.5.  The closure property is given by Lemma 4.3.  To check
+associativity,</p>
+<p style='text-align: center;'><em>a N</em>&middot;(<em>b N</em>&middot;<em>c N</em>) = <em>a N</em>&middot;(<em>b</em>&middot;<em>c</em>) <em>N</em> = 
+(<em>a</em>&middot;(<em>b</em>&middot;<em>c</em>)) <em>N</em> = ((<em>a</em>&middot;<em>b</em>)&middot;<em>c</em>) <em>N</em> = 
+(<em>a</em>&middot;<em>b</em>) <em>N</em>&middot;<em>c N</em> = (<em>a N</em>&middot;<em>b N</em>)&middot;<em>c N</em>.</p>
+The identity element is <em>e N</em> = <em>N</em>, and we can check that
+<p style='text-align: center;'><em>e N</em>&middot;<em>a N</em> = (<em>e</em>&middot;<em>a</em>) <em>N</em> = <em>a N</em>, and&ensp;
+<em>a N</em>&middot;<em>e N</em> = (<em>a</em>&middot;<em>e</em>) <em>N</em> = <em>a N</em>.</p>
+Finally, the inverse of <em>a N</em> is <em>a</em><sup>-1</sup><em>N</em>, since
+<p style='text-align: center;'><em>a N</em>&middot;<em>a</em><sup>-1</sup><em>N</em> = (<em>a</em>&middot;<em>a</em><sup>-1</sup>) <em>N</em> = <em>e N</em> = <em>N</em>,
+and <em>a</em><sup>-1</sup><em>N</em>&middot;<em>a N</em> = (<em>a</em><sup>-1</sup>&middot;<em>a</em>) <em>N</em> = <em>e N</em> = <em>N</em>.</p>
+Thus, the set of all cosets forms a group.<br><br>
+<p><a href="#theor42ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="sec4p" id="sec4p"></a></p>
+<h1><em>SageMath</em> Interactive Problems</h1>
+<br>
+&sect;4.1 #33)<br>
+Find the left and right cosets of the subgroup {<em>e</em>, <em>c</em>, <em>c</em><sup>2</sup>, <em>c</em><sup>3</sup>} of the octahedral group, given by:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
+<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">c</span><span class="o">^</span><span class="mi">4</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">c</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">*</span><span class="n">c</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">c</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">Group</span><span class="p">();</span> <span class="n">G</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Are the left and right cosets the same?<br><br>
+&sect;4.1 #34)<br>
+Find the left and right cosets of the subgroup {<em>e</em>, <em>c</em><sup>2</sup>, <em>a</em>&middot;<em>b</em><sup>2</sup>&middot;<em>c</em>, 
+<em>a</em>&middot;<em>b</em><sup>2</sup>&middot;<em>c</em><sup>3</sup>} of the octahedral group, given by:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
+<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">c</span><span class="o">^</span><span class="mi">4</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">c</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">*</span><span class="n">c</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">c</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">Group</span><span class="p">();</span> <span class="n">G</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Are the left and right cosets the same?<br><br>
+&sect;4.2 #21)<br>
+This exercise is required in order to do the RSA encryption Problems 22 or 23.  In order to use the <strong>MessageToNumber</strong> and <strong>NumberToMessage</strong> commands, we can reload the routines needed for RSA, in case the package <strong>absalgtext2.sage</strong> was not loaded.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;RSA.sage&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now using <em>SageMath</em>’s <strong>NextPrime</strong> command, find two large prime numbers
+<em>p</em> and <em>q</em>, at least 80 digits each. This is done by the two <em>SageMath</em> commands<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">NextPrime</span><span class="p">(</span> <span class="o">...</span><span class="n">large</span> <span class="n">number</span> <span class="n">goes</span> <span class="n">here</span><span class="o">...</span> <span class="p">);</span> <span class="n">p</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">q</span> <span class="o">=</span> <span class="n">NextPrime</span><span class="p">(</span> <span class="o">...</span> <span class="n">another</span> <span class="n">large</span> <span class="n">number</span> <span class="n">goes</span> <span class="n">here</span><span class="o">...</span> <span class="p">);</span> <span class="n">q</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Before executing these commands, replace the "...large number goes here..." with two random numbers at least 80 digits long.
+We will use the value <em>r</em> = 10007. Verify that this number is coprime to (p &minus; 1) and (q &minus; 1) by executing the following:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gcd</span><span class="p">(</span> <span class="p">(</span><span class="n">p</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">q</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span> <span class="mi">10007</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+If this command yields 10007 instead of 1, go back and find new values for <em>p</em> and <em>q</em>.
+Once the gcd is 1, compute <em>n</em> = <em>p</em>&middot;<em>q</em>, and save this to a file.  To do this, enter<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="n">p</span><span class="o">*</span><span class="n">q</span><span class="p">;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;n = &quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+This line can then be copied and pasted into a text file, using a text editor such as Notepad or TextEditor.<br><br>
+<br>
+Next, find the secret number <em>s</em>, which deciphers a message:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">PowerMod</span><span class="p">(</span><span class="mi">10007</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="n">p</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">q</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+You will need to save this number for future reference.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;s = &quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>You will also include a “confirmation number” <em>c</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">PowerMod</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;c = &quot;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>These also can be copied and pasted into a text file.   Save this file with a name of your choice.<br><br></p>
+<p>Finally, copy and paste the <em>n</em> and <em>c</em> numbers into the body of an e-mail message, sent to the professor.<br />
+Do not send the number <em>s</em>. This is your secret number used for signing documents or decrypting messages sent to you.  Save this number for future exercises.<br></p>
+<br>
+&sect;4.2 #22)<br>
+Using Example 4.7 as your guide, and the values of <em>n</em> and <em>s</em> from Problem 21, send an &quot;electronic check&quot; to your favorite professor for $100.00.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">MessageToNumber</span><span class="p">(</span><span class="s2">&quot;Check ...&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Then you must “sign” the check using your secret <em>s</em> number.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">PowerMod</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x = &quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Then copy and paste the single line version of the output into the body of an e-mail message.<br><br>
+&sect;4.2 #23)<br>
+After doing Problem 21, your instructor will send you a response with a value of <em>y</em>.  Copy and paste this line into the input cell below and evaluate it, along with your values of <em>n</em> and <em>s</em> from Problem 21.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="o">...</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="o">...</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="o">...</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+<p>You can verify that these 3 values are entered correctly into <em>SageMath</em> with the commands<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Using Example 4.6 as your guide, decode the message <em>y</em> and hand in (on paper) what it says.<br><br>
+&sect;4.2 #24)<br>
+B. L. User tried creating his encryption number with the two primes<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">NextPrime</span><span class="p">(</span><span class="mi">71587027345719754873415671567856782163741561519737155752525673649286739584756092</span><span class="p">);</span> <span class="n">p</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">q</span> <span class="o">=</span> <span class="n">NextPrime</span><span class="p">(</span><span class="n">p</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span> <span class="n">q</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+When he publicized the product <em>n</em> = <em>p</em>&middot;<em>q</em>, along with the value <em>r</em> = 6367, he received a message from a friend:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="mi">3092722521993064335403878476414515883199432204869058005976140725073546523106848249491531282456640454385678472107616521242043590910817888839981759972041752306977</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+What did this message say?<br><br>
+&sect;4.2 #25)<br>
+B. L. User tried again, this time with the two primes<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">NextPrime</span><span class="p">(</span><span class="mi">55555555555555555555555555555555555555555555555555555555555555555555555555555555</span><span class="p">);</span> <span class="n">p</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">q</span> <span class="o">=</span> <span class="n">NextPrime</span><span class="p">(</span><span class="mi">666666666666666666666666666666666666666666666666666666666666666666666666666666666</span><span class="p">);</span> <span class="n">q</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>When he publicized the product <em>n</em> = <em>p q</em>, along with the value <em>r</em> = 6367, he
+received the message:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="mi">15586722475705294365168482276975617974609201545290499722240308097127979631683649688737724267018012366968253789095615381333414455768854608714790690628382743232001</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>What did this message say?</p>
+<br>
+&sect;4.3 #19)<br>
+Show that there is a group <em>Q</em> which is generated by two elements <em>a</em> and <em>b</em>, for which
+<p style='text-align: center;'><em>a</em><sup>4</sup> = <em>e</em>, <em>b</em><sup>2</sup> = <em>a</em><sup>2</sup>, 
+<em>b</em>&middot;<em>a</em> = <em>a</em><sup>3</sup>&middot;<em>b</em>, <em>a</em><sup>2</sup> &ne; <em>e</em>.</p>
+This can be entered into <em>SageMath</em> with the command<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
+<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">4</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">^</span><span class="mi">3</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
+<span class="n">Q</span> <span class="o">=</span> <span class="n">Group</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span> <span class="n">Q</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Find all subgroups of this group, and show that all subgroups are normal, even though the group is non-abelian. 
+(Write down the list of left cosets and right cosets for each subgroup found.)<br><br>
+&sect;4.3 #20)<br>
+Use <em>SageMath</em>, along with a bit of trial and error, to find a subgroup of order 12 of the octahedral group. Show that this subgroup is a normal 
+subgroup.  The following reloads the octahedronal group:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">);</span> <span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">c</span><span class="o">^</span><span class="mi">4</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">c</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">*</span><span class="n">c</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">c</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">Group</span><span class="p">();</span> <span class="n">G</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+&sect;4.4 #19)<br>
+Define in <em>SageMath</em> the group <em>Z</em><sup>&ast;</sup><sub>105</sub>.<p>How many elements does this group have? Consider the subgroup <em>H</em> generated by the element 11. A circle graph demonstrating the cosets <em>G</em>/<em>H</em>
+can be obtained by the command<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">Mult</span><span class="p">(</span><span class="mi">11</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+By looking at the circle graph, determine the cosets of <em>G</em> with respect to <em>H</em>.  What is the order of the element <em>2</em>&middot;<em>H</em> in the 
+quotient group <em>G</em>/<em>H</em>?<br><br>
+&sect;4.4 #20)<br>
+Here is a group of order 20 from Problem 18 of &sect;3.2:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
+<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">5</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">4</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">Group</span><span class="p">();</span> <span class="n">G</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Find a normal subgroup <em>H</em> of order 5, and form the  quotient group <em>G</em>/<em>H</em>.<br></font>
+</body>
+</html>
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "sagemath"
+        },
+        kernelOptions: {
+            name: "sagemath",
+            path: "./23permutation-puzzle-GroupTheory"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'sagemath'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jonny, assisted by Tom
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

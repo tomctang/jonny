@@ -1,0 +1,2842 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>&lt;no title&gt; &#8212; Jonny Workbook</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=550f00eb" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=1ae7504c"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '23permutation-puzzle-GroupTheory/group06';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Jonny Workbook</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Math &amp; FP/Language</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../past/Alevel_math.html">A-level-math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../past/Alevel_math_further.html">A-level-further</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../past/Course_MCM.html">Math Computational Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Course_Lean.html">Lean</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Course_Puzzle_Group.html">Permutation Puzzles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Course_5U.html">5U - Ext III</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">CS &amp; Physics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../past/Course_MIT6001Python.html">MIT_CS6001-Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../past/Course_MIT6002thinking.html">MIT_CS6002-CS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PE100.html">Project Euler Q1-100</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../past/Course_MCM_QM.html">Quantum Mechanics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Notebook &amp; Tom</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../past/nb_past_courses.html">Past courses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../past/nb_Geo.html">Geography and Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../past/nb_lottery_simulator.html">Lottery Math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../past/How_Dad_organise_QM.html">How Dad learn QM</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../Course_MCM_QFT.html">QFT</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/tomctang/jonny" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/23permutation-puzzle-GroupTheory/group06.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <!-- Group06 -->
+<html>
+<body>
+<!-- To make the size of the font bigger for presentations, change the following command from +1 to +2 -->
+<font size="+1">
+<p style='font-size: 36px;font-family: Arial;font-style: italic;font-weight: bold;color: #FF00FF;background-color: #80FFFF;text-align: center;'>
+Abstract Algebra: An Interactive Approach, 3e
+</p>
+<p style='font-family: Geneva;font-style: italic;color: #0000FF;background-color: #FFFFFF;'>
+&copy;2025 This notebook is provided with the textbook, &quot;Abstract Algebra: An Interactive Approach, 3rd Ed.&quot; by William Paulsen. Users of this notebook are encouraged to buy the textbook.
+</p>
+<p style='font-size: 36px;font-family: New York;font-weight: bold;color: #000000;background-color: #FFFFFF;text-align: center;border: 1px;border-style: 
+solid;border-color: #000000;'>
+Chapter 6 : Permutation Groups
+</p>
+<p style='text-align: center;'>Initialization:  This cell MUST be evaluated first:</p><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;absalgtext2.sage&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+<a href="#sec61">Symmetric Groups</a><br>
+<a href="#sec62">Cycles</a><br>
+<a href="#sec63">Cayley's Theorem</a><br>
+<a href="#sec64">Numbering the Permutations</a><br>
+<a href="#sec6p"><em>SageMath</em> Interactive Problems</a><br><p><a name="sec61" id="sec61"></a></p>
+<h1>Symmetric Groups</h1>
+<br>
+In this chapter we will explore one class of finite groups that has important applications. These groups are called the <em>permutation groups</em>, 
+or <em>symmetric groups</em>. We have already seen <em>S</em><sub>3</sub>, the permutation group on 3 objects.<br><br>
+<p>Recall that we used 3 different colored books to illustrate this group. We can easily generalize this to consider the group of all permutations of <em>n</em> objects. For example, with four books the beginning position would be<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitBooks</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+ We have seen several ways of rearranging the books. We can swap the first two books with the command<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MoveBooks</span><span class="p">(</span><span class="n">First</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+We can also swap the last two books:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MoveBooks</span><span class="p">(</span><span class="n">Last</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+We can move the first book to the end, sliding the other books to the left.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MoveBooks</span><span class="p">(</span><span class="n">Left</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+The opposite of the procedure is to move the last book to the beginning.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MoveBooks</span><span class="p">(</span><span class="n">Right</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+We can also reverse the order of the books.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MoveBooks</span><span class="p">(</span><span class="n">Rev</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Finally, we can leave the books alone.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MoveBooks</span><span class="p">(</span><span class="n">Stay</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+For three books, any permutation can be obtained by just one of these six commands. 
+But it is apparent that with four books, there are even more ways to rearrange the books. One possible operation would be to move the left-most book two positions to 
+the right. This can be accomplished by the sequence<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MoveBooks</span><span class="p">(</span><span class="n">Left</span><span class="p">,</span> <span class="n">Last</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+EXPERIMENT:<br>
+Using just the six commands mentioned above, put the books back into their original positions (Red, Red, Purple, Orange). 
+Try doing this using the fewest number of commands.<br><br>
+This experiment shows that it can be somewhat tricky to represent any permutation order using only a few commands. The more books there are, the more of a puzzle 
+this can be. Let us introduce a notation for a permutation of books that explicitly states where each book ends up.<br><br>
+<p>One natural way to do this is to number the books in consecutive order, and determine the numbers in the final position. For example, if we put the books in their
+original order, <br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitBooks</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+and then shift the books to the left,<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MoveBooks</span><span class="p">(</span><span class="n">Left</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+we find that if the books started in 1, 2, 3, 4 order, the final position will be 2, 3, 4, 1.  Here, book 1 is red, book 2 is green, book 3 is purple, and book 4 is orange.  Since the final position of the books (green, purple, orange, red) translates to 2, 3, 4, 1.  We write the ending position below the starting position, as follows.
+<br><br>
+<table align="center" width="160" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right" valign="bottom">&#9115;</td>
+    <td align="center">1</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="left" valign="bottom">&#9118;</td>
+  </tr>
+  <tr>
+    <td align="right" valign="top">&#9117;</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">1</td>
+    <td align="left" valign="top">&#9120;</td>
+  </tr>
+</table>
+<br>
+We can now multiply the permutations by first performing one action, and then the other. For example, doing the operation <strong>Left</strong>, followed 
+by <strong>Last</strong>, leaves us with the books in the order
+<p style='text-align: center;'>green purple red orange</p><br>
+which, when compared to the original position, translates to 2, 3, 1, 4, giving the permutation<br><br>
+<table align="center" width="160" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right" valign="bottom">&#9115;</td>
+    <td align="center">1</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="left" valign="bottom">&#9118;</td>
+  </tr>
+  <tr>
+    <td align="right" valign="top">&#9117;</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">1</td>
+    <td align="center">4</td>
+    <td align="left" valign="top">&#9120;</td>
+  </tr>
+</table>
+<br>
+We write the <strong>Left</strong>&middot;<strong>Last</strong> as a product of two permutations<br><br>
+<table align="center" width="500" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right" valign="bottom">&#9115;</td>
+    <td align="center">1</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="left" valign="bottom">&#9118;</td>
+    <td rowspan = "2" align="center">&middot;</td>
+    <td align="right" valign="bottom">&#9115;</td>
+    <td align="center">1</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="left" valign="bottom">&#9118;</td>
+    <td rowspan = "2" align="center">=</td>
+    <td align="right" valign="bottom">&#9115;</td>
+    <td align="center">1</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="left" valign="bottom">&#9118;</td>
+  </tr>
+  <tr>
+    <td align="right" valign="top">&#9117;</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">1</td>
+    <td align="left" valign="top">&#9120;</td>
+    <td align="right" valign="top">&#9117;</td>
+    <td align="center">1</td>
+    <td align="center">2</td>
+    <td align="center">4</td>
+    <td align="center">3</td>
+    <td align="left" valign="top">&#9120;</td>
+    <td align="right" valign="top">&#9117;</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">1</td>
+    <td align="center">4</td>
+    <td align="left" valign="top">&#9120;</td>
+  </tr>
+</table>
+<br>
+<p>If we did these operations in the other order, we would get<br><br></p>
+<table align="center" width="500" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right" valign="bottom">&#9115;</td>
+    <td align="center">1</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="left" valign="bottom">&#9118;</td>
+    <td rowspan = "2" align="center">&middot;</td>
+    <td align="right" valign="bottom">&#9115;</td>
+    <td align="center">1</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="left" valign="bottom">&#9118;</td>
+    <td rowspan = "2" align="center">=</td>
+    <td align="right" valign="bottom">&#9115;</td>
+    <td align="center">1</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="left" valign="bottom">&#9118;</td>
+  </tr>
+  <tr>
+    <td align="right" valign="top">&#9117;</td>
+    <td align="center">1</td>
+    <td align="center">2</td>
+    <td align="center">4</td>
+    <td align="center">3</td>
+    <td align="left" valign="top">&#9120;</td>
+    <td align="right" valign="top">&#9117;</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">1</td>
+    <td align="left" valign="top">&#9120;</td>
+    <td align="right" valign="top">&#9117;</td>
+    <td align="center">2</td>
+    <td align="center">4</td>
+    <td align="center">3</td>
+    <td align="center">1</td>
+    <td align="left" valign="top">&#9120;</td>
+  </tr>
+</table>
+<br>
+<p>Obviously, <strong>Left</strong> · <strong>Last</strong> does not equal <strong>Last</strong> · <strong>Left</strong>.<br><br></p>
+<p>We can also view a permutation as a <em>function</em> whose domain is a subset of the integers. Consider the functions <em>ƒ</em>(<em>x</em>) and
+<em>ϕ</em>(<em>x</em>) given by the table<br><br></p>
+<table align = "center" width="300" border="0">
+  <tr>
+    <td align = "center"><em>&fnof;</em>(1) = 2</td>
+    <td align = "center"><em>&#981;</em>(1) = 2</td>
+  </tr>
+  <tr>
+    <td align = "center"><em>&fnof;</em>(2) = 3</td>
+    <td align = "center"><em>&#981;</em>(2) = 3</td>
+  </tr>
+  <tr>
+    <td align = "center"><em>&fnof;</em>(3) = 1</td>
+    <td align = "center"><em>&#981;</em>(3) = 4</td>
+  </tr>
+  <tr>
+    <td align = "center"><em>&fnof;</em>(4) = 4</td>
+    <td align = "center"><em>&#981;</em>(4) = 1.</td>
+  </tr>
+</table>
+<br>
+We could denote these two functions by the same type of notation, as follows:<br><br>
+<table align="center" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td rowspan = "2" align="right"><em>&fnof;</em>(<em>x</em>) =</td>
+    <td align="right" valign="bottom">&#9115;</td>
+    <td align="center">1</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="left" valign="bottom">&#9118;</td>
+    <td rowspan = "2" align="right"><em>&#981;</em>(<em>x</em>) =</td>
+    <td align="right" valign="bottom">&#9115;</td>
+    <td align="center">1</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="left" valign="bottom">&#9118;</td>
+  </tr>
+  <tr>
+    <td align="right" valign="top">&#9117;</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">1</td>
+    <td align="center">4</td>
+    <td align="left" valign="top">&#9120;</td>
+    <td align="right" valign="top">&#9117;</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">1</td>
+    <td align="left" valign="top">&#9120;</td>
+  </tr>
+</table>
+<br>
+<p>Notice that each column shows the value of <em>ƒ</em>(<em>x</em>) or <em>ϕ</em>(<em>x</em>) directly beneath <em>x</em>. Since the range and domain of
+these functions are the same, we can consider the composition of the two functions. Let us consider <em>ƒ</em>·<em>ϕ</em>:<br></p>
+<p style='text-align: center;'><em>&fnof;</em>(<em>&#981;</em>(1)) = <em>&fnof;</em>(2) = 3<br>
+                               <em>&fnof;</em>(<em>&#981;</em>(2)) = <em>&fnof;</em>(3) = 1<br>
+                               <em>&fnof;</em>(<em>&#981;</em>(3)) = <em>&fnof;</em>(4) = 4<br>
+                               <em>&fnof;</em>(<em>&#981;</em>(4)) = <em>&fnof;</em>(1) = 2</p>
+<p>So the composition function <em>ƒ</em>(<em>ϕ</em>(<em>x</em>)), that is, of doing <em>ϕ</em> first, and then <em>ƒ</em>, can be written as<br><br></p>
+<table align="center" width="160" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right" valign="bottom">&#9115;</td>
+    <td align="center">1</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="left" valign="bottom">&#9118;</td>
+  </tr>
+  <tr>
+    <td align="right" valign="top">&#9117;</td>
+    <td align="center">3</td>
+    <td align="center">1</td>
+    <td align="center">4</td>
+    <td align="center">2</td>
+    <td align="left" valign="top">&#9120;</td>
+  </tr>
+</table>
+<br>
+We can write this permutation as <em>&fnof;</em>&middot;<em>&#981;</em>, so we have that 
+<p style='text-align: center;'><em>&fnof;</em>(<em>&#981;</em>(<em>x</em>)) = (<em>&fnof;</em>&middot;<em>&#981;</em>)(<em>x</em>).</p>
+<br>
+There is something curious here. When we view permutations as ways to rearrange a set of objects, such as books, the permutations are multiplied from left to right, which 
+is the natural order.  But when we view permutations as functions, the permutations are multiplied from right to left, which is again the natural order for function 
+composition.
+<br><br>
+<p>DEFINITION 6.1<br>
+For the set {1, 2, 3, … <em>n</em>}, we define the group of permutations on the set by <em>S<sub>n</sub></em>.  That is, <em>S<sub>n</sub></em> is the set of functions
+which are one-to-one and onto on the set {1, 2, 3, … <em>n</em>}.  The group operation is function composition.<br><br></p>
+<p>EXPERIMENT: <br>Consider the following product:</p>
+<table align="center" width="320" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right" valign="bottom">&#9115;</td>
+    <td align="center">1</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">5</td>
+    <td align="left" valign="bottom">&#9118;</td>
+    <td rowspan = "2" align="center">&middot;</td>
+    <td align="right" valign="bottom">&#9115;</td>
+    <td align="center">1</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">5</td>
+    <td align="left" valign="bottom">&#9118;</td>
+  </tr>
+  <tr>
+    <td align="right" valign="top">&#9117;</td>
+    <td align="center">5</td>
+    <td align="center">4</td>
+    <td align="center">1</td>
+    <td align="center">2</td>
+    <td align="center">3</td>    
+    <td align="left" valign="top">&#9120;</td>
+    <td align="right" valign="top">&#9117;</td>
+    <td align="center">4</td>
+    <td align="center">3</td>
+    <td align="center">5</td>
+    <td align="center">1</td>
+    <td align="center">2</td>
+    <td align="left" valign="top">&#9120;</td>
+  </tr>
+</table>
+<br>
+First work this product by viewing the permutations as two ways to rearrange 5 books.  If you work the rearrangements from left to right, what is the resulting 
+rearrangement of the books?  Now work this product by viewing the permutations as functions, working from right to left.  Do you get the same answer?  Which of the 
+two methods was easier?  If you work the problem viewing the permutations as functions, and worked from left to right, would you get the right answer?<br><br>
+<em>SageMath</em> can easily work with permutations. The top line of the permutation is only for convenience since the bottom line contains all of the information about 
+the permutation. Thus, we can write these permutations like this:
+<p style='text-align: center;'>P(5,4,1,2,3) &middot; P(4,3,5,1,2).</p>
+In general, a permutation in <em>S<sub>n</sub></em> can be written
+<p style='text-align: center;'>P(<em>x</em><sub>1</sub>, <em>x</em><sub>2</sub>, <em>x</em><sub>3</sub>, &hellip; <em>x<sub>n</sub></em>).</p>
+Note that the numbers <em>x</em><sub>1</sub>, <em>x</em><sub>2</sub>, <em>x</em><sub>3</sub>, &hellip; <em>x<sub>n</sub></em> must all be different and must consist of 
+the numbers from 1 to <em>n</em>.  This permutation corresponds to the function
+<p style='text-align: center;'><em>&fnof;</em>(1) = <em>x</em><sub>1</sub><br>
+                               <em>&fnof;</em>(2) = <em>x</em><sub>2</sub><br>
+                               <em>&fnof;</em>(3) = <em>x</em><sub>3</sub><br>
+                               &hellip;&hellip;&hellip;<br>
+                               <em>&fnof;</em>(<em>n</em>) = <em>x<sub>n</sub></em>.</p>
+This notation is a little more difficult since one must count four numbers to determine <em>&fnof;</em>(4). Yet <em>SageMath</em> prefers this notation for its 
+conciseness.  Let's try using <em>SageMath</em> to check the above product: <br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">P</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">P</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Is this the answer you got?  We do not have to define this group the way we have been defining the other groups in these notebooks.  The symmetric group is pre-loaded in 
+the initialization.  Let us determine the product of these two permutations multiplied in the other order:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">P</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">P</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+What happened to the 5?  Since the composition function maps 5 to itself, <em>SageMath</em> can safety drop the 5, treating this as a permutation on four objects 
+instead.  To save space <em>SageMath</em> displays only up to the last number which is out of position.  All of the necessary information is still in the 
+permutation.<br><br>
+<p>Since all permutations in <em>S</em><sub>4</sub> can be expressed in terms of some combinations of the <strong>Left</strong> and <strong>Last</strong> book rearrangements,
+we can find all of the elements of <em>S</em><sub>4</sub>.<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S4</span> <span class="o">=</span> <span class="n">Group</span><span class="p">(</span><span class="n">P</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">P</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span> <span class="n">S4</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">S4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br> 
+Note that the identity element of <em>S</em><sub>4</sub> is denoted by <strong>P()</strong>, since the corresponding function leaves all objects fixed.  
+We can determine the size of the group <em>S<sub>n</sub></em> in general, by counting the number of one-to-one and onto functions from the set {1, 2, 3, &hellip; <em>n</em>} to 
+itself.  We have <em>n</em> choices for <em>f</em>(1), but then there will be only <em>n</em> &minus; 1 choices for <em>f</em>(2), <em>n</em> &minus; 2 choices for <em>f</em>(3), and 
+so on.  Thus, the size of the group <em>S<sub>n</sub></em> is given by
+<p style='text-align: center;'><em>n</em>! = <em>n</em>&middot;(<em>n</em> &minus; 1)&middot;(<em>n</em> &minus; 2)&middot;(<em>n</em> &minus; 3)&middot;&hellip; &middot; 
+2&middot;1</p>
+The number <em>n</em>! is read &quot;<em>n</em> factorial,&quot; and represents the product of the first <em>n</em> numbers. Here is a short table of <em>n</em>!:<br><br>
+<table align="center" width="180" border="0">
+   <tr>
+     <td align="right">1!</td>
+     <td align="center">=</td>
+     <td>1</td>
+   </tr>
+   <tr>
+     <td align="right">2!</td>
+     <td align="center">=</td>
+     <td>2</td>
+   </tr>
+   <tr>
+     <td align="right">3!</td>
+     <td align="center">=</td>
+     <td>6</td>
+   </tr>
+   <tr>
+     <td align="right">4!</td>
+     <td align="center">=</td>
+     <td>24</td>
+   </tr>
+   <tr>
+     <td align="right">5!</td>
+     <td align="center">=</td>
+     <td>120</td>
+   </tr>
+   <tr>
+     <td align="right">6!</td>
+     <td align="center">=</td>
+     <td>720</td>
+   </tr>
+   <tr>
+     <td align="right">7!</td>
+     <td align="center">=</td>
+     <td>5040</td>
+   </tr>
+   <tr>
+     <td align="right">8!</td>
+     <td align="center">=</td>
+     <td>40320</td>
+   </tr>
+   <tr>
+     <td align="right">9!</td>
+     <td align="center">=</td>
+     <td>362880</td>
+   </tr>
+   <tr>
+     <td align="right">10!</td>
+     <td align="center">=</td>
+     <td>3628800</td>
+   </tr>
+</table>
+<br>
+From this table we see that 4! = 24, so this verifies that <em>S</em><sub>4</sub> has 24 elements.  One can see that the size 
+of <em>S<sub>n</sub></em> grows very quickly. <em>S</em><sub>1</sub> has only one element, so it is the trivial group. <em>S</em><sub>2</sub> has two elements, so this 
+must be isomorphic to <em>Z</em><sub>2</sub>.  We have already seen <em>S</em><sub>3</sub> was isomorphic to Terry's group.  Now we find that <em>S</em><sub>4</sub> has 
+24 elements.  Since the octahedral group also has 24 elements, so we could ask if these two groups are isomorphic. The octahedral group can be reloaded by the commands<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
+<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">c</span><span class="o">^</span><span class="mi">4</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">c</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">*</span><span class="n">c</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">c</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">Oct</span> <span class="o">=</span> <span class="n">Group</span><span class="p">();</span><span class="n">Oct</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let us try to find an isomorphism. We discovered that there is a copy of <em>S</em><sub>3</sub> inside of the octahedral group, generated by the elements <em>a</em> and
+<em>b</em>. Let us begin there. In <em>S</em><sub>3</sub>, the element <em>a</em> represented an element of order 2, such
+as <strong>P(2, 1)</strong>, and <em>b</em> represented an element
+of order 3, such as <strong>P(2, 3, 1)</strong>. Let us construct a possible isomorphism.  The command<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">F</span> <span class="o">=</span> <span class="n">Homomorph</span><span class="p">(</span><span class="n">Oct</span><span class="p">,</span> <span class="n">S4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+defines <strong>F</strong> to be a homomorphism. We can tell <em>SageMath</em> where the elements <em>a</em> and <em>b</em> are mapped to:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">HomoDef</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">P</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">HomoDef</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">P</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+This should be consistent, since
+<p style='text-align: center;'><em>&fnof;</em>(<em>b</em>)&middot;<em>&fnof;</em>(<em>a</em>) = 
+<em>&fnof;</em>(<em>a</em>)&middot;<em>&fnof;</em>(<em>b</em>)&middot;<em>&fnof;</em>(<em>b</em>).</p>
+The way to have <em>SageMath</em> check that <em>&fnof;</em> is so far defined consistently is to find whether <em>&fnof;</em> is a homomorphism on 
+the <em>subgroup</em> containing <em>a</em> and <em>b</em>.  If we enter<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">FinishHomo</span><span class="p">(</span><span class="n">F</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+then <em>SageMath</em> indicates that so far the homomorphism is consistant, but it still is not defined for the whole group <strong>Oct</strong>.  We can find the range 
+of <strong>F</strong> so far with the command<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">HomoRange</span><span class="p">(</span><span class="n">F</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+This shows that we have defined the homomorphism for 6 elements.<br><br>
+<p>We now need to determine a value for <em>ƒ</em>(<em>c</em>) that makes an isomorphism.  Note that <em>ƒ</em>(<em>c</em>) must be<br />
+of order 4.  We want to find all elements of <em>S</em><sub>4</sub> which are of order 4 so we will be able to choose one for <em>ƒ</em>(<em>c</em>).<br><br></p>
+<p>Finding all of the elements of a given order is not hard using <em>SageMath</em>. We can use a <strong>for</strong> loop to find the elements satisfying <em>x<sub>n</sub></em> = <em>e</em>, but no smaller power produces the identity.  For the case of order 4, we need <em>x</em><sup>4</sup> = <em>e</em>, but <em>x</em><sup>2</sup> ≠ <em>e</em>.<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">S4</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">x</span><span class="o">^</span><span class="mi">4</span> <span class="o">==</span> <span class="n">P</span><span class="p">()</span> <span class="ow">and</span> <span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">!=</span> <span class="n">P</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+tells us the six elements:<br>
+<p style='text-align: center;'>P(4, 1, 2, 3)<br>
+P(2, 4, 1, 3)<br>
+P(3, 1, 4, 2)<br>
+P(4, 3, 1, 2)<br>
+P(2, 3, 4, 1)<br>
+P(3, 4, 2, 1)</p>
+If the octahedral group is isomorphic to <em>S</em><sub>4</sub>, then the element <em>c</em> must map to one of these six elements. But which one? Let us try the 
+first permutation, <nobr>P(4, 1, 2, 3).</nobr>  The entire homomorphism would be defined by the commands<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">F</span> <span class="o">=</span> <span class="n">Homomorph</span><span class="p">(</span><span class="n">Oct</span><span class="p">,</span> <span class="n">S4</span><span class="p">)</span>
+<span class="n">HomoDef</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">P</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">HomoDef</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">P</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">HomoDef</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">P</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">FinishHomo</span><span class="p">(</span><span class="n">F</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Unfortunately, this does not produce a homomorphism, since <em>SageMath</em> found a contradiction.  But perhaps by defining <strong>F(c)</strong> to be one of the other 
+six elements of <em>S</em><sub>4</sub> which is of order 4, we can produce a homomorphism.<br><br>
+<p>EXPERIMENT:<br>
+By changing P(4, 1, 2, 3) with one of the other elements of <em>S</em><sub>4</sub> which is of order 4:</p>
+<p style='text-align: center;'>P(2, 4, 1, 3)<br>
+P(3, 1, 4, 2)<br>
+P(4, 3, 1, 2)<br>
+P(2, 3, 4, 1)<br>
+P(3, 4, 2, 1)</p>
+see if you can find one which creates a homomorphism.<br><br>
+Once we have found a homomorphism, we want to see that <em>&fnof;</em> is an isomorphism by showing that the kernel of <em>&fnof;</em> is just the identity.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Kernel</span><span class="p">(</span><span class="n">F</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Since the kernel is the identity element, <em>&fnof;</em> is an isomorphism. <br><br>
+<p>Finally, we can check that the image of <em>ƒ</em> is <em>S</em><sub>4</sub>. The image is generated by the command<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">Oct</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Since there are 24 elements here, all of which are in <em>S</em><sub>4</sub>, this must be <em>S</em><sub>4</sub>.  Therefore, we have shown 
+that <em>S</em><sub>4</sub> is isomorphic to the octahedral group.  So we immediately see a relationship between one of the groups we have been working 
+with and the permutation groups.  Later this chapter, we will see an application of the permutation groups that will apply to <em>any</em> finite group.<br><br>
+<p>Since a permutation is a function from the integers 1, 2, 3, … <em>n</em> onto themselves, we can use the circle graphs that we have used before to visualize
+these permutations.  For example, to draw a picture of the permutation P(5,4,1,2,3), use the command:<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> <span class="n">P</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Notice that this forms one triangle in red, which maps 1 to 5, 5 to 3, and then 3 back to 1. There is also a green &quot;double arrow&quot; that maps 2 to 4 and 
+back to 2. So this circle graph reveals some additional structure to the permutation which we will study later.  For now, let us study the geometrical significance 
+of multiplying two permutations together.<br><br>
+<p>We can graph two or more permutations simultaneously by adding the additional permutations to the <em>SageMath</em> command.<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> <span class="n">P</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="n">P</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Here, the red arrows represent the permutation P(5,4,1,2,3), while the green arrows represent P(4,3,5,1,2).<br><br>
+<p>EXPERIMENT:<br>
+On the above circle graph, imagine what would happen if for each of the numbers {1,2,3,4,5}, one first traveled through a green arrow,
+and then traveled through a red arrow. Does this form a permutation on the set {1,2,3,4,5}? If so, which permutation is it? Is it the same permutation as<br />
+P(5,4,1,2,3)·P(4,3,5,1,2) ?<br></p>
+<br>
+The following command maps <em>three</em> permutations simultaneously:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> <span class="n">P</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="n">P</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>  <span class="n">P</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+This circle graph answers the questions raised in the last experiment. In this graph, if one travels a green arrow, and immediately travel through a red arrow, one ends 
+up exactly in the same place as if one traveled just a purple arrow. Thus, this &quot;arrow composition&quot; results in the permutation P(2,1,3,5,4), which is the product 
+of P(5,4,1,2,3) and P(4,3,5,1,2). Note that the arrows are like functions, in that we apply the arrow of the second permutation first, and then the arrow for the first permutation.<br><br>
+<p><em>SageMath</em> can help us to find the inverse of a permutation. The inverse of P(5,4,1,2,3) would be<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">P</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="o">^-</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+We can make a circle graph of this new permutation.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> <span class="n">P</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="o">^-</span><span class="mi">1</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+How does this circle graph compare to the circle graph of the original permutation?<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span>  <span class="n">P</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+It is easy to see that the graphs are the same, except that the arrows are all going in the opposite direction. (Of course, when the direction is reversed on the 
+green &quot;double arrow,&quot; it remains a double arrow.) Thus, we see that<br><br>
+<table align="center" width="320" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right" valign="bottom">&#9115;</td>
+    <td align="center">1</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">5</td>
+    <td align="left" valign="bottom">&#9118;<sup>-1</sup></td>
+    <td rowspan = "2" align="center">=</td>
+    <td align="right" valign="bottom">&#9115;</td>
+    <td align="center">1</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">5</td>
+    <td align="left" valign="bottom">&#9118;</td>
+  </tr>
+  <tr>
+    <td align="right" valign="top">&#9117;</td>
+    <td align="center">5</td>
+    <td align="center">4</td>
+    <td align="center">1</td>
+    <td align="center">2</td>
+    <td align="center">3</td>    
+    <td align="left" valign="top">&#9120;&ensp;</td>
+    <td align="right" valign="top">&#9117;</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">5</td>
+    <td align="center">2</td>
+    <td align="center">1</td>
+    <td align="left" valign="top">&#9120;</td>
+  </tr>
+</table> 
+<br>
+We can check this using <em>SageMath</em> to see if the product of the two really is the identity:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">P</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">P</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+We noted before that <em>SageMath</em> displays only up to the last number not in position.  The identity element has all of its numbers in position, so <em>SageMath</em> does 
+not display any of them!  Therefore, <strong>P()</strong> represents the identity element of this group.<br><br>
+<p>Because we can think of a permutation as a function of positive integers, we can evaluate a permutation at a given number. For example, the permutation
+<br><br></p>
+<table align="center" width="180" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right" valign="bottom">&#9115;</td>
+    <td align="center">1</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">5</td>
+    <td align="left" valign="bottom">&#9118;</td>
+  </tr>
+  <tr>
+    <td align="right" valign="top">&#9117;</td>
+    <td align="center">5</td>
+    <td align="center">4</td>
+    <td align="center">1</td>
+    <td align="center">2</td>
+    <td align="center">3</td>    
+    <td align="left" valign="top">&#9120;</td>
+  </tr>
+</table> 
+<br>
+evaluated at 2 gives us 4.  Since the <em>SageMath</em> notation for a function of <em>x</em> is <strong>F(x)</strong>, the <em>SageMath</em> command for evaluation this 
+permutation at 2 is:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">P</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+We can evaluate this permutation at 7 as well.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">P</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)(</span><span class="mi">7</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Since this permutation does not mention the number 7, <em>SageMath</em> assumes that it is fixed.<br><br>
+<p>In spite of the simplicity of the notations for a permutation, we will find that there is yet another notation that is even more concise.  We will study
+this in the next section.<br><br></p>
+<p><a name="sec62" id="sec62"></a></p>
+<h1>Cycles</h1>
+<br>
+Throughout this chapter, we have been using the circle graphs to represent a permutation in <em>S<sub>n</sub></em>.  For example, the permutation P(5,4,1,2,3) could 
+be diagrammed by the following graph:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> <span class="n">P</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+We can immediately see from this graph the red triangle connecting 1, 5, and 3, while a green &quot;double arrow&quot; connecting 2 and 4. In this section we will 
+consider the significance of the two different colors of arrows.<br><br>
+<p>We begin by noticing that some of the permutations have circle graphs that are all in one color. Consider the graph of the permutation P(4,5,2,3,1):<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> <span class="n">P</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+This circle graph consists entirely of red arrows. These arrows indicate that the permutation can be expressed by a single chain
+<p style='text-align: center;'>1 &rarr; 4 &rarr; 3 &rarr; 2 &rarr; 5 &rarr; 1.</p>
+This can be read, &quot;1 goes to 4 which goes to 3 which goes to 2 which goes to 5 which goes back to 1.&quot; 
+Any permutation which can be expressed as a chain like this one is called a <em>cycle</em>.<br><br>
+<p>Here is another example of a circle graph of a permutation.<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span> <span class="n">P</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+In this graph, there is a green loop mapping 5 to itself, but all of the <em>straight</em> arrows are the same color&#8213;red. We can still represent this 
+permutation by a single chain:
+<p style='text-align: center;'>1 &rarr; 2 &rarr; 4 &rarr; 6 &rarr; 3 &rarr; 1.</p>
+This chain states where each number goes except for the number 5. However, if we stipulate that all numbers that are not mentioned 
+in the chain map to themselves, we have expressed the permutation P(2,4,1,6,5,3) as a single chain, and hence this is also a cycle. <br>
+<br>
+<br>DEFININTION 6.2<br>
+Any permutation that can be expressed as a single chain is called a <em>cycle</em>. A cycle that moves exactly <em>r</em> of the numbers is called an 
+<em>r</em>-<em>cycle</em>.<br><br>
+<p>Whenever a permutation can be expressed as an <em>r</em>-cycle, it is easier to read the chain then the permutation. For example, to find where 4 is mapped to in
+the permutation P(2,4,1,6,5,3), one must count 4 numbers from the left, whereas in the notation</p>
+<p style='text-align: center;'>1 &rarr; 2 &rarr; 4 &rarr; 6 &rarr; 3 &rarr; 1.</p>
+one only has to spot the 4 and see that it maps to 6. We can further simplify the chains by using a more compact notation:
+<p style='text-align: center;'>(1 2 4 6 3)</p>
+Here, each number is mapped to the next number in the chain. The last number always maps back to the first number. This notation is called the 
+<em>cycle notation</em> of the permutation.<br><br>
+<p>In general, the <em>r</em>-cycle (<em>i</em><sub>1</sub> <em>i</em><sub>2</sub> <em>i</em><sub>3</sub> ··· <em>i<sub>r</sub></em>) represents
+the permutation that maps <em>i</em><sub>1</sub> to <em>i</em><sub>2</sub>, <em>i</em><sub>2</sub> to <em>i</em><sub>3</sub>, etc., and finally <em>i<sub>r</sub></em> back
+to <em>i</em><sub>1</sub>. Notice that</p>
+<p style='text-align: center;'>(<em>i</em><sub>1</sub> <em>i</em><sub>2</sub> <em>i</em><sub>3</sub> &middot;&middot;&middot; <em>i<sub>r</sub></em>)<sup>-1</sup> =
+(<em>i<sub>r</sub></em> <em>i</em><sub><em>r</em>&minus;1</sub> &middot;&middot;&middot; <em>i</em><sub>3</sub> <em>i</em><sub>2</sub> <em>i</em><sub>1</sub>).</p>
+so the inverse of an <em>r</em>-cycle will always be an <em>r</em>-cycle. However, the product of two cycles may not always give a cycle, but a permutation. The 
+identity element can be written as the 0-cycle ( ).<br><br>
+<p>A 1-cycle is actually impossible, since if one number is not fixed by a permutation, then the number that it maps to cannot be fixed.<br />
+Thus, a non-identity permutation must move at least two numbers. We say that
+an <nobr><em>r</em>-cycle</nobr> is a <em>nontrivial cycle</em> if <em>r</em> &gt; 1.<br><br></p>
+<p>Because the cycle notation is in general easier to use then standard permutation notation, we would like to find a way to write any permutation in terms of cycles.
+If we look back at the first circle graph of a permutation,<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> <span class="n">P</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+we see that this permutation cannot be expressed as a single chain. However, the two different colored arrows suggests the following idea. Suppose we considered 
+one permutation which consisted mainly of the red triangle, (with 2 and 4 mapping to themselves) and another permutation consisting mainly of the green double arrow, 
+with 1, 3, and 5 mapping to themselves. These two permutations are given by<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> <span class="n">P</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>and</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> <span class="n">P</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+EXPERIMENT:<br>
+Is there a way to multiply the permutations P(5,2,1,4,3) and P(1,4,3,2,5) to produce the original permutation P(5,2,1,4,3)?  Which order do the permutations need to 
+be multiplied?<br><br>
+To help explain why the permutations acted the way that they did in the experiment, try graphing both permutations on the same graph:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> <span class="n">P</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="n">P</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+One can see the similarity between this graph and the graph of P(5,4,1,2,3). Let us write the permutations P(5,2,1,4,3) and P(1,4,3,2,5) in cycle notation:
+<p style='text-align: center;'>P(5,4,1,2,3) = (1 5 3),&emsp;&emsp; P(1,4,3,2,5) = (2 4).</p>
+<br>Notice that when these two permutations are written as cycles, there are no numbers in common between these two cycles. We give a name to these type of cycles.<br><br>
+<p>DEFINITION 6.3<br>
+Two cycles</p>
+<p style='text-align: center;'>(<em>i</em><sub>1</sub> <em>i</em><sub>2</sub> <em>i</em><sub>3</sub> &middot;&middot;&middot; <em>i<sub>r</sub></em>) and
+                               (<em>j</em><sub>1</sub> <em>j</em><sub>2</sub> <em>j</em><sub>3</sub> &middot;&middot;&middot; <em>j<sub>s</sub></em>)</p>
+are <em>disjoint</em> if <em>i</em><sub><em>m</em></sub> &ne; <em>j</em><sub><em>n</em></sub> for all <em>m</em> and <em>n</em>.  That is, there are no integers in common between the two cycles.<br><br>
+<p>We saw that (1 5 3) and (2 4) are disjoint. It is fairly clear that two disjoint cycles will commute with one another, as demonstrated in the experiment.<br><br></p>
+<p>Can we express other permutations as a product of cycles? Consider the permutation
+<br><br></p>
+<table align="center" width="250" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right" valign="bottom">&#9115;</td>
+    <td align="center">1</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">5</td>
+    <td align="center">6</td>
+    <td align="center">7</td>
+    <td align="center">8</td>                
+    <td align="left" valign="bottom">&#9118;</td>
+  </tr>
+  <tr>
+    <td align="right" valign="top">&#9117;</td>
+    <td align="center">4</td>
+    <td align="center">6</td>
+    <td align="center">1</td>
+    <td align="center">8</td>
+    <td align="center">2</td>
+    <td align="center">5</td>
+    <td align="center">7</td>
+    <td align="center">3</td>    
+    <td align="left" valign="top">&#9120;</td>
+  </tr>
+</table>
+Here is the circle graph of this permutation:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">],</span> <span class="n">P</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+We see from the circle graph that this permutation maps 1 into 4, 4 into 8, 8 into 3, and 3 back into 1. So the cycle (1 4 8 3) describes part of the permutation. 
+However, we also have 2 mapping to 6, which maps to 5, which maps back to 2. So the cycle (2 6 5) is also a component of the permutation. Finally, 7 maps to itself, 
+so it will not be the part of any cycle. Thus we can describe this permutation as
+<p style='text-align: center;'>(1 4 8 3)&middot;(2 6 5).</p>
+We can imitate this process for any permutation. As a result, we have the following lemma:<p><a name="lem61ret" id="lem61ret"></a>
+LEMMA 6.1<br></p>
+<p>Let <em>x</em> be an element of <em>S<sub>n</sub></em> which is not the identity. Then <em>x</em> can be written as a product of nontrivial disjoint cycles.
+This representation of <em>x</em> is unique up to the rearrangement of the cycles.<br><br></p>
+<p><a href="#lem61">Click here for the proof.</a></p>
+<p />
+Since any permutation can be written succinctly in terms of cycles, we are given another way to express any permutation. <em>SageMath</em> uses the notation
+<p style='text-align: center;'>C(<em>i</em>, <em>j</em>, <em>k</em>, &hellip; )</p>
+to denote the cycle (<em>i</em> <em>j</em> <em>k</em> &hellip;). <em>SageMath</em> can multiply two cycles together. For example, to multiply (2 3 4 5)&middot;(1 2 4), type<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span><span class="o">*</span><span class="n">C</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Notice that <em>SageMath</em> forms the answer as a product of 2 disjoint cycles, without the times sign between them. We call this the <em>cycle decomposition</em> of the permutation.  Can we see why this is the product?  Remember to work from right to left in 
+multiplying permutations or cycles.<br><br>
+<p>We can convert back and forth between the permutation notation and the cycles. The commands</p>
+<p style='text-align: center;'>PermToCycle( P(&hellip;&hellip;&hellip;)) &emsp; and &emsp; CycleToPerm( C(&hellip;&hellip;&hellip;))</p>
+tell <em>SageMath</em> to switch between the two notations. Thus, to convert our answer to a permutation, we type<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CycleToPerm</span><span class="p">(</span> <span class="n">C</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span><span class="o">*</span><span class="n">C</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Likewise, <em>SageMath</em> can use the procedure described in Lemma 5.1 to find the cycle decomposition of the permutation
+<br><br>
+<table align="center" width="250" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right" valign="bottom">&#9115;</td>
+    <td align="center">1</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">5</td>
+    <td align="center">6</td>
+    <td align="center">7</td>
+    <td align="center">8</td>                
+    <td align="left" valign="bottom">&#9118;</td>
+  </tr>
+  <tr>
+    <td align="right" valign="top">&#9117;</td>
+    <td align="center">4</td>
+    <td align="center">6</td>
+    <td align="center">1</td>
+    <td align="center">8</td>
+    <td align="center">2</td>
+    <td align="center">5</td>
+    <td align="center">7</td>
+    <td align="center">3</td>    
+    <td align="left" valign="top">&#9120;</td>
+  </tr>
+</table>
+<br>
+by the command<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">PermToCycle</span><span class="p">(</span> <span class="n">P</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+To enter the identity element in <em>SageMath</em>, use <strong>C( )</strong>, which corresponds to the 0-cycle (). <br><br>
+<p>We may even mix the two notations within an expression:<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">P</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span><span class="o">*</span><span class="n">C</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Whenever <em>SageMath</em> encounters a mixture like this, it puts the answer in terms of cycles. In this case the answer is the identity permutation, 
+so <em>SageMath</em> returned <strong>( )</strong>.<br><br>
+<p>We can evaluate a cycle or a product of cycles at a given number, just as we did for permutations.  For example, to determine where the cycle (1 4 8 3) sends the
+number 3, type<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">3</span><span class="p">)(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This evaluates the cycle at 3, giving the value 1. We can also form a circle graph of a cycle as we would a permutation:<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">],</span> <span class="n">C</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+This even works for a product of cycles.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">],</span> <span class="n">C</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">C</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+However, to evaluate a product of cycles at a given number, we need an extra pair of parentheses:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">C</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">C</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">))(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Although <em>SageMath</em> works faster using the standard permutation notation, cycles are more succinct in most cases and more readable.  Thus, for large operations that 
+could take time, such as checking that a function is a homomorphism, it will be much faster using the <strong>P</strong>(&hellip;&hellip;&hellip;) notation.<br><br>
+<p>We mentioned that there are no permutations that move just one element, but the permutations which move exactly 2 elements will be important. We will give these 2-cycles
+a special name.<br><br></p>
+<p>DEFINITION 6.4<br></p>
+<p>A <em>transposition</em> is a 2-cycle (<em>i</em><sub>1</sub> <em>i</em><sub>2</sub>), where <em>i</em><sub>1</sub> ≠ <em>i</em><sub>2</sub>.<br><br></p>
+<p>We can find the number of transpositions in <em>S<sub>n</sub></em> as follows: <em>i</em><sub>1</sub> can be any of the <em>n</em> integers,
+and <em>i</em><sub>2</sub> can be any of the <em>n</em> − 1 integers left over.
+Thus, there are</p>
+<p style='text-align: center;'><em>n</em>(<em>n</em> &minus; 1) = <em>n</em><sup>2</sup> &minus; <em>n</em></p> 
+ways of forming an ordered pair (<em>i</em><sub>1</sub>, <em>i</em><sub>2</sub>) with 
+<em>i</em><sub>1</sub> unequal to <em>i</em><sub>2</sub>. However, the transposition (<em>i</em><sub>1</sub> <em>i</em><sub>2</sub>) is the same as the transposition 
+(<em>i</em><sub>2</sub> <em>i</em><sub>1</sub>). Thus, by counting ordered pairs, we have counted each transposition twice. Therefore, to find the number of 
+transpositions, we divide that count by 2 to get<br><br>
+<table align="center" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="33" valign="bottom"><em>n</em><sup>2</sup> &minus; <em>n</em></td>
+    <td rowspan = "2" align="right">.</td>
+  </tr>
+  <tr>
+     <td valign="top" align="center"><font style="text-decoration:overline">&emsp;2&emsp;</font></td>
+  </tr>
+</table>
+<br><p><a name="lem62ret" id="lem62ret"></a>
+<br>LEMMA 6.2<br></p>
+<p>For <em>n</em> &gt; 1, the set of transpositions in <em>S<sub>n</sub></em> generates <em>S<sub>n</sub></em>.<br><br></p>
+<p><a href="#lem62">Click here for the proof.</a></p>
+<p />
+Of course, a particular permutation can be expressed as a product of transpositions in more than one way. But an important property of the symmetric groups is that the 
+number of transpositions used to represent a given permutation will always have the same parity, that is, even or odd. To show this, 
+we will first prove the following lemma.<p><a name="lem63ret" id="lem63ret"></a>
+LEMMA 6.3<br></p>
+<p>The product of an odd number of transpositions in <em>S<sub>n</sub></em> cannot equal the identity element.<br><br></p>
+<p><a href="#lem63">Click here for the proof.</a></p>
+<p />
+We can use this lemma to prove the following theorem.<br><p><a name="theor61ret" id="theor61ret"></a>
+THEOREM 6.1:  The Signature Theorem<br></p>
+<p>For the symmetric group <em>S<sub>n</sub></em>, define the function</p>
+<p style='text-align: center;'><em>&sigma;</em>:  <em>S<sub>n</sub></em> &rarr; &#8484;</p>
+by
+<p style='text-align: center;'><em>&sigma;</em>(<em>x</em>) = (&minus;1)<sup><em>N</em>(<em>x</em>)</sup>,</p>
+where <em>N</em>(<em>x</em>) is the minimum number of transpositions needed to express <em>x</em> as a product of transpositions.  Then this function, called 
+the <em>signature function</em>, is a homomorphism from <em>S<sub>n</sub></em> to the integers {&minus;1, 1}.<br><br>
+<p><a href="#theor61">Click here for the proof.</a></p>
+<p />
+With <em>SageMath</em>, can compute the signature function on both permutations and products of cycles, using the <strong>Signature</strong> command.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Signature</span><span class="p">(</span> <span class="n">P</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Signature</span><span class="p">(</span> <span class="n">C</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span><span class="o">*</span><span class="n">C</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Try this out with several permutations. You will notice that the signature will always be  &plusmn;1.<br><br><br>
+The signature of an <em>r</em>-cycle will be &minus;1 if <em>r</em> is even, and +1 if <em>r</em> is odd. The fact that this function is a homomorphism has some important ramifications.<br><br>
+<p>DEFINITION 6.5<br>
+A permutation is an <em>alternating permutation</em> or an <em>even permutation</em> if the signature of the permutation is 1. A permutation is an
+<em>odd permutation</em> if it is not even, that is, if the signature is −1.  The set of all alternating permutations of order <em>n</em> is written
+<em>A<sub>n</sub></em>.</p>
+<p><a name="cor61ret" id="cor61ret"></a>
+COROLLARY 6.1<br></p>
+<p>The set of all alternating permutations <em>A<sub>n</sub></em> is a normal subgroup of <em>S<sub>n</sub></em>. If <em>n</em> &gt; 1, then
+<em>S<sub>n</sub></em>/<em>A<sub>n</sub></em> is isomorphic to <em>Z</em><sub>2</sub>.<br><br></p>
+<p><a href="#cor61">Click here for the proof.</a></p>
+<p />
+Finally, we can ask which permutations generate the group <em>A<sub>n</sub></em>.  Since the set of 2-cycles generated <em>S<sub>n</sub></em>, it is not too 
+surprising that <em>A<sub>n</sub></em> can also be generated by cycles.<p><a name="prop61ret" id="prop61ret"></a>
+PROPOSITION 6.1<br></p>
+<p>For <em>n</em> &gt; 2, the alternating group <em>A<sub>n</sub></em> is generated by the set of 3-cycles.<br><br></p>
+<p><a href="#prop61">Click here for the proof.</a></p>
+<p />
+Let us use this proposition to find the elements of <em>A</em><sub>4</sub>. We know that this is generated by 3-cycles, and has 24/2 = 12 elements. Let us see if 
+two cycles are enough to give us twelve elements.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Group</span><span class="p">(</span> <span class="n">C</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="n">C</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Since this gives us 12 elements, this is <em>A</em><sub>4</sub>. Eight of the twelve elements are 3-cycles. Do you recognize the other 4 elements?<br><br><p><a name="sec63" id="sec63"></a></p>
+<h1>Cayley's Theorem</h1>
+<br>
+In the last section, we used the circle graph to illustrate a given permutation. The circle graphs produced had the property that every point on the circle had 
+exactly one arrow which points to it. In &sect;1.2 we mentioned that such a graph was <em>one-to-one</em> and <em>onto</em>. Where else have we seen circle graphs 
+with this property?<br><br>
+<p>Although we have seen circle graphs that are one-to-one and onto in several places, many of them were in §4.1 when we were working with cosets. To illustrate,
+the following command loads the quaternionic group <em>Q</em> discovered in the last chapter.<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Q</span> <span class="o">=</span> <span class="n">InitQuaternions</span><span class="p">();</span> <span class="n">Q</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Recall the Calyley table for <em>Q</em> is given by:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CayleyTable</span><span class="p">(</span><span class="n">Q</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+We can know look at the circle graph of <strong>LeftMult</strong>(<em>x</em>) and <strong>RightMult</strong>(<em>x</em>) for 
+different elements <em>x</em> in <em>Q</em>.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="n">LeftMult</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="n">RightMult</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Look carefully. These two circle graphs are not the same, even though they are very similar. Notice that these circle graphs are one-to-one and onto, 
+just as the graphs of a permutation. Could we view these circle graphs as permutations in <em>S</em><sub>8</sub>? Suppose we numbered the elements of the group, starting 
+at the top and working clockwise. That is, we would assign
+<br><br>
+<table align = "center" border="0">
+  <tr>
+    <td align="right">1)&emsp;</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td align="right">2)&emsp;</td>
+    <td><em>i</em></td>
+  </tr>
+    <tr>
+    <td align="right">3)&emsp;</td>
+    <td><em>j</em></td>
+  </tr>
+  <tr>
+    <td align="right">4)&emsp;</td>
+    <td><em>k</em></td>
+  </tr>
+  <tr>
+    <td align="right">5)&emsp;</td>
+    <td>&minus;1</td>
+  </tr>
+  <tr>
+    <td align="right">6)&emsp;</td>
+    <td>&minus;<em>i</em></td>
+  </tr>
+    <tr>
+    <td align="right">7)&emsp;</td>
+    <td>&minus;<em>j</em></td>
+  </tr>
+  <tr>
+    <td align="right">8)&emsp;</td>
+    <td>&minus;<em>k</em></td>
+  </tr>
+</table>
+<br>
+We can then create graphs of permutations that simulate the two graphs we see above.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">],</span> <span class="n">C</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span><span class="o">*</span><span class="n">C</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">],</span> <span class="n">C</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span><span class="o">*</span><span class="n">C</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+EXPERIMENT:<br>
+Replace the <em>i</em> in the two circle graphs on <em>Q</em> with other elements of <em>Q</em>, such as <em>j</em>, -1, and <em>k</em>. Can you find the 
+permutations in <em>S</em><sub>8</sub> which produce the same circle graphs? Remember that there will be two permutations for each element of <em>Q</em>: one 
+that simulates <strong>LeftMult(x)</strong>, and one that simulates <strong>RightMult(x)</strong>. Are there any elements for which the graphs 
+for <strong>LeftMult(x)</strong> and <strong>RightMult(x)</strong> are the same?<br><br>
+We see from this experiment that we each element of <em>Q</em> will correspond to two elements of <em>S</em><sub>8</sub>, one that simulates <strong>LeftMult(x)</strong>,
+which we will call <em>&fnof;</em>(<em>x</em>), and one that simulates <strong>RightMult(x)</strong>, called <em>&#981;</em>(<em>x</em>). Here is a table of these permutations:<br>
+<table align="center" width="550" border="0">
+  <tr>
+    <th width="60" scope="col"><em>x</em></th>
+    <th width="250" scope="col"><em>&fnof;</em>(<em>x</em>)<br> LeftMult(x)</th>
+    <th width="250" scope="col"><em>&#981;</em>(<em>x</em>)<br> RightMult(x)</th>
+  </tr>
+  <tr>
+    <th scope="row">1</th>
+    <td align="center">( )</td>
+    <td align="center">( )</td>
+  </tr>
+  <tr>
+    <th scope="row"><em>i</em></th>
+    <td align="center">(1 2 5 6)(3 8 7 4)</td>
+    <td align="center">(1 2 5 6)(3 4 7 8)</td>
+  </tr>
+  <tr>
+    <th scope="row"><em>j</em></th>
+    <td align="center">(1 3 5 7)(2 4 6 8)</td>
+    <td align="center">(1 3 5 7)(2 8 6 4)</td>
+  </tr>
+  <tr>
+    <th scope="row"><em>k</em></th>
+    <td align="center">(1 4 5 8)(2 7 6 3)</td>
+    <td align="center">(1 4 5 8)(2 3 6 7)</td>
+  </tr>  
+  <tr>
+    <th scope="row">&minus;1</th>
+    <td align="center">(1 5)(2 6)(3 7)(4 8)</td>
+    <td align="center">(1 5)(2 6)(3 7)(4 8)</td>
+  </tr>
+  <tr>
+    <th scope="row">&minus;<em>i</em></th>
+    <td align="center">(1 6 5 2)(3 4 7 8)</td>
+    <td align="center">(1 6 5 2)(3 8 7 4)</td>
+  </tr>
+  <tr>
+    <th scope="row">&minus;<em>j</em></th>
+    <td align="center">(1 7 5 3)(2 8 6 4)</td>
+    <td align="center">(1 7 5 3)(2 4 6 8)</td>
+  </tr>
+  <tr>
+    <th scope="row">&minus;<em>k</em></th>
+    <td align="center">(1 8 5 4)(2 3 6 7)</td>
+    <td align="center">(1 8 5 4)(2 7 6 3)</td>
+  </tr>
+</table>
+<br>
+By labeling the permutations by <em>&fnof;</em>(<em>x</em>) and <em>&#981;</em>(<em>x</em>), we emphasize that these two functions map elements of <em>Q</em> to elements 
+of <em>S</em><sub>8</sub>. So here's the natural question: Are either of these homomorphisms?<br><br>
+<p>EXAMPLE:<br>
+Use <em>SageMath</em> to see if either of the two functions <em>f</em> or <em>ϕ</em> are homomorphisms.<br><br></p>
+<p>Let’s begin by testing <em>ƒ</em>.
+Normally, in defining a homomorphism, we first determine the domain group and the target group.  But in this case the target group is <em>S</em><sub>8</sub>, which
+has 40320 elements.  Rather than having <em>SageMath</em> construct all of the elements of this group, which would take an unreasonable amount of time, we can find the
+range of the homomorphism by determining which group is generated by <em>ƒ</em>(<em>i</em>) and <em>ƒ</em>(<em>j</em>).<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Q</span> <span class="o">=</span> <span class="n">InitQuaternions</span><span class="p">();</span> <span class="n">Q</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">T</span> <span class="o">=</span> <span class="n">Group</span><span class="p">(</span><span class="n">C</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span><span class="o">*</span><span class="n">C</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="n">C</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span><span class="o">*</span><span class="n">C</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">));</span> <span class="n">T</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Now we can try to create the homomorphism.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">F</span> <span class="o">=</span> <span class="n">Homomorph</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="n">T</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">HomoDef</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">C</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span><span class="o">*</span><span class="n">C</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">HomoDef</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">C</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span><span class="o">*</span><span class="n">C</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">HomoDef</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">C</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span><span class="o">*</span><span class="n">C</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">FinishHomo</span><span class="p">(</span><span class="n">F</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>So this is not a homomorphism.  What about <em>ϕ</em>?<br></p>
+<br>
+EXPERIMENT:<br>
+See if <em>&#981;</em> is a homomorphism using the above table.  If it seems to produce a homomorphism, use <strong>GraphHomo</strong> to verify that it is one-to-one 
+and onto.<br><br>
+So apparently, <em>&#981;</em>(<em>x</em>) is a homomorphism from <em>Q</em> to <em>S</em><sub>8</sub>. In fact, it is clear that this is one-to-one, so 
+<em>&#981;</em>(<em>x</em>) is an isomorphism from <em>Q</em> onto a subgroup of <em>S</em><sub>8</sub>. Will <strong>RightMult</strong> produce an isomorphism for any 
+group? The answer is yes, and the proof reveals an important property of permutation groups. You should be able to use the <strong>RightMult</strong> function to prove 
+the following theorem:<p><a name="theor62ret" id="theor62ret"></a>
+THEOREM 6.2:Cayley’s Theorem<br></p>
+<p>Every finite group of order <em>n</em> is isomorphic to a subgroup of <em>S<sub>n</sub></em>.<br><br></p>
+<p><a href="#theor62">Click here for the proof.</a></p>
+<p />
+<p>EXAMPLE:<br>
+Find a subgroup of <em>S</em><sub>6</sub> isomorphic to Terry’s dance steps.<br><br></p>
+<p>First we will bring up the Cayley table for Terry’s dance steps.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">InitTerry</span><span class="p">()</span>
+<span class="n">CayleyTable</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Since the proof of Cayley’s theorem uses multiplication on the right, we will use the <em>rows</em> of the Cayley table to produce the permutations.  First, we will number Terry’s dance steps in the order they appear in the table.</p>
+<p style='text-align: center;'>1 &harr; <strong>Stay</strong>,&emsp; 2 &harr; <strong>FlipRt</strong>,&emsp; 3 &harr; <strong>RotRt</strong>,&emsp; 4 &harr; <strong>FlipLft</strong>,&emsp; 5 &harr; <strong>RotLft</strong>,&emsp; 6 &harr; <strong>Spin</strong>.</p>
+Now, each row in the table converts to a list of numbers, which becomes the lower half of the permutation for that row.  For example, the second row in the table,
+<p style='text-align: center;'><strong>FlipRt</strong>&emsp;<strong>Stay</strong>&emsp;<strong>FlipLft</strong>&emsp; <strong>RotRt</strong>&emsp;<strong>Spin</strong>&emsp;<strong>RotLft</strong></p>
+converts to the numbers 2 1 4 3 6 5, which represents the permutation
+<table align="center" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right" valign="bottom">&#9115;</td>
+    <td align="center">1</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">5</td>
+    <td align="center">6</td>               
+    <td align="left" valign="bottom">&#9118;</td>
+  </tr>
+  <tr>
+    <td align="right" valign="top">&#9117;</td>
+    <td align="center">2</td>
+    <td align="center">1</td>
+    <td align="center">4</td>
+    <td align="center">3</td>
+    <td align="center">6</td>
+    <td align="center">5</td>   
+    <td align="left" valign="top">&#9120;</td>
+  </tr>
+</table>
+<br>
+(The row for the identity element will always give the identity permutation.)
+Doing this for each row, we get the list of permutations
+<table align="center" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right" valign="bottom">&#9115;</td>
+    <td align="right" valign="bottom">&#9115;</td>
+    <td align="center">1</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">5</td>
+    <td align="center">6</td>
+    <td align="left" valign="bottom">&#9118;</td>
+    <td rowspan = "2" align="center">,</td>
+    <td align="right" valign="bottom">&#9115;</td>
+    <td align="center">1</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">5</td>
+    <td align="center">6</td>
+    <td align="left" valign="bottom">&#9118;</td>
+    <td rowspan = "2" align="center">,</td>
+    <td align="right" valign="bottom">&#9115;</td>
+    <td align="center">1</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">5</td>
+    <td align="center">6</td>
+    <td align="left" valign="bottom">&#9118;</td>
+    <td rowspan = "2" align="center">,</td>
+    <td align="right" valign="bottom">&#9115;</td>
+    <td align="center">1</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">5</td>
+    <td align="center">6</td>
+    <td align="left" valign="bottom">&#9118;</td>
+    <td rowspan = "2" align="center">,</td>
+    <td align="right" valign="bottom">&#9115;</td>
+    <td align="center">1</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">5</td>
+    <td align="center">6</td>
+    <td align="left" valign="bottom">&#9118;</td>
+    <td rowspan = "2" align="center">,</td>
+    <td align="right" valign="bottom">&#9115;</td>
+    <td align="center">1</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">5</td>
+    <td align="center">6</td>
+    <td align="left" valign="bottom">&#9118;</td>
+    <td align="left" valign="bottom">&#9118;</td>
+  </tr>
+  <tr>
+    <td align="right" valign="top">&#9117;</td>
+    <td align="right" valign="top">&#9117;</td>
+    <td align="center">1</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">5</td> 
+    <td align="center">6</td>
+    <td align="left" valign="top">&#9120;</td>
+    <td align="right" valign="top">&#9117;</td>
+    <td align="center">2</td>
+    <td align="center">1</td>
+    <td align="center">4</td>
+    <td align="center">3</td>
+    <td align="center">6</td>
+    <td align="center">5</td>
+    <td align="left" valign="top">&#9120;</td>
+    <td align="right" valign="top">&#9117;</td>
+    <td align="center">3</td>
+    <td align="center">6</td>
+    <td align="center">5</td>
+    <td align="center">2</td>
+    <td align="center">1</td>
+    <td align="center">4</td>
+    <td align="left" valign="top">&#9120;</td>
+    <td align="right" valign="top">&#9117;</td>
+    <td align="center">4</td>
+    <td align="center">5</td>
+    <td align="center">6</td>
+    <td align="center">1</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="left" valign="top">&#9120;</td>
+    <td align="right" valign="top">&#9117;</td>
+    <td align="center">5</td>
+    <td align="center">4</td>
+    <td align="center">1</td>
+    <td align="center">6</td>
+    <td align="center">3</td>
+    <td align="center">2</td>
+    <td align="left" valign="top">&#9120;</td>
+    <td align="right" valign="top">&#9117;</td>
+    <td align="center">6</td>
+    <td align="center">3</td>
+    <td align="center">2</td>
+    <td align="center">5</td>
+    <td align="center">4</td>
+    <td align="center">1</td>
+    <td align="left" valign="top">&#9120;</td>
+    <td align="left" valign="top">&#9120;</td>
+  </tr>
+</table> 
+<br><p>Although this theorem shows that all finite groups can be considered as a subgroup of a symmetric group, the theorem can also apply to infinite groups as well.
+Of course we then must consider <em>infinite</em> symmetric groups, whose elements would be permutations on an infinite collection of objects. We might have a difficult
+time expressing some of the permutations! For example, if we had a library of an infinite number of books, we could not begin to express how one could rearrange the
+books. Some of the permutations could be expressed as one-to-one and onto functions. However, most of the permutations in an infinite symmetric group are not
+expressible using a finite number of words or symbols. Problems 18 through 22 of §6.4 reveal some of the unusual properties of infinite symmetric groups.
+Fortunately, we will mainly work with finite symmetric groups.</p>
+<p><br><br>
+Although Cayley’s theorem (6.2) shows that any finite group <em>G</em> is a subgroup of <em>S<sub>n</sub></em>, where <em>n</em> is the size of the group <em>G</em>,
+we often can find a smaller symmetric group that contains an isomorphic copy of <em>G</em>.<br><br></p>
+<p>EXAMPLE:<br><br />
+Consider the group <em>D</em><sub>4</sub>, introduced in the last chapter, for which <nobr><em>a</em><sup>4</sup> =
+<em>b</em><sup>2</sup> = <em>e</em>,</nobr> and
+<em>b</em>·<em>a</em> = <em>a</em><sup>3</sup>·<em>b</em>.  Consider the effects of <strong>RightMult</strong> on the set of cosets, using
+a <em>non-normal</em> subgroup.<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
+<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">4</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">^</span><span class="mi">3</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
+<span class="n">D4</span> <span class="o">=</span> <span class="n">Group</span><span class="p">()</span>
+<span class="n">D4</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+ Let us consider a <em>non-normal</em> subgroup of <em>D</em><sub>4</sub>,<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">H</span> <span class="o">=</span> <span class="n">Group</span><span class="p">(</span><span class="n">b</span><span class="p">);</span> <span class="n">H</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+We saw in Cayley's theorem (6.2) that <strong>RightMult</strong> applied to the elements ofthe group derived a homomorphism.  What if we applied <strong>RightMult</strong> 
+to the <em>cosets</em> of the subgroup?  Recall that <strong>RightMult(g)</strong> can be thought as a 
+function <em>p<sub>g</sub></em>(<em>x</em>) = <em>g</em>&middot;<em>x</em>,
+that is, it multiplies the argument of the function to the right of <em>g</em>. If we apply this function to a left coset of <em>H</em>, we have 
+<em>p<sub>g</sub></em>(<em>x H</em>) = <em>g</em>&middot;<em>x H</em>, which yields another left coset. (Right cosets won't work here, since 
+<em>p<sub>g</sub></em>(<em>H x</em>) = <em>g</em>&middot;<em>H x</em>, which is neither a left nor right coset.)  Let us first create a list of left cosets.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="n">LftCoset</span><span class="p">(</span><span class="n">D4</span><span class="p">,</span> <span class="n">H</span><span class="p">);</span> <span class="n">L</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+What happens if we multiply each of the cosets by a fixed element of the group, say <em>a</em>?<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">RightMult</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+We see that each coset is mapped to another coset.  Once again, we have a one-to-one and onto mapping, which we can treat as a permutation.  Let us first number the 
+right cosets of <em>H</em>.<br>
+<table align="center" border="0">
+  <tr>
+    <td align="right">1 )</td>
+    <td align="left">&emsp;{ <em>e</em>, <em>b</em> }</td>
+  </tr>
+  <tr>
+    <td align="right">2 )</td>
+    <td align="left">&emsp;{ <em>a</em>, <em>a</em>&middot;<em>b</em> }</td>
+  </tr>
+  <tr>
+    <td align="right">3 )</td>
+    <td align="left">&emsp;{ <em>a</em><sup>2</sup>, <em>a</em><sup>2</sup>&middot;<em>b</em> }</td>
+  </tr>
+  <tr>
+    <td align="right">4 )</td>
+    <td align="left">&emsp;{ <em>a</em><sup>3</sup>, <em>a</em><sup>3</sup>&middot;<em>b</em> }</td>
+  </tr>
+</table>
+<br>
+Then the circle graph shows that left multiplication by <em>a</em> is equivalent to the permutation (1 2 3 4).
+If we try this with the element <em>b</em> instead,<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">RightMult</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+the circle graph shows that right multiplication by <em>b</em> is equivalent to the permutation (2 4).<br>
+<br>
+<p>EXPERIMENT:<br>
+Try replacing the elements <em>a</em> and <em>b</em> with other elements of the group.  Do the
+circle graphs produce permutations?<br></p>
+<br>
+Since we have a permutation for each element of the group, the natural question is whether we have a homomorphism between the group 
+<em>D</em><sub>4</sub> and the permutation group.  <em>SageMath</em> can check for us.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S4</span> <span class="o">=</span> <span class="n">Group</span><span class="p">(</span><span class="n">C</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="n">C</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="n">C</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="p">);</span> <span class="n">S4</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">F</span> <span class="o">=</span> <span class="n">Homomorph</span><span class="p">(</span><span class="n">D4</span><span class="p">,</span> <span class="n">S4</span><span class="p">)</span>
+<span class="n">HomoDef</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">C</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">HomoDef</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">C</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">FinishHomo</span><span class="p">(</span><span class="n">F</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+So we indeed have a homomorphism, just as in Cayley's theorem. What is the kernel of this homomorphism?<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Kernel</span><span class="p">(</span><span class="n">F</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+This proves that <em>D</em><sub>4</sub> is isomorphic to a subgroup of <em>S</em><sub>4</sub>.  Note that this is a much stronger result than Cayley's theorem (6.2), 
+which only says that <em>D</em><sub>4</sub> is isomorphic to a subgroup of the larger group <em>S</em><sub>8</sub>.<br><br>
+<p>We can now see the subgroup of <em>S</em><sub>4</sub> isomorphic to <em>D</em><sub>4</sub>.<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">D4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CayleyTable</span><span class="p">(</span><span class="n">_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+The multiplication table reveals a non-abelian group with 5 elements of order 2, so this is indeed isomorphic to <em>D</em><sub>4</sub>.  
+We can generalize this procedure to produce the following result:<p><a name="theor63ret" id="theor63ret"></a>
+THEOREM 6.3: Generalized Cayley’s Theorem<br></p>
+<p>Let <em>G</em> be a finite group of order <em>n</em>, and <em>H</em> a subgroup of order <em>m</em>.  Then there is a homomorphism
+from <em>G</em> to <em>S<sub>k</sub></em>, with <em>k</em> = <em>n</em>/<em>m</em>, and whose kernel is a subgroup of <em>H</em>.<br><br></p>
+<p><a href="#theor63">Click here for the proof.</a></p>
+<p />
+We see one application of this proposition in the case of <em>D</em><sub>4</sub>.  Since <em>H</em> was a subgroup of order 2 which was <em>not</em> normal, the only 
+normal subgroup of <em>G</em> that is contained in <em>H</em> is the trivial subgroup.  Thus, the homomorphism is an isomorphism, and we find a copy 
+of <em>D</em><sub>4</sub> inside of <em>S</em><sub>4</sub> instead of having to look in the larger group <em>S</em><sub>8</sub>.  This idea can be applied 
+whenever we can find a subgroup of <em>G</em> that does not contain any nontrivial normal subgroups of <em>G</em>.<br><br>
+<p>But there is another important ramification from this proposition. We can prove the existence of a normal subgroup of a group, knowing only the order of the group!</p>
+<p><a name="cor62ret" id="cor62ret"></a>
+COROLLARY 6.2<br></p>
+<p>Let <em>G</em> be a finite group, and <em>H</em> any subgroup of <em>G</em>. Then <em>H</em> contains a subgroup <em>N</em>, which is a normal subgroup of <em>G</em>,
+such that |<em>G</em>| divides (|<em>G</em>|/|<em>H</em>|)! · |<em>N</em>|.<br><br></p>
+<p><a href="#cor62">Click here for the proof.</a></p>
+<p />
+Here is an example of how we can prove the existence of a nontrivial normal subgroup, using just the order of the group.  Suppose we have a group <em>G</em> 
+of order 108.  Suppose that <em>G</em> has a subgroup of order 27.  (In fact, all groups of order 108 must have a subgroup of order 27.)  Using 
+|<em>G</em>|=108 and |<em>H</em>|=27, we find that G must contain a normal subgroup <em>N</em> such that
+<p style='text-align: center;'>108 divides (108/27)! &middot;|<em>N</em>|=24&middot;|<em>N</em>|.</p>  
+But this means that |<em>N</em>| must be a multiple of 9.  Since <em>N</em> is a subgroup of <em>H</em>, which has order 27, we see that <em>N</em> is of 
+order 9 or 27.  Hence, we have proven that <em>G</em> contains a normal subgroup of either order 9 or 27.  
+This will go a long way in finding the possible group structures of <em>G</em>, using only the size of the group <em>G</em>.<br><br><p><a name="sec64" id="sec64"></a></p>
+<h1>Numbering the Permutations</h1>
+<br>
+We have seen that from Cayley's theorem that any group can be represented as the subgroup of a symmetric group. In turn, most of the permutations in the symmetric group 
+can be written succinctly as a product of disjoint cycles. So naturally, we can express any group in terms of cycles.<br><br>
+<p>For example, we saw using Cayley theorem a copy of the quaternionic group <em>Q</em> as a subgroup of <em>S<sub>8</sub></em>. It was generated by the elements</p>
+<p style='text-align: center;'><em>&#981;</em>(<em>i</em>) = (1 2 5 6)(3 4 7 8)<br>
+                               <em>&#981;</em>(<em>j</em>) = (1 3 5 7)(2 8 6 4).</p>
+In fact, the entire group is given by<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Q</span> <span class="o">=</span> <span class="n">Group</span><span class="p">(</span> <span class="n">C</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span><span class="o">*</span><span class="n">C</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span> <span class="p">,</span> <span class="n">C</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span><span class="o">*</span><span class="n">C</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="p">);</span> <span class="n">Q</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+To compare notation, let us convert these elements to permutaions.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span> <span class="n">CycleToPerm</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">Q</span> <span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Which method is best?  For small groups, using cycles would be a good choice, because the results are easy to read. But for larger groups (say over 100 elements, and 
+yes, we will be working with groups that large in the next chapter) having <em>SageMath</em> write out all of the elements in terms of cycles would be time consuming 
+and messy. It would be nice to have a succinct way to describe each permutation using some kind of abbreviation.<br><br>
+<p>This section introduces a way to work with permutations that combines succinctness and speed. <em>SageMath</em> has a preset order
+in which it lists the permutations.<br><br></p>
+<p>The clue for seeing how such an abbreviation is possible is to look again at the group <em>S</em><sub>4</sub>, using permutation notation.<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S4</span> <span class="o">=</span> <span class="n">Group</span><span class="p">(</span> <span class="n">P</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">P</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">P</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="p">);</span> <span class="n">S4</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Notice that <em>SageMath</em> sorts the elements, first listing the identity, then the transposition which exchanges 1 and 2, then the permutations which change 
+only the first three elements, and finally the permutations which move the fourth element. But if we look closely we can find even more patterns. 
+For example, the last six elements are the six elements which map 4 into 1. Can you see any other patterns?<br><br>
+<p><em>SageMath</em> uses a predefined order to list all of the permutations.  As a result, we can number the permutations as follows:<br><br></p>
+<table align="center" border="0">
+  <tr>
+    <td align="right">1<sup>st</sup> permutation = </td>
+    <td align="left">&ensp;<em>P</em>( )</td>
+  </tr>
+  <tr>
+    <td align="right">2<sup>nd</sup> permutation = </td>
+    <td align="left">&ensp;<em>P</em>(2, 1)</td>
+  </tr>
+  <tr>
+    <td align="right">3<sup>rd</sup> permutation = </td>
+    <td align="left">&ensp;<em>P</em>(1, 3, 2)</td>
+  </tr>
+  <tr>
+    <td align="right">4<sup>th</sup> permutation = </td>
+    <td align="left">&ensp;<em>P</em>(3, 1, 2)</td>
+  </tr>
+  <tr>
+    <td align="right">5<sup>th</sup> permutation = </td>
+    <td align="left">&ensp;<em>P</em>(2, 3, 1)</td>
+  </tr>
+  <tr>
+    <td align="right">6<sup>th</sup> permutation = </td>
+    <td align="left">&ensp;<em>P</em>(3, 2, 1)</td>
+  </tr>
+  <tr>
+    <td align="right">7<sup>th</sup> permutation = </td>
+    <td align="left">&ensp;<em>P</em>(1, 2, 4, 3)</td>
+  </tr>
+  <tr>
+    <td align="right">&hellip;&hellip;&hellip; </td>
+    <td align="left">&hellip;&hellip;&hellip;</td>
+  </tr>
+  <tr>
+    <td align="right">24<sup>th</sup> permutation = </td>
+    <td align="left">&ensp;<em>P</em>(4, 3, 2, 1)</td>
+  </tr>        
+</table>
+<br>
+In this list the first 2 elements give the group <em>S</em><sub>2</sub>, the first 6 give  <em>S</em><sub>3</sub>, and the first 24 elements give  <em>S</em><sub>4</sub>.
+This pattern can be extended to higher order permutations, so that the first <em>n!</em> permutations gives the group <em>S<sub>n</sub></em>.<br><br>
+<p>The advantage of sorting the permutations in this way is that <em>SageMath</em> can quickly find the <em>n</em><sup>th</sup> permutation without having to find any of the
+previous permutations.  For example, to find out what the 2000th permutation would be on this list, type<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">NthPerm</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+<em>SageMath</em> can also determine where a given permutation is on the list of permutations. The command <strong>PermToInt</strong>( P(&hellip;&hellip;&hellip;) ) converts 
+a permutation to a number.  For example,<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">PermToInt</span><span class="p">(</span><span class="n">P</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>converts the permutation back to the number 2000.<br></p>
+<p>We now have found a way of abbreviating permutations.  Rather than spelling out where each element is mapped, we can give a single number that describes where the
+permutation is on the list of permutations. This will be called the <em>integer representation</em> of the permutation. Although this representation hides most of
+the information about the permutation, <em>SageMath</em> can quickly recover all of the information needed to do group operations.<br><br></p>
+<p>For example, suppose we want to multiply the 3<sup>rd</sup> permutation with the 21<sup>st</sup>. We could enter the command<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">NthPerm</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="n">NthPerm</span><span class="p">(</span><span class="mi">21</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+We could convert this back to a number as follows:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">PermToInt</span><span class="p">(</span> <span class="n">NthPerm</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="n">NthPerm</span><span class="p">(</span><span class="mi">21</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+So the 3<sup>rd</sup> permutation times the 21<sup>st</sup> permutation gives the 23<sup>rd</sup> permutation. If we multiplied in the other order, we would have<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">PermToInt</span><span class="p">(</span> <span class="n">NthPerm</span><span class="p">(</span><span class="mi">21</span><span class="p">)</span> <span class="o">*</span> <span class="n">NthPerm</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+So the 21<sup>st</sup> permutation times the 3<sup>rd</sup> permutation gives the 19<sup>th</sup> permutation.<br>
+<br>
+<p>EXPERIMENT:<br>
+Try entering in different numbers in place of 21 and 3, to see what happens.<br></p>
+<br>
+<em>SageMath</em> provides an abbreviation to the permutations.  By setting the variable <strong>DisplayPermInt</strong> to true, permutations will be displayed as 
+their integer counterpart.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">DisplayPermInt</span> <span class="o">=</span> <span class="n">true</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">P</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Now many of <em>SageMath</em>'s operations can be done with integer abreviation of the elements.  For example, we found that the quaternionic group <em>Q</em> was 
+isomorphic to a subgroup of <em>S</em><sub>8</sub>, generated by the elements 
+<p style='text-align: center;'>(1 2 5 6)(3 4 7 8) and (1 3 5 7)(2 8 6 4).</p> 
+We first convert these cycles to permutations, which will display as integers.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CycleToPerm</span><span class="p">(</span> <span class="n">C</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span><span class="o">*</span><span class="n">C</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CycleToPerm</span><span class="p">(</span> <span class="n">C</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span><span class="o">*</span><span class="n">C</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+So we find that the quaternionic group contains the 25827<sup>th</sup> and 14805<sup>th</sup> permutations.  Now we can form the group using these two permutaions as generators.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Q</span> <span class="o">=</span> <span class="n">Group</span><span class="p">(</span><span class="n">NthPerm</span><span class="p">(</span><span class="mi">25827</span><span class="p">),</span> <span class="n">NthPerm</span><span class="p">(</span><span class="mi">14805</span><span class="p">));</span> <span class="n">Q</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+So the entire group can be given on a single line in a way which expresses the entire structure of the group. We can see the Cayley table of the group<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CayleyTable</span><span class="p">(</span><span class="n">Q</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+and see that the group is isomorphic to <em>Q</em>.  This integer representation is succinct enough to form such a table, and has many other advantages over cyclic 
+permutations, especially when we are working with large subgroups of the symmetric groups.  Not only is it much easier to identify two elements as being the same, 
+but also the elements do not take up as much room to display.<br><br>
+<p>We can return to the standard notation for permutations by setting <strong>DisplayPermInt</strong> to false.<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">DisplayPermInt</span> <span class="o">=</span> <span class="n">false</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CayleyTable</span><span class="p">(</span><span class="n">Q</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+This multiplication table is harder to read.  Thus, it is worthwhile to introduce the new representation.<br><br>
+<p>There are simple algorithms to convert from the permutation representation to the integer representation and back without a computer.  We begin by presenting a method of converting from a permutation to a integer.<br><br></p>
+<p>EXAMPLE:<br></p>
+<p>Demonstrate without <em>SageMath</em> that P(4, 1, 7, 6, 3, 2, 5) is the 2000<sup>th</sup> permutation.<br><br></p>
+<p>For each number in the permutation, we count how many numbers further left are larger than that number.  For example, the 4 has no numbers further left, so the count
+would be 0.  The 3, however, has three numbers to the left of it which are larger, namely 4, 7, and 6.
+Here are the results of these counts.</p>
+<p style='text-align: center;'>P(4, 1, 7, 6, 3, 2, 5)<br>
+                                 &ensp;0&ensp;&thinsp;1&ensp;&thinsp;0&ensp;&thinsp;1&ensp;&thinsp;3&ensp;&thinsp;4&ensp;&thinsp;2</p>
+Next, we multiply each of these counts by (<em>n</em> &minus; 1)!, and add the products together, and finally add 1.  Thus, 
+<p style='text-align: center;'>0 &middot; 0! + 1 &middot; 1! + 0 &middot; 2! + 1 &middot; 3! + 3 &middot; 4! + 4 &middot; 5! + 2 &middot; 6! + 1 = 2000.</p>
+<br>
+A similar algorithm reverses the procedure, and determines the <em>n</em><sup>th</sup> permutation.<br><br>
+<p>EXAMPLE:<br>
+Determine the 4000<sup>th</sup> permutation without <em>SageMath</em>.<br><br></p>
+<p>We begin by subtracting 1, then using the division algorithm to successively divide by 2, 3, 4, etc., until the quotient is 0.<br><br></p>
+<table align="center" border="0">
+  <tr>
+    <td align="right">3999 = 2 &middot;</td>
+    <td align="right">1999 + 1</td>
+  </tr>
+  <tr>
+    <td align="right">1999 = 3 &middot;</td>
+    <td align="right">666 + 1</td>
+  </tr>
+  <tr>
+    <td align="right">666 = 4 &middot;</td>
+    <td align="right">166 + 2</td>
+  </tr>
+  <tr>
+    <td align="right">166 = 5 &middot;</td>
+    <td align="right">33 + 1</td>
+  </tr>
+  <tr>
+    <td align="right">33 = 6 &middot;</td>
+    <td align="right">5 + 3</td>
+  </tr>
+  <tr>
+    <td align="right">5 = 7 &middot;</td>
+    <td align="right">0 + 5</td>
+  </tr>        
+</table>
+<br>
+The sequence of remainders produced is called the <em>Cantor representation</em> of <em>n</em> &minus; 1.  Since the last division was by <em>n</em> = 7, the permutation is in <em>S</em><sub>7</sub>.  We will use the remainders to determine the permutation, starting from the 
+last remainder, and working towards the first.  We start with a list of numbers from 1 to <em>n</em>:  
+<p style='text-align: center;'>{1, 2, 3, 4, 5, 6, 7}</p>
+<p>For each remainder <em>m</em>, we
+consider the (<em>m</em> + 1)<sup>st</sup> largest number in the list which has not been crossed out.  Since the last remainder is 5, we take the 6<sup>th</sup> largest number, which is 2.  This eliminates 2 from the list.<br><br></p>
+<table align="center" border="0">
+  <tr>
+    <td align="right">3999 = 2 &middot;</td>
+    <td align="right">1999 + 1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td align="right">1999 = 3 &middot;</td>
+    <td align="right">666 + 1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td align="right">666 = 4 &middot;</td>
+    <td align="right">166 + 2</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td align="right">166 = 5 &middot;</td>
+    <td align="right">33 + 1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td align="right">33 = 6 &middot;</td>
+    <td align="right">5 + 3</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td align="right">5 = 7 &middot;</td>
+    <td align="right">0 + 5</td>
+    <td align="left"> &#10233; 2</td>
+  </tr>        
+</table>  
+<p style='text-align: center;'>{1, <font style="text-decoration:line-through">2</font>, 3, 4, 5, 6, 7}</p>
+<p>Here is the result after processing two more remainders.</p>
+<table align="center" border="0">
+  <tr>
+    <td align="right">3999 = 2 &middot;</td>
+    <td align="right">1999 + 1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td align="right">1999 = 3 &middot;</td>
+    <td align="right">666 + 1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td align="right">666 = 4 &middot;</td>
+    <td align="right">166 + 2</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td align="right">166 = 5 &middot;</td>
+    <td align="right">33 + 1</td>
+    <td align="left"> &#10233; 6</td>
+  </tr>
+  <tr>
+    <td align="right">33 = 6 &middot;</td>
+    <td align="right">5 + 3</td>
+    <td align="left"> &#10233; 4</td>
+  </tr>
+  <tr>
+    <td align="right">5 = 7 &middot;</td>
+    <td align="right">0 + 5</td>
+    <td align="left"> &#10233; 2</td>
+  </tr>        
+</table>  
+<p style='text-align: center;'>{1, <font style="text-decoration:line-through">2</font>, 3, <font style="text-decoration:line-through">4</font>, 5, <font style="text-decoration:line-through">6</font>, 7}</p>
+<p>The next remainder is 2, so we take the 3<sup>rd</sup> largest number which is not crossed out, which is 3.  Continuing, we get the following.<br><br></p>
+<table align="center" border="0">
+  <tr>
+    <td align="right">3999 = 2 &middot;</td>
+    <td align="right">1999 + 1</td>
+    <td align="left"> &#10233; 1</td>
+  </tr>
+  <tr>
+    <td align="right">1999 = 3 &middot;</td>
+    <td align="right">666 + 1</td>
+    <td align="left"> &#10233; 5</td>
+  </tr>
+  <tr>
+    <td align="right">666 = 4 &middot;</td>
+    <td align="right">166 + 2</td>
+    <td align="left"> &#10233; 3</td>
+  </tr>
+  <tr>
+    <td align="right">166 = 5 &middot;</td>
+    <td align="right">33 + 1</td>
+    <td align="left"> &#10233; 6</td>
+  </tr>
+  <tr>
+    <td align="right">33 = 6 &middot;</td>
+    <td align="right">5 + 3</td>
+    <td align="left"> &#10233; 4</td>
+  </tr>
+  <tr>
+    <td align="right">5 = 7 &middot;</td>
+    <td align="right">0 + 5</td>
+    <td align="left"> &#10233; 2</td>
+  </tr>        
+</table>  
+<p style='text-align: center;'>{<font style="text-decoration:line-through">1</font>, <font style="text-decoration:line-through">2</font>, <font style="text-decoration:line-through">3</font>, <font style="text-decoration:line-through">4</font>, <font style="text-decoration:line-through">5</font>, <font style="text-decoration:line-through">6</font>, 7}</p> 
+<p>The only number not crossed out is 7, which becomes the first number in the permutation. The rest of the permutation can be read from the new numbers from top to bottom, producing P(7, 1, 5, 3, 6, 4, 2).<br><br></p>
+<p>EXPERIMENT:<br>
+Use the method of the previous example to verify that P(7, 1, 5, 3, 6, 4, 2) is indeed the 4000<sup>th</sup> permutation.<br><br></p>
+<p>The simple algorithms for converting permutations to integers and back make this association more natural. It also explains why <em>SageMath</em> is able to convert
+permutations so quickly.</p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<h1>Proofs:</h1><p><a name="lem61" id="lem61"></a></p>
+<p>Proof of Lemma 6.1:<br><br></p>
+<p>Let us say that <em>x</em> fixes the integer <em>i</em> if <em>x</em>(<em>i</em>) = <em>i</em>. We will use induction on the number of integers not left fixed
+by <em>x</em>, denoted by <em>m</em>. Because <em>x</em> is not the identity, there is at least one integer not fixed by <em>x</em>. In fact, <em>m</em> must
+be at least 2, for the first integer must have somewhere to go.<br><br></p>
+<p>If <em>m</em> = 2, then only two numbers <em>i</em><sub>1</sub> and <em>i</em><sub>2</sub> are moved. Since these are the only two integers not fixed, <em>x</em> must be
+a 2-cycle (<em>i</em><sub>1</sub> <em>i</em><sub>2</sub>).<br><br></p>
+<p>We now will assume by induction that the lemma is true whenever the number of integers not left fixed by <em>x</em> is fewer than <em>m</em>. Let <em>i</em><sub>1</sub>
+be one integer that is not fixed, and let <em>i</em><sub>2</sub> = <em>x</em>(<em>i</em><sub>1</sub>). Then <em>x</em>(<em>i</em><sub>2</sub>) cannot be
+<em>i</em><sub>2</sub> for <em>x</em> is one-to-one, and if <em>x</em>(<em>i</em><sub>2</sub>) is not <em>i</em><sub>1</sub>, we define
+<em>i</em><sub>3</sub> = <em>x</em>(<em>i</em><sub>2</sub>).  Likewise, <em>x</em>(<em>i</em><sub>3</sub>) cannot be either <em>i</em><sub>2</sub> or
+<em>i</em><sub>3</sub>, since <em>x</em> is one-to-one.  If <em>x</em>(<em>i</em><sub>3</sub>) is not <em>i</em><sub>1</sub>, we define
+<em>i</em><sub>4</sub> = <em>x</em>(<em>i</em><sub>3</sub>).<br><br></p>
+<p>Eventually this process must stop, for there are only <em>m</em> elements that are not fixed by <em>x</em>. Thus, there must be some value <em>k</em> such that
+<em>x</em>(<em>i<sub>k</sub></em>) = <em>i</em><sub>1</sub>. Define the permutation <em>y</em> to be the <em>k</em>-cycle
+(<em>i</em><sub>1</sub> <em>i</em><sub>2</sub> <em>i</em><sub>3</sub> … <em>i<sub>k</sub></em>).  Then <em>x</em>·<em>y</em><sup>-1</sup> fixes
+all of the integers fixed by <em>x</em>, along with <em>i</em><sub>1</sub>, <em>i</em><sub>2</sub>, <em>i</em><sub>3</sub>, … <em>i<sub>k</sub></em>.
+By induction, since there are fewer integers not fixed by <em>x</em>·<em>y</em><sup>-1</sup> than by <em>x</em>, <em>x</em>·<em>y</em><sup>-1</sup>
+can be espressed by a series of nontrivial disjoint cycles
+<em>c</em><sub>1</sub>·<em>c</em><sub>2</sub>·<em>c</em><sub>3</sub>·…·<em>c<sub>t</sub></em>.  Moreover, the integers appearing
+in <em>c</em><sub>1</sub>·<em>c</em><sub>2</sub>·<em>c</em><sub>3</sub>·…·<em>c<sub>t</sub></em> are just those that are not fixed
+by <em>x</em>·<em>y</em><sup>-1</sup>. Thus, <em>c</em><sub>1</sub>, <em>c</em><sub>2</sub>, <em>c</em><sub>3</sub>, …, <em>c<sub>t</sub></em>
+are disjoint from <em>y</em>.  Finally, we have</p>
+<p style='text-align: center;'><em>x</em> = 
+<em>y</em>&middot;<em>c</em><sub>1</sub>&middot;<em>c</em><sub>2</sub>&middot;<em>c</em><sub>3</sub>&middot;&hellip;&middot;<em>c<sub>t</sub></em>.</p>
+Therefore, <em>x</em> can be written as a product of disjoint nontrivial cycles. By induction, every permutation besides the identity can be written as a product 
+of nontrivial disjoint cycles.<br><br>
+<p>For the uniqueness, suppose that a permutation <em>x</em> has two ways of being written is terms of nontrivial disjoint cycles:</p>
+<p style='text-align: center;'><em>x</em> = <em>c</em><sub>1</sub>&middot;<em>c</em><sub>2</sub>&middot;<em>c</em><sub>3</sub>&middot;&hellip;&middot;<em>c<sub>r</sub></em>
+= <em>d</em><sub>1</sub>&middot;<em>d</em><sub>2</sub>&middot;<em>d</em><sub>3</sub>&middot;&hellip;&middot;<em>d<sub>s</sub></em>.</p>
+For any integer <em>i</em><sub>1</sub>  not fixed by <em>x</em>, one and only one cycle must contain <em>i</em><sub>1</sub>.  Suppose that cycle is 
+<em>c<sub>j</sub></em> = (<em>i</em><sub>1</sub>, <em>i</em><sub>2</sub>, <em>i</em><sub>3</sub>, &hellip; <em>i<sub>q</sub></em>).  But by the way we constructed 
+the cycles above, this cycle must also be one of the <em>d<sub>k</sub></em>'s.  Thus, each cycle <em>c<sub>j</sub></em> is equal to 
+<em>d<sub>k</sub></em> for some <em>k</em>. By symmetry, each <em>d<sub>k</sub></em> is equal to <em>c<sub>j</sub></em> for some <em>j</em>. Thus, the two ways of 
+writing <em>x</em> in terms of nontrivial disjoint cycles are merely rearrangements of the cycles.<br><br>
+<p><a href="#lem61ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="lem62" id="lem62"></a>
+Proof of Lemma 6.2:<br><br></p>
+<p>We need to show that every element of <em>S<sub>n</sub></em> can be written as a product of transpositions.  The identity element can be written as <nobr>(1 2)(1 2),</nobr> so we let
+<em>x</em> be a permutation that is not the identity.  By Lemma 6.1, we can express <em>x</em> as a product of nontrivial disjoint cycles:</p>
+<p style='text-align: center;'><em>x</em> = (<em>i</em><sub>1</sub> <em>i</em><sub>2</sub> <em>i</em><sub>3</sub> &hellip; 
+<em>i<sub>r</sub></em>)&middot;(<em>j</em><sub>1</sub> <em>j</em><sub>2</sub> &hellip; <em>j<sub>s</sub></em>)&middot;(<em>k</em><sub>1</sub> <em>k</em><sub>2</sub> 
+&hellip; <em>k<sub>t</sub></em>)&middot;&hellip;.</p>
+Now, consider the product of transpositions
+<p style='text-align: center;'>(<em>i</em><sub>1</sub> <em>i</em><sub>2</sub>)&middot;(<em>i</em><sub>2</sub> 
+<em>i</em><sub>3</sub>)&middot; &#8943; &middot;(<em>i</em><sub><em>r</em>&minus;1</sub> <em>i<sub>r</sub></em>)&middot;(<em>j</em><sub>1</sub> 
+<em>j</em><sub>2</sub>)&middot;(<em>j</em><sub>2</sub> <em>j</em><sub>3</sub>)&middot; &#8943; &middot;(<em>j</em><sub><em>s</em>&minus;1</sub> 
+<em>j<sub>s</sub></em>)&middot;(<em>k</em><sub>1</sub> <em>k</em><sub>2</sub>)&middot; &#8943; &middot;(<em>k</em><sub><em>t</em>&minus;1</sub> <em>k<sub>t</sub></em>)&middot; &#8943; .</p>
+Note that this product is equal to <em>x</em>. (Recall that we are working from right to left.)  Therefore, we have expressed every element of <em>S<sub>n</sub></em>
+as a product of transpositions.<br><br>
+<p><a href="#lem62ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="lem63" id="lem63"></a>
+Proof of Lemma 6.3:<br><br></p>
+<p>Since <em>S</em><sub>2</sub> only contains one transposition, (1 2), raising this to an odd power will not be the identity element, so the lemma is true for the case
+<em>n</em> = 2.  So by induction we can assume that the lemma is true for <em>S</em><sub><em>n</em>−1</sub>.  Suppose that there is an odd number of transpositions
+producing the identity in <em>S<sub>n</sub></em>.  Then we can find such a product that uses the fewest number of transpositions, say <em>k</em> transpositions,
+with <em>k</em> odd.  At least one transposition will
+involve moving <em>n</em>, since the lemma is true for <em>S</em><sub><em>n</em>−1</sub>.<br />
+Suppose that the <em>m</em><sup>th</sup> transposition is the last one that
+moves <em>n</em>.  If <em>m</em> = 1, then only the first transposition moves <em>n</em>, so the product will also move <em>n</em>, so the product cannot be the identity.  We
+will now use induction on <em>m</em>.  That is,
+we will assume that no product of <em>k</em> transpositions can be the identity for a smaller <em>m</em>.   But then the (<em>m</em> − 1)<sup>st</sup>
+and <em>m</em><sup>th</sup> transpositions are one of the four possibilities</p>
+<p style='text-align: center;'>(<em>n</em> <em>x</em>)(<em>n</em> <em>x</em>), (<em>n</em> <em>x</em>)(<em>n</em> <em>y</em>), 
+(<em>x</em> <em>y</em>)(<em>n</em> <em>x</em>), or (<em>y</em> <em>x</em>)(<em>n</em> <em>x</em>)</p>
+for some <em>x</em>, <em>y</em>, and <em>z</em>.  In the first case, the two transpositions cancel, so we can form a product using a fewer number of transpositions.  In 
+the other three cases, we can replace the pair with another pair,
+<p style='text-align: center;'>(<em>n</em> <em>x</em>)(<em>n</em> <em>y</em>) = (<em>n</em> <em>y</em>)(<em>x</em> <em>y</em>);&emsp; 
+(<em>x</em> <em>y</em>)(<em>n</em> <em>x</em>) = (<em>n</em> <em>y</em>)(<em>x</em> <em>y</em>);&emsp;
+(<em>y</em> <em>z</em>)(<em>n</em> <em>x</em>) = (<em>n</em> <em>x</em>)(<em>y</em> <em>z</em>);</p>
+for which <em>m</em> is smaller.  Thus, there is no odd product of transpositions in <em>S<sub>n</sub></em> equaling the identity.<br><br>
+<p><a href="#lem63ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="theor61" id="theor61"></a>
+Proof of Theorem 6.1:<br><br></p>
+<p>By Lemma 6.2, every element of <em>S<sub>n</sub></em> can be written as a product of transpositions, so <em>σ</em>(<em>x</em>) is well defined.  Obviously this
+maps <em>S<sub>n</sub></em> to {−1, 1}, so we only need to establish that this is a homomorphism.  Suppose that</p>
+<p style='text-align: center;'><em>&sigma;</em>(<em>x</em>&middot;<em>y</em>) &ne; <em>&sigma;</em>(<em>x</em>)&middot;<em>&sigma;</em>(<em>y</em>).</p> 
+Then <em>N</em>(<em>x</em>&middot;<em>y</em>) &minus; (<em>N</em>(<em>x</em>) + <em>N</em>(<em>y</em>)) would be an odd number.  Since 
+<em>N</em>(<em>x</em><sup>-1</sup>) = <em>N</em>(<em>x</em>), we would also have <em>N</em>(<em>x</em>&middot;<em>y</em>) + (<em>N</em>(<em>y</em><sup>-1</sup>) + 
+<em>N</em>(<em>x</em><sup>-1</sup>))
+being an odd number. But then we would have three sets of transpositions, totaling an odd number, which when strung together produce 
+<em>x</em>&middot;<em>y</em>&middot;<em>y</em><sup>-1</sup>&middot;<em>x</em><sup>-1</sup> = ( ).  This contradicts Lemma 6.3, so in fact 
+<em>&sigma;</em>(<em>x</em>&middot;<em>y</em>) = <em>&sigma;</em>(<em>x</em>)&middot;<em>&sigma;</em>(<em>y</em>) for all <em>x</em> and <em>y</em> in 
+<em>S<sub>n</sub></em>.<br><br>
+<p><a href="#theor61ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="cor61" id="cor61"></a>
+Proof of Corollary 6.1:<br><br></p>
+<p>Clearly, <em>A<sub>n</sub></em> is a normal subgroup of <em>S<sub>n</sub></em>, since <em>A<sub>n</sub></em> is the kernel of the signature homomorphism.<br />
+Also if <em>n</em> &gt; 1, then <em>S<sub>n</sub></em> contains at least one transposition whose signature would be −1. Thus, the image of the
+homomorphism is {1, −1}.  This group is isomorphic to <em>Z</em><sub>2</sub>. Then by the first isomorphism theorem (5.1),
+<em>S<sub>n</sub></em>/<em>A<sub>n</sub></em> is isomorphic to <em>Z</em><sub>2</sub>.<br><br></p>
+<p><a href="#cor61ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="prop61" id="prop61"></a>
+Proof of Proposition 6.1:<br><br></p>
+<p>Since every 3-cycle is a product of two transpositions, every 3-cycle is in <em>A<sub>n</sub></em>. Thus, it is sufficient to show that every element
+in <em>A<sub>n</sub></em> can be expressed in terms of 3-cycles.  We have already seen that any element can be expressed as a product of an even number of
+transpositions. Suppose we group these in pairs as follows:</p>
+<p style='text-align: center;'><em>x</em> = [(<em>i</em><sub>1</sub>&ensp;<em>j</em><sub>1</sub>)&middot;(<em>k</em><sub>1</sub>&ensp;<em>l</em><sub>1</sub>)] &middot; 
+                                            [(<em>i</em><sub>2</sub>&ensp;<em>j</em><sub>2</sub>)&middot;(<em>k</em><sub>2</sub>&ensp;<em>l</em><sub>2</sub>)] &middot;
+                          &hellip; &middot; [(<em>i<sub>r</sub></em>&ensp;<em>j<sub>r</sub></em>)&middot;(<em>k<sub>r</sub></em>&ensp;<em>l<sub>r</sub></em>)].</p>
+If we could convert each pair of transpositions into 3-cycles, we would have the permutation <em>x</em> expressed as a product of 3-cycles. 
+There are three cases to consider:<br><br>
+<p>Case 1: The integers <em>i<sub>m</sub></em>, <em>j<sub>m</sub></em>, <em>k<sub>m</sub></em>, and <em>l<sub>m</sub></em> are all distinct. In this case,</p>
+<p style='text-align: center;'>(<em>i<sub>m</sub></em>&ensp;<em>j<sub>m</sub></em>)&middot;(<em>k<sub>m</sub></em>&ensp;<em>l<sub>m</sub></em>) = 
+(<em>i<sub>m</sub></em>&ensp;<em>k<sub>m</sub></em>&ensp;<em>l<sub>m</sub></em>)&middot;(<em>i<sub>m</sub></em>&ensp;<em>j<sub>m</sub></em>&ensp;<em>l<sub>m</sub></em>).</p>
+<br>
+Case 2: Three of the four integers  <em>i<sub>m</sub></em>, <em>j<sub>m</sub></em>, <em>k<sub>m</sub></em>, and <em>l<sub>m</sub></em> are distinct. The four 
+combinations that would produce this situation are
+<p style='text-align: center;'><em>i<sub>m</sub></em> = <em>k<sub>m</sub></em>,&emsp;<em>i<sub>m</sub></em> = <em>l<sub>m</sub></em>,&emsp;<em>j<sub>m</sub></em> = 
+<em>k<sub>m</sub></em>,&emsp;or <em>j<sub>m</sub></em> = <em>l<sub>m</sub></em></p>
+However, these four possibilities are essentially the same, so we only have to check one of these four combinations: <em>i<sub>m</sub></em> = <em>k<sub>m</sub></em>. 
+Then we have
+<p style='text-align: center;'>(<em>i<sub>m</sub></em>&ensp;<em>j<sub>m</sub></em>)&middot;(<em>i<sub>m</sub></em>&ensp;<em>l<sub>m</sub></em>) = 
+(<em>i<sub>m</sub></em>&ensp;<em>l<sub>m</sub></em>&ensp;<em>j<sub>m</sub></em>).</p>
+<br>
+Case 3: Only two of the four integers <em>i<sub>m</sub></em>, <em>j<sub>m</sub></em>, <em>k<sub>m</sub></em>, and <em>l<sub>m</sub></em> are distinct. 
+Then we must either have <em>i<sub>m</sub></em> = <em>k<sub>m</sub></em> and <em>j<sub>m</sub></em> = <em>l<sub>m</sub></em>, or 
+<em>i<sub>m</sub></em> = <em>l<sub>m</sub></em> and <em>j<sub>m</sub></em> = <em>k<sub>m</sub></em>.  In either case, we have
+<p style='text-align: center;'>(<em>i<sub>m</sub></em>&ensp;<em>j<sub>m</sub></em>)&middot;(<em>k<sub>m</sub></em>&ensp;<em>l<sub>m</sub></em>) = 
+( ) = (1 2 3)&middot;(1 3 2).</p>
+In all three cases, we were able to express a pair of transpositions in terms of a product of one or two 3-cycles.  Therefore, the permutation <em>x</em> can be 
+written as a product of 3-cycles.<br><br>
+<p><a href="#prop61ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="theor62" id="theor62"></a>
+Proof of Theorem 6.2:<br><br></p>
+<p>Let <em>G</em> be a group of order <em>n</em>. For each <em>g</em> in <em>G</em>, define the mapping</p>
+<p style='text-align: center;'><em>p<sub>g</sub></em> : <em>G</em> &rarr; <em>G</em>&emsp;by&emsp;<em>p<sub>g</sub></em>(<em>x</em>) = <em>g</em>&middot;<em>x</em>.</p>
+For a given <em>g</em>, if <em>p<sub>g</sub></em>(<em>x</em>) = <em>p<sub>g</sub></em>(<em>y</em>), then <em>g</em>&middot;<em>x</em> = <em>g</em>&middot;<em>y</em>, 
+so <em>x</em> = <em>y</em>. Hence, <em>p<sub>g</sub></em> is a one-to-one mapping.  Since <em>G</em> is a finite group, we can use to pigeonhole principle to show that
+<em>p<sub>g</sub></em> is also onto, and hence is a permutation of the elements of <em>G</em>.<br><br>
+<p>We now can consider the mapping <em>ϕ</em> from <em>G</em> to the symmetric group <em>S</em><sub>|<em>G</em>|</sub> on the elements of <em>G</em>, given by</p>
+<p style='text-align: center;'><em>&#981;</em>(<em>g</em>) = <em>p<sub>g</sub></em>.</p>
+Now, consider two elements <em>&#981;</em>(<em>g</em>) and <em>&#981;</em>(<em>h</em>).  The product of these is the mapping
+<p style='text-align: center;'><em>x</em> &rarr; (<em>p<sub>g</sub></em>&middot;<em>p<sub>h</sub></em>)(<em>x</em>) = <em>p<sub>g</sub></em>(<em>p<sub>h</sub></em>(<em>x</em>)) = <em>p<sub>g</sub></em>(<em>h</em>&middot;<em>x</em>) = 
+<em>g</em>&middot;(<em>h</em>&middot;<em>x</em>) = (<em>g</em>&middot;<em>h</em>)&middot;<em>x</em>.</p>
+Since this is the same as <em>&#981;</em>(<em>g</em>&middot;<em>h</em>), <em>&#981;</em> is a homomorphism.<br><br>
+<p>The element <em>g</em> will be in the kernel of the homomorphism <em>ϕ</em> only if <em>p<sub>g</sub></em>(<em>x</em>) is the identity permutation.<br />
+This means that <em>g</em>·<em>x</em> = <em>x</em> for all elements <em>x</em> in <em>G</em>.  Thus, the kernel consists just of the identity element
+of <em>G</em>, and hence <em>ϕ</em> is an isomorphism.  Therefore, <em>G</em> is isomorphic to a subgroup of <em>S</em><sub>|<em>G</em>|</sub>.<br><br></p>
+<p><a href="#theor62ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="theor63" id="theor63"></a>
+Proof of Theorem 6.3:<br><br></p>
+<p>Let <em>Q</em> be the set of left cosets <em>G</em>/<em>H</em>.  For each <em>g</em> in <em>G</em>, define the mapping</p>
+<p style='text-align: center;'><em>p<sub>g</sub></em> : <em>Q</em> &rarr; <em>Q</em>&emsp;by&emsp; <em>p<sub>g</sub></em>(<em>x H</em>) = <em>g</em>&middot;<em>x H</em>.</p>
+Note that this is well defined, since if <em>x H</em> = <em>y H</em>, then <em>g</em>&middot;<em>x H</em> = <em>g</em>&middot;<em>y H</em>.<br><br>
+<p>For a given <em>g</em>, if <em>p<sub>g</sub></em>(<em>x H</em>) = <em>p<sub>g</sub></em>(<em>y H</em>), then <em>g</em>·<em>x H</em> = <em>g</em>·<em>y H</em>,
+so <em>x H</em> = <em>y H</em>.  Hence, <em>p<sub>g</sub></em> is a one-to-one mapping.  Since <em>Q</em> is a finite set, by the
+pigeonhole principle, <em>p<sub>g</sub></em> must also be onto, and hence is a permutation of the elements of <em>Q</em>.<br><br></p>
+<p>We now can consider the mapping <em>ϕ</em> from <em>G</em> to the symmetric group <em>S</em><sub>|<em>Q</em>|</sub> on the elements of <em>Q</em>, given by</p>
+<p style='text-align: center;'><em>&#981;</em>(<em>g</em>) = <em>p<sub>g</sub></em>.</p>
+Now, consider two elements <em>&#981;</em>(<em>g</em>) and <em>&#981;</em>(<em>h</em>).  The product of these is the mapping
+<p style='text-align: center;'><em>x H</em> &rarr; (<em>p<sub>g</sub></em>&middot;<em>p<sub>h</sub></em>)(<em>x H</em>) = 
+<em>p<sub>g</sub></em>(<em>p<sub>h</sub></em>(<em>x H</em>)) = <em>p<sub>g</sub></em>(<em>h</em>&middot;<em>x H</em>) = 
+<em>g</em>&middot;(<em>h</em>&middot;<em>x H</em>) = (<em>g</em>&middot;<em>h</em>)&middot;<em>x H</em>.</p>
+Since this is the same as <em>&#981;</em>(<em>g</em>&middot;<em>h</em>), <em>&#981;</em> is a homomorphism.<br><br>
+<p>Finally, we must show that the kernel of <em>ϕ</em> is a subgroup of <em>H</em>. The element <em>g</em> will be in the kernel of the homomorphism <em>ϕ</em>
+only if <em>p<sub>g</sub></em>(<em>x H</em>) is the identity permutation.  This means that <em>g</em>·<em>x H</em> = <em>x H</em>
+for all right cosets <em>x H</em> in <em>Q</em>.  In particular, the left coset <em>e</em>·<em>H</em> = <em>H</em> is in <em>Q</em>, so
+<em>g</em>·<em>H</em> = <em>H</em>.  This can only happen if <em>g</em> is in <em>H</em>.  Thus, the kernel is a subgroup of <em>H</em>.  We have found a
+homomorphism <em>ϕ</em> from the group <em>G</em> to the group <em>S</em><sub>|<em>Q</em>|</sub>, whose kernel is a subgroup of <em>H</em>.<br><br></p>
+<p><a href="#theor63ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="cor62" id="cor62"></a>
+Proof of Corollary 6.2:<br><br></p>
+<p>By the generized Cayley’s theorem (6.3), there is a homomorphism <em>ϕ</em> from <em>G</em> to <em>S<sub>k</sub></em>, where <em>k</em> = |<em>G</em>|/|<em>H</em>|. Furthermore, the
+kernel is a subgroup of <em>H</em>.  If we let <em>N</em> be the kernel, and let <em>I</em> be the image of the homomorphism, we have by the first isomorphism
+theorem (5.1) that</p>
+<p style='text-align: center;'><em>G</em>/<em>N</em> &asymp; <em>I</em>.</p>
+In particular, |<em>G</em>|/|<em>N</em>| = |<em>I</em>|, and |<em>I</em>| is a factor 
+of |<em>S<sub>k</sub></em>| = <em>k</em>!.  This means that |<em>G</em>| is a factor of <em>k</em>!&middot; |<em>N</em>|.<br><br>
+<p><a href="#cor62ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="sec6p" id="sec6p"></a></p>
+<h1><em>SageMath</em> Interactive Problems</h1>
+<br>
+For Problems 17 through 20: Determine how the following permutations can be expressed in terms of the book 
+rearrangements <strong>First</strong>, <strong>Last</strong>, <strong>Left</strong>, <strong>Right</strong>, and <strong>Rev</strong>.<br>
+<br>
+&sect;6.1 #17)<br>
+<table align="center" width="160" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right" valign="bottom">&#9115;</td>
+    <td align="center">1</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="left" valign="bottom">&#9118;</td>
+  </tr>
+  <tr>
+    <td align="right" valign="top">&#9117;</td>
+    <td align="center">1</td>
+    <td align="center">3</td>
+    <td align="center">2</td>
+    <td align="center">4</td>
+    <td align="left" valign="top">&#9120;</td>
+  </tr>
+</table><br>
+&sect;6.1 #18)<br>
+<table align="center" width="160" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right" valign="bottom">&#9115;</td>
+    <td align="center">1</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="left" valign="bottom">&#9118;</td>
+  </tr>
+  <tr>
+    <td align="right" valign="top">&#9117;</td>
+    <td align="center">4</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">1</td>
+    <td align="left" valign="top">&#9120;</td>
+  </tr>
+</table><br>
+&sect;6.1 #19)<br>
+<table align="center" width="160" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right" valign="bottom">&#9115;</td>
+    <td align="center">1</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="left" valign="bottom">&#9118;</td>
+  </tr>
+  <tr>
+    <td align="right" valign="top">&#9117;</td>
+    <td align="center">3</td>
+    <td align="center">1</td>
+    <td align="center">4</td>
+    <td align="center">2</td>
+    <td align="left" valign="top">&#9120;</td>
+  </tr>
+</table><br>
+&sect;6.1 #20)<br>
+<table align="center" width="160" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right" valign="bottom">&#9115;</td>
+    <td align="center">1</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="left" valign="bottom">&#9118;</td>
+  </tr>
+  <tr>
+    <td align="right" valign="top">&#9117;</td>
+    <td align="center">2</td>
+    <td align="center">4</td>
+    <td align="center">1</td>
+    <td align="center">3</td>
+    <td align="left" valign="top">&#9120;</td>
+  </tr>
+</table><br>
+&sect;6.2 #18)<br> 
+Use <em>SageMath</em> to find a pair of 3-cycles whose product is a 3-cycle. Can there be a product of two 4-cycles that yields a 4-cycle?<br><br>
+&sect;6.2 #19)<br>
+The <em>cycle structure</em> of a permutation is the number of 2-cycles, 3-cycles, etc. it contains when written as a product of disjoint cycles.  For example, (1 2 3)(4 5) and (3 4 5)(1 2) have the same cycle structure.  Consider the elements<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">C</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span> <span class="n">a</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">C</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">);</span> <span class="n">b</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+<p>Predict the cycle structure of <em>a</em><sup>2</sup>, <em>a</em><sup>3</sup>, <em>b</em><sup>2</sup>, <em>b</em><sup>3</sup>, and <em>b</em><sup>6</sup>.  Check your answers with <em>SageMath</em>.<br></p>
+<br>
+&sect;6.2 #20)<br>
+Calculate <em>a</em>&middot;<em>b</em> from Problem 19.  Predict the cycle structure of (<em>a</em>&middot;<em>b</em>)<sup>2</sup>, 
+(<em>a</em>&middot;<em>b</em>)<sup>3</sup>, and (<em>a</em>&middot;<em>b</em>)<sup>4</sup>, and verify your predictions with <em>SageMath</em>.<br><br>
+&sect;6.2 #21)<br>
+Calculate <em>a</em>&middot;<em>b</em>&middot;<em>a</em><sup>-1</sup> from Problem 19.  Notice that it has the same cycle structure as <em>b</em>.  Try this with other 
+random permutations.  Does <em>a</em>&middot;<em>b</em>&middot;<em>a</em><sup>-1</sup> always have the same cycle structure as <em>b</em>?  How do Problems 16 and 17 
+explain what is happening?<br><br>
+&sect;6.3 #20)<br>
+Use Cayley's theorem (6.2) to find a subgroup of <em>S</em><sub>12</sub> that is isomorphic to <em>Z</em><sub>21</sub><sup>&ast;</sup>.<br><br>
+&sect;6.3 #21)<br> 
+Use Cayley's theorem (6.2) to find a subgroup of <em>S</em><sub>12</sub> that is isomorphic to the following group:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
+<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">4</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">Group</span><span class="p">();</span> <span class="n">G</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+&sect;6.3 #22)<br>
+Use the generalized Cayley's theorem (6.3) to find a subgroup of <em>S</em><sub>8</sub> that is isomorphic to the following group:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
+<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">8</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">^</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">Group</span><span class="p">();</span> <span class="n">G</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Hint: Find a subgroup of order 2 that is not normal.<br><br>
+&sect;6.4 #23)<br>
+Find the elements of <em>A</em><sub>4</sub> converted to the integer representation. Is there a pattern as to which positive integers correspond to the 
+even permutations, and which correspond to odd?  Does the pattern continue to <em>A</em><sub>5</sub>?<br><br>
+&sect;6.4 #24)<br>
+Use <em>SageMath</em> to find all elements of <em>S</em><sub>7</sub> whose square is P(3,5,1,7,6,2,4).<br>
+(Hint: Use a &quot;for&quot; loop to test all of the elements of <em>S</em><sub>7</sub>):<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5041</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">NthPerm</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span> <span class="o">==</span> <span class="n">P</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">NthPerm</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+&sect;6.4 #25)<br>
+Use <em>SageMath</em> to find all elements of <em>S</em><sub>6</sub> whose cube is P(3,5,6,1,2,4). (See the hint for Problem 24.)<br></font>
+</body>
+</html>
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "sagemath"
+        },
+        kernelOptions: {
+            name: "sagemath",
+            path: "./23permutation-puzzle-GroupTheory"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'sagemath'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jonny, assisted by Tom
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

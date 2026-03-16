@@ -1,0 +1,2417 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>&lt;no title&gt; &#8212; Jonny Workbook</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=550f00eb" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=1ae7504c"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '23permutation-puzzle-GroupTheory/ring10';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Jonny Workbook</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Math &amp; FP/Language</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../past/Alevel_math.html">A-level-math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../past/Alevel_math_further.html">A-level-further</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../past/Course_MCM.html">Math Computational Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Course_Lean.html">Lean</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Course_Puzzle_Group.html">Permutation Puzzles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Course_5U.html">5U - Ext III</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">CS &amp; Physics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../past/Course_MIT6001Python.html">MIT_CS6001-Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../past/Course_MIT6002thinking.html">MIT_CS6002-CS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PE100.html">Project Euler Q1-100</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../past/Course_MCM_QM.html">Quantum Mechanics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Notebook &amp; Tom</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../past/nb_past_courses.html">Past courses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../past/nb_Geo.html">Geography and Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../past/nb_lottery_simulator.html">Lottery Math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../past/How_Dad_organise_QM.html">How Dad learn QM</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../Course_MCM_QFT.html">QFT</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/tomctang/jonny" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/23permutation-puzzle-GroupTheory/ring10.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <!-- Ring10 -->
+<html>
+<body>
+<!-- To make the size of the font bigger for presentations, change the following command from +1 to +2 -->
+<font size="+1">
+<p style='font-size: 36px;font-family: Arial;font-style: italic;font-weight: bold;color: #FF00FF;background-color: #80FFFF;text-align: center;'>
+Abstract Algebra: An Interactive Approach, 3e
+</p>
+<p style='font-family: Geneva;font-style: italic;color: #0000FF;background-color: #FFFFFF;'>
+&copy;2025 This notebook is provided with the textbook, &quot;Abstract Algebra: An Interactive Approach, 3rd Ed.&quot; by William Paulsen. Users of this notebook are encouraged to buy the textbook.
+</p>
+<p style='font-size: 36px;font-family: New York;font-weight: bold;color: #000000;background-color: #FFFFFF;text-align: center;border: 1px;border-style: 
+solid;border-color: #000000;'>
+Chapter 10 : The Structure Within Rings
+</p>
+<p style='text-align: center;'>Initialization:  This cell MUST be evaluated first:</p><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;absalgtext2.sage&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+<a href="#sec101">Subrings</a><br>
+<a href="#sec102">Quotient Rings and Ideals</a><br>
+<a href="#sec103">Ring Isomorphisms</a><br>
+<a href="#sec104">Homomorphisms and Kernels</a><br>
+<a href="#sec10p"><em>SageMath</em> Interactive Problems</a><br><p><a name="sec101" id="sec101"></a></p>
+<h1>Subrings</h1>
+<br>
+In the last chapter we introduced rings, and used <em>SageMath</em> to define several examples of rings. It is natural to ask whether we can have smaller rings 
+within a larger ring, just as we saw smaller groups inside of a larger group. So the natural definition would be as follows:<br><br>
+<p>DEFINITION 10.1<br>
+Let <em>R</em> be a ring. A non-empty subset <em>S</em> is a <em>subring</em> if <em>S</em> is a ring with respect to the addition (+) and multiplication
+(·) of <em>R</em>.<br><br></p>
+<p>We have already seen some examples of subrings.  For example, the set of even integers is a ring contained in the ring of integers, which is contained in the ring of rational numbers, which in turn is contained in the ring of real numbers.<br><br></p>
+<p>It is clear that in testing to see if a subset of <em>R</em> is a ring, we do not need to check all 9 of the ring properties, since many of these properties will
+be “inherited” from the ring <em>R</em>. The next proposition shows us a quick way to check if a subset is indeed a subring.</p>
+<p><a name="prop101ret" id="prop101ret"></a>
+PROPOSITION 10.1<br></p>
+<p>A non-empty subset <em>S</em> is a subring of a ring <em>R</em> if, and only if, whenever <em>x</em> and <em>y</em> are
+in <em>S</em>, <em>x</em> − <em>y</em> and <em>x</em>·<em>y</em> are in <em>S</em>.<br><br></p>
+<p><a href="#prop101">Click here for the proof.</a></p>
+<p />
+Notice that from the definition every nontrivial ring <em>R</em> will contain at least two subrings: the trivial ring {0} will be a subring, as well as the entire ring 
+<em>R</em>. These two subrings are called the <em>trivial subrings</em>.<br><br>
+<p>EXAMPLE:<br>
+Consider the subset of real numbers of the form</p>
+<p style='text-align: center;'><em>S</em> = {<em>x</em> + <em>y</em> &radic;<font style="text-decoration:overline">2</font> | <em>x</em>, <em>y</em> &isin; &#8484;},</p>
+Determine whether or not this is a subring of &#8477;.<br><br>
+<p>Two typical elements are <em>a</em> = <em>x</em><sub>1</sub> + <em>y</em><sub>1</sub> √<font style="text-decoration:overline">2</font> and <em>b</em> =
+<em>x</em><sub>2</sub> + <em>y</em><sub>2</sub> √<font style="text-decoration:overline">2</font>.  Then</p>
+<p style='text-align: center;'><em>a</em> &minus; <em>b</em> = (<em>x</em><sub>1</sub> &minus; <em>x</em><sub>2</sub>) + 
+(<em>y</em><sub>1</sub> &minus; <em>y</em><sub>2</sub>) &radic;<font style="text-decoration:overline">2</font>, and</p>
+<p style='text-align: center;'><em>a</em>&middot;<em>b</em> = (<em>x</em><sub>1</sub> <em>x</em><sub>2</sub> + 2 <em>y</em><sub>1</sub> <em>y</em><sub>2</sub>) + 
+(<em>x</em><sub>1</sub> <em>y</em><sub>2</sub> + <em>x</em><sub>2</sub> <em>y</em><sub>1</sub>) &radic;<font style="text-decoration:overline">2</font>.</p>
+Since all expressions in parenthesis are integers, these are in <em>S</em>.  Thus, by Proposition 10.1, <em></em>S is a subring of &#8477;.<br><br>
+<p>Let us look at an example where we find other subrings. Here is the first ring of order 8 that we defined in §9.2:<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitRing</span><span class="p">()</span>
+<span class="n">AddRingVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="n">R</span> <span class="o">=</span> <span class="n">Ring</span><span class="p">();</span> <span class="n">R</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Recall that this ring has an identity element, namely<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">FindUnity</span><span class="p">(</span><span class="n">R</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Can we find a subring of <em>R</em>? Suppose we considered only the elements which did not involve <em>b</em>:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="mi">3</span><span class="o">*</span><span class="n">a</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Does this form a subring? We can look at the multiplication tables for <em>S</em><br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddTable</span><span class="p">(</span><span class="n">S</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MultTable</span><span class="p">(</span><span class="n">S</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+and see that <em>S</em> is closed with respect to multiplication and addition.  Furthermore, additive inverses exist for all elements, so <em>S</em> is also closed with respect to subtraction. Thus, by Proposition 10.1, this is a subring.<br><br>
+<p>One might wonder why we used <strong>0*a</strong> instead of just <strong>0</strong> as we listed the elements of <em>S</em>.  Although the additive identity of the ring is always <em>displayed</em> as 0, if we enter just <strong>0</strong>, <em>SageMath</em> will interpret this to mean the <em>integer</em> 0, not the zero element of the ring.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span> <span class="ow">in</span> <span class="n">R</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The work-around is to multiply any of the generators by 0 to get the zero element of the ring.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span><span class="o">*</span><span class="n">a</span> <span class="ow">in</span> <span class="n">R</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice that this subring does not include the multiplicative identity of <em>R</em>. Does that mean that this subring is without an identity?<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">FindUnity</span><span class="p">(</span><span class="n">S</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+In fact, the subring <em>S</em> does have a unity, but it is different than the unity of <em>R</em>! In general the existence of a unity of a subring is totally independent 
+of the unity of <em>R</em>. A ring without unity may have a subring with unity, or vice-versa. This is the main reason why the existence of a multiplicative identity is 
+not required in the definition of a ring.<br><br>
+<p>EXPERIMENT:<br>
+Try to find all of the subrings of <em>R</em>, using the <strong>AddTable</strong> and <strong>MultTable</strong> commands. For example, the set<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+is not a subring by looking at the tables<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddTable</span><span class="p">(</span><span class="n">S</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+and<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MultTable</span><span class="p">(</span><span class="n">S</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+and seeing the black squares in one of the tables. How many ways can you pick a set <em>S</em> so that the black squares aren't there?<br><br>
+<p>Hint: The additive group for this ring is <em>Z</em><sub>15</sub><sup>*</sup>. How many subgroups of <em>Z</em><sub>15</sub><sup>*</sup> are there?<br></p>
+<br>
+In the case of groups, the intersection of a number of subgroups was again a subgroup.  This last experiment suggested a close tie between subgroups and subrings, so it 
+is natural to ask whether an intersection of a number of subrings is another subring.  This quickly leads to the next proposition.<p><a name="prop102ret" id="prop102ret"></a>
+PROPOSITION 10.2<br></p>
+<p>Given any non-empty collection of subrings of the group <em>R</em>, denoted by <em>L</em>, then the intersection of all of the subrings in the collection
+<br><br></p>
+<table align="center" width="160" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><em>H</em><sup>&ast;</sup> = </td>
+    <td align="center"><font face="Times New Roman, Times, serif" size="+4">&cap;</font></td>
+    <td align="left"><em>H</em>&ensp;&ensp;&ensp;</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td align="center" valign="top"><em>H</em> &isin; <em>L</em></td>
+    <td></td>
+  </tr>
+</table>
+<p>is a subring of <em>R</em>.<br><br></p>
+<p><a href="#prop102">Click here for the proof.</a></p>
+<p />
+As with subgroups, we now have a general method of producing subrings of a ring <em>R</em>. Let <em>S</em> be any subset of <em>R</em>. We can consider the 
+collection <em>L</em> of all subrings of <em>R</em> that contain the set <em>S</em>. This collection is non-empty since it contains the subring <em>R</em> itself. 
+So by Proposition 10.2,
+<br><br>
+<table align="center" width="160" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right">[<em>S</em>] = </td>
+    <td align="center"><font face="Times New Roman, Times, serif" size="+4">&cap;</font></td>
+    <td align="left"><em>H</em>&ensp;&ensp;&ensp;</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td align="center" valign="top"><em>H</em> &isin; <em>L</em></td>
+    <td></td>
+  </tr>
+</table>
+<br>
+is a subring of <em>R</em>. By the way that the collection was defined, [<em>S</em>] contains <em>S</em>.<br><br>
+<p>Actually, [<em>S</em>] is the <em>smallest</em> subring of <em>R</em> containing the subset <em>S</em>. For if <em>H</em> is a subring of <em>R</em> which contains
+<em>S</em>, then <em>H</em> ∈ <em>L</em>, so that [<em>S</em>] ⊆ <em>H</em>.<br><br></p>
+<p>DEFINITION 10.2<br>
+We call [<em>S</em>] the subring of <em>R</em> <em>generated</em> by the set <em>S</em>.<br><br></p>
+<p>Just as in the case for the <strong>Group</strong> command, the <em>SageMath</em> command <strong>Ring</strong> finds [<em>S</em>] for any set <em>S</em>. Thus, we can find
+the subring generated by <em>S</em> with the command<br><br></p>
+<p><strong>Ring(S)</strong><br><br></p>
+<p>provided that the ring <em>R</em> has already been entered.<br><br></p>
+<p>For example, let us use this command to find all of the subrings of the non-commutative ring of order 8.<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitRing</span><span class="p">()</span>
+<span class="n">AddRingVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">R</span> <span class="o">=</span> <span class="n">Ring</span><span class="p">();</span> <span class="n">R</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Let us first try to find rings generated by only one element. Of course we would have the trivial ring<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Ring</span><span class="p">(</span><span class="mi">0</span><span class="o">*</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+but let us look at the other 7 elements. The ring generated by the next element<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Ring</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+contains 4 elements, while the ring generated by 2<em>a</em><br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Ring</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+contains only two. <br><br>
+<p>EXPERIMENT:<br>
+By going though the remaining 5 elements, determine how many subrings can be generated by just one element.<br></p>
+<br>
+Can there be any subrings which require two generators? Since the additive structure of a subring is a subgroup of the additive structure of the original ring, 
+Lagrange's theorem holds for rings as well as groups. Thus, any subring of a group of order 8 must be of order 1,2,4, or 8. The experiment has obviously found 
+all subrings of order 2. The only other nontrivial subrings would be of order 4. Such a subring could not contain any element which generated a ring of order 4. 
+Thus, the only elements such a subring could contain would be 0, 2a, b, and 2a+b. Let us check if these four elements form a subring.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddTable</span><span class="p">(</span><span class="n">S</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MultTable</span><span class="p">(</span><span class="n">S</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+So this gives us one more nontrivial subring, which gives a total of six nontrivial subrings.<br><br>
+<p>Let us turn our attention to finding the subrings of an infinite ring. Obviously, we will not be able to have <em>SageMath</em> produce multiplication tables, but we ought to
+be able to derive some subrings for some common infinite rings. The simplest such ring is the ring of integers, ℤ. The subring generated by a positive number
+<em>n</em> would be the set of all multiples of <em>n</em>.  This is indeed a subring, since the difference and the product of two multiplies of <em>n</em> yields a
+multiple of <em>n</em>.  What is interesting is that <em>all</em> subrings of ℤ are produced this way.</p>
+<p><a name="prop103ret" id="prop103ret"></a>
+PROPOSTION 10.3<br></p>
+<p>A subring of the ring of integers ℤ consists of all multiples of some non-negative number <em>n</em>. This subring is denoted <em>n</em> ℤ.<br><br></p>
+<p><a href="#prop103">Click here for the proof.</a></p>
+<p />
+Although the subrings of &#8484; are easily classified, this is not the case with the ring of real numbers. The first example, the set <em>S</em> of all numbers of the 
+form <em>x</em> + <em>y</em> &radic;<font style="text-decoration:overline">2</font>, gives just one of countless subrings of &#8477;.  We could have <em>SageMath</em> do the computations for us.  Note that<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s1">&#39;x1 x2 y1 y2&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">x1</span> <span class="o">+</span> <span class="n">y1</span><span class="o">*</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span><span class="o">*</span><span class="p">(</span><span class="n">x2</span> <span class="o">+</span> <span class="n">y2</span><span class="o">*</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expand</span><span class="p">(</span><span class="n">_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+produces a number of the correct form. Since <em>S</em> is obviously closed with respect to subtraction, <em>S</em> is a subring 
+of &#8477;.<br><br>
+<p>We can actually define this ring in <em>SageMath</em>.  If we let <em>e</em> represent 1, and <em>a</em>
+represent √<font style="text-decoration:overline">2</font>.  These two elements are both of infinite additive order.  If we do not specify the additive order of an element, <em>SageMath</em> will assume the order is infinite.  Then <em>a</em><sup>2</sup> = 2<em>e</em>, so the ring can be entered by the commands<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitRing</span><span class="p">()</span>
+<span class="n">AddRingVar</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">,</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">e</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">e</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">e</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">e</span><span class="p">)</span>
+<span class="n">Ring</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Of course we cannot list the elements because there are an infinite number of them.  Nonetheless, we can perform some of the operations on this ring.
+<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">e</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">e</span> <span class="o">-</span> <span class="mi">3</span><span class="o">*</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+This last statement demonstrates that
+<p style='text-align: center;'>(1 + 2&radic;<font style="text-decoration:overline">2</font>)&middot;(4 &minus; 
+3&radic;<font style="text-decoration:overline">2</font>) = &minus;8 + 5&radic;<font style="text-decoration:overline">2</font>.</p>
+<p>EXPERIMENT:<br>
+Does the set of all numbers of the form <em>x</em> + <em>y</em> ∛<font style="text-decoration:overline">2</font>, where <em>x</em> and <em>y</em> are integers, form a subring of ℝ? If not, what is the subring
+generated by these numbers?  Use <strong>2^(1/3)</strong> for the cube root of 2.<br></p>
+<br>
+Clearly, the subrings of the real numbers can be much more complicated than the subrings of integers.<br><br>
+<p>A natural question to ask is whether we can produce quotient
+rings from these subrings the way we constructed quotient groups out of the normal subgroups. We will look into this in the next section.<br><br></p>
+<p><a name="sec102" id="sec102"></a></p>
+<h1>Quotient Rings and Ideals</h1>
+<br>
+When we studied group theory, one of the most important concepts we discovered was being able to form a quotient group out of the cosets of certain subgroups. 
+After some investigation we learned exactly which subgroups yielded such a quotient group: the normal subgroups. A natural question is whether it is possible to 
+form quotient rings out of the cosets of a subring.<br><br>
+<p>EXAMPLE:<br>
+Here is the non-commutative ring of order 8 from the last section.<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitRing</span><span class="p">()</span>
+<span class="n">AddRingVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">)</span>
+<span class="n">R</span> <span class="o">=</span> <span class="n">Ring</span><span class="p">();</span> <span class="n">R</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Can we form a quotient ring out of this ring, the way that we constructed a quotient group?<br><br>
+<p>We found this ring has six nontrivial subrings.<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S1</span> <span class="o">=</span> <span class="n">Ring</span><span class="p">(</span><span class="n">a</span><span class="p">);</span> <span class="n">S1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S2</span> <span class="o">=</span> <span class="n">Ring</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">);</span> <span class="n">S2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S3</span> <span class="o">=</span> <span class="n">Ring</span><span class="p">(</span><span class="n">b</span><span class="p">);</span> <span class="n">S3</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S4</span> <span class="o">=</span> <span class="n">Ring</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">);</span> <span class="n">S4</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S5</span> <span class="o">=</span> <span class="n">Ring</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">);</span> <span class="n">S5</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S6</span> <span class="o">=</span> <span class="n">Ring</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span> <span class="n">S6</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+If there is a quotient ring, what would the elements of this quotient be?  We would expect the additive structure of the quotient ring to be the additive quotient 
+group <em>R</em>/<em>S</em>.  Since addition is commutative, we know that this quotient group always exists.  We can use <em>SageMath</em> to find the cosets 
+of <em>S</em> under the operation of addition.  Since left and right cosets are the same when working with rings, we will simply use the 
+command <strong>Coset(R, S)</strong> for the list of cosets of the subgroup <em>S</em> of <em>R</em>.  For the subgroup <em>S</em><sub>1</sub>, here are the cosets:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Q</span> <span class="o">=</span> <span class="n">Coset</span><span class="p">(</span><span class="n">R</span><span class="p">,</span> <span class="n">S1</span><span class="p">);</span> <span class="n">Q</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+We can <em>add</em> two cosets together using the following definition:
+<p style='text-align: center;'><em>X</em> + <em>Y</em> = { <em>x</em> + <em>y</em>  | <em>x</em> &isin; <em>X</em>&ensp;and&ensp;<em>y</em> &isin; <em>Y</em>}.</p>
+This gives the quotient <em>Q</em> the natural addition. We can see the addition table for <em>Q</em> as follows:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddTable</span><span class="p">(</span><span class="n">Q</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Can we now multiply elements of <em>Q</em> to form a ring?  The natural way to define the product of two sets is the way we defined such a product for groups:
+<p style='text-align: center;'><em>X</em>&middot;<em>Y</em> = { <em>x</em>&middot;<em>y</em>  | <em>x</em> &isin; <em>X</em>&ensp;and&ensp;<em>y</em> &isin; <em>Y</em>}.</p>
+Will such a product of two cosets in <em>Q</em> yield another coset? Let's try it!<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MultTable</span><span class="p">(</span><span class="n">Q</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Hang on! Why are there black squares in the table! <em>SageMath</em> is trying to tell us that the product of two cosets is not always a coset.  If we first set up the two 
+cosets of <em>Q</em>,<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Q1</span> <span class="o">=</span> <span class="n">S1</span><span class="p">;</span> <span class="n">Q1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Q2</span> <span class="o">=</span> <span class="n">b</span> <span class="o">+</span> <span class="n">S1</span><span class="p">;</span> <span class="n">Q2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+we find, for example,<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Q2</span> <span class="o">*</span> <span class="n">Q1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+in indeed a coset, but the product<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Q1</span> <span class="o">*</span> <span class="n">Q2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+produced way too many elements!  What is going on? Since {0, <em>a</em>, 2<em>a</em>, 3<em>a</em>} is the zero element for <em>Q</em>, we would <em>expect</em> the 
+product to be {0, <em>a</em>, 2<em>a</em>, 3<em>a</em>}.  But we somehow got some extra elements. Where did they come from?<br><br>
+<p>EXPERIMENT:<br>
+The above product demonstrates that there are two elements of <em>S</em><sub>1</sub>, <em>x</em><sub>1</sub> and <em>x</em><sub>2</sub>, such that</p>
+<p style='text-align: center;'><em>x</em><sub>1</sub>&middot;(<em>b</em> + <em>x</em><sub>2</sub>)</p>
+is not in <em>S</em>.  Use <em>SageMath</em>, along with a little trial and error, to find two such elements. For example, to see whether 
+<em>x</em><sub>1</sub> = <em>x</em><sub>2</sub> = 0 works, enter<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x1</span> <span class="o">=</span> <span class="mi">0</span><span class="o">*</span><span class="n">a</span>
+<span class="n">x2</span> <span class="o">=</span> <span class="mi">0</span><span class="o">*</span><span class="n">a</span>
+<span class="n">x1</span><span class="o">*</span><span class="p">(</span><span class="n">b</span> <span class="o">+</span> <span class="n">x2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Change <strong>x1</strong> and <strong>x2</strong> so that the result is not in <em>S</em><sub>1</sub>.<br><br>
+Although it seems as though our attempt to define a quotient ring has failed miserably, we might want to study this example to understand <em>why</em> we failed to have 
+a quotient group.  Since the additive identity of the quotient group is the subring <em>S</em>, <em>S</em> times any other coset should give <em>S</em> again.  But that 
+means that subring <em>S</em> times any element of <em>R</em> would have to produce only elements in <em>S</em>.  But we have seen an example where this wasn't the 
+case, namely<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S1</span><span class="o">*</span><span class="p">(</span><span class="n">b</span> <span class="o">+</span> <span class="n">x2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Since the elements produced were not all in <em>S</em>, <em>S</em> did not act like the zero element in the product.<br><br>
+<p>But wait! What if we found a subring for which <em>S</em>·<em>x</em> always was a subset of <em>S</em> for every <em>x</em> in <em>R</em>? By a similar logic,
+we would also have to require that <em>x</em>·<em>S</em> be a subset of <em>S</em>.  A quick way to test this is to see if the
+products <em>S</em>·<em>R</em> and <em>R</em>·<em>S</em> are both subsets of <em>S</em>. Let us check the second subring of <em>R</em> that we found.<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S2</span> <span class="o">*</span> <span class="n">R</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">R</span> <span class="o">*</span> <span class="n">S2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+So far, so good.  This at least ensures that the additive identity {0, 2<em>a</em>} will behave properly for multiplication.  Let us use the multiplication table to see 
+if the product of any two cosets will again be a coset.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Q</span> <span class="o">=</span> <span class="n">Coset</span><span class="p">(</span><span class="n">R</span><span class="p">,</span> <span class="n">S2</span><span class="p">);</span> <span class="n">Q</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MultTable</span><span class="p">(</span><span class="n">Q</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+This looks pretty good&mdash;no black squares, so we have at least defined a multiplication for these cosets.  It is interesting that this multiplication table is 
+not commutative, even though all of the subrings of <em>R</em> were commutative.  So this quotient cannot be like any of the subrings of <em>R</em>.<br><br>
+<p>But look closely at this table.  Not every product yields a coset, sometimes it yields only a <em>subset</em> of a coset. For appearances, <em>SageMath</em> has colored such
+a subset according to the color of the coset. <br><br></p>
+<p>One way to rectify this slight blemish in our multiplication table is to add the identity coset to each entry in the table. That is, instead of defining the product of
+the cosets <em>X</em> and <em>Y</em> to be <em>X</em>·<em>Y</em>, we define the product of two cosets to be</p>
+<p style='text-align: center;'><em>X</em> &lowast; <em>Y</em> = <em>X</em>&middot;<em>Y</em> + <em>S</em>.</p>
+We can repair the multiplication table with the command<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">QuotientRing</span> <span class="o">=</span> <span class="n">true</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+A new multiplication table will now be constructed using this new definition of the product of two cosets.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MultTable</span><span class="p">(</span><span class="n">Q</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+This looks much better!  We still have not shown that this multiplication table obeys the laws of a ring, but we will get to that shortly.  First, let us see if any of 
+the other subrings of <em>R</em> could form a multiplication table.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Q</span> <span class="o">=</span> <span class="n">Coset</span><span class="p">(</span><span class="n">R</span><span class="p">,</span> <span class="n">S3</span><span class="p">);</span> <span class="n">Q</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MultTable</span><span class="p">(</span><span class="n">Q</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+This subring seemed to fail, but notice that the products<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S3</span> <span class="o">*</span> <span class="n">R</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">R</span> <span class="o">*</span> <span class="n">S3</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+are not both contained in <em>S</em><sub>3</sub>.<br><br>
+<p>EXPERIMENT:<br>
+Try forming the multiplication tables for the cosets of <em>S</em><sub>4</sub>, <em>S</em><sub>5</sub>, and <em>S</em><sub>6</sub>.  For which subrings do the cosets
+form multiplication tables?  For which subrings are <em>R</em>·<em>S</em> and <em>S</em>·<em>R</em> both contained in <em>S</em>?<br></p>
+<br>
+The pattern is apparent. Subrings of <em>R</em> for which <em>R</em>&middot;<em>S</em> and <em>S</em>&middot;<em>R</em> are both contained in <em>S</em> have a special 
+property, and hence we give such subrings a special name.  Rather then calling them &quot;normal subrings&quot; we will use the more traditional name.<br><br>
+<p>DEFINITION 10.3<br>
+A subring <em>I</em> of a ring <em>R</em> is called an <em>ideal</em> of <em>R</em> if both <em>I</em>·<em>R</em> and <em>R</em>·<em>I</em> are contained in
+the subring <em>I</em>.  That is, <em>a</em>·<em>x</em> and <em>x</em>·<em>a</em> are in <em>I</em> for all <em>a</em> ∈ <em>I</em>, and <em>x</em> ∈ <em>R</em>.<br><br></p>
+<p>We now are ready to prove that the cosets of an ideal ready do form a quotient ring.</p>
+<p><a name="prop104ret" id="prop104ret"></a>
+PROPOSITION 10.4<br></p>
+<p>Let <em>R</em> be a ring, and let <em>I</em> be an ideal of <em>R</em>. The the additive quotient group <em>R</em>/<em>I</em> forms a ring, with the product of two
+cosets <em>X</em> and <em>Y</em> being <em>X</em>∗<em>Y</em> = <em>X</em>·<em>Y</em> + <em>I</em>. This ring is called the <em>quotient ring</em>
+<em>R</em>/<em>I</em>.<br><br></p>
+<p><a href="#prop104">Click here for the proof.</a></p>
+<p />
+From the experiment, you should have discovered that three of the six nontrivial subrings were ideals. The two trivial subrings, {0} and <em>R</em> itself, will be ideals 
+for any ring. These two ideals are called the <em>trivial ideals</em>.<br><br>
+<p>Let us see if we can find ideals for other rings.<br><br></p>
+<p>EXAMPLE:<br>
+Find the ideals of the ring ℤ, and determine the quotient rings.<br><br></p>
+<p>By Proposition 10.3 that every subring of ℤ is of the form <em>n</em> ℤ for
+some non-negative <em>n</em>. If <em>S</em> = <em>n</em> ℤ, then since any multiple of <em>n</em> times any integer gives a multiple of <em>n</em>, we have
+<em>S</em>·ℤ = <em>S</em>, and ℤ·<em>S</em> = <em>S</em>. Thus, any subring of ℤ is an ideal of ℤ.<br><br></p>
+<p>What is the quotient ring ℤ/(<em>n</em> ℤ)? The cosets can all be expressed in the form <em>a</em> + <em>n</em> ℤ, where <em>a</em> = 0, 1,
+2, … <em>n</em> − 1. Addition and multiplication is easily described:</p>
+<p style='text-align: center;'>(<em>a</em> + <em>n</em> &#8484;) + (<em>b</em> + <em>n</em> &#8484;) = (<em>a</em> + <em>b</em> + <em>n</em> &#8484;) = 
+(<em>a</em> + <em>b</em>) <strong>mod</strong> <em>n</em> + <em>n</em> &#8484;,</p>
+and 
+<p style='text-align: center;'>(<em>a</em> + <em>n</em> &#8484;)&middot;(<em>b</em> + <em>n</em> &#8484;) = (<em>a</em>&middot;<em>b</em> + <em>n</em> &#8484;) = 
+<em>a</em>&middot;<em>b</em> <strong>mod</strong> <em>n</em> + <em>n</em> &#8484;.</p>
+Clearly, the quotient ring behaves exactly like the ring <em>Z<sub>n</sub></em>. To put this another way, the quotient &#8484;/(<em>n</em> &#8484;) is <em>isomorphic</em> 
+to <em>Z<sub>n</sub></em>. We will study ring isomorphisms in the next section.<br><br>
+<p>In contrast, let us consider a ring such as the rational numbers ℚ. We can quickly see that the only ideals of ℚ are the trivial ideals, even though there are
+a host of subrings of ℚ. The proof holds for any field, so let us prove the following proposition.</p>
+<p><a name="prop105ret" id="prop105ret"></a>
+PROPOSITION 10.5<br></p>
+<p>Any field or skew field can only have trivial ideals.<br><br></p>
+<p><a href="#prop105">Click here for the proof.</a></p>
+<p />
+We want to develop a way to find the ideals of a general ring <em>R</em>. We have already observed that the intersection of two subrings is again a subring. Using this 
+fact, we were able to use <em>SageMath</em> to find all of the subrings. So the natural question is whether the intersection of two ideals gives an ideal. If so, we will be 
+able to use <em>SageMath</em> to find all of the ideals of a finite ring.<p><a name="prop106ret" id="prop106ret"></a>
+PROPOSITION 10.6<br></p>
+<p>If <em>L</em> is a non-empty collection of ideals of a ring <em>R</em>, then the intersection of all of these ideals
+<br><br></p>
+<table align="center" width="160" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><em>I</em><sup>&ast;</sup> = </td>
+    <td align="center"><font face="Times New Roman, Times, serif" size="+4">&cap;</font></td>
+    <td align="left"><em>I</em>&ensp;&ensp;&ensp;</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td align="center" valign="top"><em>I</em> &isin; <em>L</em></td>
+    <td></td>
+  </tr>
+</table>
+is an ideal of <em>R</em>.<br><br>
+<p><a href="#prop106">Click here for the proof.</a></p>
+<p />
+We can now define the smallest ideal of <em>R</em> that contains a subset <em>S</em>.  We proceed as we did for subrings, and consider the collection of all ideals 
+of <em>R</em> containing <em>S</em>.  This collection will be non-empty, since <em>R</em> itself is such an ideal.  If we denote this collection by <em>L</em>, then 
+the smallest ideal of <em>R</em> containing <em>S</em> would have to be
+<br><br>
+<table align="center" width="160" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right">&lang;<em>S</em>&rang; = </td>
+    <td align="center"><font face="Times New Roman, Times, serif" size="+4">&cap;</font></td>
+    <td align="left"><em>I</em>&ensp;&ensp;&ensp;</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td align="center" valign="top"><em>I</em> &isin; <em>L</em></td>
+    <td></td>
+  </tr>
+</table>
+<br>
+We call &lang;<em>S</em>&rang; the <em>ideal generated by S</em>. Notice the distinction between this notation and the notation of the subring generated 
+by <em>S</em>, [<em>S</em>].<br><br>
+<p>We can have <em>SageMath</em> find the ideal of <em>R</em> generated by any set <em>S</em> with the command <strong>Ideal(R, S)</strong>.<br><br></p>
+<p>For example, in the non-commutative ring of order 8 which we were working with earlier,<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitRing</span><span class="p">()</span>
+<span class="n">AddRingVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">)</span>
+<span class="n">R</span> <span class="o">=</span> <span class="n">Ring</span><span class="p">();</span> <span class="n">R</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+we can find all of the ideals rather quickly. For example, the ideal generated by the element <em>a</em> is<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Ideal</span><span class="p">(</span><span class="n">R</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+so <em>a</em> cannot be contained in any nontrivial ideal. Likewise, 3<em>a</em> would generate the whole ring <em>R</em>, since 3&middot;3<em>a</em> = <em>a</em>. If we 
+try the element <em>a</em> + <em>b</em>, we get<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Ideal</span><span class="p">(</span><span class="n">R</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+This tells us that <em>a</em> + <em>b</em> is not in a nontrivial ideal.  The same thing is true for 3<em>a</em> + <em>b</em> = 3(<em>a</em> + <em>b</em>). So the remaining
+three non-zero elements which could be in a nontrivial ideal form the ideals<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Ideal</span><span class="p">(</span><span class="n">R</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Ideal</span><span class="p">(</span><span class="n">R</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Ideal</span><span class="p">(</span><span class="n">R</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+If we require two of the three of these elements to be in the ideal, it is clear that we will have the same ideal as &lang;<em>b</em>&rang;. Thus, there are five ideals in this 
+ring, which we can express as
+<p style='text-align: center;'>&lang;0&rang;,&emsp;&lang;<em>a</em>&rang;,&emsp;&lang;2<em>a</em>&rang;,&emsp;&lang;<em>b</em>&rang;,&ensp;and&ensp;&lang;2<em>a</em> + <em>b</em>&rang;.</p>
+Notice that all five ideals could be generated with a single element.  We will give a special name for these ideals.<br>
+<br>
+DEFINITION 10.4<br>
+An ideal of <em>R</em> that is generated by only one element of <em>R</em> is called a <em>principal ideal</em>. If all of the ideals of <em>R</em> are principal 
+ideals, then the ring is called a <em>principal ideal ring</em>.<br><br>
+<p>EXPERIMENT:<br>
+In Chapter 9 we found a non-commutative unity ring of order 8:<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitRing</span><span class="p">()</span>
+<span class="n">AddRingVar</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">,</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">e</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">e</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">e</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">e</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">e</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">e</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="n">R</span> <span class="o">=</span> <span class="n">Ring</span><span class="p">();</span> <span class="n">R</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Find all of the ideals of this ring. Is this a principal ideal ring?<br><br>
+It should be noted that the ring of integers &#8484; is a principal ideal ring, since all ideals (in fact all subrings) are of the form <em>n</em> &#8484;, which is 
+generated by the single element <em>n</em>. Since &#8484; is also an integral domain, we will combine the two terms and call &#8484; 
+a <em>principal ideal domain</em>, or PID.  Principal ideal domains play an important role in ring theory.<br><br><p><a name="sec103" id="sec103"></a></p>
+<h1>Ring Isomorphisms</h1>
+<br>
+As we work with different rings, it is natural to ask whether we can classify the finite rings the way that we did for small groups.  Of course, we will consider two 
+rings to be &quot;equivalent&quot; if the elements of one ring can be renamed to form the other ring.  We have already seen an example of equivalent rings: the quotient 
+ring &#8484;/(<em>n</em> &#8484;) was essentially the same ring as <em>Z<sub>n</sub></em>.  We would like to formalize this equivalence using the same technique that we 
+used for groups.<br><br>
+<p>DEFINITION 10.5<br>
+Let <em>A</em> and <em>B</em> be two rings. A <em>ring isomorphism</em> from <em>A</em> to <em>B</em> is a one-to-one mapping</p>
+<p style='text-align: center;'><em>&fnof;</em>: <em>A</em> &rarr; <em>B</em></p>
+such that 
+<p style='text-align: center;'><em>&fnof;</em>(<em>x</em> + <em>y</em>) = <em>&fnof;</em>(<em>x</em>) + <em>&fnof;</em>(<em>y</em>)&emsp;and&emsp;
+<em>&fnof;</em>(<em>x</em>&middot;<em>y</em>) = <em>&fnof;</em>(<em>x</em>)&middot;<em>&fnof;</em>(<em>y</em>)&ensp;for all <em>x</em>, <em>y</em> &isin; <em>A</em>.</p>
+<br>
+If there exists a ring isomorphism from <em>A</em> to <em>B</em> that is surjective, then we say that the rings <em>A</em> and <em>B</em> are <em>isomorphic</em>, denoted 
+by <em>A</em> &asymp; <em>B</em>.<br><br>
+<p>EXAMPLE:<br>
+Find an isomorphism from the quotient ring ℤ/(<em>n</em> ℤ) to <em>Z<sub>n</sub></em>.<br><br></p>
+<p>The natural mapping would be as follows:</p>
+<p style='text-align: center;'><em>&fnof;</em>(<em>a</em> + <em>n</em> &#8484;) = <em>a</em> <strong>mod</strong> <em>n</em>,</p>
+which we can verify is well defined by noting that if <em>a</em> + <em>n</em> &#8484; = <em>b</em> + <em>n</em> &#8484;, then <em>a</em> &minus; <em>b</em> is a multiple 
+of <em>n</em>, so <em>a</em> <strong>mod</strong> <em>n</em> = <em>b</em> <strong>mod</strong> <em>n</em>.
+Also, <em>&fnof;</em> is an injective and surjective function from &#8484;/(<em>n</em> &#8484;) to <em>Z<sub>n</sub></em>. Furthermore, 
+<em>&fnof;</em>(<em>a</em> + <em>b</em>) = <em>&fnof;</em>(<em>a</em>) + <em>&fnof;</em>(<em>b</em>), and <em>&fnof;</em>(<em>a</em>&middot;<em>b</em>) = 
+<em>&fnof;</em>(<em>a</em>)&middot;<em>&fnof;</em>(<em>b</em>).  So we have that
+<p style='text-align: center;'>&#8484;/(<em>n</em> &#8484;) &asymp; <em>Z<sub>n</sub></em>.</p>
+<br>
+EXAMPLE:<br>
+Two similar looking rings of order 10 can be defined in <em>SageMath</em> as follows:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitRing</span><span class="p">()</span>
+<span class="n">AddRingVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="mi">10</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">)</span>
+<span class="n">CheckRing</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">Ring</span><span class="p">(</span><span class="n">a</span><span class="p">);</span> <span class="n">A</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Here are the addition and multiplication tables for the ring <em>A</em>.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddTable</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MultTable</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Notice that the additive structure of this ring is like <em>Z</em><sub>10</sub>, but the multiplicative structure is totally different, since there is no identity 
+element.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">FindUnity</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+A second ring can be defined at the same time if we don't start over with <strong>InitRing()</strong>.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddRingVar</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="mi">10</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">Ring</span><span class="p">(</span><span class="n">b</span><span class="p">);</span> <span class="n">B</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Actually, we are creating a ring of order 100, for which <em>A</em> and <em>B</em> are subrings.<br><br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">Ring</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">Ring</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+<p>Show that these rings are isomorphic.<br><br></p>
+<br>
+With a little thought one realizes that any ring of order 10 must have the same additive structure, since there is only one abelian group of order 10.  
+Here are the addition and multiplication tables for the ring <em>B</em>:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddTable</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MultTable</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+If we compare the multiplication table to that of the ring <em>A</em><br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MultTable</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MultTable</span><span class="p">([</span><span class="mi">0</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="mi">3</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="mi">4</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="mi">5</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="mi">6</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="mi">7</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="mi">8</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="mi">9</span><span class="o">*</span><span class="n">b</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+We find many similarities, but they are not exactly the same.<br><br>
+<p>EXPERIMENT:<br>
+Can you find an isomorphism from <em>A</em> to <em>B</em> by rearranging the elements of <strong>B</strong> above so that the multiplication tables for <em>A</em> and
+<em>B</em> have the same color pattern? Careful! The <em>addition</em> tables for <em>A</em> and <em>B</em> must <em>also</em> have the same color pattern! Rather than
+using trial and error, see if you use inductive reasoning using the properties of the ring. There is, in fact, only one solution.<br></p>
+<br>
+Another way to demonstrate the isomorphism is to construct a mapping between the two rings.  Since <em>a</em> is an 
+additive generator of <em>A</em>, we know that it should map to one of the additive generators of <em>B</em>, 
+{<em>b</em>, 3<em>b</em>, 7<em>b</em>, 9<em>b</em>}.  So we can use trial and error.
+In <em>SageMath</em>, the command <strong>RingHomo</strong> defines a ring homomorphism, similar to the way 
+that <strong>Homomorph</strong> defined a group homomorphism.
+<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">F</span> <span class="o">=</span> <span class="n">RingHomo</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
+<span class="n">HomoDef</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="n">FinishHomo</span><span class="p">(</span><span class="n">F</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">F</span> <span class="o">=</span> <span class="n">RingHomo</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
+<span class="n">HomoDef</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="mi">3</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
+<span class="n">FinishHomo</span><span class="p">(</span><span class="n">F</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+EXPERIMENT:<br>
+Try sending <em>a</em> to one of the other two additive generators of <em>B</em>.  Can we get a homomorphism?  If you find a homomorphism, what is the kernel?<br><p>From either of the experiments, we found an isomorphism from <em>A</em> to <em>B</em>, but it was far from obvious.  We would like a way to generalize this example so we
+can determine if two similar
+rings are isomorphic.</p>
+<p><br><br>
+One way to help find an isomorphism between <em>A</em> and <em>B</em> is to show that both of these are isomorphic to a subring of the familiar
+rings <em>Z<sub>n</sub></em> for some <em>n</em>. For example, consider 2 <em>Z</em><sub>20</sub>, the even elements of <em>Z</em><sub>20</sub>.<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z20</span> <span class="o">=</span> <span class="n">ZRing</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span> <span class="n">Z20</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">R</span> <span class="o">=</span> <span class="n">Ring</span><span class="p">(</span><span class="n">Z20</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span> <span class="n">R</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+If we compare the multiplication tables for <em>A</em> and <em>R</em>,<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MultTable</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="n">MultTable</span><span class="p">(</span><span class="n">R</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+we see that they have the same color pattern. Furthermore, the addition tables<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddTable</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="n">AddTable</span><span class="p">(</span><span class="n">R</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+are the same, showing that 
+<p style='text-align: center;'><em>A</em> &asymp; 2 <em>Z</em><sub>20</sub>.</p>
+<p>EXPERIMENT:<br>
+Using the same technique as 2 <em>Z</em><sub>20</sub>, define <em>Z</em><sub>60</sub>, and form the subring 6 <em>Z</em><sub>60</sub>.  Does this have the same color
+pattern in the multiplication table as the ring <em>B</em>?<br></p>
+<br>
+These last two isomorphisms suggest a pattern that can be extended to many finite rings.<p><a name="prop107ret" id="prop107ret"></a>
+PROPOSITION 10.7<br></p>
+<p>Let <em>R</em> be a finite ring whose additive structure is a cyclic group of order <em>n</em>. Let <em>x</em> be a generator of the additive group. Then
+<em>x</em><sup>2</sup> = <em>k x</em> for some positive integer <em>k</em> ≤ <em>n</em>, and</p>
+<p style='text-align: center;'><em>A</em> &asymp; <em>k</em> <em>Z<sub>k n</sub></em>.</p>
+<p><a href="#prop107">Click here for the proof.</a></p>
+<p />
+This proposition suggests that rings of the form <em>k</em> <em>Z<sub>k n</sub></em> are important.  Hence, we will refer to such rings by the following 
+terminology.<br><br>
+<p>DEFINITION 10.6<br>
+A <em>cyclic ring</em> is a ring whose additive group is cyclic.<br><br></p>
+<p>Note that this definition of cyclic rings also includes the infinite rings ℤ and its subrings <em>n</em> ℤ.<br><br></p>
+<p>Proposition 10.7 shows that for the two cyclic rings <em>A</em> and <em>B</em> that we worked with in the beginning of this section,</p>
+<p style='text-align: center;'><em>A</em> &asymp; 2 <em>Z</em><sub>20</sub>&emsp;and&emsp;<em>B</em> &asymp; 6 <em>Z</em><sub>60</sub>.</p>
+<p>Our experiment showed that in fact 2 <em>Z</em><sub>20</sub> must be isomorphic to 6 <em>Z</em><sub>60</sub>. But this isomorphism was not nearly as obvious. How would
+anyone guess that <em>ƒ</em>(<em>a</em>) had to be  7 <em>b</em>?<br><br></p>
+<p>In order to prove that such isomorphisms exist in general, we will need a few lemmas about number theory. Once these are proven, we will be able to
+determine <em>all</em> non-isomorphic rings of order 10.</p>
+<p><a name="lem101ret" id="lem101ret"></a>
+LEMMA 10.1<br></p>
+<p>Let <em>d</em> be a positive divisor of <em>n</em>, and let <em>f</em> be the largest divisor of <em>d</em> that is coprime
+to (<em><sup>n</sup></em>⁄<em><sub>d</sub></em>).  Then if <em>q</em> is coprime to both <em>f</em> and (<em><sup>n</sup></em>⁄<em><sub>d</sub></em>) , then
+<em>q</em> is coprime to <em>n</em>.<br><br></p>
+<p><a href="#lem101">Click here for the proof.</a></p>
+<p />
+With this lemma, we can strengthen the B&eacute;zout's lemma (1.3).<p><a name="lem102ret" id="lem102ret"></a>
+LEMMA 10.2<br></p>
+<p>Given two positive numbers <em>x</em> and <em>y</em>, there exist <em>u</em> and <em>v</em> in ℤ such that</p>
+<p style='text-align: center;'><em>u x</em> + <em>v y</em> = gcd(<em>x</em>, <em>y</em>),</p>
+where <em>u</em> is coprime to <em>y</em>.<br><br>
+<p><a href="#lem102">Click here for the proof.</a></p>
+<p />
+With Lemma 10.2, we can now prove determine which cyclic rings of the form <em>x Z<sub>x n</sub></em> are isomorphic.<p><a name="theor101ret" id="theor101ret"></a>
+THEOREM 10.1: The Cyclic Ring Theorem<br></p>
+<p>If <em>x</em> and <em>n</em> are positive integers, then</p>
+<p style='text-align: center;'><em>x Z<sub>x n</sub></em> &asymp; <em>k Z<sub>k n</sub></em></p>
+where <em>k</em> = gcd(<em>x</em>, <em>n</em>).<br><br>
+<p><a href="#theor101">Click here for the proof.</a></p>
+<p />
+We can now understand why 2 <em>Z</em><sub>20</sub> was isomorphic to 6 <em>Z</em><sub>60</sub>. We merely have to notice that 2 = gcd(10, 6).  Since the only rings of 
+order 10 are cyclic rings, there are in fact four possibilities for a ring of order 10:
+<p style='text-align: center;'><em>Z</em><sub>10</sub>,&emsp;2 <em>Z</em><sub>20</sub>,&emsp;5 <em>Z</em><sub>50</sub>,&emsp;10 <em>Z</em><sub>100</sub>.</p>
+To see if these four rings are distinct, we can look at the multiplication tables.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z10</span> <span class="o">=</span> <span class="n">ZRing</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+<span class="n">MultTable</span><span class="p">(</span><span class="n">Z10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z20</span> <span class="o">=</span> <span class="n">ZRing</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+<span class="n">R</span> <span class="o">=</span> <span class="n">Ring</span><span class="p">(</span><span class="n">Z20</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="n">MultTable</span><span class="p">(</span><span class="n">R</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z50</span> <span class="o">=</span> <span class="n">ZRing</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+<span class="n">R</span> <span class="o">=</span> <span class="n">Ring</span><span class="p">(</span><span class="n">Z50</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span>
+<span class="n">MultTable</span><span class="p">(</span><span class="n">R</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z100</span> <span class="o">=</span> <span class="n">ZRing</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+<span class="n">R</span> <span class="o">=</span> <span class="n">Ring</span><span class="p">(</span><span class="n">Z100</span><span class="p">[</span><span class="mi">10</span><span class="p">])</span>
+<span class="n">MultTable</span><span class="p">(</span><span class="n">R</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+The last ring has the property that any product of elements gives 0. Notice that there are exactly as many rings of order 10 as there are divisors of 10. We can 
+generalize this result to give the following corollary.<p><a name="cor101ret" id="cor101ret"></a>
+COROLLARY 10.1<br></p>
+<p>The number of non-isomorphic cyclic rings of order <em>n</em> is precisely the number of divisors of <em>n</em> (including 1 and <em>n</em>).<br><br></p>
+<p><a href="#cor101">Click here for the proof.</a></p>
+<p />
+Although this corollary seems to be a big help in finding <em>all</em> finite rings, there are, in fact, many non-cyclic rings. For example, there are 8 non-cyclic rings 
+of order 4, which when combined with the 3 cyclic rings from Corollary 10.1 gives a total of 11 rings of order 4. There are 52 rings of order 8 (4 cyclic, 20 with 
+additive group <em>Z</em><sub>15</sub><sup>&ast;</sup>, and 28 with an additive group <em>Z</em><sub>24</sub><sup>&ast;</sup>).<br><br>
+<p>As one can see, finding all rings of a given order is a much more difficult task than finding all the groups of the same order.  Here is a table of the number of rings of a given order:</p>
+<table align = "center" width="300" border="1">
+  <caption>
+    Rings of order <em>n</em>
+  </caption>
+  <tr>
+    <th width="50" scope="col"><em>n</em></th>
+    <th width="100" scope="col">rings</th>
+    <th width="50" scope="col"><em>n</em></th>
+    <th width="100" scope="col">rings</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>1</td>
+    <td>17</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>2</td>
+    <td>18</td>
+    <td>22</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>2</td>
+    <td>19</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>11</td>
+    <td>20</td>
+    <td>22</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>2</td>
+    <td>21</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>4</td>
+    <td>22</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>2</td>
+    <td>23</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>52</td>
+    <td>24</td>
+    <td>104</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>11</td>
+    <td>25</td>
+    <td>11</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>4</td>
+    <td>26</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td>2</td>
+    <td>27</td>
+    <td>59</td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td>22</td>
+    <td>28</td>
+    <td>22</td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td>2</td>
+    <td>29</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td>4</td>
+    <td>30</td>
+    <td>8</td>
+  </tr>
+  <tr>
+    <td>15</td>
+    <td>4</td>
+    <td>31</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>390</td>
+    <td>32</td>
+    <td>???</td>
+  </tr>
+</table>
+<br>
+There are at least 18590 known rings of order 32, but it has not been proven these are all of them.  There are some patterns in this table. Can you find any?<br><br>
+<p>In <em>SageMath</em>, we can load any of the rings of order 15 or less.  The command <strong>NumberSmallRings</strong> will produce the number of rings of a given order,
+up to order 15.<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">NumberSmallRings</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Now we can load any of these 52 rings.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">R</span> <span class="o">=</span> <span class="n">SmallRing</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">51</span><span class="p">);</span> <span class="n">R</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MultTable</span><span class="p">(</span><span class="n">R</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+In this way, we can explore a multitude of different rings.<p><a name="sec104" id="sec104"></a></p>
+<h1>Homomorphisms and Kernels</h1>
+<br>
+In the last section we determined two rings were isomorphic by finding a one-to-one and onto function mapping one ring to the other.  If we considered a similar 
+function which was not necessarily one-to-one or onto, we would have a <em>ring homomorphism</em>.<br><br>
+<p>DEFINITION 10.7<br>
+If <em>A</em> and <em>B</em> are two rings, then a mapping <em>ƒ</em> : <em>A</em> → <em>B</em> such that</p>
+<p style='text-align: center;'><em>&fnof;</em>(<em>x</em> + <em>y</em>) = <em>&fnof;</em>(<em>x</em>) + 
+<em>&fnof;</em>(<em>y</em>),&emsp;and&emsp;<em>&fnof;</em>(<em>x</em>&middot;<em>y</em>) = <em>&fnof;</em>(<em>x</em>)&middot;<em>&fnof;</em>(<em>y</em>)&emsp;for 
+all <em>x</em> and <em>y</em> in <em>A</em></p>
+is called a <em>ring homomorphism</em>. <br><br>
+<p>Notice that a ring homomorphism preserves both of the ring operations. In particular, a ring homomorphism will also be a group homomorphism from the additive group
+of <em>A</em> to the additive group of <em>B</em>. Thus, we can immediately apply the results of group homomorphisms to see two properties of ring homomorphisms:<br><br>
+If <em>ƒ</em> is a homomorphism from <em>A</em> to <em>B</em>, then</p>
+<p style='text-align: center;'><em>&fnof;</em>(0) = 0&emsp;and&emsp;<em>&fnof;</em>(&minus;<em>x</em>) = &minus;<em>&fnof;</em>(<em>x</em>)&ensp;for 
+all <em>x</em> &isin; <em>A</em>.</p>
+We have seen some examples of ring homomorphisms in the last section, since any isomorphism is certainly a homomorphism. But let us see if we can define a 
+homomorphism between two non-isomorphic rings.<br>
+<p>EXAMPLE:<br>
+Let <em>n</em> be a positive integer.  Find a homomorphism between ℤ and <em>Z<sub>n</sub></em>.<br></p>
+<p>The natural mapping is <em>f</em>(<em>x</em>) = <em>x</em> <strong>mod</strong> <em>n</em>.  Proposition 1.2 can be restated as</p>
+<p style='text-align: center;'><em>f</em>(<em>x</em> + <em>y</em>) = <em>f</em>(<em>x</em>) + <em>f</em>(<em>y</em>), 
+&emsp;&emsp; and &emsp;&emsp;<em>f</em>(<em>x</em>&middot;<em>y</em>) = <em>f</em>(<em>x</em>)&middot;<em>f</em>(<em>y</em>).</p>
+Thus, this is a homomorphism.<br>
+<p>EXAMPLE:<br>
+Use <em>SageMath</em> to find a homomorphism between <em>Z</em><sub>3</sub> and <em>Z</em><sub>6</sub>.<br><br></p>
+<p>First we must define <em>Z</em><sub>3</sub> and <em>Z</em><sub>6</sub> simultaneously.<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z3</span> <span class="o">=</span> <span class="n">ZRing</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span> <span class="n">Z3</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z6</span> <span class="o">=</span> <span class="n">ZRing</span><span class="p">(</span><span class="mi">6</span><span class="p">);</span> <span class="n">Z6</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Now suppose we wish to define a 
+homomorphism <em>&fnof;</em> from <em>Z</em><sub>3</sub> to <em>Z</em><sub>6</sub>.  We already see that <em>&fnof;</em>(0) must be 0, 
+and <em>&fnof;</em>(2) = <em>&fnof;</em>(&minus;1) = &minus;<em>&fnof;</em>(1).  Thus, the homomorphism is determined completely by the 
+value of <em>&fnof;</em>(1).  A natural choice would be to let <em>&fnof;</em>(1) = 2 <strong>mod</strong> 6.  We can define a ring homomorphism the same way as we 
+did for group homomorphisms, except we use the command <strong>RingHomo</strong> instead of <strong>Homomorph</strong> to let <em>SageMath</em> know that <em>F</em> is a 
+ring homomorphism.  We can try to define a homomorphism 
+from <em>Z</em><sub>3</sub> to <em>Z</em><sub>6</sub> with the commands:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">F</span> <span class="o">=</span> <span class="n">RingHomo</span><span class="p">(</span><span class="n">Z3</span><span class="p">,</span> <span class="n">Z6</span><span class="p">)</span>
+<span class="n">HomoDef</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Even though 1 and 2 are technically elements of &#8484;, not <em>Z</em><sub>3</sub> or <em>Z</em><sub>6</sub>, <em>SageMath</em>
+makes the natural translations, knowing the arguments are expected to be in the rings 
+<em>Z</em><sub>3</sub> and <em>Z</em><sub>6</sub>.
+We can now use the command <strong>FinishHomo(F)</strong> to check to see if the function <strong>F</strong> can be completed to form a homomorphism.  If we check 
+the function we just defined,<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">FinishHomo</span><span class="p">(</span><span class="n">F</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+we see that this is not a homomorphism!<br><br>
+<p>EXPERIMENT:<br>
+Replace the 2 in the command defining <em>F</em> with other elements of <em>Z</em><sub>6</sub>, and check to see which are homomorphisms.  How many
+possible homomorphisms are there from <em>Z</em><sub>3</sub> to <em>Z</em><sub>6</sub>?<br></p>
+<br>
+EXPERIMENT: <br>
+Design another homomorphism <em>G</em> which maps elements from <em>Z</em><sub>6</sub> to <em>Z</em><sub>3</sub>.  Notice that all that must be defined in <em>SageMath</em> 
+is the element <strong>G(1)</strong>. Then use <em>SageMath</em> to check if this can be completed for form a homomorphism.<br><br>
+In both of these experiments one may have noticed that one possible mapping would be to send all elements to 0. This in fact will always yield a homomorphism, and we 
+will give this a special name.<br><br>
+<p>DEFINITION 10.8<br>
+If <em>A</em> and <em>B</em> are any two rings, then the mapping</p>
+<p style='text-align: center;'><em>&fnof;</em> : <em>A</em> &rarr; <em>B</em>,&emsp;<em>&fnof;</em>(<em>x</em>) = 0&ensp;for all <em>x</em> &isin; <em>A</em></p> 
+is called the <em>zero homomorphism</em> from <em>A</em> to <em>B</em>.<br><br>
+<p>Although the zero homomorphism works for both of the above experiments, there are also nonzero homomorphisms which map from <em>Z</em><sub>3</sub> to
+<em>Z</em><sub>6</sub> and <em>Z</em><sub>6</sub> to <em>Z</em><sub>3</sub>.  If you haven’t found these already, go back and try to find them. <br><br></p>
+<p>Once we have the homomorphism <em>ƒ</em> defined, we can define <em>ƒ</em>(<em>S</em>), where <em>S</em> is a <em>set</em> of elements in the domain
+of <em>ƒ</em>, to be the set of all values <em>ƒ</em>(<em>x</em>), where <em>x</em> is in <em>S</em>.  We can also define the inverse image of an
+element <em>y</em> to be <em>ƒ</em><sup>−1</sup>(<em>y</em>), the set of elements <em>x</em> such that <em>ƒ</em>(<em>x</em>) = <em>y</em>.  In fact, we can
+define the inverse image of a set of elements in the same way: <em>ƒ</em><sup>−1</sup>(<em>T</em>) is the set of elements <em>x</em> such
+that <em>ƒ</em>(<em>x</em>) is in <em>T</em>.  We can use <em>SageMath</em> to find the image of a set by merely entering <strong>Image(F,S)</strong>.  We can find the inverse image of an element or a set <em>S</em> with
+the <em>SageMath</em> command <strong>HomoInv(F, S)</strong>.<br><br></p>
+<p>For example, here are the nonzero homomorphisms from the previous two experiments.<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">F</span> <span class="o">=</span> <span class="n">RingHomo</span><span class="p">(</span><span class="n">Z3</span><span class="p">,</span> <span class="n">Z6</span><span class="p">)</span>
+<span class="n">HomoDef</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">FinishHomo</span><span class="p">(</span><span class="n">F</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">RingHomo</span><span class="p">(</span><span class="n">Z6</span><span class="p">,</span> <span class="n">Z3</span><span class="p">)</span>
+<span class="n">HomoDef</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">FinishHomo</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+We can evaluate the homomorphism in the standard way:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">F</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+To compute <em>&fnof;</em>({0,1}), we enter the <em>SageMath</em> command<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">F</span><span class="p">,[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+We can also find the inverse image of the element a under <em>G</em> by the command<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">HomoInv</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Likewise, we can take the inverse image of the set {0,1} with the command<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">HomoInv</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+EXPERIMENT:<br>
+What is the difference between <em>F</em>(<em>x</em>), and <em>G</em><sup>-1</sup>(<em>x</em>)? Does <em>F</em>(<em>G</em>(<em>x</em>)) always produce <em>x</em>? What 
+about <em>G</em>(<em>F</em>(<em>x</em>))?<br><br>
+We can ask whether the image or inverse image of a subring will again be a subring. This is actually very easy to prove, as seen in the next proposition.<p><a name="prop108ret" id="prop108ret"></a>
+PROPOSITION 10.8<br></p>
+<p>Suppose <em>ƒ</em> is a homomorphism from the ring <em>A</em> to the ring <em>B</em>.  Then if <em>S</em> is a subring of <em>A</em>, then <em>ƒ</em>(<em>S</em>)
+is a subring of <em>B</em>.  Likewise, if <em>T</em> is a subring of <em>B</em>, then <em>ƒ</em><sup>−1</sup>(<em>T</em>) will be a subring of <em>A</em>.<br><br></p>
+<p><a href="#prop108">Click here for the proof.</a></p>
+<p />
+We can define the kernel and the image of a homomorphism in the same way that we did for group homomorphisms.<br><br>
+<p>DEFINITION 10.9:<br>
+Given a homomorphism <em>ƒ</em> from the ring <em>A</em> to the ring <em>B</em>, the <em>kernel</em> of <em>ƒ</em> is <em>ƒ</em><sup>−1</sup>(0),
+denoted Ker(<em>ƒ</em>).  The <em>image</em> of <em>ƒ</em> is <em>ƒ</em>(<em>A</em>), denoted Im(<em>ƒ</em>).<br><br></p>
+<p>We can use the <strong>HomoInv</strong> command to find the kernel of a homomorphism, or we can simply use the command <strong>Kernel(<em>ƒ</em>)</strong> to find the kernel of
+the homomorphism.  For example, the kernels of the homomorphisms <strong>F</strong> and <strong>G</strong> that we have defined are<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Kernel</span><span class="p">(</span><span class="n">F</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+and<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Kernel</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+The images found using the <strong>Image</strong> command:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">Z3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">Z6</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+When we have a homomorphism from <em>A</em> to <em>B</em>,  since <em>A</em> is a trivial subring of <em>A</em>, we have by Proposition 10.8 that the image will be a 
+subring of <em>B</em>.  Likewise, the kernel of a homomorphism will be a subring of <em>A</em>, since {0} is a subring of <em>B</em>.  However, we can say even more about 
+the kernel.<p><a name="prop109ret" id="prop109ret"></a>
+PROPOSITION 10.9<br></p>
+<p>If <em>ƒ</em> is a homomorphism from the ring <em>A</em> to the ring <em>B</em>, then the kernel of <em>ƒ</em> is an ideal of <em>A</em>. Furthermore,
+<em>ƒ</em> is injective if, and only if, Ker(<em>ƒ</em>) = {0}.<br><br></p>
+<p><a href="#prop109">Click here for the proof.</a></p>
+<p />
+<p>EXAMPLE:<br>
+Consider the non-commutative ring of order 8 that we looked at earlier in this chapter.<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitRing</span><span class="p">()</span>
+<span class="n">AddRingVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">)</span>
+<span class="n">R</span> <span class="o">=</span> <span class="n">Ring</span><span class="p">();</span> <span class="n">R</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Find a non-zero homomorphism from this ring to some other ring.<br><br>
+<p>The kernel would have to be an ideal of <em>R</em>. But we have already found that
+<em>R</em> has only three nontrivial ideals:<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">I1</span> <span class="o">=</span> <span class="n">Ideal</span><span class="p">(</span><span class="n">R</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">);</span> <span class="n">I1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">I2</span> <span class="o">=</span> <span class="n">Ideal</span><span class="p">(</span><span class="n">R</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">);</span> <span class="n">I2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">I3</span> <span class="o">=</span> <span class="n">Ideal</span><span class="p">(</span><span class="n">R</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span> <span class="n">I3</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Thus, the kernel would have to be <em>R</em>, {0}, or one of these three ideals. If the kernel is all of <em>R</em>, then the homomorphism is the zero homomorphism.  
+On the other extreme, if the kernel is {0}, then the homomorphism is injective by Proposition 10.9.  To produce a more interesting homomorphism, we would have to use 
+one of the three above ideals. The question is, to which ring should we map <em>R</em>? <br><br>
+<p>It seems that a natural answer would be a quotient ring! Since there is a natural <em>group</em> homomorphism from <em>R</em> to <em>R</em>/<em>I</em>, we can ask
+whether this group homomorphism extends to become a ring homomorphism.<br><br></p>
+<p>Let us try this out with the ideal <em>I</em><sub>1</sub>. The quotient ring is given by:<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Q</span> <span class="o">=</span> <span class="n">Coset</span><span class="p">(</span><span class="n">R</span><span class="p">,</span> <span class="n">I1</span><span class="p">);</span> <span class="n">Q</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+We wish to define a homomorphism <em>i</em>(<em>x</em>) which maps an element in <em>R</em> to the coset of <em>Q</em> containing that element.  We only need to define 
+<em>i</em>(<em>a</em>) and <em>i</em>(<em>b</em>) to complete the definition.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="n">RingHomo</span><span class="p">(</span><span class="n">R</span><span class="p">,</span> <span class="n">Q</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">HomoDef</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">I1</span><span class="p">)</span>
+<span class="n">HomoDef</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">b</span> <span class="o">+</span> <span class="n">I1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">FinishHomo</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+So <em>i</em> defines a homomorphism from <em>R</em> to <em>Q</em>. The kernel of this homomorphism is given by:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Kernel</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+EXPERIMENT:<br>
+Try forming similar homomorphisms using the ideals <em>I</em><sub>2</sub> and <em>I</em><sub>3</sub> instead. Use the <strong>FinishHomo</strong> command to see if they
+really are homomorphisms.<br><br>
+In general, we can form a homomorphism from a ring <em>R</em> to a quotient ring <em>R</em>/<em>I</em> using the same technique. We will state this as a lemma:<p><a name="lem103ret" id="lem103ret"></a>
+LEMMA 10.3<br></p>
+<p>If <em>I</em> is an ideal of the ring <em>R</em>, then the natural mapping</p>
+<p style='text-align: center;'><em>i</em>: <em>R</em> &rarr; <em>R</em>/<em>I</em></p>
+defined by
+<p style='text-align: center;'><em>i</em>(<em>x</em>) = <em>x</em> + <em>I</em></p>
+is a surjective ring homomorphism from <em>R</em> to <em>R</em>/<em>I</em> with the kernel being <em>I</em>.<br><br>
+<p><a href="#lem103">Click here for the proof.</a></p>
+<p />
+In the homomorphisms produced by Lemma 10.3, the image of the homomorphism is isomorphic to <em>R</em>/Ker(<em>&fnof;</em>).  It wouldn't be too surprising if this were 
+true for <em>all</em> ring homomorphisms, since the first isomorphism theorem studied in Chapter 5 shows that the additive group on Im(<em>&fnof;</em>) would be group 
+isomorphic to the additive structure of <nobr><em>R</em>/Ker(<em>&fnof;</em>).</nobr>   It is easy to show that the ring Im(<em>&fnof;</em>) is isomorphic to the 
+ring <em>R</em>/Ker(<em>&fnof;</em>) as well, giving us an isomorphism theorem for rings.<p><a name="theor102ret" id="theor102ret"></a>
+THEOREM 10.2:The First Ring Isomorphism Theorem<br></p>
+<p>Let <em>ƒ</em> be a ring homomorphism from a ring <em>R</em> to a ring <em>S</em>, whose image is <em>H</em>.  If the kernel of <em>ƒ</em> is <em>I</em>, then
+there is a natural surjective isomorphism</p>
+<p style='text-align: center;'><em>&#981;</em> : <em>R</em>/<em>I</em> &rarr; <em>H</em></p>
+which causes the following diagram to commute:
+<table align = "center" width="140" border="0">
+  <tr>
+    <td width="20">&nbsp;</td>
+    <td width="20">&nbsp;</td>
+    <td width="40">&nbsp;</td>
+    <td width="20">&nbsp;</td>
+    <td width="40">&nbsp;</td>
+  </tr>
+  <tr>
+    <td><em>R</em></td>
+    <td COLSPAN = 3>&emsp;&emsp;<em>i</em>&emsp;&emsp;<br>&#8213;&#8213;&#8213;&#9658;</td>
+    <td><em>R</em>/<em>I</em></td>
+  </tr>
+  <tr>
+    <td><em>&fnof;</em></td>
+    <td>&#8600;</td>
+    <td>&nbsp;</td>
+    <td>&#10530;</td>
+    <td><em>&#981;</em></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&ensp;<em>H</em></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<br>
+(Here, <em>i</em>(<em>x</em>) is the homomorphism defined in Lemma 10.3.) Thus, <em>H</em> &asymp; <em>R</em>/<em>I</em>.<br><br>
+<p><a href="#theor102">Click here for the proof.</a></p>
+<p />
+It should be noted that there are second and third ring isomorphism theorems, which correspond to the second and third isomorphism theorems studied in our work with 
+groups. These are covered in Problems 15 and 16. However, we are mainly interested in the first ring isomorphism theorem, because this allows us to guarantee 
+the existence of isomorphisms without having to actually write them down. This becomes particularly important when we start working with infinite rings, since 
+the isomorphisms could become unwieldy.<br><br><p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<h1>Proofs:</h1><p><a name="prop101" id="prop101"></a>
+Proof of Proposition 10.1:<br><br></p>
+<p>Certainly if <em>S</em> is a subring, then <em>x</em> − <em>y</em> and <em>x</em>·<em>y</em> would be in <em>S</em> whenever <em>x</em> and <em>y</em>
+are in <em>S</em>.  So let us suppose that <em>S</em> is non-empty and is closed with respect to subtraction and multiplication.  If <em>x</em> is any element in
+<em>S</em>, then <em>x</em> − <em>x</em> = 0 is in <em>S</em>, so <em>S</em> contains an additive identity.  Also, 0 − <em>x</em> = −<em>x</em>
+would also be in <em>S</em>, so <em>S</em> contains additive inverses of all of its elements.  Then whenever <em>x</em> and <em>y</em> are in <em>S</em>,
+<em>x</em> − (−<em>y</em>) = <em>x</em> + <em>y</em> is in <em>S</em>, so <em>S</em> is closed with respect to addition.  The commutative and
+associative properties of addition, as well as the associative and two distributive laws for multiplication, come from the original ring <em>R</em>.  Finally,
+<em>S</em> is closed with respect to multiplication, so <em>S</em> is a subring.<br><br></p>
+<p><a href="#prop101ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="prop102" id="prop102"></a>
+Proof of Proposition 10.2:<br><br></p>
+<p>First of all, note that <em>H</em><sup>*</sup> is not the empty set, since 0 is in each <em>H</em> in the collection.  We now can apply Proposition 10.1.
+Let <em>x</em> and <em>y</em> be two elements in <em>H</em><sup>*</sup>.  Then, for every <em>H</em> ∈ <em>L</em>, we have <em>x</em>, <em>y</em> ∈ <em>H</em>.
+<br><br></p>
+<p>Since each <em>H</em> is a subring of <em>R</em>, we have</p>
+<p style='text-align: center;'><em>x</em> &minus; <em>y</em> &isin; <em>H</em>&emsp;and&emsp; <em>x</em>&middot;<em>y</em> &isin; <em>H</em></p>
+for all <em>H</em> &isin; <em>L</em>.  Therefore, <em>x</em> &minus; <em>y</em> and <em>x</em>&middot;<em>y</em> are in <em>H</em><sup>&ast;</sup>, and so 
+<em>H</em><sup>&ast;</sup> is a subring of <em>R</em>.<br><br>
+<p><a href="#prop102ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="prop103" id="prop103"></a>
+Proof of Proposition 10.3:<br><br></p>
+<p>First of all, the trivial subring {0} can be considered the set of all multiples of 0. Also, the entire ring ℤ could be considered all of the multiples of 1.
+Let <em>S</em> be a nontrivial subring, and let <em>x</em> be in <em>S</em>. Then −<em>x</em> is also in <em>S</em>, so <em>S</em> must contain some positive
+integers. Let <em>n</em> be the smallest positive integer contained in <em>S</em>. Certainly all multiples of <em>n</em> would be in <em>S</em>, but suppose that some
+element <em>m</em> in <em>S</em> is not a multiple of <em>n</em>. Then by Bézout’s lemma (1.3), there exist two integers <em>u</em> and <em>v</em>
+such that</p>
+<p style='text-align: center;'><em>u n</em> + <em>v m</em> = gcd(<em>n</em>, <em>m</em>).</p>
+Since <em>S</em> is closed under addition, this implies that gcd(<em>n</em>, <em>m</em>) is in <em>S</em>.  But <em>m</em> is not a multiple of <em>n</em>, so 
+gcd(<em>n</em>, <em>m</em>) < <em>n</em>. But this contradicts the fact that <em>n</em> is the <em>smallest</em> positive integer in <em>S</em>. Thus, <em>S</em> 
+consists exactly of all of the multiples of <em>n</em>, and so <em>S</em> = <em>n</em> &#8484;.<br><br>
+<p><a href="#prop103ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="prop104" id="prop104"></a>
+Proof of Proposition 10.4:<br><br></p>
+<p>The quotient group <em>R</em>/<em>I</em> is an abelian group, so we need only to check that the multiplication is closed, and that the associativity and two distributive
+laws hold. <br><br></p>
+<p>Let <em>X</em> and <em>Y</em> be two cosets of <em>R</em>/<em>I</em>. Let <em>x</em> be an element in <em>X</em>, and <em>y</em> an element in <em>Y</em>. Then the product
+of the cosets <em>X</em> and <em>Y</em> is</p>
+<p style='text-align: center;'><em>X</em>&lowast;<em>Y</em> = 
+<em>X</em>&middot;<em>Y</em> + <em>I</em> = (<em>x</em> + <em>I</em>)&middot;(<em>y</em> + <em>I</em>) + <em>I</em> = 
+<em>x</em>&middot;<em>y</em> + <em>I</em>&middot;<em>y</em> + <em>x</em>&middot;<em>I</em> + <em>I</em>&middot;<em>I</em> + <em>I</em>.</p>
+Because <em>I</em> is an ideal, <em>I</em>&middot;<em>y</em>, <em>x</em>&middot;<em>I</em>, and <em>I</em>&middot;<em>I</em> are all subsets of <em>I</em>. Hence, the 
+sum <em>I</em>&middot;<em>y</em> + <em>x</em>&middot;<em>I</em> + <em>I</em>&middot;<em>I</em> + <em>I</em> will be a subset of <em>I</em>.  But since the last term of 
+this expression is <em>I</em>, <em>I</em>&middot;<em>y</em> + <em>x</em>&middot;<em>I</em> + <em>I</em>&middot;<em>I</em> + <em>I</em> contains the ideal <em>I</em>, so 
+this sum equals <em>I</em>. Thus,
+<p style='text-align: center;'>(<em>x</em> + <em>I</em>)&middot;(<em>y</em> + <em>I</em>) + <em>I</em> = <em>X</em>&lowast;<em>Y</em> = 
+<em>X</em>&middot;<em>Y</em> + <em>I</em> = <em>x</em>&middot;<em>y</em> + <em>I</em>,</p>
+which is a coset of <em>R</em>/<em>I</em>.<br><br>
+<p>Now suppose that <em>X</em>, <em>Y</em>, and <em>Z</em> are three cosets of <em>R</em>/<em>I</em>, with <em>x</em>, <em>y</em>, and <em>z</em> being representative
+elements, respectively. Then</p>
+<p style='text-align: center;'>(<em>X</em>&lowast;<em>Y</em>)&lowast;<em>Z</em> = 
+((<em>x</em> + <em>I</em>)&lowast;(<em>y</em> + <em>I</em>))&lowast;(<em>z</em> + <em>I</em>) = 
+(<em>x</em>&middot;<em>y</em> + <em>I</em>)&lowast;(<em>z</em> + <em>I</em>) =((<em>x</em>&middot;<em>y</em>)&middot;<em>z</em> + <em>I</em>) = 
+(<em>x</em>&middot;(<em>y</em>&middot;<em>z</em>) + <em>I</em>) = (<em>x</em> + <em>I</em>)&lowast;(<em>y</em>&middot;<em>z</em> + <em>I</em>) = 
+(<em>x</em> + <em>I</em>)&lowast;((<em>y</em> + <em>I</em>)&lowast;(<em>z</em> + <em>I</em>)) = <em>X</em>&lowast;(<em>Y</em>&lowast;<em>Z</em>).</p>
+So multiplication is associative. Also,
+<p style='text-align: center;'><em>X</em>&lowast;(<em>Y</em> + <em>Z</em>) = (<em>x</em> + <em>I</em>)&lowast;(<em>y</em> + <em>z</em> + <em>I</em>) = 
+(<em>x</em>&middot;(<em>y</em> + <em>z</em>) + <em>I</em>) = <em>x</em>&middot;<em>y</em> + <em>x</em>&middot;<em>z</em> + <em>I</em> =
+(<em>x</em>&middot;<em>y</em> + <em>I</em>) + (<em>x</em>&middot;<em>z</em> + <em>I</em>) = <em>X</em>&lowast;<em>Y</em> + <em>X</em>&lowast;<em>Z</em>,</p>
+and
+<p style='text-align: center;'>(<em>X</em> + <em>Y</em>)&lowast;<em>Z</em> = (<em>x</em> + <em>y</em> + <em>I</em>)&lowast;(<em>z</em>+ <em>I</em>) = 
+((<em>x</em> + <em>y</em>)&middot;<em>z</em> + <em>I</em>) = 
+<em>x</em>&middot;<em>z</em> + <em>y</em>&middot;<em>z</em> + <em>I</em> =(<em>x</em>&middot;<em>z</em> + <em>I</em>) + (<em>y</em>&middot;<em>z</em> + <em>I</em>) = 
+<em>X</em>&lowast;<em>Z</em> + <em>Y</em>&lowast;<em>Z</em>.</p>
+Thus, the two distributive laws hold, so <em>R</em>/<em>I</em> is a ring.<br><br>
+<p><a href="#prop104ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="prop105" id="prop105"></a>
+Proof of Proposition 10.5:<br><br></p>
+<p>Let <em>K</em> be a field or skew field, and suppose that there is a nontrivial ideal <em>I</em> of <em>K</em>.  Then there is a nonzero element <em>x</em> in <em>I</em>,
+and hence <em>x</em><sup>-1</sup> exists in <em>K</em>. Thus</p>
+<p style='text-align: center;'><em>e</em> = <em>x</em>&middot;<em>x</em><sup>-1</sup> &isin; <em>I</em>&middot;<em>K</em> &sube; <em>I</em>.</p>
+So the unity element <em>e</em> is contained in <em>I</em>.  But then,
+<p style='text-align: center;'><em>K</em> = <em>e</em>&middot;<em>K</em> &sube; <em>I</em>&middot;<em>K</em> &sube; <em>I</em>.</p>
+Hence, <em>I</em> = <em>K</em>, so the only ideals of <em>K</em> are the trivial ideals.<br><br>
+<p><a href="#prop105ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="prop106" id="prop106"></a>
+Proof of Proposition 10.6:<br><br></p>
+<p>Since <em>I</em><sup>*</sup> is an intersection of subrings of <em>R</em>, by Proposition 10.2 <em>I</em><sup>*</sup> is a subring of <em>R</em>.  Thus, we only need to
+check that <em>I</em><sup>*</sup>·<em>R</em> and <em>R</em>·<em>I</em><sup>*</sup> are contained in <em>I</em><sup>*</sup>.<br><br></p>
+<p>Suppose that <em>a</em> is an element of <em>I</em><sup>*</sup>. Then <em>a</em> is in each <em>I</em> ∈ <em>L</em>, and so <em>a</em>·<em>R</em>
+and <em>R</em>·<em>a</em> are subsets of each <em>I</em> in the collection.  Thus, <em>a</em>·<em>R</em> and <em>R</em>·<em>a</em> will both be
+subsets of <em>I</em><sup>*</sup>.  Since this result is true for every <em>a</em> in <em>I</em><sup>*</sup>, we have that <em>I</em><sup>*</sup>·<em>R</em>
+and <em>R</em>·<em>I</em><sup>*</sup> are both subsets of <em>I</em><sup>*</sup>. Therefore, <em>I</em><sup>*</sup> is an ideal.<br><br></p>
+<p><a href="#prop106ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="prop107" id="prop107"></a>
+Proof of Proposition 10.7:<br><br></p>
+<p>If <em>x</em><sup>2</sup> = 0, we can let <em>k</em> = <em>n</em>, so that <em>k</em> will be positive
+and <em>k x</em> = 0 = <em>x</em><sup>2</sup>.  If <em>x</em><sup>2</sup> is not zero, then since <em>x</em> generates the additive group, there is a <em>k</em> such
+that <nobr><em>x</em><sup>2</sup> = <em>k x</em></nobr> with 0 &lt; <em>k</em> &lt; <em>n</em>.<br><br></p>
+<p>Now the natural mapping is one that sends <em>ƒ</em>(<em>a</em>·<em>x</em>) = <em>k</em>·<em>a</em> <strong>mod</strong> (<em>k n</em>). This is obviously one-to-one
+and onto, since the value of <em>a</em> ranges from 0 to <em>n</em> − 1. To check that this is an isomorphism, note that</p>
+<p style='text-align: center;'><em>&fnof;</em>(<em>a</em>&middot;<em>x</em> + <em>b</em>&middot;<em>x</em>) = <em>&fnof;</em>((<em>a</em> + <em>b</em>)&middot;<em>x</em>) = 
+<em>k</em>&middot;(<em>a</em> + <em>b</em>) <strong>mod</strong> (<em>k n</em>) = (<em>k</em>&middot;<em>a</em> <strong>mod</strong> (<em>k n</em>) + 
+<em>k</em>&middot;<em>b</em> <strong>mod</strong> (<em>k n</em>)) <strong>mod</strong> (<em>k n</em>) = 
+<em>&fnof;</em>(<em>a</em>&middot;<em>x</em>) + <em>&fnof;</em>(<em>b</em>&middot;<em>x</em>).</p>
+Also,
+<p style='text-align: center;'><em>&fnof;</em>((<em>a</em>&middot;<em>x</em>)&middot;(<em>b</em>&middot;<em>x</em>)) = 
+<em>&fnof;</em>(<em>a</em>&middot;<em>b</em>&middot;<em>x</em><sup>2</sup>) = <em>&fnof;</em>(<em>a</em>&middot;<em>b</em>&middot;<em>k</em>&middot;<em>x</em>) =
+<em>k</em>&middot;<em>a</em>&middot;<em>b</em>&middot;<em>k</em> <strong>mod</strong> (<em>k n</em>) = 
+((<em>k</em>&middot;<em>a</em> <strong>mod</strong> (<em>k n</em>))&middot;(<em>k</em>&middot;<em>b</em> <strong>mod</strong> (<em>k n</em>))) = 
+<em>&fnof;</em>(<em>a</em>&middot;<em>x</em>)&middot;<em>&fnof;</em>(<em>b</em>&middot;<em>x</em>).</p>
+Therefore, <em>&fnof;</em> is an isomorphism, and <em>R</em> &asymp; <em>k</em> <em>Z<sub>k n</sub></em>.<br><br>
+<p><a href="#prop107ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="lem101" id="lem101"></a>
+Proof of Lemma 10.1:<br><br></p>
+<p>Suppose that gcd(<em>q</em>, <em>n</em>) is not 1.  Then there is a prime number <em>p</em> that divides neither <em>f</em> nor
+<em><sup>n</sup></em>⁄<em><sub>d</sub></em> , yet divides <em>n</em>.  Thus, <em>p</em> must divide <em>d</em>.<br><br></p>
+<p>Now <em>f</em>·<em>p</em> will be coprime to <em><sup>n</sup></em>⁄<em><sub>d</sub></em> since both <em>f</em> and <em>p</em> are.  Also, since <em>f</em> is
+not a multiple of <em>p</em> while <em>d</em> is, <em>f</em>·<em>p</em> will be a divisor of <em>d</em>. But we defined <em>f</em> to be the <em>largest</em> factor
+of <em>d</em> coprime to <em><sup>n</sup></em>⁄<em><sub>d</sub></em> . This contradiction shows that gcd(<em>q</em>, <em>n</em>) = 1.<br><br></p>
+<p><a href="#lem101ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="lem102" id="lem102"></a>
+Proof of Lemma 10.2:<br><br></p>
+<p>Bézout’s lemma (1.3) would give us values for <em>u</em> and <em>v</em>, but there would be no way to guarantee that <em>u</em> would be coprime
+to <em>y</em>.<br><br></p>
+<p>Let <em>k</em> = gcd(<em>x</em>, <em>y</em>). Then (<em><sup>x</sup></em>⁄<em><sub>k</sub></em>) and (<em><sup>y</sup></em>⁄<em><sub>k</sub></em>) are coprime, so
+(<em><sup>x</sup></em>⁄<em><sub>k</sub></em>) has an multiplicative inverse in <em>Z</em><sub>(<em>y</em>/<em>k</em>)</sub>, say <em>n</em>. That is,</p>
+<p style='text-align: center;'><em><sup>x</sup></em>&frasl;<em><sub>k</sub></em> &middot;<em>n</em> &equiv; 1 (mod <em><sup>y</sup></em>&frasl;<em><sub>k</sub></em> ).</p>
+Let <em>f</em> be the largest divisor of <em>k</em> that is coprime to <em><sup>y</sup></em>&frasl;<em><sub>k</sub></em> . By the Chinese remainder theorem (1.5), there is 
+a number <em>u</em> such that
+<p style='text-align: center;'><em>u</em> &equiv; <em>n</em>&ensp;(mod <em><sup>y</sup></em>&frasl;<em><sub>k</sub></em> )</p>
+and
+<p style='text-align: center;'><em>u</em> &equiv; 1&ensp;(mod <em>f</em>).</p>
+Since <em>n</em> is coprime to (<em><sup>y</sup></em>&frasl;<em><sub>k</sub></em>) , <em>u</em> is coprime to (<em><sup>y</sup></em>&frasl;<em><sub>k</sub></em>) . Also, 
+<em>u</em> is coprime to <em>f</em>, so by Lemma 10.1 <em>u</em> is coprime to <em>y</em>. Also,
+<p style='text-align: center;'><em>u</em>&middot;<em><sup>x</sup></em>&frasl;<em><sub>k</sub></em> &equiv; 1&ensp;(mod <em><sup>y</sup></em>&frasl;<em><sub>k</sub></em> )</p>
+so there is a <em>v</em> such that
+<p style='text-align: center;'><em>u</em>&middot;<em><sup>x</sup></em>&frasl;<em><sub>k</sub></em> + <em>v</em>&middot;<em><sup>y</sup></em>&frasl;<em><sub>k</sub></em> = 
+1.</p>
+Multiplying both sides by <em>k</em> gives us
+<p style='text-align: center;'><em>u</em>&middot;<em>x</em> + <em>v</em>&middot;<em>y</em> = <em>k</em> = gcd(<em>x</em>, <em>y</em>).</p>
+<p><a href="#lem102ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="theor101" id="theor101"></a>
+Proof of Theorem 10.1:<br><br></p>
+<p>Since <em>k</em> = gcd(<em>x</em>, <em>n</em>), by Lemma 10.2 we can find integers <em>u</em> and <em>v</em> such that
+<em>u</em>·<em>x</em> + <em>v</em>·<em>n</em> = <em>k</em>, where <em>u</em> is coprime to <em>n</em>.  We now define a mapping <em>ƒ</em> from
+<em>k Z<sub>k n</sub></em> to <em>x Z<sub>x n</sub></em> as follows:</p>
+<p style='text-align: center;'><em>&fnof;</em>(<em>k</em>&middot;<em>w</em> <strong>mod</strong> (<em>k n</em>)) = 
+<em>u</em> <em>x</em> <em>w</em> <strong>mod</strong> (<em>x n</em>).</p>
+Note that this is well-defined, since if <em>k</em>&middot;<em>w</em> is equivalent to <em>k</em>&middot;<em>p</em> (mod <em>k</em> <em>n</em>), then 
+<p style='text-align: center;'><em>w</em> &equiv; <em>p</em> (mod <em>n</em>)&ensp;&#10233;&ensp;<em>x w</em> &equiv; <em>x p</em> 
+(mod <em>x</em> <em>n</em>)&ensp;&#10233;&ensp;<em>u x w</em> &equiv; <em>u x p</em> 
+(mod <em>x</em> <em>n</em>).</p>
+Next we need to show that <em>&fnof;</em> is a homomorphism from <em>k Z<sub>k n</sub></em> to <em>x Z<sub>x n</sub></em>.  If <em>a</em> = <em>k</em>&middot;<em>w</em> 
+(mod <em>k n</em>) and <em>b</em> = <em>k</em>&middot;<em>z</em> (mod <em>k n</em>), then 
+<p style='text-align: center;'><em>&fnof;</em>(<em>a</em> + <em>b</em>) = <em>&fnof;</em>((<em>k</em>&middot;<em>w</em> + <em>k</em>&middot;<em>z</em>) <strong>mod</strong> (<em>k n</em>)) = 
+<em>u</em>&middot;(<em>x</em>&middot;<em>w</em> + <em>x</em>&middot;<em>z</em>) <strong>mod</strong> (<em>x n</em>) = 
+(<em>u</em>&middot;<em>x</em>&middot;<em>w</em> + <em>u</em>&middot;<em>x</em>&middot;<em>z</em>) <strong>mod</strong> (<em>x n</em>) = <em>&fnof;</em>(<em>a</em>) + 
+<em>&fnof;</em>(<em>b</em>),</p>
+<p style='text-align: center;'><em>&fnof;</em>(<em>a</em>&middot;<em>b</em>) = <em>&fnof;</em>((<em>k</em>&middot;<em>w</em>&middot;<em>k</em>&middot;<em>z</em>) 
+<strong>mod</strong> (<em>k n</em>)) = 
+(<em>u</em>&middot;<em>x</em>&middot;<em>w</em>&middot;<em>k</em>&middot;<em>z</em>) <strong>mod</strong> (<em>x n</em>) = 
+(<em>u</em>&middot;<em>x</em>&middot;<em>w</em>&middot;(<em>u</em>&middot;<em>x</em> + <em>v</em>&middot;<em>n</em>)&middot;<em>z</em>) <strong>mod</strong> (<em>x n</em>)<br> =
+(<em>u</em>&middot;<em>x</em>&middot;<em>w</em>&middot;<em>u</em>&middot;<em>x</em>&middot;<em>z</em> + 
+<em>u</em>&middot;<em>x</em>&middot;<em>w</em>&middot;<em>v</em>&middot;<em>n</em>&middot;<em>z</em>) <strong>mod</strong> (<em>x n</em>) = 
+(<em>u</em>&middot;<em>x</em>&middot;<em>w</em>)&middot;(<em>u</em>&middot;<em>x</em>&middot;<em>z</em>) <strong>mod</strong> (<em>x n</em>) = 
+<em>&fnof;</em>(<em>a</em>)&middot;<em>&fnof;</em>(<em>b</em>).</p>
+So <em>&fnof;</em> is indeed a homomorphism from <em>k Z<sub>k n</sub></em> to <em>x Z<sub>x n</sub></em>.<br><br>
+<p>Since <em>u</em> is coprime to <em>n</em>, <em>u</em> has an inverse, <em>u</em><sup>-1</sup> (mod <em>n</em>).  Then we see that <em>ƒ</em> is onto, since any
+element <em>x</em>·<em>a</em> (mod <em>x n</em>) in <em>x Z<sub>x n</sub></em> can be obtained by taking</p>
+<p style='text-align: center;'><em>&fnof;</em>(<em>k</em>&middot;<em>a</em>&middot;<em>u</em><sup>-1</sup> <strong>mod</strong> (<em>k n</em>) ) = 
+(<em>u</em>&middot;<em>x</em>&middot;<em>a</em>&middot;<em>u</em><sup>-1</sup>) <strong>mod</strong> (<em>x n</em>) = <em>x</em>&middot;<em>a</em> <strong>mod</strong> (<em>x n</em>).</p>
+Finally, both <em>x Z<sub>x n</sub></em> and <em>k Z<sub>k n</sub></em> contain <em>n</em> elements, so by the pigeonhole principle <em>&fnof;</em> must be a 
+one-to-one function.  Thus, <em>&fnof;</em> is an isomorphism, and
+<p style='text-align: center;'><em>x Z<sub>x n</sub></em> &asymp; <em>k Z<sub>k n</sub></em>.</p>
+<p><a href="#theor101ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="cor101" id="cor101"></a>
+Proof of Corollary 10.1:<br><br></p>
+<p>By Proposition 10.7 every cyclic ring of order <em>n</em> is isomorphic to <em>k Z<sub>k n</sub></em> for some value of <em>k</em>.  By the cyclic ring theorem, we see
+that this is isomorphic to <nobr><em>d Z<sub>d n</sub></em>,</nobr> where <nobr><em>d</em> = gcd(<em>k</em>, <em>n</em>).</nobr>  Hence <em>d</em> is a divisor
+of <em>n</em>.  We need
+to show that
+two different rings of this form are non-isomorphic.  Consider the rings <nobr><em>A</em> = <em>d Z<sub>d n</sub></em></nobr> and
+<nobr><em>B</em> = <em>f Z<sub>f n</sub></em>,</nobr> where
+<em>d</em> and <em>f</em> are different divisors of <em>n</em>. Perhaps the easiest way to show that these are different is to count the number of elements in <em>A</em>
+and <em>B</em> that can appear in the multiplication tables.  The elements that can appear in the table for <em>A</em> are</p>
+<p style='text-align: center;'><em>d</em><sup>2</sup>, 2 <em>d</em><sup>2</sup>, 3 <em>d</em><sup>2</sup>, &hellip; <em>n</em>&middot;<em>d</em> = 0.</p>
+while the elements appearing in the multiplication table of <em>B</em> are
+<p style='text-align: center;'><em>f</em><sup>2</sup>, 2 <em>f</em><sup>2</sup>, 3 <em>f</em><sup>2</sup>, &hellip; <em>n</em>&middot;<em>f</em> = 0.</p>
+Thus, there are <sup><em>n</em></sup>&frasl;<sub><em>d</em></sub>&ensp;such elements of <em>A</em>, and <sup><em>n</em></sup>&frasl;<sub><em>f</em></sub>&ensp;elements of 
+<em>B</em>. 
+Since <em>d</em> and <em>f</em> are different, we see that the rings <em>A</em> and <em>B</em> are not isomorphic. Therefore, there is a one-to-one correspondence between 
+the factors of <em>n</em> and the cyclic rings of order <em>n</em>.<br><br>
+<p><a href="#cor101ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="prop108" id="prop108"></a>
+Proof of Proposition 10.8:<br><br></p>
+<p>Suppose <em>S</em> is a subring of <em>A</em>.  We will use Proposition 10.1 to show that <em>ƒ</em>(<em>S</em>) is a subring of <em>B</em>.  The element
+<em>ƒ</em>(0) = 0 is in <em>ƒ</em>(<em>S</em>), so <em>ƒ</em>(<em>S</em>) is non-empty.  If <em>u</em> and <em>v</em> are two elements of
+<em>ƒ</em>(<em>S</em>), then there exist elements <em>x</em> and <em>y</em> in <em>S</em> such that</p>
+<p style='text-align: center;'><em>&fnof;</em>(<em>x</em>) = <em>u</em>&emsp;and&emsp;<em>&fnof;</em>(<em>y</em>) = <em>v</em>.</p>
+But <em>x</em>&middot;<em>y</em> and <em>x</em> &minus; <em>y</em> are also in <em>S</em>, and so
+<p style='text-align: center;'><em>&fnof;</em>(<em>x</em>&middot;<em>y</em>) = <em>&fnof;</em>(<em>x</em>)&middot;<em>&fnof;</em>(<em>y</em>) = 
+<em>u</em>&middot;<em>v</em>&emsp;and&emsp;<em>&fnof;</em>(<em>x</em> &minus; <em>y</em>) = <em>&fnof;</em>(<em>x</em>) &minus; <em>&fnof;</em>(<em>y</em>) = 
+<em>u</em> &minus; <em>v</em></p>
+must be in <em>&fnof;</em>(<em>S</em>).  Thus, by Proposition 10.1, <em>&fnof;</em>(<em>S</em>) is a subring of <em>B</em>.<br><br>
+<p>Now suppose that <em>T</em> is a subring of <em>B</em>. Since 0 is contained in <em>ƒ</em><sup>−1</sup>(<em>T</em>), we have that
+<em>ƒ</em><sup>−1</sup>(<em>T</em>) is non-empty. If <em>x</em> and <em>y</em> are two elements of <em>ƒ</em><sup>−1</sup>(<em>T</em>), then
+<em>ƒ</em>(<em>x</em>) and <em>ƒ</em>(<em>y</em>) will be two elements of <em>T</em>.  Thus,</p>
+<p style='text-align: center;'><em>&fnof;</em>(<em>x</em>&middot;<em>y</em>) = 
+<em>&fnof;</em>(<em>x</em>)&middot;<em>&fnof;</em>(<em>y</em>)&emsp;and&emsp;<em>&fnof;</em>(<em>x</em> &minus; <em>y</em>) = 
+<em>&fnof;</em>(<em>x</em>) &minus; <em>&fnof;</em>(<em>y</em>)</p>
+would be elements of <em>T</em>.  Hence, <em>x</em>&middot;<em>y</em> and <em>x</em> &minus; <em>y</em> are in <em>&fnof;</em><sup>&minus;1</sup>(<em>T</em>). Thus, 
+by Proposition 10.1, <em>&fnof;</em><sup>&minus;1</sup>(<em>T</em>) is a subring of <em>A</em>.<br><br>
+<p><a href="#prop108ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="prop109" id="prop109"></a>
+Proof of Proposition 10.9:<br><br></p>
+<p>Suppose that <em>x</em> is in the kernel of <em>ƒ</em>, and <em>y</em> is any other element of <em>A</em>.  Then</p>
+<p style='text-align: center;'><em>&fnof;</em>(<em>x</em>&middot;<em>y</em>) = <em>&fnof;</em>(<em>x</em>)&middot;<em>&fnof;</em>(<em>y</em>) = 
+0&middot;<em>&fnof;</em>(<em>y</em>) = 0,&emsp;and&emsp;<em>&fnof;</em>(<em>y</em>&middot;<em>x</em>) = <em>&fnof;</em>(<em>y</em>)&middot;<em>&fnof;</em>(<em>x</em>) = 
+<em>&fnof;</em>(<em>y</em>)&middot;0 = 0.</p>
+Hence, <em>x</em>&middot;<em>y</em> and <em>y</em>&middot;<em>x</em> are in the kernel of <em>&fnof;</em>, so the kernel is an ideal of <em>A</em>.<br><br>
+<p>If <em>ƒ</em> is injective, then <em>ƒ</em><sup>−1</sup>(0) can only contain one element, which must be 0.  On the other hand,
+if <em>ƒ</em><sup>−1</sup>(0) = {0}, then</p>
+<p style='text-align: center;'><em>&fnof;</em>(<em>x</em>) = <em>&fnof;</em>(<em>y</em>) &#10233; <em>&fnof;</em>(<em>x</em>) &minus; <em>&fnof;</em>(<em>y</em>) = 
+0&ensp;&#10233;&ensp;<em>&fnof;</em>(<em>x</em> &minus; <em>y</em>) = 0&ensp;&#10233;&ensp;<em>x</em> &minus; <em>y</em> = 0&ensp;&#10233;&ensp;<em>x</em> = <em>y</em>.</p>
+Therefore, <em>&fnof;</em> is injective if, and only if, Ker(<em>&fnof;</em>) = {0}.<br><br>
+<p><a href="#prop109ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="lem103" id="lem103"></a>
+Proof of Lemma 10.3:<br><br></p>
+<p>It is clear that the rule  <em>i</em>(<em>x</em>) = <em>x</em> + <em>I</em> defines a surjective mapping <em>i</em> from <em>R</em> to <em>R</em>/<em>I</em>, and that
+Ker(<em>i</em>) = <em>I</em>.  We need only to check that <em>i</em>(<em>x</em>) is a homomorphism.<br><br></p>
+<p>Since</p>
+<p style='text-align: center;'><em>i</em>(<em>x</em> + <em>y</em>) = (<em>x</em> + <em>y</em>) + <em>I</em> = (<em>x</em> + <em>I</em>) + (<em>y</em> + <em>I</em>) = 
+<em>i</em>(<em>x</em>) + <em>i</em>(<em>y</em>)</p>
+and
+<p style='text-align: center;'><em>i</em>(<em>x</em>&middot;<em>y</em>) = <em>x</em>&middot;<em>y</em> + <em>I</em> = 
+(<em>x</em> + <em>I</em>)&middot;(<em>y</em> + <em>I</em>) = <em>i</em>(<em>x</em>)&middot;<em>i</em>(<em>y</em>),</p>
+we see that <em>i</em>(<em>x</em>) is indeed a surjective ring homomorphism.<br><br>
+<p><a href="#lem103ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="theor102" id="theor102"></a>
+Proof of Theorem 10.2:<br><br></p>
+<p>The diagram actually helps us determine how <em>ϕ</em> needs to be defined. For each coset (<em>x</em> + <em>I</em>) in <em>R</em>/<em>I</em>, we need to have</p>
+<p style='text-align: center;'><em>&#981;</em>(<em>x</em> + <em>I</em>) = <em>&fnof;</em>(<em>x</em>)</p>
+in order for the diagram to commute.  To prove that this rule defines a mapping, we need to show that this is well defined. That is, if 
+<em>x</em> + <em>I</em> = <em>y</em> + <em>I</em>, it needs to be true that <em>&fnof;</em>(<em>x</em>) = <em>&fnof;</em>(<em>y</em>), or else there would be a contradiction in the 
+definition of <em>&#981;</em>.  But
+<p style='text-align: center;'><em>x</em> + <em>I</em> = <em>y</em> + <em>I</em>&emsp;&#10234;&emsp;<em>x</em> &minus; <em>y</em> &isin; 
+<em>I</em>&emsp;&#10234;&emsp;<em>&fnof;</em>(<em>x</em> &minus; <em>y</em>) = 0&emsp;&#10234;&emsp;<em>&fnof;</em>(<em>x</em>) = 
+<em>&fnof;</em>(<em>y</em>)&emsp;&#10234;&emsp;<em>&#981;</em>(<em>x</em> + <em>I</em>) = <em>&#981;</em>(<em>y</em> + <em>I</em>).</p>
+So we see that the definition of <em>&#981;</em> will not produce any such contradictions.<br><br>
+<p>To show that <em>ϕ</em> is a homomorphism, we have that</p>
+<p style='text-align: center;'><em>&#981;</em>((<em>x</em> + <em>I</em>) + (<em>y</em> + <em>I</em>)) = <em>&#981;</em>(<em>x</em> + <em>y</em> + <em>I</em>) = 
+<em>&fnof;</em>(<em>x</em> + <em>y</em>) = <em>&fnof;</em>(<em>x</em>) + <em>&fnof;</em>(<em>y</em>) = 
+<em>&#981;</em>(<em>x</em> + <em>I</em>) + <em>&#981;</em>(<em>y</em> + <em>I</em>),</p>
+and 
+<p style='text-align: center;'><em>&#981;</em>((<em>x</em> + <em>I</em>)&middot;(<em>y</em> + <em>I</em>)) = <em>&#981;</em>(<em>x</em>&middot;<em>y</em> + <em>I</em>) = 
+<em>&fnof;</em>(<em>x</em>&middot;<em>y</em>) = <em>&fnof;</em>(<em>x</em>)&middot;<em>&fnof;</em>(<em>y</em>) = 
+<em>&#981;</em>(<em>x</em> + <em>I</em>)&middot;<em>&#981;</em>(<em>y</em> + <em>I</em>),</p>
+So <em>&#981;</em> is a homomorphism from <em>R</em>/<em>I</em> to <em>H</em>.  It is apparent that this homomorphism is onto, and
+<p style='text-align: center;'><em>&#981;</em>(<em>x</em> + <em>I</em>) = 0&emsp;&#10234;&emsp;<em>&fnof;</em>(<em>x</em>) = 0&emsp;&#10234;&emsp;<em>x</em> &isin; 
+<em>I</em>&emsp;&#10234;&emsp;<em>x</em> + <em>I</em> = <em>I</em>.</p>  
+So the kernel of <em>&#981;</em> is {<em>I</em>}, the zero element of <em>R</em>/<em>I</em>.  
+Thus, <em>&#981;</em> is an isomorphism from <em>R</em>/<em>I</em> onto <em>H</em>, so <em>R</em>/<em>I</em> &asymp; <em>H</em>.  Since the mapping <em>&#981;</em> 
+was defined so that the diagram commutes, the theorem is proved.<br><br>
+<p><a href="#theor102ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="sec10p" id="sec10p"></a></p>
+<h1><em>SageMath</em> Interactive Problems</h1>
+<br>
+&sect;10.1 #19)<br> 
+Find all of the subrings of the ring of order 8:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitRing</span><span class="p">()</span>
+<span class="n">AddRingVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">R</span> <span class="o">=</span> <span class="n">Ring</span><span class="p">();</span> <span class="n">R</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+&sect;10.1 #20)<br> 
+Find all of the subrings of the ring of order 8:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitRing</span><span class="p">()</span>
+<span class="n">AddRingVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">)</span>
+<span class="n">R</span> <span class="o">=</span> <span class="n">Ring</span><span class="p">();</span> <span class="n">R</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+&sect;10.2 #21)<br> 
+Which of the subrings of the ring of order 8, found in Problem 19 of &sect;10.1 are ideals?
+The ring is given as follows:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitRing</span><span class="p">()</span>
+<span class="n">AddRingVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">R</span> <span class="o">=</span> <span class="n">Ring</span><span class="p">();</span> <span class="n">R</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+&sect;10.2 #22)<br> 
+Which of the subrings of the ring of order 8, found in Problem 20 of &sect;10.1 are ideals?
+The ring is given as follows:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitRing</span><span class="p">()</span>
+<span class="n">AddRingVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">)</span>
+<span class="n">R</span> <span class="o">=</span> <span class="n">Ring</span><span class="p">();</span> <span class="n">R</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+&sect;10.3 #19)<br> 
+Load the rings <em>Z</em><sub>12</sub> and <em>Z</em><sub>6</sub> into <em>SageMath</em> simultaneously with the commands:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z12</span> <span class="o">=</span> <span class="n">ZRing</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z6</span> <span class="o">=</span> <span class="n">ZRing</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Show that <em>I</em> = {0, 6} is an ideal of <em>Z</em><sub>12</sub>, and display addition and multiplication tables of the 
+quotient <em>Z</em><sub>12</sub>/<em>I</em>, showing that <em>Z</em><sub>12</sub>/<em>I</em> is isomorphic to <em>Z</em><sub>6</sub>.<br><br>
+&sect;10.3 #20)<br> 
+Use <em>SageMath</em> to find the eight non-isomorphic non-cyclic rings of order 4.<br>
+<p>Hint: The additive group must be isomorphic to <em>Z</em><sub>8</sub><sup>*</sup>, so the ring is defined by:<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitRing</span><span class="p">()</span>
+<span class="n">AddRingVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="err">???</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="err">???</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="err">???</span><span class="p">)</span> 
+<span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="err">???</span><span class="p">)</span>
+<span class="n">CheckRing</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">R</span> <span class="o">=</span> <span class="n">Ring</span><span class="p">();</span> <span class="n">R</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Fill in each <strong>???</strong> with a member of {0, <em>a</em>, <em>b</em>, <em>a</em> + <em>b</em>} to see whether a ring is formed. Is there a faster way than 
+trying all 4<sup>4</sup> = 256 combinations?<br><br>
+&sect;10.3 #21)<br> 
+Use <em>SageMath</em> to display the multiplication tables of all rings of order 6.<br><br>
+&sect;10.4 #21)<br> 
+The ring of Example 10.11,<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitRing</span><span class="p">()</span>
+<span class="n">AddRingVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">)</span>
+<span class="n">R</span> <span class="o">=</span> <span class="n">Ring</span><span class="p">();</span> <span class="n">R</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+also has an ideal <em>I</em><sub>2</sub> = {0, 2 <em>a</em> + <em>b</em>}.  Define a homomorphism from the ring <em>R</em> to <em>R</em>/<em>I</em><sub>2</sub>.<br><br>
+&sect;10.4 #22)<br> 
+The ring of Example 10.11,<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitRing</span><span class="p">()</span>
+<span class="n">AddRingVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">)</span>
+<span class="n">R</span> <span class="o">=</span> <span class="n">Ring</span><span class="p">();</span> <span class="n">R</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+also has an ideal <em>I</em><sub>3</sub> = {0, <em>b</em>, 2 <em>a</em>, 2 <em>a</em> + <em>b</em>}.  Define a 
+homomorphism from the ring <em>R</em> to <em>R</em>/<em>I</em><sub>3</sub>.<br><br>
+&sect;10.4 #23)<br> 
+Use <em>SageMath</em> to find a non-trivial homomorphism from the ring of Example 10.11,<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitRing</span><span class="p">()</span>
+<span class="n">AddRingVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">)</span>
+<span class="n">R</span> <span class="o">=</span> <span class="n">Ring</span><span class="p">();</span> <span class="n">R</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+to itself, which is not an automorphism.<br></font>
+</body>
+</html>
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "sagemath"
+        },
+        kernelOptions: {
+            name: "sagemath",
+            path: "./23permutation-puzzle-GroupTheory"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'sagemath'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jonny, assisted by Tom
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

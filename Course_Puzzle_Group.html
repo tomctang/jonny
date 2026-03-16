@@ -16,20 +16,22 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
@@ -37,17 +39,18 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/custom.css?v=550f00eb" />
   
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -60,13 +63,14 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Course_Puzzle';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Course_Puzzle_Group';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="5U - Ext III" href="Course_5U.html" />
     <link rel="prev" title="Lean" href="Course_Lean.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -82,19 +86,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -102,7 +95,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -110,8 +102,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -127,7 +119,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -157,15 +150,11 @@
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -183,9 +172,7 @@
 <li class="toctree-l1"><a class="reference internal" href="past/Course_MCM.html">Math Computational Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Course_Lean.html">Lean</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Permutation Puzzles</a></li>
-
 <li class="toctree-l1"><a class="reference internal" href="Course_5U.html">5U - Ext III</a></li>
-
 
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">CS &amp; Physics</span></p>
@@ -214,9 +201,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -275,7 +267,7 @@
       
       
       
-      <li><a href="_sources/Course_Puzzle.ipynb" target="_blank"
+      <li><a href="_sources/Course_Puzzle_Group.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -314,7 +306,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -328,25 +320,17 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -369,65 +353,61 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Permutation Puzzles</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#puzzles">Puzzles</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cube-moves">Cube Moves</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combinatorics">Combinatorics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-0-course-intro">Lecture 0 - Course Intro</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-1-permutation-puzzles-intro">Lecture 1 - Permutation Puzzles Intro</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-2-set-theory">Lecture 2 - Set theory</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-3-appendix-b-basic-properties-of-integers">Lecture 3 - Appendix B: Basic properties of integers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lectures-4-5-permutations">Lectures 4&amp;5 - Permutations</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#book-exercises">Book exercises</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#foundations">Foundations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#puzzles">Puzzles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cube-moves">Cube Moves</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#combinatorics">Combinatorics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-0-course-intro">Lecture 0 - Course Intro</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-1-permutation-puzzles-intro">Lecture 1 - Permutation Puzzles Intro</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-2-set-theory">Lecture 2 - Set theory</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-3-appendix-b-basic-properties-of-integers">Lecture 3 - Appendix B: Basic properties of integers</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-6-permutations-cycle-form">Lecture 6 - Permutations: Cycle Form</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lectures-7-8-representing-puzzles-by-permutations">Lectures 7&amp;8 - Representing puzzles by Permutations</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Book exercises</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#permutation">Permutation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lectures-4-5-permutations">Lectures 4&amp;5 - Permutations</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#book-exercises">Book exercises</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-9-products-of-2-cycles">Lecture 9 - Products of 2-cycles</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Book exercises</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-6-permutations-cycle-form">Lecture 6 - Permutations: Cycle Form</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lectures-7-8-representing-puzzles-by-permutations">Lectures 7&amp;8 - Representing puzzles by Permutations</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Book exercises</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-10-11-the-parity-theorem">Lecture 10&amp;11 - The parity theorem</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-12-a-n-and-3-cycles">Lecture 12 - <span class="math notranslate nohighlight">\(A_n\)</span> and 3-cycles</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lectures-13-14-the-15-puzzle">Lectures 13&amp;14 - The 15-puzzle</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lectures-15-17-groups">Lectures 15&amp;17 - Groups</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#group-basics">Group basics</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cayley-tables">Cayley tables</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cyclic-groups">Cyclic groups</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dihedral-groups">Dihedral groups</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplication-groups">Multiplication groups</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-9-products-of-2-cycles">Lecture 9 - Products of 2-cycles</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Book exercises</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-18-subgroups">Lecture 18 - Subgroups</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-19-puzzle-groups">Lecture 19 - Puzzle Groups</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-20-21-commutators-and-conjugates">Lecture 20&amp;21 - Commutators and Conjugates</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-22-oval-track">Lecture 22 - Oval Track</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-10-11-the-parity-theorem">Lecture 10&amp;11 - The parity theorem</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-12-a-n-and-3-cycles">Lecture 12 - <span class="math notranslate nohighlight">\(A_n\)</span> and 3-cycles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lectures-13-14-the-15-puzzle">Lectures 13&amp;14 - The 15-puzzle</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jamie-coding"><strong>Jamie Coding</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-28-identification-numbers">Lecture 28: Identification Numbers</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#universal-product-code-upc">Universal Product Code (UPC)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#international-standard-book-number-isbn-10">International Standard Book Number (ISBN-10)###</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#international-standard-book-number-isbn-13">International Standard Book Number (ISBN-13)###</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#credit-card-validation">Credit Card Validation:###</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#group-theory">Group Theory</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lectures-15-17-groups">Lectures 15&amp;17 - Groups</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#group-basics">Group basics</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cayley-tables">Cayley tables</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cyclic-groups">Cyclic groups</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dihedral-groups">Dihedral groups</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplication-groups">Multiplication groups</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-29-lights-out-no-youtube-video">Lecture 29: Lights Out (no Youtube video)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-linear-systems-matrix-in-sagemath">24.2.2 Solving Linear Systems (Matrix) in SageMath</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solvable-configuration">24.2.3 Solvable Configuration</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quite-patterns-null-space-of-lights-out-matrix">Quite Patterns (Null Space of Lights Out Matrix)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optimal-solution-to-lights-out">24.2.4 Optimal Solution to Lights Out</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-lights-out-5x5">24.3 Summary of Lights Out (5x5)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenvalues-and-eigenvectors">24.4 Eigenvalues and Eigenvectors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-18-subgroups">Lecture 18 - Subgroups</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-19-puzzle-groups">Lecture 19 - Puzzle Groups</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-20-21-commutators-and-conjugates">Lecture 20&amp;21 - Commutators and Conjugates</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-22-23-oval-track">Lecture 22&amp;23 - Oval Track</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-24-partitions-and-equivalence-relations">Lecture 24 - Partitions and Equivalence Relations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-25-cosets-and-lagrange-s-theorem">Lecture 25 - Cosets and Lagrange’s Theorem</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-27-28-fundamental-theorem-of-cubology">Lecture 27&amp;28 - Fundamental Theorem of Cubology</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-29-subgroups-of-rc-3">Lecture 29 - Subgroups of <span class="math notranslate nohighlight">\(RC_3\)</span></a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applications">Applications</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetry-counting">Symmetry &amp; Counting</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#identification-numbers">Identification Numbers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chpt-24-lights-out-no-video">Chpt 24 - Lights Out (no video)</a></li>
 </ul>
 </li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -464,8 +444,59 @@ document.write(`
 </div>
 </div>
 <p>Note: Lecture numbers are based on number of lectures available because some are lengthy.</p>
+<section id="foundations">
+<h2>Foundations<a class="headerlink" href="#foundations" title="Link to this heading">#</a></h2>
+<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>flowchart
+    Group --&gt; sub[Subgroup]
+    Set --&gt;|operation| Group
+    Group --&gt; sg[Symmetric Group]
+    sg --&gt;|element| perm[Permutation]
+    perm --&gt; Cycle
+    Set --&gt; perm
+    perm --&gt; Commutator
+    perm --&gt; Conjugate
+    perm --&gt; Parity
+    Group --&gt; ag[Alternating Group]
+    Group --&gt; cg[Cyclic Group]
+    ag --&gt; Parity
+    cg --&gt; Cycle
+    perm --&gt; Inverse
+    Inverse --&gt; Commutator
+    Inverse --&gt; Conjugate
+    sg --&gt;|subset| ag
+    Group --&gt; gen[Generator]
+    gen --&gt; cg
+    sub --&gt; gen
+</pre></div>
+</div>
+<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>flowchart
+    Relation --&gt; |Equivalence relation| ec[Equivalence class]
+    ec --&gt; rep[Representative]
+    ec --&gt; Coset
+    Coset --&gt; l[Left coset]
+    Coset --&gt; r[Right coset]
+    Group --&gt; sub[Subgroup]
+    sub --&gt; Coset
+    Coset --&gt; rep
+    Coset --&gt; Partition
+    Set --&gt;|operation| Group
+    Set --&gt; Relation
+    Set --&gt; Subset
+    Subset --&gt; Partition
+    Group --&gt; sg[Symmetric Group]
+    sg --&gt;|element| perm[Permutation]
+    Set --&gt; perm
+    perm --&gt; Commutator
+    perm --&gt; Conjugate
+    perm --&gt; Inverse
+    Inverse --&gt; Commutator
+    Inverse --&gt; Conjugate
+    Set --&gt; Coset
+    Group --&gt; gen[Generator]
+</pre></div>
+</div>
 <section id="puzzles">
-<h2>Puzzles<a class="headerlink" href="#puzzles" title="Link to this heading">#</a></h2>
+<h3>Puzzles<a class="headerlink" href="#puzzles" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Swap Puzzle</span>
@@ -524,7 +555,7 @@ document.write(`
 </div>
 </section>
 <section id="cube-moves">
-<h2>Cube Moves<a class="headerlink" href="#cube-moves" title="Link to this heading">#</a></h2>
+<h3>Cube Moves<a class="headerlink" href="#cube-moves" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CubeGroup</span><span class="p">()</span><span class="o">.</span><span class="n">display2d</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
@@ -561,7 +592,7 @@ document.write(`
 </div>
 </section>
 <section id="combinatorics">
-<h2>Combinatorics<a class="headerlink" href="#combinatorics" title="Link to this heading">#</a></h2>
+<h3>Combinatorics<a class="headerlink" href="#combinatorics" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Identity: <span class="math notranslate nohighlight">\(R_0\)</span></p></li>
 <li><p>Inverse(of <span class="math notranslate nohighlight">\(a\)</span>)</p>
@@ -636,7 +667,7 @@ document.write(`
 </div>
 </section>
 <section id="lecture-0-course-intro">
-<h2>Lecture 0 - Course Intro<a class="headerlink" href="#lecture-0-course-intro" title="Link to this heading">#</a></h2>
+<h3>Lecture 0 - Course Intro<a class="headerlink" href="#lecture-0-course-intro" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>This course deals with permutation puzzles.</p>
 <ol class="arabic simple">
@@ -701,7 +732,7 @@ document.write(`
 </ul>
 </section>
 <section id="lecture-1-permutation-puzzles-intro">
-<h2>Lecture 1 - Permutation Puzzles Intro<a class="headerlink" href="#lecture-1-permutation-puzzles-intro" title="Link to this heading">#</a></h2>
+<h3>Lecture 1 - Permutation Puzzles Intro<a class="headerlink" href="#lecture-1-permutation-puzzles-intro" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Swap Puzzle</span>
@@ -756,7 +787,7 @@ document.write(`
 </ul>
 </section>
 <section id="lecture-2-set-theory">
-<h2>Lecture 2 - Set theory<a class="headerlink" href="#lecture-2-set-theory" title="Link to this heading">#</a></h2>
+<h3>Lecture 2 - Set theory<a class="headerlink" href="#lecture-2-set-theory" title="Link to this heading">#</a></h3>
 <p>Basic set theory</p>
 <ul class="simple">
 <li><p>A set is a well defined collection of objects.</p></li>
@@ -885,7 +916,7 @@ document.write(`
 </div>
 </section>
 <section id="lecture-3-appendix-b-basic-properties-of-integers">
-<h2>Lecture 3 - Appendix B: Basic properties of integers<a class="headerlink" href="#lecture-3-appendix-b-basic-properties-of-integers" title="Link to this heading">#</a></h2>
+<h3>Lecture 3 - Appendix B: Basic properties of integers<a class="headerlink" href="#lecture-3-appendix-b-basic-properties-of-integers" title="Link to this heading">#</a></h3>
 <p>Appendix B(continued)</p>
 <ul class="simple">
 <li><p>If <span class="math notranslate nohighlight">\(a=bq+r\)</span> then <span class="math notranslate nohighlight">\(gcd(a,b)=gcd(b,r)\)</span>.</p></li>
@@ -966,8 +997,11 @@ document.write(`
 </div>
 </div>
 </section>
+</section>
+<section id="permutation">
+<h2>Permutation<a class="headerlink" href="#permutation" title="Link to this heading">#</a></h2>
 <section id="lectures-4-5-permutations">
-<h2>Lectures 4&amp;5 - Permutations<a class="headerlink" href="#lectures-4-5-permutations" title="Link to this heading">#</a></h2>
+<h3>Lectures 4&amp;5 - Permutations<a class="headerlink" href="#lectures-4-5-permutations" title="Link to this heading">#</a></h3>
 <p><big><big>Note: All permutations listed below may be overrided by following permutations of the same name.</big></big></p>
 <ul class="simple">
 <li><p>Permutations: A permutation of a list of objects is a rearrangement of those objects.</p></li>
@@ -1215,7 +1249,7 @@ document.write(`
 </div>
 </div>
 <section id="book-exercises">
-<h3>Book exercises<a class="headerlink" href="#book-exercises" title="Link to this heading">#</a></h3>
+<h4>Book exercises<a class="headerlink" href="#book-exercises" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alpha</span><span class="o">=</span><span class="n">Permutation</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>                 <span class="c1"># Bottom row of array form</span>
@@ -1264,7 +1298,7 @@ document.write(`
 </section>
 </section>
 <section id="lecture-6-permutations-cycle-form">
-<h2>Lecture 6 - Permutations: Cycle Form<a class="headerlink" href="#lecture-6-permutations-cycle-form" title="Link to this heading">#</a></h2>
+<h3>Lecture 6 - Permutations: Cycle Form<a class="headerlink" href="#lecture-6-permutations-cycle-form" title="Link to this heading">#</a></h3>
 <p>Unfinished work from last lecture</p>
 <ul class="simple">
 <li><p>Example: If <span class="math notranslate nohighlight">\(\alpha\)</span> has order 7, what is <span class="math notranslate nohighlight">\(\alpha^35\)</span>?</p>
@@ -1423,7 +1457,7 @@ document.write(`
 </div>
 </section>
 <section id="lectures-7-8-representing-puzzles-by-permutations">
-<h2>Lectures 7&amp;8 - Representing puzzles by Permutations<a class="headerlink" href="#lectures-7-8-representing-puzzles-by-permutations" title="Link to this heading">#</a></h2>
+<h3>Lectures 7&amp;8 - Representing puzzles by Permutations<a class="headerlink" href="#lectures-7-8-representing-puzzles-by-permutations" title="Link to this heading">#</a></h3>
 <p><big><big>In all cells representing 15 puzzles(of various size), the biggest number corresponds to the empty square.</big></big></p>
 <p>Cycle form[continued]</p>
 <ul class="simple">
@@ -1634,7 +1668,7 @@ document.write(`
 </div>
 </div>
 <section id="id1">
-<h3>Book exercises<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<h4>Book exercises<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">swap_sg</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
@@ -1896,7 +1930,7 @@ document.write(`
 </section>
 </section>
 <section id="lecture-9-products-of-2-cycles">
-<h2>Lecture 9 - Products of 2-cycles<a class="headerlink" href="#lecture-9-products-of-2-cycles" title="Link to this heading">#</a></h2>
+<h3>Lecture 9 - Products of 2-cycles<a class="headerlink" href="#lecture-9-products-of-2-cycles" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alpha</span><span class="o">=</span><span class="n">sg</span><span class="p">(</span><span class="mi">16</span><span class="p">)([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">13</span><span class="p">])</span><span class="o">.</span><span class="n">inverse</span><span class="p">()</span> <span class="c1"># 15 Puzzle where 16 is empty space</span>
@@ -1989,7 +2023,7 @@ document.write(`
 </div>
 </div>
 <section id="id2">
-<h3>Book exercises<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<h4>Book exercises<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sg</span><span class="p">(</span><span class="mi">3</span><span class="p">)(</span><span class="s1">&#39;(1,2,3)&#39;</span><span class="p">)</span><span class="o">==</span><span class="n">sg</span><span class="p">(</span><span class="mi">3</span><span class="p">)(</span><span class="s1">&#39;(2,3)&#39;</span><span class="p">)</span><span class="o">*</span><span class="n">sg</span><span class="p">(</span><span class="mi">3</span><span class="p">)(</span><span class="s1">&#39;(1,2)&#39;</span><span class="p">)</span>          <span class="c1"># decomposing using our formula(sage reads permutation composition from right to left)</span>
@@ -2000,7 +2034,7 @@ document.write(`
 </section>
 </section>
 <section id="lecture-10-11-the-parity-theorem">
-<h2>Lecture 10&amp;11 - The parity theorem<a class="headerlink" href="#lecture-10-11-the-parity-theorem" title="Link to this heading">#</a></h2>
+<h3>Lecture 10&amp;11 - The parity theorem<a class="headerlink" href="#lecture-10-11-the-parity-theorem" title="Link to this heading">#</a></h3>
 <p>Using this formula, we can find that every permutation can be represented as a product of 2-cycles. This is why the swap puzzle is always solvable when the rule is to swap any two boxes.</p>
 <p>Earlier, we found that a swap puzzle can only be solved with 3-cycles if it requried an even number of swaps to solve.</p>
 <div class="cell docutils container">
@@ -2088,7 +2122,7 @@ document.write(`
 </ul>
 </section>
 <section id="lecture-12-a-n-and-3-cycles">
-<h2>Lecture 12 - <span class="math notranslate nohighlight">\(A_n\)</span> and 3-cycles<a class="headerlink" href="#lecture-12-a-n-and-3-cycles" title="Link to this heading">#</a></h2>
+<h3>Lecture 12 - <span class="math notranslate nohighlight">\(A_n\)</span> and 3-cycles<a class="headerlink" href="#lecture-12-a-n-and-3-cycles" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Permutations are come in 2 types, even and odd.</p></li>
 <li><p>Even permutations(Alternating group): <span class="math notranslate nohighlight">\(A_n\)</span></p></li>
@@ -2140,7 +2174,7 @@ document.write(`
 </div>
 </section>
 <section id="lectures-13-14-the-15-puzzle">
-<h2>Lectures 13&amp;14 - The 15-puzzle<a class="headerlink" href="#lectures-13-14-the-15-puzzle" title="Link to this heading">#</a></h2>
+<h3>Lectures 13&amp;14 - The 15-puzzle<a class="headerlink" href="#lectures-13-14-the-15-puzzle" title="Link to this heading">#</a></h3>
 <p>For 15-puzzle, see puzzles section.</p>
 <ul class="simple">
 <li><p>In the 1880s, the world went crazy trying to solve the 14-15 puzzle.</p>
@@ -2206,11 +2240,14 @@ document.write(`
 </div>
 </div>
 </section>
+</section>
+<section id="group-theory">
+<h2>Group Theory<a class="headerlink" href="#group-theory" title="Link to this heading">#</a></h2>
 <section id="lectures-15-17-groups">
-<h2>Lectures 15&amp;17 - Groups<a class="headerlink" href="#lectures-15-17-groups" title="Link to this heading">#</a></h2>
+<h3>Lectures 15&amp;17 - Groups<a class="headerlink" href="#lectures-15-17-groups" title="Link to this heading">#</a></h3>
 <p>Lecture 16 is a review for midterm 1.</p>
 <section id="group-basics">
-<h3>Group basics<a class="headerlink" href="#group-basics" title="Link to this heading">#</a></h3>
+<h4>Group basics<a class="headerlink" href="#group-basics" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Group: A nonempty set <span class="math notranslate nohighlight">\(G\)</span> together with a binary operation.</p>
 <ul>
@@ -2248,7 +2285,7 @@ document.write(`
 </ul>
 </section>
 <section id="cayley-tables">
-<h3>Cayley tables<a class="headerlink" href="#cayley-tables" title="Link to this heading">#</a></h3>
+<h4>Cayley tables<a class="headerlink" href="#cayley-tables" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A4</span><span class="o">=</span><span class="n">AlternatingGroup</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
@@ -2279,7 +2316,7 @@ document.write(`
 </div>
 </section>
 <section id="cyclic-groups">
-<h3>Cyclic groups<a class="headerlink" href="#cyclic-groups" title="Link to this heading">#</a></h3>
+<h4>Cyclic groups<a class="headerlink" href="#cyclic-groups" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Cyclic group elements can all be generated by one element <span class="math notranslate nohighlight">\(g=\begin{pmatrix}0&amp;1&amp;2\cdots n-1\end{pmatrix}\)</span>.</p></li>
 <li><p>Cyclic group: <span class="math notranslate nohighlight">\(G=\{\epsilon,g,g^2,\cdots,g^{n-1}\}\)</span></p></li>
@@ -2343,7 +2380,7 @@ document.write(`
 </ul>
 </section>
 <section id="dihedral-groups">
-<h3>Dihedral groups<a class="headerlink" href="#dihedral-groups" title="Link to this heading">#</a></h3>
+<h4>Dihedral groups<a class="headerlink" href="#dihedral-groups" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Dihedral group: A dihedral group of order <span class="math notranslate nohighlight">\(n\)</span> is the symmetries for a regular shape with <span class="math notranslate nohighlight">\(n\)</span> sides.</p></li>
 </ul>
@@ -2397,7 +2434,7 @@ document.write(`
 </div>
 </section>
 <section id="multiplication-groups">
-<h3>Multiplication groups<a class="headerlink" href="#multiplication-groups" title="Link to this heading">#</a></h3>
+<h4>Multiplication groups<a class="headerlink" href="#multiplication-groups" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Multiplication groups(aka U groups): These groups are the same as cyclic groups except we multiply the numbers.</p>
 <ul>
@@ -2466,7 +2503,7 @@ document.write(`
 </section>
 </section>
 <section id="lecture-18-subgroups">
-<h2>Lecture 18 - Subgroups<a class="headerlink" href="#lecture-18-subgroups" title="Link to this heading">#</a></h2>
+<h3>Lecture 18 - Subgroups<a class="headerlink" href="#lecture-18-subgroups" title="Link to this heading">#</a></h3>
 <p>Subgroup: A group that has the same operation as another group but the set is a subset of the original set.</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(H=\{\epsilon,\begin{pmatrix}1&amp;2&amp;3\end{pmatrix},\begin{pmatrix}1&amp;3&amp;2\end{pmatrix}\}\)</span> is a subgroup because it does not violate closure and every element has its inverse.</p></li>
@@ -2614,7 +2651,7 @@ document.write(`
 </div>
 </section>
 <section id="lecture-19-puzzle-groups">
-<h2>Lecture 19 - Puzzle Groups<a class="headerlink" href="#lecture-19-puzzle-groups" title="Link to this heading">#</a></h2>
+<h3>Lecture 19 - Puzzle Groups<a class="headerlink" href="#lecture-19-puzzle-groups" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#RC3</span>
@@ -2664,7 +2701,7 @@ document.write(`
 </div></blockquote>
 </section>
 <section id="lecture-20-21-commutators-and-conjugates">
-<h2>Lecture 20&amp;21 - Commutators and Conjugates<a class="headerlink" href="#lecture-20-21-commutators-and-conjugates" title="Link to this heading">#</a></h2>
+<h3>Lecture 20&amp;21 - Commutators and Conjugates<a class="headerlink" href="#lecture-20-21-commutators-and-conjugates" title="Link to this heading">#</a></h3>
 <p>Commutator: <span class="math notranslate nohighlight">\([g,h]=ghg^{-1}h^{-1}\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2706,12 +2743,12 @@ $<span class="math notranslate nohighlight">\(mov([\alpha,\beta])=(mov(\beta)\cu
 </div></blockquote>
 </div></blockquote>
 </section>
-<section id="lecture-22-oval-track">
-<h2>Lecture 22 - Oval Track<a class="headerlink" href="#lecture-22-oval-track" title="Link to this heading">#</a></h2>
+<section id="lecture-22-23-oval-track">
+<h3>Lecture 22&amp;23 - Oval Track<a class="headerlink" href="#lecture-22-23-oval-track" title="Link to this heading">#</a></h3>
 <p>Oval Track puzzle</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\([R^{-3},T]=(1\enspace4\enspace7)(2\enspace3)(5\enspace6)\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\([R^{-3},T]^2=[R^{-3}TR^3,T]=(1\enspace4\enspace7)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\([R^{-3},T]^2=[R^{-3}TR^3,T]=(1~4~7)\)</span></p></li>
 <li><p>Any three tiles can be 3-cycled by putting them in positions 1,4,7 and 3-cycling them(and putting them back to the original position).</p></li>
 <li><p><span class="math notranslate nohighlight">\((1\enspace2\enspace3)=\beta(1\enspace4\enspace7)\beta^{-1}\)</span></p>
 <ul>
@@ -2735,16 +2772,183 @@ $<span class="math notranslate nohighlight">\(mov([\alpha,\beta])=(mov(\beta)\cu
 </div>
 </div>
 </div>
+<p>Shortest 2-cycle: <span class="math notranslate nohighlight">\((TR^{-1})^{17}=\begin{pmatrix}1\enspace3\end{pmatrix}\)</span></p>
+<p>Strategy</p>
+<ol class="arabic simple">
+<li><p>Position 1-16(this should be easy).</p></li>
+<li><p>Check what cycle last 4 tiles are consisted of.</p>
+<ul class="simple">
+<li><p>2-cycle: Use 2-cycle move.</p></li>
+<li><p>3-cycle: Use 3-cycle move.</p></li>
+<li><p>4-cycle: Try make it a 2-cycle using a turntable move, if this doesn’t work, use a 3-cycle to make into 2-cycle.</p></li>
+<li><p>2 2-cycles: Use 2 3-cycle or 2 2-cycle moves</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="lecture-24-partitions-and-equivalence-relations">
+<h3>Lecture 24 - Partitions and Equivalence Relations<a class="headerlink" href="#lecture-24-partitions-and-equivalence-relations" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Partition: A partition of a set is a way of dividing all the elements into many subsets such that all elements are in one of the subsets and all the subsets are disjoint.</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(p\)</span>(pieces on Rubik’s cube) can be partitioned into <span class="math notranslate nohighlight">\(E\)</span>(edge), <span class="math notranslate nohighlight">\(V\)</span>(vertex) and <span class="math notranslate nohighlight">\(F\)</span>(face).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Z\)</span> can be partitioned into <span class="math notranslate nohighlight">\(O\)</span>(odd) and <span class="math notranslate nohighlight">\(E\)</span>(even).</p></li>
+</ul>
+</li>
+<li><p>Relation: Let <span class="math notranslate nohighlight">\(A\)</span> be a set. A subset <span class="math notranslate nohighlight">\(R\sub A\times A\)</span> is called a relation in <span class="math notranslate nohighlight">\(A\)</span>. If <span class="math notranslate nohighlight">\((x,y)\in R\)</span> then we say <span class="math notranslate nohighlight">\(x\)</span> is related to <span class="math notranslate nohighlight">\(y\)</span>(shorthand: <span class="math notranslate nohighlight">\(xRy\)</span>).</p>
+<ul>
+<li><p>Note: If <span class="math notranslate nohighlight">\(x\)</span> is related to <span class="math notranslate nohighlight">\(y\)</span>, <span class="math notranslate nohighlight">\(y\)</span> is not neccesarily related to <span class="math notranslate nohighlight">\(x\)</span> because the fact that <span class="math notranslate nohighlight">\((x,y)\)</span> is in the relation doesn’t tell us anything about whether <span class="math notranslate nohighlight">\((y,x)\)</span> is in the relation.</p></li>
+</ul>
+</li>
+<li><p>Equivalence relation: A special type of relation that satisfies 3 conditions.</p>
+<ul>
+<li><p>Reflexive property: Each element is related to itself(<span class="math notranslate nohighlight">\(aRa\)</span> for all <span class="math notranslate nohighlight">\(a\in A\)</span>).</p></li>
+<li><p>Symmetric property: If <span class="math notranslate nohighlight">\(aRb\)</span> then <span class="math notranslate nohighlight">\(bRa\)</span>.</p></li>
+<li><p>Transitive property: If <span class="math notranslate nohighlight">\(aRb\)</span> and <span class="math notranslate nohighlight">\(bRc\)</span> then <span class="math notranslate nohighlight">\(aRc\)</span>.</p></li>
+<li><p>Note: If <span class="math notranslate nohighlight">\(R\)</span> is a equivalence relation we typically write <span class="math notranslate nohighlight">\(x\sim y\)</span> or <span class="math notranslate nohighlight">\(x\equiv y\)</span> instead of <span class="math notranslate nohighlight">\(xRy\)</span>.</p></li>
+</ul>
+</li>
+<li><p>Equivalence class: <span class="math notranslate nohighlight">\([a]=\{x\in A|x\sim a\}\)</span></p>
+<ul>
+<li><p>We call <span class="math notranslate nohighlight">\(a\)</span> the representative of <span class="math notranslate nohighlight">\(A\)</span>.</p></li>
+<li><p>You can also think of this as an electorate.</p></li>
+<li><p><span class="math notranslate nohighlight">\(x\in[x]\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(x\sim y\iff[x]=[y]\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\([x]=[y]\)</span> or <span class="math notranslate nohighlight">\([x]\cap[y]=\emptyset\)</span></p></li>
+</ul>
+</li>
+<li><p>We can use equivalence relations to partition sets.</p></li>
+<li><p><span class="math notranslate nohighlight">\(R=\cup_{i=1}^nA_i\times A_i\)</span></p></li>
+<li><p>Representatives of each subset: <span class="math notranslate nohighlight">\(A/\sim\)</span></p></li>
+</ul>
+</section>
+<section id="lecture-25-cosets-and-lagrange-s-theorem">
+<h3>Lecture 25 - Cosets and Lagrange’s Theorem<a class="headerlink" href="#lecture-25-cosets-and-lagrange-s-theorem" title="Link to this heading">#</a></h3>
+<ul>
+<li><p>Let <span class="math notranslate nohighlight">\(H\)</span> be a subgroup of <span class="math notranslate nohighlight">\(G\)</span>. For <span class="math notranslate nohighlight">\(a,b\in G\)</span> define,</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(a\sim_Hb\iff a^{-1}b\in H\)</span></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(a\)</span> related to <span class="math notranslate nohighlight">\(b\)</span> mod <span class="math notranslate nohighlight">\(H\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(a^{-1}=h\)</span> for <span class="math notranslate nohighlight">\(h\in H\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(b=ah\)</span> for <span class="math notranslate nohighlight">\(h\in H\)</span></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><span class="math notranslate nohighlight">\(\sim_H\)</span> is an equivalence relation on <span class="math notranslate nohighlight">\(G\)</span>,</p>
+<ul class="simple">
+<li><p>Reflexitivity: For <span class="math notranslate nohighlight">\(a\in G\)</span>, <span class="math notranslate nohighlight">\(a^{-1}a=e\in H\implies a\sim_Ha\)</span></p></li>
+<li><p>Symmetrical: <span class="math notranslate nohighlight">\(a\sim_Hb\implies a^{-1}b\in H\implies(a^{-1}b)^{-1}\in H\implies b^{-1}a\in H\implies b\sim_Ha\)</span></p></li>
+<li><p>Transitivity: Let <span class="math notranslate nohighlight">\(a\sim_Hb\)</span> and <span class="math notranslate nohighlight">\(b\sim_Hc\)</span>. <span class="math notranslate nohighlight">\(a^{-1}b,b^{-1}c\in H\implies(a^{-1}b)(b^{-1}c)\in H\implies a^{-1}c\in H\implies a\sim_Hc\)</span></p></li>
+</ul>
+</li>
+<li><p>For <span class="math notranslate nohighlight">\(a\in G\)</span>, the equivalence class <span class="math notranslate nohighlight">\([a]\)</span> is,</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\([a]=\{b\in G|a\sim_Hb\}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\quad~=\{b\in G|a^{-1}b\in H\}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\quad~=\{b\in G|a^{-1}b=h\}\)</span> for some <span class="math notranslate nohighlight">\(h\in H\)</span></p>
+<p><span class="math notranslate nohighlight">\(\quad~=\{b\in G|b=ah\}\)</span> for some <span class="math notranslate nohighlight">\(h\in H=aH\)</span></p>
+</li>
+</ul>
+</li>
+<li><p><span class="math notranslate nohighlight">\(aH=\{ah|h\in H\}\)</span></p>
+<ul class="simple">
+<li><p>We call this the left coset of <span class="math notranslate nohighlight">\(H\)</span> containing <span class="math notranslate nohighlight">\(a\)</span>.</p></li>
+</ul>
+</li>
+<li><p><span class="math notranslate nohighlight">\(Ha=\{ha|h\in H\}\)</span></p>
+<ul class="simple">
+<li><p>Similarly, this is the right coset of <span class="math notranslate nohighlight">\(H\)</span> containing <span class="math notranslate nohighlight">\(a\)</span>.</p></li>
+</ul>
+</li>
+<li><p>Example: <span class="math notranslate nohighlight">\(S_3=\{\epsilon,(1~2),(1~3),(2~3),(1~2~3),(1~3~2)\}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(H=&lt;(2~3)&gt;=\{\epsilon,(2~3)\}\)</span></p></li>
+<li><p>Cosets</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\epsilon H=\{\epsilon,(2~3)\}=(2~3)H\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((1~2)H=\{(1~2),(1~3~2)\}=(1~3~2)H\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((1~3)H=\{(1~3),(1~2~3)\}=(1~2~3)H\)</span></p></li>
+<li><p>These cosets partition <span class="math notranslate nohighlight">\(S_3\)</span> into 3 subsets of equal size.</p></li>
+</ul>
+</li>
+<li><p>It also turns out that the right cosets partition it in the same way(this is not always the case).</p></li>
+<li><p>We can also split <span class="math notranslate nohighlight">\(\Z_16\)</span> into 4 subsets in a similar way using addition and the subgroup <span class="math notranslate nohighlight">\(H=\{0,4,8,12\}\)</span></p></li>
+</ul>
+<ul class="simple">
+<li><p>Properties of cosets</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(a\in aH\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(aH=H\iff a\in H\)</span></p></li>
+<li><p>For <span class="math notranslate nohighlight">\(a,b\in G\)</span>, either <span class="math notranslate nohighlight">\(aH=bH\)</span> or <span class="math notranslate nohighlight">\(aH\cap bH=\emptyset\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(aH=bH\iff a^{-1}b\in H\iff b^{-1}a\in H\)</span></p></li>
+<li><p>If <span class="math notranslate nohighlight">\(H\)</span> is finite then <span class="math notranslate nohighlight">\(|aH|=|H|\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(aH=Ha\iff a^{-1}Ha=H\)</span></p></li>
+</ul>
+</li>
+<li><p>The map <span class="math notranslate nohighlight">\(\psi: H\rightarrow aH\)</span> is bijective.</p></li>
+<li><p>Using the fact that all cosets have the same size, we can prove Lagrange’s theorem(proof omitted).</p></li>
+<li><p>Stuff derived from Lagrange’s theorem</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(ord(a)\)</span> divides <span class="math notranslate nohighlight">\(|G|\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(a^{|G|}=e\)</span></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="lecture-27-28-fundamental-theorem-of-cubology">
+<h3>Lecture 27&amp;28 - Fundamental Theorem of Cubology<a class="headerlink" href="#lecture-27-28-fundamental-theorem-of-cubology" title="Link to this heading">#</a></h3>
+<blockquote>
+<div><blockquote>
+<div><p>Note: Lecture 26 was skipped because it just goes over how to solve cube using the moves we already developed.</p>
+</div></blockquote>
+</div></blockquote>
+<ul class="simple">
+<li><p>Each configuration of the Rubik’s cube can be represented using a 4-tuple</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(p\)</span>: Permutation of corner cubies, i.e. <span class="math notranslate nohighlight">\(p\in S_8\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\sigma\)</span>: Permutation of edge cubies, i.e. <span class="math notranslate nohighlight">\(\sigma\in S_12\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\vec v\)</span>: Encoding of orientation of corner cubies(8 numbers)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\vec w\)</span>: Encoding of orientation of edge cubies(12 numbers)</p></li>
+</ul>
+</li>
+<li><p>To help us determine the permutation and encoding of corner and edge cubies, we can number each corner and edge position and choose a primary facet for each cubie(note that the facets do not move although the cubies do).</p></li>
+<li><p>We also label each facet with a number with the primary facets being 0, going clockwise around a corner and all other facets being 1(they should be on an edge).</p></li>
+<li><p>Examples ommited(cube drawings are quite chunky).</p></li>
+<li><p>The set <span class="math notranslate nohighlight">\(RC_3^*=S_8\times S_12\times\Z_3^8\times\Z_2^12\)</span> is the Illegal Cube Group or the Assembly Group that contains all possible cube positions when reassemblying is allowed.</p></li>
+<li><p>To determine whether a cube position is solvable,</p>
+<ul>
+<li><p>The permutation of the edge and corner pieces have to have the same parity.</p></li>
+<li><p>The sum of the vector for the edge pieces have to be even.</p></li>
+<li><p>The sum of the vector for the corner pieces have to be <span class="math notranslate nohighlight">\(0\mod 3\)</span>.</p></li>
+<li><p>Proof of conditions is omitted.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="lecture-29-subgroups-of-rc-3">
+<h3>Lecture 29 - Subgroups of <span class="math notranslate nohighlight">\(RC_3\)</span><a class="headerlink" href="#lecture-29-subgroups-of-rc-3" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Let <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> be 2 elements of <span class="math notranslate nohighlight">\(RC_3\)</span>,</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(X=(\rho,\sigma,\vec v,\vec w)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(Y=(\rho^*,\sigma^*,\vec v^*,\vec w^*)\)</span></p></li>
+</ul>
+</li>
+<li></li>
+</ul>
 </section>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="jamie-coding">
-<h1><strong>Jamie Coding</strong><a class="headerlink" href="#jamie-coding" title="Link to this heading">#</a></h1>
-<section id="lecture-28-identification-numbers">
-<h2>Lecture 28: Identification Numbers<a class="headerlink" href="#lecture-28-identification-numbers" title="Link to this heading">#</a></h2>
+<section id="applications">
+<h2>Applications<a class="headerlink" href="#applications" title="Link to this heading">#</a></h2>
+<section id="symmetry-counting">
+<h3>Symmetry &amp; Counting<a class="headerlink" href="#symmetry-counting" title="Link to this heading">#</a></h3>
+</section>
+<section id="identification-numbers">
+<h3>Identification Numbers<a class="headerlink" href="#identification-numbers" title="Link to this heading">#</a></h3>
 <p>Identification numbers are everywhere: grocery items, driver’s licence, credit cards, ISBN’s, money orders, bank accounts, library, UPS packages, books, etc.  Quick methods for checking whether an identification number is “valid” are important for detecting scanning errors, and human transcription errors.</p>
 <p>Below we briefly discuss three types of identification numbers: UPC, ISBN, and credit cards, and the mathematics behind checking them for validity.</p>
-<section id="universal-product-code-upc">
-<h3>Universal Product Code (UPC)<a class="headerlink" href="#universal-product-code-upc" title="Link to this heading">#</a></h3>
+<p><strong>Universal Product Code (UPC)</strong></p>
 <p>UPC codes are the bar codes found on all items sold in stores.</p>
 <img src='http://www.sfu.ca/~jtmulhol/math302/images/identification-codes-jupyternb/upc-code.png' width = "200px">
 <p>code:  <span class="math notranslate nohighlight">\(\overrightarrow{b} = (b_1,b_2,b_3, \ldots, b_{12})\)</span></p>
@@ -2760,10 +2964,7 @@ $<span class="math notranslate nohighlight">\( \overrightarrow{b}\cdot \overrigh
 </div>
 </div>
 </div>
-</section>
-<section id="international-standard-book-number-isbn-10">
-<h3>International Standard Book Number (ISBN-10)###<a class="headerlink" href="#international-standard-book-number-isbn-10" title="Link to this heading">#</a></h3>
-<p>(replaced with ISBN 13 after January 2007)</p>
+<p><strong>International Standard Book Number (ISBN-10)</strong></p>
 <img src='http://www.sfu.ca/~jtmulhol/math302/images/identification-codes-jupyternb/ISBN-10-code.png' width = "200px">
 <p>code:  <span class="math notranslate nohighlight">\(\overrightarrow{b} = (b_1,b_2,b_3, \ldots, b_{10})\)</span></p>
 <p>weight: <span class="math notranslate nohighlight">\(\overrightarrow{w} = (10,9,8,7,6,5,4,3,2,1)\)</span></p>
@@ -2778,9 +2979,7 @@ $<span class="math notranslate nohighlight">\( \overrightarrow{b}\cdot \overrigh
 </div>
 </div>
 </div>
-</section>
-<section id="international-standard-book-number-isbn-13">
-<h3>International Standard Book Number (ISBN-13)###<a class="headerlink" href="#international-standard-book-number-isbn-13" title="Link to this heading">#</a></h3>
+<p><strong>International Standard Book Number (ISBN-13)</strong></p>
 <p>(replaced ISBN 10 after January 2007)</p>
 <p>ISBN-10-code.png
 <img src='http://www.sfu.ca/~jtmulhol/math302/images/identification-codes-jupyternb/ISBN-13-code.png' width = "200px"></p>
@@ -2806,9 +3005,7 @@ $<span class="math notranslate nohighlight">\( \overrightarrow{b}\cdot \overrigh
 </div>
 </div>
 </div>
-</section>
-<section id="credit-card-validation">
-<h3>Credit Card Validation:###<a class="headerlink" href="#credit-card-validation" title="Link to this heading">#</a></h3>
+<p><strong>Credit Card Validation:</strong></p>
 <p>The Luhn algorithm was developed by German computer scientist Hans Peter Luhn in 1954. It is a simple checksum formula used to validate identification numbers such as credit card numbers. The algorithm was designed to protect against accidental errors, such as a digit mistyping. It is used in the situation when a user has keyed in a credit card number (or scanned it) and wants to validate it before sending it our for debit authorization.</p>
 <img src='http://www.sfu.ca/~jtmulhol/math302/images/identification-codes-jupyternb/MasterCard-invalid.png' width = "300px">
 <img src='http://www.sfu.ca/~jtmulhol/math302/images/identification-codes-jupyternb/luhn-validator.png' width = "600px">
@@ -2848,11 +3045,9 @@ divmod(d*2, 10) -&gt; (quotient, remainder) -&gt; this allows us to sum digits o
 </div>
 </div>
 </section>
-</section>
-<section id="lecture-29-lights-out-no-youtube-video">
-<h2>Lecture 29: Lights Out (no Youtube video)<a class="headerlink" href="#lecture-29-lights-out-no-youtube-video" title="Link to this heading">#</a></h2>
-<section id="solving-linear-systems-matrix-in-sagemath">
-<h3>24.2.2 Solving Linear Systems (Matrix) in SageMath<a class="headerlink" href="#solving-linear-systems-matrix-in-sagemath" title="Link to this heading">#</a></h3>
+<section id="chpt-24-lights-out-no-video">
+<h3>Chpt 24 - Lights Out (no video)<a class="headerlink" href="#chpt-24-lights-out-no-video" title="Link to this heading">#</a></h3>
+<p><strong>24.2.2 Solving Linear Systems (Matrix) in SageMath</strong></p>
 <p>Here is an example of using SageMath to solve the linear system:
 $<span class="math notranslate nohighlight">\(
 \begin{bmatrix}
@@ -2952,9 +3147,7 @@ $<span class="math notranslate nohighlight">\(
 </div>
 </div>
 </div>
-</section>
-<section id="solvable-configuration">
-<h3>24.2.3 Solvable Configuration<a class="headerlink" href="#solvable-configuration" title="Link to this heading">#</a></h3>
+<p><strong>24.2.3 Solvable Configuration</strong></p>
 <p>A lit button configuration <span class="math notranslate nohighlight">\(\boldsymbol{b}\)</span> is solvable if the corresponding linear system <span class="math notranslate nohighlight">\(A\boldsymbol{x}= \boldsymbol{b}\)</span> has a solution.
 From linear algebra we know</p>
 <div class="math notranslate nohighlight">
@@ -2997,9 +3190,7 @@ From linear algebra we know</p>
 </div>
 </div>
 <p>Therefore only <span class="math notranslate nohighlight">\(23\)</span> buttons are required to solve any configuration, and if each one can either be pressed or not, then there are <span class="math notranslate nohighlight">\(2^{23}\)</span> solvable configurations, out of a possible <span class="math notranslate nohighlight">\(2^{25}\)</span> configurations.  Therefore the probability that a random configuration is solvable is 1/4.</p>
-</section>
-<section id="quite-patterns-null-space-of-lights-out-matrix">
-<h3>Quite Patterns (Null Space of Lights Out Matrix)<a class="headerlink" href="#quite-patterns-null-space-of-lights-out-matrix" title="Link to this heading">#</a></h3>
+<p><strong>Quite Patterns (Null Space of Lights Out Matrix)</strong></p>
 <p>There exist sequences of button presses that will leave the lights unchanged.  These are known as <strong>quiet patterns</strong>. Such a sequence <strong>x</strong> is a solution to the homogeneous equation <span class="math notranslate nohighlight">\(A\boldsymbol{x}= \boldsymbol{0}\)</span>.  That is, <strong>x</strong> is in the null space of <span class="math notranslate nohighlight">\(A\)</span>, denoted by <span class="math notranslate nohighlight">\(\text{nul}(A)\)</span>.  Since <span class="math notranslate nohighlight">\(A\)</span> has rank 23 then it has nullity 2 and so <span class="math notranslate nohighlight">\(\text{nul}(A)\)</span> contains 4 vectors:</p>
 <p>\begin{align*}
 \text{nul}(A)&amp; = \text{span}(\boldsymbol{d}_1,\boldsymbol{d}_2) = { r_1\boldsymbol{d}_1+r_2\boldsymbol{d}_2 \ |\ r_1, r_2 \in \mathbb{F}_2}\
@@ -3016,9 +3207,7 @@ From linear algebra we know</p>
 <p>Therefore, all solutions for <span class="math notranslate nohighlight">\(\boldsymbol{b}\)</span> are <span class="math notranslate nohighlight">\(\boldsymbol{s_1}+\text{nul}(A)\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\{ \boldsymbol{s_1},  \boldsymbol{s_1}+\boldsymbol{d}_1,  \boldsymbol{s_1}+\boldsymbol{d}_2, \boldsymbol{s_1}+\boldsymbol{d}_1+ \boldsymbol{d}_2 \}\]</div>
-</section>
-<section id="optimal-solution-to-lights-out">
-<h3>24.2.4 Optimal Solution to Lights Out<a class="headerlink" href="#optimal-solution-to-lights-out" title="Link to this heading">#</a></h3>
+<p><strong>24.2.4 Optimal Solution to Lights Out</strong></p>
 <p>First we define a function which counts the number of 1’s in a vector.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3065,9 +3254,7 @@ From linear algebra we know</p>
 </div>
 </div>
 <p>An optimal solution is (1, 0, 0, 0, 1,   0, 0, 0, 1, 0,   0, 1, 0, 1, 0,   0, 1, 0, 0, 0,  1, 0, 0, 0, 1), which contains 8 presses.</p>
-</section>
-<section id="summary-of-lights-out-5x5">
-<h3>24.3 Summary of Lights Out (5x5)<a class="headerlink" href="#summary-of-lights-out-5x5" title="Link to this heading">#</a></h3>
+<p><strong>24.3 Summary of Lights Out (5x5)</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Definition of the matrix for Lights Out</span>
@@ -3123,9 +3310,7 @@ From linear algebra we know</p>
 </div>
 </div>
 </div>
-</section>
-<section id="eigenvalues-and-eigenvectors">
-<h3>24.4 Eigenvalues and Eigenvectors<a class="headerlink" href="#eigenvalues-and-eigenvectors" title="Link to this heading">#</a></h3>
+<p><strong>24.4 Eigenvalues and Eigenvectors</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">I25</span><span class="o">=</span><span class="n">MatrixSpace</span><span class="p">(</span><span class="n">GF</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span><span class="mi">25</span><span class="p">,</span><span class="mi">25</span><span class="p">)</span><span class="o">.</span><span class="n">identity_matrix</span><span class="p">()</span>   <span class="c1"># 25x25 identity matrix</span>
@@ -3194,74 +3379,72 @@ From linear algebra we know</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Permutation Puzzles</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#puzzles">Puzzles</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cube-moves">Cube Moves</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combinatorics">Combinatorics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-0-course-intro">Lecture 0 - Course Intro</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-1-permutation-puzzles-intro">Lecture 1 - Permutation Puzzles Intro</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-2-set-theory">Lecture 2 - Set theory</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-3-appendix-b-basic-properties-of-integers">Lecture 3 - Appendix B: Basic properties of integers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lectures-4-5-permutations">Lectures 4&amp;5 - Permutations</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#book-exercises">Book exercises</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#foundations">Foundations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#puzzles">Puzzles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cube-moves">Cube Moves</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#combinatorics">Combinatorics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-0-course-intro">Lecture 0 - Course Intro</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-1-permutation-puzzles-intro">Lecture 1 - Permutation Puzzles Intro</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-2-set-theory">Lecture 2 - Set theory</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-3-appendix-b-basic-properties-of-integers">Lecture 3 - Appendix B: Basic properties of integers</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-6-permutations-cycle-form">Lecture 6 - Permutations: Cycle Form</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lectures-7-8-representing-puzzles-by-permutations">Lectures 7&amp;8 - Representing puzzles by Permutations</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Book exercises</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#permutation">Permutation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lectures-4-5-permutations">Lectures 4&amp;5 - Permutations</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#book-exercises">Book exercises</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-9-products-of-2-cycles">Lecture 9 - Products of 2-cycles</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Book exercises</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-6-permutations-cycle-form">Lecture 6 - Permutations: Cycle Form</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lectures-7-8-representing-puzzles-by-permutations">Lectures 7&amp;8 - Representing puzzles by Permutations</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Book exercises</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-10-11-the-parity-theorem">Lecture 10&amp;11 - The parity theorem</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-12-a-n-and-3-cycles">Lecture 12 - <span class="math notranslate nohighlight">\(A_n\)</span> and 3-cycles</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lectures-13-14-the-15-puzzle">Lectures 13&amp;14 - The 15-puzzle</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lectures-15-17-groups">Lectures 15&amp;17 - Groups</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#group-basics">Group basics</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cayley-tables">Cayley tables</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cyclic-groups">Cyclic groups</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dihedral-groups">Dihedral groups</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplication-groups">Multiplication groups</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-9-products-of-2-cycles">Lecture 9 - Products of 2-cycles</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Book exercises</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-18-subgroups">Lecture 18 - Subgroups</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-19-puzzle-groups">Lecture 19 - Puzzle Groups</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-20-21-commutators-and-conjugates">Lecture 20&amp;21 - Commutators and Conjugates</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-22-oval-track">Lecture 22 - Oval Track</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-10-11-the-parity-theorem">Lecture 10&amp;11 - The parity theorem</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-12-a-n-and-3-cycles">Lecture 12 - <span class="math notranslate nohighlight">\(A_n\)</span> and 3-cycles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lectures-13-14-the-15-puzzle">Lectures 13&amp;14 - The 15-puzzle</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jamie-coding"><strong>Jamie Coding</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-28-identification-numbers">Lecture 28: Identification Numbers</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#universal-product-code-upc">Universal Product Code (UPC)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#international-standard-book-number-isbn-10">International Standard Book Number (ISBN-10)###</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#international-standard-book-number-isbn-13">International Standard Book Number (ISBN-13)###</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#credit-card-validation">Credit Card Validation:###</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#group-theory">Group Theory</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lectures-15-17-groups">Lectures 15&amp;17 - Groups</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#group-basics">Group basics</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cayley-tables">Cayley tables</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cyclic-groups">Cyclic groups</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dihedral-groups">Dihedral groups</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplication-groups">Multiplication groups</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-29-lights-out-no-youtube-video">Lecture 29: Lights Out (no Youtube video)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-linear-systems-matrix-in-sagemath">24.2.2 Solving Linear Systems (Matrix) in SageMath</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solvable-configuration">24.2.3 Solvable Configuration</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quite-patterns-null-space-of-lights-out-matrix">Quite Patterns (Null Space of Lights Out Matrix)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optimal-solution-to-lights-out">24.2.4 Optimal Solution to Lights Out</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-lights-out-5x5">24.3 Summary of Lights Out (5x5)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenvalues-and-eigenvectors">24.4 Eigenvalues and Eigenvectors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-18-subgroups">Lecture 18 - Subgroups</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-19-puzzle-groups">Lecture 19 - Puzzle Groups</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-20-21-commutators-and-conjugates">Lecture 20&amp;21 - Commutators and Conjugates</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-22-23-oval-track">Lecture 22&amp;23 - Oval Track</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-24-partitions-and-equivalence-relations">Lecture 24 - Partitions and Equivalence Relations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-25-cosets-and-lagrange-s-theorem">Lecture 25 - Cosets and Lagrange’s Theorem</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-27-28-fundamental-theorem-of-cubology">Lecture 27&amp;28 - Fundamental Theorem of Cubology</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-29-subgroups-of-rc-3">Lecture 29 - Subgroups of <span class="math notranslate nohighlight">\(RC_3\)</span></a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applications">Applications</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetry-counting">Symmetry &amp; Counting</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#identification-numbers">Identification Numbers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chpt-24-lights-out-no-video">Chpt 24 - Lights Out (no video)</a></li>
 </ul>
 </li>
 </ul>
-
   </nav></div>
 
 </div></div>
@@ -3309,8 +3492,8 @@ By Jonny, assisted by Tom
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

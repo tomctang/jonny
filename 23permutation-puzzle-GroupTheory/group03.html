@@ -1,0 +1,2416 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>&lt;no title&gt; &#8212; Jonny Workbook</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=550f00eb" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=1ae7504c"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '23permutation-puzzle-GroupTheory/group03';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Jonny Workbook</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Math &amp; FP/Language</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../past/Alevel_math.html">A-level-math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../past/Alevel_math_further.html">A-level-further</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../past/Course_MCM.html">Math Computational Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Course_Lean.html">Lean</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Course_Puzzle_Group.html">Permutation Puzzles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Course_5U.html">5U - Ext III</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">CS &amp; Physics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../past/Course_MIT6001Python.html">MIT_CS6001-Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../past/Course_MIT6002thinking.html">MIT_CS6002-CS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PE100.html">Project Euler Q1-100</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../past/Course_MCM_QM.html">Quantum Mechanics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Notebook &amp; Tom</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../past/nb_past_courses.html">Past courses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../past/nb_Geo.html">Geography and Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../past/nb_lottery_simulator.html">Lottery Math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../past/How_Dad_organise_QM.html">How Dad learn QM</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../Course_MCM_QFT.html">QFT</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/tomctang/jonny" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/23permutation-puzzle-GroupTheory/group03.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <!-- Group03 -->
+<html>
+<body>
+<!-- To make the size of the font bigger for presentations, change the following command from +1 to +2 -->
+<font size="+1">
+<p style='font-size: 36px;font-family: Arial;font-style: italic;font-weight: bold;color: #FF00FF;background-color: #80FFFF;text-align: center;'>
+Abstract Algebra: An Interactive Approach, 3e
+</p>
+<p style='font-family: Geneva;font-style: italic;color: #0000FF;background-color: #FFFFFF;'>
+&copy;2023 This notebook is provided with the textbook, &quot;Abstract Algebra: An Interactive Approach, 3rd Ed.&quot; by William Paulsen. Users of this notebook are encouraged to buy the textbook.
+</p>
+<p style='font-size: 36px;font-family: New York;font-weight: bold;color: #000000;background-color: #FFFFFF;text-align: center;border: 1px;border-style: 
+solid;border-color: #000000;'>
+Chapter 3: The Structure Within a Group
+</p>
+<p style='text-align: center;'>Initialization:  This cell MUST be evaluated first:</p><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;absalgtext2.sage&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Initialization Done
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+<a href="#sec31">Generators of Groups</a><br>
+<a href="#sec32">Defining Finite Groups in <em>SageMath</em></a><br>
+<a href="#sec33">Subgroups</a><br>
+<a href="#sec3p"><em>SageMath</em> Interactive Problems</a><br><p><a name="sec31" id="sec31"></a></p>
+<h1>Generators of Groups</h1>
+<br>
+In this section, we will explore the set of elements within the group.  We will find that some elements may possess an important property, allowing every element to be expressible in terms of that one element.  We can then define a group as <em>cyclic</em> if it possesses such an element.<br><br>
+<p>Cyclic groups turn out to be very important in the study of groups.  In fact, we will discover that every finite abelian group can be expressed using the cyclic groups as building blocks.<br><br></p>
+<p>Knowing about cyclic groups will also help us to define other groups in <em>SageMath</em>.  Many of these groups will be fairly large, and so rather than giving <em>SageMath</em> the entire group, we will define a group using a very small number of elements.  From these few elements, <em>SageMath</em> will be able to reconstruct the entire group.</p>
+<p>We begin by studying <em>finite</em> groups, that is groups which only have a finite number of elements.  We have seen several examples of finite
+groups, such as Terry’s group, <em>Z<sub>n</sub></em>, and <em>Z<sub>n</sub><sup>*</sup></em>.  Let us return to one of the groups that we studied in the
+last section, <em>Z</em><sub>10</sub>.<br><br></p>
+<p>EXPERIMENT:<br>
+Study the powers of the elements 3 and 4 in the group <em>Z</em><sub>10</sub>.<br><br></p>
+<p>The following command loads this group into <em>SageMath</em>.
+<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">ZGroup</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span> <span class="n">G</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+One of the experiments from the last section was to make circle graphs of the operation &quot;Add <em>n</em> to each number.&quot;  For example, the 
+circle graph of Add(3), which maps each element <em>x</em> to the element <em>x</em>&middot;3, is given by 
+<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">Add</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+This graph allows us to visualize powers of 3 in the group <em>Z</em><sub>10</sub>. If we follow the red arrows, starting with 0, we have the sequence<br><br>
+<p style='text-align: center;'>{0, 3, 6, 9, 2, 5, 8, 1, 4, 7, 0 &hellip;}</p>
+This tells us that, in this group <em>Z</em><sub>10</sub>,
+<table align="center" width="300" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right">3<sup>0</sup> =</td>
+    <td align="left">&ensp;0,</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td align="right">3<sup>1</sup> =</td>
+    <td align="left">&ensp;3,</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td align="right">3<sup>2</sup> =</td>
+    <td align="left">&ensp;3&middot;3 = 6,</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td align="right">3<sup>3</sup> =</td>
+    <td align="left">&ensp;3&middot;3&middot;3 = 9,</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td align="right">3<sup>4</sup> =</td>
+      <td align="left">&ensp;3&middot;3&middot;3&middot;3 = 2,</td>
+      <td align="left"> etc.&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</td>
+  </tr>  
+</table>
+<br><br>
+<p>Recall that in this group, the dot represents addition modulo 10, so an exponent represents repeated addition. It is easy
+to see from the circle graph that every element in the group can be expressed as a power of 3, since one can
+travel the red arrows to get from 0 to any element of the group. This will not always be the case, as the
+circle graph of “Add(4)” indicates.
+<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">Add</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Notice that <em>SageMath</em> draws this graph with arrows of two different colors. This highlights the fact that one cannot travel an arrow to get from a red point to a 
+green point. Thus, not every element can be written as a power of 4.<br><br>
+<p>DEFINITION 3.1<br>
+We say that the element <em>g</em> ∈ <em>G</em> is a <em>generator</em> of the group <em>G</em> if every element of <em>G</em> can be
+expressed as a power of <em>g</em>.<br></p>
+<br>
+EXPERIMENT:<br>
+Using the circle graph, determine which elements of <em>Z</em><sub>10</sub> are generators. Is this set of numbers familiar?<br><br>
+We can have <em>SageMath</em> list all of the generators of a group for us, using the command <strong>Generators()</strong>.  In 
+the case of <em>Z</em><sub>10</sub>, the generators are:
+<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Generators</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+EXPERIMENT:<br>
+Try finding the generators of <em>Z<sub>n</sub></em> for different values of <em>n</em>.  Do you notice a pattern?<br><br>
+EXAMPLE:<br>
+Find all of the generators of the group <em>Z</em><sub>7</sub><sup>&ast;</sup>.<br><br>
+<p>This group is small enough to do by hand.  For each of the elements in <em>Z</em><sub>7</sub><sup>*</sup> = {1, 2, 3, 4, 5, 6}, we raise the element to different powers until we
+reach the identity.<br><br></p>
+<table align="center" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>1<sup>1</sup> = 1.</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>2<sup>1</sup> = 2,</td>
+    <td>2<sup>2</sup> = 4,</td>
+    <td>2<sup>3</sup> = 1.</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>3<sup>1</sup> = 3,</td>
+    <td>3<sup>2</sup> = 2,</td>
+    <td>3<sup>3</sup> = 6,</td>
+    <td>3<sup>4</sup> = 4,</td>
+    <td>3<sup>5</sup> = 5,</td>
+    <td>3<sup>6</sup> = 1.</td>
+  </tr>
+  <tr>
+    <td>4<sup>1</sup> = 4,</td>  
+    <td>4<sup>2</sup> = 2,</td>
+    <td>4<sup>3</sup> = 1.</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>5<sup>1</sup> = 5,</td>  
+    <td>5<sup>2</sup> = 4,</td>
+    <td>5<sup>3</sup> = 6,</td>
+    <td>5<sup>4</sup> = 2,</td>
+    <td>5<sup>5</sup> = 3,</td>
+    <td>5<sup>6</sup> = 1.</td>
+  </tr>    
+  <tr>
+    <td>6<sup>1</sup> = 6.</td>  
+    <td>6<sup>2</sup> = 1.</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>  
+</table>
+<br>
+Thus, we see that 3 and 5 are generators.<br><br>
+<p>This process of searching for generators leads us to the following definition.</p>
+<p><br><br>
+DEFINITION 3.2<br></p>
+<p>Let <em>x</em> be an element of a group <em>G</em> with identity <em>e</em>.  We define the <em>order</em> of the element
+<em>x</em> to be the smallest positive integer <em>n</em> for which <em>x<sup>n</sup></em> = <em>e</em>.  If no such positive integer exists, we say the order of <em>x</em> is <em>infinite</em>.<br><br></p>
+<p>In the last example, we see that the element 1 has order 1, element 6 has order 2, elements 2 and 4 have order 3, and the generators 3 and 5 have order 6.  We can make the following observations about the order of an element:</p>
+<ul>
+    <li>The order of the identity element is always 1.</li>
+    <li>If the group is finite, then its generators are the elements whose order is the size of the group.</li>
+    <li>The order can be infinite if the size of the group is infinite.  For example, in the group &#8484;, the element 
+        2 has infinite order, since 2<sup><em>n</em></sup> is never 0 for <em>n</em> &ge; 1.</li>
+</ul>
+<p>The only way to find the generators in a <em>Z<sub>n</sub></em><sup>*</sup> group is by trial and error, as was done in the last example.  However, there is a shortcut for finding the generators for the group <em>Z<sub>n</sub></em>.<br />
+Notice that 1 will always be a generator of
+<em>Z<sub>n</sub></em>, for <strong>Add(1)</strong> takes every point on the circle to the next point. See if you can use this fact to prove the next proposition.</p>
+<p><a name="prop31ret" id="prop31ret"></a><br />
+PROPOSITION 3.1<br></p>
+<p>The generators of <em>Z<sub>n</sub></em> are precisely the integers between 0 and <em>n</em> that are coprime to <em>n</em>.<br><br></p>
+<p><a href="#prop31">Click here for the proof.</a></p>
+<p />
+The count of numbers less than <em>n</em> that are coprime to <em>n</em> is called the <span style='font-style: italic;'>Euler totient function</span> of <em>n</em> and 
+is denoted <em>&#981;</em>(<em>n</em>)</span>. Thus, the number of generators of <em>Z<sub>n</sub></em> is precisely <em>&#981;</em>(<em>n</em>).  Here 
+is a small table of this function up to <em>n</em> = 36. 
+<table align="center" width="343" border="1">
+  <caption>
+    Table of <em>&#981;</em>(<em>n</em>)
+  </caption>
+  <tr>
+    <th width="33" scope="col"><em>n</em></th>
+    <th width="76" scope="col"><em>&#981;</em>(<em>n</em>)</th>
+    <th width="33" scope="col"><em>n</em></th>
+    <th width="76" scope="col"><em>&#981;</em>(<em>n</em>)</th>
+    <th width="33" scope="col"><em>n</em></th>
+    <th width="76" scope="col"><em>&#981;</em>(<em>n</em>)</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>1</td>
+    <td>13</td>
+    <td>12</td>
+    <td>25</td>
+    <td>20</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>1</td>
+    <td>14</td>
+    <td>6</td>
+    <td>26</td>
+    <td>12</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>2</td>
+    <td>15</td>
+    <td>8</td>
+    <td>27</td>
+    <td>18</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>2</td>
+    <td>16</td>
+    <td>8</td>
+    <td>28</td>
+    <td>12</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>4</td>
+    <td>17</td>
+    <td>16</td>
+    <td>29</td>
+    <td>28</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>2</td>
+    <td>18</td>
+    <td>6</td>
+    <td>30</td>
+    <td>8</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>6</td>
+    <td>19</td>
+    <td>18</td>
+    <td>31</td>
+    <td>30</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>4</td>
+    <td>20</td>
+    <td>8</td>
+    <td>32</td>
+    <td>16</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>6</td>
+    <td>21</td>
+    <td>12</td>
+    <td>33</td>
+    <td>20</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>4</td>
+    <td>22</td>
+    <td>10</td>
+    <td>34</td>
+    <td>16</td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td>10</td>
+    <td>23</td>
+    <td>22</td>
+        <td>35</td>
+    <td>24</td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td>4</td>
+    <td>24</td>
+    <td>8</td>
+    <td>36</td>
+    <td>12</td>
+  </tr>
+</table>
+<br>
+For larger values of <em>n</em>, we can use the <em>SageMath</em> command <span style='font-weight: bold;'>EulerPhi</span>. For example, to find the number of generators 
+of <em>Z</em><sub>60</sub>, type
+<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">EulerPhi</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+How does <em>SageMath</em> come up with this answer? It uses a fairly simple formula based on the prime factorization of the number. Here is the formula, along with a proof 
+of why this formula works:<p><a name="theor31ret" id="theor31ret"></a>
+THEOREM 3.1:  The Totient Function Theorem<br></p>
+<p>If the prime factorization of <em>n</em> is given by</p>
+<p style='text-align: center;'><em>n</em> = <em>p</em><sub>1</sub><sup><em>r</em></sup>&sup1; &middot; <em>p</em><sub>2</sub><sup><em>r</em></sup>&sup2; &middot; 
+<em>p</em><sub>3</sub><sup><em>r</em></sup>&sup3; &middot;&middot;&middot; <em>p</em><sub><em>k</em></sub><sup><em>r&#8342;</em></sup>,</p>
+<p>where <em>p</em><sub>1</sub>, <em>p</em><sub>2</sub>, <em>p</em><sub>3</sub>, … <em>p<sub>k</sub></em>  are primes, and <em>r</em><sub>1</sub>, <em>r</em><sub>2</sub>,
+<em>r</em><sub>3</sub>, … <em>r<sub>k</sub></em> are positive integers, then the count of numbers less than <em>n</em> which are coprime to <em>n</em> is<br></p>
+<p style='text-align: center;'><em>&#981;</em>(<em>n</em>) = (<em>p</em><sub>1</sub> &minus; 1)<em>p</em><sub>1</sub><sup>(<em>r</em></sup>&sup1;<sup>&minus;1)</sup> &middot; 
+(<em>p</em><sub>2</sub> &minus; 1)<em>p</em><sub>2</sub><sup>(<em>r</em></sup>&sup2;<sup>&minus;1)</sup> &middot; 
+(<em>p</em><sub>3</sub> &minus; 1)<em>p</em><sub>3</sub><sup>(<em>r</em></sup>&sup3;<sup>&minus;1)</sup> &middot;&middot;&middot; 
+(<em>p<sub>k</sub></em> &minus; 1)<em>p</em><sub><em>k</em></sub><sup>(<em>r&#8342;</em>&minus;1)</sup>,</p>
+<p><a href="#theor31">Click here for the proof.</a></p>
+<p />
+Now that we know how to find generators of <em>Z<sub>n</sub></em>, let us move on to other groups. Consider for example <em>Z</em><sub>10</sub><sup>&ast;</sup>.  First we 
+load this into <em>SageMath</em>:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">ZStar</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span> <span class="n">G</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+The elements are {1, 3, 7, 9}. Is 1 a generator of this group? Let's check:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">Mult</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+We see that 1 is not a generator because 1 is the identity element.<br><br>
+<p>EXPERIMENT:<br></p>
+<p>Replace Mult(1) in the last command with Mult(3), Mult(7), and Mult(9) to see which elements, if any, are generators. Recall that the test for a generator is that any
+element can be reached by any other element in the circle graph by means of the arrows. How many generators are there?<br><br></p>
+<br>
+According to the table for <em>&#981;</em>(<em>n</em>), <em>Z</em><sub>8</sub><sup>&ast;</sup> also has four elements. Let us try the same experiment 
+with <em>Z</em><sub>8</sub><sup>&ast;</sup>. First we load the group into <em>SageMath</em>: 
+<br><br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">ZStar</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span> <span class="n">G</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+The elements of this group are {1, 3, 5, 7}. Let us check to see if 3 is a generator:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">Mult</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+EXPERIMENT:<br>
+<p>Replace Mult(3) in the above command with Mult(5), Mult(7), and Mult(1). How many generators are there to this group?<br> <br></p>
+<br>
+By doing this experiment, you will discover that <em>Z</em><sub>8</sub><sup>&ast;</sup> has a totally different structure than <em>Z</em><sub>10</sub><sup>&ast;</sup>, in spite 
+of the similarity in how they are defined. As you tried to determine why no element of <em>Z</em><sub>8</sub><sup>&ast;</sup> acts as a generator, you might notice that 
+every element squared is equal to 1. This is seen in the multiplication table<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CayleyTable</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><br> We can also verify this by finding the set of generators of <em>Z</em><sub>8</sub><sup>*</sup>.<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Generators</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Because of this property of <em>Z</em><sub>8</sub><sup>&ast;</sup>, no element can generate the whole group. <br><br>From these examples, we see that some groups 
+have generators, while others do not. This leads us to the following definition.
+<p><br><br>
+DEFINITION 3.3<br>
+We say a group is <em>cyclic</em> if there is one element that can generate the entire group. <br><br></p>
+<p>Although we have seen an example of a finite group that is not cyclic, we will later see that the structure of <em>any</em> finite abelian group can be
+expressed in terms of cyclic groups.<br><br></p>
+<p>Even when a group is not cyclic, we sometimes can find <em>two</em> elements by which every element of the group can be expressed. For example, consider the two elements 3 and 5 from the group <em>Z</em><sub>8</sub><sup>*</sup>. The following command maps both Mult(3) and Mult(5) on the same circle graph.<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">Mult</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">Mult</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+The red arrows represent multiplying by 3, while the green arrows represent multiplication by 5. Notice that by a combination of red and green arrows, any element of 
+the group can reach any other element through a sequence of arrows, even though neither the red arrows alone nor the green arrows can do this job. We say that 
+the <em>set</em> {3,5} generates the group.<br><br>
+<p>Let us look at one more example. Consider Terry’s group, which is loaded into <em>SageMath</em> by the command<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">InitTerry</span><span class="p">();</span> <span class="n">G</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+ Let us see if one of the dance steps will generate the group. <br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">Mult</span><span class="p">(</span><span class="n">Spin</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+EXPERIMENT:<br>
+By replacing the &quot;Spin&quot; in the last command with the other elements of Terry's group, see if any of the elements generate the group. If not, see if you can 
+find a combination of <em>two</em> elements which generate the group.<br><br>
+One of the keys for entering a group into <em>SageMath</em> is knowing one or two elements (or sometimes even three) that will generate the entire group.  This information 
+begins to reveal the structure of the group itself.<br><br><p><a name="sec32" id="sec32"></a></p>
+<h1>Defining Finite Groups in <em>SageMath</em></h1>
+<br>
+This part of the notebook shows how to define finite groups in <em>SageMath</em>. The corresponding 
+section in the <em>Mathematica</em> notebook explains entering groups 
+into <em>Mathematica</em>, but the process is very similar.<br>
+<br>
+<p>We saw in the last section that for some groups there is a single element that generates the entire group, whereas in other groups two or more elements are required.  In
+this section, we will show how a finite group can be entered into <em>SageMath</em> using a set of elements that generates the group. We will begin with a cyclic
+group <em>Z<sub>n</sub></em> which has a single generator which we will call <em>x</em>.  From the circle graphs of <em>Z<sub>n</sub></em> that we saw in the last section, we could see that
+the sequence of <em>n</em> elements<br><br></p>
+<table align="center" width="250" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><em>e</em> =</td>
+    <td align="left">&ensp;<em>x</em><sup>0</sup>,&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</td>
+  </tr>
+  <tr>
+    <td align="right"><em>x</em> =</td>
+    <td align="left">&ensp;<em>x</em><sup>1</sup>,&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</td>
+  </tr>
+  <tr>
+    <td align="right"><em>x</em>&middot;<em>x</em> =</td>
+    <td align="left">&ensp;<em>x</em><sup>2</sup>,&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</td>
+  </tr>
+  <tr>
+    <td align="right"><em>x</em>&middot;<em>x</em>&middot;<em>x</em> =</td>
+    <td align="left">&ensp;<em>x</em><sup>3</sup>,&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</td>
+  </tr>
+  <tr>
+    <td align="right">&#8943;&#8943;&#8943;&#8943;</td>
+    <td align="left">&#8943;&#8943;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</td>
+  </tr>
+  <tr>
+    <td align="right"><em>x</em>&middot;<em>x</em>&middot;<em>x</em>&middot; &#8943; &middot;<em>x</em> =</td>
+    <td align="left">&ensp;<em>x</em><sup><em>n</em>&minus;1</sup>,&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</td>
+  </tr>
+</table>
+<br> 
+must mention every element of <em>Z<sub>n</sub></em> exactly once. In fact, this gives us a way to label the elements of <em>Z<sub>n</sub></em> in terms of the generator <em>x</em>. We also find that <em>x</em><sup><em>n</em></sup> = <em>e</em>.
+Thus, we can define the group  <em>Z<sub>n</sub></em> merely by saying &quot;<em>x</em> is a generator of the group, and 
+the order of <em>x</em> is <em>n</em>.&quot; <br><br>
+<p>There are <em>SageMath</em> routines included that allow us to quickly make these definitions. Execute the following three statements:<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Define</span><span class="p">(</span><span class="n">x</span><span class="o">^</span><span class="mi">5</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+What does this do? The first command we have seen once before: it defines the identity element to be <em>e</em>. The second command defines &quot;x&quot; to be a 
+group variable.  Finally, we note that <em>x</em> has order 5, so we define <em>x</em><sup>5</sup> to be the identity. This is all we need to define the group <em>Z</em><sub>5</sub>.<br><br>
+<p>Of course we will want to see the group.  The <em>SageMath</em> command <strong>Group()</strong> lists the elements of the currently defined group in a systematic
+order.<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z5</span> <span class="o">=</span> <span class="n">Group</span><span class="p">();</span> <span class="n">Z5</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Thus, the elements of this group are:<br>
+<p style='text-align: center;'>{<em>e</em>, <em>x</em>, <em>x</em><sup>2</sup>, <em>x</em><sup>3</sup>, <em>x</em><sup>4</sup>}.</p>
+A multiplication table can be given by:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CayleyTable</span><span class="p">(</span><span class="n">Z5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Although the {0, 1, 2, 3, 4} notation is more concise for this particular example, the use of generators is more versatile, since almost all finite groups can be 
+expressed easily using generators.<br><br>
+<p>EXAMPLE:<br>
+Define the group <em>Z</em><sub>8</sub><sup>*</sup> in <em>SageMath</em>.<br><br></p>
+<p>We saw that every element of this group
+squared is the identity so this group is not cyclic. However, we found that every element can be expressed in
+terms of two of the elements, 3 and 5. Hence the <em>set</em> {3, 5} generates the group.<br><br></p>
+<p>By calling <em>a</em> = 3 and <em>b</em> = 5, and noting that both of these elements have order 2, we define <em>a</em><sup>2</sup> and <em>b</em><sup>2</sup> to be <em>e</em>.  We can define the group this way:<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Is this enough to define the group? Since 7 = 3&middot;5, the last element can be written 
+<em>a</em>&middot;<em>b</em></span>. The list of four elements would be<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="p">[</span><span class="n">e</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Let us see the Cayley table:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CayleyTable</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Notice the four black squares, such as one corresponding to <em>b</em> times <em>a</em>.  <em>SageMath</em> needs 
+to be told that <em>b</em>&middot;<em>a</em> is the same thing as <em>a</em>&middot;<em>b</em></span>, so we 
+need a third define statement:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Will this be enough for <em>SageMath</em> to find all products? <br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CayleyTable</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+This time, there are no black squares, so the group has been completely defined in <em>SageMath</em>. We can also find out if we have finished defining the group by entering 
+the command<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">Group</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span> <span class="n">G</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+As long as <em>SageMath</em> returns with a list of elements, the group has been successfully been defined. 
+<br><br>
+<p>We still need to check that the associative law holds.  This can be done with the command</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CheckGroup</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can define several groups in <em>SageMath</em> at the same time, (using the same identity element, and different letters for the generators) and by listing the generators with the <strong>Group</strong> command, <em>SageMath</em> will know which group
+we are referring to.  However, the command <br><br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>clears out all previously defined groups.<br><br></p>
+<p>EXAMPLE:<br>
+Suppose we have three different books on a
+shelf, and we consider rearrangements of the books.  Enter this group into <em>SageMath</em>.<br><br></p>
+<p>We can illustrate the three books by executing the following command:<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitBooks</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Suppose we want to rearrange the three books. One way we can rearrange them is to swap the first two books. This can be done with the command<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MoveBooks</span><span class="p">(</span><span class="n">First</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Another way we can rearrange the books is to take the first book out, slide the other two to the left, and 
+replace the book <em>after</em> the other two. This can be done by the command:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MoveBooks</span><span class="p">(</span><span class="n">Left</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+EXPERIMENT:<br>
+By using only the commands First and Left, how many ways can you rearrange the three books? There are a total of 6 ways to arrange three books. Can you obtain 
+all 6 arrangements using just these two commands?<br><br>
+In doing this experiment, you probably found that there are four other ways we could have rearranged the books, namely swapping the last two books (Last), moving that 
+last book to the front (Right), reversing the order of the books (Rev), and finally leaving the books as they are (Stay). These four additional motions also work in 
+the MoveBooks command, yet the last experiment showed that all arrangements can be obtained using just the commands First and Left. Therefore, the set {First, Left} 
+generates the group of all permutations of the three books.<br><br>
+<p>Let us define this group in <em>SageMath</em>. Rather than using the names, we will use the abbreviations:
+<em>e</em> = the identity element, <em>a</em> = First, and <em>b</em> = Left.<br><br></p>
+<p>We begin by defining the identity element to be <em>e</em>.<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><br>Next, we have to set up the variables <em>a</em> and <em>b</em> to be two members of the group.  We can do this with one <strong>AddGroupVar</strong> command.<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Next, we will note the order of the two elements.  Now, if we swap the first two books twice, we get back where we started. We thus see that <em>a</em> has order 2, or <em>a</em><sup>2</sup> = <em>e</em>. So we define:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+If we perform the Left action three times, we also will be back where we started. Thus, we see <em>b</em> has order 3, or <em>b</em><sup>3</sup> = <em>e</em>.  Hence, we can define<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+In defining <em>Z</em><sub>8</sub><sup>&ast;</sup>, we needed to also define <em>b</em>&middot;<em>a</em> in terms of
+<em>a</em>&middot;<em>b</em>. Let us do that for this group also. Notice what happens if we first move the books 
+to the left, and then swap the first two books:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitBooks</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span> <span class="n">MoveBooks</span><span class="p">(</span><span class="n">Left</span><span class="p">,</span> <span class="n">First</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Is this the same result if we do those actions in the opposite order? Let's check:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitBooks</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span> <span class="n">MoveBooks</span><span class="p">(</span><span class="n">First</span><span class="p">,</span> <span class="n">Left</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Apparently, we need to move the books once more to the left to get the same effect. Let's try it.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitBooks</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span> <span class="n">MoveBooks</span><span class="p">(</span><span class="n">First</span><span class="p">,</span> <span class="n">Left</span><span class="p">,</span> <span class="n">Left</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+This tells us that <em>b</em>&middot;<em>a</em> = <em>a</em>&middot;<em>b</em>&middot;<em>b</em>. 
+This group is apparently not commutative. We enter this final definition into <em>SageMath</em>.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+If we use the <strong>Group</strong> command to find the list of elements,<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">Group</span><span class="p">();</span> <span class="n">G</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+we find that there are six elements.  We can make a Cayley table with the command<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CayleyTable</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Is this really a group? We can tell from the Cayley table that <em>G</em> is closed with respect to
+multiplication, and that there is an identity element, <em>e</em>. We also recognize the familiar Latin square 
+property that we have seen in all of the other Cayley tables. Since every row and every column contains 
+exactly one <em>e</em>, every element has a unique inverse. The only property that we cannot check directly using the 
+Cayley table is the associativity property.  <em>SageMath</em> can check this with the command<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CheckGroup</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><em>SageMath</em> shows that this set a group. We call this group <em>S</em><sub>3</sub>, the permutation group on 3 objects.Can <em>SageMath</em> determine the inverse of an element?  Let’s try it:<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">)</span><span class="o">^-</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Since <em>SageMath</em> knows that <em>a</em> has order 2, and <em>b</em> has order 3, it can deduce that <em>a</em><sup>&minus;1</sup> = <em>a</em> and <em>b</em><sup>&minus;1</sup> = <em>b</em><sup>2</sup>.  Then using Proposition 2.2, 
+(<em>u</em>&middot;<em>v</em>)<sup>&minus;1</sup> = <em>v</em><sup>&minus;1</sup>&middot;<em>u</em><sup>&minus;1</sup>, it can take the inverse of any element.  We see that <em>a</em>&middot;<em>b</em> is it's own inverse.
+See if you can determine which other elements or this group are their own inverse.<br>
+EXPERIMENT:<br>
+You may have noticed some similarities between the group <em>S</em><sub>3</sub> and Terry's group. How are these 
+two groups related? <br><br>
+<p>Hint: Terry is colored with the same three colors as the books. Can you find a correspondence between an
+orientation of Terry and an arrangement of the three books? <br></p>
+<br>
+The relationship between Terry's group and <em>S</em><sub>3</sub> becomes crystal clear when we look at the 
+Cayley tables of these two. The following <em>SageMath</em> command reloads <em>S</em><sub>3</sub>, and 
+displays a Cayley table.  Then it does the same thing for Terry's group.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
+<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span><span class="n">e</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span><span class="n">e</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">Group</span><span class="p">()</span>
+<span class="n">CayleyTable</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">InitTerry</span><span class="p">()</span>
+<span class="n">CayleyTable</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Notice that even though the names of the elements are different, the <em>color patterns</em> in the two tables are
+identical. Since all of the group properties come from the Cayley table, these two groups must act in 
+exactly the same way. We say that Terry's group and <em>S</em><sub>3</sub> are <em>isomorphic</em>. We will cover 
+isomorphic groups later in Chapter 5.<br><br>
+<p>Let’s see an example of a larger group. The command below produces a picture of an octahedron. (Think of this as
+two square pyramids fused together at the bases.)<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitOctahedron</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+This happens to be the shape of an uncut diamond. (Many other gemstones are this shape.) There are eight triangles, which are colored with eight different colors. 
+One problem a gem cutter often faces is determining the orientation he should put the gemstone before he starts to cut.  In which case, he needs to know 
+all of the possible ways the octahedron can be rotated.  The set of rotations would form a group, similar to Terry's dance steps.<br><br>
+<p>EXAMPLE:<br>
+Consider the group of rotations on the octahedron, and enter this group into <em>SageMath</em>.<br><br></p>
+<p>To see the other colors we can flip over this octahedron,
+using the following command: <br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">RotateOctahedron</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Notice that in the flipping, the orange and blue faces switched places, while the red and fuchsia faces went to 
+the other side. We can see even more of the octahedron by rotating the face closest to us, that is, the face which 
+is now black. We can rotate this one third of a turn counter-clockwise with the command <br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">RotateOctahedron</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Between these two actions we can see all of the colors.  But there is one more thing that we can do: rotate about 
+a vertex. We can rotate the octahedron one quarter of a turn clockwise about the vertex closest to us with the 
+command <br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">RotateOctahedron</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+With these three actions we can rotate the octahedron in many different ways. The set of all actions formed by
+combining actions <em>a</em>, <em>b</em> and <em>c</em> form a group.  This group might be of interest to a diamond cutter, for instance, since it would give him all of the possibilities of orientating his diamond before he begins to cut it.<br><br>
+<p>EXPERIMENT:<br>
+In the previous command, change the letter <em>c</em> to either <em>a</em> or <em>b</em>, and re-execute the
+command. Repeat this for different letters, and observe what happens. Can you get the octahedron back to the way
+it began? (The face closest to us was red, and the fuchsia face was immediately below it.)<br></p>
+<br>
+In experimenting with this group you probably noticed some truisms for this group. For example, it is easy to see that <em>a</em> has order 2, <em>b</em> has order 3, and <em>c</em> has order 4.  Thus, 
+<p style='text-align: center;'><em>a</em><sup>2</sup> = <em>e</em>, &emsp;&emsp;<em>b</em><sup>3</sup> = <em>e</em>,&emsp;&emsp;
+c</em><sup>4</sup> = <em>e</em>.</p>
+We can explain these statements to <em>SageMath</em>:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
+<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="s2">&quot;c&quot;</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span><span class="n">e</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span><span class="n">e</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">c</span><span class="o">^</span><span class="mi">4</span><span class="p">,</span><span class="n">e</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+You may also have noticed that this group is not commutative. That is, <em>b</em>&middot;<em>a</em> does not do 
+the same thing as <em>a</em>&middot;<em>b</em>. However, <em>b</em>&middot;<em>a</em> is another kind of flip, 
+so that <em>b</em>&middot;<em>a</em>&middot;<em>b</em>&middot;<em>a</em> = <em>e</em>. To see this clearly, try the following 
+command:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ShowOctahedron</span><span class="p">()</span>
+<span class="n">RotateOctahedron</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+This animation told us that <em>b</em>&middot;<em>a</em> is its own inverse, and so
+<p style='text-align: center;'><em>b</em>&middot;<em>a</em> = (<em>b</em>&middot;<em>a</em>)<sup>-1</sup> = 
+<em>a</em><sup>-1</sup>&middot;<em>b</em><sup>-1</sup> = <em>a</em>&middot;<em>b</em><sup>2</sup></p>
+<p>We can enter this into <em>SageMath</em> with the command <br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+To find some other identities, we can try to find other combinations of <em>a</em>, <em>b</em>, and <em>c</em>
+that produce the identity element. Try this out:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ShowOctahedron</span><span class="p">()</span>
+<span class="n">RotateOctahedron</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Finally, try this:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ShowOctahedron</span><span class="p">()</span>
+<span class="n">RotateOctahedron</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+These animations show us that <br>
+<p style='text-align: center;'><em>c</em>&middot;<em>b</em>&middot;<em>c</em><sup>2</sup>&middot;<em>a</em> = e, 
+and <em>c</em>&middot;<em>a</em>&middot;<em>c</em><sup>3</sup>&middot;<em>a</em>&middot;<em>b</em> = <em>e</em></p>
+<p>Even though you probably wouldn’t have discovered these on your own, you might have discovered formulas similar to
+these in your experimentation. Let’s see what we can do with these two.<br><br></p>
+<p>From the first one, we have that</p>
+<p style='text-align: center;'><em>c</em>&middot;<em>b</em> = (<em>c</em>&middot;<em>c</em>&middot;<em>a</em>)
+<sup>-1</sup> = <em>a</em><sup>-1</sup>&middot;<em>c</em><sup>-1</sup>&middot;<em>c</em><sup>-1</sup> =
+<em>a</em>&middot;<em>c</em><sup>3</sup>&middot;<em>c</em><sup>3</sup> 
+= <em>a</em>&middot;<em>c</em><sup>2</sup>.</p>
+<p>From the second, we can deduce that</p>
+<p style='text-align: center;'>
+<em>c</em>&middot;<em>a</em> = (<em>c</em><sup>3</sup>&middot;<em>a</em>&middot;<em>b</em>)<sup>-1</sup> 
+= <em>b</em><sup>-1</sup>&middot;<em>a</em><sup>-1</sup>&middot;<em>c</em><sup>-3</sup> 
+= <em>b</em><sup>2</sup>&middot;<em>a</em>&middot;<em>c</em><sup>9</sup> 
+= <em>b</em><sup>2</sup>&middot;<em>a</em>&middot;<em>c</em>
+= <em>b</em>&middot;<em>a</em>&middot;<em>b</em><sup>2</sup>&middot;<em>c</em>
+= <em>a</em>&middot;<em>b</em><sup>2</sup>&middot;<em>b</em><sup>2</sup>&middot;<em>c</em>
+= <em>a</em>&middot;<em>b</em>&middot;<em>c</em></p>
+<p>Notice that we had to use the identity <em>b</em>·<em>a</em> = <em>a</em>·<em>b</em><sup>2</sup>
+twice in the final computation. We can enter these properties into <em>SageMath</em> as well:<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Define</span><span class="p">(</span><span class="n">c</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">*</span><span class="n">c</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">c</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Notice that we have defined <em>b</em>&middot;<em>a</em>, <em>c</em>&middot;<em>a</em>, and 
+<em>c</em>&middot;<em>b</em> in terms of operations that are performed in &quot;alphabetical order.&quot; This is
+a very good strategy for defining any group. If <em>SageMath</em> can sort <em>b</em>&middot;<em>a</em>, 
+<em>c</em>&middot;<em>a</em>, and <em>c</em>&middot;<em>b</em> into alphabetical order, then it can manipulate
+any combination of operations until it produces a form in alphabetical order. This is not the only way that we can 
+define a group in <em>SageMath</em>, but it is the one of the most efficient. Thus, <em>SageMath</em> should have all of 
+the information it needs to determine the group.<br><br>
+<p>Let’s plunge ahead and find out what this group looks like.<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">Group</span><span class="p">();</span> <span class="n">G</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{e, a, b, a*b, b^2, a*b^2, c, a*c, b*c, a*b*c, b^2*c, a*b^2*c, c^2, a*c^2, b*c^2, a*b*c^2, b^2*c^2, a*b^2*c^2, c^3, a*c^3, b*c^3, a*b*c^3, b^2*c^3, a*b^2*c^3}
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Is this a group? We can have <em>SageMath</em> verify it for us. <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CheckGroup</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This set of elements is a group.
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+We call this the octahedral group. How large is it?  Well, we can either squint and count commas, or we can use 
+the command<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+and have <em>SageMath</em> count for us. Either way, we find we have 24 elements in our group.<br><br>
+Of course, this group is too large to print a complete Cayley table, but watch what happens:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CayleyTable</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Each element is color coded in one of 24 colors, and this code is given by the list on the left. <em>SageMath</em> is able to produce a color-coded table for groups of up to 27 elements.  Can you use this 
+table to find the elements which are their own inverses?<br><br>
+<p>We can use <em>SageMath</em> to find the order of an element with the <strong>ElementOrder</strong> command.  For example, the order of the element <em>a</em>·<em>c</em> can be found by typing</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ElementOrder</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<p>to see that the order of the element is 3.  There is a trick for finding the orders of all of the elements of a group at the same time.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span> <span class="n">ElementOrder</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">G</span> <span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3, 2, 3, 2, 4, 3, 4, 3, 2, 2, 2, 4, 3, 4, 3, 2, 4, 3, 2, 3, 4, 2]
+</pre></div>
+</div>
+</div>
+</div>
+<p>We find that every element of this group besides the identity has order 2, 3, or 4.  There is a geometrical reason for this: every element represents a rotation of
+either ±90°, ±120°, or 180°.  In fact, there are 9 elements of order 2, 8 elements of order 3, and 6 elements of order 4.<br><br></p>
+<p>With <em>SageMath</em>, we are able to create new groups to study.  These examples help us to find patterns in the structure of all groups.  In the next section we will study the substructure of a group, by finding smaller groups withing a group.</p>
+<p><a name="sec33" id="sec33"></a></p>
+<h1>Subgroups</h1>
+<br>
+A natural question to ask is whether we can have a smaller group inside of a 
+particular group. Whenever we have a group <em>G</em>, we say that <em>H</em> is a <em>subset</em> of <em>G</em>, denoted
+<p  style='text-align: center;'><em>H</em> &sube; <em>G</em>,</p>
+<p>if <em>H</em> consists only of the elements of  <em>G</em>. The empty set { } is always considered to be a subset,
+but we will restrict our attention to non-empty subsets. We are particularly interested if the set <em>H</em>
+forms a group, since we then would have a “group within a group.”<br><br></p>
+<p>DEFINITION  2.4<br>
+We say that <em>H</em> is a <em>subgroup</em> of <em>G</em> if <em>H</em> is a non-empty subset of <em>G</em>
+and  <em>H</em>  is a group with respect to the operation  (·) of <em>G</em>.<br><br></p>
+<p>It should be noted that all non-trivial groups have at least two subgroups.  One subgroup contains just the identity element {<em>e</em>}, while another contains all of the
+elements of <em>G</em>.  These two subgroups are called the <em>trivial subgroups</em>.<br><br></p>
+<p>For <em>H</em> to be a group, it must satisfy the 4 properties of groups. But the associative property of
+<em>H</em> is guaranteed because <em>G</em> is associative. Thus, we need these three properties to be true:<br><br></p>
+<ol>
+<li><em>H</em> is closed under multiplication.  That is,</li>
+<p  style='text-align: center;'>if <em>x</em> and <em>y</em> &isin; <em>H</em>, then <em>x</em>&middot;<em>y</em> &isin; <em>H</em>.</p>
+<li>The identity element of <em>G</em> is in <em>H</em>.</li><br>
+<li>Every element of <em>H</em> has its inverse in <em>H</em>.  That is,</li>
+<p  style='text-align: center;'>if <em>x</em> &isin; <em>H</em>, then <em>x</em><sup>-1</sup> &isin; <em>H</em>.</p>
+</ol>
+<br>
+These three properties can be combined into one simple test.<p><a name="prop32ret" id="prop32ret"></a>
+PROPOSITION 3.2<br></p>
+<p>Let <em>H</em> ⊆ <em>G</em>, and   <em>H</em> ≠ { }. Then <em>H</em> is a subgroup of <em>G</em> if, and only if, we have</p>
+<p  style='text-align: center;'><em>x</em>&middot;<em>y</em><sup>-1</sup> &isin; <em>H</em>&nbsp;&nbsp; for all &nbsp;&nbsp;<em>x</em>, <em>y</em> &isin; <em>H</em>.</p>
+<p><a href="#prop32">Click here for the proof.</a></p>
+<p />
+Let us look at an example. The following commands reload the group <em>S</em><sub>3</sub>, the permutation group on three objects, into <em>SageMath</em>.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
+<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span><span class="n">e</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span><span class="n">e</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">Group</span><span class="p">();</span> <span class="n">G</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Even though this is a fairly small group (6 elements) we can still find smaller groups within this one.  For
+example, consider the subset
+<p  style='text-align: center;'><em>H</em> = {<em>e</em>, <em>b</em>, <em>b</em><sup>2</sup>}.</p>
+It is easy to see that if <em>x</em> and <em>y</em> are in <em>H</em>, then <em>x</em>&middot;<em>y</em><sup>-1</sup> is in <em>H</em> . (There are nine multiplications 
+to check.)  Therefore, this is a subgroup.<br><br>
+<p>How can we verify this is a subgroup using <em>SageMath</em>? Let us look at the Cayley table for <em>H</em>:
+<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CayleyTable</span><span class="p">([</span><span class="n">e</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Since there are no black squares in this table, it is closed under multiplication. 
+Also, every row and column contains one <em>e</em>, so inverses exist for every element. Thus, <em>H</em> is a subgroup of <em>S</em><sub>3</sub>.<br><br>
+<p>Try the following subset instead:<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CayleyTable</span><span class="p">([</span><span class="n">e</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Notice the black squares in the table. This indicates that the subset is not closed under multiplication, and hence is not a subgroup.<br><br>
+<p>EXPERIMENT:<br>
+Try changing the subset in the above command to see if you can find other subgroups of <em>S</em><sub>3</sub>.
+How many are there? Don’t forget the group itself can be considered to be a subgroup. What about the set
+containing just the identity?<br></p>
+<br>
+Here is another example. Recall that &#8484; is the group of integers using addition as the operation. If we let 
+<em>k</em> be any integer then we can let
+<p  style='text-align: center;'><em>k</em> &#8484; = { <em>k</em>&middot;<em>x</em> | <em>x</em> &isin; &#8484; }.</p>
+The vertical line is read &quot;for which.&quot; Thus, <em>k</em> &#8484; is the set of &quot;all numbers 
+which can be expressed as <em>k</em>&middot;<em>x</em> for which <em>x</em> is an integer.&quot; In other 
+words, <em>k</em> &#8484; is the set of all multiples of <em>k</em>. It is clear that <em>k</em> &#8484; is a
+group under addition, since the difference of two multiples of <em>k</em> gives another multiple of <em>k</em>. <br><br>
+<p>One of the main tools we will use to find subgroups of a group is the <em>intersection</em>.  Given two subsets <em>H</em> and <em>K</em> of <em>G</em>, the <em>SageMath</em>
+command <strong>Intersection</strong> finds the set of elements that are in both subsets, denoted <em>H</em> ∩ <em>K</em>.  For example, if we are given two sets
+<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">H</span> <span class="o">=</span> <span class="p">[</span><span class="n">e</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">K</span> <span class="o">=</span> <span class="p">[</span><span class="n">e</span><span class="p">,</span> <span class="n">a</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+then the <em>SageMath</em> command<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Intersection</span><span class="p">(</span><span class="n">H</span><span class="p">,</span> <span class="n">K</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+finds the set of all elements in common with <em>H</em> and <em>K</em>. Note that sets are <em>entered</em> 
+in <em>SageMath</em> using
+square brackets, even though they are often displayed using curly braces.  (Technically, using square brackets 
+produce a list of elements, which
+acts similar to a set.  But the <em>SageMath</em> routines know to treat a list as if it were a set.)  Moreover, 
+we can consider taking the intersection of a collection of many sets. If we let<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[[</span><span class="n">e</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">],</span> <span class="p">[</span><span class="n">e</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">b</span><span class="p">],</span> <span class="p">[</span><span class="n">e</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+then <em>L</em> represents a &quot;set of sets.&quot; We can take the intersection of all of the sets in this collection with the command<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Intersection</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+The mathematical notation for this intersection is
+<table align="center" width="120" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center"><font face="Times New Roman, Times, serif" size="+4">&cap;</font></td>
+    <td align="left"><em>H</em>.&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="top"><em>H</em> &isin; <em>L</em></td>
+    <td></td>
+  </tr>
+</table>
+<p>We could ask whether the intersection of two <em>subgroups</em> of <em>G</em> forms a subgroup of <em>G</em>.
+The next proposition shows us that indeed, the intersection of subgroups forms a new subgroup.</p>
+<p><a name="prop33ret" id="prop33ret"></a>
+PROPOSITION 3.3<br></p>
+<p>Given a group <em>G</em> and a non-empty collection of subgroups, denoted by <em>L</em>, then the intersection of all of the subgroups in the collection</p>
+<table align="center" width="160" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><em>H</em><sup>&ast;</sup> = </td>
+    <td align="center"><font face="Times New Roman, Times, serif" size="+4">&cap;</font></td>
+    <td align="left"><em>H</em>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td align="center" valign="top"><em>H</em> &isin; <em>L</em></td>
+    <td></td>
+  </tr>
+</table>
+is a subgroup of <em>G</em>.<br><br>
+<p><a href="#prop33">Click here for the proof.</a></p>
+<p />
+This proposition provides us with a general method of producing the subgroups of a group <em>G</em>. 
+Let <em>S</em> be any subset of <em>G</em>. We can consider the collection of all subgroups of <em>G</em> 
+which contain the set <em>S</em>, denoted by <span><em>L</em></span>.
+<p><br><br>
+DEFINITION 3.5<br>
+Given a subset <em>S</em> of a group <em>G</em>, we define the <em>subgroup generated by S</em> to be</p>
+<table align="center" width="160" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right">[<em>S</em>] = </td>
+    <td align="center"><font face="Times New Roman, Times, serif" size="+4">&cap;</font></td>
+    <td align="left"><em>H,&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</em></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td align="center" valign="top"><em>H</em> &isin; <em>L</em></td>
+    <td></td>
+  </tr>
+</table>
+<p>where <em>L</em> denotes the collection of subgroups of <em>G</em> that contains the set <em>S</em>.</p>
+<p><br><br>
+By Proposition 3.3, this a subgroup of <em>G</em>. (The collection <em>L</em> is non-empty since it contains
+<em>G</em>.)  By the way that the collection was defined, [<em>S</em>] contains <em>S</em>.
+Actually, [<em>S</em>] is the <em>smallest</em> subgroup of <em>G</em> that contains <em>S</em>. For if
+<em>H</em> is a subgroup of <em>G</em> containing <em>S</em>, then <em>H</em> ∈ <em>L</em>, so that
+[<em>S</em>] ⊆ <em>H</em>.</p>
+<p><br><br>
+We can define [<em>S</em>] in another way. It is clear that [<em>S</em>] contains all of the products of the form<br><br></p>
+<table border=0 cellspacing=0 cellpadding=0 align=center class="equation">
+  <tr>
+    <td nowrap >(*)</td>
+    <td></td>
+    <td nowrap><em>x</em><sub>1</sub>&middot;<em>x</em><sub>2</sub>&middot;<em>x</em><sub>3</sub>&middot; &middot;&middot;&middot; &middot;<em>x<sub>n</sub></em>,</td>
+    <td></td>
+  </tr>
+</table>
+<br>
+where either <em>x<sub>k</sub></em> &isin; <em>S</em> or <em>x<sub>k</sub></em><sup>-1</sup> &isin; <em>S</em>, 
+(1 &le; <em>k</em> &le; <em>n</em>).<br>
+<br>
+Notice that the set of all these products forms a subgroup <em>H</em> of <em>G</em>, and this subgroup contains <em>S</em>. Thus, [<em>S</em>] &sube; <em>H</em>.  But 
+any element of the form (*) must be in [<em>S</em>]. Thus we also have <em>H</em> &sube; [<em>S</em>].  Therefore <em>H</em> = [<em>S</em>].  In other 
+words, [<em>S</em>] is the subgroup of <em>G</em> consisting of all products of the form (*).<br><br>
+<p>In fact, the <em>SageMath</em> command <strong>Group</strong> finds [<em>S</em>] for any set <em>S</em>. If <em>S</em>
+is a set of generators of the group <em>G</em>, then [<em>S</em>] = <em>G</em>, so we produced the entire group with the command <strong>Group(S)</strong>.  Yet for
+other sets, we can use the <strong>Group</strong> command to find the subgroups of a given group.<br><br></p>
+<p>For example, consider the group <em>S</em><sub>3</sub>:<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
+<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span><span class="n">e</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span><span class="n">e</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">Group</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Now we can try out the group command to find [<em>S</em>] for different sets <em>S</em>. For example, what if <em>S</em> = {<em>b</em>}?  Try it out for yourself:
+</p><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Group</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+This gives us the subgroup of order 3 that we saw before. What if <em>S</em> is the set {<em>b</em>, <em>a</em>&middot;<em>b</em>}?<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Group</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>which produces the whole group.  So {<em>b</em>, <em>a</em>·<em>b</em>}
+is also a set of generators for the group.<br><br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Group</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>EXPERIMENT:<br>
+By using the <strong>Group</strong> command, find all of the subgroups of <em>G</em>. How many are there? <br></p>
+<p>In order to find all of the subgroups of a given group <em>G</em>, we will begin by finding all of the <em>cyclic</em> subgroups.  Recall that we defined a group to be <em>cyclic</em> if there was one element in the group that generates the entire group.  So a cyclic subgroup of <em>G</em> would be a subgroup generated by a single element <em>S</em> = {<em>x</em>} of the group.  In which case, we can use the notation [<em>x</em>] instead of  [{<em>x</em>}].</p>
+<p>EXAMPLE:<br>
+Find all of the cyclic subgroups of <em>S</em><sub>3</sub>.<br><br></p>
+<p>The process of finding all of the cyclic subgroups is similar to finding the generators of a group.  For each element, we consider raising that element to higher and higher
+powers until we produce the identity element.<br><br></p>
+<table align="center" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="left">(<em>e</em>)<sup>1</sup> = <em>e</em>.</td>
+    <td></td>
+    <td></td>
+  </tr>  
+  <tr>  
+    <td align="left">(<em>a</em>)<sup>1</sup> = <em>a</em>,</td>  
+    <td align="left">(<em>a</em>)<sup>2</sup> = <em>e</em>.</td>
+    <td></td>    
+  </tr>  
+  <tr>    
+    <td align="left">(<em>b</em>)<sup>1</sup> = <em>b</em>,</td>  
+    <td align="left">(<em>b</em>)<sup>2</sup> = <em>b</em><sup>2</sup>,</td>
+    <td align="left">&emsp; (<em>b</em>)<sup>3</sup> = <em>e</em>.</td>
+  </tr>  
+  <tr>     
+    <td align="left">(<em>a</em>&middot;<em>b</em>)<sup>1</sup> = <em>a</em>&middot;<em>b</em>,</td>  
+    <td align="left">(<em>a</em>&middot;<em>b</em>)<sup>2</sup> = <em>e</em>.</td>
+    <td></td>
+  </tr>  
+  <tr>  
+    <td align="left">(<em>b</em><sup>2</sup>)<sup>1</sup> = <em>b</em><sup>2</sup>,</td>
+    <td align="left">(<em>b</em><sup>2</sup>)<sup>2</sup> = <em>b</em>,</td>
+    <td align="left">&emsp; (<em>b</em><sup>2</sup>)<sup>3</sup> = <em>e</em>.</td>
+  </tr>  
+  <tr>     
+    <td align="left">(<em>a</em>&middot;<em>b</em><sup>2</sup>)<sup>1</sup> = <em>a</em>&middot;<em>b</em><sup>2</sup>,</td>  
+    <td align="left">(<em>a</em>&middot;<em>b</em><sup>2</sup>)<sup>2</sup> = <em>e</em>.</td>
+    <td></td>  
+  </tr>  
+</table>
+<br>
+<p>Thus, there are 5 cyclic subgroups, {<em>e</em>}, {<em>e</em>, <em>a</em>}, {<em>e</em>, <em>b</em>, <em>b</em><sup>2</sup>},
+{<em>e</em>, <em>a</em>·<em>b</em>}, and {<em>e</em>, <em>a</em>·<em>b</em><sup>2</sup>}.  Notice that none of the elements were generators,
+so the group itself is not cyclic.<br><br></p>
+<br>
+Let's look at a larger group. We found the octahedral group had order 24. Recall that the group was entered with the following <em>SageMath</em> commands.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
+<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="s2">&quot;c&quot;</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">c</span><span class="o">^</span><span class="mi">4</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">c</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">*</span><span class="n">c</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">c</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">Group</span><span class="p">();</span> <span class="n">G</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+For any set <em>S</em> we can find the subgroup [<em>S</em>] by typing <strong>G = Group(S)</strong><br><br>For example, suppose that the <em>S</em> is the single 
+element {<em>c</em>}.  We would type<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Group</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+and find we have a subgroup of order 4.<br><br>
+<p>We can try other combinations of elements. For example, <em>S</em> = {<em>b</em>, <em>c</em>}:<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Group</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+This appears as big as the whole group. Let's double check: <br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Since the size of this subgroup is 24 it must be the entire group. This means that the group can be generated 
+with just two of the elements.<br><br>
+<p>Why then did we use three elements to define the group originally? It turns out to be <em>more efficient</em> to define the group in <em>SageMath</em> using three elements
+rather than two!  Besides, it is much easier to put the octahedron back into its original position when one can flip the whole thing over. <br><br></p>
+<p>Here is another subgroup:<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Group</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Wait!  This looks familiar. Where have we seen this before? <br> <br>
+<p>Look back at the definition of <em>S</em><sub>3</sub>. We had <em>a</em> and <em>b</em> as the generators, and
+we even had <em>a</em><sup>2</sup> = e, <em>b</em><sup>3</sup> = e,
+and <em>b</em>·<em>a</em> = <em>a</em>·<em>b</em><sup>2</sup>. But these rules are all true of this
+subgroup of the octahedral group. Therefore, these are the same groups. We have found a copy of
+<em>S</em><sub>3</sub> inside of the octahedral group.<br></p>
+<p>For all of the examples we have seen in computing [<em>x</em>], the power of the element <em>x</em> eventually reached the identity element,
+indicating that we have finished finding the cyclic subgroup.  Here is a proof that shows this will always happen for a finite subgroup.</p>
+<p><a name="prop34ret" id="prop34ret"></a>
+PROPOSITION 3.4<br></p>
+<p>Let <em>G</em> be a finite group, and <em>x</em> ∈ <em>G</em>.  Then <em>x</em> will have finite order <em>n</em> and |[<em>x</em>]| = <em>n</em>.   Furthermore,<br></p>
+<p style='text-align: center;'>[<em>x</em>] = {<em>e</em>, <em>x</em>, <em>x</em><sup>2</sup>, 
+<em>x</em><sup>3</sup>, &hellip;, <em>x</em><sup><em>n</em>&minus;1</sup>}.</p>
+<p><a href="#prop34">Click here for the proof.</a></p>
+<p />
+<p>EXAMPLE:<br>
+Find the cyclic subgroups of the group  <em>Z</em><sub>15</sub><sup>*</sup> = {1, 2, 4, 7, 8, 11, 13, 14}, showing the orders of the elements.<br><br></p>
+<p>We compute powers of each element until we reach the identity.<br><br></p>
+<table align="center" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right">&emsp; 1<sup>1</sup> = 1.&ensp;</td>
+    <td></td>
+    <td></td>  
+    <td></td>
+  </tr>  
+  <tr>  
+    <td align="right">2<sup>1</sup> = 2,&ensp;</td>  
+    <td align="right">2<sup>2</sup> = 4,</td>
+    <td align="right">2<sup>3</sup> = 8,&ensp;</td>
+    <td align="right">2<sup>4</sup> = 1.</td>
+  </tr>  
+  <tr>     
+    <td align="right">&emsp; 4<sup>1</sup> = 4,&ensp;</td>  
+    <td align="right">&emsp; 4<sup>2</sup> = 1.</td>
+    <td></td>
+    <td></td>    
+  </tr>  
+  <tr>   
+    <td align="right">&emsp; 7<sup>1</sup> = 7,&ensp;</td>  
+    <td align="right">&emsp; 7<sup>2</sup> = 4,</td>
+    <td align="right">&emsp; 7<sup>3</sup> = 13,</td>
+    <td align="right">&emsp; 2<sup>4</sup> = 1.</td>
+  </tr>  
+  <tr>   
+    <td align="right">&emsp; 8<sup>1</sup> = 8,&ensp;</td>  
+    <td align="right">&emsp; 8<sup>2</sup> = 4,</td>
+    <td align="right">&emsp; 8<sup>3</sup> = 2,&ensp;</td>
+    <td align="right">&emsp; 8<sup>4</sup> = 1.</td>
+  </tr>  
+  <tr>  
+    <td align="right">11<sup>1</sup> = 11,</td>  
+    <td align="right">11<sup>2</sup> = 1.</td>
+    <td></td>
+    <td></td>    
+  </tr>  
+  <tr>    
+    <td align="right">13<sup>1</sup> = 13,</td>  
+    <td align="right">13<sup>2</sup> = 4,</td>
+    <td align="right">13<sup>3</sup> = 7,&ensp;</td>
+    <td align="right">13<sup>4</sup> = 1.</td>
+  </tr>  
+  <tr>     
+    <td align="right">14<sup>1</sup> = 14,</td>  
+    <td align="right">14<sup>2</sup> = 1.</td>  
+    <td></td>
+    <td></td>         
+  </tr>
+</table>
+<br>
+Thus, we see that the cyclic subgroups are [1] = {1}, [2] = [8] = {1,2,4,8}, [4] = {1, 4}, 
+[7] = [13] = {1,4,7,13}, [11] = {1, 11}, [14] = {1, 14}.  We also see that 1 has order 1, the elements 4, 11, and 14 have order 2, and the elements 2, 7, 8, and 13 have order 4.  Note that this group lacks a generator.<br><br>
+<p>We can make a similar observation if we have an <em>infinite</em> cyclic subgroup.</p>
+<p><a name="prop35ret" id="prop35ret"></a>
+PROPOSITION 3.5<br></p>
+<p>Suppose that <em>x</em> has infinite order. Then <br></p>
+<p style='text-align: center;'>[<em>x</em>] = {&hellip;, <em>x</em><sup>-3</sup>, <em>x</em><sup>-2</sup>, 
+<em>x</em><sup>-1</sup>, <em>x</em><sup>0</sup> = <em>e</em>, <em>x</em><sup>1</sup>, <em>x</em><sup>2</sup>, 
+<em>x</em><sup>3</sup>, &hellip;},</p>
+where the powers of <em>x</em> are all distinct.<br><br>
+<p><a href="#prop35">Click here for the proof.</a></p>
+<p />
+<p>Even though the subgroup in Proposition 3.5 is infinite, we can still define it in <em>SageMath</em>.<br />
+In fact, we defined an infinite group in the process of defining all of the other groups.  If we have <em>x</em> as the generator of an infinite group, then the group is defined by the following:<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
+<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+At this point, we have an infinite group defined.<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">^</span><span class="mi">4</span> <span class="o">*</span> <span class="n">x</span><span class="o">^-</span><span class="mi">7</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Granted, we cannot display all of the elements as we did for other groups (<strong>Group(x)</strong> would require interrupting <em>SageMath</em>), but we can still 
+multiply elements of this group.<br><br>
+<p>Because of Propositions 3.4 and 3.5, we know something about all cyclic groups. Any cyclic group <em>G</em> is either a finite group <br></p>
+<p style='text-align: center;'><em>G</em> = { <em>e</em> = <em>x</em><sup>0</sup>, <em>x</em><sup>1</sup>, <em>x</em><sup>2</sup>, <em>x</em><sup>3</sup>, 
+&hellip; , <em>x</em><sup><em>n</em>-1</sup>}</p>
+of order <em>n</em>, or is an infinite group<br>
+<p style='text-align: center;'><em>G</em> = {&hellip;, <em>x</em><sup>-3</sup>, <em>x</em><sup>-2</sup>, <em>x</em><sup>-1</sup>, <em>x</em><sup>0</sup> = e, 
+<em>x</em><sup>1</sup>, <em>x</em><sup>2</sup>, <em>x</em><sup>3</sup>, &hellip;}</p>
+where all powers of <em>x</em> are distinct.<br><br>
+<p>Note that in the first case, <em>G</em> closely resembles <em>Z<sub>n</sub></em>. In the second case, <em>G</em> closely resembles ℤ.
+From this, we can quickly determine the nature of a subgroup of a cyclic group.</p>
+<p><a name="prop36ret" id="prop36ret"></a>
+PROPOSITION 3.6<br></p>
+<p>A subgroup of a cyclic group must be cyclic.<br><br></p>
+<p><a href="#prop36">Click here for the proof.</a></p>
+<p />
+<p>EXAMPLE:<br>
+Find all the subgroups of the group ℤ.<br><br></p>
+<p>Since ℤ is cyclic, we know that all subgroups are cyclic, hence can be expresses as [<em>k</em>] for some integer <em>k</em>.  But [<em>k</em>] would
+be the multiples of <em>k</em>,</p>
+<p style='text-align: center;'>[<em>k</em>] = { <em>k</em>&middot;<em>x</em> | <em>x</em> &isin; &#8484;}.</p>            
+We will denote the subgroup of the multiples of <em>k</em> by <em>k</em> &#8484;.  Note that 0 &#8484; = {0}, 
+and 1 &#8484; = &#8484;, so even the trivial subgroups are of this form.<br><br>
+<p>Finding all of the subgroups of a non-cyclic group is trickier, since we have to consider subgroups generated by two or more elements.  <em>SageMath</em> can speed up the process.<br><br></p>
+<p>EXAMPLE:<br>
+Find all of the subgroups of the group <em>S</em><sub>3</sub>.</p>
+<p>We found all of the cyclic subgroups in a previous example: {<em>e</em>}, {<em>e</em>, <em>a</em>}, {<em>e</em>, <em>b</em>, <em>b</em><sup>2</sup>},
+{<em>e</em>, <em>a</em>·<em>b</em>}, and {<em>e</em>, <em>a</em>·<em>b</em><sup>2</sup>}.
+Note that any subgroup containing <em>b</em> must also contain <em>b</em><sup>2</sup>, and vice-versa.  Also all subgroups will contain <em>e</em>.  So to find subgroups that
+require two elements, we have 6 combinations to try:<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
+<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+<span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Group</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Group</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Group</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Group</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Group</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Group</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+In each case, we produced the entire group.  This shows that the only non-cyclic subgroup of <em>S</em><sub>3</sub> is <em>S</em><sub>3</sub> itself.  Thus, we have found a 
+total of 6 subgroups of <em>S</em><sub>3</sub>.<br><br><p>Let us now consider the orders of the elements of a cyclic group. Consider, for example, the group <em>Z</em><sub>12</sub>.<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">ZGroup</span><span class="p">(</span><span class="mi">12</span><span class="p">);</span> <span class="n">G</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>How many elements are there of order 2? We can answer this question by taking the square of all of the elements, and see which elements satisfy the equation x^2= e = 0. We can take the square of all of the elements at once with the command<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span> <span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">G</span> <span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>and see that only 0 and 6 satisfy the equation <em>x</em><sup>2</sup> = 0. Of course, the identity element 0 is of order 1 instead of 2, so there is only one element of order 2, namely 6.</p>
+<p>EXPERIMENT:
+By changing the <em>x</em><sup>2</sup> to <em>x</em><sup>3</sup> in the above command, find all of the elements of order 3.</p>
+<p>Next, try to determine how many elements there are of order 6. Remember that you cannot count the elements of order 2 or 3 that have already been found!</p>
+<p>It is apparent that finding the number of elements of order <em>k</em> involve finding the number of solutions to the
+equation <em>x<sup>k</sup></em> = <em>e</em>.<br />
+To help us find the number of solutions for a cyclic group, let us first prove the following proposition about modular multiplication.</p>
+<p><a name="prop37ret" id="prop37ret"></a>
+PROPOSITION 3.7<br></p>
+<p>Let <em>n</em> and <em>k</em> be two positive integers.  Then <br></p>
+<p style='text-align: center;'><em>x</em>&middot;<em>k</em> &#8801; 0 (mod <em>n</em>)</p>
+if and only if
+<table align="center" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td rowspan = "2" align="right"><em>x</em> =&ensp;</td>
+    <td height="33" valign="bottom"><font style="text-decoration:underline">&ensp;&emsp;<em>a</em>&middot;<em>n</em>&emsp;&ensp;</font></td>
+  </tr>
+  <tr>
+     <td valign="top">gcd(<em>n</em>, <em>k</em>)</td>
+  </tr>
+</table>
+for some integer <em>a</em>.<br><br>
+<p><a href="#prop37">Click here for the proof.</a></p>
+<p />
+We can now find the number of elements in a cyclic group that satisfies the equation <em>x<sup>k</sup></em> = <em>e</em>.<p><a name="cor31ret" id="cor31ret"></a>
+COROLLARY 3.1<br></p>
+<p>Let <em>G</em> be a cyclic group of order <em>n</em>.  Then there are precisely gcd(<em>n</em>, <em>k</em>) elements of <em>G</em> such that <em>x<sup>k</sup></em> = <em>e</em>.<br><br></p>
+<p><a href="#cor31">Click here for the proof.</a></p>
+<p />
+EXPERIMENT:<br>
+Use <em>SageMath</em> to find the number of solutions to <em>x</em><sup>8</sup> = 0 in <em>Z</em><sub>12</sub>.  Does this result agree with Corollary 3.1?<br><br>
+<p>Finding the number of solutions to the equation <em>x<sup>k</sup></em> = <em>e</em> in a group will become important as we classify the different groups.  We will give a notation
+to this count.<br><br></p>
+<p>DEFINITION 3.6<br>
+Let <em>G</em> be a group, and <em>k</em> a positive integer.  Then the number of elements of <em>G</em> for which <em>x<sup>k</sup></em> = <em>e</em> is called
+the <em>k<sup>th</sup> root count of G</em> and is denoted by</p>
+<p style='text-align: center;'><em>R<sub>k</sub></em>(<em>G</em>) = &#9116;{<em>x</em> &isin; <em>G</em> | <em>x<sup>k</sup></em> = <em>e</em>}&#9119;.</p>
+<p>Corollary 3.1 can now be expressed in the new notation.  If <em>G</em> is a cyclic group, then</p>
+<p style='text-align: center;'><em>R<sub>k</sub></em>(<em>G</em>) = gcd(|<em>G</em>|, <em>k</em>).</p>
+<p><em>SageMath</em> has a command <strong>RootCount(G, k)</strong> that will compute <em>R<sub>k</sub></em>(<em>G</em>).  For example, we can redo the last experiment with the commands:<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">ZGroup</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">RootCount</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Now let's look at a more complicated group. You probably have heard of the infamous Rubik's Cube<sup>&copy;</sup>. Rubik also came out with a number of other puzzles, 
+one of which is called the Pyraminx&trade;.  The Pyraminx&trade; consists of a triangular pyramid, with each of the four triangular sides partitioned into nine 
+smaller triangles. The four &quot;tips&quot; can rotate, but this does not affect the puzzle. To simplify the picture we can chop off the tips of the pyramid.  Execute 
+the following command to show a picture of the puzzle with the tips cut off:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitPuzzle</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Now the four corners of this puzzle can rotate, moving some of the middle pieces in the process. For example, the front corner can rotate clockwise 120&deg;
+by the command:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">RotatePuzzle</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+We can rotate the back corner clockwise with the command:<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">RotatePuzzle</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+At this point, we see the advantage of chopping off the four tips of the pyramid: this allows us to peer inside of the puzzle to see what is on the back face!<br><br>
+<p>The left and right corners can be rotated using the commands<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">RotatePuzzle</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">RotatePuzzle</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Now we have really scrambled the puzzle! Not to fear&ndash;&ndash;we can put the puzzle back into its original form with the command<br><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitPuzzle</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+That is sure much easier than taking the puzzle apart and putting it back together again!<br><br>
+<p>The set of all actions on the puzzle forms a group, called the Pyraminx™ group. This group is generated by the elements
+{<em>f</em>, <em>b</em>, <em>l</em>, <em>r</em>}. However, this group has over 900,000 elements!  Thus, it is not such a good idea to have <em>SageMath</em> list
+all elements of the group. It really wouldn’t tell us much, and would probably run us out of memory.<br><br></p>
+<p>We can determine information about the Pyraminx™ group by working with the puzzle. For example, we know that the elements <em>r</em>, <em>l</em>, <em>t</em>
+and <em>b</em> each have order 3. But what about the element <em>b</em>·<em>f</em>? Try this out yourself:<br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">RotatePuzzle</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Notice that we have the animation feature here. How many times must this statement be executed to get back to the original state? This will give us the order of the element 
+<em>b</em>&middot;<em>f</em>. So we have a subgroup, namely [<em>b</em>&middot;<em>f</em>] of that order. <br><br>
+<p>EXPERIMENT:<br>
+Using this method of repeating the operation, find the orders of the following elements:<br><br>
+<em>b</em>·<em>f</em>·<em>r</em>·<em>f</em>·<em>f</em> <br>
+<em>f</em>·<em>b</em>·<em>r</em><br><br></p>
+<br>
+One can see quite a variety of possibilities for the order of an element in this group.  Can you find an element with an order larger that the last example? 
+Perhaps we need to study the puzzle further to answer that question. When we know more about groups in general we will not only be able to answer this question, 
+but also build up some tools that will help us to solve the puzzle.<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<h1>Proofs:</h1><p><a name="prop31" id="prop31"></a>
+Proof of Proposition 3.1:<br><br></p>
+<p>Suppose that <em>g</em> is a generator of <em>Z<sub>n</sub></em>. Then 1 is able to be expressed as a power of <em>g</em>, so we have that <br></p>
+<p style='text-align: center;'><em>g<sup>v</sup></em> = 1 in <em>Z<sub>n</sub></em></p>
+<p>for some <em>v</em>. Since the group action of <em>Z<sub>n</sub></em> is addition, raising to a power is equivalent to repeated addition, or standard
+multiplication.<br><br></p>
+<p>Thus, we have that <br></p>
+<p style='text-align: center;'><em>g v</em> &#8801; 1 (mod <em>n</em>).</p>
+By Proposition 2.8, there is such a <em>v</em> if, and only if, <em>g</em> is coprime to <em>n</em>.<br><br>
+<p>Now suppose that <em>g</em> is coprime to <em>n</em>. By Proposition 2.8, there is a <em>v</em> such that<br></p>
+<p style='text-align: center;'><em>g v</em> &#8801; 1 (mod <em>n</em>), hence <em>g<sup>v</sup></em> = 1 in <em>Z<sub>n</sub></em>.</p>
+<p>So 1 can be expressed as a power of <em>g</em>. But 1 is a generator of <em>Z<sub>n</sub></em>, and so every element of <em>Z<sub>n</sub></em> can be expressed as a power
+of 1, say 1<sup><em>w</em></sup>. Then that element can be written as <em>g</em><sup>(<em>v w</em>)</sup> = (<em>g<sup>v</sup></em>)<sup><em>w</em></sup> = 1<sup><em>w</em></sup>.
+So every element can be expressed as a power of <em>g</em>, hence <em>g</em> is a generator of <em>Z<sub>n</sub></em>.<br><br></p>
+<p><a href="#prop31ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="theor31" id="theor31"></a></p>
+<p>Proof of Theorem 3.1:<br><br></p>
+<p>To begin, let us show that if <em>p</em> is a prime, then <em>ϕ</em>(<em>p<sup>r</sup></em>) = (<em>p</em> − 1)<em>p</em><sup><em>r</em>−1</sup>.<br><br>
+Note that the only numbers that are <em>not</em> coprime to <em>p<sup>r</sup></em> will be multiples of <em>p</em>.  So of the numbers between 1
+and <em>p<sup>r</sup></em>, exactly 1/<em>p</em> of them will be multiples of <em>p</em>.  The remaining (1 − 1/<em>p</em>)<em>p<sup>r</sup></em> will be coprime, and
+this can be simplified to (<em>p</em> − 1)<em>p</em><sup><em>r</em>−1</sup>.<br><br></p>
+<p>Next we want to show that if <em>n</em> and <em>m</em> are coprime, then <em>ϕ</em>(<em>n m</em>) = <em>ϕ</em>(<em>n</em>) <em>ϕ</em>(<em>m</em>).<br />
+Let <em>A</em> denote the set of numbers that are less than <em>n</em>, but coprime to <em>n</em>.  Let <em>B</em> denote the set of numbers that are less than
+<em>m</em>, but coprime to <em>m</em>.<br><br></p>
+<p>Then for any number <em>x</em> coprime to <em>n</em>·<em>m</em>, <em>x</em> <strong>mod</strong> <em>n</em> must be in the set <em>A</em>,
+while <em>x</em> <strong>mod</strong> <em>m</em> must be in
+<em>B</em>.  Yet for every <em>a</em> in <em>A</em> and <em>b</em> in <em>B</em>, there is, by the Chinese remainder theorem (1.5), a unique number less than
+<em>n m</em> that is equivalent to <em>a</em> (mod <em>n</em>) and <em>b</em> (mod <em>m</em>).  This number will be coprime to both <em>n</em> and
+<em>m</em>, and hence will be coprime to <em>n m</em>.<br><br></p>
+<p>Therefore, we have a one-to-one correspondence between ordered pairs (<em>a</em>, <em>b</em>), where <em>a</em> ∈ <em>A</em>, and <em>b</em> ∈ <em>B</em>, and
+numbers coprime to <em>n m</em>.  Thus, we have <br></p>
+<p style='text-align: center;'><em>&#981;</em>(<em>n m</em>) = <em>&#981;</em>(<em>n</em>)&middot;<em>&#981;</em>(<em>m</em>).</p>
+<br>
+Finally, we can combine these results together.  By simply noting that if<br><br>
+<p style='text-align: center;'><em>n</em> = <em>p</em><sub>1</sub><sup><em>r</em></sup>&sup1; &middot; <em>p</em><sub>2</sub><sup><em>r</em></sup>&sup2; 
+&middot; <em>p</em><sub>3</sub><sup><em>r</em></sup>&sup3; &middot;&middot;&middot; <em>p</em><sub><em>k</em></sub><sup><em>r&#8342;</em></sup>,</p>
+then <em>p</em><sub>1</sub><sup><em>r</em></sup>&sup1;, <em>p</em><sub>2</sub><sup><em>r</em></sup>&sup2;, <em>p</em><sub>3</sub><sup><em>r</em></sup>&sup3;, 
+&hellip;, <em>p<sub>k</sub></em><sup><em>r&#8342;</em></sup> will all be coprime.  Hence, we can find <em>&#981;</em> for each of these terms, and multiply them 
+together, giving us our formula.<br><br>
+<p><a href="#theor31ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="prop32" id="prop32"></a>
+Proof of Proposition 3.2:<br><br></p>
+<p>First of all, we need to see that if <em>H</em> is a subgroup, then <em>x</em>·<em>y</em><sup>-1</sup> is in <em>H</em> whenever <em>x</em> and <em>y</em> are in
+<em>H</em>.  By property (3), <em>y</em><sup>-1</sup> is in <em>H</em>, and so by property (1), <em>x</em>·<em>y</em><sup>-1</sup> is in <em>H</em>.<br><br></p>
+<p>Conversely, let us suppose that <em>H</em> ⊆ <em>G</em>, <em>H</em> ≠ { }, and whenever <em>x</em>, <em>y</em> ∈ <em>H</em>, then
+<em>x</em>·<em>y</em><sup>-1</sup> ∈ <em>H</em>.  We need to see that properties (1) through (3) are satisfied.<br><br></p>
+<p>Since <em>H</em> is not the empty set, there is an element <em>x</em> in <em>H</em>, and so <em>x</em>·<em>x</em><sup>-1</sup> = <em>e</em> is in <em>H</em>.<br />
+Thus property (2) holds.<br><br></p>
+<p>Next, we have that if <em>y</em> is in <em>H</em>, then <em>e</em>·<em>y</em><sup>-1</sup> = <em>y</em><sup>-1</sup> is in <em>H</em>, and so property (3)
+holds.<br><br></p>
+<p>Finally, if <em>x</em> and <em>y</em> are in <em>H</em>, then <em>y</em><sup>-1</sup> is in <em>H</em>, and so
+<em>x</em>·(<em>y</em><sup>-1</sup>)<sup>-1</sup> = <em>x</em>·<em>y</em> is in <em>H</em>.<br />
+Thus, property (1) also holds.<br><br></p>
+<p><a href="#prop32ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="prop33" id="prop33"></a>
+Proof of Proposition 3.3:<br><br></p>
+<p>First of, note that <em>H</em><sup>*</sup> is not the empty set, since the identity element is in each <em>H</em> in the collection.  We now can apply Proposition 3.2.
+Let <em>x</em> and <em>y</em> be two elements of <em>H</em><sup>*</sup>.  Then for every <em>H</em> ∈ <em>L</em> we have <em>x</em>, <em>y</em> ∈ <em>H</em>.
+Since <em>H</em> is a subgroup of <em>G</em>, we have <em>x</em>·<em>y</em><sup>-1</sup> ∈ <em>H</em>.  Therefore, <em>x</em>·<em>y</em><sup>-1</sup> is
+in <em>H</em><sup>*</sup>, and so <em>H</em><sup>*</sup> is a subgroup of <em>G</em>.<br><br></p>
+<p><a href="#prop33ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="prop34" id="prop34"></a>
+Proof of Proposition 3.4:<br><br></p>
+<p>Consider the sequence of elements {<em>x</em><sup>1</sup>, <em>x</em><sup>2</sup>, <em>x</em><sup>3</sup>,
+<em>x</em><sup>4</sup>, … }.  Since <em>G</em> is a finite group, not all of these elements can be distinct, so <em>x<sup>a</sup></em> = <em>x<sup>b</sup></em> for two integers <em>a</em> and <em>b</em>, with
+<em>a</em> &lt; <em>b</em>.   Then
+<em>x</em><sup>(<em>b</em>−<em>a</em>)</sup> = <em>e</em> and <em>b</em> − <em>a</em> &gt; 0, so the order of <em>x</em> is finite.  Recall from Definition 3.2 that the order is the smallest positive integer <em>n</em> such that <em>x<sup>n</sup></em> = <em>e</em>.  We want to show that indeed the elements of</p>
+<p style='text-align: center;'>{<em>e</em> = <em>x</em><sup>0</sup>, <em>x</em><sup>1</sup>, <em>x</em><sup>2</sup>, <em>x</em><sup>3</sup>, &hellip;, 
+<em>x</em><sup><em>n</em>&minus;1</sup>}</p>
+are all distinct.  Indeed, if
+<p style='text-align: center;'><em>x<sup>a</sup></em> = <em>x<sup>b</sup></em> with 0 &le; <em>a</em> &lt; <em>b</em> &le; <em>n</em> &minus; 1,</p>
+then <em>x</em><sup>(<em>b</em>&minus;<em>a</em>)</sup> = <em>e</em>, and 0 < <em>b</em> &minus; <em>a</em> &lt; <em>n</em>, which contradicts the order of <em>x</em>.  Therefore, 
+the elements in
+<p style='text-align: center;'>{ <em>e</em> = <em>x</em><sup>0</sup>, <em>x</em><sup>1</sup>, <em>x</em><sup>2</sup>, <em>x</em><sup>3</sup>, &hellip;,
+<em>x</em><sup><em>n</em>&minus;1 </sup>}</p>
+are all distinct.<br><br>
+<p>Finally, we need to show that if <em>y</em> is in [<em>x</em>], then there exists a <em>r</em> such that<br><br></p>
+<p style='text-align: center;'><em>x<sup>r</sup></em> = <em>y</em>, with 0 &le; <em>r</em> &le; <em>n</em> &minus; 1.</p>
+But <em>y</em> = <em>x<sup>k</sup></em> for some <em>k</em> &isin; &#8484;.  We can define <em>r</em> = <em>k</em> <strong>mod</strong> <em>n</em>.  
+Then 0 &le; <em>r</em> &le; <em>n</em> &minus; 1, and furthermore, there is an integer <em>q</em> such that <em>k</em> &minus; <em>r</em> = <em>n q</em>.  Thus,<br>
+<p style='text-align: center;'><em>y</em> = <em>x<sup>k</sup></em> = <em>x</em><sup>(<em>n q</em> + <em>r</em>)</sup> = 
+(<em>x<sup>n</sup></em>)<sup><em>q</em></sup>&middot;<em>x<sup>r</sup></em> = <em>e<sup>q</sup></em>&middot;<em>x<sup>r</sup></em> = <em>x<sup>r</sup></em>.</p>
+So every element of [<em>x</em>] is of the form <em>x<sup>r</sup></em>, with 0 &le; <em>r</em> &le; <em>n</em> &minus; 1, and |[<em>x</em>]| = <em>n</em>.<br><br>
+<p><a href="#prop34ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="prop35" id="prop35"></a>
+Proof of Proposition 3.5:<br><br></p>
+<p>From Definition 3.2, if <em>x</em> has infinite order, then <em>x<sup>n</sup></em> ≠ <em>e</em> for all <em>n</em> ≥ 1.
+Suppose that <em>x<sup>a</sup></em> = <em>x<sup>b</sup></em> with <em>a</em> &lt; <em>b</em>.
+Then <em>x</em><sup>(<em>b</em>−<em>a</em>)</sup> = <em>e</em> with <em>b</em> − <em>a</em> &gt; 0, contradicting the fact that the order of <em>x</em> is infinite. Thus, the powers of <em>x</em> are all distinct.  Since all powers of <em>x</em> are clearly in [<em>x</em>], we have that</p>
+<p style='text-align: center;'>[<em>x</em>] = {&hellip;, <em>x</em><sup>-3</sup>, <em>x</em><sup>-2</sup>, 
+<em>x</em><sup>-1</sup>, <em>x</em><sup>0</sup> = <em>e</em>, <em>x</em><sup>1</sup>, <em>x</em><sup>2</sup>, 
+<em>x</em><sup>3</sup>, &hellip;}.</p>
+<p><a href="#prop35ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="prop36" id="prop36"></a>
+Proof of Proposition 3.6:<br><br></p>
+<p>Let <em>g</em> be a generator of the cyclic group <em>G</em>.  The trivial subgroup {<em>e</em>} is considered cyclic, so let <em>H</em> be a non-trivial subgroup.  Then every
+element of <em>H</em> can be written as <em>g<sup>i</sup></em> for some <em>i</em>.  Since both <em>g<sup>i</sup></em> and <em>g</em><sup>−<em>i</em></sup> would
+then be in <em>H</em>, we see that <em>g<sup>i</sup></em> is in <em>H</em> for some positive <em>i</em>.  Let <em>k</em> be the smallest positive integer such
+that <em>g<sup>k</sup></em> is in <em>H</em>.  Then <em>g</em><sup><em>m k</em></sup> is in <em>H</em> for all integers <em>m</em>.<br><br></p>
+<p>If there were some other element in <em>H</em> not in [<em>g<sup>k</sup></em>], then this element is <em>g<sup>y</sup></em> for some integer <em>y</em>.<br />
+Then <em>y</em> = <em>q k</em> + <em>r</em> for some 0 &lt; <em>r</em> &lt; <em>k</em>.  Then
+<em>g<sup>r</sup></em> = <em>g<sup>y</sup></em>·(<em>g<sup>k</sup></em>)<sup>−<em>q</em></sup> ∈ <em>H</em>, but we chose <em>k</em> to be the smallest positive integer for which <em>g<sup>k</sup></em> ∈ <em>S</em>.  Thus, <em>H</em> = [<em>g<sup>k</sup></em>], and so <em>H</em> is cyclic.<br><br></p>
+<p><a href="#prop36ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="prop37" id="prop37"></a>
+Proof of Proposition 3.7:<br><br></p>
+<p>First of all, notice that if</p>
+<table align="center" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td rowspan = "2" align="right"><em>x</em> =&ensp;</td>
+    <td height="33" valign="bottom"><font style="text-decoration:underline">&ensp;&emsp;<em>a</em>&middot;<em>n</em>&emsp;&ensp;</font></td>
+    <td rowspan = "2" align="right">,</td>
+  </tr>
+  <tr>
+     <td valign="top">gcd(<em>n</em>, <em>k</em>)</td>
+  </tr>
+</table>
+then
+<table align="center" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td rowspan = "2" align="right"><em>x</em>&middot;<em>k</em> =&ensp;</td>
+    <td height="33" valign="bottom"><font style="text-decoration:underline">&emsp;<em>a</em>&middot;<em>n</em>&middot;<em>k</em>&emsp;</font></td>
+    <td rowspan = "2" align="right">&ensp;= <em>a</em>&middot;<em>n</em>&middot;&ensp;</td>
+    <td height="33" valign="bottom"><font style="text-decoration:underline">&emsp;&emsp;<em>k</em>&emsp;&emsp;</font></td>
+    <td rowspan = "2" align="right">,</td>
+  </tr>
+  <tr>
+     <td valign="top">gcd(<em>n</em>, <em>k</em>)</td>
+     <td valign="top">gcd(<em>n</em>, <em>k</em>)</td>
+  </tr>
+</table>
+<br>
+and since gcd(<em>n</em>, <em>k</em>) is a divisor of <em>k</em>, we see that <em>x</em> &middot; <em>k</em> is a multiple of <em>n</em>.  Thus,
+<p style='text-align: center;'><em>x</em>&middot;<em>k</em> &#8801; 0 (mod <em>n</em>).</p>
+<p>Now suppose that <em>x</em>·<em>k</em> is a multiple of <em>n</em>. We want to show that</p>
+<table align="center" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td rowspan = "2" align="right"><em>a</em> =&ensp;</td>
+    <td height="33" valign="bottom"><font style="text-decoration:underline"><em>x</em>&middot;gcd(<em>n</em>, <em>k</em>)</font></td>
+  </tr>
+  <tr>
+     <td align="center" valign="top">&ensp;&ensp;&ensp;<em>n</em>&ensp;&ensp;&ensp;</td>
+  </tr>
+</table>
+<br>
+is in fact an integer. By B&eacute;zout's lemma (1.3), there exist integers <em>u</em> and <em>v</em> such that 
+gcd(<em>n</em>, <em>k</em>) = <em>u</em>&middot;<em>n</em> + <em>v</em>&middot;<em>k</em>. Then<br><br>
+<table align="center" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td rowspan = "2" align="right"><em>a</em> =&ensp;</td>
+    <td height="33" valign="bottom"><font style="text-decoration:underline"><em>x</em>&middot;(<em>u</em>&middot;<em>n</em> + <em>v</em>&middot;<em>k</em>)</font></td>
+    <td rowspan = "2" align="right">&ensp;= <em>x</em>&middot;<em>u</em> +&ensp;</td>
+    <td height="33" valign="bottom"><font style="text-decoration:underline"><em>x</em>&middot;<em>k</em>&middot;<em>v</em></font></td>
+    <td rowspan = "2" align="right">.</td>
+  </tr>
+  <tr>
+     <td align="center" valign="top">&ensp;&ensp;&ensp;&ensp;<em>n</em>&ensp;&ensp;&ensp;&ensp;</td>
+     <td align="center" valign="top">&ensp;<em>n</em>&ensp;</td>
+  </tr>
+</table>
+<br>
+Since <em>x</em> &middot; <em>k</em> is a multiple of <em>n</em>, we see that <em>a</em> is an integer. Thus,
+<table align="center" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td rowspan = "2" align="right"><em>x</em> =&ensp;</td>
+    <td height="33" valign="bottom"><font style="text-decoration:underline">&ensp;&emsp;<em>a</em>&middot;<em>n</em>&emsp;&ensp;</font></td>
+  </tr>
+  <tr>
+     <td valign="top">gcd(<em>n</em>, <em>k</em>)</td>
+  </tr>
+</table>
+for some integer <em>a</em>.<br><br>
+<p><a href="#prop37ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="cor31" id="cor31"></a>
+Proof of Corollary 3.1:<br><br></p>
+<p>Let <em>g</em> be a generator of <em>G</em>, and let <em>x</em> = <em>g<sup>y</sup></em> be an element of <em>G</em>. Then
+<em>x<sup>k</sup></em> = (<em>g<sup>y</sup></em>)<sup><em>k</em></sup> = <em>g</em><sup><em>y</em>·<em>k</em></sup>, which is equal to the identity if and only if <br></p>
+<p style='text-align: center;'><em>y</em>&middot;<em>k</em> &equiv; 0 (mod <em>n</em>).</p>
+By Proposition 3.7, this is true if and only if
+<table align="center" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td rowspan = "2" align="right"><em>y</em> =&ensp;</td>
+    <td height="33" valign="bottom"><font style="text-decoration:underline">&ensp;&emsp;<em>a</em>&middot;<em>n</em>&emsp;&ensp;</font></td>
+  </tr>
+  <tr>
+     <td valign="top">gcd(<em>n</em>, <em>k</em>)</td>
+  </tr>
+</table>
+<br>
+for some integer <em>a</em>.  Hence, the number of possible values of  <em>y</em>  between 0 and  <em>n</em> &minus; 1 for which 
+<em>g</em><sup><em>y</em>&middot;<em>k</em></sup> = <em>e</em> is<br><br>
+<table align="center" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="33" valign="bottom"><font style="text-decoration:underline">&ensp;&emsp;&emsp;<em>n</em>&emsp;&emsp;&ensp;</font></td>
+    <td rowspan = "2" align="right">&ensp;= gcd(<em>n</em>, <em>k</em>).</td>
+  </tr>
+  <tr>
+     <td valign="top"><em>n</em> / gcd(<em>n</em>, <em>k</em>)</td>
+  </tr>
+</table>
+<br>
+Each such value of <em>y</em> between 0 and <em>n</em> &minus; 1 produces a different solution <em>x</em> = <em>g<sup>y</sup></em>, so there are 
+exactly gcd(<em>n</em>, <em>k</em>) solutions.<br><br>
+<p><a href="#cor31ret">Return to text</a></p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><a name="sec3p" id="sec3p"></a></p>
+<h1><em>SageMath</em> Interactive Problems</h1>
+<br>
+&sect;3.1 #28)<br>
+Use <em>SageMath</em>'s circle graph to find all of the generators of the group <em>Z</em><sub>21</sub>.<br><br>
+&sect;3.1 #29)<br>
+Use <em>SageMath</em> to see if there an element of <em>Z</em><sub>25</sub><sup>&ast;</sup> that generates <em>Z</em><sub>25</sub><sup>&ast;</sup>.  If so, how many such 
+elements are there?<br><br>
+&sect;3.1 #30)<br>
+By using <em>SageMath</em>'s <strong>Generators()</strong> command, determine whether <em>Z<sub>n</sub></em><sup>&ast;</sup> is cyclic for <em>n</em> = 9, 27, 81, 243, 5, 25, 125.  
+Make a conjecture about when <em>Z<sub>n</sub></em><sup>&ast;</sup> is cyclic if <em>n</em> is a power of an odd prime.<br><br>
+&sect;3.1 #31)<br>
+By using <em>SageMath</em>'s <strong>Generators()</strong> command, determine whether <em>Z<sub>n</sub></em><sup>&ast;</sup> is cyclic for <em>n</em> = 18, 54, 162, 486, 50, 250, 98, 686. 
+Make a conjecture about when <em>Z<sub>n</sub></em><sup>&ast;</sup> is cyclic if <em>n</em> is twice the power of an odd prime.<br><br>
+&sect;3.1 #32)<br>
+By using <em>SageMath</em>'s <strong>Generators()</strong> command, see if you can find an <em>n</em> for which <em>Z<sub>n</sub></em><sup>&ast;</sup> is cyclic, and <em>n</em> doesn't fit 
+into the categories of Problems 25 or 26.<br><br>
+&sect;3.2 #18)<br>
+Use <em>SageMath</em> to define a group that has two elements, <em>a</em> and <em>b</em>, for which <em>a</em><sup>5</sup> = <em>b</em><sup>4</sup> =<em>e</em>,
+and <em>b</em> &middot; <em>a</em> = <em>a</em><sup>2</sup> &middot; <em>b</em>.  How many elements does this group have?<br><br>
+&sect;3.2 #19)<br>
+Consider the rotations of a regular <em>tetrahedron</em> (triangular pyramid) oriented with its base in the <em>xy</em>-plane, and another face towards the front.  If <em>a</em> represents flipping the left slanted edge, and <em>b</em> represents flipping the right slanted edge, then <em>a</em>&middot;<em>b</em> and <em>b</em>&middot;<em>a</em> both end up flipping the back edge. (Try it!)  Let <em>c</em> be a 120&deg; rotation of the base clockwise when viewed from the top.  Then <em>c</em>&middot;<em>a</em>&middot;<em>c</em><sup>&minus;1</sup> = <em>b</em>, since <em>c</em> turns the right edge to the left edge.  Likewise, <em>c</em>&middot;<em>b</em>&middot;<em>c</em><sup>&minus;1</sup> = <em>a</em>&middot;<em>b</em>, since the back edge is turned to the right edge.  From this information, enter the rotation group into <em>SageMath</em>.  You will need to find expressions for <em>c</em>&middot;<em>a</em> and <em>c</em>&middot;<em>b</em> that are in alphabetical order.<br><br>
+&sect;3.2 #20)<br>
+Consider extending the octahedral group by adding another generator <em>d</em>, which of order 5, such that <em>d</em>&middot;<em>a</em> = <em>a</em>&middot;<em>b</em>&middot;<em>d</em>, <em>d</em>&middot;<em>b</em> = <em>a</em>&middot;<em>c</em>&middot;<em>d</em>, and <em>d</em>&middot;<em>c</em> = <em>a</em>&middot;<em>d</em><sup>2</sup>.  Enter this larger group into <em>SageMath</em>.  How many elements does it have?  (Do not try to do a <strong>CheckGroup</strong> on this group.)<br><br>
+&sect;3.3 #23)<br>
+Use Problem 18 from &sect;3.2 to find the subgroup generated by the elements <em>a</em> and <em>b</em><sup>2</sup>.  How many elements does this have?<br><br>
+&sect;3.3 #24)<br>
+Use <em>SageMath</em> to find the order of the elements <em>b</em>&middot;<em>f</em>, <em>b</em>&middot;<em>f</em>&middot;<em>r</em>&middot;<em>f</em>&middot;<em>f</em> 
+and <em>f</em>&middot;<em>b</em>&middot;<em>r</em> in the Pyraminx&trade; group.<br><br>
+&sect;3.3 #25)<br>
+Can you use <em>SageMath</em> to find an element of the Pyraminx&trade; group that has order 30?<br>  
+(Hint: Exactly five of the six edges must be moved out of place. The sixth edge must flip as well.)<br></font>
+</body>
+</html>
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "sagemath"
+        },
+        kernelOptions: {
+            name: "sagemath",
+            path: "./23permutation-puzzle-GroupTheory"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'sagemath'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jonny, assisted by Tom
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
