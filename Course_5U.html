@@ -174,6 +174,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Course_Puzzle_Group.html">Permutation Puzzles</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">5U - Ext III</a></li>
 
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">CS &amp; Physics</span></p>
 <ul class="nav bd-sidenav">
@@ -359,6 +360,27 @@
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#discrete-calculus">Discrete Calculus</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Discrete Calculus</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intro">1. Intro</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sigma-notation">Sigma Notation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#riemann-sums">Riemann Sums</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#product-notation">Product Notation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#taylor-series">Taylor Series</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finite-differences">Finite Differences</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#number-theory">2. Number Theory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#primes">3. Primes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-things">Basic Things</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applications">Applications</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fibonacci">4. Fibonacci</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#permutations-and-combinations">5. Permutations and Combinations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#harmonic-numbers">6. Harmonic Numbers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#partitions">7. Partitions</a></li>
+</ul>
+</li>
 </ul>
 
             </nav>
@@ -683,6 +705,837 @@
 <section class="tex2jax_ignore mathjax_ignore" id="discrete-calculus">
 <h1>Discrete Calculus<a class="headerlink" href="#discrete-calculus" title="Link to this heading">#</a></h1>
 </section>
+<section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Discrete Calculus<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<section id="intro">
+<h2>1. Intro<a class="headerlink" href="#intro" title="Link to this heading">#</a></h2>
+<p>keywords : sequences/series, finite differences, sums/products, gfun
+e . g . Finite Sums / Infinite Sums,    Riemann Sums</p>
+<p><img alt="1uds3aefy8e99" src="_images/1uds3aefy8e99.png" /></p>
+<p>15</p>
+<p>1</p>
+<p><img alt="0po4hoj78l7u8" src="_images/0po4hoj78l7u8.png" /></p>
+<p><img alt="0wlr9vur12fd1" src="_images/0wlr9vur12fd1.png" /></p>
+<p><img alt="02ncvum6lagx4" src="_images/02ncvum6lagx4.png" /></p>
+<section id="sigma-notation">
+<h3>Sigma Notation<a class="headerlink" href="#sigma-notation" title="Link to this heading">#</a></h3>
+<p>Basic Examples</p>
+<p><img alt="0e3cqxphajv5t" src="_images/0e3cqxphajv5t.png" /></p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 15
+</pre></div>
+</div>
+<p>Infinite Sums</p>
+<p><img alt="01a84yj3vm2kd" src="_images/01a84yj3vm2kd.png" /></p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 1
+</pre></div>
+</div>
+<p><img alt="1czc70ewehiiz" src="_images/1czc70ewehiiz.png" /></p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= E
+</pre></div>
+</div>
+</section>
+<section id="riemann-sums">
+<h3>Riemann Sums<a class="headerlink" href="#riemann-sums" title="Link to this heading">#</a></h3>
+<p><img alt="1rjtes7ys10c7" src="_images/1rjtes7ys10c7.png" /></p>
+<p><img alt="1hl1oag7i1ruq" src="_images/1hl1oag7i1ruq.png" /></p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= Show[DiscretePlot[f[x], {x, 1, 3, 1/3}, ExtentSize -&gt; Full], plot]
+</pre></div>
+</div>
+<p><img alt="0pws6oyi83n6q" src="_images/0pws6oyi83n6q.png" /></p>
+<p><img alt="0zr4cz571m7gc" src="_images/0zr4cz571m7gc.png" /></p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 2.03771
+</pre></div>
+</div>
+</section>
+<section id="product-notation">
+<h3>Product Notation<a class="headerlink" href="#product-notation" title="Link to this heading">#</a></h3>
+<p><img alt="0eu63zh0wm646" src="_images/0eu63zh0wm646.png" /></p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= 120
+</pre></div>
+</div>
+<p><img alt="1xatl7h9grd1i" src="_images/1xatl7h9grd1i.png" /></p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= 3.0899225749115415`
+</pre></div>
+</div>
+</section>
+<section id="taylor-series">
+<h3>Taylor Series<a class="headerlink" href="#taylor-series" title="Link to this heading">#</a></h3>
+<p><img alt="06fyb5cvncpfj" src="_images/06fyb5cvncpfj.png" /></p>
+<p><img alt="0hummh59v43ce" src="_images/0hummh59v43ce.png" /></p>
+<p><img alt="0sa2ftpgpdtr2" src="_images/0sa2ftpgpdtr2.png" /></p>
+<p><img alt="1flk6cxwxxhrl" src="_images/1flk6cxwxxhrl.png" /></p>
+</section>
+<section id="finite-differences">
+<h3>Finite Differences<a class="headerlink" href="#finite-differences" title="Link to this heading">#</a></h3>
+<p><img alt="0dt899w2ggx54" src="_images/0dt899w2ggx54.png" /></p>
+<p><img alt="0k8qhhqoy6coa" src="_images/0k8qhhqoy6coa.png" /></p>
+<p><img alt="1nay0swzov7f2" src="_images/1nay0swzov7f2.png" /></p>
+<p><img alt="0lbyp8r7s6kau" src="_images/0lbyp8r7s6kau.png" /></p>
+<p><img alt="1np512945d1gq" src="_images/1np512945d1gq.png" /></p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= (*coding form*)
+   f&#39;[x] 
+    Limit[difForward[x, h], h -&gt; 0] 
+    Limit[difBackward[x, h], h -&gt; 0] 
+    Simplify[Limit[difCentral[x, h], h -&gt; 0]]
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 4 - 10 x + 3 x^2
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 4 - 10 x + 3 x^2
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 4 - 10 x + 3 x^2
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 4 - 10 x + 3 x^2
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\text{(*math form*)}f'(x)\underset{h\to 0}{\text{lim}}\text{difForward}(x,h)\underset{h\to 0}{\text{lim}}\text{difBackward}(x,h)\text{Simplify}[\underset{h\to 0}{\text{lim}}\text{difCentral}(x,h)]\]</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 4 - 10 x + 3 x^2
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 4 - 10 x + 3 x^2
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 4 - 10 x + 3 x^2
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 4 - 10 x + 3 x^2
+</pre></div>
+</div>
+</section>
+</section>
+<section id="number-theory">
+<h2>2. Number Theory<a class="headerlink" href="#number-theory" title="Link to this heading">#</a></h2>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= Divisible[10, 5]
+ Mod[12, 10](*cannot use %*)
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= True
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 2
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= a = 420;   (*separate input cell*)
+ b = 860;
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= (*repeat until output appears*)
+   r = Mod[a, b]; 
+    a = b; 
+    If[r &gt; 0, b = r, Print[a]];
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 20
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= (*only need to run once*)
+   r = Mod[a, b]; 
+    a = b; 
+    While[r &gt; 0, b = r; r = Mod[a, b]; a = b] 
+    Print[a]
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 20
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= GCD[a, b]
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 20
+</pre></div>
+</div>
+</section>
+<section id="primes">
+<h2>3. Primes<a class="headerlink" href="#primes" title="Link to this heading">#</a></h2>
+<section id="basic-things">
+<h3>Basic Things<a class="headerlink" href="#basic-things" title="Link to this heading">#</a></h3>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= Table[Prime[i], {i, 10}]
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= {2, 3, 5, 7, 11, 13, 17, 19, 23, 29}
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= PrimeQ[67]
+ PrimeQ[267]
+ CompositeQ[6767]
+ CompositeQ[673]
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= True
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= False
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= True
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= False
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= gap[n_] = Prime[n + 1] - Prime[n];
+ DiscretePlot[gap[n], {n, 150}]
+</pre></div>
+</div>
+<p><img alt="1gosh1w5b7zis" src="_images/1gosh1w5b7zis.png" /></p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= RandomPrime[100]
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 73
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= Plot[PrimePi[x], {x, 0, 50}]
+</pre></div>
+</div>
+<p><img alt="0826y0d0squzl" src="_images/0826y0d0squzl.png" /></p>
+</section>
+<section id="applications">
+<h3>Applications<a class="headerlink" href="#applications" title="Link to this heading">#</a></h3>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= (*RSA Encryption*)
+   p = Prime[18]; 
+    q = Prime[16]; 
+    n = p*q
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 3233
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= EulerPhi[n]
+ u = 17;
+ k = 15;
+ CoprimeQ[u, EulerPhi[n]]
+ PrivKey = (k*EulerPhi[n] + 1)/u
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 3120
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= True
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 2753
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= data = ToCharacterCode[&quot;Secret&quot;]
+ encrypted = Mod[data^u, n]
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= {83, 101, 99, 114, 101, 116}
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= {2680, 1313, 281, 2412, 1313, 884}
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= decrypted = Mod[encrypted^PrivKey, n]
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= {83, 101, 99, 114, 101, 116}
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= EulerPhi[n] == (p - 1) (q - 1)
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= True
+</pre></div>
+</div>
+</section>
+</section>
+<section id="fibonacci">
+<h2>4. Fibonacci<a class="headerlink" href="#fibonacci" title="Link to this heading">#</a></h2>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= DiscreteAsymptotic[Fibonacci[n]/Fibonacci[n - 1], n -&gt; \[Infinity]]
+ DiscreteAsymptotic[Fibonacci[n], n -&gt; \[Infinity]]
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= GoldenRatio
+</pre></div>
+</div>
+<p><img alt="0xals3geu330v" src="_images/0xals3geu330v.png" /></p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= Table[Fibonacci[i], {i, -20, 20}]      (*including 0 is optional*)
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= {-6765, 4181, -2584, 1597, -987, 610, -377, 233, -144, 89, -55, 34, -21, 13, -8, 5, -3, 2, -1, 1, 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765}
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= Table[Fibonacci[i, x], {i, -5, 5}]
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= {1 + 3 x^2 + x^4, -2 x - x^3, 1 + x^2, -x, 1, 0, 1, x, 1 + x^2, 2 x + x^3, 1 + 3 x^2 + x^4}
+</pre></div>
+</div>
+<p><img alt="0d2m7ums0grsd" src="_images/0d2m7ums0grsd.png" /></p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 0.568864
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 0.568864 - 0.351578 I
+</pre></div>
+</div>
+<p>When Fib inputs expand from integers to continuous, use Euler’s formula to calculate powers.
+Sage coding: def a(n): return BinaryRecurrenceSequence(1, 1).period(n)           Lucas sequence is BinaryRecurrenceSequence and Fib is special Lucas</p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= test[{0, 1, _}] := False; test[_] := True;
+ nest[k_][{a_, b_, c_}] := {Mod[b, k], Mod[a + b, k], c + 1};
+ A001175[1] := 1;
+ A001175[k_] := NestWhile[nest[k], {1, 1, 1}, test][[3]];
+ Table[A001175[n], {n, 100}] (* Leo C. Stein, Nov 08 2019 *)
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= {1, 3, 8, 6, 20, 24, 16, 12, 24, 60, 10, 24, 28, 48, 40, 24, 36, 24, 18, 60, 16, 30, 48, 24, 100, 84, 72, 48, 14, 120, 30, 48, 40, 36, 80, 24, 76, 18, 56, 60, 40, 48, 88, 30, 120, 48, 32, 24, 112, 300, 72, 84, 108, 72, 20, 48, 72, 42, 58, 120, 60, 30, 48, 96, 140, 120, 136, 36, 48, 240, 70, 24, 148, 228, 200, 18, 80, 168, 78, 120, 216, 120, 168, 48, 180, 264, 56, 60, 44, 120, 112, 48, 120, 96, 180, 48, 196, 336, 120, 300}
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= PolarPlot[GoldenRatio^(2 \[Theta]/\[Pi]), {\[Theta], 0, 9 \[Pi]}]
+</pre></div>
+</div>
+<p><img alt="196ct6p3esczf" src="_images/196ct6p3esczf.png" /></p>
+<p><img alt="0kuv506nm5cxi" src="_images/0kuv506nm5cxi.png" /></p>
+<p><img alt="10dzecppm5pmw" src="_images/10dzecppm5pmw.png" /></p>
+</section>
+<section id="permutations-and-combinations">
+<h2>5. Permutations and Combinations<a class="headerlink" href="#permutations-and-combinations" title="Link to this heading">#</a></h2>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= Perm[n_, k_] = n!/(n - k)!;
+ Perm[11, 11]
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 39916800
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= Length[Permutations[{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11}]]
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 39916800
+</pre></div>
+</div>
+<p><strong>Birthday problem (pigeonhole principle, see Twelvefold Way)</strong></p>
+<p><img alt="0zomvbiyoisjr" src="_images/0zomvbiyoisjr.png" /></p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 88.2336
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= BirthdayChance[n_] = 100* (1 - ((364/365)^Combinations[n, 2]));
+ DiscretePlot[BirthdayChance[n], {n, 2, 100}]
+</pre></div>
+</div>
+<p><img alt="19pp0sc7pp7dt" src="_images/19pp0sc7pp7dt.png" /></p>
+<p><img alt="1wsmnz0nr7jx7" src="_images/1wsmnz0nr7jx7.png" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+<td><p>2</p></td>
+<td><p></p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+<td><p>3</p></td>
+<td><p></p></td>
+<td><p>3</p></td>
+<td><p></p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+<td><p>4</p></td>
+<td><p></p></td>
+<td><p>6</p></td>
+<td><p></p></td>
+<td><p>4</p></td>
+<td><p></p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+<td><p>5</p></td>
+<td><p></p></td>
+<td><p>10</p></td>
+<td><p></p></td>
+<td><p>10</p></td>
+<td><p></p></td>
+<td><p>5</p></td>
+<td><p></p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+<td><p>6</p></td>
+<td><p></p></td>
+<td><p>15</p></td>
+<td><p></p></td>
+<td><p>20</p></td>
+<td><p></p></td>
+<td><p>15</p></td>
+<td><p></p></td>
+<td><p>6</p></td>
+<td><p></p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+<td><p>7</p></td>
+<td><p></p></td>
+<td><p>21</p></td>
+<td><p></p></td>
+<td><p>35</p></td>
+<td><p></p></td>
+<td><p>35</p></td>
+<td><p></p></td>
+<td><p>21</p></td>
+<td><p></p></td>
+<td><p>7</p></td>
+<td><p></p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+<td><p>8</p></td>
+<td><p></p></td>
+<td><p>28</p></td>
+<td><p></p></td>
+<td><p>56</p></td>
+<td><p></p></td>
+<td><p>70</p></td>
+<td><p></p></td>
+<td><p>56</p></td>
+<td><p></p></td>
+<td><p>28</p></td>
+<td><p></p></td>
+<td><p>8</p></td>
+<td><p></p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+<td><p>9</p></td>
+<td><p></p></td>
+<td><p>36</p></td>
+<td><p></p></td>
+<td><p>84</p></td>
+<td><p></p></td>
+<td><p>126</p></td>
+<td><p></p></td>
+<td><p>126</p></td>
+<td><p></p></td>
+<td><p>84</p></td>
+<td><p></p></td>
+<td><p>36</p></td>
+<td><p></p></td>
+<td><p>9</p></td>
+<td><p></p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+<td><p>10</p></td>
+<td><p></p></td>
+<td><p>45</p></td>
+<td><p></p></td>
+<td><p>120</p></td>
+<td><p></p></td>
+<td><p>210</p></td>
+<td><p></p></td>
+<td><p>252</p></td>
+<td><p></p></td>
+<td><p>210</p></td>
+<td><p></p></td>
+<td><p>120</p></td>
+<td><p></p></td>
+<td><p>45</p></td>
+<td><p></p></td>
+<td><p>10</p></td>
+<td><p></p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+<td><p>11</p></td>
+<td><p></p></td>
+<td><p>55</p></td>
+<td><p></p></td>
+<td><p>165</p></td>
+<td><p></p></td>
+<td><p>330</p></td>
+<td><p></p></td>
+<td><p>462</p></td>
+<td><p></p></td>
+<td><p>462</p></td>
+<td><p></p></td>
+<td><p>330</p></td>
+<td><p></p></td>
+<td><p>165</p></td>
+<td><p></p></td>
+<td><p>55</p></td>
+<td><p></p></td>
+<td><p>11</p></td>
+<td><p></p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p></p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+<td><p>12</p></td>
+<td><p></p></td>
+<td><p>66</p></td>
+<td><p></p></td>
+<td><p>220</p></td>
+<td><p></p></td>
+<td><p>495</p></td>
+<td><p></p></td>
+<td><p>792</p></td>
+<td><p></p></td>
+<td><p>924</p></td>
+<td><p></p></td>
+<td><p>792</p></td>
+<td><p></p></td>
+<td><p>495</p></td>
+<td><p></p></td>
+<td><p>220</p></td>
+<td><p></p></td>
+<td><p>66</p></td>
+<td><p></p></td>
+<td><p>12</p></td>
+<td><p></p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+<td><p>13</p></td>
+<td><p></p></td>
+<td><p>78</p></td>
+<td><p></p></td>
+<td><p>286</p></td>
+<td><p></p></td>
+<td><p>715</p></td>
+<td><p></p></td>
+<td><p>1287</p></td>
+<td><p></p></td>
+<td><p>1716</p></td>
+<td><p></p></td>
+<td><p>1716</p></td>
+<td><p></p></td>
+<td><p>1287</p></td>
+<td><p></p></td>
+<td><p>715</p></td>
+<td><p></p></td>
+<td><p>286</p></td>
+<td><p></p></td>
+<td><p>78</p></td>
+<td><p></p></td>
+<td><p>13</p></td>
+<td><p></p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p></p></td>
+<td><p>14</p></td>
+<td><p></p></td>
+<td><p>91</p></td>
+<td><p></p></td>
+<td><p>364</p></td>
+<td><p></p></td>
+<td><p>1001</p></td>
+<td><p></p></td>
+<td><p>2002</p></td>
+<td><p></p></td>
+<td><p>3003</p></td>
+<td><p></p></td>
+<td><p>3432</p></td>
+<td><p></p></td>
+<td><p>3003</p></td>
+<td><p></p></td>
+<td><p>2002</p></td>
+<td><p></p></td>
+<td><p>1001</p></td>
+<td><p></p></td>
+<td><p>364</p></td>
+<td><p></p></td>
+<td><p>91</p></td>
+<td><p></p></td>
+<td><p>14</p></td>
+<td><p></p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>100 Prisoners problem
+100 prisoners go into a room one by one and choose 50 cabinets numbered cabinets from 1-100 out of 100 to open. They try to find the one that matches their prisoner number(1-100) inside the 50 cabinets.</p>
+<p>Random picking strategy</p>
+<p><img alt="1hy7vk21k1c6j" src="_images/1hy7vk21k1c6j.png" /></p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 7.88861*10^-31
+</pre></div>
+</div>
+<p>Another strategy is to start with the cabinet that matches their number. Then, if they don’t find their number inside, they go to the cabinet with the number inside the previous one. This way, the prisoner will end up in a permutation cycle. The prisoners win if no cycle is longer than 50. But if they lose, then at least 51 of them lose.</p>
+<p><img alt="1loxsiw6xxymz" src="_images/1loxsiw6xxymz.png" /></p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 31.1828
+</pre></div>
+</div>
+</section>
+<section id="harmonic-numbers">
+<h2>6. Harmonic Numbers<a class="headerlink" href="#harmonic-numbers" title="Link to this heading">#</a></h2>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= Table[N[HarmonicNumber[i]], {i, 100}]
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= {1., 1.5, 1.83333, 2.08333, 2.28333, 2.45, 2.59286, 2.71786, 2.82897, 2.92897, 3.01988, 3.10321, 3.18013, 3.25156, 3.31823, 3.38073, 3.43955, 3.49511, 3.54774, 3.59774, 3.64536, 3.69081, 3.73429, 3.77596, 3.81596, 3.85442, 3.89146, 3.92717, 3.96165, 3.99499, 4.02725, 4.0585, 4.0888, 4.11821, 4.14678, 4.17456, 4.20159, 4.2279, 4.25354, 4.27854, 4.30293, 4.32674, 4.35, 4.37273, 4.39495, 4.41669, 4.43796, 4.4588, 4.47921, 4.49921, 4.51881, 4.53804, 4.55691, 4.57543, 4.59361, 4.61147, 4.62901, 4.64625, 4.6632, 4.67987, 4.69626, 4.71239, 4.72827, 4.74389, 4.75928, 4.77443, 4.78935, 4.80406, 4.81855, 4.83284, 4.84692, 4.86081, 4.87451, 4.88802, 4.90136, 4.91451, 4.9275, 4.94032, 4.95298, 4.96548, 4.97782, 4.99002, 5.00207, 5.01397, 5.02574, 5.03737, 5.04886, 5.06022, 5.07146, 5.08257, 5.09356, 5.10443, 5.11518, 5.12582, 5.13635, 5.14676, 5.15707, 5.16728, 5.17738, 5.18738}
+</pre></div>
+</div>
+<p><span class="math notranslate nohighlight">\(![17xq228t19cua](img/17xq228t19cua.png)\)</span>
+<span class="math notranslate nohighlight">\(![0b066tat3avwf](img/0b066tat3avwf.png)\)</span>
+<span class="math notranslate nohighlight">\(![0jxoftgfmc3bm](img/0jxoftgfmc3bm.png)\)</span>
+<span class="math notranslate nohighlight">\(![00euk0mhyuwsb](img/00euk0mhyuwsb.png)\)</span></p>
+<p>There are some applications of Harmonic numbers in problems such as card stacking and traffic bunching.</p>
+</section>
+<section id="partitions">
+<h2>7. Partitions<a class="headerlink" href="#partitions" title="Link to this heading">#</a></h2>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -756,6 +1609,27 @@
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#discrete-calculus">Discrete Calculus</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Discrete Calculus</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intro">1. Intro</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sigma-notation">Sigma Notation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#riemann-sums">Riemann Sums</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#product-notation">Product Notation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#taylor-series">Taylor Series</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finite-differences">Finite Differences</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#number-theory">2. Number Theory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#primes">3. Primes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-things">Basic Things</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applications">Applications</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fibonacci">4. Fibonacci</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#permutations-and-combinations">5. Permutations and Combinations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#harmonic-numbers">6. Harmonic Numbers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#partitions">7. Partitions</a></li>
+</ul>
+</li>
 </ul>
 
   </nav></div>
