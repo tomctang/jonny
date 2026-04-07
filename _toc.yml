@@ -19,10 +19,10 @@ parts:
   - file: past/Course_MIT6001Python
   - file: past/Course_MIT6002thinking
   - file: PE100
-  # - file: PE200 
+  #- file: PE200 
   - file: PE_Informatics/PE_tags
   - file: past/Course_MCM_QM
-  
+
 - caption: Notebook & Tom
   numbered: false
   chapters:
