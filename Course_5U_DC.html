@@ -54,7 +54,7 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js?v=1ae7504c"></script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -173,7 +173,6 @@
 <li class="toctree-l1"><a class="reference internal" href="Course_Lean.html">Lean</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Course_Puzzle_Group.html">Permutation Puzzles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Course_5U.html">5U - Ext III</a></li>
-
 
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">CS &amp; Physics</span></p>
@@ -372,6 +371,16 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#permutations-and-combinations">5. Permutations and Combinations</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#harmonic-numbers">6. Harmonic Numbers</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#partitions">7. Partitions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bernoulli-numbers">8. Bernoulli Numbers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stirling-numbers">9. Stirling Numbers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sequence-recognition">10. Sequence Recognition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-functions">11. Generating Functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-generating-functions">Properties of generating functions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summing-finite-infinite-series">12&amp;13. Summing Finite &amp; Infinite Series</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convergence-tests">14. Convergence Tests</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#volume-of-n-d-sphere">15. Volume of N-D sphere</a></li>
 </ul>
             </nav>
         </div>
@@ -385,6 +394,10 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="discrete-calculus">
 <h1>Discrete Calculus<a class="headerlink" href="#discrete-calculus" title="Link to this heading">#</a></h1>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="n">RunScheduledTask</span><span class="p">[</span><span class="n">NotebookSave</span><span class="p">[</span><span class="n">EvaluationNotebook</span><span class="p">[]],</span><span class="w"> </span><span class="mi">30</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><img alt="0iwh2ahqdk3pq" src="_images/0iwh2ahqdk3pq.png" /></p>
 <section id="intro">
 <h2>1. Intro<a class="headerlink" href="#intro" title="Link to this heading">#</a></h2>
 <p>keywords : sequences/series, finite differences, sums/products, gfun
@@ -399,16 +412,16 @@ e . g . Finite Sums / Infinite Sums,    Riemann Sums</p>
 <h3>Sigma Notation<a class="headerlink" href="#sigma-notation" title="Link to this heading">#</a></h3>
 <p>Basic Examples</p>
 <p><img alt="0e3cqxphajv5t" src="_images/0e3cqxphajv5t.png" /></p>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 15
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="mi">15</span>
 </pre></div>
 </div>
 <p>Infinite Sums</p>
 <p><img alt="01a84yj3vm2kd" src="_images/01a84yj3vm2kd.png" /></p>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 1
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
 </pre></div>
 </div>
 <p><img alt="1czc70ewehiiz" src="_images/1czc70ewehiiz.png" /></p>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= E
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="n">E</span>
 </pre></div>
 </div>
 </section>
@@ -416,23 +429,23 @@ e . g . Finite Sums / Infinite Sums,    Riemann Sums</p>
 <h3>Riemann Sums<a class="headerlink" href="#riemann-sums" title="Link to this heading">#</a></h3>
 <p><img alt="1rjtes7ys10c7" src="_images/1rjtes7ys10c7.png" /></p>
 <p><img alt="1hl1oag7i1ruq" src="_images/1hl1oag7i1ruq.png" /></p>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= Show[DiscretePlot[f[x], {x, 1, 3, 1/3}, ExtentSize -&gt; Full], plot]
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="n">Show</span><span class="p">[</span><span class="n">DiscretePlot</span><span class="p">[</span><span class="n">f</span><span class="p">[</span><span class="n">x</span><span class="p">],</span><span class="w"> </span><span class="p">{</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">},</span><span class="w"> </span><span class="n">ExtentSize</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Full</span><span class="p">],</span><span class="w"> </span><span class="n">plot</span><span class="p">]</span>
 </pre></div>
 </div>
 <p><img alt="0pws6oyi83n6q" src="_images/0pws6oyi83n6q.png" /></p>
 <p><img alt="0zr4cz571m7gc" src="_images/0zr4cz571m7gc.png" /></p>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 2.03771
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="mf">2.03771</span>
 </pre></div>
 </div>
 </section>
 <section id="product-notation">
 <h3>Product Notation<a class="headerlink" href="#product-notation" title="Link to this heading">#</a></h3>
 <p><img alt="0eu63zh0wm646" src="_images/0eu63zh0wm646.png" /></p>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= 120
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="mi">120</span>
 </pre></div>
 </div>
 <p><img alt="1xatl7h9grd1i" src="_images/1xatl7h9grd1i.png" /></p>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= 3.0899225749115415`
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="mf">3.0899225749115415</span><span class="err">`</span>
 </pre></div>
 </div>
 </section>
@@ -450,80 +463,80 @@ e . g . Finite Sums / Infinite Sums,    Riemann Sums</p>
 <p><img alt="1nay0swzov7f2" src="_images/1nay0swzov7f2.png" /></p>
 <p><img alt="0lbyp8r7s6kau" src="_images/0lbyp8r7s6kau.png" /></p>
 <p><img alt="1np512945d1gq" src="_images/1np512945d1gq.png" /></p>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= (*coding form*)
-   f&#39;[x] 
-    Limit[difForward[x, h], h -&gt; 0] 
-    Limit[difBackward[x, h], h -&gt; 0] 
-    Simplify[Limit[difCentral[x, h], h -&gt; 0]]
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="c">(*coding form*)</span>
+<span class="w">   </span><span class="n">f</span><span class="err">&#39;</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="w"> </span>
+<span class="w">    </span><span class="n">Limit</span><span class="p">[</span><span class="n">difForward</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">h</span><span class="p">],</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">]</span><span class="w"> </span>
+<span class="w">    </span><span class="n">Limit</span><span class="p">[</span><span class="n">difBackward</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">h</span><span class="p">],</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">]</span><span class="w"> </span>
+<span class="w">    </span><span class="n">Simplify</span><span class="p">[</span><span class="n">Limit</span><span class="p">[</span><span class="n">difCentral</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">h</span><span class="p">],</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">]]</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 4 - 10 x + 3 x^2
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="n">x</span><span class="o">^</span><span class="mi">2</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 4 - 10 x + 3 x^2
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="n">x</span><span class="o">^</span><span class="mi">2</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 4 - 10 x + 3 x^2
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="n">x</span><span class="o">^</span><span class="mi">2</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 4 - 10 x + 3 x^2
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="n">x</span><span class="o">^</span><span class="mi">2</span>
 </pre></div>
 </div>
 <div class="math notranslate nohighlight">
 \[\text{(*math form*)}f'(x)\underset{h\to 0}{\text{lim}}\text{difForward}(x,h)\underset{h\to 0}{\text{lim}}\text{difBackward}(x,h)\text{Simplify}[\underset{h\to 0}{\text{lim}}\text{difCentral}(x,h)]\]</div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 4 - 10 x + 3 x^2
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="n">x</span><span class="o">^</span><span class="mi">2</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 4 - 10 x + 3 x^2
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="n">x</span><span class="o">^</span><span class="mi">2</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 4 - 10 x + 3 x^2
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="n">x</span><span class="o">^</span><span class="mi">2</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 4 - 10 x + 3 x^2
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="n">x</span><span class="o">^</span><span class="mi">2</span>
 </pre></div>
 </div>
 </section>
 </section>
 <section id="number-theory">
 <h2>2. Number Theory<a class="headerlink" href="#number-theory" title="Link to this heading">#</a></h2>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= Divisible[10, 5]
- Mod[12, 10](*cannot use %*)
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="n">Divisible</span><span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">]</span>
+<span class="w"> </span><span class="n">Mod</span><span class="p">[</span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">]</span><span class="c">(*cannot use %*)</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= True
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="n">True</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 2
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= a = 420;   (*separate input cell*)
- b = 860;
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">420</span><span class="p">;</span><span class="w">   </span><span class="c">(*separate input cell*)</span>
+<span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">860</span><span class="p">;</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= (*repeat until output appears*)
-   r = Mod[a, b]; 
-    a = b; 
-    If[r &gt; 0, b = r, Print[a]];
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="c">(*repeat until output appears*)</span>
+<span class="w">   </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Mod</span><span class="p">[</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">];</span><span class="w"> </span>
+<span class="w">    </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="n">If</span><span class="p">[</span><span class="n">r</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">Print</span><span class="p">[</span><span class="n">a</span><span class="p">]];</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 20
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="mi">20</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= (*only need to run once*)
-   r = Mod[a, b]; 
-    a = b; 
-    While[r &gt; 0, b = r; r = Mod[a, b]; a = b] 
-    Print[a]
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="c">(*only need to run once*)</span>
+<span class="w">   </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Mod</span><span class="p">[</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">];</span><span class="w"> </span>
+<span class="w">    </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="n">While</span><span class="p">[</span><span class="n">r</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r</span><span class="p">;</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Mod</span><span class="p">[</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">];</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">]</span><span class="w"> </span>
+<span class="w">    </span><span class="n">Print</span><span class="p">[</span><span class="n">a</span><span class="p">]</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 20
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="mi">20</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= GCD[a, b]
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="n">GCD</span><span class="p">[</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">]</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 20
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="mi">20</span>
 </pre></div>
 </div>
 </section>
@@ -531,139 +544,139 @@ e . g . Finite Sums / Infinite Sums,    Riemann Sums</p>
 <h2>3. Primes<a class="headerlink" href="#primes" title="Link to this heading">#</a></h2>
 <section id="basic-things">
 <h3>Basic Things<a class="headerlink" href="#basic-things" title="Link to this heading">#</a></h3>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= Table[Prime[i], {i, 10}]
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="n">Table</span><span class="p">[</span><span class="n">Prime</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="p">{</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">}]</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= {2, 3, 5, 7, 11, 13, 17, 19, 23, 29}
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w"> </span><span class="mi">29</span><span class="p">}</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= PrimeQ[67]
- PrimeQ[267]
- CompositeQ[6767]
- CompositeQ[673]
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="n">PrimeQ</span><span class="p">[</span><span class="mi">67</span><span class="p">]</span>
+<span class="w"> </span><span class="n">PrimeQ</span><span class="p">[</span><span class="mi">267</span><span class="p">]</span>
+<span class="w"> </span><span class="n">CompositeQ</span><span class="p">[</span><span class="mi">6767</span><span class="p">]</span>
+<span class="w"> </span><span class="n">CompositeQ</span><span class="p">[</span><span class="mi">673</span><span class="p">]</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= True
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="n">True</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= False
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="n">False</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= True
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="n">True</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= False
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="n">False</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= gap[n_] = Prime[n + 1] - Prime[n];
- DiscretePlot[gap[n], {n, 150}]
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="n">gap</span><span class="p">[</span><span class="nv">n_</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Prime</span><span class="p">[</span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Prime</span><span class="p">[</span><span class="n">n</span><span class="p">];</span>
+<span class="w"> </span><span class="n">DiscretePlot</span><span class="p">[</span><span class="n">gap</span><span class="p">[</span><span class="n">n</span><span class="p">],</span><span class="w"> </span><span class="p">{</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="mi">150</span><span class="p">}]</span>
 </pre></div>
 </div>
 <p><img alt="1gosh1w5b7zis" src="_images/1gosh1w5b7zis.png" /></p>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= RandomPrime[100]
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="n">RandomPrime</span><span class="p">[</span><span class="mi">100</span><span class="p">]</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 73
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="mi">73</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= Plot[PrimePi[x], {x, 0, 50}]
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="n">Plot</span><span class="p">[</span><span class="n">PrimePi</span><span class="p">[</span><span class="n">x</span><span class="p">],</span><span class="w"> </span><span class="p">{</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">}]</span>
 </pre></div>
 </div>
 <p><img alt="0826y0d0squzl" src="_images/0826y0d0squzl.png" /></p>
 </section>
 <section id="applications">
 <h3>Applications<a class="headerlink" href="#applications" title="Link to this heading">#</a></h3>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= (*RSA Encryption*)
-   p = Prime[18]; 
-    q = Prime[16]; 
-    n = p*q
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="c">(*RSA Encryption*)</span>
+<span class="w">   </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Prime</span><span class="p">[</span><span class="mi">18</span><span class="p">];</span><span class="w"> </span>
+<span class="w">    </span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Prime</span><span class="p">[</span><span class="mi">16</span><span class="p">];</span><span class="w"> </span>
+<span class="w">    </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="o">*</span><span class="n">q</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 3233
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="mi">3233</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= EulerPhi[n]
- u = 17;
- k = 15;
- CoprimeQ[u, EulerPhi[n]]
- PrivKey = (k*EulerPhi[n] + 1)/u
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="n">EulerPhi</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+<span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">17</span><span class="p">;</span>
+<span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15</span><span class="p">;</span>
+<span class="w"> </span><span class="n">CoprimeQ</span><span class="p">[</span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="n">EulerPhi</span><span class="p">[</span><span class="n">n</span><span class="p">]]</span>
+<span class="w"> </span><span class="n">PrivKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">EulerPhi</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="n">u</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 3120
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="mi">3120</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= True
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="n">True</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 2753
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="mi">2753</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= data = ToCharacterCode[&quot;Secret&quot;]
- encrypted = Mod[data^u, n]
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ToCharacterCode</span><span class="p">[</span><span class="s">&quot;Secret&quot;</span><span class="p">]</span>
+<span class="w"> </span><span class="n">encrypted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Mod</span><span class="p">[</span><span class="n">data</span><span class="o">^</span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">]</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= {83, 101, 99, 114, 101, 116}
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">83</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">99</span><span class="p">,</span><span class="w"> </span><span class="mi">114</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">116</span><span class="p">}</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= {2680, 1313, 281, 2412, 1313, 884}
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">2680</span><span class="p">,</span><span class="w"> </span><span class="mi">1313</span><span class="p">,</span><span class="w"> </span><span class="mi">281</span><span class="p">,</span><span class="w"> </span><span class="mi">2412</span><span class="p">,</span><span class="w"> </span><span class="mi">1313</span><span class="p">,</span><span class="w"> </span><span class="mi">884</span><span class="p">}</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= decrypted = Mod[encrypted^PrivKey, n]
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="n">decrypted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Mod</span><span class="p">[</span><span class="n">encrypted</span><span class="o">^</span><span class="n">PrivKey</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">]</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= {83, 101, 99, 114, 101, 116}
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">83</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">99</span><span class="p">,</span><span class="w"> </span><span class="mi">114</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">116</span><span class="p">}</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= EulerPhi[n] == (p - 1) (q - 1)
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="n">EulerPhi</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">q</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= True
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="n">True</span>
 </pre></div>
 </div>
 </section>
 </section>
 <section id="fibonacci">
 <h2>4. Fibonacci<a class="headerlink" href="#fibonacci" title="Link to this heading">#</a></h2>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= DiscreteAsymptotic[Fibonacci[n]/Fibonacci[n - 1], n -&gt; \[Infinity]]
- DiscreteAsymptotic[Fibonacci[n], n -&gt; \[Infinity]]
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="n">DiscreteAsymptotic</span><span class="p">[</span><span class="n">Fibonacci</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">/</span><span class="n">Fibonacci</span><span class="p">[</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="err">\</span><span class="p">[</span><span class="n">Infinity</span><span class="p">]]</span>
+<span class="w"> </span><span class="n">DiscreteAsymptotic</span><span class="p">[</span><span class="n">Fibonacci</span><span class="p">[</span><span class="n">n</span><span class="p">],</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="err">\</span><span class="p">[</span><span class="n">Infinity</span><span class="p">]]</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= GoldenRatio
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="n">GoldenRatio</span>
 </pre></div>
 </div>
 <p><img alt="0xals3geu330v" src="_images/0xals3geu330v.png" /></p>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= Table[Fibonacci[i], {i, -20, 20}]      (*including 0 is optional*)
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="n">Table</span><span class="p">[</span><span class="n">Fibonacci</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="p">{</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="mi">-20</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">}]</span><span class="w">      </span><span class="c">(*including 0 is optional*)</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= {-6765, 4181, -2584, 1597, -987, 610, -377, 233, -144, 89, -55, 34, -21, 13, -8, 5, -3, 2, -1, 1, 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765}
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">-6765</span><span class="p">,</span><span class="w"> </span><span class="mi">4181</span><span class="p">,</span><span class="w"> </span><span class="mi">-2584</span><span class="p">,</span><span class="w"> </span><span class="mi">1597</span><span class="p">,</span><span class="w"> </span><span class="mi">-987</span><span class="p">,</span><span class="w"> </span><span class="mi">610</span><span class="p">,</span><span class="w"> </span><span class="mi">-377</span><span class="p">,</span><span class="w"> </span><span class="mi">233</span><span class="p">,</span><span class="w"> </span><span class="mi">-144</span><span class="p">,</span><span class="w"> </span><span class="mi">89</span><span class="p">,</span><span class="w"> </span><span class="mi">-55</span><span class="p">,</span><span class="w"> </span><span class="mi">34</span><span class="p">,</span><span class="w"> </span><span class="mi">-21</span><span class="p">,</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w"> </span><span class="mi">-8</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">-3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span><span class="w"> </span><span class="mi">34</span><span class="p">,</span><span class="w"> </span><span class="mi">55</span><span class="p">,</span><span class="w"> </span><span class="mi">89</span><span class="p">,</span><span class="w"> </span><span class="mi">144</span><span class="p">,</span><span class="w"> </span><span class="mi">233</span><span class="p">,</span><span class="w"> </span><span class="mi">377</span><span class="p">,</span><span class="w"> </span><span class="mi">610</span><span class="p">,</span><span class="w"> </span><span class="mi">987</span><span class="p">,</span><span class="w"> </span><span class="mi">1597</span><span class="p">,</span><span class="w"> </span><span class="mi">2584</span><span class="p">,</span><span class="w"> </span><span class="mi">4181</span><span class="p">,</span><span class="w"> </span><span class="mi">6765</span><span class="p">}</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= Table[Fibonacci[i, x], {i, -5, 5}]
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="n">Table</span><span class="p">[</span><span class="n">Fibonacci</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">],</span><span class="w"> </span><span class="p">{</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="mi">-5</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">}]</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= {1 + 3 x^2 + x^4, -2 x - x^3, 1 + x^2, -x, 1, 0, 1, x, 1 + x^2, 2 x + x^3, 1 + 3 x^2 + x^4}
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="o">^</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">-2</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="o">^</span><span class="mi">4</span><span class="p">}</span>
 </pre></div>
 </div>
 <p><img alt="0d2m7ums0grsd" src="_images/0d2m7ums0grsd.png" /></p>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 0.568864
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="mf">0.568864</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 0.568864 - 0.351578 I
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="mf">0.568864</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">0.351578</span><span class="w"> </span><span class="n">I</span>
 </pre></div>
 </div>
 <p>When Fib inputs expand from integers to continuous, use Euler’s formula to calculate powers.
 Sage coding: def a(n): return BinaryRecurrenceSequence(1, 1).period(n)           Lucas sequence is BinaryRecurrenceSequence and Fib is special Lucas</p>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= test[{0, 1, _}] := False; test[_] := True;
- nest[k_][{a_, b_, c_}] := {Mod[b, k], Mod[a + b, k], c + 1};
- A001175[1] := 1;
- A001175[k_] := NestWhile[nest[k], {1, 1, 1}, test][[3]];
- Table[A001175[n], {n, 100}] (* Leo C. Stein, Nov 08 2019 *)
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="n">test</span><span class="p">[{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nv">_</span><span class="p">}]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">False</span><span class="p">;</span><span class="w"> </span><span class="n">test</span><span class="p">[</span><span class="nv">_</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">True</span><span class="p">;</span>
+<span class="w"> </span><span class="n">nest</span><span class="p">[</span><span class="nv">k_</span><span class="p">][{</span><span class="nv">a_</span><span class="p">,</span><span class="w"> </span><span class="nv">b_</span><span class="p">,</span><span class="w"> </span><span class="nv">c_</span><span class="p">}]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">{</span><span class="n">Mod</span><span class="p">[</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">],</span><span class="w"> </span><span class="n">Mod</span><span class="p">[</span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">],</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">};</span>
+<span class="w"> </span><span class="n">A001175</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w"> </span><span class="n">A001175</span><span class="p">[</span><span class="nv">k_</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">NestWhile</span><span class="p">[</span><span class="n">nest</span><span class="p">[</span><span class="n">k</span><span class="p">],</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span><span class="w"> </span><span class="n">test</span><span class="p">][[</span><span class="mi">3</span><span class="p">]];</span>
+<span class="w"> </span><span class="n">Table</span><span class="p">[</span><span class="n">A001175</span><span class="p">[</span><span class="n">n</span><span class="p">],</span><span class="w"> </span><span class="p">{</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">}]</span><span class="w"> </span><span class="c">(* Leo C. Stein, Nov 08 2019 *)</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= {1, 3, 8, 6, 20, 24, 16, 12, 24, 60, 10, 24, 28, 48, 40, 24, 36, 24, 18, 60, 16, 30, 48, 24, 100, 84, 72, 48, 14, 120, 30, 48, 40, 36, 80, 24, 76, 18, 56, 60, 40, 48, 88, 30, 120, 48, 32, 24, 112, 300, 72, 84, 108, 72, 20, 48, 72, 42, 58, 120, 60, 30, 48, 96, 140, 120, 136, 36, 48, 240, 70, 24, 148, 228, 200, 18, 80, 168, 78, 120, 216, 120, 168, 48, 180, 264, 56, 60, 44, 120, 112, 48, 120, 96, 180, 48, 196, 336, 120, 300}
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">24</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">24</span><span class="p">,</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">24</span><span class="p">,</span><span class="w"> </span><span class="mi">28</span><span class="p">,</span><span class="w"> </span><span class="mi">48</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="mi">24</span><span class="p">,</span><span class="w"> </span><span class="mi">36</span><span class="p">,</span><span class="w"> </span><span class="mi">24</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">48</span><span class="p">,</span><span class="w"> </span><span class="mi">24</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">84</span><span class="p">,</span><span class="w"> </span><span class="mi">72</span><span class="p">,</span><span class="w"> </span><span class="mi">48</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">48</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="mi">36</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="mi">24</span><span class="p">,</span><span class="w"> </span><span class="mi">76</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w"> </span><span class="mi">56</span><span class="p">,</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="mi">48</span><span class="p">,</span><span class="w"> </span><span class="mi">88</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="mi">48</span><span class="p">,</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span><span class="w"> </span><span class="mi">24</span><span class="p">,</span><span class="w"> </span><span class="mi">112</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mi">72</span><span class="p">,</span><span class="w"> </span><span class="mi">84</span><span class="p">,</span><span class="w"> </span><span class="mi">108</span><span class="p">,</span><span class="w"> </span><span class="mi">72</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">48</span><span class="p">,</span><span class="w"> </span><span class="mi">72</span><span class="p">,</span><span class="w"> </span><span class="mi">42</span><span class="p">,</span><span class="w"> </span><span class="mi">58</span><span class="p">,</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">48</span><span class="p">,</span><span class="w"> </span><span class="mi">96</span><span class="p">,</span><span class="w"> </span><span class="mi">140</span><span class="p">,</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="mi">136</span><span class="p">,</span><span class="w"> </span><span class="mi">36</span><span class="p">,</span><span class="w"> </span><span class="mi">48</span><span class="p">,</span><span class="w"> </span><span class="mi">240</span><span class="p">,</span><span class="w"> </span><span class="mi">70</span><span class="p">,</span><span class="w"> </span><span class="mi">24</span><span class="p">,</span><span class="w"> </span><span class="mi">148</span><span class="p">,</span><span class="w"> </span><span class="mi">228</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="mi">168</span><span class="p">,</span><span class="w"> </span><span class="mi">78</span><span class="p">,</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="mi">216</span><span class="p">,</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="mi">168</span><span class="p">,</span><span class="w"> </span><span class="mi">48</span><span class="p">,</span><span class="w"> </span><span class="mi">180</span><span class="p">,</span><span class="w"> </span><span class="mi">264</span><span class="p">,</span><span class="w"> </span><span class="mi">56</span><span class="p">,</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="mi">44</span><span class="p">,</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="mi">112</span><span class="p">,</span><span class="w"> </span><span class="mi">48</span><span class="p">,</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="mi">96</span><span class="p">,</span><span class="w"> </span><span class="mi">180</span><span class="p">,</span><span class="w"> </span><span class="mi">48</span><span class="p">,</span><span class="w"> </span><span class="mi">196</span><span class="p">,</span><span class="w"> </span><span class="mi">336</span><span class="p">,</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="p">}</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= PolarPlot[GoldenRatio^(2 \[Theta]/\[Pi]), {\[Theta], 0, 9 \[Pi]}]
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="n">PolarPlot</span><span class="p">[</span><span class="n">GoldenRatio</span><span class="o">^</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="err">\</span><span class="p">[</span><span class="n">Theta</span><span class="p">]</span><span class="o">/</span><span class="err">\</span><span class="p">[</span><span class="n">Pi</span><span class="p">]),</span><span class="w"> </span><span class="p">{</span><span class="err">\</span><span class="p">[</span><span class="n">Theta</span><span class="p">],</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="err">\</span><span class="p">[</span><span class="n">Pi</span><span class="p">]}]</span>
 </pre></div>
 </div>
 <p><img alt="196ct6p3esczf" src="_images/196ct6p3esczf.png" /></p>
@@ -672,26 +685,26 @@ Sage coding: def a(n): return BinaryRecurrenceSequence(1, 1).period(n)          
 </section>
 <section id="permutations-and-combinations">
 <h2>5. Permutations and Combinations<a class="headerlink" href="#permutations-and-combinations" title="Link to this heading">#</a></h2>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= Perm[n_, k_] = n!/(n - k)!;
- Perm[11, 11]
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="n">Perm</span><span class="p">[</span><span class="nv">n_</span><span class="p">,</span><span class="w"> </span><span class="nv">k_</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="o">!/</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="o">!</span><span class="p">;</span>
+<span class="w"> </span><span class="n">Perm</span><span class="p">[</span><span class="mi">11</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">]</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 39916800
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="mi">39916800</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= Length[Permutations[{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11}]]
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="n">Length</span><span class="p">[</span><span class="n">Permutations</span><span class="p">[{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">}]]</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 39916800
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="mi">39916800</span>
 </pre></div>
 </div>
 <p><strong>Birthday problem (pigeonhole principle, see Twelvefold Way)</strong></p>
 <p><img alt="0zomvbiyoisjr" src="_images/0zomvbiyoisjr.png" /></p>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 88.2336
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="mf">88.2336</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= BirthdayChance[n_] = 100* (1 - ((364/365)^Combinations[n, 2]));
- DiscretePlot[BirthdayChance[n], {n, 2, 100}]
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="n">BirthdayChance</span><span class="p">[</span><span class="nv">n_</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">((</span><span class="mi">364</span><span class="o">/</span><span class="mi">365</span><span class="p">)</span><span class="o">^</span><span class="n">Combinations</span><span class="p">[</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">]));</span>
+<span class="w"> </span><span class="n">DiscretePlot</span><span class="p">[</span><span class="n">BirthdayChance</span><span class="p">[</span><span class="n">n</span><span class="p">],</span><span class="w"> </span><span class="p">{</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">}]</span>
 </pre></div>
 </div>
 <p><img alt="19pp0sc7pp7dt" src="_images/19pp0sc7pp7dt.png" /></p>
@@ -1187,21 +1200,21 @@ Sage coding: def a(n): return BinaryRecurrenceSequence(1, 1).period(n)          
 100 prisoners go into a room one by one and choose 50 cabinets numbered cabinets from 1-100 out of 100 to open. They try to find the one that matches their prisoner number(1-100) inside the 50 cabinets.</p>
 <p>Random picking strategy</p>
 <p><img alt="1hy7vk21k1c6j" src="_images/1hy7vk21k1c6j.png" /></p>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 7.88861*10^-31
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="mf">7.88861</span><span class="o">*</span><span class="mi">10</span><span class="o">^</span><span class="mi">-31</span>
 </pre></div>
 </div>
 <p>Another strategy is to start with the cabinet that matches their number. Then, if they don’t find their number inside, they go to the cabinet with the number inside the previous one. This way, the prisoner will end up in a permutation cycle. The prisoners win if no cycle is longer than 50. But if they lose, then at least 51 of them lose.</p>
 <p><img alt="1loxsiw6xxymz" src="_images/1loxsiw6xxymz.png" /></p>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= 31.1828
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="mf">31.1828</span>
 </pre></div>
 </div>
 </section>
 <section id="harmonic-numbers">
 <h2>6. Harmonic Numbers<a class="headerlink" href="#harmonic-numbers" title="Link to this heading">#</a></h2>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>In[]:= Table[N[HarmonicNumber[i]], {i, 100}]
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="n">Table</span><span class="p">[</span><span class="n">N</span><span class="p">[</span><span class="n">HarmonicNumber</span><span class="p">[</span><span class="n">i</span><span class="p">]],</span><span class="w"> </span><span class="p">{</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">}]</span>
 </pre></div>
 </div>
-<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span>Out[]= {1., 1.5, 1.83333, 2.08333, 2.28333, 2.45, 2.59286, 2.71786, 2.82897, 2.92897, 3.01988, 3.10321, 3.18013, 3.25156, 3.31823, 3.38073, 3.43955, 3.49511, 3.54774, 3.59774, 3.64536, 3.69081, 3.73429, 3.77596, 3.81596, 3.85442, 3.89146, 3.92717, 3.96165, 3.99499, 4.02725, 4.0585, 4.0888, 4.11821, 4.14678, 4.17456, 4.20159, 4.2279, 4.25354, 4.27854, 4.30293, 4.32674, 4.35, 4.37273, 4.39495, 4.41669, 4.43796, 4.4588, 4.47921, 4.49921, 4.51881, 4.53804, 4.55691, 4.57543, 4.59361, 4.61147, 4.62901, 4.64625, 4.6632, 4.67987, 4.69626, 4.71239, 4.72827, 4.74389, 4.75928, 4.77443, 4.78935, 4.80406, 4.81855, 4.83284, 4.84692, 4.86081, 4.87451, 4.88802, 4.90136, 4.91451, 4.9275, 4.94032, 4.95298, 4.96548, 4.97782, 4.99002, 5.00207, 5.01397, 5.02574, 5.03737, 5.04886, 5.06022, 5.07146, 5.08257, 5.09356, 5.10443, 5.11518, 5.12582, 5.13635, 5.14676, 5.15707, 5.16728, 5.17738, 5.18738}
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mf">1.</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5</span><span class="p">,</span><span class="w"> </span><span class="mf">1.83333</span><span class="p">,</span><span class="w"> </span><span class="mf">2.08333</span><span class="p">,</span><span class="w"> </span><span class="mf">2.28333</span><span class="p">,</span><span class="w"> </span><span class="mf">2.45</span><span class="p">,</span><span class="w"> </span><span class="mf">2.59286</span><span class="p">,</span><span class="w"> </span><span class="mf">2.71786</span><span class="p">,</span><span class="w"> </span><span class="mf">2.82897</span><span class="p">,</span><span class="w"> </span><span class="mf">2.92897</span><span class="p">,</span><span class="w"> </span><span class="mf">3.01988</span><span class="p">,</span><span class="w"> </span><span class="mf">3.10321</span><span class="p">,</span><span class="w"> </span><span class="mf">3.18013</span><span class="p">,</span><span class="w"> </span><span class="mf">3.25156</span><span class="p">,</span><span class="w"> </span><span class="mf">3.31823</span><span class="p">,</span><span class="w"> </span><span class="mf">3.38073</span><span class="p">,</span><span class="w"> </span><span class="mf">3.43955</span><span class="p">,</span><span class="w"> </span><span class="mf">3.49511</span><span class="p">,</span><span class="w"> </span><span class="mf">3.54774</span><span class="p">,</span><span class="w"> </span><span class="mf">3.59774</span><span class="p">,</span><span class="w"> </span><span class="mf">3.64536</span><span class="p">,</span><span class="w"> </span><span class="mf">3.69081</span><span class="p">,</span><span class="w"> </span><span class="mf">3.73429</span><span class="p">,</span><span class="w"> </span><span class="mf">3.77596</span><span class="p">,</span><span class="w"> </span><span class="mf">3.81596</span><span class="p">,</span><span class="w"> </span><span class="mf">3.85442</span><span class="p">,</span><span class="w"> </span><span class="mf">3.89146</span><span class="p">,</span><span class="w"> </span><span class="mf">3.92717</span><span class="p">,</span><span class="w"> </span><span class="mf">3.96165</span><span class="p">,</span><span class="w"> </span><span class="mf">3.99499</span><span class="p">,</span><span class="w"> </span><span class="mf">4.02725</span><span class="p">,</span><span class="w"> </span><span class="mf">4.0585</span><span class="p">,</span><span class="w"> </span><span class="mf">4.0888</span><span class="p">,</span><span class="w"> </span><span class="mf">4.11821</span><span class="p">,</span><span class="w"> </span><span class="mf">4.14678</span><span class="p">,</span><span class="w"> </span><span class="mf">4.17456</span><span class="p">,</span><span class="w"> </span><span class="mf">4.20159</span><span class="p">,</span><span class="w"> </span><span class="mf">4.2279</span><span class="p">,</span><span class="w"> </span><span class="mf">4.25354</span><span class="p">,</span><span class="w"> </span><span class="mf">4.27854</span><span class="p">,</span><span class="w"> </span><span class="mf">4.30293</span><span class="p">,</span><span class="w"> </span><span class="mf">4.32674</span><span class="p">,</span><span class="w"> </span><span class="mf">4.35</span><span class="p">,</span><span class="w"> </span><span class="mf">4.37273</span><span class="p">,</span><span class="w"> </span><span class="mf">4.39495</span><span class="p">,</span><span class="w"> </span><span class="mf">4.41669</span><span class="p">,</span><span class="w"> </span><span class="mf">4.43796</span><span class="p">,</span><span class="w"> </span><span class="mf">4.4588</span><span class="p">,</span><span class="w"> </span><span class="mf">4.47921</span><span class="p">,</span><span class="w"> </span><span class="mf">4.49921</span><span class="p">,</span><span class="w"> </span><span class="mf">4.51881</span><span class="p">,</span><span class="w"> </span><span class="mf">4.53804</span><span class="p">,</span><span class="w"> </span><span class="mf">4.55691</span><span class="p">,</span><span class="w"> </span><span class="mf">4.57543</span><span class="p">,</span><span class="w"> </span><span class="mf">4.59361</span><span class="p">,</span><span class="w"> </span><span class="mf">4.61147</span><span class="p">,</span><span class="w"> </span><span class="mf">4.62901</span><span class="p">,</span><span class="w"> </span><span class="mf">4.64625</span><span class="p">,</span><span class="w"> </span><span class="mf">4.6632</span><span class="p">,</span><span class="w"> </span><span class="mf">4.67987</span><span class="p">,</span><span class="w"> </span><span class="mf">4.69626</span><span class="p">,</span><span class="w"> </span><span class="mf">4.71239</span><span class="p">,</span><span class="w"> </span><span class="mf">4.72827</span><span class="p">,</span><span class="w"> </span><span class="mf">4.74389</span><span class="p">,</span><span class="w"> </span><span class="mf">4.75928</span><span class="p">,</span><span class="w"> </span><span class="mf">4.77443</span><span class="p">,</span><span class="w"> </span><span class="mf">4.78935</span><span class="p">,</span><span class="w"> </span><span class="mf">4.80406</span><span class="p">,</span><span class="w"> </span><span class="mf">4.81855</span><span class="p">,</span><span class="w"> </span><span class="mf">4.83284</span><span class="p">,</span><span class="w"> </span><span class="mf">4.84692</span><span class="p">,</span><span class="w"> </span><span class="mf">4.86081</span><span class="p">,</span><span class="w"> </span><span class="mf">4.87451</span><span class="p">,</span><span class="w"> </span><span class="mf">4.88802</span><span class="p">,</span><span class="w"> </span><span class="mf">4.90136</span><span class="p">,</span><span class="w"> </span><span class="mf">4.91451</span><span class="p">,</span><span class="w"> </span><span class="mf">4.9275</span><span class="p">,</span><span class="w"> </span><span class="mf">4.94032</span><span class="p">,</span><span class="w"> </span><span class="mf">4.95298</span><span class="p">,</span><span class="w"> </span><span class="mf">4.96548</span><span class="p">,</span><span class="w"> </span><span class="mf">4.97782</span><span class="p">,</span><span class="w"> </span><span class="mf">4.99002</span><span class="p">,</span><span class="w"> </span><span class="mf">5.00207</span><span class="p">,</span><span class="w"> </span><span class="mf">5.01397</span><span class="p">,</span><span class="w"> </span><span class="mf">5.02574</span><span class="p">,</span><span class="w"> </span><span class="mf">5.03737</span><span class="p">,</span><span class="w"> </span><span class="mf">5.04886</span><span class="p">,</span><span class="w"> </span><span class="mf">5.06022</span><span class="p">,</span><span class="w"> </span><span class="mf">5.07146</span><span class="p">,</span><span class="w"> </span><span class="mf">5.08257</span><span class="p">,</span><span class="w"> </span><span class="mf">5.09356</span><span class="p">,</span><span class="w"> </span><span class="mf">5.10443</span><span class="p">,</span><span class="w"> </span><span class="mf">5.11518</span><span class="p">,</span><span class="w"> </span><span class="mf">5.12582</span><span class="p">,</span><span class="w"> </span><span class="mf">5.13635</span><span class="p">,</span><span class="w"> </span><span class="mf">5.14676</span><span class="p">,</span><span class="w"> </span><span class="mf">5.15707</span><span class="p">,</span><span class="w"> </span><span class="mf">5.16728</span><span class="p">,</span><span class="w"> </span><span class="mf">5.17738</span><span class="p">,</span><span class="w"> </span><span class="mf">5.18738</span><span class="p">}</span>
 </pre></div>
 </div>
 <p><span class="math notranslate nohighlight">\(![17xq228t19cua](img/17xq228t19cua.png)\)</span>
@@ -1212,6 +1225,555 @@ Sage coding: def a(n): return BinaryRecurrenceSequence(1, 1).period(n)          
 </section>
 <section id="partitions">
 <h2>7. Partitions<a class="headerlink" href="#partitions" title="Link to this heading">#</a></h2>
+</section>
+<section id="bernoulli-numbers">
+<h2>8. Bernoulli Numbers<a class="headerlink" href="#bernoulli-numbers" title="Link to this heading">#</a></h2>
+<p>This sequence is somewhat abstract and unintuitive, so we will go over how Bernoulli discovered this.
+<span class="math notranslate nohighlight">\(![1eru0nx72s3yf](img/1eru0nx72s3yf.png)\)</span></p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="n">Grid</span><span class="p">[</span><span class="n">Table</span><span class="p">[{</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="n">Expand</span><span class="p">[</span><span class="n">Sum</span><span class="p">[</span><span class="n">k</span><span class="o">^</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">}]]},</span><span class="w"> </span><span class="p">{</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">}]]</span>
+</pre></div>
+</div>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>n</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>-Plus-</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>-Plus-</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>-Plus-</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>-Plus-</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>-Plus-</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>-Plus-</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>-Plus-</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>-Plus-</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>-Plus-</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>-Plus-</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><span class="math notranslate nohighlight">\(S_m(n)=\frac{1}{m+1}\left(B_0n^{m+1}+\left(
+\begin{array}{c}
+ m+1 \\
+ 1 \\
+\end{array}
+\right)B_1n^m+\text{...}+\left(
+\begin{array}{c}
+ m+1 \\
+ m \\
+\end{array}
+\right)B_mn\right)\)</span>
+<span class="math notranslate nohighlight">\(S_m(n)=\frac{1}{m+1}\sum _{k=0}^m \left(\left(
+\begin{array}{c}
+ m+1 \\
+ k \\
+\end{array}
+\right)B_kn^{(m+1-k)}\right)\)</span></p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="n">Expand</span><span class="p">[</span><span class="n">Sum</span><span class="p">[</span><span class="n">k</span><span class="o">^</span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">}]</span><span class="o">*</span><span class="p">(</span><span class="mi">16</span><span class="p">)]</span>
+<span class="w"> </span><span class="n">Table</span><span class="p">[</span><span class="n">Coefficient</span><span class="p">[</span><span class="err">%</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">]</span><span class="o">/</span><span class="n">Binomial</span><span class="p">[</span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="p">{</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">}]</span>
+<span class="w"> </span><span class="n">Reverse</span><span class="p">[</span><span class="err">%</span><span class="p">]</span>
+<span class="w"> </span><span class="n">Table</span><span class="p">[</span><span class="n">BernoulliB</span><span class="p">[</span><span class="n">n</span><span class="p">],</span><span class="w"> </span><span class="p">{</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">}]</span>
+</pre></div>
+</div>
+<p><img alt="02tzic3drewwm" src="_images/02tzic3drewwm.png" /></p>
+<p><img alt="02ly34go7x3ds" src="_images/02ly34go7x3ds.png" /></p>
+<p><img alt="0vx0nt2dbxx5h" src="_images/0vx0nt2dbxx5h.png" /></p>
+<p><img alt="1lj28pji641pd" src="_images/1lj28pji641pd.png" /></p>
+<p><img alt="1uami6hbso15j" src="_images/1uami6hbso15j.png" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-Subscript-</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>-Subscript-</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>-Subscript-</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>-Subscript-</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>-Subscript-</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>-Subscript-</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Recursive definition: <span class="math notranslate nohighlight">\(B^+{}_n=1-\sum _{k=0}^{n-1} \left(
+\begin{array}{c}
+ n \\
+ k \\
+\end{array}
+\right)\frac{B_k}{(n-k+1)}\)</span>.</p>
+<p><img alt="0obbvli05t1pm" src="_images/0obbvli05t1pm.png" /></p>
+<p><img alt="1uis41vk46hvz" src="_images/1uis41vk46hvz.png" /></p>
+<p><span class="math notranslate nohighlight">\(B_n=\delta _{n,0}-\sum _{k=0}^{n-1} \left(
+\begin{array}{c}
+ n \\
+ k \\
+\end{array}
+\right)\frac{B_k}{(n-k+1)}\)</span>
+<span class="math notranslate nohighlight">\(![0gnti4zbvjwvx](img/0gnti4zbvjwvx.png)\)</span> if i=j and 0 otherwise
+<span class="math notranslate nohighlight">\(B_{2n}=(-1)^{n+1}2\frac{(2n!)}{(2\pi )^{2n}}\zeta (2n).B^+{}_n=-\text{n\)</span>\zeta <span class="math notranslate nohighlight">\(}(1-n) \text{for} \text{\textit{\)</span>n<span class="math notranslate nohighlight">\(}} \geq 1.\)</span></p>
+</section>
+<section id="stirling-numbers">
+<h2>9. Stirling Numbers<a class="headerlink" href="#stirling-numbers" title="Link to this heading">#</a></h2>
+<p>Map problem
+Suppose that there are 6 markers on a map, and they are all connected by exactly one edge. How many ways are there to visit each marker exactly once(starting point doesn’t matter)?</p>
+<p>Stirling numbers(1st kind)
+<span class="math notranslate nohighlight">\(![0hj897c1asyye](img/0hj897c1asyye.png)\)</span> is the number of ways to separate <span class="math notranslate nohighlight">\(![0vhoptpasnfkm](img/0vhoptpasnfkm.png)\)</span> objects into <span class="math notranslate nohighlight">\(![18kwz9ukxr3rx](img/18kwz9ukxr3rx.png)\)</span> cycles
+If <span class="math notranslate nohighlight">\(![0r3jdj9p9ufgw](img/0r3jdj9p9ufgw.png)\)</span>,  <span class="math notranslate nohighlight">\(![1eqcvea1n82ql](img/1eqcvea1n82ql.png)\)</span>
+For each new object, add it to an existing cycle or start a new one.
+Recurrence relation: <span class="math notranslate nohighlight">\(![1bjq4rduk7mma](img/1bjq4rduk7mma.png)\)</span></p>
+<p>Stirling numbers(2nd kind)
+<span class="math notranslate nohighlight">\(![0hj897c1asyye](img/0hj897c1asyye.png)\)</span>(this is different) is the number of ways to partition a set of <span class="math notranslate nohighlight">\(![0vhoptpasnfkm](img/0vhoptpasnfkm.png)\)</span> objects into <span class="math notranslate nohighlight">\(![18kwz9ukxr3rx](img/18kwz9ukxr3rx.png)\)</span> subsets
+If <span class="math notranslate nohighlight">\(![0r3jdj9p9ufgw](img/0r3jdj9p9ufgw.png)\)</span> or <span class="math notranslate nohighlight">\(![19klpu4utcplh](img/19klpu4utcplh.png)\)</span>, <span class="math notranslate nohighlight">\(![1kgkiwdoxwg9b](img/1kgkiwdoxwg9b.png)\)</span>
+For each new element, add it to an existing subset or a new one.
+Recurrence relation: <span class="math notranslate nohighlight">\(![12q5ghg0txt6z](img/12q5ghg0txt6z.png)\)</span></p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="n">Abs</span><span class="p">[</span><span class="n">StirlingS1</span><span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">]]</span><span class="w"> </span><span class="c">(*to verify our solution to the map problem*)</span>
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="mi">120</span>
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="n">Grid</span><span class="p">[</span><span class="n">Table</span><span class="p">[{</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">Table</span><span class="p">[</span><span class="n">Abs</span><span class="p">[</span><span class="n">StirlingS1</span><span class="p">[</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">]],</span><span class="w"> </span><span class="p">{</span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">}]},</span><span class="w"> </span><span class="p">{</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">}],</span><span class="n">Alignment</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Left</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>{1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>{0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0}</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>{0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0}</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>{0, 2, 3, 1, 0, 0, 0, 0, 0, 0, 0}</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>{0, 6, 11, 6, 1, 0, 0, 0, 0, 0, 0}</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>{0, 24, 50, 35, 10, 1, 0, 0, 0, 0, 0}</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>{0, 120, 274, 225, 85, 15, 1, 0, 0, 0, 0}</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>{0, 720, 1764, 1624, 735, 175, 21, 1, 0, 0, 0}</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>{0, 5040, 13068, 13132, 6769, 1960, 322, 28, 1, 0, 0}</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>{0, 40320, 109584, 118124, 67284, 22449, 4536, 546, 36, 1, 0}</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>{0, 362880, 1026576, 1172700, 723680, 269325, 63273, 9450, 870, 45, 1}</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="n">Grid</span><span class="p">[</span><span class="n">Table</span><span class="p">[{</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">Table</span><span class="p">[</span><span class="n">Abs</span><span class="p">[</span><span class="n">StirlingS2</span><span class="p">[</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">]],</span><span class="w"> </span><span class="p">{</span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">}]},</span><span class="w"> </span><span class="p">{</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">}],</span><span class="n">Alignment</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Left</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>{1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>{0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0}</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>{0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0}</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>{0, 1, 3, 1, 0, 0, 0, 0, 0, 0, 0}</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>{0, 1, 7, 6, 1, 0, 0, 0, 0, 0, 0}</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>{0, 1, 15, 25, 10, 1, 0, 0, 0, 0, 0}</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>{0, 1, 31, 90, 65, 15, 1, 0, 0, 0, 0}</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>{0, 1, 63, 301, 350, 140, 21, 1, 0, 0, 0}</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>{0, 1, 127, 966, 1701, 1050, 266, 28, 1, 0, 0}</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>{0, 1, 255, 3025, 7770, 6951, 2646, 462, 36, 1, 0}</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>{0, 1, 511, 9330, 34105, 42525, 22827, 5880, 750, 45, 1}</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Rising factorial: <span class="math notranslate nohighlight">\(x^{\bar{n}}=\sum _{k=0}^n \left[
+\begin{array}{c}
+ n \\
+ k \\
+\end{array}
+\right]x^k\)</span>
+Falling factorial: <span class="math notranslate nohighlight">\(x^n=\sum _{k=0}^n \left\{
+\begin{array}{c}
+ n \\
+ k \\
+\end{array}
+\right\}x^{\underline{k}}\)</span></p>
+<p>As <span class="math notranslate nohighlight">\(![0vhoptpasnfkm](img/0vhoptpasnfkm.png)\)</span> grows without bounds for a fixed value of <span class="math notranslate nohighlight">\(![18kwz9ukxr3rx](img/18kwz9ukxr3rx.png)\)</span>:  <span class="math notranslate nohighlight">\(\left\{
+\begin{array}{c}
+ n \\
+ k \\
+\end{array}
+\right\}\Longrightarrow \frac{k^n}{k!}\)</span>	
+As <span class="math notranslate nohighlight">\(![18kwz9ukxr3rx](img/18kwz9ukxr3rx.png)\)</span> grows without bounds for a fixed value of <span class="math notranslate nohighlight">\(![0vhoptpasnfkm](img/0vhoptpasnfkm.png)\)</span>: <span class="math notranslate nohighlight">\(\left[
+\begin{array}{c}
+ n+k \\
+ k \\
+\end{array}
+\right]\Longrightarrow \frac{k^{2n}}{2^nn!}\)</span></p>
+<p>Lah numbers: <span class="math notranslate nohighlight">\(L(n,k)=\left(
+\begin{array}{c}
+ n-1 \\
+ k-1 \\
+\end{array}
+\right)\frac{n!}{k!}\)</span>
+They represent the number of ways to partition a set with <span class="math notranslate nohighlight">\(![0vhoptpasnfkm](img/0vhoptpasnfkm.png)\)</span> elements into <span class="math notranslate nohighlight">\(![18kwz9ukxr3rx](img/18kwz9ukxr3rx.png)\)</span> linearly ordered subsets(every element of the subset is comparable).
+<span class="math notranslate nohighlight">\(L(n,k)=\sum _{j=0}^n \left[
+\begin{array}{c}
+ n \\
+ j \\
+\end{array}
+\right]\left\{
+\begin{array}{c}
+ j \\
+ k \\
+\end{array}
+\right\}\)</span>
+Bell Numbers: <span class="math notranslate nohighlight">\(B_n=\sum _{k=0}^n \left\{
+\begin{array}{c}
+ n \\
+ k \\
+\end{array}
+\right\}\)</span></p>
+<p>Formulae
+<span class="math notranslate nohighlight">\(\left\{
+\begin{array}{c}
+ n \\
+ k \\
+\end{array}
+\right\}=\sum _{j=1}^k (-1)^{k-j}\frac{j^{n-1}}{(j-1)!(k-j)!}\)</span>
+<span class="math notranslate nohighlight">\(B_m=\sum _{k=0}^m \frac{(-1)^kk!}{k+1}\left\{
+\begin{array}{c}
+ m \\
+ k \\
+\end{array}
+\right\}\)</span></p>
+</section>
+<section id="sequence-recognition">
+<h2>10. Sequence Recognition<a class="headerlink" href="#sequence-recognition" title="Link to this heading">#</a></h2>
+<p>This section is all about how to recognize a sequence based on its elements.</p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="p">{</span><span class="mi">49</span><span class="p">,</span><span class="w"> </span><span class="mi">89</span><span class="p">,</span><span class="w"> </span><span class="mi">141</span><span class="p">,</span><span class="w"> </span><span class="mi">205</span><span class="p">,</span><span class="w"> </span><span class="mi">281</span><span class="p">,</span><span class="w"> </span><span class="mi">369</span><span class="p">,</span><span class="w"> </span><span class="mi">469</span><span class="p">,</span><span class="w"> </span><span class="mi">581</span><span class="p">};</span>
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="n">Differences</span><span class="p">[</span><span class="err">%</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="n">Table</span><span class="p">[</span><span class="mi">6</span><span class="w"> </span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">}]</span>
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">49</span><span class="p">,</span><span class="w"> </span><span class="mi">89</span><span class="p">,</span><span class="w"> </span><span class="mi">141</span><span class="p">,</span><span class="w"> </span><span class="mi">205</span><span class="p">,</span><span class="w"> </span><span class="mi">281</span><span class="p">,</span><span class="w"> </span><span class="mi">369</span><span class="p">,</span><span class="w"> </span><span class="mi">469</span><span class="p">,</span><span class="w"> </span><span class="mi">581</span><span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="p">{</span><span class="mf">150.489</span><span class="p">,</span><span class="w"> </span><span class="mf">394.42</span><span class="p">,</span><span class="w"> </span><span class="mf">1053.04</span><span class="p">,</span><span class="w"> </span><span class="mf">2831.3</span><span class="p">,</span><span class="w"> </span><span class="mf">7632.6</span><span class="p">,</span><span class="w"> </span><span class="mf">20596.1</span><span class="p">,</span><span class="w"> </span><span class="mf">55597.6</span><span class="p">,</span><span class="w"> </span><span class="mi">150102</span><span class="p">}</span>
+<span class="w"> </span><span class="n">N</span><span class="p">[</span><span class="n">Ratios</span><span class="p">[</span><span class="err">%</span><span class="p">]]</span>
+<span class="w"> </span><span class="n">Table</span><span class="p">[</span><span class="mf">2.7</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="err">%</span><span class="p">[[</span><span class="n">x</span><span class="p">]],</span><span class="w"> </span><span class="p">{</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">}]</span>
+<span class="w"> </span><span class="mf">150.489</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">2.7</span><span class="o">^</span><span class="mi">5</span><span class="w">  </span><span class="c">(*close enough to 7*)</span>
+<span class="w"> </span><span class="n">Table</span><span class="p">[</span><span class="mf">2.7</span><span class="o">^</span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">}]</span>
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mf">150.489</span><span class="p">,</span><span class="w"> </span><span class="mf">394.42</span><span class="p">,</span><span class="w"> </span><span class="mf">1053.04</span><span class="p">,</span><span class="w"> </span><span class="mf">2831.3</span><span class="p">,</span><span class="w"> </span><span class="mf">7632.6</span><span class="p">,</span><span class="w"> </span><span class="mf">20596.1</span><span class="p">,</span><span class="w"> </span><span class="mf">55597.6</span><span class="p">,</span><span class="w"> </span><span class="mi">150102</span><span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mf">2.62092</span><span class="p">,</span><span class="w"> </span><span class="mf">2.66984</span><span class="p">,</span><span class="w"> </span><span class="mf">2.68869</span><span class="p">,</span><span class="w"> </span><span class="mf">2.69579</span><span class="p">,</span><span class="w"> </span><span class="mf">2.69844</span><span class="p">,</span><span class="w"> </span><span class="mf">2.69942</span><span class="p">,</span><span class="w"> </span><span class="mf">2.69979</span><span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mf">0.0790775</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0301557</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0113082</span><span class="p">,</span><span class="w"> </span><span class="mf">0.00420655</span><span class="p">,</span><span class="w"> </span><span class="mf">0.00156172</span><span class="p">,</span><span class="w"> </span><span class="mf">0.000576323</span><span class="p">,</span><span class="w"> </span><span class="mf">0.000207203</span><span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="mf">6.99993</span>
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mf">150.489</span><span class="p">,</span><span class="w"> </span><span class="mf">394.42</span><span class="p">,</span><span class="w"> </span><span class="mf">1053.04</span><span class="p">,</span><span class="w"> </span><span class="mf">2831.3</span><span class="p">,</span><span class="w"> </span><span class="mf">7632.6</span><span class="p">,</span><span class="w"> </span><span class="mf">20596.1</span><span class="p">,</span><span class="w"> </span><span class="mf">55597.6</span><span class="p">,</span><span class="w"> </span><span class="mf">150102.</span><span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="n">FindSequenceFunction</span><span class="p">[{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">},</span><span class="w"> </span><span class="n">n</span><span class="p">]</span>
+<span class="w"> </span><span class="n">FindSequenceFunction</span><span class="p">[{{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">32</span><span class="p">}},</span><span class="n">n</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Fibonacci</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="o">^</span><span class="n">n</span>
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="n">FindGeneratingFunction</span><span class="p">[{</span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="mi">-2</span><span class="p">,</span><span class="w"> </span><span class="mi">-3</span><span class="p">,</span><span class="w"> </span><span class="mi">-5</span><span class="p">,</span><span class="w"> </span><span class="mi">-8</span><span class="p">},</span><span class="w"> </span><span class="n">x</span><span class="p">]</span>
+<span class="w"> </span><span class="n">FindLinearRecurrence</span><span class="p">[{</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w"> </span><span class="mi">29</span><span class="p">,</span><span class="w"> </span><span class="mi">35</span><span class="p">}]</span>
+<span class="w"> </span><span class="n">Clear</span><span class="p">[</span><span class="n">f</span><span class="p">]</span>
+<span class="w"> </span><span class="n">RSolve</span><span class="p">[{</span><span class="n">f</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">f</span><span class="p">[</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">f</span><span class="p">[</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">2</span><span class="p">],</span><span class="w"> </span><span class="n">f</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">11</span><span class="p">},</span><span class="w"> </span><span class="n">f</span><span class="p">[</span><span class="n">n</span><span class="p">],</span><span class="w"> </span><span class="n">n</span><span class="p">]</span>
+<span class="w"> </span><span class="n">Clear</span><span class="p">[</span><span class="n">f</span><span class="p">]</span>
+<span class="w"> </span><span class="n">RSolve</span><span class="p">[</span><span class="n">f</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">f</span><span class="p">[</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">f</span><span class="p">[</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">2</span><span class="p">],</span><span class="w"> </span><span class="n">f</span><span class="p">[</span><span class="n">n</span><span class="p">],</span><span class="w"> </span><span class="n">n</span><span class="p">]</span>
+<span class="w"> </span><span class="n">RSolve</span><span class="p">[{</span><span class="n">f</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">f</span><span class="p">[</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">f</span><span class="p">[</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">2</span><span class="p">],</span><span class="w"> </span><span class="n">f</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="p">},</span><span class="w"> </span><span class="n">f</span><span class="p">[</span><span class="n">n</span><span class="p">],</span><span class="w"> </span><span class="n">n</span><span class="p">]</span>
+<span class="w"> </span><span class="n">RSolveValue</span><span class="p">[{</span><span class="n">f</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">f</span><span class="p">[</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">f</span><span class="p">[</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">2</span><span class="p">],</span><span class="w"> </span><span class="n">f</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="p">},</span><span class="w"> </span><span class="n">f</span><span class="p">[</span><span class="n">n</span><span class="p">],</span><span class="n">n</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><img alt="1ahzvoti8yxab" src="_images/1ahzvoti8yxab.png" /></p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="n">f</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mi">-1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="n">n</span><span class="p">}}</span>
+</pre></div>
+</div>
+<p><img alt="1n9pn2wxejyqb" src="_images/1n9pn2wxejyqb.png" /></p>
+<p><img alt="1gxnrv47od2dg" src="_images/1gxnrv47od2dg.png" /></p>
+<p><img alt="0fu612266u5z8" src="_images/0fu612266u5z8.png" /></p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="n">Table</span><span class="p">[{</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="mf">11.76</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">RandomInteger</span><span class="p">[{</span><span class="mi">-5</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">}]},</span><span class="w"> </span><span class="p">{</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">}];</span>
+<span class="w"> </span><span class="n">LinearModelFit</span><span class="p">[</span><span class="err">%</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><img alt="14x8709lizwit" src="_images/14x8709lizwit.png" /></p>
+</section>
+<section id="generating-functions">
+<h2>11. Generating Functions<a class="headerlink" href="#generating-functions" title="Link to this heading">#</a></h2>
+<p>Generating function of <span class="math notranslate nohighlight">\(![0n9bofw49zm42](img/0n9bofw49zm42.png)\)</span> is <span class="math notranslate nohighlight">\(![06b7tq8i26qbt](img/06b7tq8i26qbt.png)\)</span>.</p>
+<p>Let <span class="math notranslate nohighlight">\(![0e5ot10szelt3](img/0e5ot10szelt3.png)\)</span> be the number of ways to tile a <span class="math notranslate nohighlight">\(![1p00x6uigsfxu](img/1p00x6uigsfxu.png)\)</span> grid with <span class="math notranslate nohighlight">\(![0daesblv08vax](img/0daesblv08vax.png)\)</span> dominoes.
+We find that <span class="math notranslate nohighlight">\(![0qm9q2rtlvfou](img/0qm9q2rtlvfou.png)\)</span>, <span class="math notranslate nohighlight">\(![1pejewydggx4t](img/1pejewydggx4t.png)\)</span>, <span class="math notranslate nohighlight">\(![0gnm2175dqbvt](img/0gnm2175dqbvt.png)\)</span>, <span class="math notranslate nohighlight">\(![1jzz1ohwvr8fo](img/1jzz1ohwvr8fo.png)\)</span>, <span class="math notranslate nohighlight">\(![1j7c2icfo95sy](img/1j7c2icfo95sy.png)\)</span>.
+Each time we add new blocks, we can add 2 horizontal blocks or 1 vertical block.
+We find the recurrence relation <span class="math notranslate nohighlight">\(![07lzd9amb0td8](img/07lzd9amb0td8.png)\)</span>.
+This has the same initial values and recurrence relation as the Fibonacci sequence, so we can say that this is the Fibonacci sequence.</p>
+<p><img alt="11rp55bwkbnqp" src="_images/11rp55bwkbnqp.png" /></p>
+<p><img alt="1c2mzw3xvf0mx" src="_images/1c2mzw3xvf0mx.png" /></p>
+<p><img alt="0ayzb5gewk4y0" src="_images/0ayzb5gewk4y0.png" /></p>
+<p><img alt="0kxoxf9u6yx58" src="_images/0kxoxf9u6yx58.png" /></p>
+<p><img alt="19nazrav3p6h7" src="_images/19nazrav3p6h7.png" /></p>
+<p><img alt="0tzfvbowpv6yw" src="_images/0tzfvbowpv6yw.png" /></p>
+<p><img alt="1i4cgakj90mso" src="_images/1i4cgakj90mso.png" /></p>
+<section id="properties-of-generating-functions">
+<h3>Properties of generating functions<a class="headerlink" href="#properties-of-generating-functions" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\text{\)</span>\alpha <span class="math notranslate nohighlight">\(F}(x)+\text{\)</span>\beta <span class="math notranslate nohighlight">\(G}(x)=\alpha \sum _{n=0}^{\infty } f_nx^n+\beta \sum _{n=0}^{\infty } g_nx^n\)</span><span class="math notranslate nohighlight">\(=\sum _{n=0}^{\infty } f\left(\alpha  f_n+\beta  g_n\right) x^n\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(F(c x)=\sum _{n=0}^{\infty } f_n (c x)^n=\sum _{n=0}^{\infty } f_nc^nx^n\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(F'(x)=\sum _{n=0}^{\infty } (n+1)f_{n+1}x^n\)</span></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(x F'(x)=\sum _{n=0}^{\infty } n f_n x^n\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\int_0^x f(t) \, dt=\sum _{n=0}^{\infty } \frac{1}{n}g_{n-1}x^n\)</span></p></li>
+</ul>
+</li>
+<li><p><span class="math notranslate nohighlight">\(x^mF(x)=\sum _{n=0}^{\infty } f_nx^{n+m}=\sum _{n=0}^{\infty } f_{n-m}x^n\)</span></p></li>
+</ul>
+<p>Convolutions are like multiplication for generating functions.</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(F(x)G(x)=\sum _{n=0}^{\infty } \left(\sum _{k=0}^{\infty } f_kg_{n-k}\right)x^n\)</span></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(F(x)G(x)=\left(f_0+f_1x+f_2x^2\text{...}\right)\left(g_0+g_1x+g_2x^2\text{...}\right)\)</span></p></li>
+<li><p>This is sometimes also called the Cauchy product.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\left[x^n\right](F(x)G(x))=\sum _{k=0}^n f_kg_{n-k}\)</span></p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="summing-finite-infinite-series">
+<h2>12&amp;13. Summing Finite &amp; Infinite Series<a class="headerlink" href="#summing-finite-infinite-series" title="Link to this heading">#</a></h2>
+<p>Summation of finite series:  <span class="math notranslate nohighlight">\(![06s32unq4c74h](img/06s32unq4c74h.png)\)</span></p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="n">Sum</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">}]</span>
+</pre></div>
+</div>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="mi">15</span>
+</pre></div>
+</div>
+<p><span class="math notranslate nohighlight">\(\sum _{i=0}^n c a_i=c\sum _{i=0}^n a_i\)</span>
+<span class="math notranslate nohighlight">\(\sum _{i=0}^n a_i+\sum _{i=0}^n b_i=\sum _{i=0}^n a_i+b_i\)</span>
+<span class="math notranslate nohighlight">\(\sum _{i=0}^n a_i=\sum _{n-i=0}^n a_i\)</span>
+<span class="math notranslate nohighlight">\(\sum _{i=0}^{n+1} a_i=a_0+\sum _{i=1}^{n+1} a_i=\left(\sum _{i=0}^n a_i\right)+a_{n+1}\)</span></p>
+<p>Summation of arithmetic series
+<span class="math notranslate nohighlight">\(S=\sum _{i=0}^n a+b i\)</span>
+<span class="math notranslate nohighlight">\(S=\frac{ (2a+b n)(n+1)}{2}\)</span>
+Summation of geometric series
+<span class="math notranslate nohighlight">\(S_n=\sum _{i=0}^n a b^i\)</span>
+<span class="math notranslate nohighlight">\(S_n= \frac{a\left(b^{n+1}-1\right)}{(b-1)}\)</span></p>
+<p>Suppose we wanted to calculate the volume of a gable house with a slanted roof centered at its midpoint.
+The slope of the roof is 60 degrees and the house has a <span class="math notranslate nohighlight">\(![1rcnvtc22qrov](img/1rcnvtc22qrov.png)\)</span> base with 10m walls.</p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="n">sumVolume</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">N</span><span class="p">[</span><span class="n">Sum</span><span class="p">[</span><span class="n">Sum</span><span class="p">[((</span><span class="mi">10</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Abs</span><span class="p">[</span><span class="n">x</span><span class="p">])</span><span class="o">*</span><span class="w"> </span><span class="n">Tan</span><span class="p">[</span><span class="mi">60</span><span class="o">*</span><span class="p">(</span><span class="err">\</span><span class="p">[</span><span class="n">Pi</span><span class="p">]</span><span class="o">/</span><span class="mi">180</span><span class="p">)]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">10</span><span class="p">),</span><span class="w"> </span><span class="p">{</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="mi">-10</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">}],</span><span class="w"> </span><span class="p">{</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="mi">-10</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">}]]</span>
+<span class="w"> </span><span class="n">base</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="o">*</span><span class="mi">20</span><span class="o">*</span><span class="mi">10</span><span class="p">;</span>
+<span class="w"> </span><span class="n">roof</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="o">*</span><span class="n">Tan</span><span class="p">[</span><span class="mi">60</span><span class="o">*</span><span class="err">\</span><span class="p">[</span><span class="n">Pi</span><span class="p">]</span><span class="o">/</span><span class="mi">180</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">20</span><span class="o">*</span><span class="mi">10</span><span class="p">;</span><span class="w"> </span>
+<span class="w"> </span><span class="n">volume</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">N</span><span class="p">[</span><span class="n">base</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">roof</span><span class="p">]</span>
+<span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Abs</span><span class="p">[</span><span class="n">sumVolume</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">volume</span><span class="p">]</span><span class="o">/</span><span class="n">volume</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span>
+</pre></div>
+</div>
+<p><img alt="0jfrkcgcqydcq" src="_images/0jfrkcgcqydcq.png" /></p>
+<p><img alt="00tk0mjymf3ko" src="_images/00tk0mjymf3ko.png" /></p>
+<p><img alt="0qyas89dqw80h" src="_images/0qyas89dqw80h.png" /></p>
+<p><img alt="059xmet01fy2k" src="_images/059xmet01fy2k.png" /></p>
+<p><img alt="0arv14psmfdh9" src="_images/0arv14psmfdh9.png" /></p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+</pre></div>
+</div>
+<p>But, our definition of divergence says that <span class="math notranslate nohighlight">\(![0rsfxhs0vue25](img/0rsfxhs0vue25.png)\)</span> is convergent, but it oscillates between 0 and 1 periodically. If we manipulate this sum as if it was convergent, we find that it is <span class="math notranslate nohighlight">\(![1wp9u1vv7z42h](img/1wp9u1vv7z42h.png)\)</span>, which can’t be, because the value if always either 0 or 1.
+Therefore, we must change our definition of convergent to if the series converges to a limit as the length of the series becomes infinite. This means the sum above is divergent, as it does not approach to a limit.
+If a series converges absolutely if it converges and if you take the absolute value of each term is also does.</p>
+<p><img alt="1bp99j8p8b6ta" src="_images/1bp99j8p8b6ta.png" /></p>
+<p><img alt="0980c760lsdh5" src="_images/0980c760lsdh5.png" /></p>
+<p><img alt="0bvz84wspi1ka" src="_images/0bvz84wspi1ka.png" /></p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="n">Plot</span><span class="p">[</span><span class="n">SetPrecision</span><span class="p">[</span><span class="n">Table</span><span class="p">[</span><span class="mi">20</span><span class="o">*</span><span class="n">Sinf</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="o">^</span><span class="n">n</span><span class="p">],</span><span class="w"> </span><span class="p">{</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">}],</span><span class="w"> </span><span class="n">MachinePrecision</span><span class="p">],</span><span class="w"> </span><span class="p">{</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="mi">-30</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">},</span><span class="w"> </span><span class="n">PlotRange</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mi">100</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><img alt="0a0sk93gx104y" src="_images/0a0sk93gx104y.png" /></p>
+<p><img alt="0e9fp96631fxb" src="_images/0e9fp96631fxb.png" /></p>
+<p><img alt="1e53thuqeqnzz" src="_images/1e53thuqeqnzz.png" /></p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mf">8000.</span><span class="p">,</span><span class="w"> </span><span class="mf">7864.1</span><span class="p">,</span><span class="w"> </span><span class="mf">7504.1</span><span class="p">,</span><span class="w"> </span><span class="mf">7468.1</span><span class="p">,</span><span class="w"> </span><span class="mf">7464.5</span><span class="p">,</span><span class="w"> </span><span class="mf">7464.14</span><span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="convergence-tests">
+<h2>14. Convergence Tests<a class="headerlink" href="#convergence-tests" title="Link to this heading">#</a></h2>
+<p>Based on our earlier definition of convergence, a series is only convergent if the terms approach 0.
+But, if the terms approach 0, this tells us nothing, as the sum <span class="math notranslate nohighlight">\(![0mnwp057ez6bn](img/0mnwp057ez6bn.png)\)</span> has terms that approach 0, even though it is divergent.
+This test is only designed for checking some divergent series.</p>
+<p><strong>Integral</strong> test
+Integral: <span class="math notranslate nohighlight">\(\int_{n_0}^{\infty } a(x) \, dx\)</span></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(![0zdmkxft2tvnq](img/0zdmkxft2tvnq.png)\)</span> must be a natural number.</p></li>
+<li><p><span class="math notranslate nohighlight">\(![02s4swxw8vdcb](img/02s4swxw8vdcb.png)\)</span> must decrease as <span class="math notranslate nohighlight">\(![0vhoptpasnfkm](img/0vhoptpasnfkm.png)\)</span> increases.</p></li>
+<li><p><span class="math notranslate nohighlight">\(![02s4swxw8vdcb](img/02s4swxw8vdcb.png)\)</span> must be positive for all <span class="math notranslate nohighlight">\(![090und2ouxjwn](img/090und2ouxjwn.png)\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(![02s4swxw8vdcb](img/02s4swxw8vdcb.png)\)</span> must be continuous for all <span class="math notranslate nohighlight">\(![17o3lm7p2wxjq](img/17o3lm7p2wxjq.png)\)</span>.</p></li>
+</ul>
+<p>**
+Limit comparison** test
+<span class="math notranslate nohighlight">\(![1vdfxsyaz0xkh](img/1vdfxsyaz0xkh.png)\)</span>
+If <span class="math notranslate nohighlight">\(![1hea9fctzc4q9](img/1hea9fctzc4q9.png)\)</span> and <span class="math notranslate nohighlight">\(![1wo2zp77onkc4](img/1wo2zp77onkc4.png)\)</span> is divergent, then <span class="math notranslate nohighlight">\(![1gi2xuuxdqal4](img/1gi2xuuxdqal4.png)\)</span> is also divergent.
+Otherwise, <span class="math notranslate nohighlight">\(![1gi2xuuxdqal4](img/1gi2xuuxdqal4.png)\)</span> is convergent.</p>
+<p>**
+Alternating Series** Test
+Sum: <span class="math notranslate nohighlight">\(![1djcoij803326](img/1djcoij803326.png)\)</span>
+Conditions: <span class="math notranslate nohighlight">\(![07yk9iarshtge](img/07yk9iarshtge.png)\)</span> is non-negative for <span class="math notranslate nohighlight">\(![1oo0r2q79k9rt](img/1oo0r2q79k9rt.png)\)</span>, <span class="math notranslate nohighlight">\(![07yk9iarshtge](img/07yk9iarshtge.png)\)</span> is monotone decreasing(never increasing), and <span class="math notranslate nohighlight">\(![0heh4pbwvwy7w](img/0heh4pbwvwy7w.png)\)</span>.
+If all conditions hold, then <span class="math notranslate nohighlight">\(![1djcoij803326](img/1djcoij803326.png)\)</span> converges.</p>
+<p><strong>Ratio</strong> Test
+The ratio test states that if the absolute value of the ratio between one term and the next is larger than 1(the series is increasing), then the series will diverge. Similarly, if it is less than 1, then the series will converge.
+If the ratio is 1(no change between terms), then no conclusion can be made.</p>
+</section>
+<section id="volume-of-n-d-sphere">
+<h2>15. Volume of N-D sphere<a class="headerlink" href="#volume-of-n-d-sphere" title="Link to this heading">#</a></h2>
+<p><img alt="1qib29dp1uus2" src="_images/1qib29dp1uus2.png" /></p>
+<p><img alt="0d2nfr3fcymlj" src="_images/0d2nfr3fcymlj.png" /></p>
+<p><img alt="0gzwcp0z8i77l" src="_images/0gzwcp0z8i77l.png" /></p>
+<p><img alt="1f73nghldzjjv" src="_images/1f73nghldzjjv.png" /></p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="n">ParametricPlot3D</span><span class="p">[</span><span class="n">Spherical</span><span class="p">[</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="p">{</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span><span class="w"> </span><span class="n">ViewPoint</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Front</span><span class="p">]</span>
+<span class="w"> </span><span class="n">ParametricPlot3D</span><span class="p">[{</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span><span class="w"> </span><span class="n">ViewPoint</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Top</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><img alt="1pkwoag49eh8k" src="_images/1pkwoag49eh8k.png" /></p>
+<p><img alt="0606q40cxgkl3" src="_images/0606q40cxgkl3.png" /></p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="n">Clear</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">Second</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">];</span>
+<span class="w"> </span><span class="n">x</span><span class="p">[</span><span class="nv">p_</span><span class="p">,</span><span class="w"> </span><span class="nv">s_</span><span class="p">,</span><span class="w"> </span><span class="nv">q_</span><span class="p">,</span><span class="w"> </span><span class="nv">v_</span><span class="p">,</span><span class="w"> </span><span class="nv">u_</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="n">Sin</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="w"> </span><span class="n">Cos</span><span class="p">[</span><span class="n">q</span><span class="p">]</span><span class="w"> </span><span class="n">Cos</span><span class="p">[</span><span class="n">s</span><span class="p">];</span>
+<span class="w"> </span><span class="n">y</span><span class="p">[</span><span class="nv">p_</span><span class="p">,</span><span class="w"> </span><span class="nv">s_</span><span class="p">,</span><span class="w"> </span><span class="nv">q_</span><span class="p">,</span><span class="w"> </span><span class="nv">v_</span><span class="p">,</span><span class="w"> </span><span class="nv">u_</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="n">Sin</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="w"> </span><span class="n">Cos</span><span class="p">[</span><span class="n">q</span><span class="p">]</span><span class="w"> </span><span class="n">Sin</span><span class="p">[</span><span class="n">s</span><span class="p">];</span>
+<span class="w"> </span><span class="n">z</span><span class="p">[</span><span class="nv">p_</span><span class="p">,</span><span class="w"> </span><span class="nv">s_</span><span class="p">,</span><span class="w"> </span><span class="nv">q_</span><span class="p">,</span><span class="w"> </span><span class="nv">v_</span><span class="p">,</span><span class="w"> </span><span class="nv">u_</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="n">Sin</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="w"> </span><span class="n">Sin</span><span class="p">[</span><span class="n">q</span><span class="p">]</span><span class="w"> </span><span class="n">Cos</span><span class="p">[</span><span class="n">v</span><span class="p">];</span>
+<span class="w"> </span><span class="n">t</span><span class="p">[</span><span class="nv">p_</span><span class="p">,</span><span class="w"> </span><span class="nv">s_</span><span class="p">,</span><span class="w"> </span><span class="nv">q_</span><span class="p">,</span><span class="w"> </span><span class="nv">v_</span><span class="p">,</span><span class="w"> </span><span class="nv">u_</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="n">Sin</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="w"> </span><span class="n">Sin</span><span class="p">[</span><span class="n">q</span><span class="p">]</span><span class="w"> </span><span class="n">Sin</span><span class="p">[</span><span class="n">v</span><span class="p">];</span>
+<span class="w"> </span><span class="n">g</span><span class="p">[</span><span class="nv">p_</span><span class="p">,</span><span class="w"> </span><span class="nv">s_</span><span class="p">,</span><span class="w"> </span><span class="nv">q_</span><span class="p">,</span><span class="w"> </span><span class="nv">v_</span><span class="p">,</span><span class="w"> </span><span class="nv">u_</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="n">Cos</span><span class="p">[</span><span class="n">u</span><span class="p">];</span>
+<span class="w"> </span><span class="n">Clear</span><span class="p">[</span><span class="n">gradx</span><span class="p">,</span><span class="w"> </span><span class="n">grady</span><span class="p">,</span><span class="w"> </span><span class="n">gradz</span><span class="p">,</span><span class="w"> </span><span class="n">Vxyz</span><span class="p">];</span>
+<span class="w"> </span><span class="n">gradx</span><span class="p">[</span><span class="nv">p_</span><span class="p">,</span><span class="w"> </span><span class="nv">s_</span><span class="p">,</span><span class="w"> </span><span class="nv">q_</span><span class="p">,</span><span class="w"> </span><span class="nv">v_</span><span class="p">,</span><span class="w"> </span><span class="nv">u_</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">D</span><span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">],</span><span class="w"> </span><span class="n">p</span><span class="p">],</span><span class="w"> </span><span class="n">D</span><span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">],</span><span class="w"> </span><span class="n">s</span><span class="p">],</span><span class="w"> </span><span class="n">D</span><span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">],</span><span class="w"> </span><span class="n">q</span><span class="p">],</span><span class="w"> </span><span class="n">D</span><span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">],</span><span class="w"> </span><span class="n">v</span><span class="p">],</span><span class="w"> </span><span class="n">D</span><span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">],</span><span class="w"> </span><span class="n">u</span><span class="p">]};</span>
+<span class="w"> </span><span class="n">grady</span><span class="p">[</span><span class="nv">p_</span><span class="p">,</span><span class="w"> </span><span class="nv">s_</span><span class="p">,</span><span class="w"> </span><span class="nv">q_</span><span class="p">,</span><span class="w"> </span><span class="nv">v_</span><span class="p">,</span><span class="w"> </span><span class="nv">u_</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">D</span><span class="p">[</span><span class="n">y</span><span class="p">[</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">],</span><span class="w"> </span><span class="n">p</span><span class="p">],</span><span class="w"> </span><span class="n">D</span><span class="p">[</span><span class="n">y</span><span class="p">[</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">],</span><span class="w"> </span><span class="n">s</span><span class="p">],</span><span class="w"> </span><span class="n">D</span><span class="p">[</span><span class="n">y</span><span class="p">[</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">],</span><span class="w"> </span><span class="n">q</span><span class="p">],</span><span class="w"> </span><span class="n">D</span><span class="p">[</span><span class="n">y</span><span class="p">[</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">],</span><span class="w"> </span><span class="n">v</span><span class="p">],</span><span class="w"> </span><span class="n">D</span><span class="p">[</span><span class="n">y</span><span class="p">[</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">],</span><span class="w"> </span><span class="n">u</span><span class="p">]};</span>
+<span class="w"> </span><span class="n">gradz</span><span class="p">[</span><span class="nv">p_</span><span class="p">,</span><span class="w"> </span><span class="nv">s_</span><span class="p">,</span><span class="w"> </span><span class="nv">q_</span><span class="p">,</span><span class="w"> </span><span class="nv">v_</span><span class="p">,</span><span class="w"> </span><span class="nv">u_</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">D</span><span class="p">[</span><span class="n">z</span><span class="p">[</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">],</span><span class="w"> </span><span class="n">p</span><span class="p">],</span><span class="w"> </span><span class="n">D</span><span class="p">[</span><span class="n">z</span><span class="p">[</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">],</span><span class="w"> </span><span class="n">s</span><span class="p">],</span><span class="w"> </span><span class="n">D</span><span class="p">[</span><span class="n">z</span><span class="p">[</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">],</span><span class="w"> </span><span class="n">q</span><span class="p">],</span><span class="w"> </span><span class="n">D</span><span class="p">[</span><span class="n">z</span><span class="p">[</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">],</span><span class="w"> </span><span class="n">v</span><span class="p">],</span><span class="w"> </span><span class="n">D</span><span class="p">[</span><span class="n">z</span><span class="p">[</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">],</span><span class="w"> </span><span class="n">u</span><span class="p">]};</span>
+<span class="w"> </span><span class="n">gradt</span><span class="p">[</span><span class="nv">p_</span><span class="p">,</span><span class="w"> </span><span class="nv">s_</span><span class="p">,</span><span class="w"> </span><span class="nv">q_</span><span class="p">,</span><span class="w"> </span><span class="nv">v_</span><span class="p">,</span><span class="w"> </span><span class="nv">u_</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">D</span><span class="p">[</span><span class="n">t</span><span class="p">[</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">],</span><span class="w"> </span><span class="n">p</span><span class="p">],</span><span class="w"> </span><span class="n">D</span><span class="p">[</span><span class="n">t</span><span class="p">[</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">],</span><span class="w"> </span><span class="n">s</span><span class="p">],</span><span class="w"> </span><span class="n">D</span><span class="p">[</span><span class="n">t</span><span class="p">[</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">],</span><span class="w"> </span><span class="n">q</span><span class="p">],</span><span class="w"> </span><span class="n">D</span><span class="p">[</span><span class="n">t</span><span class="p">[</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">],</span><span class="w"> </span><span class="n">v</span><span class="p">],</span><span class="w"> </span><span class="n">D</span><span class="p">[</span><span class="n">t</span><span class="p">[</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">],</span><span class="w"> </span><span class="n">u</span><span class="p">]};</span>
+<span class="w"> </span><span class="n">gradg</span><span class="p">[</span><span class="nv">p_</span><span class="p">,</span><span class="w"> </span><span class="nv">s_</span><span class="p">,</span><span class="w"> </span><span class="nv">q_</span><span class="p">,</span><span class="w"> </span><span class="nv">v_</span><span class="p">,</span><span class="w"> </span><span class="nv">u_</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">D</span><span class="p">[</span><span class="n">g</span><span class="p">[</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">],</span><span class="w"> </span><span class="n">p</span><span class="p">],</span><span class="w"> </span><span class="n">D</span><span class="p">[</span><span class="n">g</span><span class="p">[</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">],</span><span class="w"> </span><span class="n">s</span><span class="p">],</span><span class="w"> </span><span class="n">D</span><span class="p">[</span><span class="n">g</span><span class="p">[</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">],</span><span class="w"> </span><span class="n">q</span><span class="p">],</span><span class="w"> </span><span class="n">D</span><span class="p">[</span><span class="n">g</span><span class="p">[</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">],</span><span class="w"> </span><span class="n">v</span><span class="p">],</span><span class="w"> </span><span class="n">D</span><span class="p">[</span><span class="n">g</span><span class="p">[</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">],</span><span class="w"> </span><span class="n">u</span><span class="p">]};</span>
+<span class="w"> </span><span class="n">Vxyz</span><span class="p">[</span><span class="nv">p_</span><span class="p">,</span><span class="w"> </span><span class="nv">s_</span><span class="p">,</span><span class="w"> </span><span class="nv">q_</span><span class="p">,</span><span class="w"> </span><span class="nv">v_</span><span class="p">,</span><span class="w"> </span><span class="nv">u_</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Abs</span><span class="p">[</span><span class="n">Det</span><span class="p">[{</span><span class="n">gradx</span><span class="p">[</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">],</span><span class="w"> </span><span class="n">grady</span><span class="p">[</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">],</span><span class="w"> </span><span class="n">gradz</span><span class="p">[</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">],</span><span class="w"> </span><span class="n">gradt</span><span class="p">[</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">],</span><span class="w"> </span><span class="n">gradg</span><span class="p">[</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">]}]];</span>
+<span class="w"> </span><span class="n">Integrate</span><span class="p">[</span><span class="n">Vxyz</span><span class="p">[</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">],</span><span class="w"> </span><span class="p">{</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">Pi</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">Pi</span><span class="o">/</span><span class="mi">2</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">Pi</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">Pi</span><span class="p">}]</span>
+</pre></div>
+</div>
+<p><img alt="0sfd9m2rruffy" src="_images/0sfd9m2rruffy.png" /></p>
+<p><img alt="0iyg6y9nds9ey" src="_images/0iyg6y9nds9ey.png" /></p>
+<p><img alt="1h3rt5x0yu3g9" src="_images/1h3rt5x0yu3g9.png" /></p>
+<p><img alt="0074t8ystd010" src="_images/0074t8ystd010.png" /></p>
+<p><img alt="1wrdinkniq0s0" src="_images/1wrdinkniq0s0.png" /></p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="n">RSolveValue</span><span class="p">[{</span><span class="n">v</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">Pi</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">2</span><span class="p">]</span><span class="o">/</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">Pi</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">4</span><span class="o">/</span><span class="mi">3</span><span class="w"> </span><span class="n">Pi</span><span class="p">},</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="n">n</span><span class="p">],</span><span class="w"> </span><span class="n">n</span><span class="p">]</span>
+<span class="w"> </span><span class="n">Table</span><span class="p">[</span><span class="err">%</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">}]</span>
+</pre></div>
+</div>
+<p><img alt="0yeb5ny8fphxa" src="_images/0yeb5ny8fphxa.png" /></p>
+<p><img alt="0vevzneqydadr" src="_images/0vevzneqydadr.png" /></p>
+<p><img alt="1s86yqpne4xnc" src="_images/1s86yqpne4xnc.png" /></p>
+<p><img alt="18jwa8w4cv05w" src="_images/18jwa8w4cv05w.png" /></p>
+<p><img alt="04s91ph9iwffp" src="_images/04s91ph9iwffp.png" /></p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[]</span><span class="o">:=</span><span class="w"> </span><span class="n">Clear</span><span class="p">[</span><span class="n">Spherical</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">]</span>
+<span class="w"> </span><span class="n">Spherical</span><span class="p">[</span><span class="nv">r_</span><span class="p">,</span><span class="w"> </span><span class="nv">s_</span><span class="p">,</span><span class="w"> </span><span class="nv">t_</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">{</span><span class="n">Sin</span><span class="p">[</span><span class="n">s</span><span class="p">]</span><span class="w"> </span><span class="n">Cos</span><span class="p">[</span><span class="n">t</span><span class="p">],</span><span class="w"> </span><span class="n">Sin</span><span class="p">[</span><span class="n">s</span><span class="p">]</span><span class="w"> </span><span class="n">Sin</span><span class="p">[</span><span class="n">t</span><span class="p">],</span><span class="w"> </span><span class="n">Cos</span><span class="p">[</span><span class="n">s</span><span class="p">]};</span>
+<span class="w"> </span><span class="n">ParametricPlot3D</span><span class="p">[</span><span class="n">Spherical</span><span class="p">[</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="p">{</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="err">\</span><span class="p">[</span><span class="n">Pi</span><span class="p">]},</span><span class="w"> </span><span class="n">ViewPoint</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Front</span><span class="p">]</span>
+<span class="w"> </span><span class="n">ParametricPlot3D</span><span class="p">[</span><span class="n">Spherical</span><span class="p">[</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="p">{</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="err">\</span><span class="p">[</span><span class="n">Pi</span><span class="p">]},</span><span class="w"> </span><span class="n">ViewPoint</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Front</span><span class="p">]</span>
+<span class="w"> </span><span class="n">ParametricPlot3D</span><span class="p">[</span><span class="n">Spherical</span><span class="p">[</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="p">{</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="mf">2.8</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="err">\</span><span class="p">[</span><span class="n">Pi</span><span class="p">]},</span><span class="w"> </span><span class="n">ViewPoint</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Front</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><img alt="1swnpguwcoxbm" src="_images/1swnpguwcoxbm.png" /></p>
+<p><img alt="03qzf40vqu52f" src="_images/03qzf40vqu52f.png" /></p>
+<p><img alt="0itrdy30g9azd" src="_images/0itrdy30g9azd.png" /></p>
+<p><img alt="1j5vm87snpx7e" src="_images/1j5vm87snpx7e.png" /></p>
+<div class="highlight-wl notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mf">0.19</span><span class="p">,</span><span class="w"> </span><span class="mf">0.271</span><span class="p">,</span><span class="w"> </span><span class="mf">0.3439</span><span class="p">,</span><span class="w"> </span><span class="mf">0.40951</span><span class="p">,</span><span class="w"> </span><span class="mf">0.468559</span><span class="p">,</span><span class="w"> </span><span class="mf">0.521703</span><span class="p">,</span><span class="w"> </span><span class="mf">0.569533</span><span class="p">,</span><span class="w"> </span><span class="mf">0.61258</span><span class="p">,</span><span class="w"> </span><span class="mf">0.651322</span><span class="p">,</span><span class="w"> </span><span class="mf">0.686189</span><span class="p">,</span><span class="w"> </span><span class="mf">0.71757</span><span class="p">,</span><span class="w"> </span><span class="mf">0.745813</span><span class="p">,</span><span class="w"> </span><span class="mf">0.771232</span><span class="p">,</span><span class="w"> </span><span class="mf">0.794109</span><span class="p">,</span><span class="w"> </span><span class="mf">0.814698</span><span class="p">}</span>
+</pre></div>
+</div>
 </section>
 </section>
 
@@ -1281,6 +1843,16 @@ Sage coding: def a(n): return BinaryRecurrenceSequence(1, 1).period(n)          
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#permutations-and-combinations">5. Permutations and Combinations</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#harmonic-numbers">6. Harmonic Numbers</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#partitions">7. Partitions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bernoulli-numbers">8. Bernoulli Numbers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stirling-numbers">9. Stirling Numbers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sequence-recognition">10. Sequence Recognition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-functions">11. Generating Functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-generating-functions">Properties of generating functions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summing-finite-infinite-series">12&amp;13. Summing Finite &amp; Infinite Series</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convergence-tests">14. Convergence Tests</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#volume-of-n-d-sphere">15. Volume of N-D sphere</a></li>
 </ul>
   </nav></div>
 
