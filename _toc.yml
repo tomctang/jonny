@@ -12,6 +12,8 @@ parts:
   - file: Course_Lean  
   - file: Course_Puzzle_Group
   - file: Course_5U
+  - file: Course_MCS320Symbol
+  - file: Cryptohack
 
 - caption: CS & Physics
   numbered: false
@@ -19,9 +21,10 @@ parts:
   - file: past/Course_MIT6001Python
   - file: past/Course_MIT6002thinking
   - file: PE100
-  #- file: PE200 
-  - file: PE_Informatics/PE_tags
+  - file: PE200 
+  - file: PE_tags
   - file: past/Course_MCM_QM
+  - file: Course_MCM_QFT
 
 - caption: Notebook & Tom
   numbered: false
@@ -30,4 +33,3 @@ parts:
   - file: past/nb_Geo
   - file: past/nb_lottery_simulator
   - file: past/How_Dad_organise_QM
-  - file: Course_MCM_QFT
