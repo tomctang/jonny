@@ -36,6 +36,11 @@ execute:
 #mathjax:
 #  enable: true
 
+sphinx:
+  config:
+    html_js_files:
+      - https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
+      - mermaid-init.js
 # sphinx:
 #   config:
 #     html_js_files:
