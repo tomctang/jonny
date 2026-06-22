@@ -8,7 +8,6 @@ parts:
   chapters:
   - file: past/Alevel_math
   - file: past/Alevel_math_further
-  - file: past/Course_MCM
   - file: Course_Lean  
   - file: Course_Puzzle_Group
   - file: Course_5U
@@ -23,6 +22,7 @@ parts:
   - file: PE100
   - file: PE200 
   - file: PE_tags
+  - file: past/Course_MCM
   - file: past/Course_MCM_QM
   - file: Course_MCM_QFT
 
