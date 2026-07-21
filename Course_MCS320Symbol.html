@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
@@ -40,10 +40,10 @@
     <link rel="stylesheet" type="text/css" href="_static/custom.css?v=550f00eb" />
   
   <!-- So that users can add custom icons -->
-  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
@@ -64,29 +64,36 @@
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Course_MCS320Symbol';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script src="_static/mermaid-init.js?v=512eb59e"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Cryptohack" href="Cryptohack.html" />
-    <link rel="prev" title="5U - Ext III" href="Course_5U.html" />
+    <link rel="prev" title="Permutation Puzzles" href="Course_Puzzle_Group.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
   </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
-
+  <body data-default-mode="">
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
-
+  
+  
+  
   
   <dialog id="pst-search-dialog">
     
@@ -112,7 +119,51 @@
 </div>
 
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
     </header>
   
 
@@ -173,10 +224,9 @@
 <li class="toctree-l1"><a class="reference internal" href="past/Alevel_math_further.html">A-level-further</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Course_Lean.html">Lean</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Course_Puzzle_Group.html">Permutation Puzzles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Course_5U.html">5U - Ext III</a></li>
-
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Symbolic Computation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Cryptohack.html">Cryptohack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Course_LAFF.html">LAFF</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">CS &amp; Physics</span></p>
 <ul class="nav bd-sidenav">
@@ -358,7 +408,7 @@
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cas-foundation">CAS Foundation</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intro">Intro</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#precision-and-accuracy">Precision and Accuracy</a><ul class="nav section-nav flex-column">
@@ -432,6 +482,10 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#d-plots">2D Plots</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#animating-plots-come-back-later">Animating Plots(come back later)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-equations">Solving Equations</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-algebra-merge-with-previous">Linear Algebra(merge with previous)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-factorization">Matrix Factorization</a></li>
 </ul>
 </li>
 </ul>
@@ -2766,8 +2820,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><img src="data:image/gif;base64,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"/></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2859,9 +2911,278 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="_images/746c1cee6de3671d5b9f15c95f8bffeb955056ae78248da3bc652543cfe33b0f.png" src="_images/746c1cee6de3671d5b9f15c95f8bffeb955056ae78248da3bc652543cfe33b0f.png" />
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">e1</span><span class="o">=</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">c1x</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="p">(</span><span class="n">y</span><span class="o">-</span><span class="n">c1y</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="o">-</span><span class="p">(</span><span class="n">r</span><span class="o">-</span><span class="n">r1</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span>     <span class="c1"># edit r-r1 to r+r1 to show different pairs</span>
+<span class="n">e2</span><span class="o">=</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">c2x</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="p">(</span><span class="n">y</span><span class="o">-</span><span class="n">c2y</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="o">-</span><span class="p">(</span><span class="n">r</span><span class="o">-</span><span class="n">r2</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span>
+<span class="n">e3</span><span class="o">=</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">c3x</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="p">(</span><span class="n">y</span><span class="o">-</span><span class="n">c3y</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="o">-</span><span class="p">(</span><span class="n">r</span><span class="o">-</span><span class="n">r3</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span>
+<span class="n">eqs</span><span class="o">=</span><span class="p">[</span><span class="n">e1</span><span class="p">,</span><span class="n">e2</span><span class="p">,</span><span class="n">e3</span><span class="p">]</span>
+<span class="n">sols</span><span class="o">=</span><span class="n">solve</span><span class="p">(</span><span class="n">eqs</span><span class="p">,</span><span class="n">solution_dict</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">tc1x</span><span class="o">=</span><span class="n">sols</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">x</span><span class="p">]</span>
+<span class="n">tc1y</span><span class="o">=</span><span class="n">sols</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">y</span><span class="p">]</span>
+<span class="n">tc1r</span><span class="o">=</span><span class="n">sols</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">r</span><span class="p">]</span>
+<span class="n">tc2x</span><span class="o">=</span><span class="n">sols</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="n">x</span><span class="p">]</span>
+<span class="n">tc2y</span><span class="o">=</span><span class="n">sols</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="n">y</span><span class="p">]</span>
+<span class="n">tc2r</span><span class="o">=</span><span class="n">sols</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="n">r</span><span class="p">]</span>
+<span class="n">ptc1</span><span class="o">=</span><span class="n">circle</span><span class="p">((</span><span class="n">tc1x</span><span class="p">,</span><span class="n">tc1y</span><span class="p">),</span><span class="n">tc1r</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">ptc2</span><span class="o">=</span><span class="n">circle</span><span class="p">((</span><span class="n">tc2x</span><span class="p">,</span><span class="n">tc2y</span><span class="p">),</span><span class="n">tc2r</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">)</span>
+<span class="n">show</span><span class="p">(</span><span class="n">p1</span><span class="o">+</span><span class="n">p2</span><span class="o">+</span><span class="n">p3</span><span class="o">+</span><span class="n">ptc1</span><span class="o">+</span><span class="n">ptc2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>QQbar: Algebraic field for complex numbers(extension to rationals)</p></li>
+<li><p>Ideals: Special subset of ring(e.g. even numbers for integers)</p>
+<ul>
+<li><p>Closure: Performing 1 operation on a element creates another element in subset.</p></li>
+<li><p>Absorption: Performing the other operation on any element in ring creates element in subset.</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">P</span><span class="o">.&lt;</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">r</span><span class="o">&gt;=</span><span class="n">PolynomialRing</span><span class="p">(</span><span class="n">QQ</span><span class="p">,</span><span class="n">order</span><span class="o">=</span><span class="s1">&#39;lex&#39;</span><span class="p">);</span><span class="nb">print</span><span class="p">(</span><span class="n">P</span><span class="p">)</span>
+<span class="n">Q</span><span class="o">=</span><span class="p">[</span><span class="n">P</span><span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">eqs</span><span class="p">]</span>
+<span class="n">J</span><span class="o">=</span><span class="n">Ideal</span><span class="p">(</span><span class="n">Q</span><span class="p">);</span><span class="nb">print</span><span class="p">(</span><span class="n">J</span><span class="p">)</span>              <span class="c1"># ignore the long text about boring stuff</span>
+<span class="n">G</span><span class="o">=</span><span class="n">J</span><span class="o">.</span><span class="n">groebner_basis</span><span class="p">();</span><span class="n">s</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>        <span class="c1"># not as boring</span>
+<span class="n">J</span><span class="o">.</span><span class="n">variety</span><span class="p">(</span><span class="n">QQbar</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="linear-algebra-merge-with-previous">
+<h2>Linear Algebra(merge with previous)<a class="headerlink" href="#linear-algebra-merge-with-previous" title="Link to this heading">#</a></h2>
+<section id="matrix-factorization">
+<h3>Matrix Factorization<a class="headerlink" href="#matrix-factorization" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="o">=</span><span class="n">matrix</span><span class="p">([[</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span>
+          <span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
+          <span class="p">[</span><span class="o">-</span><span class="mi">9</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">]])</span>
+<span class="n">m</span><span class="o">.</span><span class="n">LU</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="o">=</span><span class="n">random_matrix</span><span class="p">(</span><span class="n">QQ</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="n">num_bound</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="n">den_bound</span><span class="o">=</span><span class="mi">100</span><span class="p">);</span>  <span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">b</span><span class="o">=</span><span class="n">random_vector</span><span class="p">(</span><span class="n">QQ</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="n">num_bound</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="n">den_bound</span><span class="o">=</span><span class="mi">100</span><span class="p">);</span>  <span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">x</span><span class="o">=</span><span class="n">A</span><span class="o">.</span><span class="n">solve_right</span><span class="p">(</span><span class="n">b</span><span class="p">);</span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">h</span><span class="o">=</span><span class="k">lambda</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">:</span><span class="mi">1</span><span class="o">/</span><span class="p">((</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>    <span class="nb">print</span><span class="p">(</span><span class="n">h</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span><span class="n">h</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">))</span>
+<span class="n">H</span><span class="o">=</span><span class="n">Matrix</span><span class="p">(</span><span class="n">QQ</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="n">h</span><span class="p">);</span><span class="nb">print</span><span class="p">(</span><span class="n">H</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">P</span><span class="p">,</span><span class="n">L</span><span class="p">,</span><span class="n">U</span><span class="o">=</span><span class="n">A</span><span class="o">.</span><span class="n">LU</span><span class="p">();</span><span class="n">s</span><span class="p">(</span><span class="n">P</span><span class="p">,</span><span class="n">L</span><span class="p">,</span><span class="n">U</span><span class="p">)</span>
+<span class="n">s</span><span class="p">(</span><span class="n">P</span><span class="o">*</span><span class="n">L</span><span class="o">*</span><span class="n">U</span><span class="p">,</span><span class="n">A</span><span class="p">)</span>
+<span class="n">s</span><span class="p">(</span><span class="n">P</span><span class="o">*</span><span class="n">A</span><span class="p">)</span>
+<span class="n">s</span><span class="p">(</span><span class="n">L</span><span class="o">*</span><span class="n">U</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rows</span><span class="o">=</span><span class="n">A</span><span class="o">.</span><span class="n">rows</span><span class="p">();</span><span class="nb">print</span><span class="p">(</span><span class="n">rows</span><span class="p">)</span>
+<span class="n">nbrs</span><span class="o">=</span><span class="p">[[</span><span class="n">val</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">row</span><span class="p">]</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">];</span><span class="n">s</span><span class="p">(</span><span class="n">matrix</span><span class="p">(</span><span class="n">nbrs</span><span class="p">))</span>
+<span class="n">C</span><span class="o">=</span><span class="n">Matrix</span><span class="p">(</span><span class="n">CDF</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="n">nbrs</span><span class="p">);</span><span class="n">s</span><span class="p">(</span><span class="n">C</span><span class="p">)</span>
+<span class="n">Q</span><span class="p">,</span><span class="n">R</span><span class="o">=</span><span class="n">C</span><span class="o">.</span><span class="n">QR</span><span class="p">();</span><span class="n">s</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span><span class="n">R</span><span class="p">)</span>
+<span class="n">s</span><span class="p">(</span><span class="n">Q</span><span class="o">*</span><span class="n">R</span><span class="p">,</span><span class="n">C</span><span class="p">)</span>
+<span class="n">s</span><span class="p">(</span><span class="n">Q</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span><span class="o">*</span><span class="n">Q</span><span class="p">)</span>             <span class="c1"># Q is orthogonal(ignore the floating point errors)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">eigenvalues</span><span class="p">())</span>
+<span class="n">D</span><span class="p">,</span><span class="n">V</span><span class="o">=</span><span class="n">A</span><span class="o">.</span><span class="n">right_eigenmatrix</span><span class="p">();</span><span class="n">s</span><span class="p">(</span><span class="n">D</span><span class="p">,</span><span class="n">V</span><span class="p">)</span>
+<span class="n">s</span><span class="p">(</span><span class="n">V</span><span class="o">*</span><span class="n">D</span><span class="p">,</span><span class="n">A</span><span class="o">*</span><span class="n">V</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">U</span><span class="p">,</span><span class="n">S</span><span class="p">,</span><span class="n">V</span><span class="o">=</span><span class="n">C</span><span class="o">.</span><span class="n">SVD</span><span class="p">();</span><span class="n">s</span><span class="p">(</span><span class="n">U</span><span class="p">,</span><span class="n">S</span><span class="p">,</span><span class="n">V</span><span class="p">)</span>
+<span class="n">s</span><span class="p">(</span><span class="n">U</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span><span class="o">*</span><span class="n">U</span><span class="p">)</span>         <span class="c1"># both u and v are orthogonal(again, ignore floating point errors)</span>
+<span class="n">s</span><span class="p">(</span><span class="n">V</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span><span class="o">*</span><span class="n">V</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="o">=</span><span class="n">random_matrix</span><span class="p">(</span><span class="n">ZZ</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="mi">999</span><span class="p">);</span><span class="n">s</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="n">H</span><span class="p">,</span><span class="n">U</span><span class="o">=</span><span class="n">A</span><span class="o">.</span><span class="n">hermite_form</span><span class="p">(</span><span class="n">transformation</span><span class="o">=</span><span class="kc">True</span><span class="p">);</span><span class="n">s</span><span class="p">(</span><span class="n">H</span><span class="p">,</span><span class="n">U</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">det</span><span class="p">(</span><span class="n">U</span><span class="p">))</span>            <span class="c1"># U is invertible</span>
+<span class="n">s</span><span class="p">(</span><span class="n">U</span><span class="o">*</span><span class="n">A</span><span class="p">,</span><span class="n">H</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D</span><span class="p">,</span><span class="n">U</span><span class="p">,</span><span class="n">V</span><span class="o">=</span><span class="n">A</span><span class="o">.</span><span class="n">smith_form</span><span class="p">();</span><span class="n">s</span><span class="p">(</span><span class="n">D</span><span class="p">,</span><span class="n">U</span><span class="p">,</span><span class="n">V</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">det</span><span class="p">(</span><span class="n">A</span><span class="p">))</span>
+<span class="n">s</span><span class="p">(</span><span class="n">U</span><span class="o">*</span><span class="n">A</span><span class="o">*</span><span class="n">V</span><span class="p">)</span>              <span class="c1"># note that this is based on the determinant above</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">P</span><span class="o">.&lt;</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">&gt;=</span><span class="n">PolynomialRing</span><span class="p">(</span><span class="n">QQ</span><span class="p">);</span><span class="nb">print</span><span class="p">(</span><span class="n">P</span><span class="p">)</span>
+<span class="n">p</span><span class="o">=</span><span class="n">P</span><span class="o">.</span><span class="n">random_element</span><span class="p">(</span><span class="n">degree</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">terms</span><span class="o">=</span><span class="mi">5</span><span class="p">);</span><span class="n">s</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<span class="n">q</span><span class="o">=</span><span class="n">P</span><span class="o">.</span><span class="n">random_element</span><span class="p">(</span><span class="n">degree</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">terms</span><span class="o">=</span><span class="mi">5</span><span class="p">);</span><span class="n">s</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+<span class="n">s</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">resultant</span><span class="p">(</span><span class="n">q</span><span class="p">,</span><span class="n">x</span><span class="p">),</span><span class="n">q</span><span class="o">.</span><span class="n">resultant</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">x</span><span class="p">))</span>
+<span class="n">S</span><span class="o">=</span><span class="n">q</span><span class="o">.</span><span class="n">sylvester_matrix</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">x</span><span class="p">);</span><span class="n">s</span><span class="p">(</span><span class="n">S</span><span class="p">)</span>
+<span class="n">s</span><span class="p">(</span><span class="n">det</span><span class="p">(</span><span class="n">S</span><span class="p">))</span>           <span class="c1"># note that the determinant of the sylvester matrix is the same as the resultants</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Multivariate Polynomial Ring in x, y over Rational Field
+</pre></div>
+</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{1}{14} x^{2} + \frac{1}{2} x y + 7 y^{2} + x - 1 \qquad   \]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 2 x^{2} - 4 x y - \frac{1}{5} \qquad   \]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 232 y^{4} + 56 y^{3} - \frac{4261}{70} y^{2} - \frac{296}{35} y + \frac{17361}{4900} \qquad   232 y^{4} + 56 y^{3} - \frac{4261}{70} y^{2} - \frac{296}{35} y + \frac{17361}{4900} \qquad   \]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left(\begin{array}{rrrr}
+2 &amp; -4 y &amp; -\frac{1}{5} &amp; 0 \\
+0 &amp; 2 &amp; -4 y &amp; -\frac{1}{5} \\
+\frac{1}{14} &amp; \frac{1}{2} y + 1 &amp; 7 y^{2} - 1 &amp; 0 \\
+0 &amp; \frac{1}{14} &amp; \frac{1}{2} y + 1 &amp; 7 y^{2} - 1
+\end{array}\right) \qquad   \end{split}\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 232 y^{4} + 56 y^{3} - \frac{4261}{70} y^{2} - \frac{296}{35} y + \frac{17361}{4900} \qquad   \]</div>
+</div>
+</div>
+<p>Unified under Groebner basis:</p>
+<ul class="simple">
+<li><p>Polynomial algebra (e.g., F[x] over a field F), linear algebra (vector spaces and matrices over F), and group theory (especially via representations or composition) share many parallel concepts.</p></li>
+<li><p>Matrices can be seen as “linearized polynomials” (via companion matrices or the algebra of linear operators), and groups act linearly on vector spaces.</p></li>
+<li><p>Matrices have rough analogs in polynomial factorization (roots, division algorithm, partial fractions, etc.) and group decompositions (e.g., composition series, semidirect products, Sylow theory)</p></li>
+</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Concept</p></th>
+<th class="head"><p>Polynomial Algebra (F[x])</p></th>
+<th class="head"><p>Linear Algebra (Vector Spaces/Matrices)</p></th>
+<th class="head"><p>Abstract Algebra (Groups/Modules)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Basic Object</p></td>
+<td><p>Polynomials p(x) ∈ F[x] (ring)</p></td>
+<td><p>Vectors in V (module over F); Matrices as linear maps End(V)</p></td>
+<td><p>Groups G (or modules over rings); Group algebra F[G]</p></td>
+</tr>
+<tr class="row-odd"><td><p>“”Elements”” / Generators</p></td>
+<td><p>Coefficients or roots; Monomials as basis</p></td>
+<td><p>Vectors; Basis (standard or eigenbasis)</p></td>
+<td><p>Group elements; Generators (presentations)</p></td>
+</tr>
+<tr class="row-even"><td><p>Addition</p></td>
+<td><p>Polynomial addition</p></td>
+<td><p>Vector addition / Matrix addition</p></td>
+<td><p>Group operation (often non-abelian); Abelian case like ℤ-modules</p></td>
+</tr>
+<tr class="row-odd"><td><p>Multiplication</p></td>
+<td><p>Polynomial multiplication (convolution of coeffs)</p></td>
+<td><p>Matrix multiplication / Composition of linear maps</p></td>
+<td><p>Group multiplication; Convolution in group algebra</p></td>
+</tr>
+<tr class="row-even"><td><p>Division / Reduction</p></td>
+<td><p>Division algorithm (Euclidean domain)</p></td>
+<td><p>Gaussian elimination; Row reduction</p></td>
+<td><p>Cosets, quotients G/H; Normal series</p></td>
+</tr>
+<tr class="row-odd"><td><p>Factorization / Decomposition (General)</p></td>
+<td><p>Unique factorization into irreducibles (if UFD); Finding roots</p></td>
+<td><p>Matrix factorizations (see below)</p></td>
+<td><p>Composition series (Jordan-Hölder); Semidirect products</p></td>
+</tr>
+<tr class="row-even"><td><p>CR Factorization</p></td>
+<td><p>Rank-1 terms or basic span (e.g., partial sums)</p></td>
+<td><p>A = C R (independent columns C × row space basis R)</p></td>
+<td><p>Generating set × relations (presentations)</p></td>
+</tr>
+<tr class="row-odd"><td><p>LU Factorization</p></td>
+<td><p>Synthetic division; Long division</p></td>
+<td><p>A = L U (lower/upper triangular; Gaussian elim.)</p></td>
+<td><p>Filtrations or flags; Triangularizable actions</p></td>
+</tr>
+<tr class="row-even"><td><p>QR Factorization</p></td>
+<td><p>Gram-Schmidt orthogonalization on powers</p></td>
+<td><p>A = Q R (orthogonal Q × upper triangular R)</p></td>
+<td><p>Orthogonalization in representations; Gram-Schmidt on orbits</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Eigen / Spectral</strong></p></td>
+<td><p>Root factorization p(x) = c ∏ (x - λ_i)</p></td>
+<td><p>Diagonalization A = P D P⁻¹ (eigenvalues on diagonal)</p></td>
+<td><p>Simultaneous triangularization; Characters / Representations</p></td>
+</tr>
+<tr class="row-even"><td><p>SVD</p></td>
+<td><p>Singular values (via companion matrix) or polar decomp. analogs</p></td>
+<td><p>A = U Σ Vᵀ (singular values; best low-rank approx.)</p></td>
+<td><p>Polar decomposition in unitary reps; Invariant subspaces</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Dimension / Degree</strong></p></td>
+<td><p>Degree of polynomial</p></td>
+<td><p>Dimension of vector space / Matrix rank</p></td>
+<td><p>Order of group; Composition length</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Kernel / Roots</strong></p></td>
+<td><p>Roots of p(x) = 0</p></td>
+<td><p>Kernel of linear map (nullspace)</p></td>
+<td><p>Kernel of homomorphism</p></td>
+</tr>
+<tr class="row-odd"><td><p>Quotient</p></td>
+<td><p>F[x] / (p(x)) ≅ companion matrix algebra</p></td>
+<td><p>Quotient space V / W</p></td>
+<td><p>Quotient group G/N</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Isomorphism Theorem</strong></p></td>
+<td><p>Chinese Remainder Theorem for coprime factors</p></td>
+<td><p>First Iso Theorem: V / ker T ≅ im T</p></td>
+<td><p>First Iso Theorem for groups/modules</p></td>
+</tr>
+<tr class="row-odd"><td><p>Basis / Generating Set</p></td>
+<td><p>Monomial basis {1, x, x², …}</p></td>
+<td><p>Basis of vector space</p></td>
+<td><p>Generating set; Free groups</p></td>
+</tr>
+<tr class="row-even"><td><p>Invariant Substructure</p></td>
+<td><p>Invariant factors; Multiplicity of roots</p></td>
+<td><p>Invariant subspaces; Generalized eigenspaces</p></td>
+<td><p>Normal subgroups; Subnormal series</p></td>
+</tr>
+<tr class="row-odd"><td><p>Representation Link</p></td>
+<td><p>Companion matrix of p(x) linearizes multiplication</p></td>
+<td><p>Linear operators on V</p></td>
+<td><p>Group representations ρ: G → GL(V)</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </section>
 </section>
@@ -2898,12 +3219,12 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Course_5U.html"
+       href="Course_Puzzle_Group.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">5U - Ext III</p>
+        <p class="prev-next-title">Permutation Puzzles</p>
       </div>
     </a>
     <a class="right-next"
@@ -2932,7 +3253,7 @@
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cas-foundation">CAS Foundation</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intro">Intro</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#precision-and-accuracy">Precision and Accuracy</a><ul class="nav section-nav flex-column">
@@ -3008,6 +3329,10 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-equations">Solving Equations</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-algebra-merge-with-previous">Linear Algebra(merge with previous)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-factorization">Matrix Factorization</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
@@ -3056,8 +3381,8 @@ By Jonny, assisted by Tom
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
 
   <footer class="bd-footer">
   </footer>

@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
@@ -40,10 +40,10 @@
     <link rel="stylesheet" type="text/css" href="_static/custom.css?v=550f00eb" />
   
   <!-- So that users can add custom icons -->
-  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
@@ -64,6 +64,7 @@
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'PE200';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script src="_static/mermaid-init.js?v=512eb59e"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -73,20 +74,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
   </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
-
+  <body data-default-mode="">
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
-
+  
+  
+  
   
   <dialog id="pst-search-dialog">
     
@@ -112,7 +119,51 @@
 </div>
 
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
     </header>
   
 
@@ -173,10 +224,9 @@
 <li class="toctree-l1"><a class="reference internal" href="past/Alevel_math_further.html">A-level-further</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Course_Lean.html">Lean</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Course_Puzzle_Group.html">Permutation Puzzles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Course_5U.html">5U - Ext III</a></li>
-
 <li class="toctree-l1"><a class="reference internal" href="Course_MCS320Symbol.html">Symbolic Computation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Cryptohack.html">Cryptohack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Course_LAFF.html">LAFF</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">CS &amp; Physics</span></p>
 <ul class="current nav bd-sidenav">
@@ -358,8 +408,7 @@
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-991">PE 991</a></li>
+                <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">101-200</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-101">PE 101</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-104">PE 104</a></li>
@@ -387,10 +436,13 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-131">PE 131</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-134">PE 134</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-135-136">PE 135&amp;136</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-137">PE 137</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-138">PE 138</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-139-unfinished">PE 139(unfinished)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-139">PE 139</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-142-unfinished">PE 142(unfinished)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-144">PE 144</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-146">PE 146</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-148-154-unfinished">PE 148 &amp; 154(unfinished)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-151">PE 151</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-162">PE 162</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-164">PE 164</a></li>
@@ -400,11 +452,13 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-179">PE 179</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-182">PE 182</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-183">PE 183</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-186">PE 186</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-187">PE 187</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-188">PE 188</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"></a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-190">PE 190</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-193-unfinished">PE 193(unfinished)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-197">PE 197</a></li>
 </ul>
@@ -416,6 +470,7 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-207">PE 207</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-211">PE 211</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-214">PE 214</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-215">PE 215</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-216">PE 216</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-220-unfinished">PE 220(unfinished)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-225">PE 225</a></li>
@@ -424,6 +479,7 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-243">PE 243</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-258-unfinished">PE 258(unfinished)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-265-add-notes">PE 265(add notes)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-267-unfinished">PE 267(unfinished)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-277">PE 277</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-287-unfinished">PE 287(unfinished)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-288-notes">PE 288(notes)</a></li>
@@ -433,20 +489,23 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-303">PE 303</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-304">PE 304</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-315">PE 315</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-323-unfinished">PE 323(unfinished)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-323">PE 323</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-336">PE 336</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-345-unfinished">PE 345(unfinished)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-346">PE 346</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-347">PE 347</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-348">PE 348</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-349">PE 349</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-351-unfinished">PE 351(unfinished)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-351-implement-sieving">PE 351(implement sieving)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">?</a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-357">PE 357</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-381">PE 381</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-387">PE 387</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">&gt; 400</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">&gt; 400</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-401-unfinished">PE 401(unfinished)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-493">PE 493</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-500-add-notes">PE 500(add notes)</a></li>
@@ -497,85 +556,7 @@
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">g</span><span class="o">=</span><span class="mi">2</span>
-<span class="n">p</span><span class="o">=</span><span class="mi">2410312426921032588552076022197566074856950548502459942654116941958108831682612228890093858261341614673227141477904012196503648957050582631942730706805009223062734745341073406696246014589361659774041027169249453200378729434170325843778659198143763193776859869524088940195577346119843545301547043747207749969763750084308926339295559968882457872412993810129130294592999947926365264059284647209730384947211681434464714438488520940127459844288859336526896320919633919</span>
-<span class="n">A</span><span class="o">=</span><span class="mi">856304584096048886955509562968871475032597222977592582368905638838457471540212735650657681505257632513376450997183980241763255048546755953366055018231362116027471584536344504976480989464924634894964137850112163776329137096273190411377741726289263318249633183116786005711879828373567919987675557959921901404254892125325963434014965681824126988852712396072561101568299735252112052053117850430622581370123232867580102208908996952552489017052422498631567177606095677</span>
-<span class="n">B</span><span class="o">=</span><span class="mi">1470298736645368721454638998352390630939269088693554299846259832848309263503600172314939738938281148044449472164955995551376249927026532788129188728621022865734590078531312639308996935254850448770374404029557685482833571645545796071863248710064749065055698743403348103489810383409866984562670957285068731656691184191607648706052944920650739719057452153508552415940082826005762085945864626454969355110765233865610367947200958826572539468403577017975347956323661348</span>
-<span class="n">a</span><span class="o">=</span><span class="p">((</span><span class="n">inverse_mod</span><span class="p">(</span><span class="n">g</span><span class="p">,</span><span class="n">p</span><span class="p">))</span><span class="o">*</span><span class="n">A</span><span class="p">)</span><span class="o">%</span><span class="k">p</span>
-<span class="n">b</span><span class="o">=</span><span class="p">((</span><span class="n">inverse_mod</span><span class="p">(</span><span class="n">g</span><span class="p">,</span><span class="n">p</span><span class="p">))</span><span class="o">*</span><span class="n">B</span><span class="p">)</span><span class="o">%</span><span class="k">p</span>
-<span class="c1"># secret=(B*a)%p;secret</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;p=</span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;public=</span><span class="si">{</span><span class="n">B</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;private=</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<section id="pe-991">
-<h2>PE 991<a class="headerlink" href="#pe-991" title="Link to this heading">#</a></h2>
-<p><span class="math notranslate nohighlight">\(\frac{x}{y+z}+\frac{y+z}{x+z}=4\)</span></p>
-<p><span class="math notranslate nohighlight">\(\frac{x(x+z)+(y+z)^2}{(x+z)(y+z)}=4\)</span></p>
-<p><span class="math notranslate nohighlight">\(x+y+z\leq10^7\)</span></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span>
-<span class="n">x</span><span class="o">=</span><span class="mi">19</span><span class="o">*</span><span class="n">z</span><span class="o">/</span><span class="mi">6</span>
-<span class="n">y</span><span class="o">=</span><span class="mi">89</span><span class="o">*</span><span class="n">z</span><span class="o">/</span><span class="mi">6</span>
-<span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">z</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="n">y</span><span class="o">+</span><span class="n">z</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="p">((</span><span class="n">x</span><span class="o">+</span><span class="n">z</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">y</span><span class="o">+</span><span class="n">z</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tot</span><span class="o">=</span><span class="mi">0</span>
-<span class="n">stop</span><span class="o">=</span><span class="mi">0</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="o">^</span><span class="mi">7</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">15</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">stop</span><span class="o">==</span><span class="mi">2</span><span class="p">:</span>
-        <span class="k">break</span>
-    <span class="n">k</span><span class="o">=</span><span class="n">i</span><span class="o">//</span><span class="mi">15</span>
-    <span class="n">j</span><span class="o">=</span><span class="mi">3</span><span class="o">*</span><span class="n">k</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="n">k</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="n">k</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="p">((</span><span class="n">i</span><span class="o">+</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="n">k</span><span class="p">))</span><span class="o">==</span><span class="mi">4</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="o">+</span><span class="n">k</span><span class="o">&gt;</span><span class="mi">10</span><span class="o">^</span><span class="mi">7</span><span class="p">:</span> <span class="n">stop</span><span class="o">+=</span><span class="mi">1</span>
-        <span class="k">else</span><span class="p">:</span> <span class="n">tot</span><span class="o">+=</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="o">+</span><span class="n">k</span>
-    <span class="n">j</span><span class="o">=</span><span class="mi">59</span><span class="o">*</span><span class="n">k</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="n">k</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="n">k</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="p">((</span><span class="n">i</span><span class="o">+</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="n">k</span><span class="p">))</span><span class="o">==</span><span class="mi">4</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="o">+</span><span class="n">k</span><span class="o">&gt;</span><span class="mi">10</span><span class="o">^</span><span class="mi">7</span><span class="p">:</span> <span class="n">stop</span><span class="o">+=</span><span class="mi">1</span>
-        <span class="k">else</span><span class="p">:</span><span class="n">tot</span><span class="o">+=</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="o">+</span><span class="n">k</span>
-<span class="n">tot</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1001</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1001</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1001</span><span class="p">):</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="n">k</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="n">k</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="p">((</span><span class="n">i</span><span class="o">+</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="n">k</span><span class="p">))</span><span class="o">==</span><span class="mi">4</span> <span class="ow">and</span> <span class="n">gcd</span><span class="p">([</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">k</span><span class="p">])</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
-                <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">k</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">factor</span><span class="p">(</span><span class="mi">355</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">k</span><span class="o">=</span><span class="mi">23</span><span class="p">,</span><span class="mi">125</span><span class="p">,</span><span class="mi">13</span>
-</pre></div>
-</div>
-</div>
-</div>
-<img src="https://raw.githubusercontent.com/tomctang/NB_img/main/PEprogress.gif" alt="PE" width="700"></section>
-<section id="id1">
+<img src="https://raw.githubusercontent.com/tomctang/NB_img/main/PEprogress.gif" alt="PE" width="700"><section id="id1">
 <h2>101-200<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <section id="pe-101">
 <h3>PE 101<a class="headerlink" href="#pe-101" title="Link to this heading">#</a></h3>
@@ -1710,11 +1691,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(149367, 80.75551836000005)
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1802,13 +1778,6 @@
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">prime</span>
-</pre></div>
-</div>
-</div>
-</div>
 <p>Memory causes 136 to run in <span class="math notranslate nohighlight">\(O(n)\)</span> time.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1827,6 +1796,28 @@
 <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
     <span class="n">count</span><span class="o">+=</span><span class="n">d</span><span class="p">[</span><span class="n">num</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span>
 <span class="n">count</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="pe-137">
+<h3>PE 137<a class="headerlink" href="#pe-137" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">eqs</span></code> has <span class="math notranslate nohighlight">\(2\)</span> branches that correspond to the 2 parts in <code class="docutils literal notranslate"><span class="pre">gen_func</span></code>.</p></li>
+<li><p>There is a formula for fibonacci golden nuggets on the internet.</p></li>
+<li><p><span class="math notranslate nohighlight">\((1-x-x^2)\)</span> is divisible by <span class="math notranslate nohighlight">\(x\)</span>, so <span class="math notranslate nohighlight">\(x=h(1-x-x^2)\)</span>, where <span class="math notranslate nohighlight">\(h\in\Z\)</span>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(x\in\mathbb{Q}\)</span>, then <span class="math notranslate nohighlight">\(5h^2+2h+1\)</span> is a perfect square.</p></li>
+<li><p>A pattern can be found from here.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">gen_func</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">=</span><span class="n">x</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">x</span><span class="o">-</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">eqs</span><span class="o">=</span><span class="n">solve</span><span class="p">(</span><span class="n">gen_func</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>    <span class="c1"># find inverse function</span>
+<span class="n">ans</span><span class="o">=</span><span class="n">fibonacci</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span><span class="o">*</span><span class="n">fibonacci</span><span class="p">(</span><span class="mi">31</span><span class="p">)</span>   <span class="c1"># nth golden nugget=fib(2n)*fib(2n+1)</span>
+<span class="n">inverse_func</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="o">=</span><span class="n">eqs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">rhs</span><span class="p">()</span>
+<span class="n">inverse_func</span><span class="p">()</span>                 <span class="c1"># the answer is fib(30)*fib(31) -&gt; x=fib(30)/fib(31)</span>
 </pre></div>
 </div>
 </div>
@@ -1903,27 +1894,12 @@
 </div>
 </div>
 </section>
-<section id="pe-139-unfinished">
-<h3>PE 139(unfinished)<a class="headerlink" href="#pe-139-unfinished" title="Link to this heading">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">memo</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">1</span><span class="p">}</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">coin_sum</span><span class="p">(</span><span class="n">amount</span><span class="p">,</span><span class="n">max_coin</span><span class="o">=</span><span class="mi">200</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">amount</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">0</span>
-    <span class="k">elif</span> <span class="n">amount</span> <span class="ow">in</span> <span class="n">memo</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">memo</span><span class="p">[</span><span class="n">amount</span><span class="p">]</span>
-    <span class="n">ans</span><span class="o">=</span><span class="mi">0</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">200</span><span class="p">]:</span>
-        <span class="k">if</span> <span class="n">i</span><span class="o">&lt;=</span><span class="n">max_coin</span><span class="p">:</span> <span class="n">ans</span><span class="o">+=</span><span class="n">coin_sum</span><span class="p">(</span><span class="n">amount</span><span class="o">-</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span> <span class="k">break</span>
-    <span class="n">memo</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">amount</span><span class="p">:</span><span class="n">ans</span><span class="p">})</span>
-    <span class="k">return</span> <span class="n">ans</span>
-<span class="n">coin_sum</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
+<section id="pe-139">
+<h3>PE 139<a class="headerlink" href="#pe-139" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Only triplets needed are ones where <span class="math notranslate nohighlight">\(|a-b|=1\)</span>.</p></li>
+<li><p>These are generated through the recurrence relation <span class="math notranslate nohighlight">\(P_n=6P_{n-1}-P_{n-2}\)</span> and base values <span class="math notranslate nohighlight">\(P_1=12\)</span> and <span class="math notranslate nohighlight">\(P_2=70\)</span>.</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 139 Pythagorean Tiles</span>
@@ -1939,7 +1915,62 @@
             <span class="k">else</span><span class="p">:</span> <span class="k">break</span>
         <span class="n">m</span><span class="o">+=</span><span class="mi">1</span>
     <span class="k">return</span> <span class="n">triplets</span>
-<span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="ow">not</span> <span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">%</span><span class="k">abs</span>(x[0]-x[1]),pythagoreanTriplets(10^3)))
+<span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="o">^</span><span class="mi">8</span>
+<span class="n">triplets</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">gcd</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">==</span><span class="mi">1</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">%</span><span class="k">abs</span>(x[0]-x[1]),pythagoreanTriplets(limit)))
+<span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">limit</span><span class="o">//</span><span class="nb">sum</span><span class="p">(</span><span class="n">triplet</span><span class="p">)</span> <span class="k">for</span> <span class="n">triplet</span> <span class="ow">in</span> <span class="n">triplets</span><span class="p">))</span>
+<span class="n">triplets</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">strings</span><span class="p">(</span><span class="n">length</span><span class="p">):</span>
+    <span class="n">memo</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">1</span><span class="p">}</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">length</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">memo</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="n">memo</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="mi">1</span><span class="p">:</span><span class="n">memo</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">memo</span><span class="p">[</span><span class="mi">1</span><span class="p">]}</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">memo</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">memo</span><span class="p">)</span>
+<span class="p">[</span><span class="n">strings</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">==</span><span class="n">fibonacci</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">30</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">fast_fib</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span> <span class="k">return</span> <span class="mi">0</span>
+    <span class="n">var</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+    <span class="n">eigen_poly</span><span class="o">=</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="o">-</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span>
+    <span class="n">r1</span><span class="p">,</span><span class="n">r2</span><span class="o">=</span><span class="n">eigen_poly</span><span class="o">.</span><span class="n">roots</span><span class="p">(</span><span class="n">ring</span><span class="o">=</span><span class="n">RR</span><span class="p">,</span><span class="n">multiplicities</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">A_matrix</span><span class="o">=</span><span class="n">matrix</span><span class="p">(</span><span class="n">RR</span><span class="p">,[[</span><span class="n">r1</span><span class="o">^</span><span class="mi">0</span><span class="p">,</span><span class="n">r1</span><span class="o">^</span><span class="mi">1</span><span class="p">],[</span><span class="n">r2</span><span class="o">^</span><span class="mi">0</span><span class="p">,</span><span class="n">r2</span><span class="o">^</span><span class="mi">1</span><span class="p">]])</span>
+    <span class="n">b_vector</span><span class="o">=</span><span class="n">vector</span><span class="p">(</span><span class="n">RR</span><span class="p">,[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="o">=</span><span class="n">A_matrix</span><span class="o">.</span><span class="n">solve_right</span><span class="p">(</span><span class="n">b_vector</span><span class="p">)</span>
+    <span class="n">result</span><span class="o">=</span><span class="n">A</span><span class="o">*</span><span class="n">r1</span><span class="o">^</span><span class="n">i</span><span class="o">+</span><span class="n">B</span><span class="o">*</span><span class="n">r2</span><span class="o">^</span><span class="n">i</span>
+    <span class="k">return</span> <span class="nb">round</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="n">num</span><span class="o">=</span><span class="n">fast_fib</span><span class="p">(</span><span class="mi">10</span><span class="o">^</span><span class="mi">9</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 117 Red, Green and Blue Tiles - eigen way</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">eigen_tiles</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">var</span><span class="p">(</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+    <span class="n">eigen_poly</span> <span class="o">=</span><span class="n">r</span><span class="o">^</span><span class="mi">4</span><span class="o">-</span><span class="n">r</span><span class="o">^</span><span class="mi">3</span><span class="o">-</span><span class="n">r</span><span class="o">^</span><span class="mi">2</span><span class="o">-</span><span class="n">r</span><span class="o">-</span><span class="mi">1</span>
+    <span class="n">r1</span><span class="p">,</span><span class="n">r2</span><span class="p">,</span><span class="n">r3</span><span class="p">,</span><span class="n">r4</span><span class="o">=</span><span class="n">eigen_poly</span><span class="o">.</span><span class="n">roots</span><span class="p">(</span><span class="n">ring</span><span class="o">=</span><span class="n">CC</span><span class="p">,</span> <span class="n">multiplicities</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    
+    <span class="n">b_vector</span><span class="o">=</span><span class="n">vector</span><span class="p">(</span><span class="n">CC</span><span class="p">,[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
+    <span class="n">A_matrix</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">(</span><span class="n">CC</span><span class="p">,</span> <span class="p">[</span> <span class="p">[</span><span class="n">r1</span><span class="o">^</span><span class="mi">0</span><span class="p">,</span> <span class="n">r2</span><span class="o">^</span><span class="mi">0</span><span class="p">,</span> <span class="n">r3</span><span class="o">^</span><span class="mi">0</span><span class="p">,</span> <span class="n">r4</span><span class="o">^</span><span class="mi">0</span><span class="p">],</span>
+                            <span class="p">[</span><span class="n">r1</span><span class="o">^</span><span class="mi">1</span><span class="p">,</span> <span class="n">r2</span><span class="o">^</span><span class="mi">1</span><span class="p">,</span> <span class="n">r3</span><span class="o">^</span><span class="mi">1</span><span class="p">,</span> <span class="n">r4</span><span class="o">^</span><span class="mi">1</span><span class="p">],</span>
+                            <span class="p">[</span><span class="n">r1</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">r2</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">r3</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">r4</span><span class="o">^</span><span class="mi">2</span><span class="p">],</span>
+                            <span class="p">[</span><span class="n">r1</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span> <span class="n">r2</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span> <span class="n">r3</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span> <span class="n">r4</span><span class="o">^</span><span class="mi">3</span><span class="p">]</span> <span class="p">])</span>
+
+    <span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="p">,</span><span class="n">D</span><span class="o">=</span><span class="n">A_matrix</span><span class="o">.</span><span class="n">solve_right</span><span class="p">(</span><span class="n">b_vector</span><span class="p">)</span>
+    <span class="n">result</span><span class="o">=</span><span class="n">A</span><span class="o">*</span><span class="n">r1</span><span class="o">^</span><span class="n">n</span><span class="o">+</span><span class="n">B</span><span class="o">*</span><span class="n">r2</span><span class="o">^</span><span class="n">n</span><span class="o">+</span><span class="n">C</span><span class="o">*</span><span class="n">r3</span><span class="o">^</span><span class="n">n</span><span class="o">+</span><span class="n">D</span><span class="o">*</span><span class="n">r4</span><span class="o">^</span><span class="n">n</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">real_part</span><span class="p">()))</span>
+
+<span class="n">eigen_tiles</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2041,6 +2072,106 @@
             <span class="k">break</span>
     <span class="k">return</span> <span class="n">count</span>
 <span class="n">points</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="pe-146">
+<h3>PE 146<a class="headerlink" href="#pe-146" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 146 Investigating a Prime Pattern(very slow)</span>
+<span class="n">tot</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">prev</span><span class="o">=</span><span class="mi">0</span>
+<span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">150</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">tot</span><span class="p">,</span><span class="n">tot</span><span class="o">-</span><span class="n">prev</span><span class="p">)</span>
+    <span class="n">prev</span><span class="o">=</span><span class="n">tot</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="o">^</span><span class="mi">6</span><span class="p">):</span>
+        <span class="n">num</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="o">*</span><span class="mi">10</span><span class="o">^</span><span class="mi">6</span>
+        <span class="k">if</span> <span class="n">is_prime</span><span class="p">(</span><span class="n">num</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="ow">and</span> <span class="n">next_prime</span><span class="p">(</span><span class="n">num</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">==</span><span class="n">num</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="mi">3</span> <span class="ow">and</span> <span class="n">next_prime</span><span class="p">(</span><span class="n">num</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="mi">3</span><span class="p">)</span><span class="o">==</span><span class="n">num</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="mi">7</span> <span class="ow">and</span> <span class="n">next_prime</span><span class="p">(</span><span class="n">num</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="mi">7</span><span class="p">)</span><span class="o">==</span><span class="n">num</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="mi">9</span> <span class="ow">and</span> <span class="n">next_prime</span><span class="p">(</span><span class="n">num</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="mi">9</span><span class="p">)</span><span class="o">==</span><span class="n">num</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="mi">13</span> <span class="ow">and</span> <span class="n">next_prime</span><span class="p">(</span><span class="n">num</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="mi">13</span><span class="p">)</span><span class="o">==</span><span class="n">num</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="mi">27</span><span class="p">:</span>
+            <span class="n">tot</span><span class="o">+=</span><span class="n">num</span>
+<span class="n">tot</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 146 Investigating a Prime Pattern</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test</span><span class="p">(</span><span class="n">num</span><span class="p">):</span> <span class="k">return</span> <span class="n">is_prime</span><span class="p">(</span><span class="n">num</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="ow">and</span> <span class="n">next_prime</span><span class="p">(</span><span class="n">num</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">==</span><span class="n">num</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="mi">3</span> <span class="ow">and</span> <span class="n">next_prime</span><span class="p">(</span><span class="n">num</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="mi">3</span><span class="p">)</span><span class="o">==</span><span class="n">num</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="mi">7</span> <span class="ow">and</span> <span class="n">next_prime</span><span class="p">(</span><span class="n">num</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="mi">7</span><span class="p">)</span><span class="o">==</span><span class="n">num</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="mi">9</span> <span class="ow">and</span> <span class="n">next_prime</span><span class="p">(</span><span class="n">num</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="mi">9</span><span class="p">)</span><span class="o">==</span><span class="n">num</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="mi">13</span> <span class="ow">and</span> <span class="n">next_prime</span><span class="p">(</span><span class="n">num</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="mi">13</span><span class="p">)</span><span class="o">==</span><span class="n">num</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="mi">27</span>
+<span class="n">tot</span><span class="o">=</span><span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">150000000</span><span class="o">//</span><span class="mi">210</span><span class="p">):</span>
+    <span class="n">tot</span><span class="o">+=</span><span class="n">test</span><span class="p">(</span><span class="mi">210</span><span class="o">*</span><span class="n">i</span><span class="o">+</span><span class="mi">10</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">210</span><span class="o">*</span><span class="n">i</span><span class="o">+</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">tot</span><span class="o">+=</span><span class="n">test</span><span class="p">(</span><span class="mi">210</span><span class="o">*</span><span class="n">i</span><span class="o">+</span><span class="mi">80</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">210</span><span class="o">*</span><span class="n">i</span><span class="o">+</span><span class="mi">80</span><span class="p">)</span>
+    <span class="n">tot</span><span class="o">+=</span><span class="n">test</span><span class="p">(</span><span class="mi">210</span><span class="o">*</span><span class="n">i</span><span class="o">+</span><span class="mi">130</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">210</span><span class="o">*</span><span class="n">i</span><span class="o">+</span><span class="mi">130</span><span class="p">)</span>
+    <span class="n">tot</span><span class="o">+=</span><span class="n">test</span><span class="p">(</span><span class="mi">210</span><span class="o">*</span><span class="n">i</span><span class="o">+</span><span class="mi">200</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">210</span><span class="o">*</span><span class="n">i</span><span class="o">+</span><span class="mi">200</span><span class="p">)</span>
+<span class="n">tot</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="pe-148-154-unfinished">
+<h3>PE 148 &amp; 154(unfinished)<a class="headerlink" href="#pe-148-154-unfinished" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 148 Exploring Pascal&#39;s Triangle</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">brute_force</span><span class="p">(</span><span class="n">rows</span><span class="p">):</span>
+    <span class="n">count</span><span class="o">=</span><span class="mi">0</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">rows</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">row</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+            <span class="n">count</span><span class="o">+=</span><span class="nb">bool</span><span class="p">(</span><span class="n">binomial</span><span class="p">(</span><span class="n">row</span><span class="p">,</span><span class="n">i</span><span class="p">)</span><span class="o">%</span><span class="k">7</span>)
+    <span class="k">return</span> <span class="n">count</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">show_colour</span><span class="p">(</span><span class="n">rows</span><span class="p">):</span>           <span class="c1"># generates triangles(zoom out to see pattern)</span>
+    <span class="n">lst</span><span class="o">=</span><span class="p">[]</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">rows</span><span class="p">):</span>
+        <span class="n">lst</span><span class="o">.</span><span class="n">append</span><span class="p">([])</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">row</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">binomial</span><span class="p">(</span><span class="n">row</span><span class="p">,</span><span class="n">i</span><span class="p">)</span><span class="o">%</span><span class="k">7</span>: lst[-1].append(&#39; &#39;)
+            <span class="k">else</span><span class="p">:</span> <span class="n">lst</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;@&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">row</span><span class="p">)</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">show_colour</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">gmpy2.digits(number,base)</span></code> converts numbers into the base and outputs as a string.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ZZ(number).digits(base=base)</span></code> converts numbers into a base and outputs digits as a list in reverse order.</p></li>
+</ul>
+<ul class="simple">
+<li><p>Lucas’ theorem: <span class="math notranslate nohighlight">\(\begin{pmatrix}m\\k\end{pmatrix}\not\equiv0\mod p\)</span> iff every base-<span class="math notranslate nohighlight">\(p\)</span> digit of <span class="math notranslate nohighlight">\(k\)</span> is at most the corresponding digit of <span class="math notranslate nohighlight">\(m\)</span>.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">gmpy2</span><span class="w"> </span><span class="kn">import</span> <span class="n">digits</span>            <span class="c1"># converts digits to base 7</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">A382720</span><span class="p">(</span><span class="n">n</span><span class="p">):</span> <span class="k">return</span> <span class="n">prod</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">d</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">digits</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>       <span class="c1"># lucas&#39; theorem</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">worst</span><span class="p">(</span><span class="n">n</span><span class="p">):</span> <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">A382720</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">new</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">digits</span><span class="o">=</span><span class="n">ZZ</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">.</span><span class="n">digits</span><span class="p">(</span><span class="n">base</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
+    <span class="n">multiplier</span><span class="o">=</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">digits</span><span class="p">]</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">((</span><span class="n">num</span><span class="p">)</span><span class="o">*</span><span class="n">prod</span><span class="p">(</span><span class="n">multiplier</span><span class="p">[</span><span class="n">i</span><span class="p">:])</span><span class="o">*</span><span class="mi">28</span><span class="o">^</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">num</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">digits</span><span class="p">))</span><span class="o">/</span><span class="mi">2</span>
+<span class="c1"># for i in range(3,1000):</span>
+<span class="c1">#     if new(i)!=A382726(i-1):</span>
+<span class="c1">#         print(i,new(i),worst(i))</span>
+<span class="n">new</span><span class="p">(</span><span class="mi">10</span><span class="o">^</span><span class="mi">9</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">memo</span><span class="o">=</span><span class="p">{}</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">trinomial</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span> <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Input must be non-negative&#39;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">)</span><span class="o">&gt;</span><span class="n">n</span><span class="p">:</span> <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">elif</span> <span class="n">n</span><span class="o">&lt;=</span><span class="mi">1</span><span class="p">:</span> <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">elif</span> <span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="ow">in</span> <span class="n">memo</span><span class="p">:</span> <span class="k">return</span> <span class="n">memo</span><span class="p">[(</span><span class="n">n</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)]</span>
+    <span class="n">ans</span><span class="o">=</span><span class="n">trinomial</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">y</span><span class="p">)</span><span class="o">+</span><span class="n">trinomial</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="n">trinomial</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+    <span class="n">memo</span><span class="p">[(</span><span class="n">n</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)]</span><span class="o">=</span><span class="n">ans</span>
+    <span class="k">return</span> <span class="n">ans</span>
+<span class="n">trinomial</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2344,6 +2475,37 @@
 </div>
 </div>
 </section>
+<section id="pe-186">
+<h3>PE 186<a class="headerlink" href="#pe-186" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># updated code for 186 connectedess of a network</span>
+<span class="c1"># have a list with 1 million sets for people you know</span>
+<span class="c1"># size=10^6</span>
+<span class="c1"># s=[(100003-200003*k+300007*k^3)%10^6 for k in range(1,56)]</span>
+<span class="c1"># for _ in range(10^7): s.append((s[-24]+s[-55])%10^6)</span>
+<span class="c1"># groups=[{i} for i in range(size)]</span>
+<span class="c1"># i=0</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="n">p1</span><span class="p">,</span><span class="n">p2</span><span class="o">=</span><span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="p">],</span><span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">p1</span><span class="o">==</span><span class="n">p2</span><span class="p">:</span>
+            <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+            <span class="k">continue</span>
+        <span class="n">group1</span><span class="o">=</span><span class="n">groups</span><span class="p">[</span><span class="n">p1</span><span class="p">]</span>
+        <span class="n">group2</span><span class="o">=</span><span class="n">groups</span><span class="p">[</span><span class="n">p2</span><span class="p">]</span>
+        <span class="n">new</span><span class="o">=</span><span class="n">group1</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">group2</span><span class="p">)</span>
+        <span class="n">groups</span><span class="p">[</span><span class="n">p1</span><span class="p">]</span><span class="o">=</span><span class="n">new</span>
+        <span class="n">groups</span><span class="p">[</span><span class="n">p2</span><span class="p">]</span><span class="o">=</span><span class="n">new</span>
+        <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+        <span class="k">if</span> <span class="n">p1</span> <span class="ow">in</span> <span class="n">groups</span><span class="p">[</span><span class="mi">524287</span><span class="p">]</span> <span class="ow">or</span> <span class="n">p2</span> <span class="ow">in</span> <span class="n">groups</span><span class="p">[</span><span class="mi">524287</span><span class="p">]:</span> <span class="k">break</span>
+<span class="n">i</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 <section id="pe-187">
 <h3>PE 187<a class="headerlink" href="#pe-187" title="Link to this heading">#</a></h3>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Semiprime">A semiprime-counting formula</a>: <span class="math notranslate nohighlight">\(\pi_{2}(n)= \)</span></p>
@@ -2473,6 +2635,30 @@
 </div>
 </div>
 </section>
+</section>
+<section id="pe-190">
+<h3>PE 190<a class="headerlink" href="#pe-190" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 190 Maximising a Weighted Product</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">weighted_product</span><span class="p">(</span><span class="n">num</span><span class="p">,</span><span class="n">accuracy</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">accuracy</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span> <span class="n">accuracy</span><span class="o">=</span><span class="n">num</span><span class="o">^</span><span class="mi">4</span>
+    <span class="n">parts</span><span class="o">=</span><span class="p">(</span><span class="n">accuracy</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">num</span>           <span class="c1"># distribute these parts</span>
+    <span class="n">lst</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="o">/</span><span class="n">accuracy</span><span class="p">]</span><span class="o">*</span><span class="n">num</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">parts</span><span class="p">):</span>
+        <span class="n">add</span><span class="o">=</span><span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">part</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+            <span class="n">add</span><span class="o">.</span><span class="n">append</span><span class="p">(((</span><span class="n">part</span><span class="o">+</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">accuracy</span><span class="p">))</span><span class="o">^</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">part</span><span class="o">^</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)))</span>
+        <span class="n">lst</span><span class="p">[</span><span class="n">add</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">add</span><span class="p">))]</span><span class="o">+=</span><span class="mi">1</span><span class="o">/</span><span class="n">accuracy</span>
+    <span class="n">ans</span><span class="o">=</span><span class="mi">1</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">part</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+        <span class="n">ans</span><span class="o">*=</span><span class="n">part</span><span class="o">^</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">n</span><span class="p">(</span><span class="n">ans</span><span class="p">)</span>
+<span class="nb">sum</span><span class="p">([</span><span class="n">weighted_product</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">16</span><span class="p">)])</span>        <span class="c1"># only approximation(answer ends with 81)</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="pe-193-unfinished">
 <h3>PE 193(unfinished)<a class="headerlink" href="#pe-193-unfinished" title="Link to this heading">#</a></h3>
@@ -2732,6 +2918,56 @@
 </div>
 </div>
 </section>
+<section id="pe-215">
+<h3>PE 215<a class="headerlink" href="#pe-215" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 215 Crack-free Walls</span>
+<span class="n">memo</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">:</span><span class="mi">1</span><span class="p">}</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">layer</span><span class="p">(</span><span class="n">length</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">length</span> <span class="ow">in</span> <span class="n">memo</span><span class="p">:</span> <span class="k">return</span> <span class="n">memo</span><span class="p">[</span><span class="n">length</span><span class="p">]</span>
+    <span class="n">ans</span><span class="o">=</span><span class="n">layer</span><span class="p">(</span><span class="n">length</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">+</span><span class="n">layer</span><span class="p">(</span><span class="n">length</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">memo</span><span class="p">[</span><span class="n">length</span><span class="p">]</span><span class="o">=</span><span class="n">ans</span>
+    <span class="k">return</span> <span class="n">ans</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="n">layers</span><span class="p">):</span>
+    <span class="n">ans</span><span class="o">=</span><span class="p">{}</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">layers</span><span class="p">:</span>
+        <span class="n">ans</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="nb">sum</span><span class="p">(</span><span class="n">layers</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">compatible</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">ans</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">update_layer</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span><span class="n">delete</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">sum</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span><span class="o">&gt;=</span><span class="mi">32</span><span class="p">:</span> <span class="k">return</span> <span class="n">layer</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">true</span>
+    <span class="k">elif</span> <span class="ow">not</span> <span class="n">delete</span><span class="p">:</span> <span class="k">return</span> <span class="n">layer</span><span class="o">+</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">false</span>
+    <span class="k">elif</span> <span class="n">layer</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="mi">2</span><span class="p">:</span> <span class="k">return</span> <span class="n">layer</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="n">false</span>
+    <span class="k">else</span><span class="p">:</span> <span class="k">return</span> <span class="n">layer</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">true</span>
+<span class="c1"># since there are only 3329 ways to tile a single layer, keep track of where every layer has gaps</span>
+<span class="c1"># add dictionary to keep track of how many ways to tile layer in this way</span>
+<span class="c1"># use indexes in dictionary to keep track of actual gaps in list</span>
+<span class="c1"># iterate 9 times for 9 more layers</span>
+<span class="n">layers</span><span class="o">=</span><span class="p">{</span><span class="n">i</span><span class="p">:</span><span class="mi">1</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">layer</span><span class="p">(</span><span class="mi">32</span><span class="p">))}</span>
+<span class="n">lst</span><span class="o">=</span><span class="p">[[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="mi">16</span><span class="p">]</span>
+<span class="n">delete</span><span class="o">=</span><span class="n">false</span>
+<span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span><span class="o">&lt;</span><span class="mi">3329</span><span class="p">:</span>
+    <span class="n">next_layer</span><span class="p">,</span><span class="n">delete</span><span class="o">=</span><span class="n">update_layer</span><span class="p">(</span><span class="n">lst</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">delete</span><span class="p">)</span>
+    <span class="k">while</span> <span class="nb">sum</span><span class="p">(</span><span class="n">next_layer</span><span class="p">)</span><span class="o">!=</span><span class="mi">32</span><span class="p">:</span> <span class="n">next_layer</span><span class="p">,</span><span class="n">delete</span><span class="o">=</span><span class="n">update_layer</span><span class="p">(</span><span class="n">next_layer</span><span class="p">,</span><span class="n">delete</span><span class="p">)</span>
+    <span class="n">lst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">next_layer</span><span class="p">)</span>
+<span class="n">lst</span><span class="o">=</span><span class="p">[[</span><span class="nb">sum</span><span class="p">(</span><span class="n">l</span><span class="p">[:</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">))][:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">]</span>
+<span class="n">compatible</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+    <span class="n">new</span><span class="o">=</span><span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">m</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">l</span><span class="o">==</span><span class="n">m</span><span class="p">:</span> <span class="k">continue</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">set</span><span class="p">(</span><span class="n">l</span><span class="p">)</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">m</span><span class="p">)):</span> <span class="n">new</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">compatible</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new</span><span class="p">)</span>
+<span class="c1"># calculate layers that do not form a running crack when placed on top of each other</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">9</span><span class="p">):</span>
+    <span class="n">layers</span><span class="o">=</span><span class="n">update</span><span class="p">(</span><span class="n">layers</span><span class="p">)</span>
+<span class="nb">sum</span><span class="p">(</span><span class="n">layers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">layers</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 <section id="pe-216">
 <h3>PE 216<a class="headerlink" href="#pe-216" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
@@ -2965,6 +3201,24 @@
         <span class="k">if</span> <span class="n">valid</span><span class="p">(</span><span class="n">circle</span><span class="p">,</span><span class="n">size</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">circle</span><span class="p">)</span><span class="o">==</span><span class="mi">2</span><span class="o">^</span><span class="n">size</span><span class="p">:</span> <span class="n">valid_circles</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">circle</span><span class="p">)</span>
     <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">ZZ</span><span class="p">(</span><span class="n">num</span><span class="p">,</span><span class="n">base</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span> <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">valid_circles</span><span class="p">),</span><span class="nb">len</span><span class="p">(</span><span class="n">valid_circles</span><span class="p">)</span>
 <span class="n">binary_circle</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="pe-267-unfinished">
+<h3>PE 267(unfinished)<a class="headerlink" href="#pe-267-unfinished" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">money</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">rounds</span><span class="o">=</span><span class="mi">1000</span>
+<span class="n">heads</span><span class="o">=</span><span class="mf">0.5</span>
+<span class="n">f</span><span class="o">=</span><span class="mf">0.2</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">rounds</span><span class="p">):</span>
+    <span class="n">num</span><span class="o">=</span><span class="n">random</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">num</span><span class="o">&lt;</span><span class="n">heads</span><span class="p">:</span> <span class="n">money</span><span class="o">*=</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">f</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span> <span class="n">money</span><span class="o">*=</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">f</span><span class="p">)</span>
+<span class="n">money</span>
 </pre></div>
 </div>
 </div>
@@ -3225,6 +3479,23 @@
 <h3>PE 304<a class="headerlink" href="#pe-304" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Optimized for large numbers</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">fast_fib</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span> <span class="k">return</span> <span class="mi">0</span>
+    <span class="n">var</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+    <span class="n">eigen_poly</span><span class="o">=</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="o">-</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span>
+    <span class="n">r1</span><span class="p">,</span><span class="n">r2</span><span class="o">=</span><span class="n">eigen_poly</span><span class="o">.</span><span class="n">roots</span><span class="p">(</span><span class="n">ring</span><span class="o">=</span><span class="n">RR</span><span class="p">,</span><span class="n">multiplicities</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">A_matrix</span><span class="o">=</span><span class="n">matrix</span><span class="p">(</span><span class="n">RR</span><span class="p">,[[</span><span class="n">r1</span><span class="o">^</span><span class="mi">0</span><span class="p">,</span><span class="n">r1</span><span class="o">^</span><span class="mi">1</span><span class="p">],[</span><span class="n">r2</span><span class="o">^</span><span class="mi">0</span><span class="p">,</span><span class="n">r2</span><span class="o">^</span><span class="mi">1</span><span class="p">]])</span>
+    <span class="n">b_vector</span><span class="o">=</span><span class="n">vector</span><span class="p">(</span><span class="n">RR</span><span class="p">,[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="o">=</span><span class="n">A_matrix</span><span class="o">.</span><span class="n">solve_right</span><span class="p">(</span><span class="n">b_vector</span><span class="p">)</span>
+    <span class="n">result</span><span class="o">=</span><span class="n">A</span><span class="o">*</span><span class="n">r1</span><span class="o">^</span><span class="n">i</span><span class="o">+</span><span class="n">B</span><span class="o">*</span><span class="n">r2</span><span class="o">^</span><span class="n">i</span>
+    <span class="k">return</span> <span class="nb">round</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># matrix fibonacci(do not use for values above 10^10)</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">fast_fib</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]])</span><span class="o">^</span><span class="p">(</span><span class="n">num</span><span class="o">-</span><span class="mi">1</span><span class="p">))[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
@@ -3296,58 +3567,21 @@
 </div>
 </div>
 </section>
-<section id="pe-323-unfinished">
-<h3>PE 323(unfinished)<a class="headerlink" href="#pe-323-unfinished" title="Link to this heading">#</a></h3>
+<section id="pe-323">
+<h3>PE 323<a class="headerlink" href="#pe-323" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">memo</span><span class="o">=</span><span class="p">{((</span><span class="mi">1</span><span class="p">,)</span><span class="o">*</span><span class="mi">32</span><span class="p">,</span><span class="n">j</span><span class="p">):</span><span class="mi">1</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">32</span><span class="p">)}</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">ed</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span><span class="n">index</span><span class="p">):</span>
-    <span class="n">new_lst</span><span class="o">=</span><span class="n">lst</span>
-    <span class="k">if</span> <span class="n">blue</span><span class="o">==</span><span class="mi">9</span><span class="p">:</span>
-        <span class="n">prob</span><span class="o">=</span><span class="mi">0</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">15</span><span class="p">):</span>
-            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">15</span><span class="p">):</span>
-                <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">15</span><span class="p">):</span>
-                    <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">15</span><span class="p">):</span>
-    <span class="n">new_lst</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span>
-    <span class="k">return</span> <span class="n">new_lst</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">bitwise_or</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><span class="n">lst</span><span class="p">),</span><span class="n">index</span><span class="p">)</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><span class="n">lst</span><span class="p">),</span><span class="n">index</span><span class="p">)</span> <span class="ow">in</span> <span class="n">memo</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">memo</span><span class="p">[(</span><span class="nb">tuple</span><span class="p">(</span><span class="n">lst</span><span class="p">),</span><span class="n">index</span><span class="p">)]</span>
-    <span class="k">elif</span> <span class="n">index</span><span class="o">==</span><span class="mi">32</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">bitwise_or</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span>
-    <span class="n">ans</span><span class="o">=</span><span class="p">(</span><span class="n">bitwise_or</span><span class="p">(</span><span class="n">ed</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span><span class="n">index</span><span class="p">),</span><span class="n">index</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="n">bitwise_or</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span><span class="n">index</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span><span class="o">/</span><span class="mi">2</span>
-    <span class="n">memo</span><span class="o">.</span><span class="n">update</span><span class="p">({(</span><span class="nb">tuple</span><span class="p">(</span><span class="n">lst</span><span class="p">),</span><span class="n">index</span><span class="p">):</span><span class="n">ans</span><span class="p">})</span>
-    <span class="k">return</span> <span class="n">ans</span>
-<span class="n">n</span><span class="p">(</span><span class="n">bitwise_or</span><span class="p">([</span><span class="mi">0</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">32</span><span class="p">)],</span><span class="mi">0</span><span class="p">))</span>
-    <span class="k">if</span> <span class="n">blue</span><span class="o">==</span><span class="mi">9</span><span class="p">:</span>
-        <span class="n">prob</span><span class="o">=</span><span class="mi">0</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">15</span><span class="p">):</span>
-            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">15</span><span class="p">):</span>
-                <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">15</span><span class="p">):</span>
-                    <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">15</span><span class="p">):</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 323 Bitwise-or operations over random integers</span>
-<span class="n">memo</span><span class="o">=</span><span class="p">{}</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">random_bits</span><span class="p">(</span><span class="n">digits</span><span class="p">,</span><span class="n">chance</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">chance</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">10</span><span class="o">^</span><span class="mi">30</span><span class="p">):</span>
-        <span class="k">return</span> <span class="mi">0</span>
-    <span class="k">elif</span> <span class="n">digits</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">1</span>
-    <span class="k">elif</span> <span class="p">(</span><span class="n">digits</span><span class="p">,</span><span class="n">chance</span><span class="p">)</span> <span class="ow">in</span> <span class="n">memo</span><span class="p">:</span>                    <span class="c1"># needs distinguishing for chance level</span>
-        <span class="k">return</span> <span class="n">memo</span><span class="p">[(</span><span class="n">digits</span><span class="p">,</span><span class="n">chance</span><span class="p">)]</span><span class="o">*</span><span class="n">chance</span>
-    <span class="n">ans</span><span class="o">=</span><span class="mi">0</span>
-    <span class="k">for</span> <span class="n">ones</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">digits</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-        <span class="n">ans</span><span class="o">+=</span><span class="n">random_bits</span><span class="p">(</span><span class="n">digits</span><span class="o">-</span><span class="n">ones</span><span class="p">,</span><span class="n">chance</span><span class="o">*</span><span class="n">binomial</span><span class="p">(</span><span class="n">digits</span><span class="p">,</span><span class="n">ones</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="o">^</span><span class="n">digits</span><span class="p">)</span>
-    <span class="n">memo</span><span class="o">.</span><span class="n">update</span><span class="p">({(</span><span class="n">digits</span><span class="p">,</span><span class="n">chance</span><span class="p">):</span><span class="n">ans</span><span class="p">})</span>
-    <span class="k">return</span> <span class="n">ans</span><span class="o">*</span><span class="n">chance</span>
-<span class="n">n</span><span class="p">(</span><span class="n">random_bits</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">memo</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">expectation</span><span class="p">(</span><span class="n">bits</span><span class="o">=</span><span class="mi">32</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">bits</span> <span class="ow">in</span> <span class="n">memo</span><span class="p">:</span> <span class="k">return</span> <span class="n">memo</span><span class="p">[</span><span class="n">bits</span><span class="p">]</span>
+    <span class="n">tot</span><span class="o">=</span><span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">bits</span><span class="p">):</span>
+        <span class="n">tot</span><span class="o">+=</span><span class="n">binomial</span><span class="p">(</span><span class="n">bits</span><span class="p">,</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">expectation</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">tot</span><span class="o">/=</span><span class="p">(</span><span class="mi">2</span><span class="o">^</span><span class="n">bits</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">tot</span><span class="o">+=</span><span class="mi">1</span>
+    <span class="n">memo</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">bits</span><span class="p">:</span><span class="n">n</span><span class="p">(</span><span class="n">tot</span><span class="p">)})</span>
+    <span class="k">return</span> <span class="nb">round</span><span class="p">(</span><span class="n">tot</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">expectation</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3558,23 +3792,129 @@
 </div>
 </div>
 </section>
-<section id="pe-351-unfinished">
-<h3>PE 351(unfinished)<a class="headerlink" href="#pe-351-unfinished" title="Link to this heading">#</a></h3>
+<section id="pe-351-implement-sieving">
+<h3>PE 351(implement sieving)<a class="headerlink" href="#pe-351-implement-sieving" title="Link to this heading">#</a></h3>
+<p><img alt="" src="attachment:image.png" /></p>
+<ul class="simple">
+<li><p>Focus on the top right sixth of the orchard.</p></li>
+<li><p>We only need to count <span class="math notranslate nohighlight">\(\frac16\)</span> of the orchard as it is symmetrical.</p></li>
+<li><p>The green points are the hidden ones.</p></li>
+<li><p>We can use angles to model the orchard and all directions from the centre.</p>
+<ul>
+<li><p>Direction <span class="math notranslate nohighlight">\(0\)</span>: right</p></li>
+<li><p>Direction <span class="math notranslate nohighlight">\(n+1\)</span>: <span class="math notranslate nohighlight">\(60^\circ\)</span> counter-clockwise from direction <span class="math notranslate nohighlight">\(n\)</span>.</p></li>
+</ul>
+</li>
+<li><p>Since angles <span class="math notranslate nohighlight">\(\frac12\)</span> and <span class="math notranslate nohighlight">\(\frac24\)</span> are the same angles, one point is behind the other.</p></li>
+<li><p>This way, the number of hidden points is the total amount of points minus the amount of points with coprime <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span>.</p></li>
+<li><p>The total number of points in a hexagonal lattice is <span class="math notranslate nohighlight">\(1+6(\frac{n(n+1)}2)=3n(n+1)+1\)</span>.</p></li>
+<li><p>The number of coprime points can be counted with the totient summatory function <span class="math notranslate nohighlight">\(\Phi(n)\)</span>.</p></li>
+<li><p>Therefore, the total number of hidden points is <span class="math notranslate nohighlight">\(H(n)=3n(n+1)+1-6*\Phi(n)\)</span>.</p>
+<ul>
+<li><p>This has to be fixed to make sure it is correct.</p></li>
+</ul>
+</li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 351 Hexagonal Orchards</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 351 Hexagonal Orchards(brute-force)</span>
 <span class="n">size</span><span class="o">=</span><span class="mi">100</span>
 <span class="n">total</span><span class="o">=</span><span class="n">size</span><span class="o">-</span><span class="mi">1</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">size</span><span class="o">//</span><span class="mi">2</span><span class="p">):</span>
+    <span class="n">prev</span><span class="o">=</span><span class="n">total</span>
     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">size</span><span class="o">//</span><span class="mi">2</span><span class="o">-</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">gcd</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
             <span class="n">total</span><span class="o">+=</span><span class="n">size</span><span class="o">//</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">total</span><span class="o">-</span><span class="n">prev</span><span class="p">)</span>
 <span class="n">total</span><span class="o">*=</span><span class="mi">6</span>
 <span class="n">total</span>
 </pre></div>
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 351 Hexagonal Orchards(Totient)</span>
+<span class="c1"># this uses a totient summatory function</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">total_points</span><span class="p">(</span><span class="n">n</span><span class="p">):</span> <span class="c1"># we need to subtract 1 for the centre point</span>
+    <span class="k">return</span> <span class="mi">3</span><span class="o">*</span><span class="n">n</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">totient_summatory</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">total</span><span class="o">+=</span><span class="n">euler_phi</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">total</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">h</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">total_points</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">-</span><span class="mi">6</span><span class="o">*</span><span class="n">totient_summatory</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
+<span class="n">h</span><span class="p">(</span><span class="mi">10</span><span class="o">^</span><span class="mi">8</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11762187201804552
+</pre></div>
+</div>
+</div>
+</div>
+<section id="id4">
+<h4>?<a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tiling Corridor Signals</span>
+<span class="c1"># lists: rrr,rrg,rgr,rgg,grr,grg,ggr,ggg  -&gt; f(n)=f(n-1)+f(n-3)</span>
+<span class="n">memo</span><span class="o">=</span><span class="p">{</span><span class="mi">3</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="mi">4</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]}</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">tiling</span><span class="p">(</span><span class="n">length</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">length</span> <span class="ow">in</span> <span class="n">memo</span><span class="p">:</span> <span class="k">return</span> <span class="n">memo</span><span class="p">[</span><span class="n">length</span><span class="p">]</span>
+    <span class="n">prev</span><span class="o">=</span><span class="n">tiling</span><span class="p">(</span><span class="n">length</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">ans</span><span class="o">=</span><span class="p">[</span><span class="n">prev</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span><span class="n">prev</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">prev</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">prev</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span><span class="n">prev</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">prev</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span><span class="n">prev</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">+</span><span class="n">prev</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span><span class="n">prev</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">+</span><span class="n">prev</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span><span class="n">prev</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span><span class="n">prev</span><span class="p">[</span><span class="mi">3</span><span class="p">]]</span>
+    <span class="n">memo</span><span class="p">[</span><span class="n">length</span><span class="p">]</span><span class="o">=</span><span class="n">ans</span>
+    <span class="k">return</span> <span class="n">ans</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">matrix_tiling</span><span class="p">(</span><span class="n">length</span><span class="p">):</span>
+    <span class="n">b_vector</span><span class="o">=</span><span class="n">vector</span><span class="p">([</span><span class="mi">18</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">])</span>
+    <span class="n">A_matrix</span><span class="o">=</span><span class="n">matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
+                     <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+                     <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]])</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">A_matrix</span><span class="o">^</span><span class="p">(</span><span class="n">length</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">b_vector</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span>
+<span class="p">[</span><span class="nb">sum</span><span class="p">(</span><span class="n">tiling</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">20</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Messenger donguh</span>
+<span class="n">memo</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]}</span>
+<span class="n">alt_memo</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">routes</span><span class="p">(</span><span class="n">days</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">days</span> <span class="ow">in</span> <span class="n">memo</span><span class="p">:</span> <span class="k">return</span> <span class="n">memo</span><span class="p">[</span><span class="n">days</span><span class="p">]</span>
+    <span class="n">prev</span><span class="o">=</span><span class="n">routes</span><span class="p">(</span><span class="n">days</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">ans</span><span class="o">=</span><span class="p">[</span><span class="n">prev</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">prev</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">prev</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">prev</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="nb">sum</span><span class="p">(</span><span class="n">prev</span><span class="p">)]</span>
+    <span class="n">memo</span><span class="p">[</span><span class="n">days</span><span class="p">]</span><span class="o">=</span><span class="n">ansx</span>
+    <span class="k">return</span> <span class="n">ans</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">alt_routes</span><span class="p">(</span><span class="n">days</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">days</span> <span class="ow">in</span> <span class="n">alt_memo</span><span class="p">:</span> <span class="k">return</span> <span class="n">alt_memo</span><span class="p">[</span><span class="n">days</span><span class="p">]</span>
+    <span class="n">ans</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="n">alt_routes</span><span class="p">(</span><span class="n">days</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="n">alt_routes</span><span class="p">(</span><span class="n">days</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">-</span><span class="n">alt_routes</span><span class="p">(</span><span class="n">days</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">alt_memo</span><span class="p">[</span><span class="n">days</span><span class="p">]</span><span class="o">=</span><span class="n">ans</span>
+    <span class="k">return</span> <span class="n">ans</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">matrix_multiply</span><span class="p">(</span><span class="n">m1</span><span class="p">,</span><span class="n">m2</span><span class="p">):</span>
+    <span class="n">out</span><span class="o">=</span><span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">row</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">m1</span><span class="p">):</span>
+        <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="nb">sum</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">column</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">row</span><span class="p">)))</span> <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">m2</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">out</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">mv_multiply</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">v</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="nb">sum</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">)))</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">m</span><span class="p">]</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">matrix_routes</span><span class="p">(</span><span class="n">length</span><span class="p">):</span>    <span class="c1"># f(i)=2*f(i-1)+f(i-2)-f(i-3)</span>
+    <span class="n">b_vector</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">A_matrix</span><span class="o">=</span><span class="p">[[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+              <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+              <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]]</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">length</span><span class="p">):</span> <span class="n">b_vector</span><span class="o">=</span><span class="n">mv_multiply</span><span class="p">(</span><span class="n">A_matrix</span><span class="p">,</span><span class="n">b_vector</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">b_vector</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="p">[</span><span class="n">matrix_routes</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 <section id="pe-357">
 <h3>PE 357<a class="headerlink" href="#pe-357" title="Link to this heading">#</a></h3>
@@ -3657,8 +3997,8 @@
 </div>
 </section>
 </section>
-<section id="id4">
-<h2>&gt; 400<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<section id="id5">
+<h2>&gt; 400<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
 <section id="pe-401-unfinished">
 <h3>PE 401(unfinished)<a class="headerlink" href="#pe-401-unfinished" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
@@ -4201,7 +4541,7 @@ Optimize solution</p>
 </section>
 <section id="pe-836">
 <h3>PE 836<a class="headerlink" href="#pe-836" title="Link to this heading">#</a></h3>
-<p>There isn’t actually any code required for this ;)</p>
+<p>There isn’t actually any code bits for this ;)</p>
 </section>
 <section id="pe-872">
 <h3>PE 872<a class="headerlink" href="#pe-872" title="Link to this heading">#</a></h3>
@@ -4537,8 +4877,7 @@ Optimize solution</p>
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-991">PE 991</a></li>
+    <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">101-200</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-101">PE 101</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-104">PE 104</a></li>
@@ -4566,10 +4905,13 @@ Optimize solution</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-131">PE 131</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-134">PE 134</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-135-136">PE 135&amp;136</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-137">PE 137</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-138">PE 138</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-139-unfinished">PE 139(unfinished)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-139">PE 139</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-142-unfinished">PE 142(unfinished)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-144">PE 144</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-146">PE 146</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-148-154-unfinished">PE 148 &amp; 154(unfinished)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-151">PE 151</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-162">PE 162</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-164">PE 164</a></li>
@@ -4579,11 +4921,13 @@ Optimize solution</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-179">PE 179</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-182">PE 182</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-183">PE 183</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-186">PE 186</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-187">PE 187</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-188">PE 188</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"></a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-190">PE 190</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-193-unfinished">PE 193(unfinished)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-197">PE 197</a></li>
 </ul>
@@ -4595,6 +4939,7 @@ Optimize solution</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-207">PE 207</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-211">PE 211</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-214">PE 214</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-215">PE 215</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-216">PE 216</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-220-unfinished">PE 220(unfinished)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-225">PE 225</a></li>
@@ -4603,6 +4948,7 @@ Optimize solution</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-243">PE 243</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-258-unfinished">PE 258(unfinished)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-265-add-notes">PE 265(add notes)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-267-unfinished">PE 267(unfinished)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-277">PE 277</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-287-unfinished">PE 287(unfinished)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-288-notes">PE 288(notes)</a></li>
@@ -4612,20 +4958,23 @@ Optimize solution</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-303">PE 303</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-304">PE 304</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-315">PE 315</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-323-unfinished">PE 323(unfinished)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-323">PE 323</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-336">PE 336</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-345-unfinished">PE 345(unfinished)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-346">PE 346</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-347">PE 347</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-348">PE 348</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-349">PE 349</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-351-unfinished">PE 351(unfinished)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-351-implement-sieving">PE 351(implement sieving)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">?</a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-357">PE 357</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-381">PE 381</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-387">PE 387</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">&gt; 400</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">&gt; 400</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-401-unfinished">PE 401(unfinished)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-493">PE 493</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-500-add-notes">PE 500(add notes)</a></li>
@@ -4703,8 +5052,8 @@ By Jonny, assisted by Tom
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
 
   <footer class="bd-footer">
   </footer>
