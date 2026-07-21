@@ -13,6 +13,8 @@ parts:
   - file: Course_5U
   - file: Course_MCS320Symbol
   - file: Cryptohack
+  - file: agario-competitor-main/bots
+  - file: Course_LAFF
 
 - caption: CS & Physics
   numbered: false
