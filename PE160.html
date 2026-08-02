@@ -16,22 +16,20 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
@@ -39,18 +37,17 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/custom.css?v=550f00eb" />
   
-  <!-- So that users can add custom icons -->
-  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -64,7 +61,6 @@
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'PE160';</script>
-    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script src="_static/mermaid-init.js?v=512eb59e"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -73,30 +69,34 @@
     <link rel="prev" title="Project Euler 1-80" href="PE80.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
-  
-    
-    <script src="_static/searchtools.js"></script>
-    <script src="_static/language_data.js"></script>
-    <script src="searchindex.js"></script>
-  
   </head>
-  <body data-default-mode="">
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
-  
-  <dialog id="pst-search-dialog">
-    
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -104,6 +104,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -111,59 +112,15 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
 
   
-    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
-<div class="bd-header__inner bd-page-width">
-  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
-    <span class="fa-solid fa-bars"></span>
-  </button>
-  
-  
-  <div class="col-lg-9 navbar-header-items">
-    
-    
-    <div class="navbar-header-items__end">
-      
-        <div class="navbar-item navbar-persistent--container">
-          
-
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button>
-        </div>
-      
-      
-    </div>
-    
-  </div>
-  
-  
-    <div class="navbar-persistent--mobile">
-
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button>
-    </div>
-  
-
-  
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
-      <span class="fa-solid fa-outdent"></span>
-    </button>
-  
-</div>
-
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
     </header>
   
 
@@ -172,8 +129,7 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -203,11 +159,15 @@
 </a></div>
         <div class="sidebar-primary-item">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -257,14 +217,9 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
   </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -362,7 +317,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  class="btn btn-sm btn-fullscreen-button"
   title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -376,17 +331,25 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
-<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -408,7 +371,7 @@
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="pst-show_toc_level nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-81-83">PE 81-83</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-84">PE 84</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-85">PE 85</a></li>
@@ -423,6 +386,7 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-94">PE 94</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-95">PE 95</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-96">PE 96</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-97">PE 97</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-98">PE 98</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-99">PE 99</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-100">PE 100</a></li>
@@ -448,7 +412,7 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-123">PE 123</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-124">PE 124</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-125">PE 125</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-127-unfinished">PE 127(unfinished)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-127">PE 127</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-131">PE 131</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-134">PE 134</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-135-136">PE 135&amp;136</a></li>
@@ -1861,6 +1825,17 @@
 </div>
 </div>
 </section>
+<section id="pe-97">
+<h2>PE 97<a class="headerlink" href="#pe-97" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 97 Large Non-Mersenne Prime</span>
+<span class="p">(</span><span class="nb">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">7830457</span><span class="p">,</span><span class="mi">10</span><span class="o">^</span><span class="mi">10</span><span class="p">)</span><span class="o">*</span><span class="mi">28433</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">%</span><span class="k">10</span>^10
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 <section id="pe-98">
 <h2>PE 98<a class="headerlink" href="#pe-98" title="Link to this heading">#</a></h2>
 <p>Take notes</p>
@@ -3054,8 +3029,8 @@
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lst</span><span class="o">=</span><span class="p">[</span><span class="n">radical</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">100001</span><span class="p">)]</span>
 <span class="n">sorted_lst</span><span class="o">=</span><span class="nb">sorted</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">9990</span><span class="p">,</span><span class="mi">10002</span><span class="p">):</span>
-    <span class="c1"># print(i)</span>
-    <span class="c1"># print(sorted_lst[i])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">sorted_lst</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
     <span class="k">pass</span>
 </pre></div>
 </div>
@@ -3066,7 +3041,7 @@
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lst</span><span class="o">=</span><span class="p">[</span><span class="n">radical</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">100000</span><span class="p">)]</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
     <span class="n">lst</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">1947</span><span class="p">)</span>
-<span class="c1"># lst.index(1947)+4</span>
+<span class="n">lst</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="mi">1947</span><span class="p">)</span><span class="o">+</span><span class="mi">4</span>
 </pre></div>
 </div>
 </div>
@@ -3156,39 +3131,69 @@
 </div>
 </div>
 </section>
-<section id="pe-127-unfinished">
-<h2>PE 127(unfinished)<a class="headerlink" href="#pe-127-unfinished" title="Link to this heading">#</a></h2>
+<section id="pe-127">
+<h2>PE 127<a class="headerlink" href="#pe-127" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Abc_conjecture">The <span class="math notranslate nohighlight">\(abc\)</span> conjecture</a> states that there is only finitely many <span class="math notranslate nohighlight">\(abc\)</span>-hits that are slightly modified.</p>
+<ul>
+<li><p>The only difference is that it is <span class="math notranslate nohighlight">\(\operatorname{rad}(abc)^{1+\epsilon}&lt;c\)</span>, where <span class="math notranslate nohighlight">\(\epsilon&gt;0\)</span>, unlike in the problem where <span class="math notranslate nohighlight">\(\epsilon=0\)</span>.</p></li>
+</ul>
+</li>
+</ul>
+<p>Let <span class="math notranslate nohighlight">\(\mathcal{H}\)</span> be the set of all valid abc-hit triplets <span class="math notranslate nohighlight">\((a, b, c)\)</span> satisfying the above conditions with <span class="math notranslate nohighlight">\(c &lt; N\)</span>. The code computes the sum of <span class="math notranslate nohighlight">\(c\)</span> for each unique <span class="math notranslate nohighlight">\(c\)</span> that participates in at least one such triplet.</p>
+<p>Using an indicator function <span class="math notranslate nohighlight">\(\mathbb{I}(\cdot)\)</span>, the final computed total is:
+$<span class="math notranslate nohighlight">\( \text{Total} = \sum_{c \in C} c \cdot \mathbb{I}\left( \exists b \in B_{L_c} \text{ such that } \begin{array}{l} b &lt; c, \\ \text{rad}(c-b)\text{rad}(b)\text{rad}(c) &lt; c, \\ \gcd(b, c) = 1, \\ b &gt; c - b \end{array} \right) \)</span>$</p>
+<p>Equivalently, expressed purely in terms of the solution set <span class="math notranslate nohighlight">\(\mathcal{H}\)</span>:
+$<span class="math notranslate nohighlight">\( \text{Total} = \sum_{(a,b,c) \in \mathcal{H}} c \)</span>$</p>
+<ul class="simple">
+<li><p>Firstly, we have 3 numbers, <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b=c-a\)</span> and <span class="math notranslate nohighlight">\(c\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(gcd(a,b)=gcd(b,c)=gcd(a,c)=1\)</span>, so they have distinct prime factors.</p>
+<ul>
+<li><p>This means <span class="math notranslate nohighlight">\(rad(abc)=rad(a)*rad(b)*rad(c)\)</span></p></li>
+<li><p>Also, <span class="math notranslate nohighlight">\(gcd(a,b)=gcd(b,c)=gcd(a,c)\)</span>, so we only need to check <span class="math notranslate nohighlight">\(1\)</span> of them.</p></li>
+</ul>
+</li>
+<li><p>However, due to the large input, we need to use a single loop and check quicker with a given <span class="math notranslate nohighlight">\(a\)</span>/<span class="math notranslate nohighlight">\(b\)</span>/<span class="math notranslate nohighlight">\(c\)</span>.</p></li>
+<li><p>We can also factorise <span class="math notranslate nohighlight">\(a,b,c\)</span> into at least 3 primes.</p>
+<ul>
+<li><p>We take the product of those primes and make sure it is smaller than <span class="math notranslate nohighlight">\(c\)</span>.</p>
+<ul>
+<li><p>We can calculate <span class="math notranslate nohighlight">\(c\)</span> from primes through taking <span class="math notranslate nohighlight">\(max(a,b,c)\)</span>.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 127 abc-hits brute-force</span>
-<span class="n">size</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># new radical method</span>
+<span class="n">size</span><span class="o">=</span><span class="mi">120000</span>
 <span class="n">time</span><span class="o">=</span><span class="n">cputime</span><span class="p">()</span>
 <span class="n">total</span><span class="o">=</span><span class="mi">0</span>
-<span class="n">lst</span><span class="o">=</span><span class="p">[</span><span class="n">radical</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">size</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
-<span class="n">radical_lst</span><span class="o">=</span><span class="p">{</span><span class="n">i</span><span class="p">:</span><span class="n">radical</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">size</span><span class="p">)</span> <span class="k">if</span> <span class="mi">6</span><span class="o">*</span><span class="n">radical</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">&lt;</span><span class="n">i</span><span class="p">}</span>
+<span class="n">lst</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">size</span>
+<span class="k">for</span> <span class="n">prime</span> <span class="ow">in</span> <span class="n">prime_range</span><span class="p">(</span><span class="n">size</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">mul</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,(</span><span class="n">size</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">//</span><span class="n">prime</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">lst</span><span class="p">[</span><span class="n">mul</span><span class="o">*</span><span class="n">prime</span><span class="p">]</span><span class="o">*=</span><span class="n">prime</span>
+<span class="n">radical_lst</span><span class="o">=</span><span class="p">{</span><span class="n">i</span><span class="p">:</span><span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">size</span><span class="p">)</span> <span class="k">if</span> <span class="mi">2</span><span class="o">*</span><span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&lt;</span><span class="n">i</span><span class="p">}</span>
+<span class="c1"># since each c has a specific floor((c-1)/rad(c)), we use it as a limit to rad(b)</span>
+<span class="n">b_limits</span><span class="o">=</span><span class="nb">set</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">radical_lst</span><span class="p">):</span>
+    <span class="n">b_limits</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">floor</span><span class="p">((</span><span class="n">c</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="n">lst</span><span class="p">[</span><span class="n">c</span><span class="p">]))</span>
+<span class="n">b_lst</span><span class="o">=</span><span class="p">{}</span>
+<span class="k">for</span> <span class="n">b_limit</span> <span class="ow">in</span> <span class="n">b_limits</span><span class="p">:</span>
+    <span class="n">new</span><span class="o">=</span><span class="p">[]</span>
+    <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="n">size</span><span class="p">):</span>      <span class="c1"># minimum b is 8</span>
+        <span class="k">if</span> <span class="n">lst</span><span class="p">[</span><span class="n">b</span><span class="p">]</span><span class="o">&lt;=</span><span class="n">b_limit</span><span class="p">:</span> <span class="n">new</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+    <span class="n">b_lst</span><span class="p">[</span><span class="n">b_limit</span><span class="p">]</span><span class="o">=</span><span class="n">new</span>
+<span class="n">tot</span><span class="o">=</span><span class="mi">0</span>
 <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">radical_lst</span><span class="p">:</span>
-    <span class="n">num</span><span class="o">=</span><span class="n">radical_lst</span><span class="p">[</span><span class="n">c</span><span class="p">]</span>
-    <span class="n">gcd_lst</span><span class="o">=</span><span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">c</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span> <span class="k">if</span> <span class="n">gcd</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">c</span><span class="p">)</span><span class="o">==</span><span class="mi">1</span><span class="p">]</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">gcd_lst</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">gcd</span><span class="p">(</span><span class="n">c</span><span class="o">-</span><span class="n">i</span><span class="p">,</span><span class="n">c</span><span class="p">)</span><span class="o">==</span><span class="mi">1</span> <span class="ow">and</span> <span class="n">num</span><span class="o">*</span><span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">lst</span><span class="p">[</span><span class="n">c</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">&lt;</span><span class="n">c</span><span class="p">:</span> <span class="n">total</span><span class="o">+=</span><span class="n">c</span>
-<span class="n">total</span><span class="p">,</span><span class="mi">120000</span><span class="o">/</span><span class="n">size</span><span class="o">*</span><span class="n">cputime</span><span class="p">(</span><span class="n">time</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">io</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">PIL</span><span class="w"> </span><span class="kn">import</span> <span class="n">Image</span>
-
-<span class="c1"># 1. Your image data in bytes (e.g., loaded from a file, database, or API)</span>
-<span class="n">image_bytes</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;</span><span class="se">\xff\xff\xff\xff\xff\xff</span><span class="s1">&#39;</span> 
-
-<span class="c1"># 2. Wrap bytes in a file-like buffer and open as an image</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">image_bytes</span><span class="p">))</span>
-
-<span class="c1"># 3. View or manipulate the image</span>
-<span class="n">image</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="n">cradc</span><span class="o">=</span><span class="n">floor</span><span class="p">((</span><span class="n">c</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="n">lst</span><span class="p">[</span><span class="n">c</span><span class="p">])</span>
+    <span class="n">num</span><span class="o">=</span><span class="n">lst</span><span class="p">[</span><span class="n">c</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">b_lst</span><span class="p">[</span><span class="n">cradc</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="n">b</span><span class="o">&gt;=</span><span class="n">c</span><span class="p">:</span> <span class="k">break</span>
+        <span class="k">if</span> <span class="n">lst</span><span class="p">[</span><span class="n">c</span><span class="o">-</span><span class="n">b</span><span class="p">]</span><span class="o">*</span><span class="n">lst</span><span class="p">[</span><span class="n">b</span><span class="p">]</span><span class="o">*</span><span class="n">num</span><span class="o">&lt;</span><span class="n">c</span> <span class="ow">and</span> <span class="n">gcd</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">)</span><span class="o">==</span><span class="mi">1</span> <span class="ow">and</span> <span class="n">b</span><span class="o">&gt;</span><span class="n">c</span><span class="o">-</span><span class="n">b</span><span class="p">:</span>
+            <span class="n">tot</span><span class="o">+=</span><span class="n">c</span>
+<span class="n">cputime</span><span class="p">(</span><span class="n">time</span><span class="p">),</span><span class="n">tot</span>
 </pre></div>
 </div>
 </div>
@@ -3472,11 +3477,50 @@
 </section>
 <section id="pe-142-unfinished">
 <h2>PE 142(unfinished)<a class="headerlink" href="#pe-142-unfinished" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Euclid’s formula</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(a^2+b^2=c^2\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(a=m^2-n^2\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(b=2mn\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(c=m^2+n^2\)</span></p></li>
+<li><p>We also need to fix this by including non-primitive triplets</p></li>
+</ul>
+</li>
+<li><p>First we find <span class="math notranslate nohighlight">\(x,y\)</span> such that <span class="math notranslate nohighlight">\(x+y\)</span> and <span class="math notranslate nohighlight">\(x-y\)</span> are perfect squares.</p>
+<ul>
+<li><p>Using a pythagorean triple, <span class="math notranslate nohighlight">\(m^2,n^2\)</span> are squares.</p></li>
+<li><p><span class="math notranslate nohighlight">\(n^2=\frac{c-a}2\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(m^2=\frac{a+c}2\)</span></p></li>
+<li><p>Let <span class="math notranslate nohighlight">\(m^2=x+y\)</span> and <span class="math notranslate nohighlight">\(n^2=x-y\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(c=2x\)</span>,<span class="math notranslate nohighlight">\(x=\frac c2\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(a=2y\)</span>,<span class="math notranslate nohighlight">\(y=\frac a2\)</span></p></li>
+</ul>
+</li>
+<li><p>Now we need to find <span class="math notranslate nohighlight">\(x\)</span> such that there are at least <span class="math notranslate nohighlight">\(2\)</span> integers <span class="math notranslate nohighlight">\(y,z\)</span> that fit the above info.</p>
+<ul>
+<li><p>We sort the different <span class="math notranslate nohighlight">\(x\)</span> by increasing <span class="math notranslate nohighlight">\(x\)</span>.</p></li>
+<li><p>We filter so that only <span class="math notranslate nohighlight">\(x\)</span> with multiple possible <span class="math notranslate nohighlight">\(y,z\)</span> remain</p></li>
+<li><p>We check if <span class="math notranslate nohighlight">\(y,z\)</span> also fit those info.</p></li>
+</ul>
+</li>
+<li><p>To make <span class="math notranslate nohighlight">\(x,y,z\)</span> at the same time, we need <span class="math notranslate nohighlight">\(2\)</span> triplets, for <span class="math notranslate nohighlight">\(x,y\)</span> and <span class="math notranslate nohighlight">\(x,z\)</span>.</p>
+<ul>
+<li><p>We can let <span class="math notranslate nohighlight">\(a,b\)</span> be the triplet for <span class="math notranslate nohighlight">\(x,y\)</span>, <span class="math notranslate nohighlight">\(c,d\)</span> the triplet for <span class="math notranslate nohighlight">\(x,z\)</span> and <span class="math notranslate nohighlight">\(e,f\)</span> the triplet for <span class="math notranslate nohighlight">\(y,z\)</span>.</p></li>
+<li><p>We can extend the formula for calculating <span class="math notranslate nohighlight">\(x,y\)</span> to the other triplets and solving for when the triplets</p></li>
+</ul>
+</li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 142 Perfect Square Collection</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">pythagoreanTriplets</span><span class="p">(</span><span class="n">limits</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">primitive</span><span class="p">(</span><span class="n">triplets</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">gcd</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">==</span><span class="mi">1</span><span class="p">,</span><span class="n">triplets</span><span class="p">))</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">nonprimitive</span><span class="p">(</span><span class="n">primitive</span><span class="p">,</span><span class="n">limit</span><span class="p">):</span>
     <span class="n">triplets</span><span class="o">=</span><span class="p">[]</span>
+    <span class="k">for</span> <span class="n">triple</span> <span class="ow">in</span> <span class="n">primitive</span><span class="p">:</span>
+        <span class="n">triplets</span><span class="o">+=</span><span class="p">[[</span><span class="n">mul</span><span class="o">*</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">triple</span><span class="p">]</span> <span class="k">for</span> <span class="n">mul</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">limit</span><span class="o">//</span><span class="nb">sum</span><span class="p">(</span><span class="n">triple</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
+    <span class="k">return</span> <span class="n">triplets</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">pythagoreanTriplets</span><span class="p">(</span><span class="n">limits</span><span class="p">):</span>
     <span class="n">c</span><span class="p">,</span><span class="n">m</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span>
     <span class="k">while</span> <span class="n">c</span><span class="o">&lt;</span><span class="n">limits</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">m</span><span class="p">):</span>
@@ -3486,14 +3530,24 @@
             <span class="k">if</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="o">&lt;</span><span class="n">limits</span><span class="p">:</span> <span class="k">yield</span> <span class="nb">sorted</span><span class="p">((</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">))</span>
             <span class="k">else</span><span class="p">:</span> <span class="k">break</span>
         <span class="n">m</span><span class="o">+=</span><span class="mi">1</span>
-    <span class="k">return</span> <span class="n">triplets</span>
-<span class="k">for</span> <span class="n">triple</span> <span class="ow">in</span> <span class="n">pythagoreanTriplets</span><span class="p">(</span><span class="mi">5</span><span class="o">*</span><span class="mi">10</span><span class="o">^</span><span class="mi">8</span><span class="p">):</span>
-    <span class="n">a</span><span class="o">=</span><span class="n">triple</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">-</span><span class="n">triple</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">b</span><span class="o">=</span><span class="n">triple</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">triple</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">c</span><span class="o">=</span><span class="n">triple</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">-</span><span class="n">triple</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-    <span class="k">if</span> <span class="n">is_square</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="ow">and</span> <span class="n">is_square</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">triple</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
-        <span class="k">break</span>
+<span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="o">^</span><span class="mi">6</span>
+<span class="n">duplicates</span><span class="o">=</span><span class="nb">set</span><span class="p">()</span>
+<span class="n">xydict</span><span class="o">=</span><span class="p">{}</span>
+<span class="k">for</span> <span class="n">triple</span> <span class="ow">in</span> <span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">%</span><span class="k">2</span>==0,nonprimitive(primitive(pythagoreanTriplets(limit)),limit)):
+    <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">triple</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">triple</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">triple</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">c</span><span class="o">/</span><span class="mi">2</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">a</span><span class="o">/</span><span class="mi">2</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">is_square</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">):</span> <span class="k">continue</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">xydict</span><span class="p">:</span>
+        <span class="n">duplicates</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">xydict</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">=</span><span class="n">xydict</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">+</span><span class="p">[</span><span class="n">y</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span> <span class="n">xydict</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">=</span><span class="p">[</span><span class="n">y</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">duplicates</span><span class="p">):</span>
+    <span class="n">zlst</span><span class="o">=</span><span class="n">xydict</span><span class="p">[</span><span class="n">num</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">zlst</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">zlst</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">x</span><span class="o">!=</span><span class="n">y</span> <span class="ow">and</span> <span class="n">is_square</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">)</span> <span class="ow">and</span> <span class="n">is_square</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">y</span><span class="p">):</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">num</span><span class="p">,</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="o">+</span><span class="n">num</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3884,17 +3938,15 @@
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item"><div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="pst-show_toc_level nav section-nav flex-column">
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-81-83">PE 81-83</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-84">PE 84</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-85">PE 85</a></li>
@@ -3909,6 +3961,7 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-94">PE 94</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-95">PE 95</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-96">PE 96</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-97">PE 97</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-98">PE 98</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-99">PE 99</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-100">PE 100</a></li>
@@ -3934,7 +3987,7 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-123">PE 123</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-124">PE 124</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-125">PE 125</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-127-unfinished">PE 127(unfinished)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-127">PE 127</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-131">PE 131</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-134">PE 134</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-135-136">PE 135&amp;136</a></li>
@@ -3995,8 +4048,8 @@ By Jonny, assisted by Tom
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
