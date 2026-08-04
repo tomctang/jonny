@@ -1060,6 +1060,12 @@ A data processing firm in Sydney operates a specialized server cluster designed 
 </div>
 <ul class="simple">
 <li><p>Projection formula(<span class="math notranslate nohighlight">\(A\)</span> is matrix and <span class="math notranslate nohighlight">\(b\)</span> is vector): <span class="math notranslate nohighlight">\(\mathbf{p}=A(A^TA)^{-1}A^T\mathbf{b}\)</span></p></li>
+<li><p>Projection formula(<span class="math notranslate nohighlight">\(\vec a\)</span> and <span class="math notranslate nohighlight">\(\vec b\)</span> are vectors): <span class="math notranslate nohighlight">\(\mathbf{p}=\frac{\vec a\cdot\vec b}{|\vec b|^2}\vec b\)</span></p>
+<ul>
+<li><p>Formula for length only: <span class="math notranslate nohighlight">\(|\mathbf{p}|_2=\frac{\vec a\cdot\vec b}{|\vec b|}\)</span></p></li>
+<li><p>This formula projects</p></li>
+</ul>
+</li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1072,6 +1078,19 @@ A data processing firm in Sydney operates a specialized server cluster designed 
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
 \[\displaystyle \left(-\frac{12}{11},\,\frac{36}{11},\,\frac{12}{11}\right) \qquad   \]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">vector</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span><span class="o">/</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">b</span><span class="o">=</span><span class="n">vector</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
+<span class="n">s</span><span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left(\frac{4}{3} \, \sqrt{6} + 1,\,-\frac{4}{3} \, \sqrt{6} - 1,\,\frac{16}{3} \, \sqrt{6} + 4\right) \qquad   \]</div>
 </div>
 </div>
 </section>
