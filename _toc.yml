@@ -21,8 +21,7 @@ parts:
   chapters:
   - file: past/Course_MIT6001Python
   - file: past/Course_MIT6002thinking
-  - file: PE80
-  - file: PE160 
+  - file: PE140 
   - file: PE1000 
   - file: PE_tags
   - file: past/Course_MCM
