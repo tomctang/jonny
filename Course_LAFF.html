@@ -194,10 +194,9 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="past/Course_MIT6001Python.html">MIT_CS6001-Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="past/Course_MIT6002thinking.html">MIT_CS6002-CS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="PE80.html">Project Euler 1-80</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PE140.html">Project Euler 1-140</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="PE160.html">Project Euler 81-160</a></li>
-<li class="toctree-l1"><a class="reference internal" href="PE1000.html">Project Euler 161-</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PE1000.html">Project Euler 141-</a></li>
 <li class="toctree-l1"><a class="reference internal" href="PE_tags.html">Project Euler Tags+Math</a></li>
 <li class="toctree-l1"><a class="reference internal" href="past/Course_MCM.html">Math Computational Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="past/Course_MCM_QM.html">Quantum Mechanics</a></li>
@@ -389,37 +388,27 @@ document.write(`
                   
   <section id="laff">
 <h1>LAFF<a class="headerlink" href="#laff" title="Link to this heading">#</a></h1>
+<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>%%{init: {  &quot;flowchart&quot;: { &quot;nodeSpacing&quot;: 15,  &quot;rankSpacing&quot;: 15,   &quot;padding&quot;: 5 }, &#39;themeTuning&#39;: &#39;safe&#39;, &#39;themeVariables&#39;: { &#39;fontSize&#39;: &#39;12px&#39; }}}%%
+flowchart LR
+    CP[Characteristic polynomial] --&gt; eig[&quot;eigenvalues &lt;br&gt; the roots of the polynomial&quot;]
+    CP --&gt; det[determinant &lt;br&gt;the constant term]
+    CP --&gt; tr[trace &lt;br&gt;related to the second-highest coefficient]
+</pre></div>
+</div>
 <p><strong>Population Dynamics in Endangered Marsupial Breeding</strong></p>
 <p><strong>Context</strong>:
-A wildlife conservation sanctuary in New South Wales operates a specialized breeding program for endangered brush-tailed rock-wallabies. The sanctuary tracks two distinct age groups in its population each year: juveniles (under one year old) and mature adults (one year or older).</p>
-<p>Biologists have established the following annual population dynamics for the program:</p>
+A wildlife conservation sanctuary in New South Wales operates a specialized breeding program for endangered brush-tailed rock-wallabies. The sanctuary tracks two distinct age groups in its population each year: juveniles (under one year old) and mature adults (one year or older). Biologists have established the following annual population dynamics for the program:</p>
 <ul class="simple">
 <li><p>Each mature adult produces exactly one juvenile offspring per year.</p></li>
 <li><p>Juveniles do not reproduce during their first year, but all surviving juveniles transition into mature adults the following year.</p></li>
 <li><p>Mature adults survive from year to year without any natural mortality in the controlled sanctuary environment.</p></li>
 <li><p>The program starts in Year 0 with zero juveniles and one mature adult.</p></li>
 </ul>
-<p><strong>Q</strong>:</p>
+<p><strong>Question</strong>:</p>
 <ul class="simple">
 <li><p>Formulate this two-state population transition system.</p></li>
 <li><p>To analyze the long-term behavior of the colony (Hints: system’s characteristic equation &amp; eigen).</p></li>
 <li><p>Calculate the long-term annual growth rate of the total wallaby population and find the steady-state ratio of mature adults to juveniles as time approaches infinity.</p></li>
-</ul>
-<p><strong>Resource Allocation in High-Performance Computing Clusters</strong></p>
-<p><strong>Context</strong>:
-A data processing firm in Sydney operates a specialized server cluster designed to execute parallel machine learning workloads. The cluster scales its hardware capacity annually by managing two categories of processing units: primary active nodes and standby redundant units.</p>
-<p>Engineers at the firm have established the following annual infrastructure expansion rules:</p>
-<ul class="simple">
-<li><p>Each active node from the current year generates one new active nodes for the subsequent year through workload splitting, while also spawning one new standby unit as a dedicated safety backup.</p></li>
-<li><p>Standby units do not split or spawn backups during their first year; instead, every standby unit transitions into a fully operational active node the following year.</p></li>
-<li><p>All hardware units remain fully operational without failure across years in this monitored environment.</p></li>
-<li><p>The cluster begins in Year 0 with zero active nodes and one standby unit.</p></li>
-</ul>
-<p><strong>Q</strong>:</p>
-<ul class="simple">
-<li><p>Formulate this two-state computing infrastructure transition system.</p></li>
-<li><p>To analyze the growth trajectory of the cluster.</p></li>
-<li><p>Calculate the long-term annual growth rate (the dominant scaling factor) of the system and find the steady-state ratio of active nodes to standby units as time approaches infinity.</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -673,34 +662,6 @@ A data processing firm in Sydney operates a specialized server cluster designed 
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AMY</span> <span class="n">IS</span> <span class="n">A</span> <span class="n">BUM</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">THIS</span> <span class="n">IS</span> <span class="n">SAVED</span> <span class="n">TO</span> <span class="n">THE</span> <span class="n">CLOUD</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">IT</span> <span class="n">WILL</span> <span class="n">BE</span> <span class="n">ON</span> <span class="n">THE</span> <span class="n">OTHER</span> <span class="n">COMPUTER</span> <span class="n">TOO</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">HAHA</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="o">=</span><span class="n">matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
           <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
           <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
@@ -736,6 +697,25 @@ A data processing firm in Sydney operates a specialized server cluster designed 
 <span class="n">s</span><span class="p">(</span><span class="n">A</span><span class="o">*</span><span class="n">B</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">A</span><span class="o">=</span><span class="n">matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+          <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+          <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
+<span class="n">s</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">inverse</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left(\begin{array}{rrr}
+\frac{1}{2} &amp; \frac{1}{2} &amp; 0 \\
+\frac{1}{2} &amp; -\frac{1}{2} &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{array}\right) \qquad   \end{split}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -930,6 +910,36 @@ A data processing firm in Sydney operates a specialized server cluster designed 
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="p">(</span><span class="n">matrix</span><span class="p">([[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">]])</span><span class="o">.</span><span class="n">inverse</span><span class="p">())</span>
 <span class="n">s</span><span class="p">(</span><span class="n">matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">]])</span><span class="o">.</span><span class="n">inverse</span><span class="p">())</span>
 <span class="n">s</span><span class="p">(</span><span class="n">matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span><span class="o">.</span><span class="n">inverse</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">matrix</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span><span class="o">*</span><span class="n">transpose</span><span class="p">(</span><span class="n">matrix</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">])))</span><span class="o">.</span><span class="n">eigenvalues</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3, 0, 0]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">triangular_number</span><span class="p">(</span><span class="n">i</span><span class="p">):</span> <span class="k">return</span> <span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span><span class="o">/</span><span class="mi">2</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">positioning</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">j</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span> <span class="k">return</span> <span class="mi">6</span><span class="o">*</span><span class="n">triangular_number</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="mi">2</span>
+    <span class="k">if</span> <span class="n">j</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span> <span class="n">layer</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="n">j</span>
+    <span class="k">else</span><span class="p">:</span> <span class="n">layer</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">j</span><span class="o">-</span><span class="n">i</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
+<span class="n">positioning</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
 </pre></div>
 </div>
 </div>
