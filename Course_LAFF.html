@@ -388,13 +388,6 @@ document.write(`
                   
   <section id="laff">
 <h1>LAFF<a class="headerlink" href="#laff" title="Link to this heading">#</a></h1>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>%%{init: {  &quot;flowchart&quot;: { &quot;nodeSpacing&quot;: 15,  &quot;rankSpacing&quot;: 15,   &quot;padding&quot;: 5 }, &#39;themeTuning&#39;: &#39;safe&#39;, &#39;themeVariables&#39;: { &#39;fontSize&#39;: &#39;12px&#39; }}}%%
-flowchart LR
-    CP[Characteristic polynomial] --&gt; eig[&quot;eigenvalues &lt;br&gt; the roots of the polynomial&quot;]
-    CP --&gt; det[determinant &lt;br&gt;the constant term]
-    CP --&gt; tr[trace &lt;br&gt;related to the second-highest coefficient]
-</pre></div>
-</div>
 <p><strong>Population Dynamics in Endangered Marsupial Breeding</strong></p>
 <p><strong>Context</strong>:
 A wildlife conservation sanctuary in New South Wales operates a specialized breeding program for endangered brush-tailed rock-wallabies. The sanctuary tracks two distinct age groups in its population each year: juveniles (under one year old) and mature adults (one year or older). Biologists have established the following annual population dynamics for the program:</p>
@@ -410,6 +403,11 @@ A wildlife conservation sanctuary in New South Wales operates a specialized bree
 <li><p>To analyze the long-term behavior of the colony (Hints: system’s characteristic equation &amp; eigen).</p></li>
 <li><p>Calculate the long-term annual growth rate of the total wallaby population and find the steady-state ratio of mature adults to juveniles as time approaches infinity.</p></li>
 </ul>
+<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>%%{init: {  &quot;flowchart&quot;: { &quot;nodeSpacing&quot;: 15,  &quot;rankSpacing&quot;: 15,   &quot;padding&quot;: 5 }, &#39;themeTuning&#39;: &#39;safe&#39;, &#39;themeVariables&#39;: { &#39;fontSize&#39;: &#39;12px&#39; }}}%%
+flowchart LR
+    CP[] --&gt; eig[]
+</pre></div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1. LA for Fibonnaci series</span>
@@ -430,7 +428,7 @@ A wildlife conservation sanctuary in New South Wales operates a specialized bree
 <span class="n">D</span><span class="p">,</span> <span class="n">P</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">eigenmatrix_right</span><span class="p">()</span>
 <span class="n">show</span><span class="p">(</span><span class="s2">&quot;Eigenvector matrix P:&quot;</span><span class="p">,</span> <span class="n">P</span><span class="p">)</span>
 
-<span class="c1"># 5. Compute D^n and closed-form expression 直接對對角線上的元素的 n 次方構建新的對角矩陣</span>
+<span class="c1"># 5. Compute D^n and closed-form expression </span>
 <span class="n">D_n</span> <span class="o">=</span> <span class="n">diagonal_matrix</span><span class="p">([</span><span class="n">D</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">^</span><span class="n">n</span><span class="p">,</span> <span class="n">D</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">^</span><span class="n">n</span><span class="p">])</span>
 <span class="n">A_n</span> <span class="o">=</span> <span class="n">P</span> <span class="o">*</span> <span class="n">D_n</span> <span class="o">*</span> <span class="n">P</span><span class="o">.</span><span class="n">inverse</span><span class="p">()</span>  <span class="c1"># A^n = P * D^n * P^-1</span>
 <span class="n">v0</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="n">SR</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>      <span class="c1"># Initial state [F_1, F_0]^T = [1, 0]^T</span>
@@ -490,7 +488,7 @@ A wildlife conservation sanctuary in New South Wales operates a specialized bree
 <span class="n">D</span><span class="p">,</span> <span class="n">P</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">eigenmatrix_right</span><span class="p">()</span>
 <span class="n">show</span><span class="p">(</span><span class="s2">&quot;Eigenvector matrix P:&quot;</span><span class="p">,</span> <span class="n">P</span><span class="p">)</span>
 
-<span class="c1"># 5. Compute D^n and closed-form expression 直接對對角線上的元素的 n 次方構建新的對角矩陣</span>
+<span class="c1"># 5. Compute D^n and closed-form expression </span>
 <span class="n">D_n</span> <span class="o">=</span> <span class="n">diagonal_matrix</span><span class="p">([</span><span class="n">D</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">^</span><span class="n">n</span><span class="p">,</span> <span class="n">D</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">^</span><span class="n">n</span><span class="p">])</span>
 <span class="n">A_n</span> <span class="o">=</span> <span class="n">P</span> <span class="o">*</span> <span class="n">D_n</span> <span class="o">*</span> <span class="n">P</span><span class="o">.</span><span class="n">inverse</span><span class="p">()</span>  <span class="c1"># A^n = P * D^n * P^-1</span>
 <span class="n">v0</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="n">SR</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>      <span class="c1"># Initial state [F_1, F_0]^T = [1, 0]^T</span>
@@ -508,6 +506,13 @@ A wildlife conservation sanctuary in New South Wales operates a specialized bree
 <li><p><span class="math notranslate nohighlight">\(2\times2\)</span> inverse: <span class="math notranslate nohighlight">\(\begin{pmatrix}a&amp;b\\c&amp;d\end{pmatrix}^{-1}=\frac1{ad-bc}\begin{pmatrix}d&amp;-b\\-c&amp;a\end{pmatrix}\)</span></p></li>
 <li><p>We can use a XOR basis for spans and sets.</p></li>
 </ul>
+<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>%%{init: {  &quot;flowchart&quot;: { &quot;nodeSpacing&quot;: 15,  &quot;rankSpacing&quot;: 15,   &quot;padding&quot;: 5 }, &#39;themeTuning&#39;: &#39;safe&#39;, &#39;themeVariables&#39;: { &#39;fontSize&#39;: &#39;12px&#39; }}}%%
+flowchart LR
+    CP[Characteristic polynomial] --&gt; eig[&quot;eigenvalues &lt;br&gt; the roots of the polynomial&quot;]
+    CP --&gt; det[determinant &lt;br&gt;the constant term]
+    CP --&gt; tr[trace &lt;br&gt;related to the second-highest coefficient]
+</pre></div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span><span class="o">*</span><span class="n">vector</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">vector</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
