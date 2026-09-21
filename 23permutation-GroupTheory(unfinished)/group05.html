@@ -185,8 +185,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../Course_5U.html">5U - Ext III</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="../Course_MCS320Symbol.html">Symbolic Computation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Cryptohack.html">Cryptohack</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Course_LAFF.html">LAFF</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">CS &amp; Physics</span></p>
 <ul class="nav bd-sidenav">
@@ -400,7 +398,7 @@ Chapter 5: Mappings Between Groups
 </p>
 <p style='text-align: center;'>Initialization:  This cell MUST be evaluated first:</p><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;absalgtext2.sage&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">load</span><span class="p">(</span><span class="s1">'absalgtext2.sage'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -586,8 +584,8 @@ Proposition 4.5, <em>H</em> is normal. If <em>b</em> is any element not in <em>H
 <p style='text-align: center;'>{{<em>e</em>, <em>a</em>, <em>a</em><sup>2</sup>}, {<em>b</em>, <em>a</em>&middot;<em>b</em>, <em>a</em><sup>2</sup>&middot;<em>b</em>}}.</p>  
 Thus, the group can be expressed by<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
-<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">"e"</span><span class="p">)</span>
+<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
 <span class="n">G</span> <span class="o">=</span> <span class="p">[</span><span class="n">e</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span><span class="p">];</span> <span class="n">G</span>
 </pre></div>
@@ -646,8 +644,8 @@ Since <em>c</em>, <em>a</em>&middot;<em>c</em>, and <em>b</em>&middot;<em>c</em>
 <em>b</em>&middot;(<em>b</em>&middot;<em>c</em>)<sup>2</sup>&middot;<em>c</em> = <em>b</em>&middot;<em>c</em></p>
 Using <em>SageMath</em>, we see the only possible group would be<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
-<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">"e"</span><span class="p">)</span>
+<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">,</span> <span class="s2">"c"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">c</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
@@ -684,8 +682,8 @@ is a subgroup of <em>G</em>, and since the index of <em>H</em> is two, Propositi
 {<em>b</em>, <em>a</em>&middot;<em>b</em>, <em>a</em><sup>2</sup>&middot;<em>b</em>, <em>a</em><sup>3</sup>&middot;<em>b</em>}}.</p>
 The Cayley table so far looks like the following:<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
-<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">"e"</span><span class="p">)</span>
+<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">4</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
 <span class="n">G</span> <span class="o">=</span> <span class="p">[</span><span class="n">e</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">a</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">^</span><span class="mi">3</span><span class="o">*</span><span class="n">b</span><span class="p">]</span>
 <span class="n">CayleyTable</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
@@ -703,8 +701,8 @@ Hence, we have six possible cases. We will let <em>SageMath</em> do the dirty wo
 <p>Case 1) If <em>b</em><sup>2</sup> = <em>e</em> and <em>b</em>·<em>a</em> = <em>a</em>·<em>b</em>, we have<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
-<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">"e"</span><span class="p">)</span>
+<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">4</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
@@ -744,8 +742,8 @@ Let us test this isomorphism by rearranging the elements of <em>G</em>.<br><div 
 <p>Case 2) Next we consider <em>b</em><sup>2</sup> = <em>e</em>, <em>b</em>·<em>a</em> = <em>a</em><sup>2</sup>·<em>b</em>:<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
-<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">"e"</span><span class="p">)</span>
+<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">4</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
@@ -761,8 +759,8 @@ What happened?  This table obviously does not satisfy the Latin square property,
 <br><br>
 Case 3)&emsp;Let us try <em>b</em><sup>2</sup> = <em>e</em>, <em>b</em>&middot;<em>a</em> = <em>a</em><sup>3</sup>&middot;<em>b</em>:<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
-<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">"e"</span><span class="p">)</span>
+<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">4</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">^</span><span class="mi">3</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
@@ -780,8 +778,8 @@ we call this group the <em>dihedral group of order</em> 4, or <em>D</em><sub>4</
 <p>Case 4) Let us consider <em>b</em><sup>2</sup> = <em>a</em><sup>2</sup>, and <em>b</em>·<em>a</em> = <em>a</em>·<em>b</em>:<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
-<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">"e"</span><span class="p">)</span>
+<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">4</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
@@ -808,8 +806,8 @@ With the colors arranged this way, we see that in fact we found the same group t
 <p>Case 5) Next, we will try <em>b</em><sup>2</sup> = <em>a</em><sup>2</sup>, and <em>b</em>·<em>a</em> = <em>a</em><sup>2</sup>·<em>b</em>:<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
-<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">"e"</span><span class="p">)</span>
+<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">4</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
@@ -825,8 +823,8 @@ With the colors arranged this way, we see that in fact we found the same group t
 <p>Case 6) <em>b</em><sup>2</sup> = <em>a</em><sup>2</sup>, and <em>b</em>·<em>a</em> = <em>a</em><sup>3</sup>·<em>b</em>:<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
-<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">"e"</span><span class="p">)</span>
+<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">4</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">^</span><span class="mi">3</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
@@ -1096,8 +1094,8 @@ The commands</p>
 <br><br>
 define the group <em>D<sub>n</sub></em>.  The symbol <em>n</em> must be replaced with an integer before executing these commands.  When <em>n</em> = 3, we get the non-abelian group of order 6, so <em>D</em><sub>3</sub> &asymp; <em>S</em><sub>3</sub>.  We have just introduced <em>D</em><sub>4</sub>, and when <em>n</em> = 5, we get a non-abelian group of order 10:<div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
-<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">"e"</span><span class="p">)</span>
+<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">5</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">^-</span><span class="mi">1</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
@@ -1168,8 +1166,8 @@ Let us create a homomorphism from the octahedral group to the quaternion group.<
 <p>We first load the octahedral group with the following command:<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">);</span>
-<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="s2">&quot;c&quot;</span><span class="p">);</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">"e"</span><span class="p">);</span>
+<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">,</span><span class="s2">"b"</span><span class="p">,</span><span class="s2">"c"</span><span class="p">);</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">c</span><span class="o">^</span><span class="mi">4</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span>
@@ -1643,8 +1641,8 @@ then indeed the product <em>H</em>·<em>K</em> would be a subgroup.  (In fact, t
 on the octahedral group.<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">);</span>
-<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="s2">&quot;c&quot;</span><span class="p">);</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">"e"</span><span class="p">);</span>
+<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">,</span><span class="s2">"b"</span><span class="p">,</span><span class="s2">"c"</span><span class="p">);</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">c</span><span class="o">^</span><span class="mi">4</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span>
@@ -2003,8 +2001,8 @@ PROPOSITION 5.9<br></p>
 <p>If we consider a group with two subgroups, one of which is is subgroup of the other, we begin to see more patterns.  Let us reload the octahedral group, and look at two normal subgroups.<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">);</span>
-<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="s2">&quot;c&quot;</span><span class="p">);</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">"e"</span><span class="p">);</span>
+<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">,</span><span class="s2">"b"</span><span class="p">,</span><span class="s2">"c"</span><span class="p">);</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">c</span><span class="o">^</span><span class="mi">4</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span>
@@ -2748,7 +2746,7 @@ Define Terry's group in <em>SageMath</em> with the command<br><div class="cell d
 <br>
 and then define the group <em>S</em><sub>3</sub>, using Stay as the identity element.  (Otherwise, InitGroup would clear Terry's group.)<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">Stay</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span> <span class="n">Stay</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
@@ -2765,8 +2763,8 @@ Use <em>SageMath</em> to find all of the homomorphisms from <em>S</em><sub>3</su
 <strong>F2</strong>, <strong>F3</strong>, etc. How many of these are isomorphisms?  The following loads the group <em>S</em><sub>3</sub> into
 <em>SageMath</em>.<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
-<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">"e"</span><span class="p">)</span>
+<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>

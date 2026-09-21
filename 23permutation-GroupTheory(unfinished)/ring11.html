@@ -185,8 +185,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../Course_5U.html">5U - Ext III</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="../Course_MCS320Symbol.html">Symbolic Computation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Cryptohack.html">Cryptohack</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Course_LAFF.html">LAFF</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">CS &amp; Physics</span></p>
 <ul class="nav bd-sidenav">
@@ -400,7 +398,7 @@ Chapter 11 : Integral Domains and Fields
 </p>
 <p style='text-align: center;'>Initialization:  This cell MUST be evaluated first:</p><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;absalgtext2.sage&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">load</span><span class="p">(</span><span class="s1">'absalgtext2.sage'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -482,7 +480,7 @@ LEMMA 11.2<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitRing</span><span class="p">()</span>
-<span class="n">AddRingVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">AddRingVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">,</span><span class="s2">"b"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
@@ -494,7 +492,7 @@ LEMMA 11.2<br></p>
 <br>
 We form a polynomial ring over <em>R</em> by defining a new symbol <em>x</em>, which is an indeterminant over the ring <em>R</em>.<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddPolyVar</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddPolyVar</span><span class="p">(</span><span class="s2">"x"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -603,7 +601,7 @@ This actually defines the field <em>Z</em><sub>3</sub>, as we can see with the c
 <p>We can create polynomials over this new domain by the <strong>AddFieldVar</strong> command.<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;i&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"i"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -668,7 +666,7 @@ of &quot;complex numbers modulo 3&quot;.<br><br>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;i&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"i"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -685,7 +683,7 @@ of &quot;complex numbers modulo 3&quot;.<br><br>
 in <em>Z</em><sub>5</sub>[<em>x</em>].  If we tried to define this as a ring,<br><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitRing</span><span class="p">()</span>
-<span class="n">AddRingVar</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;i&quot;</span><span class="p">)</span>
+<span class="n">AddRingVar</span><span class="p">(</span><span class="s2">"e"</span><span class="p">,</span> <span class="s2">"i"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="mi">5</span><span class="o">*</span><span class="n">e</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="mi">5</span><span class="o">*</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">e</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">e</span><span class="o">*</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="n">e</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">i</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="n">e</span><span class="p">)</span>
@@ -710,7 +708,7 @@ divisors?  Is this a field?<br></p>
 <em>SageMath</em> can now work with polynomials over an integral domain or field.  We can add an additional parameter for the <strong>InitDomain</strong> command that will 
 tell <em>SageMath</em> the name of the polynomial variable, usually <strong>"x"</strong>.  For example, with the command<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">"x"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -740,7 +738,7 @@ we can now form polynomials in <em>Z</em><sub>3</sub>[<em>x</em>]:<br><div class
 <br>
 If we continue to expand the field to "complex numbers modulo 3",<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;i&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"i"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">i</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -781,7 +779,7 @@ We can form products as we would with standard polynomials.<br><div class="cell 
 of an integral domain, not a field, for which factorizations are not unique.)  If <em>SageMath</em> tries to factor <em>x</em><sup>2</sup> + 1 in the standard way 
 (using the ring &#8484;),<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s2">&quot;X&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s2">"X"</span><span class="p">)</span>
 <span class="n">factor</span><span class="p">(</span><span class="n">X</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -816,7 +814,7 @@ It is reasonable to expect that we will have to make a similar restriction for g
 <p>We can have <em>SageMath</em> show us how two rational numbers are added:<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s1">&#39;x y u v&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s1">'x y u v'</span><span class="p">)</span>
 <span class="n">Together</span><span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="n">y</span> <span class="o">+</span> <span class="n">u</span><span class="o">/</span><span class="n">v</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -915,7 +913,7 @@ between <em>p</em>(<em>x</em>) and <em>q</em>(<em>x</em>), we can cancel them ou
 <p>For example, the fractions<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s2">"x"</span><span class="p">)</span>
 <span class="n">A</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">5</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">7</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">6</span><span class="p">);</span> <span class="n">A</span>
 </pre></div>
 </div>
@@ -980,8 +978,8 @@ the <em>rational functions in x over K</em>.<br><br></p>
 Using the field of order 9 that was discovered in the last section,<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">)</span>
-<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;i&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">"x"</span><span class="p">)</span>
+<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"i"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">i</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1136,7 +1134,7 @@ These elements are, of course, the image of the mapping found in Proposition 11.
 <p>The conjugate automorphism is defined in <em>SageMath</em> as<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s1">'z'</span><span class="p">)</span>
 <span class="n">conjugate</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1595,7 +1593,7 @@ the real part and the complex part of the functions separately, giving us two th
 given by:<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s2">&quot;x y&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s2">"x y"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1618,7 +1616,7 @@ The graph of the imaginary part is very similar.<br><div class="cell docutils co
 <br>
 The real part of the logarithm function does not depend on which number of the set we pick.  Therefore we can draw a graph of the real part of the logarithm function.<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s2">&quot;t r&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s2">"t r"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2525,8 +2523,8 @@ be in the set <em>z</em><sup>1/<em>n</em></sup> that we have just computed.<br><
 &sect;11.1 #25)<br>
 In the field of &quot;complex numbers modulo 3&quot;:<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
-<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;i&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="s2">"x"</span><span class="p">)</span>
+<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"i"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">i</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">K</span> <span class="o">=</span> <span class="n">Field</span><span class="p">();</span> <span class="n">K</span>
 </pre></div>
@@ -2540,7 +2538,7 @@ the factorizations?  Knowing how <em>real</em> polynomials factor, explain what 
 Expain why the ring &quot;complex numbers modulo 5&quot;<br><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;i&quot;</span><span class="p">)</span>
+<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"i"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">i</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2564,8 +2562,8 @@ Try squaring different elements of <em>Z</em><sub>2</sub>(<em>x</em>).  What do 
 &sect;11.2 #20)<br> 
 Have <em>SageMath</em> compute the following operation in the rational function field <em>K</em>(<em>x</em>).<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
-<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;i&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="s2">"x"</span><span class="p">)</span>
+<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"i"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">i</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">K</span> <span class="o">=</span> <span class="n">Field</span><span class="p">();</span> <span class="n">K</span>
 </pre></div>
@@ -2591,8 +2589,8 @@ It was mentioned that the definition of the quotient field does not depend on wh
 factorization.  An example of such a domain is &#8484;[&radic;<font style="text-decoration:overline">&minus;5</font>], which 
 we can enter in <em>SageMath</em> as follows:<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
-<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="s2">"x"</span><span class="p">)</span>
+<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>

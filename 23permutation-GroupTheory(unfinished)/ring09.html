@@ -185,8 +185,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../Course_5U.html">5U - Ext III</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="../Course_MCS320Symbol.html">Symbolic Computation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Cryptohack.html">Cryptohack</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Course_LAFF.html">LAFF</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">CS &amp; Physics</span></p>
 <ul class="nav bd-sidenav">
@@ -400,7 +398,7 @@ Chapter 9 : Introduction to Rings
 </p>
 <p style='text-align: center;'>Initialization:  This cell MUST be evaluated first:</p><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;absalgtext2.sage&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">load</span><span class="p">(</span><span class="s1">'absalgtext2.sage'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -853,7 +851,7 @@ since 0 is the additive identity for the ring.<br><br>
 <p>Next, we declare that <em>a</em> and <em>b</em> will be the variables, just as we did with <strong>AddGroupVar</strong> for groups.<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddRingVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddRingVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">,</span><span class="s2">"b"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -907,7 +905,7 @@ two elements generate the group <em>Z</em><sub>15</sub><sup>*</sup>, but both ar
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitRing</span><span class="p">()</span>
-<span class="n">AddRingVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">AddRingVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">,</span><span class="s2">"b"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">R</span> <span class="o">=</span> <span class="n">Ring</span><span class="p">();</span> <span class="n">R</span>
@@ -959,7 +957,7 @@ We can enter the four products using four more <strong>Define</strong> commands 
 To define the ring described in the above paragraph, we can use<br><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitRing</span><span class="p">()</span>
-<span class="n">AddRingVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">AddRingVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">,</span><span class="s2">"b"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
@@ -1028,7 +1026,7 @@ Try to define a non-commutative ring using <em>Z</em><sub>15</sub><sup>*</sup> a
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitRing</span><span class="p">();</span>
-<span class="n">AddRingVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">AddRingVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">,</span><span class="s2">"b"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
@@ -1048,7 +1046,7 @@ By changing only the <strong>???</strong> in the <em>SageMath</em> command<br></
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitRing</span><span class="p">();</span>
-<span class="n">AddRingVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">AddRingVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">,</span><span class="s2">"b"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
@@ -1106,7 +1104,7 @@ elements <em>a</em> and <em>b</em>.   Since <em>e</em> is the unity, we know tha
 this information into <em>SageMath</em> with the following commands:<br><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitRing</span><span class="p">()</span>
-<span class="n">AddRingVar</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">,</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">AddRingVar</span><span class="p">(</span><span class="s2">"e"</span><span class="p">,</span><span class="s2">"a"</span><span class="p">,</span><span class="s2">"b"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">e</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">e</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">e</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">e</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">e</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">e</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
 </pre></div>
@@ -1135,7 +1133,7 @@ Can you form a ring by changing the two <strong>???</strong>’s in the followin
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitRing</span><span class="p">()</span>
-<span class="n">AddRingVar</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">,</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">AddRingVar</span><span class="p">(</span><span class="s2">"e"</span><span class="p">,</span><span class="s2">"a"</span><span class="p">,</span><span class="s2">"b"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">e</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">e</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">e</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">e</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">e</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">e</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">,</span><span class="n">a</span><span class="p">)</span>
@@ -1279,7 +1277,7 @@ multiplication table of the non-commutative unity ring <em>T</em><sub>8</sub>
 that we found before:<br><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitRing</span><span class="p">()</span>
-<span class="n">AddRingVar</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">,</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">AddRingVar</span><span class="p">(</span><span class="s2">"e"</span><span class="p">,</span><span class="s2">"a"</span><span class="p">,</span><span class="s2">"b"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">e</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">e</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">e</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">e</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">e</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">e</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
@@ -1407,7 +1405,7 @@ We constructed one example of this type of ring in the last section. We called t
 Here is the addition and multiplication table of <em>T</em><sub>8</sub>:<br><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitRing</span><span class="p">()</span>
-<span class="n">AddRingVar</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">,</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">AddRingVar</span><span class="p">(</span><span class="s2">"e"</span><span class="p">,</span><span class="s2">"a"</span><span class="p">,</span><span class="s2">"b"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">e</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">e</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">e</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">e</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">e</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">e</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
@@ -1429,7 +1427,7 @@ One of the simplest example of ring of this type would be the ring of even eleme
 list the elements of this ring as {0, a, 2a, 3a}, and hence enter this ring into <em>SageMath</em> with the commands<br><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitRing</span><span class="p">()</span>
-<span class="n">AddRingVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<span class="n">AddRingVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">)</span>
 <span class="n">R</span> <span class="o">=</span> <span class="n">ListRing</span><span class="p">()</span>
@@ -1448,7 +1446,7 @@ Type XI: Non-commutative rings without unity and with zero divisors
 We constructed one example of a ring of this type in the previous section:<br><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitRing</span><span class="p">()</span>
-<span class="n">AddRingVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">AddRingVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">,</span><span class="s2">"b"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
@@ -1586,7 +1584,7 @@ done in <em>SageMath</em>.<br><br><div class="cell docutils container">
 <br>
 First we define lots of variables.<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s1">&#39;a1 b1 c1 d1 a2 b2 c2 d2 a3 b3 c3 d3&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s1">'a1 b1 c1 d1 a2 b2 c2 d2 a3 b3 c3 d3'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1847,7 +1845,7 @@ Try this with <em>Z</em><sub>5</sub>, <em>Z</em><sub>7</sub>, <em>Z</em><sub>8</
 Use <em>SageMath</em> to show that quaternion multiplication is associative.  That is, if we define<br><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Q</span> <span class="o">=</span> <span class="n">InitQuaternions</span><span class="p">()</span>
-<span class="n">var</span><span class="p">(</span><span class="s2">&quot;a1 a2 a3 b1 b2 b3 c1 c2 c3 d1 d2 d3&quot;</span><span class="p">)</span>
+<span class="n">var</span><span class="p">(</span><span class="s2">"a1 a2 a3 b1 b2 b3 c1 c2 c3 d1 d2 d3"</span><span class="p">)</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">a1</span> <span class="o">+</span> <span class="n">b1</span><span class="o">*</span><span class="n">i</span> <span class="o">+</span> <span class="n">c1</span><span class="o">*</span><span class="n">j</span> <span class="o">+</span> <span class="n">d1</span><span class="o">*</span><span class="n">k</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">a2</span> <span class="o">+</span> <span class="n">b2</span><span class="o">*</span><span class="n">i</span> <span class="o">+</span> <span class="n">c2</span><span class="o">*</span><span class="n">j</span> <span class="o">+</span> <span class="n">d2</span><span class="o">*</span><span class="n">k</span>
 <span class="n">z</span> <span class="o">=</span> <span class="n">a3</span> <span class="o">+</span> <span class="n">b3</span><span class="o">*</span><span class="n">i</span> <span class="o">+</span> <span class="n">c3</span><span class="o">*</span><span class="n">j</span> <span class="o">+</span> <span class="n">d3</span><span class="o">*</span><span class="n">k</span>

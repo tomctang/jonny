@@ -185,8 +185,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../Course_5U.html">5U - Ext III</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="../Course_MCS320Symbol.html">Symbolic Computation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Cryptohack.html">Cryptohack</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Course_LAFF.html">LAFF</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">CS &amp; Physics</span></p>
 <ul class="nav bd-sidenav">
@@ -400,7 +398,7 @@ Chapter 4: Patterns Within the Cosets of Groups
 </p>
 <p style='text-align: center;'>Initialization:  This cell MUST be evaluated first:</p><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;absalgtext2.sage&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">load</span><span class="p">(</span><span class="s1">'absalgtext2.sage'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -903,7 +901,7 @@ not the <em>p</em> and <em>q</em> which generated it, would be known to any spie
 <p>Note we put the message in quotation marks. Therefore, we can find the number corresponding to “HERE IS A MESSAGE” by typing<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">MessageToNumber</span><span class="p">(</span><span class="s2">&quot;HERE IS A MESSAGE&quot;</span><span class="p">);</span> <span class="n">x</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">MessageToNumber</span><span class="p">(</span><span class="s2">"HERE IS A MESSAGE"</span><span class="p">);</span> <span class="n">x</span>
 </pre></div>
 </div>
 </div>
@@ -975,7 +973,7 @@ and publishes these. The bank then gives you the number <em>s</em> which will be
 Now you can use the number <em>s</em> to <em>decode</em> a message such as<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">MessageToNumber</span><span class="p">(</span><span class="s2">&quot;Check 1034: Pay to the order of John Brown $43.50&quot;</span><span class="p">);</span> <span class="n">y</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">MessageToNumber</span><span class="p">(</span><span class="s2">"Check 1034: Pay to the order of John Brown $43.50"</span><span class="p">);</span> <span class="n">y</span>
 </pre></div>
 </div>
 </div>
@@ -1027,8 +1025,8 @@ we can multiply the sets together.<br><br></p>
 <p>Let’s pick a group large enough to see some patterns. Execute the following command to load the octahedral group.<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
-<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="s2">&quot;c&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">"e"</span><span class="p">)</span>
+<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">,</span><span class="s2">"b"</span><span class="p">,</span><span class="s2">"c"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">c</span><span class="o">^</span><span class="mi">4</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
@@ -1326,8 +1324,8 @@ Because of the fact the two elements are equivalent if they are in the same cose
 Consider the octahedral group:<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
-<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">"e"</span><span class="p">)</span>
+<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">,</span> <span class="s2">"c"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">c</span><span class="o">^</span><span class="mi">4</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
@@ -1583,8 +1581,8 @@ Thus, the set of all cosets forms a group.<br><br>
 &sect;4.1 #33)<br>
 Find the left and right cosets of the subgroup {<em>e</em>, <em>c</em>, <em>c</em><sup>2</sup>, <em>c</em><sup>3</sup>} of the octahedral group, given by:<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
-<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">"e"</span><span class="p">)</span>
+<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">,</span> <span class="s2">"c"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">c</span><span class="o">^</span><span class="mi">4</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">c</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">*</span><span class="n">c</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">c</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">G</span> <span class="o">=</span> <span class="n">Group</span><span class="p">();</span> <span class="n">G</span> 
@@ -1598,8 +1596,8 @@ Are the left and right cosets the same?<br><br>
 Find the left and right cosets of the subgroup {<em>e</em>, <em>c</em><sup>2</sup>, <em>a</em>&middot;<em>b</em><sup>2</sup>&middot;<em>c</em>, 
 <em>a</em>&middot;<em>b</em><sup>2</sup>&middot;<em>c</em><sup>3</sup>} of the octahedral group, given by:<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
-<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">"e"</span><span class="p">)</span>
+<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">,</span> <span class="s2">"c"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">c</span><span class="o">^</span><span class="mi">4</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">c</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">*</span><span class="n">c</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">c</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">G</span> <span class="o">=</span> <span class="n">Group</span><span class="p">();</span> <span class="n">G</span>
@@ -1612,7 +1610,7 @@ Are the left and right cosets the same?<br><br>
 &sect;4.2 #21)<br>
 This exercise is required in order to do the RSA encryption Problems 22 or 23.  In order to use the <strong>MessageToNumber</strong> and <strong>NumberToMessage</strong> commands, we can reload the routines needed for RSA, in case the package <strong>absalgtext2.sage</strong> was not loaded.<div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;RSA.sage&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">load</span><span class="p">(</span><span class="s2">"RSA.sage"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1647,7 +1645,7 @@ If this command yields 10007 instead of 1, go back and find new values for <em>p
 Once the gcd is 1, compute <em>n</em> = <em>p</em>&middot;<em>q</em>, and save this to a file.  To do this, enter<br><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="n">p</span><span class="o">*</span><span class="n">q</span><span class="p">;</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;n = &quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"n = "</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1665,7 +1663,7 @@ Next, find the secret number <em>s</em>, which deciphers a message:<br><div clas
 <br>
 You will need to save this number for future reference.<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;s = &quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"s = "</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1674,7 +1672,7 @@ You will need to save this number for future reference.<br><div class="cell docu
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">PowerMod</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;c = &quot;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"c = "</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1686,7 +1684,7 @@ Do not send the number <em>s</em>. This is your secret number used for signing d
 &sect;4.2 #22)<br>
 Using Example 4.7 as your guide, and the values of <em>n</em> and <em>s</em> from Problem 21, send an &quot;electronic check&quot; to your favorite professor for $100.00.<div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">MessageToNumber</span><span class="p">(</span><span class="s2">&quot;Check ...&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">MessageToNumber</span><span class="p">(</span><span class="s2">"Check ..."</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1695,7 +1693,7 @@ Using Example 4.7 as your guide, and the values of <em>n</em> and <em>s</em> fro
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">PowerMod</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x = &quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"x = "</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1806,8 +1804,8 @@ Show that there is a group <em>Q</em> which is generated by two elements <em>a</
 <em>b</em>&middot;<em>a</em> = <em>a</em><sup>3</sup>&middot;<em>b</em>, <em>a</em><sup>2</sup> &ne; <em>e</em>.</p>
 This can be entered into <em>SageMath</em> with the command<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
-<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">"e"</span><span class="p">)</span>
+<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">4</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">^</span><span class="mi">3</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
@@ -1823,7 +1821,7 @@ Find all subgroups of this group, and show that all subgroups are normal, even t
 Use <em>SageMath</em>, along with a bit of trial and error, to find a subgroup of order 12 of the octahedral group. Show that this subgroup is a normal 
 subgroup.  The following reloads the octahedronal group:<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">);</span> <span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">"e"</span><span class="p">);</span> <span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">,</span> <span class="s2">"c"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">c</span><span class="o">^</span><span class="mi">4</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">c</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">*</span><span class="n">c</span><span class="p">);</span> <span class="n">Define</span><span class="p">(</span><span class="n">c</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">G</span> <span class="o">=</span> <span class="n">Group</span><span class="p">();</span> <span class="n">G</span>
@@ -1848,8 +1846,8 @@ quotient group <em>G</em>/<em>H</em>?<br><br>
 &sect;4.4 #20)<br>
 Here is a group of order 20 from Problem 18 of &sect;3.2:<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
-<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitGroup</span><span class="p">(</span><span class="s2">"e"</span><span class="p">)</span>
+<span class="n">AddGroupVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">5</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">4</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>

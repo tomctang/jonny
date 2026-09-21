@@ -190,8 +190,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../Course_5U.html">5U - Ext III</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="../Course_MCS320Symbol.html">Symbolic Computation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Cryptohack.html">Cryptohack</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Course_LAFF.html">LAFF</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">CS &amp; Physics</span></p>
 <ul class="nav bd-sidenav">
@@ -612,7 +610,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tab complete me to see what&#39;s available</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tab complete me to see what's available</span>
 <span class="n">E</span><span class="o">.</span>
 </pre></div>
 </div>
@@ -665,7 +663,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span> <span class="c1"># Keep 20 &quot;bits&quot; of information</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span> <span class="c1"># Keep 20 "bits" of information</span>
 </pre></div>
 </div>
 </div>
@@ -753,7 +751,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Or, in the &quot;pythonic&quot; way</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Or, in the "pythonic" way</span>
 <span class="n">elements_of_order_2</span> <span class="o">=</span> <span class="p">[</span><span class="n">elem</span> <span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">H</span> <span class="k">if</span> <span class="n">elem</span><span class="o">.</span><span class="n">order</span><span class="p">()</span> <span class="o">==</span> <span class="mi">2</span><span class="p">]</span>
 <span class="n">elements_of_order_2</span>
 </pre></div>
@@ -779,7 +777,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Explicitly using elements of a group</span>
-<span class="n">H</span><span class="p">(</span><span class="s2">&quot;(1,2,3,4,5,6)&quot;</span><span class="p">)</span> <span class="o">*</span> <span class="n">H</span><span class="p">(</span><span class="s2">&quot;(1,5)(2,4)&quot;</span><span class="p">)</span>
+<span class="n">H</span><span class="p">(</span><span class="s2">"(1,2,3,4,5,6)"</span><span class="p">)</span> <span class="o">*</span> <span class="n">H</span><span class="p">(</span><span class="s2">"(1,5)(2,4)"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -798,7 +796,7 @@ document.write(`
 <p>It’s pretty easy to work over different fields in sage as well. I show a few examples of this</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># It may be necessary to use `reset(&#39;x&#39;)` if x has otherwise been defined</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># It may be necessary to use `reset('x')` if x has otherwise been defined</span>
 <span class="n">K</span><span class="o">.&lt;</span><span class="n">alpha</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">NumberField</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="o">-</span> <span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -863,7 +861,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s1">'x'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -947,15 +945,15 @@ document.write(`
 <h2>Some Calculus And Symbolic Manipulation<a class="headerlink" href="#some-calculus-and-symbolic-manipulation" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Let&#39;s declare that we want x and y to mean symbolic variables</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Let's declare that we want x and y to mean symbolic variables</span>
 <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">)</span>
 
-<span class="n">reset</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
-<span class="n">reset</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
-<span class="n">var</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
-<span class="n">var</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+<span class="n">reset</span><span class="p">(</span><span class="s1">'x'</span><span class="p">)</span>
+<span class="n">reset</span><span class="p">(</span><span class="s1">'y'</span><span class="p">)</span>
+<span class="n">var</span><span class="p">(</span><span class="s1">'x'</span><span class="p">)</span>
+<span class="n">var</span><span class="p">(</span><span class="s1">'y'</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">)</span>
 </pre></div>
@@ -979,7 +977,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Nonlinear systems with complicated solutions can be solved as well</span>
-<span class="n">var</span><span class="p">(</span><span class="s1">&#39;p,q&#39;</span><span class="p">)</span>
+<span class="n">var</span><span class="p">(</span><span class="s1">'p,q'</span><span class="p">)</span>
 <span class="n">eq1</span> <span class="o">=</span> <span class="n">p</span><span class="o">+</span><span class="mi">1</span><span class="o">==</span><span class="mi">9</span>
 <span class="n">eq2</span> <span class="o">=</span> <span class="n">q</span><span class="o">*</span><span class="n">y</span><span class="o">+</span><span class="n">p</span><span class="o">*</span><span class="n">x</span><span class="o">==-</span><span class="mi">6</span>
 <span class="n">eq3</span> <span class="o">=</span> <span class="n">q</span><span class="o">*</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">p</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">==</span><span class="mi">24</span>
@@ -1112,8 +1110,8 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nd">@interact</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">g</span><span class="p">(</span><span class="n">f</span><span class="o">=</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">c</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="p">(</span><span class="mf">1..30</span><span class="p">),</span>
-      <span class="n">xinterval</span><span class="o">=</span><span class="n">range_slider</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;x-interval&quot;</span><span class="p">),</span>
-      <span class="n">yinterval</span><span class="o">=</span><span class="n">range_slider</span><span class="p">(</span><span class="o">-</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;y-interval&quot;</span><span class="p">)):</span>
+      <span class="n">xinterval</span><span class="o">=</span><span class="n">range_slider</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s2">"x-interval"</span><span class="p">),</span>
+      <span class="n">yinterval</span><span class="o">=</span><span class="n">range_slider</span><span class="p">(</span><span class="o">-</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s2">"y-interval"</span><span class="p">)):</span>
     <span class="n">x0</span> <span class="o">=</span> <span class="n">c</span>
     <span class="n">degree</span> <span class="o">=</span> <span class="n">n</span>
     <span class="n">xmin</span><span class="p">,</span><span class="n">xmax</span> <span class="o">=</span> <span class="n">xinterval</span>
@@ -1121,10 +1119,10 @@ document.write(`
     <span class="n">p</span>   <span class="o">=</span> <span class="n">plot</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">xmin</span><span class="p">,</span> <span class="n">xmax</span><span class="p">,</span> <span class="n">thickness</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
     <span class="n">dot</span> <span class="o">=</span> <span class="n">point</span><span class="p">((</span><span class="n">x0</span><span class="p">,</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x0</span><span class="p">)),</span><span class="n">pointsize</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span><span class="n">rgbcolor</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
     <span class="n">ft</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">taylor</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">x0</span><span class="p">,</span><span class="n">degree</span><span class="p">)</span>
-    <span class="n">pt</span> <span class="o">=</span> <span class="n">plot</span><span class="p">(</span><span class="n">ft</span><span class="p">,</span> <span class="n">xmin</span><span class="p">,</span> <span class="n">xmax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">thickness</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>
+    <span class="n">pt</span> <span class="o">=</span> <span class="n">plot</span><span class="p">(</span><span class="n">ft</span><span class="p">,</span> <span class="n">xmin</span><span class="p">,</span> <span class="n">xmax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'red'</span><span class="p">,</span> <span class="n">thickness</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>
     <span class="n">show</span><span class="p">(</span><span class="n">dot</span> <span class="o">+</span> <span class="n">p</span> <span class="o">+</span> <span class="n">pt</span><span class="p">,</span> <span class="n">ymin</span><span class="o">=</span><span class="n">ymin</span><span class="p">,</span> <span class="n">ymax</span><span class="o">=</span><span class="n">ymax</span><span class="p">,</span> <span class="n">xmin</span><span class="o">=</span><span class="n">xmin</span><span class="p">,</span> <span class="n">xmax</span><span class="o">=</span><span class="n">xmax</span><span class="p">)</span>
-    <span class="n">html</span><span class="p">(</span><span class="s1">&#39;$f(x)\;=\;</span><span class="si">%s</span><span class="s1">$&#39;</span><span class="o">%</span><span class="k">latex</span>(f))
-    <span class="n">html</span><span class="p">(</span><span class="s1">&#39;$P_{</span><span class="si">%s</span><span class="s1">}(x)\;=\;</span><span class="si">%s</span><span class="s1">+R_{</span><span class="si">%s</span><span class="s1">}(x)$&#39;</span><span class="o">%</span><span class="p">(</span><span class="n">degree</span><span class="p">,</span><span class="n">latex</span><span class="p">(</span><span class="n">ft</span><span class="p">),</span><span class="n">degree</span><span class="p">))</span>
+    <span class="n">html</span><span class="p">(</span><span class="s1">'$f(x)\;=\;</span><span class="si">%s</span><span class="s1">$'</span><span class="o">%</span><span class="k">latex</span>(f))
+    <span class="n">html</span><span class="p">(</span><span class="s1">'$P_{</span><span class="si">%s</span><span class="s1">}(x)\;=\;</span><span class="si">%s</span><span class="s1">+R_{</span><span class="si">%s</span><span class="s1">}(x)$'</span><span class="o">%</span><span class="p">(</span><span class="n">degree</span><span class="p">,</span><span class="n">latex</span><span class="p">(</span><span class="n">ft</span><span class="p">),</span><span class="n">degree</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1145,7 +1143,7 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">integral</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">diff</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">),</span> <span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-<span class="n">show</span><span class="p">(</span><span class="n">revolution_plot3d</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span> <span class="n">parallel_axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> \
+<span class="n">show</span><span class="p">(</span><span class="n">revolution_plot3d</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span> <span class="n">parallel_axis</span><span class="o">=</span><span class="s1">'x'</span><span class="p">,</span> \
         <span class="n">show_curve</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.7</span><span class="p">),</span> <span class="n">aspect_ratio</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1246,7 +1244,7 @@ See e.g., [<a class="reference external" href="https://doc.sagemath.org/html/en/
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">4</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-<span class="n">reset</span><span class="p">(</span><span class="s1">&#39;i&#39;</span><span class="p">)</span>
+<span class="n">reset</span><span class="p">(</span><span class="s1">'i'</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1269,7 +1267,7 @@ See e.g., [<a class="reference external" href="https://doc.sagemath.org/html/en/
 <h2>Symbolic math<a class="headerlink" href="#symbolic-math" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">var</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">var</span><span class="p">(</span><span class="s1">'x'</span><span class="p">)</span>
 <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 <span class="n">show</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
@@ -1308,7 +1306,7 @@ See e.g., [<a class="reference external" href="https://doc.sagemath.org/html/en/
 <p>Symbolic functions on multiple variables.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">var</span><span class="p">(</span><span class="s1">&#39;x y z&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">var</span><span class="p">(</span><span class="s1">'x y z'</span><span class="p">)</span>
 <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">y</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="n">z</span><span class="o">^</span><span class="mi">2</span>
 <span class="n">show</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 </pre></div>
@@ -1335,7 +1333,7 @@ See e.g., [<a class="reference external" href="https://doc.sagemath.org/html/en/
 <p>Solve an equation.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">var</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">var</span><span class="p">(</span><span class="s1">'x'</span><span class="p">)</span>
 <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">=</span> <span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
 <span class="n">solve</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
 </pre></div>
@@ -1351,7 +1349,7 @@ See e.g., [<a class="reference external" href="https://doc.sagemath.org/html/en/
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">var</span><span class="p">(</span><span class="s1">&#39;x y&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">var</span><span class="p">(</span><span class="s1">'x y'</span><span class="p">)</span>
 <span class="n">solve</span><span class="p">([</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="n">y</span> <span class="o">==</span> <span class="mi">1</span><span class="p">],</span> <span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1433,8 +1431,8 @@ See e.g., [<a class="reference external" href="https://doc.sagemath.org/html/en/
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">graphs</span><span class="o">.</span><span class="n">PetersenGraph</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;diameter =&quot;</span><span class="p">,</span> <span class="n">G</span><span class="o">.</span><span class="n">diameter</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;treewidth =&quot;</span><span class="p">,</span> <span class="n">G</span><span class="o">.</span><span class="n">treewidth</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"diameter ="</span><span class="p">,</span> <span class="n">G</span><span class="o">.</span><span class="n">diameter</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"treewidth ="</span><span class="p">,</span> <span class="n">G</span><span class="o">.</span><span class="n">treewidth</span><span class="p">())</span>
 <span class="n">show</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1471,7 +1469,7 @@ See e.g., [<a class="reference external" href="https://doc.sagemath.org/html/en/
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">graphs</span><span class="o">.</span><span class="n">DodecahedralGraph</span><span class="p">()</span>
 <span class="n">H</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">hamiltonian_cycle</span><span class="p">()</span>
-<span class="n">G</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">edge_colors</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;red&#39;</span><span class="p">:</span> <span class="n">H</span><span class="o">.</span><span class="n">edges</span><span class="p">()})</span>
+<span class="n">G</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">edge_colors</span><span class="o">=</span><span class="p">{</span><span class="s1">'red'</span><span class="p">:</span> <span class="n">H</span><span class="o">.</span><span class="n">edges</span><span class="p">()})</span>
 </pre></div>
 </div>
 </div>
@@ -1514,12 +1512,12 @@ See e.g., [<a class="reference external" href="https://doc.sagemath.org/html/en/
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">dominating_set</span><span class="p">(</span><span class="n">G</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Return a minimum dominating set of ``G``</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="kn">from</span><span class="w"> </span><span class="nn">sage.numerical.mip</span><span class="w"> </span><span class="kn">import</span> <span class="n">MixedIntegerLinearProgram</span>
     <span class="n">p</span> <span class="o">=</span> <span class="n">MixedIntegerLinearProgram</span><span class="p">(</span><span class="n">maximization</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-    <span class="n">b</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">new_variable</span><span class="p">(</span><span class="n">binary</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">new_variable</span><span class="p">(</span><span class="n">binary</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'b'</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">G</span><span class="p">:</span>
         <span class="c1"># Either u in D or a neighbor of u is in D</span>
         <span class="n">p</span><span class="o">.</span><span class="n">add_constraint</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="n">u</span><span class="p">]</span> <span class="o">+</span> <span class="n">p</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">G</span><span class="o">.</span><span class="n">neighbors</span><span class="p">(</span><span class="n">u</span><span class="p">))</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">)</span>
@@ -1532,7 +1530,7 @@ See e.g., [<a class="reference external" href="https://doc.sagemath.org/html/en/
 <span class="n">G</span> <span class="o">=</span> <span class="n">graphs</span><span class="o">.</span><span class="n">RandomUnitDiskGraph</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="mf">.2</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">dom</span> <span class="o">=</span> <span class="n">dominating_set</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">dom</span><span class="p">)</span>
-<span class="n">G</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vertex_colors</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;red&#39;</span><span class="p">:</span><span class="n">dom</span><span class="p">})</span>
+<span class="n">G</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vertex_colors</span><span class="o">=</span><span class="p">{</span><span class="s1">'red'</span><span class="p">:</span><span class="n">dom</span><span class="p">})</span>
 </pre></div>
 </div>
 </div>
@@ -1541,7 +1539,7 @@ See e.g., [<a class="reference external" href="https://doc.sagemath.org/html/en/
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">graphs</span><span class="o">.</span><span class="n">RandomTree</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
-<span class="n">G</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;js&#39;</span><span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">'js'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1596,9 +1594,9 @@ def sum_cy2(int n):
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="mi">7</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">timeit</span><span class="p">(</span><span class="s2">&quot;sum_py(10**5)&quot;</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">timeit</span><span class="p">(</span><span class="s2">&quot;sum_cy(10**5)&quot;</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">timeit</span><span class="p">(</span><span class="s2">&quot;sum_cy2(10**5)&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">timeit</span><span class="p">(</span><span class="s2">"sum_py(10**5)"</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">timeit</span><span class="p">(</span><span class="s2">"sum_cy(10**5)"</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">timeit</span><span class="p">(</span><span class="s2">"sum_cy2(10**5)"</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>

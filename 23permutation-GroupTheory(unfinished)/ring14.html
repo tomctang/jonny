@@ -185,8 +185,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../Course_5U.html">5U - Ext III</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="../Course_MCS320Symbol.html">Symbolic Computation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Cryptohack.html">Cryptohack</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Course_LAFF.html">LAFF</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">CS &amp; Physics</span></p>
 <ul class="nav bd-sidenav">
@@ -401,7 +399,7 @@ The Theory of Fields
 </p>
 <p style='text-align: center;'>Initialization:  This cell MUST be evaluated first:</p><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;absalgtext2.sage&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">load</span><span class="p">(</span><span class="s1">'absalgtext2.sage'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -560,7 +558,7 @@ Since <em>Z</em><sub>3</sub> is a subfield of GF(9), we can view GF(9) as a vect
 so if we let <em>a</em> be a root of this polynomial, we can define GF(9) with the commands:<br><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">Field</span><span class="p">()</span>
 </pre></div>
@@ -603,7 +601,7 @@ So we could define GF(81) by telling <em>SageMath</em> that the generator <em>q<
 of GF(81) will satisfy.  Let us factor the above Conway polynomial in the field GF(9).<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"x"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -629,7 +627,7 @@ the new generator <em>b</em> will be the standard generator <em>a</em> of GF(9).
 The only factor that is in both factorizations is <em>x</em><sup>2</sup> + (<em>a</em> + 2)<em>x</em> + <em>a</em>.  So we know that <em>b</em> satisfies this polynomial, 
 so we can define <em>b</em><sup>2</sup> to be (1 + 2<em>a</em>)<em>b</em> + 2<em>a</em>.<div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"b"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -720,7 +718,7 @@ over <em>Z</em><sub>3</sub>, so we can say that GF(9) is a 2-dimensional extensi
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">a</span><span class="p">)</span>
 <span class="n">F</span> <span class="o">=</span> <span class="n">Field</span><span class="p">()</span>
 <span class="n">F</span>
@@ -814,7 +812,7 @@ Let <em>F</em> be the field of rational numbers, and let <em>f</em>(<em>x</em>) 
 <br>
 Next, we let a new variable <em>a</em> be a root to the equation <em>x</em><sup>3</sup> &minus; 2.  That is, we define <em>a</em><sup>3</sup> to be 2.<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -889,7 +887,7 @@ That is,
 Let us enter this fact into <em>SageMath</em>.<br><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="o">*</span><span class="n">a</span><span class="o">/</span><span class="mi">4</span> <span class="o">+</span> <span class="mi">1</span><span class="o">/</span><span class="mi">8</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1003,7 +1001,7 @@ construct a field for which <em>f</em>(<em>x</em>) factors <em>completely</em> i
 over the rationals.<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">"x"</span><span class="p">)</span>
 <span class="n">factor</span><span class="p">(</span><span class="n">x</span><span class="o">^</span><span class="mi">3</span> <span class="o">+</span> <span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1014,7 +1012,7 @@ The output is unchanged, indicating that the polynomial is irreducible.<br><br>
 <p>If <em>a</em> is one root of this polynomial, we can define ℚ(<em>a</em>) in <em>SageMath</em> as follows:<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span> <span class="n">a</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">a</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1035,7 +1033,7 @@ This shows that the polynomial factors completely in the field &#8474;(<em>a</em
 Note that the polynomial <em>x</em><sup>2</sup> + 4 <em>x</em> + 2 does not factor over the rationals.<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">"x"</span><span class="p">)</span>
 <span class="n">factor</span><span class="p">(</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1045,7 +1043,7 @@ Note that the polynomial <em>x</em><sup>2</sup> + 4 <em>x</em> + 2 does not fact
 See if this polynomial factors in the field &#8477;(&radic;<font style="text-decoration:overline">2</font>). First define the 
 field &#8477;(&radic;<font style="text-decoration:overline">2</font>) in <em>SageMath</em> with the commands:<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1057,8 +1055,8 @@ EXAMPLE:<br>
 Find a field for which <em>x</em><sup>3</sup> &minus; 2 factors completely.<br><br>
 One root is clearly <em>a</em> = &#8731;<font style="text-decoration:overline">2</font>, so we can define the field &#8474;(<em>a</em>) by the commands:<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">)</span>
-<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">"x"</span><span class="p">)</span>
+<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1079,7 +1077,7 @@ polynomial <em>x</em><sup>3</sup> + <em>x</em><sup>2</sup> &minus; 2 <em>x</em> 
 linear terms?  We can define a new element, <em>b</em>, to be a root of <em>x</em><sup>2</sup> + <em>a</em> <em>x</em> + <em>a</em><sup>2</sup>.  That 
 is, <em>b</em><sup>2</sup> must be &minus;<em>a</em><sup>2</sup> &minus; <em>a</em> <em>b</em>.<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"b"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1108,7 +1106,7 @@ A longer example of this process is the polynomial <em>x</em><sup>4</sup> &minus
 <p>We can verify that this is irreducible over the rational numbers with <em>SageMath</em>.<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">"x"</span><span class="p">)</span>
 <span class="n">factor</span><span class="p">(</span><span class="n">x</span><span class="o">^</span><span class="mi">4</span> <span class="o">-</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1117,7 +1115,7 @@ A longer example of this process is the polynomial <em>x</em><sup>4</sup> &minus
 <br>
 Let us force <em>a</em> to be a root of this polynomial<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">4</span><span class="p">,</span> <span class="n">a</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1134,7 +1132,7 @@ We can now factor <em>x</em><sup>4</sup> &minus; <em>x</em> + 1 in the field &#8
 <br>
 This leaves a third degree polynomial still unfactored, so we will define <em>b</em> to be a root of this third degree polynomial.<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"b"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">a</span><span class="o">^</span><span class="mi">3</span> <span class="o">-</span> <span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span> <span class="o">-</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1151,7 +1149,7 @@ We can factor <em>x</em><sup>4</sup> &minus; <em>x</em> + 1 over the field &#847
 <br>
 This still leaves an unfactored quadratic. Let <em>c</em> be a root of this quadratic.<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;c&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"c"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">c</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span> <span class="o">-</span> <span class="n">b</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="n">a</span><span class="o">*</span><span class="n">c</span> <span class="o">-</span> <span class="n">b</span><span class="o">*</span><span class="n">c</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1196,7 +1194,7 @@ Find the splitting field for the polynomial <em>x</em><sup>5</sup> − 5 <em>x</
 <p>We first show that this is irreducible over the rationals:<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">"x"</span><span class="p">)</span>
 <span class="n">factor</span><span class="p">(</span><span class="n">x</span><span class="o">^</span><span class="mi">5</span> <span class="o">-</span> <span class="mi">5</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">12</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1205,7 +1203,7 @@ Find the splitting field for the polynomial <em>x</em><sup>5</sup> − 5 <em>x</
 <br>
 Let us define a to be one root of this polynomial<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="o">*</span><span class="n">a</span> <span class="o">-</span> <span class="mi">12</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1223,7 +1221,7 @@ Can we factor <em>x</em><sup>5</sup> &minus; 5 <em>x</em> + 12 in the field &#84
 Rather than having an irreducible forth degree equation as we did in the polynomial <em>x</em><sup>5</sup> + 20 <em>x</em> + 16 the polynomial factored into 
 two irreducible quadratic equations.  Let us define <em>b</em> to be a root of the second of the two quadratics, since this one is simplier.<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"b"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">a</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="n">a</span><span class="o">^</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="n">b</span> <span class="o">-</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">a</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="n">a</span><span class="o">^</span><span class="mi">3</span> <span class="o">+</span> <span class="n">a</span><span class="o">^</span><span class="mi">4</span><span class="p">)</span><span class="o">*</span><span class="n">b</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1268,7 +1266,7 @@ at a few examples to see if we can determine a pattern.<br><br>
 <p>The ninth cyclotomic polynomial Φ<sub>9</sub>(<em>x</em>) is given as<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Cyclotomic</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Cyclotomic</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="s2">"x"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1276,8 +1274,8 @@ at a few examples to see if we can determine a pattern.<br><br>
 <br>
 If we can let <em>a</em> be a root of <em>x</em><sup>6</sup> + <em>x</em><sup>3</sup> + 1 by the commands<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">)</span>
-<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">"x"</span><span class="p">)</span>
+<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">6</span><span class="p">,</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">a</span><span class="o">^</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1307,7 +1305,7 @@ where <em>ϕ</em>(<em>n</em>) is Euler’s totient function.  In fact, the split
 an interesting splitting field.  Consider the polynomial <em>x</em><sup>4</sup> − 5 <em>x</em><sup>2</sup> + 6.  If we factor this over the rationals,<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s2">"x"</span><span class="p">)</span>
 <span class="n">factor</span><span class="p">(</span><span class="n">x</span><span class="o">^</span><span class="mi">4</span> <span class="o">-</span> <span class="mi">5</span><span class="o">*</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">6</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1319,8 +1317,8 @@ We find that this factors!  In fact, we can easily see all 4 roots: &plusmn;&rad
 is, <em>a</em> = &radic;<font style="text-decoration:overline">2</font>), we have the following 
 factorization in &#8474;(&radic;<font style="text-decoration:overline">2</font>).<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">)</span>
-<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">"x"</span><span class="p">)</span>
+<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 <span class="n">factor</span><span class="p">(</span><span class="n">x</span><span class="o">^</span><span class="mi">4</span> <span class="o">-</span> <span class="mi">5</span><span class="o">*</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">6</span><span class="p">)</span>
 </pre></div>
@@ -1330,7 +1328,7 @@ factorization in &#8474;(&radic;<font style="text-decoration:overline">2</font>)
 <br>
 The <em>x</em><sup>2</sup> &minus; 3 remains unfactored, as we would expect.  Thus, we need to define <em>b</em> to solve <em>x</em><sup>2</sup> &minus; 3 = 0,<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"b"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1357,10 +1355,10 @@ splitting fields.<br><br>
 <p>Let us begin by defining the splitting field of <em>x</em><sup>3</sup> − 2 as follows:<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">)</span>
-<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">"x"</span><span class="p">)</span>
+<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"b"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span> <span class="n">a</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1407,7 +1405,7 @@ defined the same field using a single extension of the element <em>w</em>, where
 <em>w</em> = <sup>6</sup>&radic;<font style="text-decoration:overline">&minus;108</font>.  This is done with the commands:<br><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;w&quot;</span><span class="p">)</span>
+<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"w"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">w</span><span class="o">^</span><span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">108</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1446,9 +1444,9 @@ element <em>w</em> such that the splitting field is ℚ(<em>w</em>).<br><br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"b"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1505,9 +1503,9 @@ we can take <em>y</em> = 1.  Then <em>w</em> = <em>u</em> + <em>y v</em> = &radi
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"b"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 <span class="n">SimpleExtension</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
 </pre></div>
@@ -1531,9 +1529,9 @@ element <em>w</em>.  But what is that element?<br><br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"b"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 <span class="n">SimpleExtension</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
 </pre></div>

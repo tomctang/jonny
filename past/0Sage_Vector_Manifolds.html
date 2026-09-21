@@ -187,8 +187,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../Course_5U.html">5U - Ext III</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="../Course_MCS320Symbol.html">Symbolic Computation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Cryptohack.html">Cryptohack</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Course_LAFF.html">LAFF</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">CS &amp; Physics</span></p>
 <ul class="nav bd-sidenav">
@@ -807,7 +805,7 @@ document.write(`
 <p>We introduce a point <span class="math notranslate nohighlight">\(p\in \mathbb{E}^3\)</span> via the generic SageMath syntax for creating an element from its parent (here <span class="math notranslate nohighlight">\(\mathbb{E}^3\)</span>), i.e. the call operator <code class="docutils literal notranslate"><span class="pre">()</span></code>, with the coordinates of the point as the first argument:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">E</span><span class="p">((</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">chart</span><span class="o">=</span><span class="n">cartesian</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;p&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">E</span><span class="p">((</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">chart</span><span class="o">=</span><span class="n">cartesian</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'p'</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -816,7 +814,7 @@ document.write(`
 <p>Actually, since the Cartesian coordinates are the default ones, the above writting is equivalent to</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">E</span><span class="p">((</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;p&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">E</span><span class="p">((</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">name</span><span class="o">=</span><span class="s1">'p'</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -847,7 +845,7 @@ document.write(`
 <p>A point defined from its spherical coordinates:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">q</span> <span class="o">=</span> <span class="n">E</span><span class="p">((</span><span class="mi">4</span><span class="p">,</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span><span class="n">pi</span><span class="p">),</span> <span class="n">chart</span><span class="o">=</span><span class="n">spherical</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;q&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">q</span> <span class="o">=</span> <span class="n">E</span><span class="p">((</span><span class="mi">4</span><span class="p">,</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span><span class="n">pi</span><span class="p">),</span> <span class="n">chart</span><span class="o">=</span><span class="n">spherical</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'q'</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -880,7 +878,7 @@ document.write(`
 <p>Let us define a scalar field on <span class="math notranslate nohighlight">\(\mathbb{E}^3\)</span> from its expression in Cartesian coordinates:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="n">E</span><span class="o">.</span><span class="n">scalar_field</span><span class="p">(</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="n">y</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="n">z</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;f&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="n">E</span><span class="o">.</span><span class="n">scalar_field</span><span class="p">(</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="n">y</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="n">z</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'f'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -948,7 +946,7 @@ document.write(`
 <p>Of course, we may define a scalar field from its coordinate expression in a chart that is not the default one:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">E</span><span class="o">.</span><span class="n">scalar_field</span><span class="p">(</span><span class="n">r</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">chart</span><span class="o">=</span><span class="n">spherical</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">E</span><span class="o">.</span><span class="n">scalar_field</span><span class="p">(</span><span class="n">r</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">chart</span><span class="o">=</span><span class="n">spherical</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'g'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -956,7 +954,7 @@ document.write(`
 <p>Instead of using the keyword argument <code class="docutils literal notranslate"><span class="pre">chart</span></code>, one can pass a dictionary as the first argument, with the chart as key:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">E</span><span class="o">.</span><span class="n">scalar_field</span><span class="p">({</span><span class="n">spherical</span><span class="p">:</span> <span class="n">r</span><span class="o">^</span><span class="mi">2</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">E</span><span class="o">.</span><span class="n">scalar_field</span><span class="p">({</span><span class="n">spherical</span><span class="p">:</span> <span class="n">r</span><span class="o">^</span><span class="mi">2</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s1">'g'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -974,7 +972,7 @@ document.write(`
 <p>Let us introduce a vector field on <span class="math notranslate nohighlight">\(\mathbb{E}^3\)</span> by its components in the Cartesian frame. Since the latter is the default vector frame on <span class="math notranslate nohighlight">\(\mathbb{E}^3\)</span>, it suffices to write:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v</span> <span class="o">=</span> <span class="n">E</span><span class="o">.</span><span class="n">vector_field</span><span class="p">(</span><span class="o">-</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">z</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;v&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v</span> <span class="o">=</span> <span class="n">E</span><span class="o">.</span><span class="n">vector_field</span><span class="p">(</span><span class="o">-</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">z</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'v'</span><span class="p">)</span>
 <span class="n">v</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -993,7 +991,7 @@ document.write(`
 <p>Let us provide <code class="docutils literal notranslate"><span class="pre">v</span></code> with some name, as above:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="s1">&#39;v&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="s1">'v'</span><span class="p">)</span>
 <span class="n">v</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -1190,12 +1188,12 @@ document.write(`
 <p>cf. <a class="reference external" href="http://doc.sagemath.org/html/en/reference/manifolds/sage/manifolds/differentiable/vectorfield.html">http://doc.sagemath.org/html/en/reference/manifolds/sage/manifolds/differentiable/vectorfield.html</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S2</span> <span class="o">=</span> <span class="n">Manifold</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;S^2&#39;</span><span class="p">)</span>
-<span class="n">U</span> <span class="o">=</span> <span class="n">S2</span><span class="o">.</span><span class="n">open_subset</span><span class="p">(</span><span class="s1">&#39;U&#39;</span><span class="p">)</span> <span class="c1"># the open set covered by spherical coordinates</span>
-<span class="n">XS</span><span class="o">.&lt;</span><span class="n">th</span><span class="p">,</span> <span class="n">ph</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">U</span><span class="o">.</span><span class="n">chart</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;th:(0,pi):\theta ph:(0,2*pi):\phi&#39;</span><span class="p">)</span>
-<span class="n">R3</span> <span class="o">=</span> <span class="n">Manifold</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;R^3&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S2</span> <span class="o">=</span> <span class="n">Manifold</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">'S^2'</span><span class="p">)</span>
+<span class="n">U</span> <span class="o">=</span> <span class="n">S2</span><span class="o">.</span><span class="n">open_subset</span><span class="p">(</span><span class="s1">'U'</span><span class="p">)</span> <span class="c1"># the open set covered by spherical coordinates</span>
+<span class="n">XS</span><span class="o">.&lt;</span><span class="n">th</span><span class="p">,</span> <span class="n">ph</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">U</span><span class="o">.</span><span class="n">chart</span><span class="p">(</span><span class="sa">r</span><span class="s1">'th:(0,pi):\theta ph:(0,2*pi):\phi'</span><span class="p">)</span>
+<span class="n">R3</span> <span class="o">=</span> <span class="n">Manifold</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">'R^3'</span><span class="p">)</span>
 <span class="n">X3</span><span class="o">.&lt;</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">R3</span><span class="o">.</span><span class="n">chart</span><span class="p">()</span>
-<span class="n">F</span> <span class="o">=</span> <span class="n">S2</span><span class="o">.</span><span class="n">diff_map</span><span class="p">(</span><span class="n">R3</span><span class="p">,</span> <span class="p">{(</span><span class="n">XS</span><span class="p">,</span> <span class="n">X3</span><span class="p">):</span> <span class="p">[</span><span class="n">sin</span><span class="p">(</span><span class="n">th</span><span class="p">)</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="n">ph</span><span class="p">),</span> <span class="n">sin</span><span class="p">(</span><span class="n">th</span><span class="p">)</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">ph</span><span class="p">),</span> <span class="n">cos</span><span class="p">(</span><span class="n">th</span><span class="p">)]},</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;F&#39;</span><span class="p">)</span>
+<span class="n">F</span> <span class="o">=</span> <span class="n">S2</span><span class="o">.</span><span class="n">diff_map</span><span class="p">(</span><span class="n">R3</span><span class="p">,</span> <span class="p">{(</span><span class="n">XS</span><span class="p">,</span> <span class="n">X3</span><span class="p">):</span> <span class="p">[</span><span class="n">sin</span><span class="p">(</span><span class="n">th</span><span class="p">)</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="n">ph</span><span class="p">),</span> <span class="n">sin</span><span class="p">(</span><span class="n">th</span><span class="p">)</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">ph</span><span class="p">),</span> <span class="n">cos</span><span class="p">(</span><span class="n">th</span><span class="p">)]},</span> <span class="n">name</span><span class="o">=</span><span class="s1">'F'</span><span class="p">)</span>
 <span class="n">F</span><span class="o">.</span><span class="n">display</span><span class="p">()</span> <span class="c1"># the standard embedding of S^2 into R^3</span>
 </pre></div>
 </div>
@@ -1685,16 +1683,16 @@ on U: (th, ph) |--&gt; (x, y, z) = (cos(ph)*sin(th), sin(ph)*sin(th), cos(th))
 <h1>Tensor fields, on sphere <span class="math notranslate nohighlight">\(S^2\)</span><a class="headerlink" href="#tensor-fields-on-sphere-s-2" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S2</span> <span class="o">=</span> <span class="n">Manifold</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;S^2&#39;</span><span class="p">)</span> <span class="c1"># the 2-dimensional sphere S^2</span>
-<span class="n">U</span> <span class="o">=</span> <span class="n">S2</span><span class="o">.</span><span class="n">open_subset</span><span class="p">(</span><span class="s1">&#39;U&#39;</span><span class="p">)</span> <span class="c1"># complement of the North pole</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S2</span> <span class="o">=</span> <span class="n">Manifold</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">'S^2'</span><span class="p">)</span> <span class="c1"># the 2-dimensional sphere S^2</span>
+<span class="n">U</span> <span class="o">=</span> <span class="n">S2</span><span class="o">.</span><span class="n">open_subset</span><span class="p">(</span><span class="s1">'U'</span><span class="p">)</span> <span class="c1"># complement of the North pole</span>
 <span class="n">c_xy</span><span class="o">.&lt;</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">U</span><span class="o">.</span><span class="n">chart</span><span class="p">()</span> <span class="c1"># stereographic coordinates from the North pole</span>
-<span class="n">V</span> <span class="o">=</span> <span class="n">S2</span><span class="o">.</span><span class="n">open_subset</span><span class="p">(</span><span class="s1">&#39;V&#39;</span><span class="p">)</span> <span class="c1"># complement of the South pole</span>
+<span class="n">V</span> <span class="o">=</span> <span class="n">S2</span><span class="o">.</span><span class="n">open_subset</span><span class="p">(</span><span class="s1">'V'</span><span class="p">)</span> <span class="c1"># complement of the South pole</span>
 <span class="n">c_uv</span><span class="o">.&lt;</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">V</span><span class="o">.</span><span class="n">chart</span><span class="p">()</span> <span class="c1"># stereographic coordinates from the South pole</span>
 <span class="n">S2</span><span class="o">.</span><span class="n">declare_union</span><span class="p">(</span><span class="n">U</span><span class="p">,</span> <span class="n">V</span><span class="p">)</span> <span class="c1"># S^2 is the union of U and V</span>
 <span class="n">xy_to_uv</span> <span class="o">=</span> \
     <span class="n">c_xy</span><span class="o">.</span><span class="n">transition_map</span><span class="p">(</span>
         <span class="n">c_uv</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span> <span class="o">/</span> <span class="p">(</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">^</span><span class="mi">2</span><span class="p">),</span> <span class="n">y</span> <span class="o">/</span> <span class="p">(</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">^</span><span class="mi">2</span><span class="p">)),</span> 
-        <span class="n">intersection_name</span><span class="o">=</span><span class="s1">&#39;W&#39;</span><span class="p">,</span> 
+        <span class="n">intersection_name</span><span class="o">=</span><span class="s1">'W'</span><span class="p">,</span> 
         <span class="n">restrictions1</span><span class="o">=</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">^</span><span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">,</span>
         <span class="n">restrictions2</span><span class="o">=</span><span class="n">u</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="n">v</span><span class="o">^</span><span class="mi">2</span> <span class="o">!=</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">uv_to_xy</span> <span class="o">=</span> <span class="n">xy_to_uv</span><span class="o">.</span><span class="n">inverse</span><span class="p">()</span>
@@ -1705,7 +1703,7 @@ on U: (th, ph) |--&gt; (x, y, z) = (cos(ph)*sin(th), sin(ph)*sin(th), cos(th))
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">S2</span><span class="o">.</span><span class="n">tensor_field</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;t&#39;</span><span class="p">);</span> <span class="n">t</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">S2</span><span class="o">.</span><span class="n">tensor_field</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'t'</span><span class="p">);</span> <span class="n">t</span>
 </pre></div>
 </div>
 </div>
@@ -1822,9 +1820,9 @@ Wall time: 1.12 s
 <p>Affine connection on a 3-dimensional manifold:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="n">Manifold</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="n">start_index</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="n">Manifold</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">'M'</span><span class="p">,</span> <span class="n">start_index</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">c_xyz</span><span class="o">.&lt;</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">M</span><span class="o">.</span><span class="n">chart</span><span class="p">()</span>
-<span class="n">nab</span> <span class="o">=</span> <span class="n">M</span><span class="o">.</span><span class="n">affine_connection</span><span class="p">(</span><span class="s1">&#39;nabla&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;\nabla&#39;</span><span class="p">);</span> <span class="n">nab</span>
+<span class="n">nab</span> <span class="o">=</span> <span class="n">M</span><span class="o">.</span><span class="n">affine_connection</span><span class="p">(</span><span class="s1">'nabla'</span><span class="p">,</span> <span class="sa">r</span><span class="s1">'\nabla'</span><span class="p">);</span> <span class="n">nab</span>
 </pre></div>
 </div>
 </div>
@@ -1923,7 +1921,7 @@ Wall time: 1.12 s
 <p>A simple vector field on <code class="docutils literal notranslate"><span class="pre">E</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v</span> <span class="o">=</span> <span class="n">E</span><span class="o">.</span><span class="n">vector_field</span><span class="p">(</span><span class="o">-</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;v&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v</span> <span class="o">=</span> <span class="n">E</span><span class="o">.</span><span class="n">vector_field</span><span class="p">(</span><span class="o">-</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'v'</span><span class="p">)</span>
 <span class="n">v</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -2275,7 +2273,7 @@ ph = arctan2(y, x)
 <p>Define a differentiable manifold of dimension 3 over <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="n">Manifold</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="n">latex_name</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;\mathcal</span><span class="si">{M}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">start_index</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="n">Manifold</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">'M'</span><span class="p">,</span> <span class="n">latex_name</span><span class="o">=</span><span class="sa">r</span><span class="s1">'\mathcal</span><span class="si">{M}</span><span class="s1">'</span><span class="p">,</span> <span class="n">start_index</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2290,7 +2288,7 @@ ph = arctan2(y, x)
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3-dimensional differentiable manifold M
-&lt;class &#39;sage.manifolds.differentiable.manifold.DifferentiableManifold_with_category&#39;&gt;
+&lt;class 'sage.manifolds.differentiable.manifold.DifferentiableManifold_with_category'&gt;
 </pre></div>
 </div>
 <div class="output text_html"><html>\(\displaystyle \mathcal{M}\)</html></div></div>
@@ -2383,7 +2381,7 @@ ph = arctan2(y, x)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;sage.symbolic.expression.Expression&#39;&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class 'sage.symbolic.expression.Expression'&gt;
 </pre></div>
 </div>
 <div class="output text_html"><html>\(\displaystyle \mathrm{True}\)</html></div></div>
@@ -2400,7 +2398,7 @@ ph = arctan2(y, x)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;sage.manifolds.chart_func.ChartFunctionRing_with_category.element_class&#39;&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class 'sage.manifolds.chart_func.ChartFunctionRing_with_category.element_class'&gt;
 </pre></div>
 </div>
 <div class="output text_html"><html>\(\displaystyle z^{3} + y^{2} + x\)</html></div></div>
@@ -2430,7 +2428,7 @@ ph = arctan2(y, x)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;sage.manifolds.chart_func.ChartFunctionRing_with_category.element_class&#39;&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class 'sage.manifolds.chart_func.ChartFunctionRing_with_category.element_class'&gt;
 </pre></div>
 </div>
 </div>
@@ -2479,7 +2477,7 @@ ph = arctan2(y, x)
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(x, y, z) |--&gt; cos(x)^2
 (x, y, z) ↦ cos(x)^2
 cos(x)^2
-&lt;class &#39;sage.symbolic.expression.Expression&#39;&gt;
+&lt;class 'sage.symbolic.expression.Expression'&gt;
 </pre></div>
 </div>
 <div class="output text_html"><html>\(\displaystyle \cos\left(x\right)^{2}\)</html></div></div>
@@ -2490,7 +2488,7 @@ cos(x)^2
 <p>Let us first consider an open subset of <span class="math notranslate nohighlight">\(M\)</span>, for instance the complement <span class="math notranslate nohighlight">\(U\)</span> of the region defined by <span class="math notranslate nohighlight">\(\lbrace y = 0, x \geq 0 \rbrace\)</span> (note that <code class="docutils literal notranslate"><span class="pre">(y!=0,</span> <span class="pre">x&lt;0)</span></code> stands for <span class="math notranslate nohighlight">\(y\neq 0\)</span> OR <span class="math notranslate nohighlight">\(x &lt; 0\)</span>; the condition <span class="math notranslate nohighlight">\(y\neq 0\)</span> AND <span class="math notranslate nohighlight">\(x&lt; 0\)</span> would have been written <code class="docutils literal notranslate"><span class="pre">[y!=0,</span> <span class="pre">x&lt;0]</span></code> instead):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">U</span> <span class="o">=</span> <span class="n">M</span><span class="o">.</span><span class="n">open_subset</span><span class="p">(</span><span class="s1">&#39;U&#39;</span><span class="p">,</span> <span class="n">coord_def</span><span class="o">=</span><span class="p">{</span><span class="n">X</span><span class="p">:</span> <span class="p">(</span><span class="n">y</span><span class="o">!=</span><span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)})</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">U</span> <span class="o">=</span> <span class="n">M</span><span class="o">.</span><span class="n">open_subset</span><span class="p">(</span><span class="s1">'U'</span><span class="p">,</span> <span class="n">coord_def</span><span class="o">=</span><span class="p">{</span><span class="n">X</span><span class="p">:</span> <span class="p">(</span><span class="n">y</span><span class="o">!=</span><span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)})</span>
 </pre></div>
 </div>
 </div>
@@ -2510,7 +2508,7 @@ cos(x)^2
 <p>EY: I found that the code doesn’t result in error if the choice of variable name on the LHS, <code class="docutils literal notranslate"><span class="pre">r,</span> <span class="pre">th,</span> <span class="pre">ph</span></code> do not match exactly the “string” name for the coordinate, “r, th, ph”. With respect to the “code” or what Python sees, it’s the LHS that gives the actual variable name to call.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Y</span><span class="o">.&lt;</span><span class="n">r</span><span class="p">,</span><span class="n">th</span><span class="p">,</span><span class="n">ph</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">U</span><span class="o">.</span><span class="n">chart</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;r:(0,+oo) th:(0,pi):\theta ph:(0,2*pi):\phi&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Y</span><span class="o">.&lt;</span><span class="n">r</span><span class="p">,</span><span class="n">th</span><span class="p">,</span><span class="n">ph</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">U</span><span class="o">.</span><span class="n">chart</span><span class="p">(</span><span class="sa">r</span><span class="s1">'r:(0,+oo) th:(0,pi):\theta ph:(0,2*pi):\phi'</span><span class="p">)</span>
 <span class="n">Y</span>
 </pre></div>
 </div>
@@ -3267,7 +3265,7 @@ NB: a failed report can reflect a mere lack of simplification.
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Y</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">ranges</span><span class="o">=</span><span class="p">{</span><span class="n">r</span><span class="p">:(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="n">th</span><span class="p">:(</span><span class="mi">0</span><span class="p">,</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span><span class="p">)},</span> <span class="n">number_values</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
-      <span class="n">color</span><span class="o">=</span><span class="p">{</span><span class="n">r</span><span class="p">:</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">th</span><span class="p">:</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">ph</span><span class="p">:</span><span class="s1">&#39;red&#39;</span><span class="p">},</span> <span class="n">aspect_ratio</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+      <span class="n">color</span><span class="o">=</span><span class="p">{</span><span class="n">r</span><span class="p">:</span><span class="s1">'blue'</span><span class="p">,</span> <span class="n">th</span><span class="p">:</span><span class="s1">'green'</span><span class="p">,</span> <span class="n">ph</span><span class="p">:</span><span class="s1">'red'</span><span class="p">},</span> <span class="n">aspect_ratio</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3878,7 +3876,7 @@ NB: a failed report can reflect a mere lack of simplification.
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">graph</span> <span class="o">=</span> <span class="n">X_U</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span>
-<span class="n">show</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">axes_labels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="s1">&#39;theta&#39;</span><span class="p">,</span> <span class="s1">&#39;phi&#39;</span><span class="p">])</span>
+<span class="n">show</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">axes_labels</span><span class="o">=</span><span class="p">[</span><span class="s1">'r'</span><span class="p">,</span> <span class="s1">'theta'</span><span class="p">,</span> <span class="s1">'phi'</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -4491,7 +4489,7 @@ NB: a failed report can reflect a mere lack of simplification.
 <p>A point on <span class="math notranslate nohighlight">\(M\)</span> is defined by its coordinates in a given chart:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">M</span><span class="o">.</span><span class="n">point</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">chart</span><span class="o">=</span><span class="n">X</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;p&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">M</span><span class="o">.</span><span class="n">point</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">chart</span><span class="o">=</span><span class="n">X</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'p'</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
 <span class="n">p</span>
 </pre></div>
@@ -4531,12 +4529,12 @@ True
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">q</span> <span class="o">=</span> <span class="n">M</span><span class="o">.</span><span class="n">point</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;q&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">q</span> <span class="o">=</span> <span class="n">M</span><span class="o">.</span><span class="n">point</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="n">name</span><span class="o">=</span><span class="s1">'q'</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">q</span> <span class="ow">in</span> <span class="n">U</span><span class="p">)</span>
 <span class="k">try</span><span class="p">:</span>
     <span class="n">q</span><span class="o">.</span><span class="n">coord</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">exc</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Error: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">exc</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>

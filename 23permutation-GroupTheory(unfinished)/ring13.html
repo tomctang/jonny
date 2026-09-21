@@ -187,8 +187,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../Course_5U.html">5U - Ext III</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="../Course_MCS320Symbol.html">Symbolic Computation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Cryptohack.html">Cryptohack</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Course_LAFF.html">LAFF</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">CS &amp; Physics</span></p>
 <ul class="nav bd-sidenav">
@@ -403,7 +401,7 @@ Finite Division Rings
 </p>
 <p style='text-align: center;'>Initialization:  This cell MUST be evaluated first:</p><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;absalgtext2.sage&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">load</span><span class="p">(</span><span class="s1">'absalgtext2.sage'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -425,7 +423,7 @@ in <em>SageMath</em> with the commands<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;i&quot;</span><span class="p">)</span>
+<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"i"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">i</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">K</span> <span class="o">=</span> <span class="n">Field</span><span class="p">();</span> <span class="n">K</span>
 </pre></div>
@@ -447,7 +445,7 @@ Find a connection between the field <em>K</em> and the polynomials in <em>Z</em>
 <p>We will restart with <em>Z</em><sub>3</sub>, and form a polynomial.<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="s2">"x"</span><span class="p">)</span>
 <span class="n">A</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span> <span class="n">A</span>
 </pre></div>
 </div>
@@ -494,7 +492,7 @@ but <em>x</em><sup>2</sup> + 1 factors in <em>Z</em><sub>5</sub>[<em>x</em>]: (<
 zero divisors to appear in the quotient ring.  Perhaps we should try using a polynomial that is irreducible in <em>Z</em><sub>5</sub>[<em>x</em>].  We first 
 define <em>Z</em><sub>5</sub> in <em>SageMath</em>.<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="s2">"x"</span><span class="p">)</span>
 <span class="n">Z5</span> <span class="o">=</span> <span class="n">Field</span><span class="p">();</span> <span class="n">Z5</span>
 </pre></div>
 </div>
@@ -518,7 +516,7 @@ is clear that
 <p style='text-align: center;'><em>w</em><sup>2</sup> = &minus;2 <em>w</em> &minus; 3.</p>
 Let us define an element <em>w</em> such that <em>w</em><sup>2</sup> = &minus;2 <em>w</em> &minus; 3 in <em>SageMath</em>.<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;w&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"w"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">w</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">w</span> <span class="o">-</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -583,7 +581,7 @@ The field formed in Proposition 13.1 is called the <em>extension field of K thro
 Repeat the process for a <em>third degree</em> polynomial in <em>Z</em><sub>3</sub>[<em>x</em>] that is irreducible.<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="s2">"x"</span><span class="p">)</span>
 <span class="n">Z3</span> <span class="o">=</span> <span class="n">Field</span><span class="p">();</span> <span class="n">Z3</span>
 </pre></div>
 </div>
@@ -613,7 +611,7 @@ EXPERIMENT:<br>
 to produce a multiplication table, and verification that your ring is a field.<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span>         <span class="p">)</span>
 <span class="n">R</span> <span class="o">=</span> <span class="n">Field</span><span class="p">()</span>
 <span class="n">R</span>
@@ -661,7 +659,7 @@ PROPOSITION 13.3<br></p>
 According to this proposition, it is impossible to find a field of order 6.   However, it is still possible to find a field of order 4.   Let us see if we can find 
 one.   Since a field of order 4 must have characteristic 2, let us begin by loading <em>Z</em><sub>2</sub>.<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s2">"x"</span><span class="p">)</span>
 <span class="n">Z2</span> <span class="o">=</span> <span class="n">Field</span><span class="p">()</span>
 <span class="n">Z2</span>
 </pre></div>
@@ -699,7 +697,7 @@ Reload the field of “complex numbers modulo 3”. <br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;i&quot;</span><span class="p">)</span>
+<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"i"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">i</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">K</span> <span class="o">=</span> <span class="n">Field</span><span class="p">()</span>
 <span class="n">MultTable</span><span class="p">(</span><span class="n">K</span><span class="p">)</span>
@@ -748,7 +746,7 @@ We can define the Frobenius automorphism in <em>SageMath</em>.  Let us begin by 
 polynomial <em>x</em><sup>4</sup> + <em>x</em><sup>3</sup> + 1 in <em>Z</em><sub>2</sub>[<em>x</em>].<br><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="n">a</span><span class="o">^</span><span class="mi">3</span> <span class="o">-</span> <span class="mi">1</span> <span class="p">)</span>
 <span class="n">K</span> <span class="o">=</span> <span class="n">Field</span><span class="p">();</span> <span class="n">K</span>
 </pre></div>
@@ -844,8 +842,8 @@ is really defining <em>Z<sub>p</sub></em>[<em>x</em>]/&lang;<em>f</em>(<em>x</em
 to determine 
 the polynomial.  For example, we could have defined the complex numbers mod 3 this way:<div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">)</span>
-<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;i&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">"x"</span><span class="p">)</span>
+<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"i"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -908,8 +906,8 @@ To understand the significance of having the generator of one field factor compl
 two fields of characteristic 2, one of order 4, and the other of order 8. We will use the polynomials <em>x</em><sup>2</sup> + <em>x</em> + 1 and 
 <em>x</em><sup>3</sup> + <em>x</em> + 1.<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
-<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s2">"x"</span><span class="p">)</span>
+<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">K</span> <span class="o">=</span> <span class="n">Field</span><span class="p">();</span> <span class="n">K</span>
 </pre></div>
@@ -933,8 +931,8 @@ two fields of characteristic 2, one of order 4, and the other of order 8. We wil
 <br>
 This time, one of the polynomials factor, while the other did not.  Let's try the other field.<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
-<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s2">"x"</span><span class="p">)</span>
+<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"b"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">x</span><span class="o">^</span><span class="mi">3</span> <span class="o">+</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">F</span> <span class="o">=</span> <span class="n">Field</span><span class="p">();</span> <span class="n">F</span>
 </pre></div>
@@ -964,7 +962,7 @@ would be to define <em>both</em> <em>a</em> and <em>b</em> using their respectiv
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -972,7 +970,7 @@ would be to define <em>both</em> <em>a</em> and <em>b</em> using their respectiv
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"b"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">3</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1049,7 +1047,7 @@ applications.<br><br>
 <p>To introduce the cyclotomic polynomials, we will begin by noticing a pattern in the following factorizations:<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s2">"x"</span><span class="p">)</span>
 <span class="n">factor</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1213,7 +1211,7 @@ To help understand this notation, let us look at the case where <em>n</em> = 12.
 <br>
 This can be seen in the factorization of <em>x</em><sup>12</sup> &minus; 1:<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s2">"x"</span><span class="p">)</span>
 <span class="n">factor</span><span class="p">(</span><span class="n">x</span><span class="o">^</span><span class="mi">12</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1228,14 +1226,14 @@ COROLLARY 13.4<br></p>
 <p />
 It is actually very easy to generate the <em>n</em><sup>th</sup> cyclotomic polynomial in <em>SageMath</em>. The commands<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Cyclotomic</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Cyclotomic</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="s2">"x"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Cyclotomic</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Cyclotomic</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="s2">"x"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1283,7 +1281,7 @@ quotient<br><br></p>
 <p>We can use <em>SageMath</em> to help us find a pattern. For example, <sup>(<em>x</em>⁴−1)</sup>⁄<sub>(<em>x</em>−1)</sub> is given by<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s2">"x"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1348,7 +1346,7 @@ two other second degree irreducible polynomials with a leading coefficient of 1 
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span> <span class="n">a</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
 <span class="n">K</span> <span class="o">=</span> <span class="n">Field</span><span class="p">();</span> <span class="n">K</span>
 </pre></div>
@@ -1365,7 +1363,7 @@ two other second degree irreducible polynomials with a leading coefficient of 1 
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"b"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">b</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
 <span class="n">F</span> <span class="o">=</span> <span class="n">Field</span><span class="p">();</span> <span class="n">F</span>
 </pre></div>
@@ -1455,7 +1453,7 @@ Conway polynomial is <em>x</em><sup>2</sup> + 2 x + 2.  We can use <em>SageMath<
 Hence, the <em>official</em> notation for GF(9) is<br><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">a</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">F</span> <span class="o">=</span> <span class="n">Field</span><span class="p">();</span> <span class="n">F</span>
 </pre></div>
@@ -1491,14 +1489,14 @@ Let us find the Conway polynomial of degree 4 over <em>Z</em><sub>3</sub>.<br><b
 <p>We can find all of the primitive polynomials of degree <em>n</em> = 4 by factoring Φ<sub>(<em>p</em></sub>ₙ<sub>−1)</sub>(<em>x</em>) in <em>Z</em><sub>3</sub>[<em>x</em>]. (See Problem 15.)<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">Cyclotomic</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span><span class="s2">&quot;x&quot;</span><span class="p">);</span> <span class="n">G</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">Cyclotomic</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span><span class="s2">"x"</span><span class="p">);</span> <span class="n">G</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">"x"</span><span class="p">)</span>
 <span class="n">factor</span><span class="p">(</span><span class="n">x</span><span class="o">^</span><span class="mi">32</span> <span class="o">-</span> <span class="n">x</span><span class="o">^</span><span class="mi">24</span> <span class="o">+</span> <span class="n">x</span><span class="o">^</span><span class="mi">16</span> <span class="o">-</span> <span class="n">x</span><span class="o">^</span><span class="mi">8</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1542,7 +1540,7 @@ the <strong>ConwayPolynomial</strong> command:<br><div class="cell docutils cont
 This means we can have the <em>official</em> definition of GF(81) as<br><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">4</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="o">^</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">F</span> <span class="o">=</span> <span class="n">Field</span><span class="p">();</span> <span class="n">F</span>
 </pre></div>
@@ -2309,7 +2307,7 @@ in <em>SageMath</em>.  Show that there is a subfield of order 9 in this field.  
 &sect;13.2 #20)<br> 
 First define <em>Z</em><sub>3</sub>[<em>x</em>] as follows:<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">"x"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2320,7 +2318,7 @@ all irreducible polynomials with a leading term of <em>x</em><sup>3</sup> are in
 &sect;13.2 #21)<br> 
 First define <em>Z</em><sub>2</sub>[<em>x</em>] as follows:<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s2">"x"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2330,7 +2328,7 @@ Then find the factorization of the polynomial <em>x</em><sup>2&#8309;</sup> &min
 &sect;13.3 #16)<br>
 First define <em>Z</em><sub>2</sub>[<em>x</em>] in <em>SageMath</em>,<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s2">"x"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2349,7 +2347,7 @@ this factorization give all of the irreducible polynomials of degree 5 over <em>
 &sect;13.3 #19)<br>
 First define <em>Z</em><sub>3</sub>[<em>x</em>] in <em>SageMath</em>,<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">"x"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

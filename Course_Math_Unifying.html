@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>LAFF &#8212; Jonny Workbook</title>
+    <title>Analysis &amp; Topology &#8212; Jonny Workbook</title>
   
   
   
@@ -60,13 +60,11 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Course_LAFF';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Course_Math_Unifying';</script>
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script src="_static/mermaid-init.js?v=512eb59e"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="MIT_CS6001-Python" href="past/Course_MIT6001Python.html" />
-    <link rel="prev" title="Cryptohack" href="Cryptohack.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -129,6 +127,8 @@
       
       
       
+        
+      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -179,7 +179,7 @@
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Math &amp; FP/Language</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="past/Alevel_math.html">A-level-math</a></li>
 <li class="toctree-l1"><a class="reference internal" href="past/Alevel_math_further.html">A-level-further</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Course_Lean.html">Lean</a></li>
@@ -187,8 +187,6 @@
 <li class="toctree-l1"><a class="reference internal" href="Course_5U.html">5U - Ext III</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="Course_MCS320Symbol.html">Symbolic Computation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Cryptohack.html">Cryptohack</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">LAFF</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">CS &amp; Physics</span></p>
 <ul class="nav bd-sidenav">
@@ -279,7 +277,7 @@
       
       
       
-      <li><a href="_sources/Course_LAFF.ipynb" target="_blank"
+      <li><a href="_sources/Course_Math_Unifying.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -363,7 +361,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>LAFF</h1>
+    <h1>Analysis & Topology</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -373,9 +371,16 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Analysis &amp; Topology</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#graph-theory">Graph Theory</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#laff">LAFF</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#primary">Primary: ??</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fast-matrix">Fast Matrix</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#alaff">ALAFF</a></li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -386,7 +391,215 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="laff">
+  <section id="analysis-topology">
+<h1>Analysis &amp; Topology<a class="headerlink" href="#analysis-topology" title="Link to this heading">#</a></h1>
+<p>Source: <a class="reference external" href="https://www.youtube.com/live/ymA1-y3p098?si=40ObsOQbRQ2je8P5">UNSW_CPMSoc_MATH3611_Revision</a></p>
+<ul class="simple">
+<li><p>Comparing sizes of sets</p>
+<ul>
+<li><p>Injective map <span class="math notranslate nohighlight">\(\implies|A|\leq|B|\)</span></p></li>
+<li><p>Surjective map <span class="math notranslate nohighlight">\(\implies|A|\geq|B|\)</span></p></li>
+<li><p>Bijective map <span class="math notranslate nohighlight">\(\implies|A|=|B|\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(|A|\leq|B|\)</span> and <span class="math notranslate nohighlight">\(|A|\neq|B|\implies|A|&lt;|B|\)</span></p></li>
+<li><p>Schroder-Bernstein theorem: <span class="math notranslate nohighlight">\(|A|\leq|B|\)</span> and <span class="math notranslate nohighlight">\(|B|\leq|A|\implies|A|=|B|\)</span></p></li>
+<li><p>Transitivity: <span class="math notranslate nohighlight">\(|A|\leq|B|\)</span> and <span class="math notranslate nohighlight">\(|B|\leq|C|\implies|A|\leq|C|\)</span></p></li>
+</ul>
+</li>
+<li><p>Axiom of choice: If <span class="math notranslate nohighlight">\(\{S_i\}_{i\in I}\)</span> is a non-empty collection of non-empty sets, the Cartesian product <span class="math notranslate nohighlight">\(\prod_{i\in I}S_i\)</span> is also non-empty.</p></li>
+<li><p>Countability</p>
+<ul>
+<li><p>Countable: <span class="math notranslate nohighlight">\(|S|\leq|\N|\)</span></p></li>
+<li><p>Finite: <span class="math notranslate nohighlight">\(|S|&lt;|\N|\)</span></p></li>
+<li><p>Countably infinite: <span class="math notranslate nohighlight">\(|S|=|\N|\)</span></p></li>
+<li><p>Uncountable: <span class="math notranslate nohighlight">\(|S|&gt;|\N|\)</span></p></li>
+<li><p>Dedekind-infinite: There exists a bijection from <span class="math notranslate nohighlight">\(S\)</span> to a proper subset of itself, otherwise, Dedekind-finite.</p>
+<ul>
+<li><p>A set if Dedekind-finite iff it is finite.</p></li>
+</ul>
+</li>
+<li><p>If <span class="math notranslate nohighlight">\(\{S_i\}^n_{i=1}\)</span> is a family of countable sets, <span class="math notranslate nohighlight">\(S=\prod_{i=1}^nS_i\)</span> is also countable.</p></li>
+<li><p>Cantor’s theorem: For all sets <span class="math notranslate nohighlight">\(S\)</span>, <span class="math notranslate nohighlight">\(|S|&lt;|\mathcal P(S)|\)</span></p></li>
+</ul>
+</li>
+</ul>
+<p>Metric spaces: A function <span class="math notranslate nohighlight">\(d:X\times X\rightarrow[0,\infty)\)</span> where <span class="math notranslate nohighlight">\(X\)</span> is a non-empty set is a metric if it satisfies these conditions.</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(d(x,y)=0\iff x=y\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(d(x,y)=d(y,x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(d(x,y)\leq d(x,z)+d(z,y)\)</span></p></li>
+</ol>
+<ul>
+<li><p>Example metrics</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(p\)</span>-metric(<span class="math notranslate nohighlight">\(\R^n, p\geq1\)</span>): <span class="math notranslate nohighlight">\(\large d(x,y)=(\sum_{k=1}^n|x_k-y_k|^p)^\frac1p\)</span></p></li>
+<li><p>Discrete metric: <span class="math notranslate nohighlight">\(d(x,y)=\begin{cases}0&amp;\text{if }x=y\\1&amp;\text{otherwise}\end{cases}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(d_\infty\)</span> metric(<span class="math notranslate nohighlight">\(\R^n\)</span>): <span class="math notranslate nohighlight">\(d_\infty(x,y)=\sup_{1\leq k\leq n}|x_k-y_k|\)</span></p></li>
+</ul>
+</li>
+<li><p>Metric inequalities</p>
+<ul class="simple">
+<li><p>Minkowski’s inequality(triangle inequality for <span class="math notranslate nohighlight">\(p\)</span>-metric): <span class="math notranslate nohighlight">\(d_p(x,y)\leq d_p(x,z)+d_p(z,y)\)</span> for <span class="math notranslate nohighlight">\(p\geq1\quad x,y,z\in\R^n\)</span> or <span class="math notranslate nohighlight">\(X=\R^n\)</span></p></li>
+<li><p>Hölder’s inequality: <span class="math notranslate nohighlight">\(\large|\sum_{i=1}^nx_iy_i|\leq(\sum_{i=1}^n|x_i|^p)^\frac1p(\sum_{i=1}^n|y_i|^q)^\frac1q\)</span></p></li>
+</ul>
+</li>
+<li><p>Convergence: For a metric space <span class="math notranslate nohighlight">\((X,D)\)</span>, <span class="math notranslate nohighlight">\(\{x_k\}^\infty_{k=1}\)</span> converges to <span class="math notranslate nohighlight">\(x\)</span> if <span class="math notranslate nohighlight">\(d(x_k,x)\rightarrow0\)</span> as <span class="math notranslate nohighlight">\(k\rightarrow\infty\)</span> and <span class="math notranslate nohighlight">\(\{x_k\}^\infty_{k=1}\subseteq X\)</span> and that <span class="math notranslate nohighlight">\(x\in X\)</span>.</p>
+<ul class="simple">
+<li><p>Note that limits in a metric space are unique.</p></li>
+</ul>
+</li>
+<li><p>Classifying Points</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\epsilon\)</span>-ball(centred at <span class="math notranslate nohighlight">\(x_0\)</span>): <span class="math notranslate nohighlight">\(B(x_0,\epsilon)=\{x\in X:d(x_0,x)&lt;\epsilon\}\)</span></p></li>
+<li><p>Suppose <span class="math notranslate nohighlight">\((X,d)\)</span> is a metric space, <span class="math notranslate nohighlight">\(Y\subseteq X\quad x_0\in Y\)</span>.</p></li>
+<li><p>Interior point: <span class="math notranslate nohighlight">\(B(x_0,\epsilon)\subseteq Y\)</span> for <span class="math notranslate nohighlight">\(\epsilon&gt;0\)</span></p></li>
+<li><p>Boundary point: <span class="math notranslate nohighlight">\(B(x_0,\epsilon)\cap Y\neq\emptyset\)</span> and <span class="math notranslate nohighlight">\(B(x_0,\epsilon)\cap X\backslash Y\neq\emptyset\)</span></p></li>
+<li><p>Limit point: <span class="math notranslate nohighlight">\(x_0\)</span> if every <span class="math notranslate nohighlight">\(B(x_0,\epsilon)\)</span> contains a point of <span class="math notranslate nohighlight">\(Y\)</span> different from <span class="math notranslate nohighlight">\(x_0\)</span>.</p></li>
+</ul>
+</li>
+<li><p>Boundedness: <span class="math notranslate nohighlight">\(\emptyset\neq Y\subset X\)</span> is bounded for metric space $(X,d) if…</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(Y\subseteq B(x,R(x))\)</span> if there exists <span class="math notranslate nohighlight">\(R(x)&gt;0\)</span> for every <span class="math notranslate nohighlight">\(x\in X\)</span>.</p></li>
+<li><p>There exists <span class="math notranslate nohighlight">\(y\in Y\)</span> and <span class="math notranslate nohighlight">\(R&gt;0\)</span> such that <span class="math notranslate nohighlight">\(Y\subseteq B(y,R)\)</span>.</p></li>
+<li><p>There exists <span class="math notranslate nohighlight">\(R&gt;0\)</span> such that <span class="math notranslate nohighlight">\(d(y_1,y_2)&lt;R\)</span> for all <span class="math notranslate nohighlight">\(y_1,y_2\in Y\)</span>.</p></li>
+</ol>
+</li>
+<li><p>Open sets: Set that contains only its interior points or contains no boundary points.</p></li>
+<li><p>Closed sets: <span class="math notranslate nohighlight">\(X\backslash Y\)</span> is open or <span class="math notranslate nohighlight">\(Y\)</span> contains all of its boundary or limit points.</p></li>
+<li><p>Continuity: Suppose <span class="math notranslate nohighlight">\(f: X\rightarrow Y\)</span> where <span class="math notranslate nohighlight">\(x,y\)</span> are metric spaces.</p>
+<ol class="arabic simple">
+<li><p>Continuous at <span class="math notranslate nohighlight">\(x_0\in X\)</span> if there exist <span class="math notranslate nohighlight">\(\delta&gt;0\)</span> for all <span class="math notranslate nohighlight">\(\epsilon&gt;0\)</span> such that <span class="math notranslate nohighlight">\(d_X(x,x_0)&lt;\delta\implies d_Y(f(x),f(x_0))&lt;\epsilon\)</span>.</p></li>
+<li><p>Continous on <span class="math notranslate nohighlight">\(X\)</span> if continous at every point of <span class="math notranslate nohighlight">\(X\)</span>.</p></li>
+</ol>
+</li>
+<li><p>Open set continuity: <span class="math notranslate nohighlight">\(f: X\rightarrow Y\)</span> is continous on <span class="math notranslate nohighlight">\(X\iff f^{-1}(U)\)</span> is an open set in <span class="math notranslate nohighlight">\((X,d_x)\)</span> for every open set <span class="math notranslate nohighlight">\(U\)</span> on <span class="math notranslate nohighlight">\((Y,d_Y)\)</span></p></li>
+<li><p>Normed space: A real vector space <span class="math notranslate nohighlight">\(V\)</span> is a norm if…</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(||v||\geq0\)</span> for all <span class="math notranslate nohighlight">\(v\in V\)</span> and <span class="math notranslate nohighlight">\(||v||=0\iff v=0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(||\lambda v||=|\lambda|||v||\)</span> for all <span class="math notranslate nohighlight">\(\lambda\in\R,v\in V\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(||u+v||\geq||u||+||v||\)</span> for all <span class="math notranslate nohighlight">\(u,v\in V\)</span></p></li>
+</ol>
+<ul class="simple">
+<li><p>Setting <span class="math notranslate nohighlight">\(d(u,v)=||u-v||\)</span> gives us a metric on <span class="math notranslate nohighlight">\(V\)</span>.</p></li>
+</ul>
+</li>
+<li><p>Inner product(on vector space <span class="math notranslate nohighlight">\(V\)</span>): <span class="math notranslate nohighlight">\(\langle.,.\rangle:V\times V\rightarrow\R\)</span> such that</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\langle \langle\langle\langle\langle\rangle\rangle\rangle\rangle v,v\rangle\geq0\)</span> for all <span class="math notranslate nohighlight">\(v\in V\)</span> and <span class="math notranslate nohighlight">\(\langle v,v\rangle=0\iff v=0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\langle\lambda v,u\rangle=\lambda\langle v,u\rangle\)</span> for all <span class="math notranslate nohighlight">\(\lambda\in\R,~u,v\in\R\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\langle u,v\rangle=\langle v,u\rangle\)</span> for all <span class="math notranslate nohighlight">\(u,v\in V\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\langle u+v,w\rangle=\langle u,w\rangle+\langle v,w\rangle\)</span> for all <span class="math notranslate nohighlight">\(u,v,w\in V\)</span></p></li>
+</ol>
+<ul class="simple">
+<li><p>Setting <span class="math notranslate nohighlight">\(||v||=\sqrt{\langle v,v\rangle}\)</span> gives us a norm on <span class="math notranslate nohighlight">\(V\)</span>.</p></li>
+</ul>
+</li>
+<li><p>Cauchy sequence: A sequence in metric space <span class="math notranslate nohighlight">\((X,d)~~\{x_k\}_{k=1}^\infty\)</span> is a Cauchy sequence if for all <span class="math notranslate nohighlight">\(\epsilon&gt;0\)</span> there exists <span class="math notranslate nohighlight">\(K\)</span> such that for all <span class="math notranslate nohighlight">\(k,l\geq K,d(x_k,x_l)&lt;\epsilon\)</span></p></li>
+<li><p>Completeness:</p></li>
+</ul>
+</section>
+<section id="graph-theory">
+<h1>Graph Theory<a class="headerlink" href="#graph-theory" title="Link to this heading">#</a></h1>
+<p>Source: <a class="reference external" href="https://www.youtube.com/live/5vnqAbRU7j8?si=XzPpjUIwGD5HenD-">UNSW_CPMSoc_workshop</a></p>
+<p>Graph: Collection of vertices <span class="math notranslate nohighlight">\(v\in V\)</span> and edges <span class="math notranslate nohighlight">\(e\in E\)</span>.</p>
+<ul class="simple">
+<li><p>Simple graphs: No loops and multiple edges between 2 vertices.</p></li>
+<li><p>Multi graph: Can have loops and multiple edges.</p></li>
+<li><p>Cycle(<span class="math notranslate nohighlight">\(C_n\)</span>): <span class="math notranslate nohighlight">\(n\)</span> vertices connected by cycle of edges.</p></li>
+<li><p>Complete(<span class="math notranslate nohighlight">\(K_n\)</span>): <span class="math notranslate nohighlight">\(n\)</span> vertices connected by every possible edge such that graph is simple.</p></li>
+<li><p>Tree(<span class="math notranslate nohighlight">\(T_n\)</span>): Undirected graph with no cycle.</p></li>
+<li><p>Hypercube(<span class="math notranslate nohighlight">\(Q_n\)</span>): <span class="math notranslate nohighlight">\(2^n\)</span> vertices where each element is represented as element of <span class="math notranslate nohighlight">\(\{0,1\}^n\)</span> with adjacent vertices differing by <span class="math notranslate nohighlight">\(1\)</span> pos.</p></li>
+<li><p>Bipartite graph: Edges map between <span class="math notranslate nohighlight">\(2\)</span> disjoint vertex sets.</p>
+<ul>
+<li><p>We can think of a graph that has colouring such that there are <span class="math notranslate nohighlight">\(2\)</span> colours and <span class="math notranslate nohighlight">\(2\)</span> vertices with the same colour are not connected.</p></li>
+<li><p>A complete bipartite graph has as many edges as possible.</p></li>
+</ul>
+</li>
+<li><p>Degree(of vertex): Number of edges connected to that vertex.</p>
+<ul>
+<li><p>Handshaking lemma: Sum of degrees of vertices is twice the number of edges. This comes from the fact the every edge has exactly <span class="math notranslate nohighlight">\(2\)</span> endpoints.</p>
+<ul>
+<li><p>For graphs with regions: <span class="math notranslate nohighlight">\(2|E|=\sum_{r\in R}\deg(r)\)</span> where <span class="math notranslate nohighlight">\(\deg(r)\)</span> is the number of edges surrounding <span class="math notranslate nohighlight">\(r\)</span>.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Pendant vertex: Vertex connected by only <span class="math notranslate nohighlight">\(1\)</span> edge.</p></li>
+<li><p>Graph complment(<span class="math notranslate nohighlight">\(\bar G\)</span>): Transformation of <span class="math notranslate nohighlight">\(G\)</span> such that all the edges are all possible edges not in <span class="math notranslate nohighlight">\(G\)</span>.</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(|E(G)|+|E(\bar G)|=|E(K_n)|\)</span></p></li>
+</ul>
+</li>
+<li><p>Subgraph(<span class="math notranslate nohighlight">\(G'\)</span>): Graph with <span class="math notranslate nohighlight">\(V(G')\subseteq V(G)\)</span> and same for edges.</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(G'\)</span> still must have a graph.</p></li>
+<li><p>We can have vertices that don’t have any edges even when they have edges in <span class="math notranslate nohighlight">\(G\)</span>.</p></li>
+<li><p>Vertex induced subgraph(<span class="math notranslate nohighlight">\(G[S]\)</span>): <span class="math notranslate nohighlight">\(G\)</span> such that edges are exactly those with endpoints in the subset of vertices <span class="math notranslate nohighlight">\(S\)</span>.</p></li>
+</ul>
+</li>
+<li><p>Neighbourhood(<span class="math notranslate nohighlight">\(N_g\)</span>): Set of all vertices adjacent to <span class="math notranslate nohighlight">\(v\)</span>.</p>
+<ul>
+<li><p>In the same sense, we can define a neighbourhood of a set of vertices.</p></li>
+</ul>
+</li>
+<li><p>Isomorphism(<span class="math notranslate nohighlight">\(\cong\)</span>): Transformation <span class="math notranslate nohighlight">\(p: X\rightarrow Y\)</span> such that <span class="math notranslate nohighlight">\(p(x)=p(f(X))\)</span> where <span class="math notranslate nohighlight">\(f\)</span> is an invariant.</p>
+<ul>
+<li><p>For example, we can choose the invariant to be structure, allowing us to bend the graphs.</p></li>
+</ul>
+</li>
+<li><p>Planar graph: Graph such that only intersections are endpoints.</p>
+<ul>
+<li><p>We allow bent edges to avoid intersections without endpoints because they are isomorphic.</p></li>
+<li><p>Dual of planar graph(also dual graph): Transformation where regions(<span class="math notranslate nohighlight">\(r\)</span>) become vertices(<span class="math notranslate nohighlight">\(v\)</span>) and edges(<span class="math notranslate nohighlight">\(e\)</span>) form between <span class="math notranslate nohighlight">\(r\)</span> based on the number of edges separating them.</p></li>
+</ul>
+</li>
+</ul>
+<p>Euler formula: <span class="math notranslate nohighlight">\(v-e+r=2\)</span> for connected planar multigraphs.</p>
+<ul class="simple">
+<li><p>Kuratowski’s Theorem: <span class="math notranslate nohighlight">\(G\)</span> is planar <span class="math notranslate nohighlight">\(\iff\)</span> <span class="math notranslate nohighlight">\(G\)</span> does not have <span class="math notranslate nohighlight">\(K_{3,3}\)</span> or <span class="math notranslate nohighlight">\(K_5\)</span> as subgraph or subdivision.</p>
+<ul>
+<li><p>Subdivision: Graph with extra intermediate vertices.</p></li>
+</ul>
+</li>
+<li><p>Hamiltonian graph: Path that visits every vertex of a graph exactly once. We can use backtracking for small graphs.</p></li>
+<li><p>Euler trail: Travels along every edge exactly once.</p>
+<ul>
+<li><p>Euler tour: Euler trail that returns to the same starting point.</p></li>
+<li><p>A closed Euler tour exists when every vertex has an even degree.</p></li>
+<li><p>An euler trail exists when there are <span class="math notranslate nohighlight">\(2\)</span> vertices with an odd degree.</p></li>
+<li><p>If there are more vertices with an odd degree(e.g. Konigsberg bridges), there is no Euler trail.</p></li>
+</ul>
+</li>
+<li><p>Spanning tree: Subgraph of <span class="math notranslate nohighlight">\(G\)</span> that is a tree that connects every vertex.</p>
+<ul>
+<li><p>Minimum spanning tree: Such a tree that minimises weight/cost.</p></li>
+</ul>
+</li>
+<li><p>Weighted graph: Has numbers on the edges that may represent distance/time/cost.</p></li>
+<li><p>Dijkstra’s algorithm: Greedy algorithm that finds the minimum travel time between <span class="math notranslate nohighlight">\(2\)</span> vertices.</p>
+<ul>
+<li><p>Negative weights require different algorithms.</p></li>
+</ul>
+</li>
+<li><p>Clique: Set of vertices where every vertex is connected to every other vertex in the clique by edges in the graph.</p></li>
+<li><p>Triangle free graph: Graph without a cycle length <span class="math notranslate nohighlight">\(3\)</span>.</p>
+<ul>
+<li><p>Mantel’s theorem: Triangle free graph with <span class="math notranslate nohighlight">\(n\)</span> vertices has at most <span class="math notranslate nohighlight">\(\large\lfloor\frac{n^2}4\rfloor\)</span> edges, equality iff the graph is <span class="math notranslate nohighlight">\(\large K_{\lfloor\frac n2\rfloor\lceil\frac n2\rceil}\)</span></p></li>
+<li><p>Turan’s theorem: Graph with <span class="math notranslate nohighlight">\(n\)</span> vertices with cliques with at most <span class="math notranslate nohighlight">\(r\)</span> vertices has at most <span class="math notranslate nohighlight">\(\large\lfloor(1-\frac1r)\frac{n^2}2\rfloor\)</span> edges.</p>
+<ul>
+<li><p>This is a generalization of Mantel’s theorem and it is the case where <span class="math notranslate nohighlight">\(r=2\)</span>.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Matching(<span class="math notranslate nohighlight">\(M\subset E(G)\)</span>): Any set of edges <span class="math notranslate nohighlight">\(e\in G\)</span> such that no <span class="math notranslate nohighlight">\(2\)</span> edges share an endpoint.</p>
+<ul class="simple">
+<li><p>Perfect matching: Matching covering every vertex in <span class="math notranslate nohighlight">\(G\)</span>.</p></li>
+<li><p>M-exposed matching: There is a <span class="math notranslate nohighlight">\(v\in G\)</span> such that there is no edge of <span class="math notranslate nohighlight">\(v\)</span> in <span class="math notranslate nohighlight">\(M\)</span>.</p></li>
+<li><p>Hall’s Theorem: <span class="math notranslate nohighlight">\(G=(X,Y,E)\)</span> where <span class="math notranslate nohighlight">\(G\)</span> is a bipartite graph where <span class="math notranslate nohighlight">\(E=e(G)\)</span> only connect <span class="math notranslate nohighlight">\(x\in X\)</span> to <span class="math notranslate nohighlight">\(y\in Y\)</span>. Define <span class="math notranslate nohighlight">\(S\subseteq X\)</span> as the set of vertices in <span class="math notranslate nohighlight">\(Y\)</span> adjacent to <span class="math notranslate nohighlight">\(X\)</span>. There exists a perfect matching <span class="math notranslate nohighlight">\(M\)</span> for all <span class="math notranslate nohighlight">\(S\subseteq X\iff|\Gamma(S)|\geq|S|\)</span></p></li>
+</ul>
+</section>
+<section id="laff">
 <h1>LAFF<a class="headerlink" href="#laff" title="Link to this heading">#</a></h1>
 <p><strong>Population Dynamics in Endangered Marsupial Breeding</strong></p>
 <p><strong>Context</strong>:
@@ -403,7 +616,7 @@ A wildlife conservation sanctuary in New South Wales operates a specialized bree
 <li><p>To analyze the long-term behavior of the colony (Hints: system’s characteristic equation &amp; eigen).</p></li>
 <li><p>Calculate the long-term annual growth rate of the total wallaby population and find the steady-state ratio of mature adults to juveniles as time approaches infinity.</p></li>
 </ul>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>%%{init: {  &quot;flowchart&quot;: { &quot;nodeSpacing&quot;: 15,  &quot;rankSpacing&quot;: 15,   &quot;padding&quot;: 5 }, &#39;themeTuning&#39;: &#39;safe&#39;, &#39;themeVariables&#39;: { &#39;fontSize&#39;: &#39;12px&#39; }}}%%
+<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>%%{init: {  "flowchart": { "nodeSpacing": 15,  "rankSpacing": 15,   "padding": 5 }, 'themeTuning': 'safe', 'themeVariables': { 'fontSize': '12px' }}}%%
 flowchart LR
     CP[] --&gt; eig[]
 </pre></div>
@@ -411,29 +624,29 @@ flowchart LR
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1. LA for Fibonnaci series</span>
-<span class="n">var</span><span class="p">(</span><span class="s1">&#39;x lambda_var n&#39;</span><span class="p">)</span>
+<span class="n">var</span><span class="p">(</span><span class="s1">'x lambda_var n'</span><span class="p">)</span>
 <span class="n">A</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">(</span><span class="n">SR</span><span class="p">,</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span>
-<span class="n">show</span><span class="p">(</span><span class="s2">&quot;Transition Matrix&quot;</span><span class="p">,</span> <span class="n">A</span><span class="p">)</span>
+<span class="n">show</span><span class="p">(</span><span class="s2">"Transition Matrix"</span><span class="p">,</span> <span class="n">A</span><span class="p">)</span>
 
 <span class="c1"># 2. Characteristic Polynomial</span>
 <span class="n">char_poly</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">characteristic_polynomial</span><span class="p">(</span><span class="n">lambda_var</span><span class="p">)</span>
-<span class="n">show</span><span class="p">(</span><span class="s2">&quot;Characteristic Polynomial: &quot;</span><span class="p">,</span> <span class="n">char_poly</span><span class="p">,</span><span class="s2">&quot; = 0&quot;</span><span class="p">)</span>
+<span class="n">show</span><span class="p">(</span><span class="s2">"Characteristic Polynomial: "</span><span class="p">,</span> <span class="n">char_poly</span><span class="p">,</span><span class="s2">" = 0"</span><span class="p">)</span>
 
 <span class="c1"># 3. Eigenvalues</span>
 <span class="n">eigenvals</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">eigenvalues</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">eigenvals</span><span class="p">):</span>
-    <span class="n">show</span><span class="p">(</span><span class="s2">&quot;Eigenvalue:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;λ_</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2"> =&quot;</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
+    <span class="n">show</span><span class="p">(</span><span class="s2">"Eigenvalue:"</span><span class="p">,</span> <span class="sa">f</span><span class="s2">"λ_</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2"> ="</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
 
 <span class="c1"># 4. Eigenvector matrix P and diagonal matrix D</span>
 <span class="n">D</span><span class="p">,</span> <span class="n">P</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">eigenmatrix_right</span><span class="p">()</span>
-<span class="n">show</span><span class="p">(</span><span class="s2">&quot;Eigenvector matrix P:&quot;</span><span class="p">,</span> <span class="n">P</span><span class="p">)</span>
+<span class="n">show</span><span class="p">(</span><span class="s2">"Eigenvector matrix P:"</span><span class="p">,</span> <span class="n">P</span><span class="p">)</span>
 
 <span class="c1"># 5. Compute D^n and closed-form expression </span>
 <span class="n">D_n</span> <span class="o">=</span> <span class="n">diagonal_matrix</span><span class="p">([</span><span class="n">D</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">^</span><span class="n">n</span><span class="p">,</span> <span class="n">D</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">^</span><span class="n">n</span><span class="p">])</span>
 <span class="n">A_n</span> <span class="o">=</span> <span class="n">P</span> <span class="o">*</span> <span class="n">D_n</span> <span class="o">*</span> <span class="n">P</span><span class="o">.</span><span class="n">inverse</span><span class="p">()</span>  <span class="c1"># A^n = P * D^n * P^-1</span>
 <span class="n">v0</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="n">SR</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>      <span class="c1"># Initial state [F_1, F_0]^T = [1, 0]^T</span>
 <span class="n">F_n</span> <span class="o">=</span> <span class="p">(</span><span class="n">A_n</span> <span class="o">*</span> <span class="n">v0</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>          <span class="c1"># A^n * v0 _ Second component (index 1) yields F_n</span>
-<span class="n">show</span><span class="p">(</span><span class="s2">&quot;General term formula (Binet):&quot;</span><span class="p">,</span> <span class="n">F_n</span><span class="o">.</span><span class="n">simplify_full</span><span class="p">())</span>
+<span class="n">show</span><span class="p">(</span><span class="s2">"General term formula (Binet):"</span><span class="p">,</span> <span class="n">F_n</span><span class="o">.</span><span class="n">simplify_full</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -441,29 +654,29 @@ flowchart LR
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1. LA for Pell series</span>
-<span class="n">var</span><span class="p">(</span><span class="s1">&#39;x lambda_var n&#39;</span><span class="p">)</span>
+<span class="n">var</span><span class="p">(</span><span class="s1">'x lambda_var n'</span><span class="p">)</span>
 <span class="n">A</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">(</span><span class="n">SR</span><span class="p">,</span> <span class="p">[[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span>
-<span class="n">show</span><span class="p">(</span><span class="s2">&quot;Transition Matrix&quot;</span><span class="p">,</span> <span class="n">A</span><span class="p">)</span>
+<span class="n">show</span><span class="p">(</span><span class="s2">"Transition Matrix"</span><span class="p">,</span> <span class="n">A</span><span class="p">)</span>
 
 <span class="c1"># 2. Characteristic Polynomial</span>
 <span class="n">char_poly</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">characteristic_polynomial</span><span class="p">(</span><span class="n">lambda_var</span><span class="p">)</span>
-<span class="n">show</span><span class="p">(</span><span class="s2">&quot;Characteristic Polynomial: &quot;</span><span class="p">,</span> <span class="n">char_poly</span><span class="p">,</span> <span class="s2">&quot; = 0&quot;</span><span class="p">)</span>
+<span class="n">show</span><span class="p">(</span><span class="s2">"Characteristic Polynomial: "</span><span class="p">,</span> <span class="n">char_poly</span><span class="p">,</span> <span class="s2">" = 0"</span><span class="p">)</span>
 
 <span class="c1"># 3. Eigenvalues</span>
 <span class="n">eigenvals</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">eigenvalues</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">eigenvals</span><span class="p">):</span>
-    <span class="n">show</span><span class="p">(</span><span class="s2">&quot;Eigenvalue:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;λ_</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2"> =&quot;</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
+    <span class="n">show</span><span class="p">(</span><span class="s2">"Eigenvalue:"</span><span class="p">,</span> <span class="sa">f</span><span class="s2">"λ_</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2"> ="</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
 
 <span class="c1"># 4. Eigenvector matrix P and diagonal matrix D</span>
 <span class="n">D</span><span class="p">,</span> <span class="n">P</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">eigenmatrix_right</span><span class="p">()</span>
-<span class="n">show</span><span class="p">(</span><span class="s2">&quot;Eigenvector matrix P:&quot;</span><span class="p">,</span> <span class="n">P</span><span class="p">)</span>
+<span class="n">show</span><span class="p">(</span><span class="s2">"Eigenvector matrix P:"</span><span class="p">,</span> <span class="n">P</span><span class="p">)</span>
 
 <span class="c1"># 5. Compute D^n and closed-form expression</span>
 <span class="n">D_n</span> <span class="o">=</span> <span class="n">diagonal_matrix</span><span class="p">([</span><span class="n">D</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">^</span><span class="n">n</span><span class="p">,</span> <span class="n">D</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">^</span><span class="n">n</span><span class="p">])</span>
 <span class="n">A_n</span> <span class="o">=</span> <span class="n">P</span> <span class="o">*</span> <span class="n">D_n</span> <span class="o">*</span> <span class="n">P</span><span class="o">.</span><span class="n">inverse</span><span class="p">()</span>  <span class="c1"># A^n = P * D^n * P^-1</span>
 <span class="n">v0</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="n">SR</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>      <span class="c1"># Initial state [P_1, P_0]^T = [1, 0]^T</span>
 <span class="n">P_n</span> <span class="o">=</span> <span class="p">(</span><span class="n">A_n</span> <span class="o">*</span> <span class="n">v0</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>          <span class="c1"># Second component yields P_n</span>
-<span class="n">show</span><span class="p">(</span><span class="s2">&quot;General term formula (Pell):&quot;</span><span class="p">,</span> <span class="n">P_n</span><span class="o">.</span><span class="n">simplify_full</span><span class="p">())</span>
+<span class="n">show</span><span class="p">(</span><span class="s2">"General term formula (Pell):"</span><span class="p">,</span> <span class="n">P_n</span><span class="o">.</span><span class="n">simplify_full</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -471,29 +684,29 @@ flowchart LR
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1. LA for Lucas (vs.Fibonnaci, only difference is initial state v0 = vector(SR, [1, 2]))</span>
-<span class="n">var</span><span class="p">(</span><span class="s1">&#39;x lambda_var n&#39;</span><span class="p">)</span>
+<span class="n">var</span><span class="p">(</span><span class="s1">'x lambda_var n'</span><span class="p">)</span>
 <span class="n">A</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">(</span><span class="n">SR</span><span class="p">,</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span>
-<span class="n">show</span><span class="p">(</span><span class="s2">&quot;Transition Matrix&quot;</span><span class="p">,</span> <span class="n">A</span><span class="p">)</span>
+<span class="n">show</span><span class="p">(</span><span class="s2">"Transition Matrix"</span><span class="p">,</span> <span class="n">A</span><span class="p">)</span>
 
 <span class="c1"># 2. Characteristic Polynomial</span>
 <span class="n">char_poly</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">characteristic_polynomial</span><span class="p">(</span><span class="n">lambda_var</span><span class="p">)</span>
-<span class="n">show</span><span class="p">(</span><span class="s2">&quot;Characteristic Polynomial: &quot;</span><span class="p">,</span> <span class="n">char_poly</span><span class="p">,</span><span class="s2">&quot; = 0&quot;</span><span class="p">)</span>
+<span class="n">show</span><span class="p">(</span><span class="s2">"Characteristic Polynomial: "</span><span class="p">,</span> <span class="n">char_poly</span><span class="p">,</span><span class="s2">" = 0"</span><span class="p">)</span>
 
 <span class="c1"># 3. Eigenvalues</span>
 <span class="n">eigenvals</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">eigenvalues</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">eigenvals</span><span class="p">):</span>
-    <span class="n">show</span><span class="p">(</span><span class="s2">&quot;Eigenvalue:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;λ_</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2"> =&quot;</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
+    <span class="n">show</span><span class="p">(</span><span class="s2">"Eigenvalue:"</span><span class="p">,</span> <span class="sa">f</span><span class="s2">"λ_</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2"> ="</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
 
 <span class="c1"># 4. Eigenvector matrix P and diagonal matrix D</span>
 <span class="n">D</span><span class="p">,</span> <span class="n">P</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">eigenmatrix_right</span><span class="p">()</span>
-<span class="n">show</span><span class="p">(</span><span class="s2">&quot;Eigenvector matrix P:&quot;</span><span class="p">,</span> <span class="n">P</span><span class="p">)</span>
+<span class="n">show</span><span class="p">(</span><span class="s2">"Eigenvector matrix P:"</span><span class="p">,</span> <span class="n">P</span><span class="p">)</span>
 
 <span class="c1"># 5. Compute D^n and closed-form expression </span>
 <span class="n">D_n</span> <span class="o">=</span> <span class="n">diagonal_matrix</span><span class="p">([</span><span class="n">D</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">^</span><span class="n">n</span><span class="p">,</span> <span class="n">D</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">^</span><span class="n">n</span><span class="p">])</span>
 <span class="n">A_n</span> <span class="o">=</span> <span class="n">P</span> <span class="o">*</span> <span class="n">D_n</span> <span class="o">*</span> <span class="n">P</span><span class="o">.</span><span class="n">inverse</span><span class="p">()</span>  <span class="c1"># A^n = P * D^n * P^-1</span>
 <span class="n">v0</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="n">SR</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>      <span class="c1"># Initial state [F_1, F_0]^T = [1, 0]^T</span>
 <span class="n">F_n</span> <span class="o">=</span> <span class="p">(</span><span class="n">A_n</span> <span class="o">*</span> <span class="n">v0</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>          <span class="c1"># A^n * v0 _ Second component (index 1) yields F_n</span>
-<span class="n">show</span><span class="p">(</span><span class="s2">&quot;General term formula:&quot;</span><span class="p">,</span> <span class="n">F_n</span><span class="o">.</span><span class="n">simplify_full</span><span class="p">())</span>
+<span class="n">show</span><span class="p">(</span><span class="s2">"General term formula:"</span><span class="p">,</span> <span class="n">F_n</span><span class="o">.</span><span class="n">simplify_full</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -501,17 +714,44 @@ flowchart LR
 <section id="primary">
 <h2>Primary: ??<a class="headerlink" href="#primary" title="Link to this heading">#</a></h2>
 <ul class="simple">
+<li><p>Row echelon form: Get more 0s in bottom-left by adding and subtracting rows, still equivalent for solving equations</p>
+<ul>
+<li><p>Pivots are columns that have the first non-zero number of any row in them.</p></li>
+<li><p>Variables that correspond to pivots are dependent, others are free.</p></li>
+</ul>
+</li>
 <li><p>Eigenvalues: Solve <span class="math notranslate nohighlight">\(\det(A-\lambda I)=0\)</span></p></li>
 <li><p>Eigenvectors: Solve for <span class="math notranslate nohighlight">\(A\mathbf{v}=\lambda\mathbf{v}\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(2\times2\)</span> inverse: <span class="math notranslate nohighlight">\(\begin{pmatrix}a&amp;b\\c&amp;d\end{pmatrix}^{-1}=\frac1{ad-bc}\begin{pmatrix}d&amp;-b\\-c&amp;a\end{pmatrix}\)</span></p></li>
 <li><p>We can use a XOR basis for spans and sets.</p></li>
 </ul>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>%%{init: {  &quot;flowchart&quot;: { &quot;nodeSpacing&quot;: 15,  &quot;rankSpacing&quot;: 15,   &quot;padding&quot;: 5 }, &#39;themeTuning&#39;: &#39;safe&#39;, &#39;themeVariables&#39;: { &#39;fontSize&#39;: &#39;12px&#39; }}}%%
+<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>%%{init: {  "flowchart": { "nodeSpacing": 15,  "rankSpacing": 15,   "padding": 5 }, 'themeTuning': 'safe', 'themeVariables': { 'fontSize': '12px' }}}%%
 flowchart LR
-    CP[Characteristic polynomial] --&gt; eig[&quot;eigenvalues &lt;br&gt; the roots of the polynomial&quot;]
+    CP[Characteristic polynomial] --&gt; eig["eigenvalues &lt;br&gt; the roots of the polynomial"]
     CP --&gt; det[determinant &lt;br&gt;the constant term]
     CP --&gt; tr[trace &lt;br&gt;related to the second-highest coefficient]
 </pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">matrix</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">inverse</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">matrix</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,[</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span><span class="o">*</span><span class="n">matrix</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span><span class="o">*</span><span class="n">matrix</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">matrix</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">inverse</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -529,7 +769,7 @@ flowchart LR
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s1">&#39;i x&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s1">'i x'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -706,7 +946,7 @@ flowchart LR
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s1">'x'</span><span class="p">)</span>
 <span class="n">A</span><span class="o">=</span><span class="n">matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
           <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
           <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
@@ -714,18 +954,10 @@ flowchart LR
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\displaystyle \left(\begin{array}{rrr}
-\frac{1}{2} &amp; \frac{1}{2} &amp; 0 \\
-\frac{1}{2} &amp; -\frac{1}{2} &amp; 0 \\
-0 &amp; 0 &amp; 1
-\end{array}\right) \qquad   \end{split}\]</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s1">'x'</span><span class="p">)</span>
 <span class="n">A</span><span class="o">=</span><span class="n">matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
           <span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
           <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
@@ -753,7 +985,7 @@ flowchart LR
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s1">&#39;x y&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s1">'x y'</span><span class="p">)</span>
 <span class="n">A</span><span class="o">=</span><span class="n">matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
           <span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
           <span class="p">[</span><span class="n">y</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
@@ -782,7 +1014,7 @@ flowchart LR
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s1">'x'</span><span class="p">)</span>
 <span class="n">A</span><span class="o">=</span><span class="n">matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
           <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
           <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
@@ -810,7 +1042,7 @@ flowchart LR
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s1">&#39;x y&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s1">'x y'</span><span class="p">)</span>
 <span class="n">A</span><span class="o">=</span><span class="n">matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">x</span><span class="p">],</span>
           <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">y</span><span class="p">],</span>
           <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
@@ -868,8 +1100,8 @@ flowchart LR
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">back_substitution</span><span class="p">(</span><span class="n">U</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Performs back substitution given an upper triangular matrix U and a vector b.</span>
-<span class="sd">    Currently only works for vectors of size 3 and matrices of size 3x3.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Performs back substitution given an upper triangular matrix U and a vector b.</span>
+<span class="sd">    Currently only works for vectors of size 3 and matrices of size 3x3."""</span>
     <span class="n">lst</span><span class="o">=</span><span class="p">[]</span>
     <span class="c1"># U[2][2]*x2=b[2]</span>
     <span class="c1"># x2=b[2]/U[2][2]</span>
@@ -884,7 +1116,7 @@ flowchart LR
     <span class="n">lst</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">U</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">lst</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">U</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">lst</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">/</span><span class="n">U</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
     <span class="k">return</span> <span class="n">lst</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">new_back_substitution</span><span class="p">(</span><span class="n">U</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;A new back substitution function that works for any size.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""A new back substitution function that works for any size."""</span>
     <span class="n">lst</span><span class="o">=</span><span class="p">[]</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
         <span class="n">thingy</span><span class="o">=</span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="nb">sum</span><span class="p">(</span><span class="n">U</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">lst</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">())</span>
@@ -925,11 +1157,6 @@ flowchart LR
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3, 0, 0]
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -940,11 +1167,6 @@ flowchart LR
     <span class="k">else</span><span class="p">:</span> <span class="n">layer</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">j</span><span class="o">-</span><span class="n">i</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
 <span class="n">positioning</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
 </pre></div>
 </div>
 </div>
@@ -1068,7 +1290,7 @@ flowchart LR
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span> <span class="n">s</span><span class="p">(</span><span class="n">matrix</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,[</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">4</span><span class="p">])</span><span class="o">.</span><span class="n">inverse</span><span class="p">())</span>
-<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ZeroDivisionError:&#39;</span><span class="p">,</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">'ZeroDivisionError:'</span><span class="p">,</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1090,10 +1312,6 @@ flowchart LR
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle \left(-\frac{12}{11},\,\frac{36}{11},\,\frac{12}{11}\right) \qquad   \]</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1103,12 +1321,22 @@ flowchart LR
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle \left(\frac{4}{3} \, \sqrt{6} + 1,\,-\frac{4}{3} \, \sqrt{6} - 1,\,\frac{16}{3} \, \sqrt{6} + 4\right) \qquad   \]</div>
-</div>
 </div>
 </section>
+</section>
+<section id="alaff">
+<h1>ALAFF<a class="headerlink" href="#alaff" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Norms</p>
+<ul>
+<li><p>2-norm/Euclidean norm: <span class="math notranslate nohighlight">\(||x||_2=\sqrt{x_0^2+x_1^2+...+x_{m-1}^2}\)</span></p></li>
+<li><p>1-norm/Manhattan norm: <span class="math notranslate nohighlight">\(||x||_1=|x_0|+|x_1|+...+|x_{m-1}|\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\infty\)</span>-norm: <span class="math notranslate nohighlight">\(||x||_\infty=\max(|x_0|,|x_1|,...,|x_{m-1})\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(p\)</span>-norm: <span class="math notranslate nohighlight">\(||x||_p=\sqrt[p]{|x_0|^p+|x_1|^p+...+|x_{m-1}|^p}\)</span></p></li>
+</ul>
+</li>
+<li><p>For SVD, we can reduce it by removing excess 0s from the diagonal matrix, making it a true diagonal matrix.</p></li>
+</ul>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1141,24 +1369,6 @@ flowchart LR
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="Cryptohack.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Cryptohack</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="past/Course_MIT6001Python.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">MIT_CS6001-Python</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -1175,9 +1385,16 @@ flowchart LR
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Analysis &amp; Topology</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#graph-theory">Graph Theory</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#laff">LAFF</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#primary">Primary: ??</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fast-matrix">Fast Matrix</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#alaff">ALAFF</a></li>
+</ul>
+
   </nav></div>
 
 </div></div>

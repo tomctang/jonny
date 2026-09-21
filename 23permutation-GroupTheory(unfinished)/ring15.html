@@ -185,8 +185,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../Course_5U.html">5U - Ext III</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="../Course_MCS320Symbol.html">Symbolic Computation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Cryptohack.html">Cryptohack</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Course_LAFF.html">LAFF</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">CS &amp; Physics</span></p>
 <ul class="nav bd-sidenav">
@@ -401,7 +399,7 @@ Galois Theory
 </p>
 <p style='text-align: center;'>Initialization:  This cell MUST be evaluated first:</p><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;absalgtext2.sage&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">load</span><span class="p">(</span><span class="s1">'absalgtext2.sage'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -452,10 +450,10 @@ Let us use this lemma to find the Galois group of the splitting field of <em>x</
 <em>a</em><sup>3</sup> = 2, and <em>b</em><sup>2</sup> = −<em>a</em><sup>2</sup> − <em>a b</em>.<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
-<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="s2">"x"</span><span class="p">)</span>
+<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"b"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span> <span class="n">a</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -610,7 +608,7 @@ polynomial <em>x</em><sup>4</sup> − 2 <em>x</em><sup>3</sup> + <em>x</em><sup>
 <p>First we verify that this polynomial is irreducible.<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">"x"</span><span class="p">)</span>
 <span class="n">factor</span><span class="p">(</span><span class="n">x</span><span class="o">^</span><span class="mi">4</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">^</span><span class="mi">3</span> <span class="o">+</span> <span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -620,7 +618,7 @@ polynomial <em>x</em><sup>4</sup> − 2 <em>x</em><sup>3</sup> + <em>x</em><sup>
 So this polynomial is irreducible over &#8474;.  Let us define <em>a</em> to be one root of this polynomial, and see how this polynomial factors 
 over &#8474;(<em>a</em>).<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="o">^</span><span class="mi">3</span> <span class="o">-</span> <span class="n">a</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -637,7 +635,7 @@ over &#8474;(<em>a</em>).<br><div class="cell docutils container">
 This tells us that if <em>a</em> is a root, then 1 &minus; <em>a</em> is another root.  However, it didn't factor completely, so we have to define <em>b</em> to be a root 
 of the irreducible quadratic.<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"b"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">b</span> <span class="o">+</span> <span class="n">a</span> <span class="o">-</span> <span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -838,9 +836,9 @@ fix(<em>H</em><sub>4</sub>) = ℚ(<em>b</em>).  The field fix(<em>H</em><sub>5</
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"b"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span> <span class="n">a</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -977,7 +975,7 @@ Find, up to isomorphism, the Galois group for the polynomial</p>
 <p style='text-align: center;'><em>x</em><sup>3</sup> + <em>x</em><sup>2</sup> &minus; 2 <em>x</em> &minus; 1.</p>
 This polynomial is irreducible, as <em>SageMath</em> can verify:<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">"x"</span><span class="p">)</span>
 <span class="n">factor</span><span class="p">(</span><span class="n">x</span><span class="o">^</span><span class="mi">3</span> <span class="o">+</span> <span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -986,7 +984,7 @@ This polynomial is irreducible, as <em>SageMath</em> can verify:<br><div class="
 <br>
 Thus, we can let <em>a</em> denote one of the roots, and try to factor this in &#8474;(<em>a</em>).<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span> <span class="n">a</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">a</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">factor</span><span class="p">(</span><span class="n">x</span><span class="o">^</span><span class="mi">3</span> <span class="o">+</span> <span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
@@ -1007,10 +1005,10 @@ Find, up to isomorphism, the Galois group for the polynomial <em>x</em><sup>5</s
 of dimension 5, and one of dimension 2.  Here is the factorization that was produced:<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">)</span>
-<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">"x"</span><span class="p">)</span>
+<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="o">*</span><span class="n">a</span> <span class="o">-</span> <span class="mi">12</span><span class="p">)</span>
-<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"b"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">5</span><span class="o">*</span><span class="n">a</span><span class="o">/</span><span class="mi">4</span> <span class="o">+</span> <span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="o">/</span><span class="mi">4</span> <span class="o">+</span> <span class="n">a</span><span class="o">^</span><span class="mi">3</span><span class="o">/</span><span class="mi">4</span> <span class="o">+</span> <span class="n">a</span><span class="o">^</span><span class="mi">4</span><span class="o">/</span><span class="mi">4</span> <span class="o">-</span> <span class="n">b</span> <span class="o">-</span> <span class="mi">3</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">/</span><span class="mi">4</span> <span class="o">+</span> <span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span><span class="o">/</span><span class="mi">4</span> <span class="o">+</span> <span class="n">a</span><span class="o">^</span><span class="mi">3</span><span class="o">*</span><span class="n">b</span><span class="o">/</span><span class="mi">4</span> <span class="o">+</span> <span class="n">a</span><span class="o">^</span><span class="mi">4</span><span class="o">*</span><span class="n">b</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span>
 <span class="n">factor</span><span class="p">(</span><span class="n">x</span><span class="o">^</span><span class="mi">5</span> <span class="o">-</span> <span class="mi">5</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">12</span><span class="p">)</span>
 </pre></div>
@@ -1064,7 +1062,7 @@ homomorphism <em>&fnof;</em> that sends <em>&fnof;</em>(<em>a</em>) = <em>b</em>
 This homomorphism works!  Not only does <em>SageMath</em> verify that this is a homomorphism, but it can draw a circle graph describing how this homomorphism acts on the 
 five roots.<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">([</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">],</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">([</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="s2">"c"</span><span class="p">,</span> <span class="s2">"d"</span><span class="p">,</span> <span class="s2">"e"</span><span class="p">],</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1094,7 +1092,7 @@ example.<br><br></p>
 <br>
 This homomorphism also works. The circle graph is given by<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">([</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">],</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">([</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="s2">"c"</span><span class="p">,</span> <span class="s2">"d"</span><span class="p">,</span> <span class="s2">"e"</span><span class="p">],</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1167,7 +1165,7 @@ Find, up to isomorphism, the Galois group for the eighth degree polynomial</p>
 <p style='text-align: center;'><em>x</em><sup>8</sup> &minus; 12 <em>x</em><sup>6</sup> + 36 <em>x</em><sup>4</sup> &minus; 36 <em>x</em><sup>2</sup> + 9.</p> 
 <em>SageMath</em> can verify that this is irreducible.<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">"x"</span><span class="p">)</span>
 <span class="n">factor</span><span class="p">(</span><span class="n">x</span><span class="o">^</span><span class="mi">8</span> <span class="o">-</span> <span class="mi">12</span><span class="o">*</span><span class="n">x</span><span class="o">^</span><span class="mi">6</span> <span class="o">+</span> <span class="mi">36</span><span class="o">*</span><span class="n">x</span><span class="o">^</span><span class="mi">4</span> <span class="o">-</span> <span class="mi">36</span><span class="o">*</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">9</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1176,7 +1174,7 @@ Find, up to isomorphism, the Galois group for the eighth degree polynomial</p>
 <br>
 Thus, we can define <em>a</em> to be one root of this equation.<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">8</span><span class="p">,</span> <span class="mi">12</span><span class="o">*</span><span class="n">a</span><span class="o">^</span><span class="mi">6</span> <span class="o">-</span> <span class="mi">36</span><span class="o">*</span><span class="n">a</span><span class="o">^</span><span class="mi">4</span> <span class="o">+</span> <span class="mi">36</span><span class="o">*</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">9</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1260,7 +1258,7 @@ By Proposition 15.2, there is a &#8474;-automorphism <em>&fnof;</em> for which <
 <br>
 We can have <em>SageMath</em> find where the other seven roots are mapped to.<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">([</span><span class="n">a</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="o">-</span><span class="n">a</span><span class="p">,</span> <span class="s2">&quot;-b&quot;</span><span class="p">,</span> <span class="s2">&quot;-c&quot;</span><span class="p">,</span> <span class="s2">&quot;-d&quot;</span><span class="p">],</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">([</span><span class="n">a</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">,</span> <span class="s2">"c"</span><span class="p">,</span> <span class="s2">"d"</span><span class="p">,</span> <span class="o">-</span><span class="n">a</span><span class="p">,</span> <span class="s2">"-b"</span><span class="p">,</span> <span class="s2">"-c"</span><span class="p">,</span> <span class="s2">"-d"</span><span class="p">],</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1281,7 +1279,7 @@ these results surprising?  Using the numbering scheme given above, we can expres
 <br>
 Once again, we will use <em>SageMath</em>'s circle graph to convert this to a permutation.<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">([</span><span class="n">a</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="o">-</span><span class="n">a</span><span class="p">,</span> <span class="s2">&quot;-b&quot;</span><span class="p">,</span> <span class="s2">&quot;-c&quot;</span><span class="p">,</span> <span class="s2">&quot;-d&quot;</span><span class="p">],</span> <span class="n">G</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CircleGraph</span><span class="p">([</span><span class="n">a</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">,</span> <span class="s2">"c"</span><span class="p">,</span> <span class="s2">"d"</span><span class="p">,</span> <span class="o">-</span><span class="n">a</span><span class="p">,</span> <span class="s2">"-b"</span><span class="p">,</span> <span class="s2">"-c"</span><span class="p">,</span> <span class="s2">"-d"</span><span class="p">],</span> <span class="n">G</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1326,7 +1324,7 @@ to <em>S</em><sub>4</sub>.<br><br></p>
 We first use <strong>InitDomain</strong> to define ℚ[<em>x</em>], and then use <strong>GaloisType</strong> on the polynomial.<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">"x"</span><span class="p">)</span>
 <span class="n">GaloisType</span><span class="p">(</span><span class="n">x</span><span class="o">^</span><span class="mi">8</span> <span class="o">-</span> <span class="mi">12</span><span class="o">*</span><span class="n">x</span><span class="o">^</span><span class="mi">6</span> <span class="o">+</span> <span class="mi">36</span><span class="o">*</span><span class="n">x</span><span class="o">^</span><span class="mi">4</span> <span class="o">-</span> <span class="mi">36</span><span class="o">*</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">9</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1379,7 +1377,7 @@ is the splitting field of <em>f</em>(<em>x</em>), and Gal<sub><em>F</em></sub>(<
 To introduce the problem of whether a fifth degree polynomial can, in general, be solved in terms of square roots, cube roots, or fifth roots, we will 
 have <em>SageMath</em> try to solve some polynomial equations for us. <em>SageMath</em> can solve polynomials with the command<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s2">"x"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1469,7 +1467,7 @@ in <em>Z</em><sub>2</sub>.  This field can be defined in <em>SageMath</em> simpl
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">RationalFunctions</span><span class="p">(</span><span class="s2">&quot;t&quot;</span><span class="p">)</span>
+<span class="n">RationalFunctions</span><span class="p">(</span><span class="s2">"t"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1500,7 +1498,7 @@ of elements in <em>Z</em><sub>2</sub>(<em>t</em>):<br><div class="cell docutils 
 <br>
 We can now consider polynomials over this field.<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"x"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1523,7 +1521,7 @@ Note that there is no element whose square is equal to &minus;<em>t</em>, since 
 <br>
 Suppose we define a new element <em>a</em> that solves the equation <em>x</em><sup>2</sup> + <em>t</em> = 0.<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="n">t</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1540,7 +1538,7 @@ We can test this extension by computing <em>a</em><sup>2</sup>:<br><div class="c
 <br>
 Now <em>x</em><sup>2</sup> + <em>t</em> factor should factor in <em>Z</em><sub>2</sub>(<em>t</em>)(<em>a</em>).<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"x"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1595,8 +1593,8 @@ of &#8474;(&radic;<font style="text-decoration:overline">&minus;3</font>).  This
 <p>First, we define ℚ(√<font style="text-decoration:overline">−3</font>) by defining <em>a</em><sup>2</sup> = −3.<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">)</span>
-<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">"x"</span><span class="p">)</span>
+<span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1613,7 +1611,7 @@ Now, <em>x</em><sup>3</sup> &minus; 2 is still irreducible in this field.<br><di
 <br>
 Let us define <em>b</em> to be the cube root of 2.<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"b"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1727,7 +1725,7 @@ each <em>u<sub>i</sub></em> is contained in <em>F</em>(<em>u</em><sub>1</sub>, <
 We can have <em>SageMath</em> solve for the roots explicitly.<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s2">"x"</span><span class="p">)</span>
 <span class="n">solve</span><span class="p">(</span><span class="n">x</span><span class="o">^</span><span class="mi">4</span> <span class="o">-</span> <span class="mi">8</span><span class="o">*</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">8</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span> <span class="mi">2</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1789,7 +1787,7 @@ contains the splitting field of <em>f</em>(<em>x</em>).<br><br></p>
 the equation<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s2">"x"</span><span class="p">)</span>
 <span class="n">solve</span><span class="p">(</span><span class="n">x</span><span class="o">^</span><span class="mi">3</span> <span class="o">-</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1841,7 +1839,7 @@ of <em>f</em>(<em>x</em>) is a solvable group.<br><br></p>
 Galois' criterion theorem is able to show us that there are some polynomials whose roots cannot be expressed in terms of square roots, cube roots, and other roots.  In 
 fact we can find one of them, namely <em>x</em><sup>5</sup> &minus; <em>x</em> + 1.<br><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">InitDomain</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">"x"</span><span class="p">)</span>
 <span class="n">factor</span><span class="p">(</span><span class="n">x</span><span class="o">^</span><span class="mi">5</span> <span class="o">-</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1849,7 +1847,7 @@ fact we can find one of them, namely <em>x</em><sup>5</sup> &minus; <em>x</em> +
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"a"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">5</span><span class="p">,</span> <span class="n">a</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">factor</span><span class="p">(</span><span class="n">x</span><span class="o">^</span><span class="mi">5</span> <span class="o">-</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
@@ -1858,7 +1856,7 @@ fact we can find one of them, namely <em>x</em><sup>5</sup> &minus; <em>x</em> +
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"b"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">a</span><span class="o">^</span><span class="mi">4</span> <span class="o">-</span> <span class="n">a</span><span class="o">^</span><span class="mi">3</span><span class="o">*</span><span class="n">b</span> <span class="o">-</span> <span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">^</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">factor</span><span class="p">(</span><span class="n">x</span><span class="o">^</span><span class="mi">5</span> <span class="o">-</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
@@ -1867,7 +1865,7 @@ fact we can find one of them, namely <em>x</em><sup>5</sup> &minus; <em>x</em> +
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;c&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"c"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">c</span><span class="o">^</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="n">a</span><span class="o">^</span><span class="mi">3</span> <span class="o">-</span> <span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span> <span class="o">-</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="n">b</span><span class="o">^</span><span class="mi">3</span> <span class="o">-</span> <span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="o">*</span><span class="n">c</span> <span class="o">-</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">*</span><span class="n">c</span> <span class="o">-</span> <span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="o">*</span><span class="n">c</span> <span class="o">-</span> <span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="n">b</span><span class="o">*</span><span class="n">c</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1887,7 +1885,7 @@ field has dimension 120, and hence the Galois group is <em>S</em><sub>5</sub>.<b
 <p>By the way, <em>SageMath</em> is able to finish the splitting field, but it takes a VERY long time.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">&quot;d&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddFieldVar</span><span class="p">(</span><span class="s2">"d"</span><span class="p">)</span>
 <span class="n">Define</span><span class="p">(</span><span class="n">d</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span> <span class="o">-</span> <span class="n">b</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="n">a</span><span class="o">*</span><span class="n">c</span> <span class="o">-</span> <span class="n">b</span><span class="o">*</span><span class="n">c</span> <span class="o">-</span> <span class="n">c</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="n">a</span><span class="o">*</span><span class="n">d</span> <span class="o">-</span> <span class="n">b</span><span class="o">*</span><span class="n">d</span> <span class="o">-</span> <span class="n">c</span><span class="o">*</span><span class="n">d</span><span class="p">)</span>
 </pre></div>
 </div>
