@@ -65,6 +65,8 @@
     <script src="_static/mermaid-init.js?v=512eb59e"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="MIT_CS6001-Python" href="past/Course_MIT6001Python.html" />
+    <link rel="prev" title="Cryptohack" href="Cryptohack.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -127,8 +129,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -179,7 +179,7 @@
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Math &amp; FP/Language</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="past/Alevel_math.html">A-level-math</a></li>
 <li class="toctree-l1"><a class="reference internal" href="past/Alevel_math_further.html">A-level-further</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Course_Lean.html">Lean</a></li>
@@ -187,6 +187,11 @@
 <li class="toctree-l1"><a class="reference internal" href="Course_5U.html">5U - Ext III</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="Course_MCS320Symbol.html">Symbolic Computation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cryptohack.html">Cryptohack</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Analysis &amp; Topology</a></li>
+
+
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">CS &amp; Physics</span></p>
 <ul class="nav bd-sidenav">
@@ -709,7 +714,7 @@ A wildlife conservation sanctuary in New South Wales operates a specialized bree
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">gram_schmidt</span><span class="p">(</span><span class="n">vec</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""Takes k linearly independent vectors and outputs orthogonal vector space as a list of vectors."""</span>
+<span class="w">    </span><span class="sd">"""Takes k linearly independent vectors and outputs orthogonal vector space as a list of vectors(modified versiongram)."""</span>
     <span class="n">space</span><span class="o">=</span><span class="p">[</span><span class="n">vec</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
     <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">vec</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
         <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">space</span><span class="p">:</span>
@@ -722,7 +727,8 @@ A wildlife conservation sanctuary in New South Wales operates a specialized bree
     <span class="n">Q</span><span class="o">=</span><span class="n">transpose</span><span class="p">(</span><span class="n">matrix</span><span class="p">(</span><span class="n">gram_schmidt</span><span class="p">([</span><span class="n">vector</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="k">for</span> <span class="n">lst</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">transpose</span><span class="p">(</span><span class="n">A</span><span class="p">))])))</span>
     <span class="n">R</span><span class="o">=</span><span class="n">transpose</span><span class="p">(</span><span class="n">Q</span><span class="p">)</span><span class="o">*</span><span class="n">A</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">Q</span><span class="p">,</span><span class="n">R</span><span class="p">)</span>
-<span class="n">Q</span><span class="p">,</span><span class="n">R</span><span class="o">=</span><span class="n">QR</span><span class="p">(</span><span class="n">matrix</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]]))</span>
+<span class="n">A</span><span class="o">=</span><span class="n">matrix</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
+<span class="n">Q</span><span class="p">,</span><span class="n">R</span><span class="o">=</span><span class="n">QR</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 <span class="n">s</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span><span class="n">R</span><span class="p">,</span><span class="n">transpose</span><span class="p">(</span><span class="n">Q</span><span class="p">)</span><span class="o">*</span><span class="n">Q</span><span class="p">,</span><span class="n">Q</span><span class="o">*</span><span class="n">R</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1395,12 +1401,64 @@ flowchart LR
 </ul>
 <p>Week 2</p>
 <ul class="simple">
+<li><p>Orthogonal vectors</p>
+<ul>
+<li><p>Also perpendicular vectors.</p></li>
+<li><p>Dot product of them is <span class="math notranslate nohighlight">\(0\)</span>.</p></li>
+<li><p>Orthonormal vectors: Set of unit vectors all orthogonal to each other.</p></li>
+<li><p>Unitary matrix: [Add notes(2.2.4-5)]</p></li>
+</ul>
+</li>
 <li><p>SVD</p>
 <ul>
+<li><p>SVD theorem: For a matrix <span class="math notranslate nohighlight">\(A\)</span>, there exists <span class="math notranslate nohighlight">\(A=U\Sigma V^H\)</span> such that <span class="math notranslate nohighlight">\(U,V\)</span> are unitary and <span class="math notranslate nohighlight">\(\Sigma\)</span> is a diagonal matrix with values at the top larger.</p>
+<ul>
+<li><p>We can also add more 0s to <span class="math notranslate nohighlight">\(\Sigma\)</span> to make the matrix multiplication work.</p></li>
+</ul>
+</li>
 <li><p>For SVD, we can reduce it by removing excess 0s from the diagonal matrix, making it a true diagonal matrix.</p></li>
+<li><p>Practical method will be discussed in week 11, use <code class="docutils literal notranslate"><span class="pre">.SVD()</span></code></p></li>
 </ul>
 </li>
 </ul>
+<p>Week 3</p>
+<ul class="simple">
+<li><p>Vandermonde matrix: <span class="math notranslate nohighlight">\(X = \left( \begin{array}{c c c c }1 &amp; \chi_0 &amp; \cdots &amp; \chi_0^{n-1} \\1 &amp; \chi_1 &amp; \cdots &amp; \chi_1^{n-1} \\\vdots &amp; \vdots &amp; &amp; \vdots \\1 &amp; \chi_{m-1} &amp; \cdots &amp; \chi_{m-1}^{n-1}\end{array} \right)\)</span></p>
+<ul>
+<li><p>Add approximate linear system</p></li>
+</ul>
+</li>
+<li><p>We can use polynomials to approximate for powers higher than <span class="math notranslate nohighlight">\(1\)</span>.</p>
+<ul>
+<li><p>For linear approximations, use linear-least squares formula from LAFF week 11.</p></li>
+</ul>
+</li>
+<li><p>Reflector: A mirror that reflects vectors.</p>
+<ul>
+<li><p>We can think of it as a plane with an unit orthogonal vector <span class="math notranslate nohighlight">\(u\)</span> to control it.</p></li>
+<li><p>Matrix form: <span class="math notranslate nohighlight">\(I-2uu^H\)</span></p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Classical Gram-Schmidt</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">classical_gram_schmidt</span><span class="p">(</span><span class="n">vec</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Takes set of linearly independent vectors and outputs orthonormal basis with same span."""</span>
+    <span class="c1"># step 1: find q_0</span>
+    <span class="n">ans</span><span class="o">=</span><span class="p">[</span><span class="n">vec</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">norm</span><span class="p">(</span><span class="n">vec</span><span class="p">[</span><span class="mi">0</span><span class="p">])]</span>
+    <span class="c1"># step 2: find q_1</span>
+    <span class="n">a1</span><span class="o">=</span><span class="n">vec</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">ans</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">dot_product</span><span class="p">(</span><span class="n">vec</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">*</span><span class="n">ans</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">ans</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a1</span><span class="o">/</span><span class="n">norm</span><span class="p">(</span><span class="n">a1</span><span class="p">))</span>
+    <span class="c1"># step 3: find q_2, ...</span>
+    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">vec</span><span class="p">[</span><span class="mi">2</span><span class="p">:]:</span>
+        <span class="n">a2</span><span class="o">=</span><span class="n">v</span><span class="o">-</span><span class="nb">sum</span><span class="p">(</span><span class="n">q</span><span class="o">.</span><span class="n">dot_product</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="o">*</span><span class="n">q</span> <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">ans</span><span class="p">)</span>
+        <span class="n">ans</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a2</span><span class="o">/</span><span class="n">norm</span><span class="p">(</span><span class="n">a2</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">ans</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1433,6 +1491,24 @@ flowchart LR
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="Cryptohack.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Cryptohack</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="past/Course_MIT6001Python.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">MIT_CS6001-Python</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
