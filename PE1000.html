@@ -384,7 +384,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-148-154-unfinished">PE 148 &amp; 154(unfinished)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-149-150-optimize-slicing">PE 149 &amp; 150(optimize slicing)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-151">PE 151</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-153-unfinished">PE 153(unfinished)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-153">PE 153</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-158">PE 158</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-160-unfinished">PE 160(unfinished)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-162">PE 162</a></li>
@@ -458,6 +458,8 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">&gt; 400</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-401-finish-taking-notes">PE 401(finish taking notes)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-407">PE 407</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-429">PE 429</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-463">PE 463</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-493">PE 493</a></li>
@@ -1027,8 +1029,31 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="pe-153-unfinished">
-<h3>PE 153(unfinished)<a class="headerlink" href="#pe-153-unfinished" title="Link to this heading">#</a></h3>
+<section id="pe-153">
+<h3>PE 153<a class="headerlink" href="#pe-153" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>First, all Gaussian integer divisors are either real or complex. We can count these separately.</p></li>
+<li><p>Gaussian integers: <span class="math notranslate nohighlight">\(\Z[i]=\{a+bi|a,b\in\Z\}\)</span></p></li>
+<li><p>The real ones can be counted by summing the <span class="math notranslate nohighlight">\(\sigma_1\)</span> function. There is an <span class="math notranslate nohighlight">\(O(\sqrt n)\)</span> time algorithm which I implemented below.</p>
+<ul>
+<li><p>These sublinear algorithms can be derived from the Dirichlet hyperbolic method using the fact that <span class="math notranslate nohighlight">\(1*a^n=\sum_{k\leq x}\sigma_n(k)\)</span> where <span class="math notranslate nohighlight">\(*\)</span> is the Dirichlet convolution.</p></li>
+<li><p>Formula</p>
+<ul>
+<li><p>Convolution: <span class="math notranslate nohighlight">\(\sum_{n\leq x}f(n)=\sum_{ab\leq x}g(a)h(b)\)</span></p></li>
+<li><p>Expansion with PIE: <span class="math notranslate nohighlight">\(\sum_{n\leq x}f(n)=\sum_{a\leq\sqrt x}g(a)\sum_{b\leq\frac xa}h(b)+\sum_{b\leq\sqrt x}h(b)\sum_{a\leq\frac xb}g(a)-(\sum_{a\leq\sqrt x}g(a))(\sum_{b\leq\sqrt x}h(b))\)</span></p></li>
+</ul>
+</li>
+<li><p>This can also be generalized for other problems such as PE 401.</p></li>
+</ul>
+</li>
+<li><p>The complex divisors are of the form <span class="math notranslate nohighlight">\(c(a+bi)(a-bi)=c(a^2+b^2)\)</span>.</p>
+<ul>
+<li><p>For the edge case <span class="math notranslate nohighlight">\(a=b\)</span>, we count it once outside the loop and use the summmation of the <span class="math notranslate nohighlight">\(\sigma\)</span> function to account for different <span class="math notranslate nohighlight">\(c\)</span>.</p></li>
+<li><p>The others are counted in a double loop for <span class="math notranslate nohighlight">\(a,b\)</span>.</p></li>
+<li><p>The loop is quite slow, code ~160s.</p></li>
+</ul>
+</li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">sum_sigma</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -1052,9 +1077,12 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">17924657155</span>
-<span class="mi">19863881997</span>
-<span class="mi">8279058279</span><span class="o">*</span><span class="mi">2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># slightly slower implementation(from isqrt) but shorter</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">sum_sigma</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">p1</span><span class="o">=</span><span class="nb">sum</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">//</span><span class="n">a</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">isqrt</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+    <span class="n">p2</span><span class="o">=</span><span class="nb">sum</span><span class="p">(</span><span class="n">x</span><span class="o">//</span><span class="n">b</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">//</span><span class="n">b</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">isqrt</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span><span class="o">/</span><span class="mi">2</span>
+    <span class="n">p3</span><span class="o">=</span><span class="n">isqrt</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">isqrt</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+    <span class="k">return</span> <span class="n">p1</span><span class="o">+</span><span class="n">p2</span><span class="o">-</span><span class="n">p3</span>
 </pre></div>
 </div>
 </div>
@@ -1062,63 +1090,19 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 153 Investigating Gaussian Integers</span>
-<span class="c1"># first we count real divisors</span>
-<span class="c1"># for each divisor, we count the number of ways</span>
-<span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="o">^</span><span class="mi">5</span>
-<span class="n">tot</span><span class="o">=</span><span class="n">sum_sigma</span><span class="p">(</span><span class="n">limit</span><span class="p">)</span>
-<span class="c1"># then we count the number of ways for squares</span>
+<span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="o">^</span><span class="mi">6</span>
+<span class="n">tot</span><span class="o">=</span><span class="n">sum_sigma</span><span class="p">(</span><span class="n">limit</span><span class="p">)</span>        <span class="c1"># real divisors</span>
+<span class="c1"># edge case for i=j</span>
+<span class="n">max_c</span><span class="o">=</span><span class="n">limit</span><span class="o">//</span><span class="mi">2</span>
+<span class="n">tot</span><span class="o">+=</span><span class="mi">2</span><span class="o">*</span><span class="n">sum_sigma</span><span class="p">(</span><span class="n">max_c</span><span class="p">)</span>   <span class="c1"># this counts all a(1+i) for integers a</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">isqrt</span><span class="p">(</span><span class="n">limit</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-    <span class="n">tot</span><span class="o">+=</span><span class="n">sum_sigma</span><span class="p">(</span><span class="n">limit</span><span class="o">//</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="o">^</span><span class="mi">2</span><span class="p">))</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="n">i</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">min</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">isqrt</span><span class="p">(</span><span class="n">limit</span><span class="o">-</span><span class="n">i</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)):</span>
-        <span class="k">if</span> <span class="n">gcd</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span> <span class="n">tot</span><span class="o">+=</span><span class="n">sum_sigma</span><span class="p">(</span><span class="n">limit</span><span class="o">//</span><span class="p">(</span><span class="n">i</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="n">j</span><span class="o">^</span><span class="mi">2</span><span class="p">))</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">gcd</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
+            <span class="n">max_c</span><span class="o">=</span><span class="n">limit</span><span class="o">//</span><span class="p">(</span><span class="n">i</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="n">j</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+            <span class="n">tot</span><span class="o">+=</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="n">sum_sigma</span><span class="p">(</span><span class="n">max_c</span><span class="p">)</span>
+        <span class="c1"># add additional values for symmetry in i,j</span>
 <span class="n">tot</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">19939936003789155</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">solve_project_euler_153</span><span class="p">(</span><span class="n">limit</span><span class="p">):</span>
-    <span class="n">tot</span> <span class="o">=</span> <span class="n">sum_sigma</span><span class="p">(</span><span class="n">limit</span><span class="p">)</span>
-    
-    <span class="c1"># 2. Loop over primitive real and imaginary components (a, b)</span>
-    <span class="n">max_a</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">isqrt</span><span class="p">(</span><span class="n">limit</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_a</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-        <span class="n">a2</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">a</span>
-        <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
-            <span class="n">norm</span> <span class="o">=</span> <span class="n">a2</span> <span class="o">+</span> <span class="n">b</span> <span class="o">*</span> <span class="n">b</span>
-            <span class="k">if</span> <span class="n">norm</span> <span class="o">&gt;</span> <span class="n">limit</span><span class="p">:</span>
-                <span class="k">break</span>  <span class="c1"># Norm exceeded; skip to next 'a'</span>
-                
-            <span class="k">if</span> <span class="n">gcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-                <span class="c1"># Symmetries: if a == b (e.g. 1+i), multiplier is (a+b)</span>
-                <span class="c1"># If a != b (e.g. 2+i), multiplier is 2*(a+b) to capture conjugates</span>
-                <span class="n">multiplier</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span> <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span> <span class="k">else</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
-                
-                <span class="c1"># M represents the upper bound for k^2 scaling</span>
-                <span class="n">M</span> <span class="o">=</span> <span class="n">limit</span> <span class="o">//</span> <span class="n">norm</span>
-                
-                <span class="c1"># Fast direct calculation for the scaling factor k</span>
-                <span class="n">sub_sum</span> <span class="o">=</span> <span class="mi">0</span>
-                <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">isqrt</span><span class="p">(</span><span class="n">M</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
-                    <span class="n">sub_sum</span> <span class="o">+=</span> <span class="n">k</span> <span class="o">*</span> <span class="p">(</span><span class="n">M</span> <span class="o">//</span> <span class="p">(</span><span class="n">k</span> <span class="o">*</span> <span class="n">k</span><span class="p">))</span>
-                
-                <span class="n">tot</span> <span class="o">+=</span> <span class="n">multiplier</span> <span class="o">*</span> <span class="n">sub_sum</span>
-                
-    <span class="k">return</span> <span class="n">tot</span>
-
-<span class="c1"># Run for the final Project Euler scale</span>
-<span class="n">LIMIT</span> <span class="o">=</span> <span class="mi">10</span><span class="o">^</span><span class="mi">5</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Total sum of real parts of Gaussian divisors for 10^8:"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">solve_project_euler_153</span><span class="p">(</span><span class="n">LIMIT</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -3633,8 +3617,88 @@ document.write(`
 </section>
 <section id="id4">
 <h2>&gt; 400<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<section id="pe-401-finish-taking-notes">
+<h3>PE 401(finish taking notes)<a class="headerlink" href="#pe-401-finish-taking-notes" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\sum_{n\leq x}f(n)=\sum_{a\leq\sqrt x}g(a)\sum_{b\leq\frac xa}h(b)\sum_{b\leq\sqrt x}h(b)+\sum_{a\leq\frac xb}g(a)-(\sum_{a\leq\sqrt x}g(a))(\sum_{b\leq\sqrt x}h(b))\)</span></p></li>
+<li><p><a class="reference external" href="https://oeis.org/A064602">https://oeis.org/A064602</a></p></li>
+</ul>
+<img src="https://www.wolframcloud.com/obj/resourcesystem/published/DemonstrationRepository/deployments/LatticePointsUnderAHyperbola/img/LatticePointsUnderAHyperbola_Snapshot-3.png" alt="dirichlet hyperbola" width="300">
+<ul class="simple">
+<li><p>The Dirichlet hyperbola method can derive a sublinear formula for the summatory <span class="math notranslate nohighlight">\(\sigma\)</span> divisor function.</p></li>
+<li><p>The summatory <span class="math notranslate nohighlight">\(\sigma_k\)</span> divisor function can be represented as <span class="math notranslate nohighlight">\(1*a^k\)</span> where <span class="math notranslate nohighlight">\(*\)</span> is the Dirichlet convolution.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">sum_sigma2</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">num</span><span class="o">=</span><span class="n">isqrt</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">p1</span><span class="o">=</span><span class="nb">sum</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">//</span><span class="n">a</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">num</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+    <span class="n">p2</span><span class="o">=</span><span class="nb">sum</span><span class="p">((</span><span class="n">x</span><span class="o">//</span><span class="n">b</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">//</span><span class="n">b</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">//</span><span class="n">b</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">num</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span><span class="o">/</span><span class="mi">6</span>
+    <span class="n">p3</span><span class="o">=</span><span class="n">num</span><span class="o">^</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">num</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">num</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">6</span>
+    <span class="k">return</span> <span class="n">p1</span><span class="o">+</span><span class="n">p2</span><span class="o">-</span><span class="n">p3</span>
+<span class="n">sum_sigma2</span><span class="p">(</span><span class="mi">10</span><span class="o">^</span><span class="mi">15</span><span class="p">)</span><span class="o">%</span><span class="k">10</span>^9
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="pe-407">
+<h3>PE 407<a class="headerlink" href="#pe-407" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Idempotent(<span class="math notranslate nohighlight">\(a\mod n\)</span>): <span class="math notranslate nohighlight">\(a^2\equiv a\mod n\)</span></p></li>
+<li><p>Using CRT, we find each idempotent satisfies <span class="math notranslate nohighlight">\(a(a-1)\equiv0\mod n\)</span></p>
+<ul>
+<li><p>By noticing that <span class="math notranslate nohighlight">\(a,a-1\)</span> are coprime, we see that <span class="math notranslate nohighlight">\(n|a\)</span> or <span class="math notranslate nohighlight">\(n|a-1\)</span></p></li>
+</ul>
+</li>
+<li><p>There are <span class="math notranslate nohighlight">\(2^m\)</span> idempotents <span class="math notranslate nohighlight">\(\mod n\)</span> where <span class="math notranslate nohighlight">\(m\)</span> is the number of distinct prime factors of <span class="math notranslate nohighlight">\(n\)</span>.</p>
+<ul>
+<li><p>Note that this includes the trivial idempotents <span class="math notranslate nohighlight">\(0,1\)</span>.</p></li>
+<li><p>Also, every prime power will only have <span class="math notranslate nohighlight">\(2\)</span> idempotents which are the trivial ones.</p></li>
+</ul>
+</li>
+<li><p>Idempotent in linear algebra?</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 407 Idempotents</span>
+<span class="c1"># we use crt to solve this</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">comb</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+    <span class="n">binary_strings</span><span class="o">=</span><span class="p">[</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">i</span><span class="si">:</span><span class="s2">0</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span><span class="si">}</span><span class="s2">b</span><span class="si">}</span><span class="s2">"</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">))]</span>
+    <span class="k">for</span> <span class="n">string</span> <span class="ow">in</span> <span class="n">binary_strings</span><span class="p">:</span>
+        <span class="n">num</span><span class="o">=</span><span class="mi">1</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">char</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">char</span><span class="o">==</span><span class="s1">'1'</span><span class="p">:</span> <span class="n">num</span><span class="o">*=</span><span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="k">yield</span> <span class="n">num</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">m</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span><span class="o">&lt;=</span><span class="mi">2</span><span class="p">:</span> <span class="k">return</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span>
+    <span class="n">prime_powers</span><span class="o">=</span><span class="p">[</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">^</span><span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">factor</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+    <span class="c1"># solve crt for a(a-1)=0 mod prime_power</span>
+    <span class="n">sol</span><span class="o">=</span><span class="p">[</span><span class="n">n</span><span class="o">//</span><span class="n">prime_power</span><span class="o">*</span><span class="n">inverse_mod</span><span class="p">(</span><span class="n">n</span><span class="o">//</span><span class="n">prime_power</span><span class="p">,</span><span class="n">prime_power</span><span class="p">)</span> <span class="k">for</span> <span class="n">prime_power</span> <span class="ow">in</span> <span class="n">comb</span><span class="p">(</span><span class="n">prime_powers</span><span class="p">)]</span>
+    <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">sol</span><span class="p">)</span>
+<span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="o">^</span><span class="mi">7</span><span class="p">;</span><span class="nb">sum</span><span class="p">(</span><span class="n">m</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">limit</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>39782849136421
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 <section id="pe-429">
 <h3>PE 429<a class="headerlink" href="#pe-429" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Legendre’s Formula: <span class="math notranslate nohighlight">\(\large v_p(n)=\sum_{e=1}^\infty\lfloor\frac n{p^e}\rfloor\)</span></p>
+<ul>
+<li><p>Finds the maximum prime power of <span class="math notranslate nohighlight">\(p\)</span> in <span class="math notranslate nohighlight">\(n!\)</span></p></li>
+</ul>
+</li>
+<li><p>For the unitary divisor, we either take <span class="math notranslate nohighlight">\(0\)</span> or the full power of for each prime unlike normal divisors.</p></li>
+<li><p>To calculate the sum of squares of them, we multiply <span class="math notranslate nohighlight">\(p^{2e}+1\)</span> for the <span class="math notranslate nohighlight">\(2\)</span> choices.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Pi_{p&lt;=10^8}(1+p^{2e})\mod10^9+9\)</span> for prime <span class="math notranslate nohighlight">\(p\)</span></p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ans</span><span class="o">=</span><span class="mi">1</span>
@@ -3652,11 +3716,6 @@ document.write(`
     <span class="n">ans</span><span class="o">*=</span><span class="p">(</span><span class="n">p</span><span class="o">^</span><span class="n">legendre_formula</span><span class="p">(</span><span class="n">p</span><span class="p">))</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span>
     <span class="n">ans</span><span class="o">%=</span><span class="mi">10</span><span class="o">^</span><span class="mi">9</span><span class="o">+</span><span class="mi">9</span>
 <span class="n">ans</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>98792821
 </pre></div>
 </div>
 </div>
@@ -4900,7 +4959,7 @@ Optimize solution</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-148-154-unfinished">PE 148 &amp; 154(unfinished)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-149-150-optimize-slicing">PE 149 &amp; 150(optimize slicing)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-151">PE 151</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-153-unfinished">PE 153(unfinished)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-153">PE 153</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-158">PE 158</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-160-unfinished">PE 160(unfinished)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-162">PE 162</a></li>
@@ -4974,6 +5033,8 @@ Optimize solution</p>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">&gt; 400</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-401-finish-taking-notes">PE 401(finish taking notes)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-407">PE 407</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-429">PE 429</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-463">PE 463</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-493">PE 493</a></li>
