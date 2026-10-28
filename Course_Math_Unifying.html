@@ -184,8 +184,10 @@
 <li class="toctree-l1"><a class="reference internal" href="past/Alevel_math_further.html">A-level-further</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Course_Lean.html">Lean</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Cryptohack.html">Cryptohack</a></li>
+
 <li class="toctree-l1"><a class="reference internal" href="past/Course_MCM.html">Math Computational Methods</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Math Unifying</a></li>
+
 
 
 
@@ -198,8 +200,7 @@
 <li class="toctree-l1"><a class="reference internal" href="past/Course_MIT6002thinking.html">MIT_CS6002-CS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="PE140.html">Project Euler 1-140</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="PE1000.html">CTN</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="PE1000.html">Project Euler 141-</a></li>
 <li class="toctree-l1"><a class="reference internal" href="PE_tags.html">Project Euler Tags+Math</a></li>
 <li class="toctree-l1"><a class="reference internal" href="past/Course_MCM_QM.html">Quantum Mechanics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Course_MCM_QFT.html">QFT</a></li>
@@ -380,15 +381,13 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unsw-lectures-graph-theory">UNSW lectures - Graph Theory</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-algebra">Linear Algebra</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#laff">LAFF</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#primary">Primary: ??</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fast-matrix">Fast Matrix</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#laff">LAFF</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#la-oeis">LA + OEIS</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#primary">Primary: ??</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fast-matrix">Fast Matrix</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alaff">ALAFF</a></li>
-</ul>
-</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#alaff">ALAFF</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#u-extension-iii">5U - Extension III</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recurrence-relations-and-gf">Recurrence Relations and GF</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limits">Limits</a></li>
@@ -508,7 +507,7 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#permutation-puzzles-group">Permutation Puzzles - Group</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#permutation-puzzles-group-theory">Permutation Puzzles - Group Theory</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#foundations">Foundations</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#puzzles">Puzzles</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cube-moves">Cube Moves</a></li>
@@ -577,7 +576,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="math-unifying">
+  <section id="math-unifying">
 <h1>Math Unifying<a class="headerlink" href="#math-unifying" title="Link to this heading">#</a></h1>
 <section id="unsw-lectures-analysis-topology">
 <h2>UNSW lectures - Analysis &amp; Topology<a class="headerlink" href="#unsw-lectures-analysis-topology" title="Link to this heading">#</a></h2>
@@ -788,10 +787,10 @@ document.write(`
 </ul>
 </section>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="linear-algebra">
-<h1>Linear Algebra<a class="headerlink" href="#linear-algebra" title="Link to this heading">#</a></h1>
 <section id="laff">
-<h2>LAFF<a class="headerlink" href="#laff" title="Link to this heading">#</a></h2>
+<h1>LAFF<a class="headerlink" href="#laff" title="Link to this heading">#</a></h1>
+<section id="la-oeis">
+<h2>LA + OEIS<a class="headerlink" href="#la-oeis" title="Link to this heading">#</a></h2>
 <p><strong>Population Dynamics in Endangered Marsupial Breeding</strong></p>
 <p><strong>Context</strong>:
 A wildlife conservation sanctuary in New South Wales operates a specialized breeding program for endangered brush-tailed rock-wallabies. The sanctuary tracks two distinct age groups in its population each year: juveniles (under one year old) and mature adults (one year or older). Biologists have established the following annual population dynamics for the program:</p>
@@ -937,8 +936,9 @@ A wildlife conservation sanctuary in New South Wales operates a specialized bree
 </div>
 </div>
 </div>
+</section>
 <section id="primary">
-<h3>Primary: ??<a class="headerlink" href="#primary" title="Link to this heading">#</a></h3>
+<h2>Primary: ??<a class="headerlink" href="#primary" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Row echelon form: Get more 0s in bottom-left by adding and subtracting rows, still equivalent for solving equations</p>
 <ul>
@@ -1399,7 +1399,7 @@ flowchart LR
 </div>
 </section>
 <section id="fast-matrix">
-<h3>Fast Matrix<a class="headerlink" href="#fast-matrix" title="Link to this heading">#</a></h3>
+<h2>Fast Matrix<a class="headerlink" href="#fast-matrix" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tiling Corridor Signals</span>
@@ -1551,7 +1551,7 @@ flowchart LR
 </section>
 </section>
 <section id="alaff">
-<h2>ALAFF<a class="headerlink" href="#alaff" title="Link to this heading">#</a></h2>
+<h1>ALAFF<a class="headerlink" href="#alaff" title="Link to this heading">#</a></h1>
 <p>Week 1</p>
 <ul class="simple">
 <li><p>Norms</p>
@@ -1646,8 +1646,7 @@ flowchart LR
 </div>
 </div>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="u-extension-iii">
+<section id="u-extension-iii">
 <h1>5U - Extension III<a class="headerlink" href="#u-extension-iii" title="Link to this heading">#</a></h1>
 <section id="recurrence-relations-and-gf">
 <h2>Recurrence Relations and GF<a class="headerlink" href="#recurrence-relations-and-gf" title="Link to this heading">#</a></h2>
@@ -6065,8 +6064,8 @@ If the ratio is 1(no change between terms), then no conclusion can be made.</p>
 </section>
 </section>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="permutation-puzzles-group">
-<h1>Permutation Puzzles - Group<a class="headerlink" href="#permutation-puzzles-group" title="Link to this heading">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="permutation-puzzles-group-theory">
+<h1>Permutation Puzzles - Group Theory<a class="headerlink" href="#permutation-puzzles-group-theory" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># AKA Startup</span>
@@ -9109,15 +9108,13 @@ From linear algebra we know</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unsw-lectures-graph-theory">UNSW lectures - Graph Theory</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-algebra">Linear Algebra</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#laff">LAFF</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#primary">Primary: ??</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fast-matrix">Fast Matrix</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#laff">LAFF</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#la-oeis">LA + OEIS</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#primary">Primary: ??</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fast-matrix">Fast Matrix</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alaff">ALAFF</a></li>
-</ul>
-</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#alaff">ALAFF</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#u-extension-iii">5U - Extension III</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recurrence-relations-and-gf">Recurrence Relations and GF</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limits">Limits</a></li>
@@ -9237,7 +9234,7 @@ From linear algebra we know</p>
 </li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#permutation-puzzles-group">Permutation Puzzles - Group</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#permutation-puzzles-group-theory">Permutation Puzzles - Group Theory</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#foundations">Foundations</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#puzzles">Puzzles</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cube-moves">Cube Moves</a></li>
