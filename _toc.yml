@@ -9,10 +9,8 @@ parts:
   - file: past/Alevel_math
   - file: past/Alevel_math_further
   - file: Course_Lean  
-  - file: Course_Puzzle_Group
-  - file: Course_5U
-  - file: Course_MCS320Symbol
   - file: Cryptohack
+  - file: past/Course_MCM
   - file: Course_Math_Unifying
 
 - caption: CS & Physics
@@ -23,7 +21,6 @@ parts:
   - file: PE140 
   - file: PE1000 
   - file: PE_tags
-  - file: past/Course_MCM
   - file: past/Course_MCM_QM
   - file: Course_MCM_QFT
 
