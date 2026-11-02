@@ -181,6 +181,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../Cryptohack.html">Cryptohack</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="Course_MCM.html">Math4Quantum</a></li>
+
+
 <li class="toctree-l1"><a class="reference internal" href="../Course_Math_Unifying.html">Math Unifying</a></li>
 
 
@@ -390,8 +392,8 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#god-s-view">God’s view</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prize-quantity-won-barplot-log">Prize Quantity Won &amp; Barplot 图调整log坐标</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prize-quantity-won-barplot-linear">Prize Quantity Won &amp; Barplot linear坐标不调整</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prize-quantity-won-barplot">Prize Quantity Won &amp; Barplot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prize-quantity-won-barplot-linear">Prize Quantity Won &amp; Barplot linear</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-much-money-won-for-per-prize-barplot-linear">How much money Won for per Prize &amp; Barplot linear</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#god-boss-s-view">God(Boss)’s view</a></li>
 </ul>
@@ -410,7 +412,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="lottery-math">
 <h1>Lottery Math<a class="headerlink" href="#lottery-math" title="Link to this heading">#</a></h1>
-<p>This is the accompaying Jupyter Notebook to <a class="reference external" href="http://urbanscientist.cool/articles/19/Mathematics-of-the-Powerball-blog/">my article 网站已失效</a>. Here we will take a quick computational walkthrough the article and the functions defined within it. 来自：<a class="github reference external" href="https://github.com/UrbanScientist">UrbanScientist</a></p>
+<p>This is the accompaying Jupyter Notebook to <a class="reference external" href="http://urbanscientist.cool/articles/19/Mathematics-of-the-Powerball-blog/">my article</a>. Here we will take a quick computational walkthrough the article and the functions defined within it. <a class="github reference external" href="https://github.com/UrbanScientist">UrbanScientist</a></p>
 <section id="calculating-the-total-number-of-combinations-permutations">
 <h2>Calculating the Total number of Combinations &amp; Permutations<a class="headerlink" href="#calculating-the-total-number-of-combinations-permutations" title="Link to this heading">#</a></h2>
 <p>As in the article I am quick to point out that factorials are computationally ineffecient. We will use them for simple explanation’s sake. Using the defined n, and k within equation in the article. We us them below to arrive at the total number of combinations including permutations, or just combinations within the Powerball lottery.</p>
@@ -685,7 +687,7 @@ document.write(`
 <span class="n">dud</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">won</span> <span class="o">=</span> <span class="n">plays</span><span class="o">-</span><span class="n">dud</span>
 
-<span class="c1"># 这个循环 Loop 跑了两个小时</span>
+<span class="c1"># This Loop run for 2hr</span>
 
 <span class="k">while</span> <span class="n">guessed_balls</span> <span class="o">!=</span> <span class="n">lottery_balls</span><span class="p">:</span>
     
@@ -755,8 +757,8 @@ document.write(`
 </div>
 </div>
 </div>
-<section id="prize-quantity-won-barplot-log">
-<h3>Prize Quantity Won &amp; Barplot 图调整log坐标<a class="headerlink" href="#prize-quantity-won-barplot-log" title="Link to this heading">#</a></h3>
+<section id="prize-quantity-won-barplot">
+<h3>Prize Quantity Won &amp; Barplot<a class="headerlink" href="#prize-quantity-won-barplot" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sb</span>
@@ -811,7 +813,7 @@ total jackpot:                       1
 </div>
 </section>
 <section id="prize-quantity-won-barplot-linear">
-<h3>Prize Quantity Won &amp; Barplot linear坐标不调整<a class="headerlink" href="#prize-quantity-won-barplot-linear" title="Link to this heading">#</a></h3>
+<h3>Prize Quantity Won &amp; Barplot linear<a class="headerlink" href="#prize-quantity-won-barplot-linear" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sb</span>
@@ -1067,9 +1069,9 @@ total jackpot:                     $ 197,000,000
 </section>
 <section id="another-way">
 <h2>Another way<a class="headerlink" href="#another-way" title="Link to this heading">#</a></h2>
-<p>来自：
+<p>from:
 <a class="github reference external" href="https://github.com/CoreyMSchafer/code_snippets/tree/master/Python/Python-Lottery-Simulation">CoreyMSchafer/code_snippets</a></p>
-<p>视频教程：
+<p>video:
 <a class="reference external" href="https://www.youtube.com/watch?v=HZ8uXq5VG2w">https://www.youtube.com/watch?v=HZ8uXq5VG2w</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1280,8 +1282,8 @@ total jackpot:                     $ 197,000,000
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#god-s-view">God’s view</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prize-quantity-won-barplot-log">Prize Quantity Won &amp; Barplot 图调整log坐标</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prize-quantity-won-barplot-linear">Prize Quantity Won &amp; Barplot linear坐标不调整</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prize-quantity-won-barplot">Prize Quantity Won &amp; Barplot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prize-quantity-won-barplot-linear">Prize Quantity Won &amp; Barplot linear</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-much-money-won-for-per-prize-barplot-linear">How much money Won for per Prize &amp; Barplot linear</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#god-boss-s-view">God(Boss)’s view</a></li>
 </ul>
