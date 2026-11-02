@@ -30,4 +30,3 @@ parts:
   - file: past/nb_past_courses
   - file: past/nb_Geo
   - file: past/nb_lottery_simulator
-  - file: past/How_Dad_organise_QM
