@@ -22,7 +22,7 @@ parts:
   - file: past/Course_MCM_QM
   - file: Course_MCM_QFT
 
-- caption: Notebook & Tom
+- caption: Past Notebooks
   numbered: false
   chapters:
   - file: past/Alevel_math
