@@ -6,27 +6,27 @@ parts:
 - caption: Math & FP/Language
   numbered: false
   chapters:
-  - file: past/Alevel_math
-  - file: past/Alevel_math_further
   - file: Course_Lean  
   - file: Cryptohack
   - file: past/Course_MCM
   - file: Course_Math_Unifying
+  - file: PE140 
+  - file: PE1000 
+  - file: PE_tags
 
 - caption: CS & Physics
   numbered: false
   chapters:
   - file: past/Course_MIT6001Python
   - file: past/Course_MIT6002thinking
-  - file: PE140 
-  - file: PE1000 
-  - file: PE_tags
   - file: past/Course_MCM_QM
   - file: Course_MCM_QFT
 
 - caption: Notebook & Tom
   numbered: false
   chapters:
+  - file: past/Alevel_math
+  - file: past/Alevel_math_further
   - file: past/nb_past_courses
   - file: past/nb_Geo
   - file: past/nb_lottery_simulator
