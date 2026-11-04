@@ -184,8 +184,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../Cryptohack.html">Cryptohack</a></li>
 
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Math4Quantum</a></li>
-
-
 <li class="toctree-l1"><a class="reference internal" href="../Course_Math_Unifying.html">Math Unifying</a></li>
 
 
@@ -375,7 +373,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Math4Quantum</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pre">Pre</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculus">Calculus</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#review">Review</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-set-4">Problem Set 4</a></li>
@@ -413,21 +411,13 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#week-11">Week 11</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final">Final</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-exam">Final exam</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-classical-mechanics">Appendix: Classical Mechanics</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cm-qm-unity">CM-QM unity</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-structure-unity-classical-vs-quantum-mechanics">Mathematical Structure Unity: Classical vs Quantum Mechanics</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-phase-space-poisson-bracket-hamilton-equations">1) Classical phase space: Poisson bracket + Hamilton equations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-operators-commutators-finite-dimensional-truncation">2) Quantum: operators + commutators (finite-dimensional truncation)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#canonical-commutation-dimensionless-quadratures">3) Canonical commutation: dimensionless quadratures</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deformation-quantization-view-moyal-bracket-series">4) Deformation quantization view: Moyal bracket (series)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-cm-qm-unity">Appendix: CM-QM unity</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-structure-unity-classical-vs-quantum-mechanics">Mathematical Structure Unity: Classical vs Quantum Mechanics</a></li>
 </ul>
 </li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -443,6 +433,8 @@ document.write(`
 <p>MCM (Mathematical Computational Methods) is a <a class="reference external" href="https://www.edx.org/learn/math/georgetown-university-mathematical-and-computational-methods">Mathematical Physics course</a> used as the math foundation of Quantum Mechanics.</p>
 <p>The power of output <img src="https://raw.githubusercontent.com/tomctang/NB_img/main/outputpower.png" alt="vector_cal" width="300"></p>
 <p>Physics is naturally speaking math.</p>
+<section id="pre">
+<h2>Pre<a class="headerlink" href="#pre" title="Link to this heading">#</a></h2>
 <p><strong>Lagrangian Mechanics</strong></p>
 <ul class="simple">
 <li><p>Analytical mechanics is fundamental for someone interested in theoretical physics.</p></li>
@@ -571,6 +563,7 @@ document.write(`
 <li><p>It shouldn’t be much of a surprise that the variation is 0 because Hamilton’s canonical equations say that the two bracketed sections are both 0 and are the same equations from earlier.</p></li>
 <li><p>This is the formalism of Hamiltonian mechanics. Instead of a 2nd-order DE per degree of freedom, there are two 1st-order DEs to solve.</p></li>
 </ul>
+</section>
 <section id="calculus">
 <h2>Calculus<a class="headerlink" href="#calculus" title="Link to this heading">#</a></h2>
 <section id="review">
@@ -3475,8 +3468,8 @@ Five Easy Pieces(Non-linear ODE)</p></li>
 </div>
 </section>
 </section>
-<section id="final">
-<h2>Final<a class="headerlink" href="#final" title="Link to this heading">#</a></h2>
+<section id="final-exam">
+<h2>Final exam<a class="headerlink" href="#final-exam" title="Link to this heading">#</a></h2>
 <p>for checking answers</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -4335,9 +4328,8 @@ and computational advantages depending on the problem at hand.
 </div>
 </div>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="cm-qm-unity">
-<h1>CM-QM unity<a class="headerlink" href="#cm-qm-unity" title="Link to this heading">#</a></h1>
+<section id="appendix-cm-qm-unity">
+<h2>Appendix: CM-QM unity<a class="headerlink" href="#appendix-cm-qm-unity" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">""" Mathematical Unity Between Classical and Quantum Mechanics</span>
@@ -4976,44 +4968,23 @@ END OF DEMONSTRATION
 </div>
 </div>
 </div>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>mindmap
-  root((mindmap))
-    Origins
-      Long history
-      ::icon(fa fa-book)
-      Popularisation
-        British popular psychology author Tony Buzan
-    Research
-      On effectiveness&lt;br/&gt;and features
-      On Automatic creation
-        Uses
-            Creative techniques
-            Strategic planning
-            Argument mapping
-    Tools
-      Pen and paper
-      Mermaid
-
-</pre></div>
-</div>
 <div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>flowchart LR
-    subgraph C[经典力学框架]
-        direction LR
-        C1[拉格朗日表述&lt;br&gt;最小作用量原理&lt;br&gt;变分思想] --&gt;|勒让德变换| C2[哈密顿表述&lt;br&gt;正则方程&lt;br&gt;泊松代数]
-    end
+  subgraph C[CM Framework]
+    direction LR
+    C1[Lagrangian Formulation&lt;br&gt;Principle of Least Action&lt;br&gt;Variational Approach] --&gt;|Legendre Transform| C2[Hamiltonian Formulation&lt;br&gt;Canonical Equations&lt;br&gt;Poisson Algebra]
+end
 
-    subgraph Q[量子力学方法]
-        direction LR
-        Q1[路径积分表述&lt;br&gt;（费曼）] --&gt;|深刻对应| C1
-        Q2[正则量子化/算符表述&lt;br&gt;（薛定谔/海森堡/狄拉克）] --&gt;|直接量子化| C2
-        Q3[变分法&lt;br&gt;（瑞利-里茨）] --&gt;|哲学同源&lt;br&gt;（求极值）| C1
-        Q4[微扰法&lt;br&gt;（一阶、二阶...）] --&gt;|框架同源&lt;br&gt;（以H操作为核心）| C2
-    end
+  subgraph Q[QM Methods]
+    direction LR
+Q1["Path Integral Formulation&lt;br&gt;(Feynman)"] --&gt;|Deep Correspondence| C1
+Q2["Canonical Quantization / Operator Formalism&lt;br&gt;(Schrödinger/Heisenberg/Dirac)"] --&gt;|Direct Quantization| C2
+Q3["Variational Method&lt;br&gt;(Rayleigh-Ritz)"] --&gt;|"Philosophical Commonality&lt;br&gt;(Extremization)"| C1
+Q4["Perturbation Theory&lt;br&gt;(First-order, Second-order...)"] --&gt;|"Structural Commonality&lt;br&gt;(Centered on the Hamiltonian Operator H)"| C2
+end
 </pre></div>
 </div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="mathematical-structure-unity-classical-vs-quantum-mechanics">
-<h1>Mathematical Structure Unity: Classical vs Quantum Mechanics<a class="headerlink" href="#mathematical-structure-unity-classical-vs-quantum-mechanics" title="Link to this heading">#</a></h1>
+<section id="mathematical-structure-unity-classical-vs-quantum-mechanics">
+<h3>Mathematical Structure Unity: Classical vs Quantum Mechanics<a class="headerlink" href="#mathematical-structure-unity-classical-vs-quantum-mechanics" title="Link to this heading">#</a></h3>
 <p>This notebook demonstrates, computationally, the shared mathematical backbone:</p>
 <ul class="simple">
 <li><p><strong>Classical mechanics:</strong> observables are functions on phase space with a <strong>Poisson bracket</strong>.</p></li>
@@ -5021,8 +4992,11 @@ END OF DEMONSTRATION
 <li><p><strong>Unity:</strong> both are Lie-algebra dynamics<br />
 <span class="math notranslate nohighlight">\(\dot f = \{f,H\},\qquad \dot{\hat A} = \frac{1}{i\hbar}[\hat A,\hat H].\)</span></p></li>
 </ul>
-<section id="classical-phase-space-poisson-bracket-hamilton-equations">
-<h2>1) Classical phase space: Poisson bracket + Hamilton equations<a class="headerlink" href="#classical-phase-space-poisson-bracket-hamilton-equations" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Classical phase space: Poisson bracket + Hamilton equations</p></li>
+</ol>
+</div></blockquote>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s1">'q p m omega'</span><span class="p">)</span>
@@ -5055,9 +5029,11 @@ END OF DEMONSTRATION
 \[\displaystyle 0 \qquad   \]</div>
 </div>
 </div>
-</section>
-<section id="quantum-operators-commutators-finite-dimensional-truncation">
-<h2>2) Quantum: operators + commutators (finite-dimensional truncation)<a class="headerlink" href="#quantum-operators-commutators-finite-dimensional-truncation" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><ol class="arabic simple" start="2">
+<li><p>Quantum: operators + commutators (finite-dimensional truncation)</p></li>
+</ol>
+</div></blockquote>
 <p>We model the harmonic oscillator in a truncated Fock space of dimension <code class="docutils literal notranslate"><span class="pre">N</span></code>.
 Truncation introduces boundary artifacts near the top state; increasing <code class="docutils literal notranslate"><span class="pre">N</span></code> reduces them.</p>
 <div class="cell docutils container">
@@ -5112,9 +5088,11 @@ Truncation introduces boundary artifacts near the top state; increasing <code cl
 \[\displaystyle \sqrt{225} \qquad   \]</div>
 </div>
 </div>
-</section>
-<section id="canonical-commutation-dimensionless-quadratures">
-<h2>3) Canonical commutation: dimensionless quadratures<a class="headerlink" href="#canonical-commutation-dimensionless-quadratures" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><ol class="arabic simple" start="3">
+<li><p>Canonical commutation: dimensionless quadratures</p></li>
+</ol>
+</div></blockquote>
 <p>Define
 <span class="math notranslate nohighlight">\( Q=\sqrt{\frac{m\omega}{\hbar}}x,\qquad P=\frac{1}{\sqrt{m\omega\hbar}}p.\)</span>
 In the infinite-dimensional limit, <span class="math notranslate nohighlight">\([Q,P]=i\mathbf{1}\)</span>. In truncation it is close to identity except near the boundary.</p>
@@ -5143,9 +5121,11 @@ In the infinite-dimensional limit, <span class="math notranslate nohighlight">\(
 </div>
 </div>
 </div>
-</section>
-<section id="deformation-quantization-view-moyal-bracket-series">
-<h2>4) Deformation quantization view: Moyal bracket (series)<a class="headerlink" href="#deformation-quantization-view-moyal-bracket-series" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><ol class="arabic simple" start="4">
+<li><p>Deformation quantization view: Moyal bracket (series)</p></li>
+</ol>
+</div></blockquote>
 <p>The Moyal bracket is a deformation of the Poisson bracket:
 <span class="math notranslate nohighlight">\(\{f,g\}_M = \{f,g\} + O(\hbar^2).\)</span>
 Below we compute the first correction term via a series expansion.</p>
@@ -5174,17 +5154,18 @@ Below we compute the first correction term via a series expansion.</p>
 \[\displaystyle 9 q^{2} p^{2} - \frac{3}{2} \, \mathit{hbar}^{2} \qquad   \]</div>
 </div>
 </div>
-</section>
-<section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
-<p>You have now verified in code:</p>
+<blockquote>
+<div><p>Summary</p>
+</div></blockquote>
+<p>now verified in code:</p>
 <ol class="arabic simple">
 <li><p><strong>Classical:</strong> <span class="math notranslate nohighlight">\(\{\cdot,\cdot\}\)</span> is a Lie bracket; Hamiltonian dynamics is <span class="math notranslate nohighlight">\(\dot f=\{f,H\}\)</span>.</p></li>
 <li><p><strong>Quantum:</strong> <span class="math notranslate nohighlight">\([\cdot,\cdot]\)</span> is a Lie bracket; Heisenberg dynamics is <span class="math notranslate nohighlight">\(\dot{\hat A}=\frac{1}{i\hbar}[\hat A,\hat H]\)</span>.</p></li>
-<li><p><strong>Bridge:</strong> dimensionless CCR <span class="math notranslate nohighlight">\([Q,P]\approx i\mathbf{1}\)</span> (exact in the infinite-dimensional limit).</p></li>
+<li><p><strong>Bridge:</strong> dimensionless CCR (Canonical Commutation Relation) <span class="math notranslate nohighlight">\([Q,P]\approx i\mathbf{1}\)</span> (exact in the infinite-dimensional limit).</p></li>
 <li><p><strong>Deformation:</strong> Moyal bracket reproduces Poisson bracket at leading order with <span class="math notranslate nohighlight">\(\hbar^2\)</span> corrections.</p></li>
 </ol>
 <p>This is the structural unity: <strong>same dynamical template, different bracket</strong>.</p>
+</section>
 </section>
 </section>
 
@@ -5252,7 +5233,7 @@ Below we compute the first correction term via a series expansion.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Math4Quantum</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pre">Pre</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculus">Calculus</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#review">Review</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-set-4">Problem Set 4</a></li>
@@ -5290,21 +5271,13 @@ Below we compute the first correction term via a series expansion.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#week-11">Week 11</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final">Final</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-exam">Final exam</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-classical-mechanics">Appendix: Classical Mechanics</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cm-qm-unity">CM-QM unity</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-structure-unity-classical-vs-quantum-mechanics">Mathematical Structure Unity: Classical vs Quantum Mechanics</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-phase-space-poisson-bracket-hamilton-equations">1) Classical phase space: Poisson bracket + Hamilton equations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-operators-commutators-finite-dimensional-truncation">2) Quantum: operators + commutators (finite-dimensional truncation)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#canonical-commutation-dimensionless-quadratures">3) Canonical commutation: dimensionless quadratures</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deformation-quantization-view-moyal-bracket-series">4) Deformation quantization view: Moyal bracket (series)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-cm-qm-unity">Appendix: CM-QM unity</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-structure-unity-classical-vs-quantum-mechanics">Mathematical Structure Unity: Classical vs Quantum Mechanics</a></li>
 </ul>
 </li>
 </ul>
-
   </nav></div>
 
 </div></div>

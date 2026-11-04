@@ -184,8 +184,6 @@
 <li class="toctree-l1"><a class="reference internal" href="Cryptohack.html">Cryptohack</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="past/Course_MCM.html">Math4Quantum</a></li>
-
-
 <li class="toctree-l1"><a class="reference internal" href="Course_Math_Unifying.html">Math Unifying</a></li>
 
 
@@ -567,6 +565,32 @@ document.write(`
 </div>
 </div>
 </div>
+<ul class="simple">
+<li><p>problem could be simplified into diophantine equation</p></li>
+<li><p>m=r*(r*a^3+1) , r is an integer while a is just a ratio, example</p>
+<ul>
+<li><p>58=6*9+4</p></li>
+<li><p>d=6,q=9,r=4</p></li>
+<li><p>a=3/2</p></li>
+<li><p>58=4*(13.5+1)</p></li>
+<li><p>however this is not square and we can look at 9</p></li>
+<li><p>for 9</p></li>
+</ul>
+</li>
+<li><p>for various r(up to ~500000), we can check for a but we have to somehow limit the search space</p>
+<ul>
+<li><p>we have to look for valid a such that both a<em>r and a^2</em>r are integers</p></li>
+<li><p>for example, some sample r are 1,8,25,36,81</p>
+<ul>
+<li><p>for r=1, a is integer(a=2)</p></li>
+<li><p>for r=8, a is integer/2(a=23/2)</p></li>
+<li><p>for r=25, a is integer/5(a=15/5=3)</p></li>
+<li><p>in general, let r=c^2*d where c,d are integers and c is largest possible, then the matching a must be integer/c(not neccesarily simplest form)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 </section>
 <section id="pe-142">
 <h3>PE 142<a class="headerlink" href="#pe-142" title="Link to this heading">#</a></h3>
@@ -608,7 +632,7 @@ document.write(`
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># new</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2.0</span>
 <span class="n">limit</span><span class="o">=</span><span class="mi">1000</span>
 <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">limit</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">b</span><span class="o">+</span><span class="mi">2</span><span class="p">,</span><span class="n">limit</span><span class="p">,</span><span class="mi">2</span><span class="p">):</span>
@@ -626,7 +650,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Policy</span><span class="c1"># old</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1.0</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">primitive</span><span class="p">(</span><span class="n">triplets</span><span class="p">):</span>
     <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">gcd</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">==</span><span class="mi">1</span><span class="p">,</span><span class="n">triplets</span><span class="p">))</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">nonprimitive</span><span class="p">(</span><span class="n">primitive</span><span class="p">,</span><span class="n">limit</span><span class="p">):</span>
