@@ -376,15 +376,18 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-number-game-done">Natural Number Game (Done)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scribble-robo">Scribble - Robo</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hard-part">hard part</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notes">Notes</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#real-analysis">Real Analysis</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set-theory-game">1 Set Theory Game</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set-theory-game-overlapped-by-others">1 Set Theory Game (overlapped by others)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lean-intro-to-logic-done">2 Lean Intro to Logic (~done)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reintro-to-proofs-done">3 Reintro to Proofs (Done)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#knights-and-knaves-game">Knights and Knaves Game</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#knights-and-knaves-game-overlapped-by-others">Knights and Knaves Game (overlapped by others)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-algebra">Linear Algebra</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#number-theory">Number Theory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intro-program-verification-cslib">Intro Program Verification - CSlib</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hilbert-geometry-game">Hilbert Geometry Game</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-tactics-theorems">Appendix: Tactics &amp; Theorems</a></li>
 </ul>
             </nav>
@@ -1103,7 +1106,7 @@ document.write(`
 <td><p>–</p></td>
 <td><p>ℕ-valued sequences uncountable</p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p>Robotswana</p></td>
+<tr class="row-even"><td class="text-left"><p>Ethiopia</p></td>
 <td class="text-left"><p>matrices, trace</p></td>
 <td><p>–</p></td>
 <td><p>characterization of trace map</p></td>
@@ -1775,18 +1778,30 @@ document.write(`
 <span class="n">rw</span><span class="p">[</span><span class="n">if_neg</span> <span class="n">h</span><span class="p">,</span><span class="n">if_neg</span><span class="p">]</span>
 <span class="n">assumption</span>
 <span class="o">--</span> <span class="n">Level</span> <span class="mi">7</span> <span class="o">/</span> <span class="mi">10</span> <span class="n">example</span> <span class="p">{</span><span class="n">A</span> <span class="p">:</span> <span class="n">Type</span><span class="p">}</span> <span class="p">(</span><span class="n">f</span> <span class="p">:</span> <span class="n">ℕ</span> <span class="err">→</span> <span class="n">A</span><span class="p">)</span> <span class="p">:</span> <span class="err">∃</span> <span class="n">g</span> <span class="p">:</span> <span class="n">ℤ</span> <span class="err">→</span> <span class="n">A</span><span class="p">,</span> <span class="err">∀</span> <span class="n">n</span> <span class="p">:</span> <span class="n">ℕ</span><span class="p">,</span> <span class="p">(</span><span class="n">f</span> <span class="n">n</span> <span class="o">=</span> <span class="n">g</span> <span class="n">n</span><span class="p">)</span> <span class="o">:=</span> <span class="n">by</span> 
-
-
-
-
-
-
-
-
-
-
-
-<span class="o">--</span> <span class="n">World</span><span class="p">:</span> <span class="n">Euclid</span>
+<span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">ℤ</span><span class="err">→</span><span class="n">A</span><span class="o">:=</span><span class="n">fun</span> <span class="n">x</span> <span class="o">=&gt;</span> <span class="n">f</span> <span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">toNat</span><span class="p">)</span>
+<span class="n">use</span> <span class="n">g</span>
+<span class="n">intro</span> <span class="n">x</span>
+<span class="n">rfl</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">8</span> <span class="o">/</span> <span class="mi">10</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">9</span> <span class="o">/</span> <span class="mi">10</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">10</span> <span class="o">/</span> <span class="mi">10</span>
+<span class="n">intro</span> <span class="n">n</span>
+<span class="n">induction</span> <span class="n">n</span> <span class="k">with</span> <span class="n">n</span> <span class="n">hn</span>
+<span class="n">assumption</span>
+<span class="n">obtain</span><span class="err">⟨</span><span class="n">a</span><span class="p">,</span><span class="n">hn</span><span class="err">⟩</span><span class="o">:=</span><span class="n">hn</span>
+<span class="n">use</span> <span class="n">g</span> <span class="n">a</span>
+<span class="n">apply</span> <span class="n">congr_fun</span> <span class="n">at</span> <span class="n">hs</span>
+<span class="n">specialize</span> <span class="n">hs</span> <span class="n">a</span>
+<span class="n">simp</span> <span class="n">at</span> <span class="n">hs</span>
+<span class="n">rw</span><span class="p">[</span><span class="n">hn</span><span class="p">]</span> <span class="n">at</span> <span class="n">hs</span>
+<span class="n">assumption</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">--</span> <span class="n">World</span><span class="p">:</span> <span class="n">Euclid</span>
 <span class="o">--</span> <span class="n">Level</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">4</span> <span class="n">example</span> <span class="p">(</span><span class="n">A</span> <span class="p">:</span> <span class="n">Finset</span> <span class="n">ℕ</span><span class="p">)</span> <span class="p">(</span><span class="n">h</span> <span class="p">:</span> <span class="err">∀</span> <span class="n">a</span> <span class="err">∈</span> <span class="n">A</span><span class="p">,</span> <span class="n">Prime</span> <span class="n">a</span><span class="p">)</span> <span class="p">:</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="p">(</span><span class="err">∏</span> <span class="n">a</span> <span class="err">∈</span> <span class="n">A</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span> <span class="o">:=</span> <span class="n">by</span>
 <span class="n">apply</span> <span class="n">prod_pos</span>
 <span class="n">intro</span> <span class="n">i</span>
@@ -1812,17 +1827,263 @@ document.write(`
 <span class="n">ring</span>
 <span class="n">simp</span>
 <span class="o">--</span> <span class="n">Level</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">4</span> <span class="n">example</span> <span class="p">(</span><span class="n">hf</span> <span class="p">:</span> <span class="n">Set</span><span class="o">.</span><span class="n">Finite</span> <span class="p">{</span> <span class="n">p</span> <span class="p">:</span> <span class="n">ℕ</span> <span class="o">|</span> <span class="n">Prime</span> <span class="n">p</span><span class="p">})</span> <span class="p">:</span> <span class="err">∃</span> <span class="p">(</span><span class="n">a</span> <span class="p">:</span> <span class="n">ℕ</span><span class="p">),</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="err">∧</span> <span class="err">∀</span> <span class="p">(</span><span class="n">p</span> <span class="p">:</span> <span class="n">ℕ</span><span class="p">),</span> <span class="n">Prime</span> <span class="n">p</span> <span class="err">→</span> <span class="n">p</span> <span class="err">∣</span> <span class="n">a</span> <span class="o">:=</span> <span class="n">by</span>
+
+
+
+
+
+<span class="o">--</span> <span class="n">Epo</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">7</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">7</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">7</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">4</span> <span class="o">/</span> <span class="mi">7</span>
+<span class="n">unfold</span> <span class="n">RightInverse</span>
+<span class="n">unfold</span> <span class="n">LeftInverse</span>
+<span class="n">constructor</span>
+<span class="n">intro</span> <span class="n">h</span>
+<span class="n">ext</span> <span class="n">x</span>
+<span class="n">specialize</span> <span class="n">h</span> <span class="n">x</span>
+<span class="n">simp</span><span class="p">[</span><span class="n">h</span><span class="p">]</span>
+<span class="n">rfl</span>
+<span class="n">intro</span> <span class="n">h</span> <span class="n">x</span>
+<span class="n">apply</span> <span class="n">congr_fun</span> <span class="n">at</span> <span class="n">h</span>
+<span class="n">specialize</span> <span class="n">h</span> <span class="n">x</span>
+<span class="n">rw</span><span class="p">[</span><span class="err">←</span><span class="n">comp_apply</span> <span class="p">(</span><span class="n">f</span><span class="o">:=</span><span class="n">f</span><span class="p">)]</span>
+<span class="n">rw</span><span class="p">[</span><span class="n">h</span><span class="p">]</span>
+<span class="n">rfl</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">5</span> <span class="o">/</span> <span class="mi">7</span>
+<span class="n">unfold</span> <span class="n">HasRightInverse</span>
+<span class="n">unfold</span> <span class="n">RightInverse</span>
+<span class="n">unfold</span> <span class="n">LeftInverse</span>
+<span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">ℤ</span><span class="err">×</span><span class="n">ℤ</span><span class="err">→</span><span class="n">ℤ</span><span class="err">×</span><span class="n">ℤ</span><span class="o">:=</span><span class="n">fun</span> <span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">m</span><span class="o">-</span><span class="n">n</span><span class="p">,</span><span class="n">n</span><span class="o">-</span><span class="n">m</span><span class="p">)</span>
+<span class="n">use</span> <span class="n">g</span>
+<span class="n">intro</span> <span class="n">x</span>
+<span class="n">simp</span><span class="p">[</span><span class="n">f</span><span class="p">,</span><span class="n">g</span><span class="p">]</span>
+<span class="n">ring</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">6</span> <span class="o">/</span> <span class="mi">7</span>
+<span class="n">choose</span> <span class="n">g</span> <span class="n">hg</span> <span class="n">using</span> <span class="n">nonempty_fibre</span>
+<span class="n">unfold</span> <span class="n">HasRightInverse</span>
+<span class="n">unfold</span> <span class="n">RightInverse</span>
+<span class="n">unfold</span> <span class="n">LeftInverse</span>
+<span class="n">use</span> <span class="n">g</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">7</span> <span class="o">/</span> <span class="mi">7</span> <span class="n">theorem</span> <span class="n">surjective_iff_hasRightInverse</span> <span class="p">{</span><span class="n">A</span> <span class="n">B</span> <span class="p">:</span> <span class="n">Type</span><span class="p">}</span> <span class="p">(</span><span class="n">f</span> <span class="p">:</span> <span class="n">A</span> <span class="err">→</span> <span class="n">B</span><span class="p">)</span> <span class="p">:</span> <span class="n">Surjective</span> <span class="n">f</span> <span class="err">↔</span> <span class="n">HasRightInverse</span> <span class="n">f</span> <span class="o">:=</span> <span class="n">by</span>
+<span class="n">unfold</span> <span class="n">Surjective</span>
+<span class="n">unfold</span> <span class="n">HasRightInverse</span>
+<span class="n">unfold</span> <span class="n">RightInverse</span>
+<span class="n">unfold</span> <span class="n">LeftInverse</span>
+<span class="n">constructor</span>
+<span class="n">intro</span> <span class="n">h</span>
+<span class="n">choose</span> <span class="n">g</span> <span class="n">h</span> <span class="n">using</span> <span class="n">h</span>
+<span class="n">use</span> <span class="n">g</span>
+<span class="n">intro</span> <span class="n">h</span> <span class="n">b</span>
+<span class="n">obtain</span><span class="err">⟨</span><span class="n">g</span><span class="p">,</span><span class="n">h</span><span class="err">⟩</span><span class="o">:=</span><span class="n">h</span>
+<span class="n">use</span> <span class="n">g</span> <span class="n">b</span>
+<span class="n">specialize</span> <span class="n">h</span> <span class="n">b</span>
+<span class="n">assumption</span>
+
+<span class="o">--</span> <span class="n">Mono</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">11</span> <span class="n">example</span> <span class="p">:</span> <span class="n">let</span> <span class="n">f</span> <span class="o">:=</span> <span class="n">fun</span> <span class="p">(</span><span class="n">n</span> <span class="p">:</span> <span class="n">ℤ</span><span class="p">)</span> <span class="err">↦</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">3</span> <span class="n">Injective</span> <span class="n">f</span> <span class="o">:=</span> <span class="n">by</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">11</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">11</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">4</span> <span class="o">/</span> <span class="mi">11</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">5</span> <span class="o">/</span> <span class="mi">11</span>
+<span class="n">apply</span> <span class="n">StrictMono</span><span class="o">.</span><span class="n">injective</span>
+<span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">ℤ</span><span class="err">→</span><span class="n">ℤ</span><span class="o">:=</span><span class="n">fun</span> <span class="n">n</span> <span class="o">=&gt;</span> <span class="n">n</span><span class="o">^</span><span class="mi">3</span>
+<span class="n">let</span> <span class="n">h</span><span class="p">:</span><span class="n">ℤ</span><span class="err">→</span><span class="n">ℤ</span><span class="o">:=</span><span class="n">fun</span> <span class="n">n</span> <span class="o">=&gt;</span> <span class="n">n</span><span class="o">+</span><span class="mi">3</span>
+<span class="n">have</span> <span class="n">h1</span><span class="p">:</span><span class="n">StrictMono</span> <span class="n">g</span>
+<span class="n">have</span> <span class="n">h1</span><span class="p">:</span><span class="n">Odd</span> <span class="mi">3</span>
+<span class="n">decide</span>
+<span class="n">simp</span><span class="p">[</span><span class="n">g</span><span class="p">,</span><span class="n">h1</span><span class="p">,</span><span class="n">Odd</span><span class="o">.</span><span class="n">strictMono_pow</span><span class="p">]</span>
+<span class="n">have</span> <span class="n">h2</span><span class="p">:</span><span class="n">StrictMono</span> <span class="n">h</span>
+<span class="n">intro</span> <span class="n">a</span> <span class="n">b</span> <span class="n">h2</span>
+<span class="n">simp</span><span class="p">[</span><span class="n">h2</span><span class="p">,</span><span class="n">h</span><span class="p">]</span>
+<span class="n">simp</span><span class="p">[</span><span class="n">StrictMono</span><span class="o">.</span><span class="n">add</span><span class="p">,</span><span class="n">h1</span><span class="p">,</span><span class="n">h2</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">h</span><span class="p">]</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">6</span> <span class="o">/</span> <span class="mi">11</span>
+<span class="n">intro</span> <span class="n">a</span> <span class="n">b</span> <span class="n">h</span>
+<span class="n">unfold</span> <span class="n">StrictMono</span> <span class="n">at</span> <span class="n">hf</span>
+<span class="n">obtain</span> <span class="n">h1</span><span class="o">|</span><span class="n">h1</span><span class="o">|</span><span class="n">h1</span><span class="o">:=</span><span class="n">lt_trichotomy</span> <span class="n">a</span> <span class="n">b</span>
+<span class="n">apply</span> <span class="n">hf</span> <span class="n">at</span> <span class="n">h1</span>
+<span class="n">linarith</span>
+<span class="n">assumption</span>
+<span class="n">apply</span> <span class="n">hf</span> <span class="n">at</span> <span class="n">h1</span>
+<span class="n">linarith</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">7</span> <span class="o">/</span> <span class="mi">11</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">8</span> <span class="o">/</span> <span class="mi">11</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">9</span> <span class="o">/</span> <span class="mi">11</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">10</span> <span class="o">/</span> <span class="mi">11</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">11</span> <span class="o">/</span> <span class="mi">11</span>
+<span class="n">obtain</span><span class="err">⟨</span><span class="n">a</span><span class="err">⟩</span><span class="o">:=</span><span class="n">hA</span>
+<span class="n">unfold</span> <span class="n">Injective</span>
+<span class="n">unfold</span> <span class="n">HasLeftInverse</span>
+<span class="n">unfold</span> <span class="n">LeftInverse</span>
+<span class="n">constructor</span>
+<span class="n">intro</span> <span class="n">h</span>
+<span class="n">have</span> <span class="n">h1</span><span class="p">:</span><span class="err">∀</span> <span class="n">b</span> <span class="p">:</span> <span class="n">B</span><span class="p">,</span> <span class="err">∃</span> <span class="n">a</span> <span class="p">:</span> <span class="n">A</span><span class="p">,</span> <span class="n">f</span> <span class="n">a</span> <span class="o">=</span> <span class="n">b</span> <span class="err">∨</span> <span class="err">¬</span> <span class="err">∃</span> <span class="n">a</span><span class="s1">' : A , f a'</span> <span class="o">=</span> <span class="n">b</span>
+<span class="n">intro</span> <span class="n">b</span>
+<span class="n">by_cases</span> <span class="n">h1</span><span class="p">:</span><span class="err">∃</span><span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="n">A</span><span class="p">),</span><span class="n">f</span> <span class="n">a</span><span class="o">=</span><span class="n">b</span>
+<span class="n">obtain</span><span class="err">⟨</span><span class="n">a1</span><span class="p">,</span><span class="n">h1</span><span class="err">⟩</span><span class="o">:=</span><span class="n">h1</span>
+<span class="n">use</span> <span class="n">a1</span>
+<span class="n">left</span>
+<span class="n">assumption</span>
+<span class="n">use</span> <span class="n">a</span>
+<span class="n">right</span>
+<span class="n">assumption</span>
+<span class="n">choose</span> <span class="n">g</span> <span class="n">h1</span> <span class="n">using</span> <span class="n">h1</span>
+<span class="n">use</span> <span class="n">g</span>
+<span class="n">intro</span> <span class="n">x</span>
+<span class="n">specialize</span> <span class="n">h1</span> <span class="p">(</span><span class="n">f</span> <span class="n">x</span><span class="p">)</span>
+<span class="n">obtain</span> <span class="n">h1</span><span class="o">|</span><span class="n">h1</span><span class="o">:=</span><span class="n">h1</span>
+<span class="n">apply</span> <span class="n">h</span> <span class="n">at</span> <span class="n">h1</span>
+<span class="n">assumption</span>
+<span class="n">push</span> <span class="err">¬</span> <span class="n">_</span> <span class="n">at</span> <span class="n">h1</span>
+<span class="n">specialize</span> <span class="n">h1</span> <span class="n">x</span>
+<span class="n">contradiction</span>
+<span class="n">intro</span> <span class="n">h</span> <span class="n">a1</span> <span class="n">a2</span> <span class="n">h1</span>
+<span class="n">obtain</span><span class="err">⟨</span><span class="n">g</span><span class="p">,</span><span class="n">h</span><span class="err">⟩</span><span class="o">:=</span><span class="n">h</span>
+<span class="n">have</span> <span class="n">h2</span><span class="p">:</span><span class="n">g</span> <span class="p">(</span><span class="n">f</span> <span class="n">a1</span><span class="p">)</span><span class="o">=</span><span class="n">a1</span><span class="o">:=</span><span class="n">h</span> <span class="n">a1</span>
+<span class="n">have</span> <span class="n">h3</span><span class="p">:</span><span class="n">g</span> <span class="p">(</span><span class="n">f</span> <span class="n">a2</span><span class="p">)</span><span class="o">=</span><span class="n">a2</span><span class="o">:=</span><span class="n">h</span> <span class="n">a2</span>
+<span class="n">rw</span><span class="p">[</span><span class="err">←</span><span class="n">h2</span><span class="p">,</span><span class="err">←</span><span class="n">h3</span><span class="p">,</span><span class="n">h1</span><span class="p">]</span>
+
+<span class="o">--</span> <span class="n">Iso</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">2</span> <span class="n">theorem</span> <span class="n">bijective_iff_has_inverse</span> <span class="p">{</span><span class="n">A</span> <span class="n">B</span> <span class="p">:</span> <span class="n">Type</span><span class="p">}</span> <span class="p">(</span><span class="n">f</span> <span class="p">:</span> <span class="n">A</span> <span class="err">→</span> <span class="n">B</span><span class="p">)</span> <span class="p">:</span> <span class="n">Bijective</span> <span class="n">f</span> <span class="err">↔</span> <span class="err">∃</span> <span class="n">g</span><span class="p">,</span> <span class="n">LeftInverse</span> <span class="n">g</span> <span class="n">f</span> <span class="err">∧</span> <span class="n">RightInverse</span> <span class="n">g</span> <span class="n">f</span> <span class="o">:=</span> <span class="n">by</span>
+<span class="n">unfold</span> <span class="n">Bijective</span>
+<span class="n">unfold</span> <span class="n">Injective</span>
+<span class="n">unfold</span> <span class="n">Surjective</span>
+<span class="n">unfold</span> <span class="n">RightInverse</span>
+<span class="n">unfold</span> <span class="n">LeftInverse</span>
+<span class="n">constructor</span>
+<span class="n">intro</span> <span class="n">h</span>
+<span class="n">obtain</span><span class="err">⟨</span><span class="n">h</span><span class="p">,</span><span class="n">h1</span><span class="err">⟩</span><span class="o">:=</span><span class="n">h</span>
+<span class="n">choose</span> <span class="n">g</span> <span class="n">h1</span> <span class="n">using</span> <span class="n">h1</span>
+<span class="n">use</span> <span class="n">g</span>
+<span class="n">constructor</span>
+<span class="n">intro</span> <span class="n">x</span>
+<span class="n">specialize</span> <span class="n">h1</span> <span class="p">(</span><span class="n">f</span> <span class="n">x</span><span class="p">)</span>
+<span class="n">apply</span> <span class="n">h</span> <span class="n">at</span> <span class="n">h1</span>
+<span class="n">assumption</span>
+<span class="n">assumption</span>
+<span class="n">intro</span> <span class="n">h</span>
+<span class="n">obtain</span><span class="err">⟨</span><span class="n">g</span><span class="p">,</span><span class="n">h1</span><span class="err">⟩</span><span class="o">:=</span><span class="n">h</span>
+<span class="n">constructor</span>
+<span class="n">intro</span> <span class="n">a1</span> <span class="n">a2</span> <span class="n">h</span>
+<span class="n">obtain</span><span class="err">⟨</span><span class="n">h1</span><span class="p">,</span><span class="n">h2</span><span class="err">⟩</span><span class="o">:=</span><span class="n">h1</span>
+<span class="n">have</span> <span class="n">h3</span><span class="p">:</span><span class="n">g</span> <span class="p">(</span><span class="n">f</span> <span class="n">a1</span><span class="p">)</span><span class="o">=</span><span class="n">a1</span><span class="o">:=</span><span class="n">h1</span> <span class="n">a1</span>
+<span class="n">have</span> <span class="n">h4</span><span class="p">:</span><span class="n">g</span> <span class="p">(</span><span class="n">f</span> <span class="n">a2</span><span class="p">)</span><span class="o">=</span><span class="n">a2</span><span class="o">:=</span><span class="n">h1</span> <span class="n">a2</span>
+<span class="n">rw</span><span class="p">[</span><span class="err">←</span><span class="n">h3</span><span class="p">,</span><span class="err">←</span><span class="n">h4</span><span class="p">,</span><span class="n">h</span><span class="p">]</span>
+<span class="n">intro</span> <span class="n">b</span>
+<span class="n">obtain</span><span class="err">⟨</span><span class="n">h</span><span class="p">,</span><span class="n">h1</span><span class="err">⟩</span><span class="o">:=</span><span class="n">h1</span>
+<span class="n">use</span> <span class="n">g</span> <span class="n">b</span>
+<span class="n">specialize</span> <span class="n">h1</span> <span class="n">b</span>
+<span class="n">assumption</span>
+
+<span class="o">--</span> <span class="n">Samarkand</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">8</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">8</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">8</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">4</span> <span class="o">/</span> <span class="mi">8</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">5</span> <span class="o">/</span> <span class="mi">8</span> <span class="n">theorem</span> <span class="n">Injective</span><span class="o">.</span><span class="n">exists_unique_of_mem_range</span> <span class="p">{</span><span class="n">A</span> <span class="n">B</span> <span class="p">:</span> <span class="n">Type</span><span class="p">}</span> <span class="p">{</span><span class="n">f</span> <span class="p">:</span> <span class="n">A</span> <span class="err">→</span> <span class="n">B</span><span class="p">}</span> <span class="p">(</span><span class="n">hf</span> <span class="p">:</span> <span class="n">Injective</span> <span class="n">f</span><span class="p">)</span> <span class="p">{</span><span class="n">b</span> <span class="p">:</span> <span class="n">B</span><span class="p">}</span> <span class="p">(</span><span class="n">hb</span> <span class="p">:</span> <span class="n">b</span> <span class="err">∈</span> <span class="nb">range</span> <span class="n">f</span><span class="p">)</span> <span class="p">:</span> <span class="err">∃</span><span class="o">!</span><span class="w"> </span>a,<span class="w"> </span>f<span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>b<span class="w"> </span>:<span class="o">=</span><span class="w"> </span>by
+<span class="n">unfold</span> <span class="n">Injective</span> <span class="n">at</span> <span class="n">hf</span>
+<span class="n">rw</span><span class="p">[</span><span class="n">mem_range</span><span class="p">]</span> <span class="n">at</span> <span class="n">hb</span>
+<span class="n">obtain</span><span class="err">⟨</span><span class="n">a</span><span class="p">,</span><span class="n">hb</span><span class="err">⟩</span><span class="o">:=</span><span class="n">hb</span>
+<span class="n">use</span> <span class="n">a</span>
+<span class="n">simp</span>
+<span class="n">constructor</span>
+<span class="n">assumption</span>
+<span class="n">intro</span> <span class="n">y</span> <span class="n">h</span>
+<span class="n">rw</span><span class="p">[</span><span class="err">←</span><span class="n">hb</span><span class="p">]</span> <span class="n">at</span> <span class="n">h</span>
+<span class="n">apply</span> <span class="n">hf</span> <span class="n">at</span> <span class="n">h</span>
+<span class="n">assumption</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">6</span> <span class="o">/</span> <span class="mi">8</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">7</span> <span class="o">/</span> <span class="mi">8</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">8</span> <span class="o">/</span> <span class="mi">8</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">--</span> <span class="n">Ethiopia</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">11</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">11</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">11</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">4</span> <span class="o">/</span> <span class="mi">11</span> <span class="n">theorem</span> <span class="n">Matrix</span><span class="o">.</span><span class="n">matrix_eq_sum_ebasis</span> <span class="p">{</span><span class="n">n</span> <span class="p">:</span> <span class="n">ℕ</span><span class="p">}</span> <span class="p">(</span><span class="n">A</span> <span class="p">:</span> <span class="n">Mat</span><span class="p">[</span><span class="n">n</span><span class="p">,</span><span class="n">n</span><span class="p">][</span><span class="n">ℝ</span><span class="p">])</span> <span class="p">:</span> <span class="n">A</span> <span class="o">=</span> <span class="err">∑</span> <span class="n">i</span> <span class="p">:</span> <span class="n">Fin</span> <span class="n">n</span><span class="p">,</span> <span class="err">∑</span> <span class="n">j</span> <span class="p">:</span> <span class="n">Fin</span> <span class="n">n</span><span class="p">,</span> <span class="p">(</span><span class="n">A</span> <span class="n">i</span> <span class="n">j</span><span class="p">)</span> <span class="err">•</span> <span class="n">E</span> <span class="n">i</span> <span class="n">j</span> <span class="o">:=</span> <span class="n">by</span>
+<span class="n">simp</span><span class="p">[</span><span class="n">smul_ebasis</span><span class="p">]</span>
+<span class="n">apply</span> <span class="n">matrix_eq_sum_single</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">5</span> <span class="o">/</span> <span class="mi">11</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
+<section id="notes">
+<h3>Notes<a class="headerlink" href="#notes" title="Link to this heading">#</a></h3>
+<ul>
+<li><p>Logo</p>
+<ul class="simple">
+<li><p>Basic logic</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tauto</span></code> solves tautologies(logic statements)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rfl</span></code> solves goals of the form <code class="docutils literal notranslate"><span class="pre">x=x</span></code></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">rfl</span></code> is also a theorem and <code class="docutils literal notranslate"><span class="pre">exact</span> <span class="pre">rfl</span></code> is the same thing.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">assumption</span></code> solves the goal if there is an assumption that matches the goal</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">exact</span></code> can also be used but it isn’t in this game</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h2 class="rubric" id="implis">Implis</h2>
+</li>
+<li><p>Samarkand</p>
+<ul class="simple">
+<li><p>Lvl 1</p></li>
+<li><p>Lvl 8</p>
+<ul>
+<li><p>Do not unpack definitions unless needed or stated(in hints).</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
 </section>
 <section id="real-analysis">
 <h2>Real Analysis<a class="headerlink" href="#real-analysis" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">--</span> <span class="n">Lecture</span> <span class="mi">1</span><span class="p">:</span> <span class="n">The</span> <span class="n">Story</span> <span class="n">of</span> <span class="n">Real</span> <span class="n">Analysis</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">9</span> <span class="p">:</span> <span class="n">Introduction</span> <span class="n">to</span> <span class="n">Lean</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">9</span> <span class="p">:</span> <span class="n">The</span> <span class="n">rfl</span> <span class="n">tactic</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">9</span> <span class="p">:</span> <span class="n">The</span> <span class="err">`</span><span class="n">rewrite</span><span class="err">`</span> <span class="n">tactic</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">4</span> <span class="o">/</span> <span class="mi">9</span> <span class="p">:</span> <span class="n">The</span> <span class="n">ring_nf</span> <span class="n">tactic</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">5</span> <span class="o">/</span> <span class="mi">9</span> <span class="p">:</span> <span class="n">The</span> <span class="n">use</span> <span class="n">tactic</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">6</span> <span class="o">/</span> <span class="mi">9</span> <span class="p">:</span> <span class="n">The</span> <span class="n">intro</span> <span class="n">tactic</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">7</span> <span class="o">/</span> <span class="mi">9</span> <span class="p">:</span> <span class="n">The</span> <span class="n">specialize</span> <span class="n">tactic</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">8</span> <span class="o">/</span> <span class="mi">9</span> <span class="p">:</span> <span class="n">The</span> <span class="n">choose</span> <span class="n">tactic</span>
+<span class="n">choose</span> <span class="n">c</span> <span class="n">hc</span> <span class="n">using</span> <span class="n">h</span>
+<span class="n">use</span> <span class="n">c</span>
+<span class="n">rewrite</span><span class="p">[</span><span class="n">hc</span><span class="p">]</span>
+<span class="n">ring_nf</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">9</span> <span class="o">/</span> <span class="mi">9</span> <span class="p">:</span> <span class="n">Big</span> <span class="n">Boss</span><span class="p">:</span> <span class="n">The</span> <span class="n">Ultimate</span> <span class="n">Tactic</span> <span class="n">Challenge</span>
+<span class="n">choose</span> <span class="n">a</span> <span class="n">h</span> <span class="n">using</span> <span class="n">h_existential</span>
+<span class="n">use</span> <span class="n">a</span>
+<span class="n">intro</span> <span class="n">y</span> <span class="n">h1</span>
+<span class="n">specialize</span> <span class="n">h_universal</span> <span class="n">y</span>
+<span class="n">apply</span> <span class="n">h_universal</span> <span class="n">at</span> <span class="n">h1</span>
+<span class="n">rewrite</span><span class="p">[</span><span class="n">h</span><span class="p">,</span><span class="n">h1</span><span class="p">]</span>
+<span class="n">ring_nf</span>
+
+<span class="o">--</span> <span class="n">Pset</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
-<section id="set-theory-game">
-<h2>1 Set Theory Game<a class="headerlink" href="#set-theory-game" title="Link to this heading">#</a></h2>
+<section id="set-theory-game-overlapped-by-others">
+<h2>1 Set Theory Game (overlapped by others)<a class="headerlink" href="#set-theory-game-overlapped-by-others" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">--</span> <span class="n">World</span><span class="p">:</span> <span class="n">Subset</span> <span class="n">World</span>
@@ -3262,8 +3523,8 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="knights-and-knaves-game">
-<h2>Knights and Knaves Game<a class="headerlink" href="#knights-and-knaves-game" title="Link to this heading">#</a></h2>
+<section id="knights-and-knaves-game-overlapped-by-others">
+<h2>Knights and Knaves Game (overlapped by others)<a class="headerlink" href="#knights-and-knaves-game-overlapped-by-others" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>This teachs you how to solve logic puzzles where you have to deduce who is a knight(truthteller) and who is a knave(liar).</p></li>
 </ul>
@@ -3391,6 +3652,24 @@ document.write(`
 <ul class="simple">
 <li><p>This game is based on <a class="reference external" href="https://ladr.pretext.plus/frontmatter.html">e-textbook <em>Linear Algebra Done Right</em></a> and <a class="reference external" href="https://youtube.com/playlist?list=PLGAnmvB9m7zOBVCZBUUmSinFV0wEir2Vw&amp;amp;si=Bcq0e2Y-xOa6HPzw">Youtube list</a></p></li>
 </ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">--</span> <span class="n">Tutorial</span> <span class="n">World</span>  <span class="o">--</span> <span class="n">skipped</span>
+
+<span class="o">--</span> <span class="n">Vector</span> <span class="n">Space</span> <span class="n">World</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">5</span> <span class="p">:</span> <span class="n">Vector</span> <span class="n">space</span> <span class="n">intro</span><span class="p">,</span> <span class="n">zero</span> <span class="n">scalar</span> <span class="n">multiplication</span>
+<span class="n">apply</span> <span class="n">add_right_cancel</span> <span class="p">(</span><span class="n">b</span><span class="o">:=</span><span class="p">(</span><span class="mi">0</span><span class="p">:</span><span class="n">K</span><span class="p">)</span><span class="err">•</span><span class="n">w</span><span class="p">)</span>
+<span class="n">rw</span><span class="p">[</span><span class="err">←</span><span class="n">add_smul</span><span class="p">]</span>
+<span class="n">repeat</span> <span class="n">rw</span><span class="p">[</span><span class="n">zero_add</span><span class="p">]</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">5</span> <span class="p">:</span> <span class="n">Multiplying</span> <span class="n">by</span> <span class="n">the</span> <span class="n">zero</span> <span class="n">vector</span>
+<span class="n">apply</span> <span class="n">add_right_cancel</span> <span class="p">(</span><span class="n">b</span><span class="o">:=</span><span class="n">a</span><span class="err">•</span><span class="p">(</span><span class="mi">0</span><span class="p">:</span><span class="n">V</span><span class="p">))</span>
+<span class="n">rw</span><span class="p">[</span><span class="err">←</span><span class="n">smul_add</span><span class="p">]</span>
+<span class="n">rw</span><span class="p">[</span><span class="n">zero_add</span><span class="p">,</span><span class="n">zero_add</span><span class="p">]</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">5</span> <span class="p">:</span> <span class="n">Scaling</span> <span class="n">by</span> <span class="o">-</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="number-theory">
 <h2>Number Theory<a class="headerlink" href="#number-theory" title="Link to this heading">#</a></h2>
@@ -3626,8 +3905,13 @@ document.write(`
 <span class="n">use</span> <span class="mi">1</span>
 <span class="n">ring</span>
 <span class="n">exact</span> <span class="n">polynomial_cong</span> <span class="mi">10</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="n">c0</span> <span class="n">c1</span> <span class="n">c2</span> <span class="mi">11</span> <span class="n">h</span>
-
-<span class="o">--</span> <span class="n">World</span><span class="p">:</span> <span class="n">In</span> <span class="n">Search</span> <span class="n">of</span> <span class="n">the</span> <span class="n">GCD</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">--</span> <span class="n">World</span><span class="p">:</span> <span class="n">In</span> <span class="n">Search</span> <span class="n">of</span> <span class="n">the</span> <span class="n">GCD</span>
 <span class="o">--</span> <span class="n">Level</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">9</span> <span class="p">:</span> <span class="n">Meeting</span> <span class="n">the</span> <span class="n">GCD</span>
 <span class="n">unfold</span> <span class="n">IsGCD</span>
 <span class="n">constructor</span>
@@ -3656,10 +3940,135 @@ document.write(`
 <span class="n">rw</span><span class="p">[</span><span class="err">←</span><span class="n">h</span><span class="p">]</span>
 <span class="n">ring</span>
 <span class="o">--</span> <span class="n">Level</span> <span class="mi">6</span> <span class="o">/</span> <span class="mi">9</span> <span class="p">:</span> <span class="n">The</span> <span class="n">Cancellation</span> <span class="n">Law</span> <span class="p">(</span><span class="n">Coprime</span> <span class="n">Case</span><span class="p">)</span>
+<span class="n">obtain</span><span class="err">⟨</span><span class="n">_</span><span class="p">,</span><span class="n">h2</span><span class="err">⟩</span><span class="o">:=</span><span class="n">h2</span>
+<span class="n">unfold</span> <span class="n">ModEq</span> <span class="n">at</span> <span class="o">*</span>
+<span class="n">obtain</span><span class="err">⟨</span><span class="n">k</span><span class="p">,</span><span class="n">h1</span><span class="err">⟩</span><span class="o">:=</span><span class="n">h1</span>
+<span class="n">obtain</span><span class="err">⟨</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">h</span><span class="err">⟩</span><span class="o">:=</span><span class="n">h2</span>
+<span class="n">use</span> <span class="n">k</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">)</span><span class="o">*</span><span class="n">y</span>
+<span class="n">have</span> <span class="n">h2</span><span class="p">:</span><span class="n">m</span> <span class="o">*</span> <span class="p">(</span><span class="n">k</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span> <span class="o">*</span> <span class="n">y</span><span class="p">)</span><span class="o">=</span><span class="n">m</span> <span class="o">*</span> <span class="n">k</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="n">m</span><span class="o">*</span><span class="n">y</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">)</span>
+<span class="n">ring</span>
+<span class="n">rw</span><span class="p">[</span><span class="n">h2</span><span class="p">]</span>
+<span class="n">rw</span><span class="p">[</span><span class="err">←</span><span class="n">h1</span><span class="p">]</span>
+<span class="n">have</span> <span class="n">h3</span><span class="p">:(</span><span class="n">a</span> <span class="o">*</span> <span class="n">c</span> <span class="o">-</span> <span class="n">b</span> <span class="o">*</span> <span class="n">c</span><span class="p">)</span> <span class="o">*</span> <span class="n">x</span><span class="o">=</span><span class="n">c</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">)</span>
+<span class="n">ring</span>
+<span class="n">rw</span><span class="p">[</span><span class="n">h3</span><span class="p">]</span>
+<span class="n">have</span> <span class="n">h4</span><span class="p">:</span><span class="n">c</span> <span class="o">*</span> <span class="n">x</span> <span class="o">*</span> <span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span> <span class="o">+</span> <span class="n">m</span> <span class="o">*</span> <span class="n">y</span> <span class="o">*</span> <span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span><span class="o">=</span><span class="p">(</span><span class="n">c</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="n">m</span><span class="o">*</span><span class="n">y</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">)</span>
+<span class="n">ring</span>
+<span class="n">rw</span><span class="p">[</span><span class="n">h4</span><span class="p">,</span><span class="n">h</span><span class="p">]</span>
+<span class="n">ring</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">7</span> <span class="o">/</span> <span class="mi">9</span> <span class="p">:</span> <span class="n">Dividing</span> <span class="n">by</span> <span class="n">the</span> <span class="n">GCD</span> <span class="n">Gives</span> <span class="n">Coprime</span> <span class="n">Numbers</span>
+<span class="n">obtain</span><span class="err">⟨</span><span class="n">_</span><span class="p">,</span><span class="err">⟨</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">h</span><span class="err">⟩⟩</span><span class="o">:=</span><span class="n">h</span>
+<span class="n">rw</span><span class="p">[</span><span class="n">hc</span><span class="p">,</span><span class="n">hm</span><span class="p">]</span> <span class="n">at</span> <span class="n">h</span>
+<span class="n">have</span> <span class="n">h1</span><span class="p">:</span><span class="n">c1</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="n">m1</span><span class="o">*</span><span class="n">y</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">have</span> <span class="n">h1</span><span class="p">:</span><span class="n">c1</span><span class="o">*</span><span class="n">d</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="n">m1</span><span class="o">*</span><span class="n">d</span><span class="o">*</span><span class="n">y</span><span class="o">=</span><span class="n">d</span><span class="o">*</span><span class="p">(</span><span class="n">c1</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="n">m1</span><span class="o">*</span><span class="n">y</span><span class="p">)</span>
+<span class="n">ring</span>
+<span class="n">rw</span><span class="p">[</span><span class="n">h1</span><span class="p">]</span> <span class="n">at</span> <span class="n">h</span>
+<span class="n">have</span> <span class="n">h2</span><span class="p">:</span><span class="n">d</span> <span class="o">*</span> <span class="p">(</span><span class="n">c1</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">m1</span> <span class="o">*</span> <span class="n">y</span><span class="p">)</span> <span class="o">=</span><span class="n">d</span><span class="o">*</span><span class="mi">1</span>
+<span class="n">rw</span><span class="p">[</span><span class="n">h</span><span class="p">]</span>
+<span class="n">ring</span>
+<span class="n">exact</span> <span class="n">mul_left_cancel</span><span class="err">₀</span> <span class="n">hd</span> <span class="n">h2</span>
+<span class="n">have</span> <span class="n">h2</span><span class="p">:</span><span class="err">∃</span> <span class="n">x</span> <span class="n">y</span><span class="p">,</span> <span class="n">c1</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">m1</span> <span class="o">*</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">use</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span>
+<span class="n">exact</span> <span class="n">bezout_imp_coprime</span> <span class="n">c1</span> <span class="n">m1</span> <span class="n">h2</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">8</span> <span class="o">/</span> <span class="mi">9</span> <span class="p">:</span> <span class="n">The</span> <span class="n">General</span> <span class="n">Cancellation</span> <span class="n">Law</span>
+<span class="n">have</span> <span class="n">h</span><span class="p">:</span><span class="n">IsGCD</span> <span class="n">c1</span> <span class="n">m1</span> <span class="mi">1</span>
+<span class="n">exact</span> <span class="n">gcd_div_coprime</span> <span class="n">c</span> <span class="n">m</span> <span class="n">d</span> <span class="n">c1</span> <span class="n">m1</span> <span class="n">hd</span> <span class="n">h2</span> <span class="n">hc</span> <span class="n">hm</span>
+<span class="n">obtain</span><span class="err">⟨</span><span class="n">k</span><span class="p">,</span><span class="n">h1</span><span class="err">⟩</span><span class="o">:=</span><span class="n">h1</span>
+<span class="n">rw</span><span class="p">[</span><span class="n">hc</span><span class="p">,</span><span class="n">hm</span><span class="p">]</span> <span class="n">at</span> <span class="n">h1</span>
+<span class="n">have</span> <span class="n">h3</span><span class="p">:</span><span class="n">c1</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">)</span><span class="o">=</span><span class="n">m1</span><span class="o">*</span><span class="n">k</span>
+<span class="n">have</span> <span class="n">h3</span><span class="p">:</span><span class="n">d</span><span class="o">*</span><span class="p">(</span><span class="n">c1</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">))</span><span class="o">=</span><span class="n">d</span><span class="o">*</span><span class="p">(</span><span class="n">m1</span><span class="o">*</span><span class="n">k</span><span class="p">)</span>
+<span class="n">have</span> <span class="n">h3</span><span class="p">:</span><span class="n">d</span><span class="o">*</span><span class="p">(</span><span class="n">m1</span><span class="o">*</span><span class="n">k</span><span class="p">)</span><span class="o">=</span><span class="n">m1</span><span class="o">*</span><span class="n">d</span><span class="o">*</span><span class="n">k</span>
+<span class="n">ring</span>
+<span class="n">rw</span><span class="p">[</span><span class="n">h3</span><span class="p">,</span><span class="err">←</span><span class="n">h1</span><span class="p">]</span>
+<span class="n">ring</span>
+<span class="n">exact</span> <span class="n">mul_left_cancel</span><span class="err">₀</span> <span class="n">hd</span> <span class="n">h3</span>
+<span class="n">have</span> <span class="n">h4</span><span class="p">:(</span><span class="n">a</span><span class="o">*</span><span class="n">c1</span><span class="p">)</span><span class="err">≡</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">c1</span><span class="p">)(</span><span class="n">mod</span> <span class="n">m1</span><span class="p">)</span>
+<span class="n">unfold</span> <span class="n">ModEq</span>
+<span class="n">use</span> <span class="n">k</span>
+<span class="n">rw</span><span class="p">[</span><span class="err">←</span><span class="n">h3</span><span class="p">]</span>
+<span class="n">ring</span>
+<span class="n">exact</span> <span class="n">mod_cancel_coprime</span> <span class="n">a</span> <span class="n">b</span> <span class="n">c1</span> <span class="n">m1</span> <span class="n">h4</span> <span class="n">h</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">9</span> <span class="o">/</span> <span class="mi">9</span> <span class="p">:</span> <span class="n">A</span> <span class="n">Shift</span> <span class="n">Doesn</span><span class="s1">'t Change the GCD (Boss)</span>
+<span class="n">have</span> <span class="n">h3</span><span class="p">:</span><span class="n">d1</span><span class="err">∣</span><span class="n">d2</span>
+<span class="n">have</span> <span class="n">h3</span><span class="p">:</span><span class="n">d1</span><span class="err">∣</span><span class="n">a</span>
+<span class="n">obtain</span><span class="err">⟨</span><span class="n">h3</span><span class="p">,</span><span class="n">h4</span><span class="err">⟩</span><span class="o">:=</span><span class="n">h1</span><span class="mf">.1</span>
+<span class="n">obtain</span><span class="err">⟨</span><span class="n">l</span><span class="p">,</span><span class="n">h3</span><span class="err">⟩</span><span class="o">:=</span><span class="n">h3</span>
+<span class="n">obtain</span><span class="err">⟨</span><span class="n">n</span><span class="p">,</span><span class="n">h4</span><span class="err">⟩</span><span class="o">:=</span><span class="n">h4</span>
+<span class="n">use</span> <span class="n">l</span><span class="o">-</span><span class="n">n</span><span class="o">*</span><span class="n">k</span>
+<span class="n">have</span> <span class="n">h5</span><span class="p">:</span><span class="n">d1</span><span class="o">*</span><span class="p">(</span><span class="n">l</span><span class="o">-</span><span class="n">n</span><span class="o">*</span><span class="n">k</span><span class="p">)</span><span class="o">=</span><span class="n">d1</span><span class="o">*</span><span class="n">l</span><span class="o">-</span><span class="n">d1</span><span class="o">*</span><span class="n">n</span><span class="o">*</span><span class="n">k</span>
+<span class="n">ring</span>
+<span class="n">rw</span><span class="p">[</span><span class="n">h5</span><span class="p">,</span><span class="err">←</span><span class="n">h4</span><span class="p">,</span><span class="err">←</span><span class="n">h3</span><span class="p">]</span>
+<span class="n">ring</span>
+<span class="n">have</span> <span class="n">h4</span><span class="p">:</span><span class="n">d1</span><span class="err">∣</span><span class="n">m</span>
+<span class="n">exact</span> <span class="n">h1</span><span class="mf">.1.2</span>
+<span class="n">exact</span> <span class="n">gcd_is_greatest</span> <span class="n">a</span> <span class="n">m</span> <span class="n">d1</span> <span class="n">d2</span> <span class="n">h2</span> <span class="n">h3</span> <span class="n">h4</span>
+<span class="n">have</span> <span class="n">h4</span><span class="p">:</span><span class="n">d2</span><span class="err">∣</span><span class="n">d1</span>
+<span class="n">have</span> <span class="n">h4</span><span class="p">:</span><span class="n">d2</span><span class="err">∣</span><span class="n">a</span><span class="o">+</span><span class="n">m</span><span class="o">*</span><span class="n">k</span>
+<span class="n">obtain</span><span class="err">⟨</span><span class="n">h4</span><span class="p">,</span><span class="n">h5</span><span class="err">⟩</span><span class="o">:=</span><span class="n">h2</span><span class="mf">.1</span>
+<span class="n">obtain</span><span class="err">⟨</span><span class="n">l</span><span class="p">,</span><span class="n">h4</span><span class="err">⟩</span><span class="o">:=</span><span class="n">h4</span>
+<span class="n">obtain</span><span class="err">⟨</span><span class="n">n</span><span class="p">,</span><span class="n">h5</span><span class="err">⟩</span><span class="o">:=</span><span class="n">h5</span>
+<span class="n">use</span> <span class="n">l</span><span class="o">+</span><span class="n">n</span><span class="o">*</span><span class="n">k</span>
+<span class="n">have</span> <span class="n">h6</span><span class="p">:</span><span class="n">d2</span><span class="o">*</span><span class="p">(</span><span class="n">l</span><span class="o">+</span><span class="n">n</span><span class="o">*</span><span class="n">k</span><span class="p">)</span><span class="o">=</span><span class="n">d2</span><span class="o">*</span><span class="n">l</span><span class="o">+</span><span class="n">d2</span><span class="o">*</span><span class="n">n</span><span class="o">*</span><span class="n">k</span>
+<span class="n">ring</span>
+<span class="n">rw</span><span class="p">[</span><span class="n">h6</span><span class="p">,</span><span class="err">←</span><span class="n">h5</span><span class="p">,</span><span class="err">←</span><span class="n">h4</span><span class="p">]</span>
+<span class="n">have</span> <span class="n">h5</span><span class="p">:</span><span class="n">d2</span><span class="err">∣</span><span class="n">m</span>
+<span class="n">exact</span> <span class="n">h2</span><span class="mf">.1.2</span>
+<span class="n">exact</span> <span class="n">gcd_is_greatest</span> <span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">m</span><span class="o">*</span><span class="n">k</span><span class="p">)</span> <span class="n">m</span> <span class="n">d2</span> <span class="n">d1</span> <span class="n">h1</span> <span class="n">h4</span> <span class="n">h5</span>
+<span class="n">exact</span> <span class="n">dvd_antisymm_int</span> <span class="n">hd1</span> <span class="n">hd2</span> <span class="n">h3</span> <span class="n">h4</span>
+
+<span class="o">--</span> <span class="n">Linear</span> <span class="n">Congruences</span> <span class="ow">and</span> <span class="n">CRT</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">10</span> <span class="p">:</span> <span class="n">Existence</span> <span class="n">of</span> <span class="n">the</span> <span class="n">Inverse</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">10</span> <span class="p">:</span> <span class="n">Inverse</span> <span class="n">Implies</span> <span class="n">Coprimality</span>
+<span class="n">obtain</span><span class="err">⟨</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">h</span><span class="err">⟩</span><span class="o">:=</span><span class="n">h</span>
+<span class="n">constructor</span>
+<span class="n">constructor</span>
+<span class="n">use</span> <span class="n">a</span>
+<span class="n">ring</span>
+<span class="n">use</span> <span class="n">m</span>
+<span class="n">ring</span>
+<span class="n">use</span> <span class="n">x</span><span class="p">,</span><span class="o">-</span><span class="n">y</span>
+<span class="n">have</span> <span class="n">h1</span><span class="p">:</span><span class="n">a</span><span class="o">*</span><span class="n">x</span><span class="o">=</span><span class="n">m</span><span class="o">*</span><span class="n">y</span><span class="o">+</span><span class="mi">1</span>
+<span class="n">rw</span><span class="p">[</span><span class="err">←</span><span class="n">h</span><span class="p">]</span>
+<span class="n">ring</span>
+<span class="n">rw</span><span class="p">[</span><span class="n">h1</span><span class="p">]</span>
+<span class="n">ring</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">10</span> <span class="p">:</span> <span class="n">The</span> <span class="n">Inverse</span> <span class="ow">is</span> <span class="n">Unique</span>
+<span class="n">have</span> <span class="n">h_exists</span> <span class="p">:</span> <span class="err">∃</span> <span class="n">k</span><span class="p">,</span> <span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">k</span><span class="p">)</span> <span class="err">≡</span> <span class="mi">1</span> <span class="p">(</span><span class="n">mod</span> <span class="n">m</span><span class="p">)</span>
+<span class="n">use</span> <span class="n">x</span>
+<span class="n">have</span> <span class="n">h1</span><span class="p">:</span><span class="n">a</span><span class="o">*</span><span class="n">x</span><span class="err">≡</span><span class="n">a</span><span class="o">*</span><span class="n">y</span><span class="p">(</span><span class="n">mod</span> <span class="n">m</span><span class="p">)</span>
+<span class="n">have</span> <span class="n">h1</span><span class="p">:</span><span class="mi">1</span><span class="err">≡</span><span class="n">a</span><span class="o">*</span><span class="n">y</span><span class="p">(</span><span class="n">mod</span> <span class="n">m</span><span class="p">)</span>
+<span class="n">exact</span> <span class="n">mod_symm</span> <span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">y</span><span class="p">)</span> <span class="mi">1</span> <span class="n">m</span> <span class="n">hy</span>
+<span class="n">exact</span> <span class="n">mod_trans</span> <span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">x</span><span class="p">)</span> <span class="mi">1</span> <span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">y</span><span class="p">)</span> <span class="n">m</span> <span class="n">hx</span> <span class="n">h1</span>
+<span class="n">have</span> <span class="n">h</span><span class="p">:</span><span class="n">x</span><span class="o">*</span><span class="n">a</span><span class="err">≡</span><span class="n">y</span><span class="o">*</span><span class="n">a</span><span class="p">(</span><span class="n">mod</span> <span class="n">m</span><span class="p">)</span>
+<span class="n">have</span> <span class="n">h2</span><span class="p">:</span><span class="n">a</span><span class="o">*</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="o">*</span><span class="n">a</span>
+<span class="n">ring</span>
+<span class="n">have</span> <span class="n">h3</span><span class="p">:</span><span class="n">a</span><span class="o">*</span><span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="o">*</span><span class="n">a</span>
+<span class="n">ring</span>
+<span class="n">rw</span><span class="p">[</span><span class="err">←</span><span class="n">h2</span><span class="p">,</span><span class="err">←</span><span class="n">h3</span><span class="p">]</span>
+<span class="n">exact</span> <span class="n">h1</span>
+<span class="n">exact</span> <span class="n">mod_cancel_coprime</span> <span class="n">x</span> <span class="n">y</span> <span class="n">a</span> <span class="n">m</span> <span class="n">h</span> <span class="p">(</span><span class="n">inv_implies_coprime</span> <span class="n">a</span> <span class="n">m</span> <span class="n">h_exists</span><span class="p">)</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">4</span> <span class="o">/</span> <span class="mi">10</span> <span class="p">:</span> <span class="n">Solvability</span><span class="p">:</span> <span class="n">Necessary</span> <span class="n">Condition</span>
+
+
+
+
+
+<span class="o">--</span> <span class="n">Problems</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">8</span> <span class="p">:</span> <span class="n">Huge</span> <span class="n">Powers</span>
+<span class="n">ring</span>
+<span class="n">use</span> <span class="mi">221779874556156893897171387204119510104050625003675508105116339034664608940646160193468804874938566031815057911618875354125</span>
+<span class="n">ring</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">8</span> <span class="p">:</span> <span class="n">Cancelling</span> <span class="n">Constants</span>
 </pre></div>
 </div>
 </div>
 </div>
+</section>
+<section id="intro-program-verification-cslib">
+<h2>Intro Program Verification - CSlib<a class="headerlink" href="#intro-program-verification-cslib" title="Link to this heading">#</a></h2>
+</section>
+<section id="hilbert-geometry-game">
+<h2>Hilbert Geometry Game<a class="headerlink" href="#hilbert-geometry-game" title="Link to this heading">#</a></h2>
 </section>
 <section id="appendix-tactics-theorems">
 <h2>Appendix: Tactics &amp; Theorems<a class="headerlink" href="#appendix-tactics-theorems" title="Link to this heading">#</a></h2>
@@ -3789,15 +4198,18 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-number-game-done">Natural Number Game (Done)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scribble-robo">Scribble - Robo</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hard-part">hard part</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notes">Notes</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#real-analysis">Real Analysis</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set-theory-game">1 Set Theory Game</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set-theory-game-overlapped-by-others">1 Set Theory Game (overlapped by others)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lean-intro-to-logic-done">2 Lean Intro to Logic (~done)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reintro-to-proofs-done">3 Reintro to Proofs (Done)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#knights-and-knaves-game">Knights and Knaves Game</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#knights-and-knaves-game-overlapped-by-others">Knights and Knaves Game (overlapped by others)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-algebra">Linear Algebra</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#number-theory">Number Theory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intro-program-verification-cslib">Intro Program Verification - CSlib</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hilbert-geometry-game">Hilbert Geometry Game</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-tactics-theorems">Appendix: Tactics &amp; Theorems</a></li>
 </ul>
   </nav></div>
