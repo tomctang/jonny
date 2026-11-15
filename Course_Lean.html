@@ -374,15 +374,12 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-number-game-100">Natural Number Game 100%</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scribble-robo-95">Scribble - Robo 95%</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hard-part">hard part</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scribble-robo-95">Scribble - Robo 95%</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lean-intro-to-logic-99">Lean Intro to Logic 99%</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reintro-to-proofs-100">Reintro to Proofs 100%</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-algebra">Linear Algebra</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-algebra-15">Linear Algebra 15%</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#number-theory-100">Number Theory 100%</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intro-program-verification-cslib">Intro Program Verification - CSlib</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intro-program-verification-cslib-5">Intro Program Verification - CSlib 5%</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-tactics-theorems">Appendix: Tactics &amp; Theorems</a></li>
 </ul>
             </nav>
@@ -1582,8 +1579,6 @@ document.write(`
 </div>
 </div>
 </div>
-<section id="hard-part">
-<h3>hard part<a class="headerlink" href="#hard-part" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">--</span> <span class="n">World</span><span class="p">:</span> <span class="n">Luna</span>
@@ -2122,6 +2117,45 @@ document.write(`
 <span class="n">simp</span><span class="p">[</span><span class="n">smul_ebasis</span><span class="p">]</span>
 <span class="n">apply</span> <span class="n">matrix_eq_sum_single</span>
 <span class="o">--</span> <span class="n">Level</span> <span class="mi">5</span> <span class="o">/</span> <span class="mi">11</span>
+
+
+
+<span class="o">--</span> <span class="n">Cantor</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">11</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">11</span>
+<span class="n">push</span> <span class="err">¬</span> <span class="n">_</span>
+<span class="n">intro</span> <span class="n">f</span> <span class="n">h</span>
+<span class="n">let</span> <span class="n">s</span><span class="o">:=</span><span class="p">{</span><span class="n">a</span><span class="o">|</span><span class="n">a</span><span class="err">∉</span><span class="n">f</span> <span class="n">a</span><span class="p">}</span>
+<span class="n">specialize</span> <span class="n">h</span> <span class="n">s</span>
+<span class="n">obtain</span><span class="err">⟨</span><span class="n">a</span><span class="p">,</span><span class="n">h</span><span class="err">⟩</span><span class="o">:=</span><span class="n">h</span>
+<span class="n">simp</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="n">at</span> <span class="n">h</span>
+<span class="n">by_cases</span> <span class="n">h1</span><span class="p">:</span><span class="n">a</span><span class="err">∈</span><span class="n">f</span> <span class="n">a</span>
+<span class="n">have</span> <span class="n">h2</span><span class="p">:</span><span class="n">a</span><span class="err">∉</span><span class="n">f</span> <span class="n">a</span>
+<span class="n">rw</span><span class="p">[</span><span class="n">h</span><span class="p">]</span>
+<span class="n">simp</span><span class="p">[</span><span class="n">h1</span><span class="p">]</span>
+<span class="n">apply</span> <span class="n">h2</span>
+<span class="n">assumption</span>
+<span class="n">apply</span> <span class="n">h1</span>
+<span class="n">rw</span><span class="p">[</span><span class="n">h</span><span class="p">]</span> <span class="n">at</span> <span class="n">h1</span>
+<span class="n">simp</span> <span class="n">at</span> <span class="n">h1</span>
+<span class="n">assumption</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">11</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">4</span> <span class="o">/</span> <span class="mi">11</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">5</span> <span class="o">/</span> <span class="mi">11</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">6</span> <span class="o">/</span> <span class="mi">11</span> <span class="n">example</span> <span class="p">{</span><span class="n">f</span> <span class="p">:</span> <span class="n">ℝ</span> <span class="err">→</span> <span class="n">ℝ</span><span class="p">}</span> <span class="p">(</span><span class="n">h_odd</span> <span class="p">:</span> <span class="err">∀</span> <span class="n">x</span><span class="p">,</span> <span class="n">f</span> <span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">)</span> <span class="o">=</span> <span class="o">-</span> <span class="n">f</span> <span class="n">x</span><span class="p">)</span> <span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="n">ℝ</span><span class="p">)</span> <span class="p">:</span> <span class="n">IsFixedPt</span> <span class="n">f</span> <span class="n">x</span> <span class="err">↔</span> <span class="n">IsFixedPt</span> <span class="n">f</span> <span class="p">(</span><span class="o">-</span> <span class="n">x</span><span class="p">)</span> <span class="o">:=</span> <span class="n">by</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">7</span> <span class="o">/</span> <span class="mi">11</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">8</span> <span class="o">/</span> <span class="mi">11</span>
+<span class="n">unfold</span> <span class="n">IsFixedPt</span>
+<span class="n">nth_rw</span> <span class="mi">2</span><span class="p">[</span><span class="n">ha</span><span class="p">]</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">9</span> <span class="o">/</span> <span class="mi">11</span> <span class="n">theorem</span> <span class="n">cantor_diagonal</span> <span class="p">{</span><span class="n">A</span> <span class="n">Y</span> <span class="p">:</span> <span class="n">Type</span><span class="p">}</span> <span class="p">(</span><span class="n">f</span> <span class="p">:</span> <span class="n">A</span> <span class="err">→</span> <span class="n">A</span> <span class="err">→</span> <span class="n">Y</span><span class="p">)</span> <span class="p">(</span><span class="n">hf</span> <span class="p">:</span> <span class="n">Surjective</span> <span class="n">f</span><span class="p">)</span> <span class="p">:</span> <span class="err">∀</span> <span class="n">s</span> <span class="p">:</span> <span class="n">Y</span> <span class="err">→</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Nonempty</span> <span class="p">(</span><span class="n">fixedPoints</span> <span class="n">s</span><span class="p">)</span> <span class="o">:=</span> <span class="n">by</span>
+<span class="n">intro</span> <span class="n">s</span>
+<span class="n">let</span> <span class="n">c</span><span class="p">:</span> <span class="n">A</span> <span class="err">→</span> <span class="n">Y</span> <span class="o">:=</span> <span class="n">fun</span> <span class="n">a</span> <span class="o">=&gt;</span> <span class="n">s</span> <span class="p">(</span><span class="n">f</span> <span class="n">a</span> <span class="n">a</span><span class="p">)</span>
+<span class="n">specialize</span> <span class="n">hf</span> <span class="n">c</span>
+<span class="n">obtain</span><span class="err">⟨</span><span class="n">a</span><span class="p">,</span><span class="n">h</span><span class="err">⟩</span><span class="o">:=</span><span class="n">hf</span>
+<span class="n">use</span> <span class="n">c</span> <span class="n">a</span>
+<span class="n">simp</span>
+<span class="n">nth_rw</span> <span class="mi">1</span><span class="p">[</span><span class="err">←</span><span class="n">h</span><span class="p">]</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">10</span> <span class="o">/</span> <span class="mi">11</span>
 </pre></div>
 </div>
 </div>
@@ -2129,6 +2163,9 @@ document.write(`
 <blockquote>
 <div><p>Real Analysis</p>
 </div></blockquote>
+<ul class="simple">
+<li><p>I’m using Terry Tao’s Analysis in VScode</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">--</span> <span class="n">Lecture</span> <span class="mi">1</span><span class="p">:</span> <span class="n">The</span> <span class="n">Story</span> <span class="n">of</span> <span class="n">Real</span> <span class="n">Analysis</span>
@@ -2322,7 +2359,6 @@ document.write(`
 </div>
 </div>
 </div>
-</section>
 </section>
 <section id="lean-intro-to-logic-99">
 <h2>Lean Intro to Logic 99%<a class="headerlink" href="#lean-intro-to-logic-99" title="Link to this heading">#</a></h2>
@@ -3725,8 +3761,8 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="linear-algebra">
-<h2>Linear Algebra<a class="headerlink" href="#linear-algebra" title="Link to this heading">#</a></h2>
+<section id="linear-algebra-15">
+<h2>Linear Algebra 15%<a class="headerlink" href="#linear-algebra-15" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>This game is based on <a class="reference external" href="https://ladr.pretext.plus/frontmatter.html">e-textbook <em>Linear Algebra Done Right</em></a> and <a class="reference external" href="https://youtube.com/playlist?list=PLGAnmvB9m7zOBVCZBUUmSinFV0wEir2Vw&amp;amp;si=Bcq0e2Y-xOa6HPzw">Youtube list</a></p></li>
 </ul>
@@ -4257,8 +4293,8 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="intro-program-verification-cslib">
-<h2>Intro Program Verification - CSlib<a class="headerlink" href="#intro-program-verification-cslib" title="Link to this heading">#</a></h2>
+<section id="intro-program-verification-cslib-5">
+<h2>Intro Program Verification - CSlib 5%<a class="headerlink" href="#intro-program-verification-cslib-5" title="Link to this heading">#</a></h2>
 <blockquote>
 <div><p>Hilbert Geometry Game</p>
 </div></blockquote>
@@ -4389,15 +4425,12 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-number-game-100">Natural Number Game 100%</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scribble-robo-95">Scribble - Robo 95%</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hard-part">hard part</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scribble-robo-95">Scribble - Robo 95%</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lean-intro-to-logic-99">Lean Intro to Logic 99%</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reintro-to-proofs-100">Reintro to Proofs 100%</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-algebra">Linear Algebra</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-algebra-15">Linear Algebra 15%</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#number-theory-100">Number Theory 100%</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intro-program-verification-cslib">Intro Program Verification - CSlib</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intro-program-verification-cslib-5">Intro Program Verification - CSlib 5%</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-tactics-theorems">Appendix: Tactics &amp; Theorems</a></li>
 </ul>
   </nav></div>
