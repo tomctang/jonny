@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=6a604523" />
     <link rel="stylesheet" type="text/css" href="_static/custom.css?v=550f00eb" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -53,7 +53,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="_static/design-tabs.js?v=fcb327ea"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -374,20 +374,15 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-number-game-100">Natural Number Game 100%</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scribble-robo-90">Scribble - Robo 90%</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scribble-robo-95">Scribble - Robo 95%</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hard-part">hard part</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notes">Notes</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#real-analysis">Real Analysis</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set-theory-game-overlapped">1 Set Theory Game (overlapped)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lean-intro-to-logic-99">2 Lean Intro to Logic 99%</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reintro-to-proofs-100">3 Reintro to Proofs 100%</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#knights-knaves-game-overlapped">Knights &amp; Knaves Game (overlapped)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lean-intro-to-logic-99">Lean Intro to Logic 99%</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reintro-to-proofs-100">Reintro to Proofs 100%</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-algebra">Linear Algebra</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#number-theory-85">Number Theory 85%</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#number-theory-100">Number Theory 100%</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intro-program-verification-cslib">Intro Program Verification - CSlib</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hilbert-geometry-game">Hilbert Geometry Game</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-tactics-theorems">Appendix: Tactics &amp; Theorems</a></li>
 </ul>
             </nav>
@@ -1014,8 +1009,8 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="scribble-robo-90">
-<h2>Scribble - Robo 90%<a class="headerlink" href="#scribble-robo-90" title="Link to this heading">#</a></h2>
+<section id="scribble-robo-95">
+<h2>Scribble - Robo 95%<a class="headerlink" href="#scribble-robo-95" title="Link to this heading">#</a></h2>
 <p>This is my favourite Lean 4 game.</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
@@ -1119,6 +1114,122 @@ document.write(`
 </tbody>
 </table>
 </div>
+<ul class="simple">
+<li><p>Logo(basic logic)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">tauto</span></code> solves tautologies</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rfl</span></code> solves goals of the form <code class="docutils literal notranslate"><span class="pre">x=x</span></code></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">rfl</span></code> is also a theorem and <code class="docutils literal notranslate"><span class="pre">exact</span> <span class="pre">rfl</span></code> is the same thing.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">assumption</span></code> solves the goal if there is an assumption that matches the goal</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">exact</span></code> can also be used but it isn’t in this game</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">left</span></code> and <code class="docutils literal notranslate"><span class="pre">right</span></code> used to specify which branch with <span class="math notranslate nohighlight">\(\lor\)</span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">constructor</span></code> unpacks <span class="math notranslate nohighlight">\(\land\)</span> in goal and <code class="docutils literal notranslate"><span class="pre">obtain</span></code> for assumptions</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">.1</span></code> and <code class="docutils literal notranslate"><span class="pre">.2</span></code> can be used instead of <code class="docutils literal notranslate"><span class="pre">obtain</span></code></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">decide</span></code> solves the goal when there is a simple implemented algorithm for it(e.g. <code class="docutils literal notranslate"><span class="pre">true</span></code>, <code class="docutils literal notranslate"><span class="pre">Even</span> <span class="pre">42</span></code>, etc…)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">obtain</span></code> unpacks assumptions</p>
+<ul>
+<li><p>Use <span class="math notranslate nohighlight">\(\langle h,h1\rangle\)</span> for <span class="math notranslate nohighlight">\(\land\)</span> and <span class="math notranslate nohighlight">\(h|h\)</span> for <span class="math notranslate nohighlight">\(\lor\)</span></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Implis(implications) + Saturn(equalities)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">intro</span></code> introduces assumptions and objects from <span class="math notranslate nohighlight">\(\forall\)</span> and <span class="math notranslate nohighlight">\(\implies\)</span></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">revert</span></code> does the opposite</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">apply</span></code> implications at assumptions or the goal</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">constructor</span></code> also unpacks <span class="math notranslate nohighlight">\(\iff\)</span></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\iff\)</span> can be used in statements with <code class="docutils literal notranslate"><span class="pre">.1</span></code>,<code class="docutils literal notranslate"><span class="pre">.2</span></code>,<code class="docutils literal notranslate"><span class="pre">.mp</span></code>,<code class="docutils literal notranslate"><span class="pre">.mpr</span></code></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">symm</span></code> swaps the order of <span class="math notranslate nohighlight">\(\iff\)</span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trans</span></code> introduces an intermediate step for <span class="math notranslate nohighlight">\(\iff\)</span> and <code class="docutils literal notranslate"><span class="pre">=</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rw</span></code> with <span class="math notranslate nohighlight">\(\iff\)</span> or <code class="docutils literal notranslate"><span class="pre">=</span></code> assumptions</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">have</span></code> lets you prove intermediate results</p></li>
+</ul>
+</li>
+<li><p>Quantus(quantifiers and numbers)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">use</span></code> for <span class="math notranslate nohighlight">\(\exists\)</span> in goal</p>
+<ul>
+<li><p>Definition: <code class="docutils literal notranslate"><span class="pre">nonempty</span></code> set means there <span class="math notranslate nohighlight">\(\exists\)</span> an element in the set</p></li>
+<li><p><span class="math notranslate nohighlight">\(\exists\)</span> in assumption: <code class="docutils literal notranslate"><span class="pre">obtain</span></code> with <span class="math notranslate nohighlight">\(\langle\text{object,assumption}\rangle\)</span></p>
+<ul>
+<li><p>with <code class="docutils literal notranslate"><span class="pre">nonempty</span></code> do not use <code class="docutils literal notranslate"><span class="pre">unfold</span></code> and <code class="docutils literal notranslate"><span class="pre">use</span></code> or <code class="docutils literal notranslate"><span class="pre">obtain</span></code> without any assumption</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">decide</span></code> for trivial goals(e.g. simple facts about numbers)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">choose</span></code> can replace <code class="docutils literal notranslate"><span class="pre">obtain</span></code> with <span class="math notranslate nohighlight">\(\exists\)</span></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">choose</span></code> more generally invokes the axiom of choice with <span class="math notranslate nohighlight">\(\forall~\exists\)</span> statements to extract the <span class="math notranslate nohighlight">\(\exists\)</span> statement directly</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unfold</span></code> definitions in the goal or assumptions</p>
+<ul>
+<li><p>Not really needed, you can unpack <span class="math notranslate nohighlight">\(\forall\)</span> and <span class="math notranslate nohighlight">\(\exists\)</span> directly without <code class="docutils literal notranslate"><span class="pre">unfold</span></code></p></li>
+</ul>
+</li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">push</span> <span class="pre">Not</span></code> or <code class="docutils literal notranslate"><span class="pre">push</span> <span class="pre">¬</span> <span class="pre">_</span></code> to push <span class="math notranslate nohighlight">\(\lnot\)</span> past <span class="math notranslate nohighlight">\(\exists\)</span> and <span class="math notranslate nohighlight">\(\forall\)</span> quantifiers</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">let</span></code> is like <code class="docutils literal notranslate"><span class="pre">have</span></code>, but is used to introduce objects instead</p></li>
+</ul>
+</li>
+<li><p>Piazza(set theory)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">tauto</span></code> also works for set tautologies</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">simp</span></code> uses all lemmas tagged with <code class="docutils literal notranslate"><span class="pre">&#64;[simp]</span></code> in mathlib</p>
+<ul>
+<li><p>In Robo, <code class="docutils literal notranslate"><span class="pre">simp</span></code> is heavily restricted to prevent many 1-line solutions</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ext</span></code> applies extensionality of sets</p>
+<ul>
+<li><p>Replaces <code class="docutils literal notranslate"><span class="pre">A=B</span></code> with <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">∈</span> <span class="pre">A</span> <span class="pre">↔</span> <span class="pre">x</span> <span class="pre">∈</span> <span class="pre">B</span></code> and introduces the object <code class="docutils literal notranslate"><span class="pre">x</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Spinoza</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">suffices</span></code> works the same as <code class="docutils literal notranslate"><span class="pre">have</span></code>, except the proofs are the other way round</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">by_contra</span></code> allows proof by contradiction</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">intro</span></code> can also do this when there is a <span class="math notranslate nohighlight">\(\lnot\)</span> in the goal, <span class="math notranslate nohighlight">\(\lnot P\)</span> is defined as <code class="docutils literal notranslate"><span class="pre">P→False</span></code></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">contrapose</span></code> lets you prove the contrapositive of the goal</p></li>
+</ul>
+</li>
+<li><p>Samarkand</p>
+<ul>
+<li><p>Do not unpack definitions unless needed or stated(in hints).</p></li>
+</ul>
+</li>
+<li><p>Cantor</p>
+<ul>
+<li><p>Cantor’s diagonalisation theorem(<code class="docutils literal notranslate"><span class="pre">cantor_diagonal</span></code>) can be applied to surjective maps.</p>
+<ul>
+<li><p>The diagonal part is applying the same function to the same input twice(<code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">a</span> <span class="pre">a</span></code>)</p></li>
+</ul>
+</li>
+<li><p>Subsets <code class="docutils literal notranslate"><span class="pre">S:</span> <span class="pre">Set</span> <span class="pre">A</span></code> can be identified with the map <code class="docutils literal notranslate"><span class="pre">A→Prop</span></code> that maps <code class="docutils literal notranslate"><span class="pre">a:A</span></code> onto <span class="math notranslate nohighlight">\(a\in S\)</span></p></li>
+</ul>
+</li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">--</span> <span class="n">World</span><span class="p">:</span> <span class="n">Logo</span>
@@ -2015,43 +2126,9 @@ document.write(`
 </div>
 </div>
 </div>
-</section>
-<section id="notes">
-<h3>Notes<a class="headerlink" href="#notes" title="Link to this heading">#</a></h3>
-<ul>
-<li><p>Logo</p>
-<ul class="simple">
-<li><p>Basic logic</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tauto</span></code> solves tautologies(logic statements)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rfl</span></code> solves goals of the form <code class="docutils literal notranslate"><span class="pre">x=x</span></code></p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">rfl</span></code> is also a theorem and <code class="docutils literal notranslate"><span class="pre">exact</span> <span class="pre">rfl</span></code> is the same thing.</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">assumption</span></code> solves the goal if there is an assumption that matches the goal</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">exact</span></code> can also be used but it isn’t in this game</p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><h2 class="rubric" id="implis">Implis</h2>
-</li>
-<li><p>Samarkand</p>
-<ul class="simple">
-<li><p>Lvl 1</p></li>
-<li><p>Lvl 8</p>
-<ul>
-<li><p>Do not unpack definitions unless needed or stated(in hints).</p></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</section>
-</section>
-<section id="real-analysis">
-<h2>Real Analysis<a class="headerlink" href="#real-analysis" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p>Real Analysis</p>
+</div></blockquote>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">--</span> <span class="n">Lecture</span> <span class="mi">1</span><span class="p">:</span> <span class="n">The</span> <span class="n">Story</span> <span class="n">of</span> <span class="n">Real</span> <span class="n">Analysis</span>
@@ -2081,9 +2158,9 @@ document.write(`
 </div>
 </div>
 </div>
-</section>
-<section id="set-theory-game-overlapped">
-<h2>1 Set Theory Game (overlapped)<a class="headerlink" href="#set-theory-game-overlapped" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p>1 Set Theory Game (overlapped)</p>
+</div></blockquote>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">--</span> <span class="n">World</span><span class="p">:</span> <span class="n">Subset</span> <span class="n">World</span>
@@ -2246,8 +2323,9 @@ document.write(`
 </div>
 </div>
 </section>
+</section>
 <section id="lean-intro-to-logic-99">
-<h2>2 Lean Intro to Logic 99%<a class="headerlink" href="#lean-intro-to-logic-99" title="Link to this heading">#</a></h2>
+<h2>Lean Intro to Logic 99%<a class="headerlink" href="#lean-intro-to-logic-99" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>This game teaches you how to solve logic puzzles.</p></li>
 <li><p>There are two types of worlds.</p>
@@ -2467,7 +2545,7 @@ document.write(`
 </div>
 </section>
 <section id="reintro-to-proofs-100">
-<h2>3 Reintro to Proofs 100%<a class="headerlink" href="#reintro-to-proofs-100" title="Link to this heading">#</a></h2>
+<h2>Reintro to Proofs 100%<a class="headerlink" href="#reintro-to-proofs-100" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">--</span> <span class="n">World</span><span class="p">:</span> <span class="n">Type</span> <span class="n">World</span>
@@ -3522,9 +3600,9 @@ document.write(`
 </div>
 </div>
 </div>
-</section>
-<section id="knights-knaves-game-overlapped">
-<h2>Knights &amp; Knaves Game (overlapped)<a class="headerlink" href="#knights-knaves-game-overlapped" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p>Knights &amp; Knaves Game (overlapped)</p>
+</div></blockquote>
 <ul class="simple">
 <li><p>This teachs you how to solve logic puzzles where you have to deduce who is a knight(truthteller) and who is a knave(liar).</p></li>
 </ul>
@@ -3671,8 +3749,8 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="number-theory-85">
-<h2>Number Theory 85%<a class="headerlink" href="#number-theory-85" title="Link to this heading">#</a></h2>
+<section id="number-theory-100">
+<h2>Number Theory 100%<a class="headerlink" href="#number-theory-100" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">--</span> <span class="n">World</span><span class="p">:</span> <span class="n">Divisibility</span> <span class="n">Club</span>
@@ -4049,9 +4127,79 @@ document.write(`
 <span class="n">exact</span> <span class="n">h1</span>
 <span class="n">exact</span> <span class="n">mod_cancel_coprime</span> <span class="n">x</span> <span class="n">y</span> <span class="n">a</span> <span class="n">m</span> <span class="n">h</span> <span class="p">(</span><span class="n">inv_implies_coprime</span> <span class="n">a</span> <span class="n">m</span> <span class="n">h_exists</span><span class="p">)</span>
 <span class="o">--</span> <span class="n">Level</span> <span class="mi">4</span> <span class="o">/</span> <span class="mi">10</span> <span class="p">:</span> <span class="n">Solvability</span><span class="p">:</span> <span class="n">Necessary</span> <span class="n">Condition</span>
-
-
-
+<span class="n">unfold</span> <span class="n">ModEq</span> <span class="n">at</span> <span class="n">hx</span>
+<span class="n">obtain</span><span class="err">⟨</span><span class="n">k</span><span class="p">,</span><span class="n">hx</span><span class="err">⟩</span><span class="o">:=</span><span class="n">hx</span>
+<span class="n">obtain</span><span class="err">⟨⟨</span><span class="n">h</span><span class="p">,</span><span class="n">h1</span><span class="err">⟩</span><span class="p">,</span><span class="n">_</span><span class="err">⟩</span><span class="o">:=</span><span class="n">hd</span>
+<span class="n">have</span> <span class="n">h2</span><span class="p">:</span><span class="n">b</span><span class="o">=</span><span class="n">a</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="n">m</span><span class="o">*-</span><span class="n">k</span>
+<span class="n">have</span> <span class="n">h2</span><span class="p">:</span><span class="n">b</span><span class="o">=</span><span class="n">a</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="n">m</span><span class="o">*</span><span class="n">k</span>
+<span class="n">rw</span><span class="p">[</span><span class="err">←</span><span class="n">hx</span><span class="p">]</span>
+<span class="n">ring</span>
+<span class="n">rw</span><span class="p">[</span><span class="n">h2</span><span class="p">]</span>
+<span class="n">ring</span>
+<span class="n">rw</span><span class="p">[</span><span class="n">h2</span><span class="p">]</span>
+<span class="n">exact</span> <span class="n">dvd_lin_comb_int</span> <span class="n">d</span> <span class="n">a</span> <span class="n">m</span> <span class="n">x</span> <span class="p">(</span><span class="o">-</span><span class="n">k</span><span class="p">)</span> <span class="n">h</span> <span class="n">h1</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">5</span> <span class="o">/</span> <span class="mi">10</span> <span class="p">:</span> <span class="n">Solvability</span><span class="p">:</span> <span class="n">Sufficient</span> <span class="n">Condition</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">6</span> <span class="o">/</span> <span class="mi">10</span> <span class="p">:</span> <span class="n">Congruent</span> <span class="n">Solutions</span>
+<span class="n">have</span> <span class="n">h3</span><span class="p">:</span><span class="n">x1</span><span class="o">*</span><span class="n">a</span><span class="err">≡</span><span class="n">x2</span><span class="o">*</span><span class="n">a</span><span class="p">(</span><span class="n">mod</span> <span class="n">m</span><span class="p">)</span>
+<span class="n">have</span> <span class="n">h3</span><span class="p">:</span><span class="n">b</span><span class="err">≡</span><span class="n">a</span><span class="o">*</span><span class="n">x2</span><span class="p">(</span><span class="n">mod</span> <span class="n">m</span><span class="p">)</span>
+<span class="n">exact</span> <span class="n">mod_symm</span> <span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">x2</span><span class="p">)</span> <span class="n">b</span> <span class="n">m</span> <span class="n">h2</span>
+<span class="n">have</span> <span class="n">h4</span><span class="p">:</span><span class="n">a</span><span class="o">*</span><span class="n">x1</span><span class="o">=</span><span class="n">x1</span><span class="o">*</span><span class="n">a</span>
+<span class="n">ring</span>
+<span class="n">have</span> <span class="n">h5</span><span class="p">:</span><span class="n">a</span><span class="o">*</span><span class="n">x2</span><span class="o">=</span><span class="n">x2</span><span class="o">*</span><span class="n">a</span>
+<span class="n">ring</span>
+<span class="n">rw</span><span class="p">[</span><span class="n">h4</span><span class="p">]</span> <span class="n">at</span> <span class="n">h1</span>
+<span class="n">rw</span><span class="p">[</span><span class="n">h5</span><span class="p">]</span> <span class="n">at</span> <span class="n">h3</span>
+<span class="n">exact</span> <span class="n">mod_trans</span> <span class="p">(</span><span class="n">x1</span><span class="o">*</span><span class="n">a</span><span class="p">)</span> <span class="n">b</span> <span class="p">(</span><span class="n">x2</span><span class="o">*</span><span class="n">a</span><span class="p">)</span> <span class="n">m</span> <span class="n">h1</span> <span class="n">h3</span>
+<span class="n">exact</span> <span class="n">mod_cancel_general</span> <span class="n">x1</span> <span class="n">x2</span> <span class="n">a</span> <span class="n">m</span> <span class="n">d</span> <span class="n">a1</span> <span class="n">m1</span> <span class="n">hd_not_zero</span> <span class="n">h3</span> <span class="n">hd</span> <span class="n">ha</span> <span class="n">hm</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">7</span> <span class="o">/</span> <span class="mi">10</span> <span class="p">:</span> <span class="n">Shifting</span> <span class="n">the</span> <span class="n">Solution</span>
+<span class="n">obtain</span><span class="err">⟨⟨⟨</span><span class="n">k</span><span class="p">,</span><span class="n">h</span><span class="err">⟩</span><span class="p">,</span><span class="n">h1</span><span class="err">⟩</span><span class="p">,</span><span class="n">_</span><span class="err">⟩</span><span class="o">:=</span><span class="n">hd</span>
+<span class="n">have</span> <span class="n">h2</span><span class="p">:</span><span class="n">d</span><span class="o">*</span><span class="n">k</span><span class="o">=</span><span class="n">k</span><span class="o">*</span><span class="n">d</span>
+<span class="n">ring</span>
+<span class="n">rw</span><span class="p">[</span><span class="n">h</span><span class="p">,</span><span class="n">h2</span><span class="p">,</span><span class="n">hm</span><span class="p">]</span>
+<span class="n">have</span> <span class="n">h3</span><span class="p">:</span><span class="n">k</span><span class="o">*</span><span class="n">d</span><span class="o">*</span><span class="p">(</span><span class="n">x0</span><span class="o">+</span><span class="n">t</span><span class="o">*</span><span class="n">m1</span><span class="p">)</span><span class="err">≡</span><span class="n">a</span><span class="o">*</span><span class="n">x0</span><span class="p">(</span><span class="n">mod</span> <span class="n">m1</span><span class="o">*</span><span class="n">d</span><span class="p">)</span>
+<span class="n">have</span> <span class="n">h3</span><span class="p">:</span><span class="n">k</span><span class="o">*</span><span class="n">d</span><span class="o">*</span><span class="p">(</span><span class="n">x0</span><span class="o">+</span><span class="n">t</span><span class="o">*</span><span class="n">m1</span><span class="p">)</span><span class="o">=</span><span class="n">a</span><span class="o">*</span><span class="n">x0</span><span class="o">+</span><span class="n">k</span><span class="o">*</span><span class="n">t</span><span class="o">*</span><span class="p">(</span><span class="n">m1</span><span class="o">*</span><span class="n">d</span><span class="p">)</span>
+<span class="n">rw</span><span class="p">[</span><span class="n">h</span><span class="p">]</span>
+<span class="n">ring</span>
+<span class="n">rw</span><span class="p">[</span><span class="n">h3</span><span class="p">]</span>
+<span class="n">exact</span> <span class="n">mod_add_multiple</span> <span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">x0</span><span class="p">)</span> <span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">t</span><span class="p">)</span> <span class="p">(</span><span class="n">m1</span><span class="o">*</span><span class="n">d</span><span class="p">)</span>
+<span class="n">rw</span><span class="p">[</span><span class="n">hm</span><span class="p">]</span> <span class="n">at</span> <span class="n">h0</span>
+<span class="n">exact</span> <span class="n">mod_trans</span> <span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">d</span><span class="o">*</span><span class="p">(</span><span class="n">x0</span><span class="o">+</span><span class="n">t</span><span class="o">*</span><span class="n">m1</span><span class="p">))</span> <span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">x0</span><span class="p">)</span> <span class="n">b</span> <span class="p">(</span><span class="n">m1</span><span class="o">*</span><span class="n">d</span><span class="p">)</span> <span class="n">h3</span> <span class="n">h0</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">8</span> <span class="o">/</span> <span class="mi">10</span> <span class="p">:</span> <span class="n">Euclid</span><span class="s1">'s Lemma</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">9</span> <span class="o">/</span> <span class="mi">10</span> <span class="p">:</span> <span class="n">Chinese</span> <span class="n">Remainder</span> <span class="n">Theorem</span><span class="p">:</span> <span class="n">Existence</span>
+<span class="n">obtain</span><span class="err">⟨</span><span class="n">_</span><span class="p">,</span><span class="err">⟨</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">h</span><span class="err">⟩⟩</span><span class="o">:=</span><span class="n">h_coprime</span>
+<span class="n">use</span> <span class="n">a</span><span class="o">*</span><span class="n">n</span><span class="o">*</span><span class="n">v</span><span class="o">+</span><span class="n">b</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">u</span>
+<span class="n">constructor</span>
+<span class="n">unfold</span> <span class="n">ModEq</span>
+<span class="n">have</span> <span class="n">h1</span><span class="p">:(</span><span class="n">a</span> <span class="o">*</span> <span class="n">n</span> <span class="o">*</span> <span class="n">v</span> <span class="o">+</span> <span class="n">b</span> <span class="o">*</span> <span class="n">m</span> <span class="o">*</span> <span class="n">u</span><span class="p">)</span> <span class="o">-</span> <span class="n">a</span><span class="o">=</span><span class="n">m</span> <span class="o">*</span> <span class="p">(</span><span class="n">b</span> <span class="o">*</span> <span class="n">u</span> <span class="o">-</span> <span class="n">a</span> <span class="o">*</span> <span class="n">u</span><span class="p">)</span> <span class="o">+</span> <span class="n">a</span> <span class="o">*</span> <span class="p">(</span><span class="n">m</span> <span class="o">*</span> <span class="n">u</span> <span class="o">+</span> <span class="n">n</span> <span class="o">*</span> <span class="n">v</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">ring</span>
+<span class="n">rw</span><span class="p">[</span><span class="n">h1</span><span class="p">]</span>
+<span class="n">use</span> <span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">u</span><span class="o">-</span><span class="n">a</span><span class="o">*</span><span class="n">u</span><span class="p">)</span>
+<span class="n">rw</span><span class="p">[</span><span class="n">h</span><span class="p">]</span>
+<span class="n">ring</span>
+<span class="n">unfold</span> <span class="n">ModEq</span>
+<span class="n">have</span> <span class="n">h1</span><span class="p">:(</span><span class="n">a</span> <span class="o">*</span> <span class="n">n</span> <span class="o">*</span> <span class="n">v</span> <span class="o">+</span> <span class="n">b</span> <span class="o">*</span> <span class="n">m</span> <span class="o">*</span> <span class="n">u</span><span class="p">)</span> <span class="o">-</span> <span class="n">b</span><span class="o">=</span><span class="n">n</span> <span class="o">*</span> <span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">v</span><span class="o">-</span><span class="n">b</span><span class="o">*</span><span class="n">v</span><span class="p">)</span> <span class="o">+</span> <span class="n">b</span> <span class="o">*</span> <span class="p">(</span><span class="n">m</span><span class="o">*</span><span class="n">u</span> <span class="o">+</span> <span class="n">n</span> <span class="o">*</span> <span class="n">v</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">ring</span>
+<span class="n">rw</span><span class="p">[</span><span class="n">h1</span><span class="p">,</span><span class="n">h</span><span class="p">]</span>
+<span class="n">use</span> <span class="n">a</span><span class="o">*</span><span class="n">v</span><span class="o">-</span><span class="n">b</span><span class="o">*</span><span class="n">v</span>
+<span class="n">ring</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">10</span> <span class="o">/</span> <span class="mi">10</span> <span class="p">:</span> <span class="n">Chinese</span> <span class="n">Remainder</span> <span class="n">Theorem</span><span class="p">:</span> <span class="n">Glued</span> <span class="p">(</span><span class="n">Boss</span><span class="p">)</span>
+<span class="n">unfold</span> <span class="n">ModEq</span> <span class="n">at</span> <span class="o">*</span>
+<span class="n">obtain</span><span class="err">⟨</span><span class="n">k</span><span class="p">,</span><span class="n">hm</span><span class="err">⟩</span><span class="o">:=</span><span class="n">hm</span>
+<span class="n">obtain</span><span class="err">⟨</span><span class="n">l</span><span class="p">,</span><span class="n">hn</span><span class="err">⟩</span><span class="o">:=</span><span class="n">hn</span>
+<span class="n">have</span> <span class="n">h_eq</span><span class="p">:</span><span class="n">m</span><span class="o">*</span><span class="n">k</span><span class="o">=</span><span class="n">n</span><span class="o">*</span><span class="n">l</span>
+<span class="n">rw</span><span class="p">[</span><span class="err">←</span><span class="n">hm</span><span class="p">,</span><span class="err">←</span><span class="n">hn</span><span class="p">]</span>
+<span class="n">have</span> <span class="n">h1</span><span class="p">:</span><span class="n">m</span><span class="err">∣</span><span class="n">l</span><span class="o">*</span><span class="n">n</span>
+<span class="n">have</span> <span class="n">h1</span><span class="p">:</span><span class="n">l</span><span class="o">*</span><span class="n">n</span><span class="o">=</span><span class="n">n</span><span class="o">*</span><span class="n">l</span>
+<span class="n">ring</span>
+<span class="n">use</span> <span class="n">k</span>
+<span class="n">rw</span><span class="p">[</span><span class="n">h1</span><span class="p">,</span><span class="n">h_eq</span><span class="p">]</span>
+<span class="n">rw</span><span class="p">[</span><span class="n">hn</span><span class="p">]</span>
+<span class="n">have</span> <span class="n">h2</span><span class="p">:</span><span class="n">m</span><span class="err">∣</span><span class="n">l</span>
+<span class="n">exact</span> <span class="n">euclids_lemma</span> <span class="n">l</span> <span class="n">n</span> <span class="n">m</span> <span class="n">h1</span> <span class="p">(</span><span class="n">gcd_symm</span> <span class="n">m</span> <span class="n">n</span> <span class="mi">1</span> <span class="n">h_coprime</span><span class="p">)</span>
+<span class="n">obtain</span><span class="err">⟨</span><span class="n">y</span><span class="p">,</span><span class="n">h2</span><span class="err">⟩</span><span class="o">:=</span><span class="n">h2</span>
+<span class="n">use</span> <span class="n">y</span>
+<span class="n">rw</span><span class="p">[</span><span class="n">h2</span><span class="p">]</span>
+<span class="n">ring</span>
 
 
 <span class="o">--</span> <span class="n">Problems</span>
@@ -4060,6 +4208,50 @@ document.write(`
 <span class="n">use</span> <span class="mi">221779874556156893897171387204119510104050625003675508105116339034664608940646160193468804874938566031815057911618875354125</span>
 <span class="n">ring</span>
 <span class="o">--</span> <span class="n">Level</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">8</span> <span class="p">:</span> <span class="n">Cancelling</span> <span class="n">Constants</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">8</span> <span class="p">:</span> <span class="n">The</span> <span class="n">Oracle</span> <span class="n">of</span> <span class="n">CRT</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">4</span> <span class="o">/</span> <span class="mi">8</span> <span class="p">:</span> <span class="n">Solving</span> <span class="n">Linear</span> <span class="n">Congruences</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">5</span> <span class="o">/</span> <span class="mi">8</span> <span class="p">:</span> <span class="n">Euclid</span> <span class="ow">in</span> <span class="n">Practice</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">6</span> <span class="o">/</span> <span class="mi">8</span> <span class="p">:</span> <span class="n">Shrinking</span> <span class="ow">and</span> <span class="n">Shifting</span>
+<span class="n">have</span> <span class="n">h1</span><span class="p">:</span><span class="n">x</span><span class="err">≡</span><span class="mi">23</span><span class="p">(</span><span class="n">mod</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">have</span> <span class="n">h1</span><span class="p">:(</span><span class="mi">4</span><span class="p">:</span><span class="n">ℤ</span><span class="p">)</span><span class="err">∣</span><span class="mi">100</span>
+<span class="n">use</span> <span class="mi">25</span>
+<span class="n">ring</span>
+<span class="n">exact</span> <span class="n">mod_shrink</span> <span class="n">x</span> <span class="mi">23</span> <span class="mi">100</span> <span class="mi">4</span> <span class="n">h</span> <span class="n">h1</span>
+<span class="n">have</span> <span class="n">h2</span><span class="p">:</span><span class="mi">23</span><span class="err">≡</span><span class="mi">3</span><span class="p">(</span><span class="n">mod</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">use</span> <span class="mi">5</span>
+<span class="n">ring</span>
+<span class="n">exact</span> <span class="n">mod_trans</span> <span class="n">x</span> <span class="mi">23</span> <span class="mi">3</span> <span class="mi">4</span> <span class="n">h1</span> <span class="n">h2</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">7</span> <span class="o">/</span> <span class="mi">8</span> <span class="p">:</span> <span class="n">Quadratic</span> <span class="n">Congruence</span>
+<span class="n">obtain</span><span class="err">⟨</span><span class="n">k</span><span class="p">,</span><span class="n">h1</span><span class="err">⟩</span><span class="o">:=</span><span class="n">h1</span>
+<span class="n">obtain</span><span class="err">⟨</span><span class="n">m</span><span class="p">,</span><span class="n">h2</span><span class="err">⟩</span><span class="o">:=</span><span class="n">h2</span>
+<span class="n">have</span> <span class="n">h3</span><span class="p">:</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="o">-</span><span class="mi">5</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">6</span><span class="o">=</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">ring</span>
+<span class="n">use</span> <span class="n">k</span><span class="o">*</span><span class="n">m</span>
+<span class="n">rw</span><span class="p">[</span><span class="n">h3</span><span class="p">,</span><span class="n">h1</span><span class="p">,</span><span class="n">h2</span><span class="p">]</span>
+<span class="n">ring</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">8</span> <span class="o">/</span> <span class="mi">8</span> <span class="p">:</span> <span class="n">System</span> <span class="n">of</span> <span class="n">Congruences</span> <span class="p">(</span><span class="n">Boss</span><span class="p">)</span>
+<span class="n">unfold</span> <span class="n">ModEq</span> <span class="n">at</span> <span class="o">*</span>
+<span class="n">obtain</span><span class="err">⟨</span><span class="n">k</span><span class="p">,</span><span class="n">h1</span><span class="err">⟩</span><span class="o">:=</span><span class="n">h1</span>
+<span class="n">obtain</span><span class="err">⟨</span><span class="n">l</span><span class="p">,</span><span class="n">h2</span><span class="err">⟩</span><span class="o">:=</span><span class="n">h2</span>
+<span class="n">have</span> <span class="n">h3</span><span class="p">:</span><span class="mi">11</span><span class="err">∣</span><span class="n">x</span><span class="o">*</span><span class="mi">25</span>
+<span class="n">use</span> <span class="mi">3</span><span class="o">*</span><span class="n">k</span><span class="o">+</span><span class="mi">4</span><span class="o">*</span><span class="n">l</span>
+<span class="n">have</span> <span class="n">h3</span><span class="p">:</span><span class="mi">11</span><span class="o">*</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">k</span><span class="o">+</span><span class="mi">4</span><span class="o">*</span><span class="n">l</span><span class="p">)</span><span class="o">=</span><span class="mi">11</span><span class="o">*</span><span class="n">k</span><span class="o">*</span><span class="mi">3</span><span class="o">+</span><span class="mi">11</span><span class="o">*</span><span class="n">l</span><span class="o">*</span><span class="mi">4</span>
+<span class="n">ring</span>
+<span class="n">rw</span><span class="p">[</span><span class="n">h3</span><span class="p">,</span><span class="err">←</span><span class="n">h1</span><span class="p">,</span><span class="err">←</span><span class="n">h2</span><span class="p">]</span>
+<span class="n">ring</span>
+<span class="n">have</span> <span class="n">h4</span><span class="p">:</span><span class="n">IsGCD</span> <span class="mi">25</span> <span class="mi">11</span> <span class="mi">1</span>
+<span class="n">constructor</span>
+<span class="n">constructor</span>
+<span class="n">use</span> <span class="mi">25</span>
+<span class="n">ring</span>
+<span class="n">use</span> <span class="mi">11</span>
+<span class="n">ring</span>
+<span class="n">use</span> <span class="mi">4</span><span class="p">,</span><span class="o">-</span><span class="mi">9</span>
+<span class="n">ring</span>
+<span class="n">have</span> <span class="n">h5</span><span class="p">:</span><span class="n">x</span><span class="o">-</span><span class="mi">0</span><span class="o">=</span><span class="n">x</span>
+<span class="n">ring</span>
+<span class="n">rw</span><span class="p">[</span><span class="n">h5</span><span class="p">]</span>
+<span class="n">exact</span> <span class="n">euclids_lemma</span> <span class="n">x</span> <span class="mi">25</span> <span class="mi">11</span> <span class="n">h3</span> <span class="n">h4</span>
 </pre></div>
 </div>
 </div>
@@ -4067,9 +4259,9 @@ document.write(`
 </section>
 <section id="intro-program-verification-cslib">
 <h2>Intro Program Verification - CSlib<a class="headerlink" href="#intro-program-verification-cslib" title="Link to this heading">#</a></h2>
-</section>
-<section id="hilbert-geometry-game">
-<h2>Hilbert Geometry Game<a class="headerlink" href="#hilbert-geometry-game" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p>Hilbert Geometry Game</p>
+</div></blockquote>
 </section>
 <section id="appendix-tactics-theorems">
 <h2>Appendix: Tactics &amp; Theorems<a class="headerlink" href="#appendix-tactics-theorems" title="Link to this heading">#</a></h2>
@@ -4197,20 +4389,15 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-number-game-100">Natural Number Game 100%</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scribble-robo-90">Scribble - Robo 90%</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scribble-robo-95">Scribble - Robo 95%</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hard-part">hard part</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notes">Notes</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#real-analysis">Real Analysis</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set-theory-game-overlapped">1 Set Theory Game (overlapped)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lean-intro-to-logic-99">2 Lean Intro to Logic 99%</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reintro-to-proofs-100">3 Reintro to Proofs 100%</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#knights-knaves-game-overlapped">Knights &amp; Knaves Game (overlapped)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lean-intro-to-logic-99">Lean Intro to Logic 99%</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reintro-to-proofs-100">Reintro to Proofs 100%</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-algebra">Linear Algebra</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#number-theory-85">Number Theory 85%</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#number-theory-100">Number Theory 100%</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intro-program-verification-cslib">Intro Program Verification - CSlib</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hilbert-geometry-game">Hilbert Geometry Game</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-tactics-theorems">Appendix: Tactics &amp; Theorems</a></li>
 </ul>
   </nav></div>
