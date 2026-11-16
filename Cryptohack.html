@@ -378,7 +378,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenge-modular-arithmetic-general-maths">Challenge - Modular Arithmetic(General &amp; Maths)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenge-symmetric-cryptography">Challenge - Symmetric Cryptography</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenge-public-key-cryptography-change-into-rsa-and-dh-sections">Challenge - Public-Key Cryptography(change into RSA and DH sections)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenge-ecc-isogenies">Challenge - ECC &amp; Isogenies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenge-ecc">Challenge - ECC</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenge-hashes">Challenge - Hashes</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenge-isogenies">Challenge - Isogenies</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenge-lattices">Challenge - Lattices</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenge-zkps">Challenge - ZKPs</a></li>
@@ -407,6 +408,7 @@ document.write(`
 <span class="kn">from</span><span class="w"> </span><span class="nn">Crypto.Util.number</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">Crypto.Util.strxor</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">Crypto.Cipher</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">Crypto.Cipher</span><span class="w"> </span><span class="kn">import</span> <span class="n">AES</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">Crypto.PublicKey</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">Crypto.Util.Padding</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">pwn</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
@@ -558,14 +560,6 @@ document.write(`
 <span class="c1"># Step 3: Convert bytes back into a readable string or dictionary</span>
 <span class="n">payload_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">decoded_bytes</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">'utf-8'</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">payload_data</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hashing Collision Probability</span>
-<span class="n">num</span><span class="o">=</span><span class="mi">75</span><span class="p">;</span><span class="nb">float</span><span class="p">((</span><span class="mi">2047</span><span class="o">/</span><span class="mi">2048</span><span class="p">)</span><span class="o">**</span><span class="p">((</span><span class="n">num</span><span class="o">*</span><span class="p">(</span><span class="n">num</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span><span class="o">//</span><span class="mi">2</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -734,36 +728,6 @@ document.write(`
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1000</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">prime</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">:</span>
         <span class="k">if</span> <span class="p">(</span><span class="mi">588</span><span class="o">*</span><span class="n">i</span><span class="p">)</span><span class="o">%</span><span class="k">prime</span>==665 and (665*i)%prime==216: print(i,prime)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Collider</span>
-<span class="c1"># !/usr/bin/env python3</span>
-
-<span class="kn">from</span><span class="w"> </span><span class="nn">pwn</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span> <span class="c1"># pip install pwntools</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
-
-<span class="n">HOST</span> <span class="o">=</span> <span class="s2">"socket.cryptohack.org"</span>
-<span class="n">PORT</span> <span class="o">=</span> <span class="mi">13389</span>
-
-<span class="n">r</span> <span class="o">=</span> <span class="n">remote</span><span class="p">(</span><span class="n">HOST</span><span class="p">,</span> <span class="n">PORT</span><span class="p">)</span>
-
-
-<span class="k">def</span><span class="w"> </span><span class="nf">json_recv</span><span class="p">():</span>
-    <span class="n">line</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
-    <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">decode</span><span class="p">())</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">json_send</span><span class="p">(</span><span class="n">hsh</span><span class="p">):</span>
-    <span class="n">request</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">hsh</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span>
-    <span class="n">r</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
-
-
-<span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>
-<span class="n">json_send</span><span class="p">({</span><span class="s1">'document'</span><span class="p">:</span><span class="s1">'00'</span><span class="p">})</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -1089,6 +1053,51 @@ document.write(`
 </section>
 <section id="challenge-modular-arithmetic-general-maths">
 <h2>Challenge - Modular Arithmetic(General &amp; Maths)<a class="headerlink" href="#challenge-modular-arithmetic-general-maths" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">decrypt_aes_cbc</span><span class="p">(</span><span class="n">ciphertext</span><span class="p">,</span> <span class="n">key_bytes</span><span class="p">,</span> <span class="n">iv_bytes</span><span class="p">):</span>
+    <span class="c1"># 2. Create the AES CBC cipher object</span>
+    <span class="n">cipher</span> <span class="o">=</span> <span class="n">AES</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">key_bytes</span><span class="p">,</span> <span class="n">AES</span><span class="o">.</span><span class="n">MODE_CBC</span><span class="p">,</span> <span class="n">iv_bytes</span><span class="p">)</span>
+    
+    <span class="c1"># 3. Decrypt the raw ciphertext</span>
+    <span class="n">decrypted_padded</span> <span class="o">=</span> <span class="n">cipher</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">ciphertext</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">decrypted_padded</span>
+<span class="n">iv</span><span class="o">=</span><span class="n">long_to_bytes</span><span class="p">(</span><span class="mh">0x46b98b32c188f0b52bfb39fd2d47f750</span><span class="p">)</span>
+<span class="n">ct</span><span class="o">=</span><span class="n">long_to_bytes</span><span class="p">(</span><span class="mh">0xd0e0b8b6a7c3b4bbe5e7641e867f6bca4a467c78d2dbde0acc428a8c81e8b06afe13e88b6e2ccce81cffe3576797b51b</span><span class="p">)</span>
+<span class="n">key</span><span class="o">=</span><span class="s1">'ec 98 bf b4 67 49 0d 62 3c c2 0d 95 7b e1 35 24 fe 24 b6 f7 ca eb 62 04 f2 ac 15 73 85 ee 39 4f'</span>
+<span class="n">key</span><span class="o">=</span><span class="s1">''</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">key</span><span class="o">.</span><span class="n">split</span><span class="p">())[:</span><span class="mi">32</span><span class="p">]</span>
+<span class="n">key</span><span class="o">=</span><span class="n">long_to_bytes</span><span class="p">(</span><span class="nb">eval</span><span class="p">(</span><span class="s1">'0x'</span><span class="o">+</span><span class="n">key</span><span class="p">))</span>
+<span class="n">decrypt_aes_cbc</span><span class="p">(</span><span class="n">ct</span><span class="p">,</span><span class="n">key</span><span class="p">,</span><span class="n">iv</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">g</span><span class="o">=</span><span class="n">N</span><span class="o">^</span><span class="mi">2</span><span class="o">-</span><span class="mi">1</span>
+<span class="n">g</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># common ground</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">169443414248616170435294338915244177202922163083485732592950769878490934852101082924128142879695453267296471717336256406695650037016885396798627982368515134976206485266024391058267256974811507172469141997713771548733148712622266282821731395232011793965005655317972510341059379754609538207604519573771657512339</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">25368219554913708637036669278763921046059773955446319991270658853412457739818481777948746760220411241596218964878030561941898013171372581283282544832992673050889856978641833737658778392068861262789678993842514789959941498855562983490556561423551785446315226164302817956187907837516439006866453951867981882233278794283856031313070117200290204196037126692303040719105183247179158418717862356637074278714706884288234226721018840522134816391620119413178346100982247941281859338481600886180512772787098698436099910919975344092150679294865082388976417678966018358601898201843812995814291103979485177369348186440550610071490</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">18542175570712030478756908384842898953914726107893488285151278210631738856140076260867052265823952650992001042809086134427968906070451058388731119752660310500672190902430096113252264685964681308268577851713805406093128967361744387892501337664082388028543941895933382679013872067058748361949431585519704603738435000275451189450735236589324234052364136921363023376021637919189772497451828635979885156171946288415395717820612240749259136841352563730189354042721431123767503193041121842400950871708585315464978719084240093732310297153565111346015778847195004695471347990924335370422050968883510727331476576395046184892598</span>
+<span class="p">{</span><span class="s2">"iv"</span><span class="p">:</span> <span class="s2">"46b98b32c188f0b52bfb39fd2d47f750"</span><span class="p">,</span> <span class="s2">"ct"</span><span class="p">:</span> <span class="s2">"d0e0b8b6a7c3b4bbe5e7641e867f6bca4a467c78d2dbde0acc428a8c81e8b06afe13e88b6e2ccce81cffe3576797b51b"</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># GCD</span>
@@ -1581,7 +1590,39 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">Crypto.Util.strxor</span><span class="w"> </span><span class="kn">import</span> <span class="n">strxor</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>    <span class="mh">0xFC</span><span class="p">,</span> <span class="mh">0x56</span><span class="p">,</span> <span class="mh">0x3E</span><span class="p">,</span> <span class="mh">0x4B</span><span class="p">,</span> <span class="mh">0xC6</span><span class="p">,</span> <span class="mh">0xD2</span><span class="p">,</span> <span class="mh">0x79</span><span class="p">,</span> <span class="mh">0x20</span><span class="p">,</span> <span class="mh">0x9A</span><span class="p">,</span> <span class="mh">0xDB</span><span class="p">,</span> <span class="mh">0xC0</span><span class="p">,</span> <span class="mh">0xFE</span><span class="p">,</span> <span class="mh">0x78</span><span class="p">,</span> <span class="mh">0xCD</span><span class="p">,</span> <span class="mh">0x5A</span><span class="p">,</span> <span class="mh">0xF4</span><span class="p">,</span>
+    <span class="mh">0x1F</span><span class="p">,</span> <span class="mh">0xDD</span><span class="p">,</span> <span class="mh">0xA8</span><span class="p">,</span> <span class="mh">0x33</span><span class="p">,</span> <span class="mh">0x88</span><span class="p">,</span> <span class="mh">0x07</span><span class="p">,</span> <span class="mh">0xC7</span><span class="p">,</span> <span class="mh">0x31</span><span class="p">,</span> <span class="mh">0xB1</span><span class="p">,</span> <span class="mh">0x12</span><span class="p">,</span> <span class="mh">0x10</span><span class="p">,</span> <span class="mh">0x59</span><span class="p">,</span> <span class="mh">0x27</span><span class="p">,</span> <span class="mh">0x80</span><span class="p">,</span> <span class="mh">0xEC</span><span class="p">,</span> <span class="mh">0x5F</span><span class="p">,</span>
+    <span class="mh">0x60</span><span class="p">,</span> <span class="mh">0x51</span><span class="p">,</span> <span class="mh">0x7F</span><span class="p">,</span> <span class="mh">0xA9</span><span class="p">,</span> <span class="mh">0x19</span><span class="p">,</span> <span class="mh">0xB5</span><span class="p">,</span> <span class="mh">0x4A</span><span class="p">,</span> <span class="mh">0x0D</span><span class="p">,</span> <span class="mh">0x2D</span><span class="p">,</span> <span class="mh">0xE5</span><span class="p">,</span> <span class="mh">0x7A</span><span class="p">,</span> <span class="mh">0x9F</span><span class="p">,</span> <span class="mh">0x93</span><span class="p">,</span> <span class="mh">0xC9</span><span class="p">,</span> <span class="mh">0x9C</span><span class="p">,</span> <span class="mh">0xEF</span><span class="p">,</span>
+    <span class="mh">0xA0</span><span class="p">,</span> <span class="mh">0xE0</span><span class="p">,</span> <span class="mh">0x3B</span><span class="p">,</span> <span class="mh">0x4D</span><span class="p">,</span> <span class="mh">0xAE</span><span class="p">,</span> <span class="mh">0x2A</span><span class="p">,</span> <span class="mh">0xF5</span><span class="p">,</span> <span class="mh">0xB0</span><span class="p">,</span> <span class="mh">0xC8</span><span class="p">,</span> <span class="mh">0xEB</span><span class="p">,</span> <span class="mh">0xBB</span><span class="p">,</span> <span class="mh">0x3C</span><span class="p">,</span> <span class="mh">0x83</span><span class="p">,</span> <span class="mh">0x53</span><span class="p">,</span> <span class="mh">0x99</span><span class="p">,</span> <span class="mh">0x61</span><span class="p">,</span>
+    <span class="mh">0x17</span><span class="p">,</span> <span class="mh">0x2B</span><span class="p">,</span> <span class="mh">0x04</span><span class="p">,</span> <span class="mh">0x7E</span><span class="p">,</span> <span class="mh">0xBA</span><span class="p">,</span> <span class="mh">0x77</span><span class="p">,</span> <span class="mh">0xD6</span><span class="p">,</span> <span class="mh">0x26</span><span class="p">,</span> <span class="mh">0xE1</span><span class="p">,</span> <span class="mh">0x69</span><span class="p">,</span> <span class="mh">0x14</span><span class="p">,</span> <span class="mh">0x63</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x21</span><span class="p">,</span> <span class="mh">0x0C</span><span class="p">,</span> <span class="mh">0x7D</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">sub_bytes</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">sbox</span><span class="o">=</span><span class="n">s_box</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[[</span><span class="n">sbox</span><span class="p">[</span><span class="n">num</span><span class="p">]</span> <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">line</span><span class="p">]</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">s</span><span class="p">]</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">shift_rows</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">3</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">3</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">3</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">3</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">3</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">3</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">inv_shift_rows</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">3</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">3</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">3</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">3</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">3</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">3</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+
+<span class="c1"># learned from http://cs.ucsb.edu/~koc/cs178/projects/JT/aes.c</span>
+<span class="n">xtime</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">a</span><span class="p">:</span> <span class="p">(((</span><span class="n">a</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span><span class="p">)</span> <span class="o">^</span> <span class="mh">0x1B</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xFF</span><span class="p">)</span> <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">&amp;</span> <span class="mh">0x80</span><span class="p">)</span> <span class="k">else</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">mix_single_column</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="c1"># see Sec 4.1.2 in The Design of Rijndael</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">^</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">^</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">^</span> <span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+    <span class="n">u</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">^=</span> <span class="n">t</span> <span class="o">^</span> <span class="n">xtime</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">^</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">^=</span> <span class="n">t</span> <span class="o">^</span> <span class="n">xtime</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">^</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+    <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">^=</span> <span class="n">t</span> <span class="o">^</span> <span class="n">xtime</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">^</span> <span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+    <span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">^=</span> <span class="n">t</span> <span class="o">^</span> <span class="n">xtime</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">^</span> <span class="n">u</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">mix_columns</span><span class="p">(</span><span class="n">s</span><span class="p">):</span><span class="kn">from</span><span class="w"> </span><span class="nn">Crypto.Util.strxor</span><span class="w"> </span><span class="kn">import</span> <span class="n">strxor</span>
 </pre></div>
 </div>
 </div>
@@ -1764,11 +1805,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Decrypted Message: b'Take a look at ZWQ1ZjJiZGVjYmQ0YmQzNDlkMDk0MTJkMWZmNmE2ZmI=\x05\x05\x05\x05\x05'
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1776,20 +1812,10 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>b'ed5f2bdecbd4bd349d09412d1ff6a6fb'
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mh">0xed5f2bdecbd4bd349d09412d1ff6a6fb</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>315521192997933548456726797669100857083
 </pre></div>
 </div>
 </div>
@@ -2746,8 +2772,8 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="challenge-ecc-isogenies">
-<h2>Challenge - ECC &amp; Isogenies<a class="headerlink" href="#challenge-ecc-isogenies" title="Link to this heading">#</a></h2>
+<section id="challenge-ecc">
+<h2>Challenge - ECC<a class="headerlink" href="#challenge-ecc" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Point negation</span>
@@ -3205,6 +3231,102 @@ document.write(`
 
 <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>
 <span class="n">json_send</span><span class="p">({</span><span class="s2">"private_key"</span><span class="p">:</span><span class="nb">int</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span><span class="s2">"host"</span><span class="p">:</span><span class="s2">"www.bing.com"</span><span class="p">,</span><span class="s2">"curve"</span><span class="p">:</span><span class="s2">"secp256r1"</span><span class="p">,</span><span class="s2">"generator"</span><span class="p">:[</span><span class="nb">int</span><span class="p">(</span><span class="mh">0x6B17D1F2E12C4247F8BCE6E563A440F277037D812DEB33A0F4A13945D898C296</span><span class="p">),</span><span class="nb">int</span><span class="p">(</span><span class="mh">0x4FE342E2FE1A7F9B8EE7EB4A7C0F9E162BCE33576B315ECECBB6406837BF51F5</span><span class="p">)]})</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="challenge-hashes">
+<h2>Challenge - Hashes<a class="headerlink" href="#challenge-hashes" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hashing Collision Probability</span>
+<span class="n">num</span><span class="o">=</span><span class="mi">75</span><span class="p">;</span><span class="nb">float</span><span class="p">((</span><span class="mi">2047</span><span class="o">/</span><span class="mi">2048</span><span class="p">)</span><span class="o">**</span><span class="p">((</span><span class="n">num</span><span class="o">*</span><span class="p">(</span><span class="n">num</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span><span class="o">//</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">listener</span>
+
+
+<span class="n">FLAG</span> <span class="o">=</span> <span class="s2">"crypto{???????????????????????????????????}"</span>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Challenge</span><span class="p">():</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">before_input</span> <span class="o">=</span> <span class="s2">"Give me a document to store</span><span class="se">\n</span><span class="s2">"</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">documents</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">"508dcc4dbe9113b15a1f971639b335bd"</span><span class="p">:</span> <span class="sa">b</span><span class="s2">"Particle physics (also known as high energy physics) is a branch of physics that studies the nature of the particles that constitute matter and radiation. Although the word particle can refer to various types of very small objects (e.g. protons, gas particles, or even household dust), particle physics usually investigates the irreducibly smallest detectable particles and the fundamental interactions necessary to explain their behaviour."</span><span class="p">,</span>
+            <span class="s2">"cb07ff7a5f043361b698c31046b8b0ab"</span><span class="p">:</span> <span class="sa">b</span><span class="s2">"The Large Hadron Collider (LHC) is the world's largest and highest-energy particle collider and the largest machine in the world. It was built by the European Organization for Nuclear Research (CERN) between 1998 and 2008 in collaboration with over 10,000 scientists and hundreds of universities and laboratories, as well as more than 100 countries."</span><span class="p">,</span>
+        <span class="p">}</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">challenge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+        <span class="k">if</span> <span class="s2">"document"</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">msg</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">exit</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">return</span> <span class="p">{</span><span class="s2">"error"</span><span class="p">:</span> <span class="s2">"You must send a document"</span><span class="p">}</span>
+
+        <span class="n">document</span> <span class="o">=</span> <span class="nb">bytes</span><span class="o">.</span><span class="n">fromhex</span><span class="p">(</span><span class="n">msg</span><span class="p">[</span><span class="s2">"document"</span><span class="p">])</span>
+        <span class="n">document_hash</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">(</span><span class="n">document</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">document_hash</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">documents</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">exit</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">documents</span><span class="p">[</span><span class="n">document_hash</span><span class="p">]</span> <span class="o">==</span> <span class="n">document</span><span class="p">:</span>
+                <span class="k">return</span> <span class="p">{</span><span class="s2">"error"</span><span class="p">:</span> <span class="s2">"Document already exists in system"</span><span class="p">}</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="p">{</span><span class="s2">"error"</span><span class="p">:</span> <span class="sa">f</span><span class="s2">"Document system crash, leaking flag: </span><span class="si">{</span><span class="n">FLAG</span><span class="si">}</span><span class="s2">"</span><span class="p">}</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">documents</span><span class="p">[</span><span class="n">document_hash</span><span class="p">]</span> <span class="o">=</span> <span class="n">document</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">documents</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">exit</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">return</span> <span class="p">{</span><span class="s2">"error"</span><span class="p">:</span> <span class="s2">"Too many documents in the system"</span><span class="p">}</span>
+
+        <span class="k">return</span> <span class="p">{</span><span class="s2">"success"</span><span class="p">:</span> <span class="sa">f</span><span class="s2">"Document </span><span class="si">{</span><span class="n">document_hash</span><span class="si">}</span><span class="s2"> added to system"</span><span class="p">}</span>
+
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">builtins</span><span class="p">;</span> <span class="n">builtins</span><span class="o">.</span><span class="n">Challenge</span> <span class="o">=</span> <span class="n">Challenge</span> <span class="c1"># hack to enable challenge to be run locally, see https://cryptohack.org/faq/#listener</span>
+<span class="sd">"""</span>
+<span class="sd">When you connect, the 'challenge' function will be called on your JSON</span>
+<span class="sd">input.</span>
+<span class="sd">"""</span>
+<span class="n">listener</span><span class="o">.</span><span class="n">start_server</span><span class="p">(</span><span class="n">port</span><span class="o">=</span><span class="mi">13389</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Collider</span>
+<span class="c1"># !/usr/bin/env python3</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">pwn</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span> <span class="c1"># pip install pwntools</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+
+<span class="n">HOST</span> <span class="o">=</span> <span class="s2">"socket.cryptohack.org"</span>
+<span class="n">PORT</span> <span class="o">=</span> <span class="mi">13389</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">remote</span><span class="p">(</span><span class="n">HOST</span><span class="p">,</span> <span class="n">PORT</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">json_recv</span><span class="p">():</span>
+    <span class="n">line</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">decode</span><span class="p">())</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">json_send</span><span class="p">(</span><span class="n">hsh</span><span class="p">):</span>
+    <span class="n">request</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">hsh</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span>
+    <span class="n">r</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>
+<span class="n">json_send</span><span class="p">({</span><span class="s2">"document"</span><span class="p">:</span><span class="s1">'d131dd02c5e6eec4693d9a0698aff95c2fcab58712467eab4004583eb8fb7f8955ad340609f4b30283e488832571415a085125e8f7cdc99fd91dbdf280373c5bd8823e3156348f5bae6dacd436c919c6dd53e2b487da03fd02396306d248cda0e99f33420f577ee8ce54b67080a80d1ec69821bcb6a8839396f9652b6ff72a70'</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>
+<span class="n">json_send</span><span class="p">({</span><span class="s2">"document"</span><span class="p">:</span><span class="s2">"00"</span><span class="p">})</span>      <span class="c1"># check that it is md5 hash</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>
+<span class="n">json_send</span><span class="p">({</span><span class="s2">"document"</span><span class="p">:</span><span class="s1">'d131dd02c5e6eec4693d9a0698aff95c2fcab50712467eab4004583eb8fb7f8955ad340609f4b30283e4888325f1415a085125e8f7cdc99fd91dbd7280373c5bd8823e3156348f5bae6dacd436c919c6dd53e23487da03fd02396306d248cda0e99f33420f577ee8ce54b67080280d1ec69821bcb6a8839396f965ab6ff72a70'</span><span class="p">})</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>
 </pre></div>
 </div>
@@ -4536,7 +4658,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenge-modular-arithmetic-general-maths">Challenge - Modular Arithmetic(General &amp; Maths)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenge-symmetric-cryptography">Challenge - Symmetric Cryptography</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenge-public-key-cryptography-change-into-rsa-and-dh-sections">Challenge - Public-Key Cryptography(change into RSA and DH sections)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenge-ecc-isogenies">Challenge - ECC &amp; Isogenies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenge-ecc">Challenge - ECC</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenge-hashes">Challenge - Hashes</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenge-isogenies">Challenge - Isogenies</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenge-lattices">Challenge - Lattices</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenge-zkps">Challenge - ZKPs</a></li>
