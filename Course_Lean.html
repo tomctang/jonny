@@ -373,14 +373,14 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tactics-theorems">Tactics &amp; Theorems</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-number-game-100">Natural Number Game 100%</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scribble-robo-95">Scribble - Robo 95%</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lean-intro-to-logic-99">Lean Intro to Logic 99%</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scribble-robo-95-my-favourite">Scribble - Robo 95% (my favourite)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lean-intro-to-logic-100">Lean Intro to Logic 100%</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reintro-to-proofs-100">Reintro to Proofs 100%</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-algebra-15">Linear Algebra 15%</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#number-theory-100">Number Theory 100%</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intro-program-verification-cslib-5">Intro Program Verification - CSlib 5%</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-tactics-theorems">Appendix: Tactics &amp; Theorems</a></li>
 </ul>
             </nav>
         </div>
@@ -394,10 +394,186 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="lean">
 <h1>Lean<a class="headerlink" href="#lean" title="Link to this heading">#</a></h1>
+<section id="tactics-theorems">
+<h2>Tactics &amp; Theorems<a class="headerlink" href="#tactics-theorems" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Logo(basic logic)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">tauto</span></code> solves tautologies</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rfl</span></code> solves goals of the form <code class="docutils literal notranslate"><span class="pre">x=x</span></code></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">rfl</span></code> is also a theorem and <code class="docutils literal notranslate"><span class="pre">exact</span> <span class="pre">rfl</span></code> is the same thing.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">assumption</span></code> solves the goal if there is an assumption that matches the goal</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">exact</span></code> can also be used but it isn’t in this game</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">left</span></code> and <code class="docutils literal notranslate"><span class="pre">right</span></code> used to specify which branch with <span class="math notranslate nohighlight">\(\lor\)</span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">constructor</span></code> unpacks <span class="math notranslate nohighlight">\(\land\)</span> in goal and <code class="docutils literal notranslate"><span class="pre">obtain</span></code> for assumptions</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">.1</span></code> and <code class="docutils literal notranslate"><span class="pre">.2</span></code> can be used instead of <code class="docutils literal notranslate"><span class="pre">obtain</span></code></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">decide</span></code> solves the goal when there is a simple implemented algorithm for it(e.g. <code class="docutils literal notranslate"><span class="pre">true</span></code>, <code class="docutils literal notranslate"><span class="pre">Even</span> <span class="pre">42</span></code>, etc…)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">obtain</span></code> unpacks assumptions</p>
+<ul>
+<li><p>Use <span class="math notranslate nohighlight">\(\langle h,h1\rangle\)</span> for <span class="math notranslate nohighlight">\(\land\)</span> and <span class="math notranslate nohighlight">\(h|h\)</span> for <span class="math notranslate nohighlight">\(\lor\)</span></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Implis(implications) + Saturn(equalities)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">intro</span></code> introduces assumptions and objects from <span class="math notranslate nohighlight">\(\forall\)</span> and <span class="math notranslate nohighlight">\(\implies\)</span></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">revert</span></code> does the opposite</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">apply</span></code> implications at assumptions or the goal</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">constructor</span></code> also unpacks <span class="math notranslate nohighlight">\(\iff\)</span></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\iff\)</span> can be used in statements with <code class="docutils literal notranslate"><span class="pre">.1</span></code>,<code class="docutils literal notranslate"><span class="pre">.2</span></code>,<code class="docutils literal notranslate"><span class="pre">.mp</span></code>,<code class="docutils literal notranslate"><span class="pre">.mpr</span></code></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">symm</span></code> swaps the order of <span class="math notranslate nohighlight">\(\iff\)</span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trans</span></code> introduces an intermediate step for <span class="math notranslate nohighlight">\(\iff\)</span> and <code class="docutils literal notranslate"><span class="pre">=</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rw</span></code> with <span class="math notranslate nohighlight">\(\iff\)</span> or <code class="docutils literal notranslate"><span class="pre">=</span></code> assumptions</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">have</span></code> lets you prove intermediate results</p></li>
+</ul>
+</li>
+<li><p>Quantus(quantifiers and numbers)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">use</span></code> for <span class="math notranslate nohighlight">\(\exists\)</span> in goal</p>
+<ul>
+<li><p>Definition: <code class="docutils literal notranslate"><span class="pre">nonempty</span></code> set means there <span class="math notranslate nohighlight">\(\exists\)</span> an element in the set</p></li>
+<li><p><span class="math notranslate nohighlight">\(\exists\)</span> in assumption: <code class="docutils literal notranslate"><span class="pre">obtain</span></code> with <span class="math notranslate nohighlight">\(\langle\text{object,assumption}\rangle\)</span></p>
+<ul>
+<li><p>with <code class="docutils literal notranslate"><span class="pre">nonempty</span></code> do not use <code class="docutils literal notranslate"><span class="pre">unfold</span></code> and <code class="docutils literal notranslate"><span class="pre">use</span></code> or <code class="docutils literal notranslate"><span class="pre">obtain</span></code> without any assumption</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">decide</span></code> for trivial goals(e.g. simple facts about numbers)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">choose</span></code> can replace <code class="docutils literal notranslate"><span class="pre">obtain</span></code> with <span class="math notranslate nohighlight">\(\exists\)</span></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">choose</span></code> more generally invokes the axiom of choice with <span class="math notranslate nohighlight">\(\forall~\exists\)</span> statements to extract the <span class="math notranslate nohighlight">\(\exists\)</span> statement directly</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unfold</span></code> definitions in the goal or assumptions</p>
+<ul>
+<li><p>Not really needed, you can unpack <span class="math notranslate nohighlight">\(\forall\)</span> and <span class="math notranslate nohighlight">\(\exists\)</span> directly without <code class="docutils literal notranslate"><span class="pre">unfold</span></code></p></li>
+</ul>
+</li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">push</span> <span class="pre">Not</span></code> or <code class="docutils literal notranslate"><span class="pre">push</span> <span class="pre">¬</span> <span class="pre">_</span></code> to push <span class="math notranslate nohighlight">\(\lnot\)</span> past <span class="math notranslate nohighlight">\(\exists\)</span> and <span class="math notranslate nohighlight">\(\forall\)</span> quantifiers</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">let</span></code> is like <code class="docutils literal notranslate"><span class="pre">have</span></code>, but is used to introduce objects instead</p></li>
+</ul>
+</li>
+<li><p>Piazza(set theory)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">tauto</span></code> also works for set tautologies</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">simp</span></code> uses all lemmas tagged with <code class="docutils literal notranslate"><span class="pre">&#64;[simp]</span></code> in mathlib</p>
+<ul>
+<li><p>In Robo, <code class="docutils literal notranslate"><span class="pre">simp</span></code> is heavily restricted to prevent many 1-line solutions</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ext</span></code> applies extensionality of sets</p>
+<ul>
+<li><p>Replaces <code class="docutils literal notranslate"><span class="pre">A=B</span></code> with <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">∈</span> <span class="pre">A</span> <span class="pre">↔</span> <span class="pre">x</span> <span class="pre">∈</span> <span class="pre">B</span></code> and introduces the object <code class="docutils literal notranslate"><span class="pre">x</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Spinoza</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">suffices</span></code> works the same as <code class="docutils literal notranslate"><span class="pre">have</span></code>, except the proofs are the other way round</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">by_contra</span></code> allows proof by contradiction</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">intro</span></code> can also do this when there is a <span class="math notranslate nohighlight">\(\lnot\)</span> in the goal, <span class="math notranslate nohighlight">\(\lnot P\)</span> is defined as <code class="docutils literal notranslate"><span class="pre">P→False</span></code></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">contrapose</span></code> lets you prove the contrapositive of the goal</p></li>
+</ul>
+</li>
+<li><p>Samarkand</p>
+<ul>
+<li><p>Do not unpack definitions unless needed or stated(in hints).</p></li>
+</ul>
+</li>
+<li><p>Cantor</p>
+<ul>
+<li><p>Cantor’s diagonalisation theorem(<code class="docutils literal notranslate"><span class="pre">cantor_diagonal</span></code>) can be applied to surjective maps.</p>
+<ul>
+<li><p>The diagonal part is applying the same function to the same input twice(<code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">a</span> <span class="pre">a</span></code>)</p></li>
+</ul>
+</li>
+<li><p>Subsets <code class="docutils literal notranslate"><span class="pre">S:</span> <span class="pre">Set</span> <span class="pre">A</span></code> can be identified with the map <code class="docutils literal notranslate"><span class="pre">A→Prop</span></code> that maps <code class="docutils literal notranslate"><span class="pre">a:A</span></code> onto <span class="math notranslate nohighlight">\(a\in S\)</span></p></li>
+</ul>
+</li>
+</ul>
+<p>Categorize tactics by</p>
+<ul class="simple">
+<li><p>manipulate the goal</p></li>
+<li><p>manipulate the assumptions</p></li>
+<li><p>manipulate both/either</p></li>
+</ul>
+<p>Tactics</p>
+<ul class="simple">
+<li><p>apply : This tactic applies theorems and assumptions at assumptions. This tactic is similar to rw.</p></li>
+<li><p>assumption : Searches for assumptions that can directly prove the goal.</p></li>
+<li><p>cases : Considers the cases for and &amp; or statements and objects(similar to induction but without hypothesis).</p></li>
+<li><p>contradiction : This tactic proves statements that cannot be proved using other methods.</p></li>
+<li><p>decide : This tactic tries to solve goals by using algorithms.</p></li>
+<li><p>exact : Proves goals based on the theorems and assumptions written after it.</p></li>
+<li><p>have : Introduces an assumption that can be proved based on evidence(providing evidence to prove it is optional when using tactic).</p></li>
+<li><p>induction : Uses induction to prove the goal by considering base case then using a hypothesis to prove the other part.</p></li>
+<li><p>intro : Introduces a hypothesis(assumption) based on the goal if possible(similar to fun(<span class="math notranslate nohighlight">\(\lambda\)</span>)).</p></li>
+<li><p>left : The goal or hypothesis changes from A or B to A(because A is on the left).</p></li>
+</ul>
+<ul class="simple">
+<li><p>revert : This is the opposite of intro.</p></li>
+<li><p>right : The goal or hypothesis changes from A or B to B(because B is on the right).</p></li>
+<li><p>rfl(reflexitivity) : This tactic proves all goals of the form <span class="math notranslate nohighlight">\(X=X\)</span></p></li>
+<li><p>rw(rewrite) : This rewrites the goal.</p>
+<ul>
+<li><p>Square brackets must be included.</p></li>
+<li><p>Type the theorem in the square brackets.</p></li>
+<li><p>By typing nth_rw (number), this tactic only rewrites the nth place where you can use the theorem or assumption.</p></li>
+</ul>
+</li>
+<li><p>simp : This uses other tactics to try and simplify the goal or hypothesis.</p></li>
+<li><p>symm : <span class="math notranslate nohighlight">\(a=b\)</span> implies <span class="math notranslate nohighlight">\(b=a\)</span></p></li>
+<li><p>tauto : This tactic proves all logic statements.</p></li>
+<li><p>trivial : This tactic proves goals of the form True.</p></li>
+<li><p>use : This tactic replaces the object after the <span class="math notranslate nohighlight">\(\exist\)</span>(exist symbol) with another object or number when there is an <span class="math notranslate nohighlight">\(\exist\)</span> in the proof.</p></li>
+</ul>
+<p>Theorems</p>
+<ul class="simple">
+<li><p>add_assoc : <span class="math notranslate nohighlight">\((a+b)+c=a+(b+c)\quad\)</span>(In Lean, <span class="math notranslate nohighlight">\(a+b+c\)</span> means <span class="math notranslate nohighlight">\((a+b)+c\)</span>.)</p></li>
+<li><p>add_comm : <span class="math notranslate nohighlight">\(a+b=b+a\)</span></p></li>
+<li><p>add_succ : <span class="math notranslate nohighlight">\(a+succ(b)=succ(a+b)\)</span></p></li>
+<li><p>add_zero : <span class="math notranslate nohighlight">\(a+0=a\)</span></p></li>
+<li><p>mul_zero : <span class="math notranslate nohighlight">\(a*0=0\)</span></p></li>
+<li><p>not_not : <span class="math notranslate nohighlight">\(\neg\neg A=A\)</span></p></li>
+<li><p>one_ne_zero : <span class="math notranslate nohighlight">\(1\ne0\)</span></p></li>
+<li><p>pow_one : <span class="math notranslate nohighlight">\(a^1=a\)</span></p></li>
+<li><p>pow_two : <span class="math notranslate nohighlight">\(a^2=a*a\)</span></p></li>
+<li><p>pow_zero : <span class="math notranslate nohighlight">\(a^0=1\)</span></p></li>
+<li><p>succ_add : <span class="math notranslate nohighlight">\(succ(a)+b=succ(a+b)\)</span></p></li>
+<li><p>succ_eq_add_one : <span class="math notranslate nohighlight">\(succ(n)=n+1\)</span></p></li>
+<li><p>zero_add : <span class="math notranslate nohighlight">\(0+a=a\)</span></p></li>
+<li><p>zero_mul : <span class="math notranslate nohighlight">\(0*a=0\)</span></p></li>
+<li><p>zero_ne_one : <span class="math notranslate nohighlight">\(0\ne1\)</span></p></li>
+<li><p>zero_pow_succ : <span class="math notranslate nohighlight">\(0^n=0\quad\)</span>(Where n is a successor(<span class="math notranslate nohighlight">\(n\gt0\)</span>).)</p></li>
+<li><p>zero_pow_zero : <span class="math notranslate nohighlight">\(0^0=1\quad\)</span>(In Lean, <span class="math notranslate nohighlight">\(0^0\)</span> is not undefined.)</p></li>
+</ul>
+<p>Reference:</p>
 <ul class="simple">
 <li><p>My solutions for Leam 4 games are below. See slides in <a class="reference external" href="https://web.stanford.edu/class/cs99/">Stanford CS99: Functional Programming and Theorem Proving in Lean 4</a></p></li>
 <li><p>Two lean math datasets: Huggingface -&gt; Data Studio to browse and search from <a class="reference external" href="https://huggingface.co/datasets/internlm/Lean-Workbook">Lean-Workbook</a> and <a class="reference external" href="https://huggingface.co/datasets/m-a-p/FineLeanCorpus">FineLeanCorpus</a></p></li>
 </ul>
+</section>
 <section id="natural-number-game-100">
 <h2>Natural Number Game 100%<a class="headerlink" href="#natural-number-game-100" title="Link to this heading">#</a></h2>
 <ul class="simple">
@@ -1006,9 +1182,8 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="scribble-robo-95">
-<h2>Scribble - Robo 95%<a class="headerlink" href="#scribble-robo-95" title="Link to this heading">#</a></h2>
-<p>This is my favourite Lean 4 game.</p>
+<section id="scribble-robo-95-my-favourite">
+<h2>Scribble - Robo 95% (my favourite)<a class="headerlink" href="#scribble-robo-95-my-favourite" title="Link to this heading">#</a></h2>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-left"><p>World</p></th>
@@ -1111,122 +1286,6 @@ document.write(`
 </tbody>
 </table>
 </div>
-<ul class="simple">
-<li><p>Logo(basic logic)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">tauto</span></code> solves tautologies</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rfl</span></code> solves goals of the form <code class="docutils literal notranslate"><span class="pre">x=x</span></code></p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">rfl</span></code> is also a theorem and <code class="docutils literal notranslate"><span class="pre">exact</span> <span class="pre">rfl</span></code> is the same thing.</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">assumption</span></code> solves the goal if there is an assumption that matches the goal</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">exact</span></code> can also be used but it isn’t in this game</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">left</span></code> and <code class="docutils literal notranslate"><span class="pre">right</span></code> used to specify which branch with <span class="math notranslate nohighlight">\(\lor\)</span></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">constructor</span></code> unpacks <span class="math notranslate nohighlight">\(\land\)</span> in goal and <code class="docutils literal notranslate"><span class="pre">obtain</span></code> for assumptions</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">.1</span></code> and <code class="docutils literal notranslate"><span class="pre">.2</span></code> can be used instead of <code class="docutils literal notranslate"><span class="pre">obtain</span></code></p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">decide</span></code> solves the goal when there is a simple implemented algorithm for it(e.g. <code class="docutils literal notranslate"><span class="pre">true</span></code>, <code class="docutils literal notranslate"><span class="pre">Even</span> <span class="pre">42</span></code>, etc…)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">obtain</span></code> unpacks assumptions</p>
-<ul>
-<li><p>Use <span class="math notranslate nohighlight">\(\langle h,h1\rangle\)</span> for <span class="math notranslate nohighlight">\(\land\)</span> and <span class="math notranslate nohighlight">\(h|h\)</span> for <span class="math notranslate nohighlight">\(\lor\)</span></p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>Implis(implications) + Saturn(equalities)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">intro</span></code> introduces assumptions and objects from <span class="math notranslate nohighlight">\(\forall\)</span> and <span class="math notranslate nohighlight">\(\implies\)</span></p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">revert</span></code> does the opposite</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">apply</span></code> implications at assumptions or the goal</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">constructor</span></code> also unpacks <span class="math notranslate nohighlight">\(\iff\)</span></p>
-<ul>
-<li><p><span class="math notranslate nohighlight">\(\iff\)</span> can be used in statements with <code class="docutils literal notranslate"><span class="pre">.1</span></code>,<code class="docutils literal notranslate"><span class="pre">.2</span></code>,<code class="docutils literal notranslate"><span class="pre">.mp</span></code>,<code class="docutils literal notranslate"><span class="pre">.mpr</span></code></p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">symm</span></code> swaps the order of <span class="math notranslate nohighlight">\(\iff\)</span></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">trans</span></code> introduces an intermediate step for <span class="math notranslate nohighlight">\(\iff\)</span> and <code class="docutils literal notranslate"><span class="pre">=</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rw</span></code> with <span class="math notranslate nohighlight">\(\iff\)</span> or <code class="docutils literal notranslate"><span class="pre">=</span></code> assumptions</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">have</span></code> lets you prove intermediate results</p></li>
-</ul>
-</li>
-<li><p>Quantus(quantifiers and numbers)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">use</span></code> for <span class="math notranslate nohighlight">\(\exists\)</span> in goal</p>
-<ul>
-<li><p>Definition: <code class="docutils literal notranslate"><span class="pre">nonempty</span></code> set means there <span class="math notranslate nohighlight">\(\exists\)</span> an element in the set</p></li>
-<li><p><span class="math notranslate nohighlight">\(\exists\)</span> in assumption: <code class="docutils literal notranslate"><span class="pre">obtain</span></code> with <span class="math notranslate nohighlight">\(\langle\text{object,assumption}\rangle\)</span></p>
-<ul>
-<li><p>with <code class="docutils literal notranslate"><span class="pre">nonempty</span></code> do not use <code class="docutils literal notranslate"><span class="pre">unfold</span></code> and <code class="docutils literal notranslate"><span class="pre">use</span></code> or <code class="docutils literal notranslate"><span class="pre">obtain</span></code> without any assumption</p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">decide</span></code> for trivial goals(e.g. simple facts about numbers)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">choose</span></code> can replace <code class="docutils literal notranslate"><span class="pre">obtain</span></code> with <span class="math notranslate nohighlight">\(\exists\)</span></p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">choose</span></code> more generally invokes the axiom of choice with <span class="math notranslate nohighlight">\(\forall~\exists\)</span> statements to extract the <span class="math notranslate nohighlight">\(\exists\)</span> statement directly</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">unfold</span></code> definitions in the goal or assumptions</p>
-<ul>
-<li><p>Not really needed, you can unpack <span class="math notranslate nohighlight">\(\forall\)</span> and <span class="math notranslate nohighlight">\(\exists\)</span> directly without <code class="docutils literal notranslate"><span class="pre">unfold</span></code></p></li>
-</ul>
-</li>
-<li><p>Use <code class="docutils literal notranslate"><span class="pre">push</span> <span class="pre">Not</span></code> or <code class="docutils literal notranslate"><span class="pre">push</span> <span class="pre">¬</span> <span class="pre">_</span></code> to push <span class="math notranslate nohighlight">\(\lnot\)</span> past <span class="math notranslate nohighlight">\(\exists\)</span> and <span class="math notranslate nohighlight">\(\forall\)</span> quantifiers</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">let</span></code> is like <code class="docutils literal notranslate"><span class="pre">have</span></code>, but is used to introduce objects instead</p></li>
-</ul>
-</li>
-<li><p>Piazza(set theory)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">tauto</span></code> also works for set tautologies</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">simp</span></code> uses all lemmas tagged with <code class="docutils literal notranslate"><span class="pre">&#64;[simp]</span></code> in mathlib</p>
-<ul>
-<li><p>In Robo, <code class="docutils literal notranslate"><span class="pre">simp</span></code> is heavily restricted to prevent many 1-line solutions</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ext</span></code> applies extensionality of sets</p>
-<ul>
-<li><p>Replaces <code class="docutils literal notranslate"><span class="pre">A=B</span></code> with <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">∈</span> <span class="pre">A</span> <span class="pre">↔</span> <span class="pre">x</span> <span class="pre">∈</span> <span class="pre">B</span></code> and introduces the object <code class="docutils literal notranslate"><span class="pre">x</span></code></p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>Spinoza</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">suffices</span></code> works the same as <code class="docutils literal notranslate"><span class="pre">have</span></code>, except the proofs are the other way round</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">by_contra</span></code> allows proof by contradiction</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">intro</span></code> can also do this when there is a <span class="math notranslate nohighlight">\(\lnot\)</span> in the goal, <span class="math notranslate nohighlight">\(\lnot P\)</span> is defined as <code class="docutils literal notranslate"><span class="pre">P→False</span></code></p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">contrapose</span></code> lets you prove the contrapositive of the goal</p></li>
-</ul>
-</li>
-<li><p>Samarkand</p>
-<ul>
-<li><p>Do not unpack definitions unless needed or stated(in hints).</p></li>
-</ul>
-</li>
-<li><p>Cantor</p>
-<ul>
-<li><p>Cantor’s diagonalisation theorem(<code class="docutils literal notranslate"><span class="pre">cantor_diagonal</span></code>) can be applied to surjective maps.</p>
-<ul>
-<li><p>The diagonal part is applying the same function to the same input twice(<code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">a</span> <span class="pre">a</span></code>)</p></li>
-</ul>
-</li>
-<li><p>Subsets <code class="docutils literal notranslate"><span class="pre">S:</span> <span class="pre">Set</span> <span class="pre">A</span></code> can be identified with the map <code class="docutils literal notranslate"><span class="pre">A→Prop</span></code> that maps <code class="docutils literal notranslate"><span class="pre">a:A</span></code> onto <span class="math notranslate nohighlight">\(a\in S\)</span></p></li>
-</ul>
-</li>
-</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">--</span> <span class="n">World</span><span class="p">:</span> <span class="n">Logo</span>
@@ -2360,8 +2419,8 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="lean-intro-to-logic-99">
-<h2>Lean Intro to Logic 99%<a class="headerlink" href="#lean-intro-to-logic-99" title="Link to this heading">#</a></h2>
+<section id="lean-intro-to-logic-100">
+<h2>Lean Intro to Logic 100%<a class="headerlink" href="#lean-intro-to-logic-100" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>This game teaches you how to solve logic puzzles.</p></li>
 <li><p>There are two types of worlds.</p>
@@ -2516,7 +2575,7 @@ document.write(`
 <span class="o">--</span> <span class="n">Level</span> <span class="mi">5</span> <span class="o">/</span> <span class="mi">7</span> <span class="p">:</span> <span class="n">Rewriting</span>
 <span class="o">--</span> <span class="n">Level</span> <span class="mi">6</span> <span class="o">/</span> <span class="mi">7</span> <span class="p">:</span> <span class="n">Rewriting</span>
 <span class="o">--</span> <span class="n">Level</span> <span class="mi">7</span> <span class="o">/</span> <span class="mi">7</span> <span class="p">:</span> <span class="n">Iff</span> <span class="n">Boss</span>
-<span class="o">???</span> 
+<span class="n">exact</span> <span class="err">⟨</span><span class="n">fun</span> <span class="n">h</span> <span class="n">q</span><span class="o">=&gt;</span> <span class="err">⟨</span><span class="n">fun</span> <span class="n">p</span> <span class="o">=&gt;</span> <span class="p">(</span><span class="n">h</span><span class="mf">.1</span> <span class="err">⟨</span><span class="n">p</span><span class="p">,</span><span class="n">q</span><span class="err">⟩</span><span class="p">)</span><span class="mf">.1</span><span class="p">,</span><span class="n">fun</span> <span class="n">r</span> <span class="o">=&gt;</span> <span class="p">(</span><span class="n">h</span><span class="mf">.2</span> <span class="err">⟨</span><span class="n">r</span><span class="p">,</span><span class="n">q</span><span class="err">⟩</span><span class="p">)</span><span class="mf">.1</span><span class="err">⟩</span><span class="p">,</span><span class="n">fun</span> <span class="n">h</span> <span class="o">=&gt;</span> <span class="err">⟨</span><span class="n">fun</span> <span class="n">pq</span> <span class="o">=&gt;</span> <span class="err">⟨</span><span class="p">(</span><span class="n">h</span> <span class="n">pq</span><span class="mf">.2</span><span class="p">)</span><span class="mf">.1</span> <span class="n">pq</span><span class="mf">.1</span><span class="p">,</span><span class="n">pq</span><span class="mf">.2</span><span class="err">⟩</span><span class="p">,</span><span class="n">fun</span> <span class="n">rq</span> <span class="o">=&gt;</span> <span class="err">⟨</span><span class="p">(</span><span class="n">h</span> <span class="n">rq</span><span class="mf">.2</span><span class="p">)</span><span class="mf">.2</span> <span class="n">rq</span><span class="mf">.1</span><span class="p">,</span><span class="n">rq</span><span class="mf">.2</span><span class="err">⟩⟩⟩</span>
 
 <span class="o">--</span> <span class="n">World</span><span class="p">:</span> <span class="n">Redux</span><span class="p">:</span> <span class="err">∨</span> <span class="n">World</span> <span class="n">Tactics</span>
 <span class="o">--</span> <span class="n">Level</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">8</span> <span class="p">:</span> <span class="n">Left</span> <span class="n">Evidence</span>
@@ -2574,7 +2633,21 @@ document.write(`
 <span class="n">apply</span> <span class="n">h2</span> <span class="n">at</span> <span class="n">h</span>
 <span class="n">assumption</span>
 <span class="o">--</span> <span class="n">Level</span> <span class="mi">5</span> <span class="o">/</span> <span class="mi">7</span> <span class="p">:</span> <span class="n">Rewriting</span>
-<span class="o">???</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">6</span> <span class="o">/</span> <span class="mi">7</span> <span class="p">:</span> <span class="n">Rewriting</span>
+<span class="o">--</span> <span class="n">Level</span> <span class="mi">7</span> <span class="o">/</span> <span class="mi">7</span> <span class="p">:</span> <span class="n">IffBoss</span>
+<span class="n">constructor</span>
+<span class="n">intro</span> <span class="n">h</span> <span class="n">h1</span>
+<span class="n">constructor</span>
+<span class="n">intro</span> <span class="n">h2</span>
+<span class="n">exact</span> <span class="p">(</span><span class="n">h</span><span class="mf">.1</span> <span class="err">⟨</span><span class="n">h2</span><span class="p">,</span><span class="n">h1</span><span class="err">⟩</span><span class="p">)</span><span class="mf">.1</span>
+<span class="n">intro</span> <span class="n">h2</span>
+<span class="n">exact</span> <span class="p">(</span><span class="n">h</span><span class="mf">.2</span> <span class="err">⟨</span><span class="n">h2</span><span class="p">,</span><span class="n">h1</span><span class="err">⟩</span><span class="p">)</span><span class="mf">.1</span>
+<span class="n">intro</span> <span class="n">h</span>
+<span class="n">constructor</span>
+<span class="n">intro</span> <span class="n">h1</span>
+<span class="n">exact</span> <span class="err">⟨</span><span class="p">(</span><span class="n">h</span> <span class="n">h1</span><span class="mf">.2</span><span class="p">)</span><span class="mf">.1</span> <span class="n">h1</span><span class="mf">.1</span><span class="p">,</span><span class="n">h1</span><span class="mf">.2</span><span class="err">⟩</span>
+<span class="n">intro</span> <span class="n">h1</span>
+<span class="n">exact</span> <span class="err">⟨</span><span class="p">(</span><span class="n">h</span> <span class="n">h1</span><span class="mf">.2</span><span class="p">)</span><span class="mf">.2</span> <span class="n">h1</span><span class="mf">.1</span><span class="p">,</span><span class="n">h1</span><span class="mf">.2</span><span class="err">⟩</span>
 </pre></div>
 </div>
 </div>
@@ -3787,6 +3860,7 @@ document.write(`
 </section>
 <section id="number-theory-100">
 <h2>Number Theory 100%<a class="headerlink" href="#number-theory-100" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://github.com/k88-b/NumberTheoryGame_solutions">Solution for NT</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">--</span> <span class="n">World</span><span class="p">:</span> <span class="n">Divisibility</span> <span class="n">Club</span>
@@ -4295,68 +4369,6 @@ document.write(`
 </section>
 <section id="intro-program-verification-cslib-5">
 <h2>Intro Program Verification - CSlib 5%<a class="headerlink" href="#intro-program-verification-cslib-5" title="Link to this heading">#</a></h2>
-<blockquote>
-<div><p>Hilbert Geometry Game</p>
-</div></blockquote>
-</section>
-<section id="appendix-tactics-theorems">
-<h2>Appendix: Tactics &amp; Theorems<a class="headerlink" href="#appendix-tactics-theorems" title="Link to this heading">#</a></h2>
-<p>Categorize tactics by</p>
-<ul class="simple">
-<li><p>manipulate the goal</p></li>
-<li><p>manipulate the assumptions</p></li>
-<li><p>manipulate both/either</p></li>
-</ul>
-<p>Tactics</p>
-<ul class="simple">
-<li><p>apply : This tactic applies theorems and assumptions at assumptions. This tactic is similar to rw.</p></li>
-<li><p>assumption : Searches for assumptions that can directly prove the goal.</p></li>
-<li><p>cases : Considers the cases for and &amp; or statements and objects(similar to induction but without hypothesis).</p></li>
-<li><p>contradiction : This tactic proves statements that cannot be proved using other methods.</p></li>
-<li><p>decide : This tactic tries to solve goals by using algorithms.</p></li>
-<li><p>exact : Proves goals based on the theorems and assumptions written after it.</p></li>
-<li><p>have : Introduces an assumption that can be proved based on evidence(providing evidence to prove it is optional when using tactic).</p></li>
-<li><p>induction : Uses induction to prove the goal by considering base case then using a hypothesis to prove the other part.</p></li>
-<li><p>intro : Introduces a hypothesis(assumption) based on the goal if possible(similar to fun(<span class="math notranslate nohighlight">\(\lambda\)</span>)).</p></li>
-<li><p>left : The goal or hypothesis changes from A or B to A(because A is on the left).</p></li>
-</ul>
-<ul class="simple">
-<li><p>revert : This is the opposite of intro.</p></li>
-<li><p>right : The goal or hypothesis changes from A or B to B(because B is on the right).</p></li>
-<li><p>rfl(reflexitivity) : This tactic proves all goals of the form <span class="math notranslate nohighlight">\(X=X\)</span></p></li>
-<li><p>rw(rewrite) : This rewrites the goal.</p>
-<ul>
-<li><p>Square brackets must be included.</p></li>
-<li><p>Type the theorem in the square brackets.</p></li>
-<li><p>By typing nth_rw (number), this tactic only rewrites the nth place where you can use the theorem or assumption.</p></li>
-</ul>
-</li>
-<li><p>simp : This uses other tactics to try and simplify the goal or hypothesis.</p></li>
-<li><p>symm : <span class="math notranslate nohighlight">\(a=b\)</span> implies <span class="math notranslate nohighlight">\(b=a\)</span></p></li>
-<li><p>tauto : This tactic proves all logic statements.</p></li>
-<li><p>trivial : This tactic proves goals of the form True.</p></li>
-<li><p>use : This tactic replaces the object after the <span class="math notranslate nohighlight">\(\exist\)</span>(exist symbol) with another object or number when there is an <span class="math notranslate nohighlight">\(\exist\)</span> in the proof.</p></li>
-</ul>
-<p>Theorems</p>
-<ul class="simple">
-<li><p>add_assoc : <span class="math notranslate nohighlight">\((a+b)+c=a+(b+c)\quad\)</span>(In Lean, <span class="math notranslate nohighlight">\(a+b+c\)</span> means <span class="math notranslate nohighlight">\((a+b)+c\)</span>.)</p></li>
-<li><p>add_comm : <span class="math notranslate nohighlight">\(a+b=b+a\)</span></p></li>
-<li><p>add_succ : <span class="math notranslate nohighlight">\(a+succ(b)=succ(a+b)\)</span></p></li>
-<li><p>add_zero : <span class="math notranslate nohighlight">\(a+0=a\)</span></p></li>
-<li><p>mul_zero : <span class="math notranslate nohighlight">\(a*0=0\)</span></p></li>
-<li><p>not_not : <span class="math notranslate nohighlight">\(\neg\neg A=A\)</span></p></li>
-<li><p>one_ne_zero : <span class="math notranslate nohighlight">\(1\ne0\)</span></p></li>
-<li><p>pow_one : <span class="math notranslate nohighlight">\(a^1=a\)</span></p></li>
-<li><p>pow_two : <span class="math notranslate nohighlight">\(a^2=a*a\)</span></p></li>
-<li><p>pow_zero : <span class="math notranslate nohighlight">\(a^0=1\)</span></p></li>
-<li><p>succ_add : <span class="math notranslate nohighlight">\(succ(a)+b=succ(a+b)\)</span></p></li>
-<li><p>succ_eq_add_one : <span class="math notranslate nohighlight">\(succ(n)=n+1\)</span></p></li>
-<li><p>zero_add : <span class="math notranslate nohighlight">\(0+a=a\)</span></p></li>
-<li><p>zero_mul : <span class="math notranslate nohighlight">\(0*a=0\)</span></p></li>
-<li><p>zero_ne_one : <span class="math notranslate nohighlight">\(0\ne1\)</span></p></li>
-<li><p>zero_pow_succ : <span class="math notranslate nohighlight">\(0^n=0\quad\)</span>(Where n is a successor(<span class="math notranslate nohighlight">\(n\gt0\)</span>).)</p></li>
-<li><p>zero_pow_zero : <span class="math notranslate nohighlight">\(0^0=1\quad\)</span>(In Lean, <span class="math notranslate nohighlight">\(0^0\)</span> is not undefined.)</p></li>
-</ul>
 </section>
 </section>
 
@@ -4424,14 +4436,14 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tactics-theorems">Tactics &amp; Theorems</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-number-game-100">Natural Number Game 100%</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scribble-robo-95">Scribble - Robo 95%</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lean-intro-to-logic-99">Lean Intro to Logic 99%</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scribble-robo-95-my-favourite">Scribble - Robo 95% (my favourite)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lean-intro-to-logic-100">Lean Intro to Logic 100%</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reintro-to-proofs-100">Reintro to Proofs 100%</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-algebra-15">Linear Algebra 15%</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#number-theory-100">Number Theory 100%</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intro-program-verification-cslib-5">Intro Program Verification - CSlib 5%</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-tactics-theorems">Appendix: Tactics &amp; Theorems</a></li>
 </ul>
   </nav></div>
 
