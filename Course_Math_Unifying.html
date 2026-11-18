@@ -374,6 +374,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Math Unifying</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lectures-integration">lectures - Integration</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lectures-analysis-topology">lectures - Analysis &amp; Topology</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lectures-graph-theory">lectures - Graph Theory</a></li>
 </ul>
@@ -573,6 +574,47 @@ document.write(`
                   
   <section id="math-unifying">
 <h1>Math Unifying<a class="headerlink" href="#math-unifying" title="Link to this heading">#</a></h1>
+<section id="lectures-integration">
+<h2>lectures - Integration<a class="headerlink" href="#lectures-integration" title="Link to this heading">#</a></h2>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\lfloor\rfloor\)</span>(floor) and <span class="math notranslate nohighlight">\(\lceil\rceil\)</span>(ceiling) integration</p>
+<ul class="simple">
+<li><p>To separate different ranges with different <span class="math notranslate nohighlight">\(\lfloor\rfloor\)</span>/<span class="math notranslate nohighlight">\(\lceil\rceil\)</span>, separate the integral into a summation of integrals.</p></li>
+<li><p>The integrals should now be easy to evaluate as it is a constant value.</p></li>
+<li><p>Then apply summation formulas to obtain the final result.</p></li>
+</ul>
+</li>
+<li><p>Symmetry</p>
+<ul class="simple">
+<li><p>We can reflect the integral around the midpoint for definite integrals.</p></li>
+<li><p>King’s rule: <span class="math notranslate nohighlight">\(\large\int_a^bf(x)dx=\int_a^bf(a+b-x)dx\)</span></p></li>
+<li><p>Queen’s rule: <span class="math notranslate nohighlight">\(\large\int_0^{2a}f(x)dx=\int_0^a(f(x)+f(2a-x))dx\)</span></p></li>
+<li><p>Periodic functions(for <span class="math notranslate nohighlight">\(T\)</span>-periodic functions <span class="math notranslate nohighlight">\(f\)</span>)</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\int_a^{a+T}f(x)dx=\int_0^Tf(x)dx\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\int_0^{nT}f(x)dx=n\int_0^Tf(x)dx\)</span></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Feynman method</p>
+<ul class="simple">
+<li><p>More info in MCM</p></li>
+<li><p>Let the integral be <span class="math notranslate nohighlight">\(I\)</span></p></li>
+<li><p>First pick a constant to replace with a parameter(can be introduced <span class="math notranslate nohighlight">\(0\)</span>/<span class="math notranslate nohighlight">\(1\)</span>) <span class="math notranslate nohighlight">\(t\)</span> to differentiate under the integral sign.</p>
+<ul>
+<li><p>The integral is now <span class="math notranslate nohighlight">\(I(t)\)</span></p></li>
+</ul>
+</li>
+<li><p>Then integrate the function after differentiating to find <span class="math notranslate nohighlight">\(I'(t)\)</span></p></li>
+<li><p>Integrate <span class="math notranslate nohighlight">\(I'(t)\)</span> and find the <span class="math notranslate nohighlight">\(c\)</span> after integrating with a base case.</p></li>
+<li><p>Substitute the replaced <span class="math notranslate nohighlight">\(t\)</span> to find the result.</p></li>
+</ul>
+</li>
+<li><h2 class="rubric" id="gamma-beta-functions"><span class="math notranslate nohighlight">\(\Gamma\)</span> &amp; <span class="math notranslate nohighlight">\(\Beta\)</span> functions</h2>
+</li>
+</ul>
+</section>
 <section id="lectures-analysis-topology">
 <h2>lectures - Analysis &amp; Topology<a class="headerlink" href="#lectures-analysis-topology" title="Link to this heading">#</a></h2>
 <p>Source: <a class="reference external" href="https://www.youtube.com/live/ymA1-y3p098?si=40ObsOQbRQ2je8P5">UNSW_CPMSoc_MATH3611_Revision</a></p>
@@ -5856,7 +5898,7 @@ If the ratio is 1(no change between terms), then no conclusion can be made.</p>
 <h1>Permutation Puzzles - Group<a class="headerlink" href="#permutation-puzzles-group" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># AKA Startup</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Startup</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">sg</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">SymmetricGroup</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">ag</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
@@ -8888,6 +8930,7 @@ From linear algebra we know</p>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Math Unifying</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lectures-integration">lectures - Integration</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lectures-analysis-topology">lectures - Analysis &amp; Topology</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lectures-graph-theory">lectures - Graph Theory</a></li>
 </ul>
